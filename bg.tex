@@ -1,0 +1,45 @@
+\chapter{Background}
+Using knowledge in a WSN is related to existing research into sensor networks that utilise context-awareness in order to improve their efficiency or adapt their sampling rate. 
+
+This chapter is split into the following sections. Section 2.1 outlines the issues surrounding WSN design and deployment. Section 2.2 shows some examples of existing WSNs that are related to our motivating scenario. Section 2.3 details existing routing protocols for sensor networks. Section 2.4 introduces research into local and global knowledge and Section 2.5  shows some related work into WSNs that utilise knowledge or context to prioritise data and/or improve efficiency.
+
+\section{Wireless Sensor Network Issues}
+
+WSNs have been used in a number of domains, for a range of different purposes, from habitat monitoring \cite{Szewczyk2004a} to military purposes \cite{Pizzocaro} and healthcare \cite{Otto2006}. While these applications are vastly different, the technology behind each is very similar. Each requires the use of nodes with sensors attached and each node requires a power source and storage devices.
+
+According to \cite{Akyildiz2002}, there are eight factors that affect the design of sensor networks, but we focus on a subset that are the most relevant to our research problem. The following points must be considered when designing a WSN:
+
+\subsection{Fault Tolerance}
+	WSNs typically contain a large number of nodes and each can fail for various reasons, from a lack of power, filling its storage capacity, to factors of the environment causing the hardware to fail. While the sensor nodes that are used in WSNs typically consist of the same platform, the variation between each deployment means that the device itself must be adapted to its environment, \cite{Mainwaring2002} used a custom protective casing for their nodes so that they were able to survive being in the open while ensuring that the transmission range was not affected.
+
+\subsection{Hardware Constraints}
+	A sensor node typically consists of: a platform that contains the memory and processing power,  a sensor (or sensors) and a transceiver that uses a wireless standard, such as Wi-Fi or Zigbee. Cost and size are the most common barriers to entry when designing a WSN. \cite{Intanagonwiwat2000} mentions that the expectation of a sensor node is a matchbox-sized form factor. While the research is over ten years old, the original focus on sensor node was \textit{smart dust} \cite{Kahn}, small, inexpensive, disposable nodes that can transmit until their power reserve is depleted, \cite{Akyildiz2002a} mentions that it is a requirement for the nodes to cost less than USD10. In \cite{Corke2010a}, it is noted that, a decade on from the first WSN papers, smart dust has not been realised and the focus has instead been on larger, more powerful nodes that have reduced in cost and grown in power. 
+
+	The Gartner Hype Cycle for 2013 \cite{gartner2013} shows that smart dust is still in early innovation stages and may not be fully commercialised for another ten years. To counter this, research has been focussed on using software solutions to maximise the battery life in these more powerful, more expensive nodes, accompanies with the use of renewable energy sources.
+
+\subsection{Energy Constraints}
+	 The majority of sensor nodes do not have access to a constant power supply and must run on a battery that is, generally, a similar size to the node itself; or smaller. This means that the nodes must be as efficient as possible, knowing when to transmit data and when to sleep. The lifetime of a sensor network is extremely dependent on the battery life of each node and, unlike other mobile devices, they cannot typically be recharged \cite{Akyildiz2002}. Much work has been done on power efficient routing protocols, as well as the control of which attached devices are active \cite{Segal2010a, Hempstead2005, Schurgers}. 
+
+	The limited resources on the nodes mean that the sensing devices, and transceivers, attached must consume as little power as possible. Some routing protocols implement turning off wireless radios and scheduling a wakeup across the network \cite{Vaidya2004}, but the cost of turning off a device can waste just as much energy as leaving it on and sampling at a lower rate; if not more \cite{Estrin2001}.
+
+	The use of energy in a node is dependent on how active the sensor(s) are, how much it transmits and receives, the transmission medium used as well as the environment it is in.
+
+\subsection{Transmission Medium}\label{bg:trans}
+	Common transmission media, such as Wi-Fi, are viable solutions in WSNs when a high data rate is required and power is readily available. However, research has shown that Wi-Fi is extremely power-hungry and \cite{Lee2007} shows that Wi-Fi consumes almost 9 times more energy, while transmitting, than other standards, such as Zigbee.
+	Bluetooth is a more power efficient standard that is becoming increasingly popular for sensing devices that are [art of the \textit{Quantified Self} movement \cite{Swan2012}, with wearable devices that report measurements, such as heart rate, steps taken and calories burned. With the advent of the new low-power Bluetooh 4.0 , also known as Bluetooth Low Energy (BLE), this standard is supposed to allow months of continuous use on a coin-cell battery \cite{bluetooth2012bluetooth}. However, the range is limited to 100m and, using the same frequency, as Wi-Fi (2.4GHz) means that it is as susceptible to path loss and reduced transfer rates.
+	\cite{Zennaro} shows that a 2.4GHz Wi-Fi antenna is capable of transmitting up to 350m, while a considerably lower frequency of 41MHz was able to achieve links of 10km. The use of 2.4GHz frequencies in wet conditions have been shown to reduce the performance by up to 28% \cite{Markham2010}, while humidity in the air can reduce the performance by up to 78% \cite{Figueiredo2009}.
+	New low-power, low-frequency standards have emerged in recent years and allow for a considerably longer range and increased battery life, at the cost of transmission speeds. Digmish is an example of this and, while it can achieve 250kb/s using 2.4GHz, it has much slower speeds of 125kbps when using the 900MHz spectrum. However, it does offer a range of, up to, 64Km \cite{Bayat2012}.
+
+\subsection{Environment}
+	The environment that a node is deployed in can have a great impact on almost all aspects of a WSN, such as range and battery life. Harsh environments that are not easily accessible make it difficult to place nodes and protected environments may limit where nodes can be placed. 
+	In \cite{Martinez2004}, nodes were deployed within glaciers and had to survive extreme temperatures, lasting without human intervention, for months at a time. \cite{Juang2002} attached collars to Zebras that had to withstand high speed movement, dust and high temperatures. The deployment of any node requires extensive research as to the environment that it will be deployed in and adjustments must be made to ensure it is able to survive for extendedperiods without continued maintenance.
+	Section \ref{bg:trans} also shows that an environment does not simply affect the hardware, but humidity can reduce the transmission range significantly, as well as moisture collecting on wireless antenna can reduce the range for days at a time.
+
+
+\section{Related Networks}
+	
+
+
+
+
+

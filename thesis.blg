@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: bg.aux
+The style file: plain.bst
+Database file #1: library.bib
+Warning--I didn't find a database entry for "gartner2013"
+Warning--I didn't find a database entry for "bluetooth2012bluetooth"
+Warning--there's a number but no volume in Akyildiz2002a
+Warning--there's a number but no volume in Bayat2012
+Warning--empty year in Pizzocaro
+Warning--empty year in Schurgers
+You've used 20 entries,
+            2118 wiz_defined-function locations,
+            637 strings with 9184 characters,
+and the built_in function-call counts, 7962 in all, are:
+= -- 779
+> -- 460
+< -- 8
++ -- 182
+- -- 162
+* -- 609
+:= -- 1333
+add.period$ -- 60
+call.type$ -- 20
+change.case$ -- 141
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 276
+empty$ -- 512
+format.name$ -- 162
+if$ -- 1623
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 20
+newline$ -- 103
+num.names$ -- 40
+pop$ -- 130
+preamble$ -- 1
+purify$ -- 121
+quote$ -- 0
+skip$ -- 215
+stack$ -- 0
+substring$ -- 472
+swap$ -- 80
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 80
+warning$ -- 4
+while$ -- 78
+width$ -- 22
+write$ -- 217
+(There were 6 warnings)
