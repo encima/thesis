@@ -1,7 +1,8 @@
 \chapter{Background}
 Using knowledge in a WSN is related to existing research into sensor networks that utilise context-awareness in order to improve their efficiency or adapt their sampling rate. 
 
-This chapter is split into the following sections. Section 2.1 outlines the issues surrounding WSN design and deployment. Section 2.2 shows some examples of existing WSNs that are related to our motivating scenario. Section 2.3 details existing routing protocols for sensor networks. Section 2.4 introduces research into local and global knowledge and Section 2.5  shows some related work into WSNs that utilise knowledge or context to prioritise data and/or improve efficiency.
+This chapter is split into the following sections. Section 2.1 outlines the issues surrounding WSN design and deployment. 
+Section 2.3 details relevant existing routing protocols for sensor networks. Section 2.2 shows some examples of existing WSNs that are related to our motivating scenario. Section 2.4 introduces research into local and global knowledge and Section 2.5 shows some related work into WSNs that utilise knowledge or context to prioritise data and/or improve efficiency.
 
 \section{Wireless Sensor Network Issues}
 
@@ -32,13 +33,71 @@ According to \cite{Akyildiz2002}, there are eight factors that affect the design
 
 \subsection{Environment}
 	The environment that a node is deployed in can have a great impact on almost all aspects of a WSN, such as range and battery life. Harsh environments that are not easily accessible make it difficult to place nodes and protected environments may limit where nodes can be placed. 
-	In \cite{Martinez2004}, nodes were deployed within glaciers and had to survive extreme temperatures, lasting without human intervention, for months at a time. \cite{Juang2002} attached collars to Zebras that had to withstand high speed movement, dust and high temperatures. The deployment of any node requires extensive research as to the environment that it will be deployed in and adjustments must be made to ensure it is able to survive for extendedperiods without continued maintenance.
-	Section \ref{bg:trans} also shows that an environment does not simply affect the hardware, but humidity can reduce the transmission range significantly, as well as moisture collecting on wireless antenna can reduce the range for days at a time.
+	In \cite{Martinez2004}, nodes were deployed within glaciers and had to survive extreme temperatures, lasting without human intervention, for months at a time. \cite{Juang2002} attached collars to Zebras that had to withstand high speed movement, dust and high temperatures. The deployment of any node requires extensive research as to the environment that it will be deployed in and adjustments must be made to ensure it is able to survive for extended periods without continued maintenance.
+	Section \ref{bg:trans} also shows that environment does not simply affect the hardware, but humidity can reduce the transmission range significantly, as well as moisture collecting on wireless antenna can reduce the range for days at a time.
+
+\section{Routing Protocols}
+	Routing protocols specify how nodes in a WSN are organised, as well as how they transmit data throughout the network. In \cite{Akkaya2005}, the more popular routing protocols are surveyed and split into three of the main identified categories: data-centric, hierarchical and location-based. We use the aforementioned categories, as well as flat, to highlight some of the key protocols that are relevant to our work.
+	The protocols have the task of ensuring that a network is performing at its best, providing the best lifetime and ensuring reliable and consistent delivery of data. This must reduce \textit{flooding}, where nodes send every message to every link, aside from themselves, effectively flooding the network with unnecessary messages, and find a way to deliver data to the endpoint using the most efficient path possible.
+
+\subsection{Data-centric}
+	Data-centric routing protocols are not like traditional WSNs where nodes are given addresses; they use a method that involves the advertising, or querying, of the data that has been sensed and those with the relevant data can respond to the request.
+
+\subsubsection{SPIN}
+	Sensor Protocols for Information via Negotation \nomenclature{SPIN}{Sensor Protocols for Information via Negotation} is one of the first data-centric protocols and attempts to address the issue of flooding the network whenever new data is sensed by addressing the data through metadata \cite{Heinzelman1999}. SPIN works on three messages passed between nodes:
+	\begin{enumerate}
+		\item ADV - A message sent by a node when it has sensed new data, advertising what it has recorded.
+		\item REQ - Sent by nodes that received an ADV to request the data.
+		\item DATA - Message containing the sensed data.
+	\end{enumerate}
+
+When a node has sensed data, it sends an ADV message to all nodes within range. If any of those nodes are interested in the data, then they respond with a REQ message, at which point the DATA message is sent to nodes that responded.
+
+SPIN eliminates the need for a global view of the network topology, as nodes only need to know their single hop neighbours. However, SPIN does not guarantee equal diffusion of data throughout the network as a node may be interested in the data sensed at the other edge of the network, with only nodes that are not interested in between. This would mean that those nodes would not request the data or pass it on.
+
+\subsubsection{SPIN-IT)
+	An extension to SPIN, SPIN-IT \nomenclature{SPIN-IT}{Sensor Protocols for Information via Negotation - Image Transfer}	uses a slightly different approach to receiving data and is developed solely for the transfer of images \cite{Woodrow2002}.
+	
+Nodes use the existing message structure of SPIN, but REQ messages are used as queries, sent to all nodes in transmission range. The receiving nodes keep these requests and generate a new REQ message, thus allowing nodes to store temporal paths. When a REQ reaches a node that has the desired data, it responds with a ROUTE-REPLY message. This message is used because images are large and resource-constrained WSNs would have a much shorter lifetime if a lot of unnecessary transmissions were made. The ROUTE-REPLY is used in case multiple nodes, in range of the requesting node, have the data it has requested and it can then choose the optimal route. As each node keeps a history of REQ messages, these can be used to trace the requested data back through the network, to the originating node, without the overhead of maintaining a global routing table.
+
+\subsubsection{COUGAR}
+	A slightly different data-centric approach is the proposed COUGAR protocol, viewing the network as a distributed database. While similar to SPIN due to the fact that it does not forward data as soon as it is sensed, COUGAR uses a query language that abstracts the underlying network structure and uses that query to generate a plan that utilises in-network processing to provide an answer \cite{Yao2002}.
+
+Within the network, a \textit{leader} is selected and this node is used to aggregate the data from nodes that were able to fulfil all, or some, of the query. At risk of failure, each query should result in a \textit{leader} being dynamically selected and it must have sufficient resources to be able to satisfy the request. This protocol was only proposed, and much of the technical detail has yet to be completed, but the concept of treating the network as a distributed database is a novel idea and this is one of the first protocols to suggest the use of a query language that could be used by people without specific domain knowledge.
+
+\subsection{Hierarchical}
+	Hierarchical networks are WSNs that contain nodes of different classes; this allows the network to be scalable, robust and can allow for a more connected network over a wider area.
+
+\subsubsection{PEGASIS}
 
 
-\section{Related Networks}
+\subsection{Location-based}
+	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on 
+
+\subsubsection{GEAR}
+
+\subsection{Flat}
+	Initially, this was the most common structure for a WSN, dozens of nodes spread out over a geographical area, with one or more neighbours. 
+
+\subsubsection{MCFA}
 	
 
+\section{Biodiversity Sensor Networks}
+	In this section we will cover existing WSNs that are related to our motivating scenario or, more specifically, biodiversity focussed WSNs that have been deployed to monitor wildlife and/or the environment. WSNs for habitat, and wildlife, monitoring are especially important because these are areas that often need to be untouched by humans. Areas with high human disturbance can influence the abundance of species and some habitats, i.e. underground burrows, may be impossible to monitor without destruction.
+
+	One of the most well known WSNs to monitor habitat is the network deployed on Great Duck Island (GDI), an island off the coast of Maine, USA. A network consisting of 32 nodes was deployed to monitor a bird, known as the Leach’s Storm Petrel \cite{Mainwaring2002}. This network used a clustering approach for groups of nodes to send data to a gateway, which would then route it back to the base station. The base station, located a few kilometres away on the island, has internet access and uploads the data to allow users to browse and process the data.
+
+	A multihop approach was used here as they found that, for sufficient coverage, single hop connectivity would not cover all of the island. Acrylic enclosures were developed to ensure the nodes were weatherproofed for the conditions of the island, while maintaining the functionality of each sensor and not impeding transmission range. While the nodes, their casing and their sensors have been designed specifically for the deployment on GDI, the success of the network, running for 123 days in the early stages of WSN research \cite{Szewczyk2004c}, shows that this approach can be used elsewhere with similar effects; allowing hard to monitor and/or inaccessible areas to be continuously monitored.
+
+	On a smaller scale, INternet-Sensor InteGration for HabitaT monitoring is a single-hop WSN that allows remote access for data and reconfiguring of nodes \cite{Demirbas}. While this network does use commercial hardware, their findings do show that their nodes could survive for 160 days on a single battery, supporting their claim that a single hop network allows for a longer network lifetime. 
+	
+	The key feature of this network is the ability for humans to remotely set reporting thresholds for sensor nodes. This means a user can prolong the lifetime of nodes by limiting the threshold they report on, as well as the fact that these thresholds are a way for users to add knowledge, albeit primitive, into a network.
+
+	While there is research on cameras used to monitor animals \cite{Kays2009, Ahumada2011a}, these ‘networks’ are generally cameras deployed with their memory cards manually retrieved and processed. In recent years, however, the use of wireless technologies and image-based WSNs has increased, \cite{Garcia-Sanchez2010b} uses wireless cameras to monitor the movement of animals between roads. Using commercial hardware and controlled sleep scheduling, this solution employs the use of nodes to detect movement and wake up more power-hungry camera nodes. While the nodes are wireless, the distance of the network from civilisation means that the data does still need to be collected manually and uploaded to a computer.
+
+	Due to the advent of smartphones and tablets, as well as the improvements in 3G technology, projects taking advantage of more modern technologies have grown in popularity. Using 3G enabled cameras, \cite{ZSL} have deployed a number of devices in locations all over the world, such as: Kenya, Indonesia and the USA. The images captured are transmitted to a server and a website allows the general public to not only see the images in near real-time, but to classify the images as well. This crowdsourcing of collective knowledge lets people, that may not have domain knowledge, vote on an image and those votes are used to make classification easier.
+
+	Over the past fifteen years, WSNs have grown from a concept to a real solution for monitoring the habitats, movements and eating habits of wildlife all over the world. Whether it is using GPS collars to monitor the movement of cattle \cite{Juang2002}, monitoring animal habitats on a remote island or using cameras to capture the animals themselves, the popularity of these networks has grown considerably and advances in technology have allowed these networks to be deployed in places that humans cannot.
 
 
 

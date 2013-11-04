@@ -1,5 +1,20 @@
 \begin{thebibliography}{10}
 
+\bibitem{Ahumada2011a}
+Jorge~a Ahumada, Carlos E~F Silva, Krisna Gajapersad, Chris Hallam, Johanna
+  Hurtado, Emanuel Martin, Alex McWilliam, Badru Mugerwa, Tim O'Brien,
+  Francesco Rovero, Douglas Sheil, Wilson~R Spironello, Nurul Winarni, and
+  Sandy~J Andelman.
+\newblock {Community structure and diversity of tropical forest mammals: data
+  from a global camera trap network.}
+\newblock {\em Philosophical transactions of the Royal Society of London.
+  Series B, Biological sciences}, 366(1578):2703--11, September 2011.
+
+\bibitem{Akkaya2005}
+Kemal Akkaya and Mohamed Younis.
+\newblock {A survey on routing protocols for wireless sensor networks}.
+\newblock {\em Ad Hoc Networks}, 3(3):325--349, May 2005.
+
 \bibitem{Akyildiz2002}
 I~Akyildiz.
 \newblock {Wireless sensor networks: a survey}.
@@ -21,10 +36,24 @@ Peter Corke, Tim Wark, and Raja Jurdak.
 \newblock {Environmental wireless sensor networks}.
 \newblock {\em Proceedings of the IEEE}, 98(11), 2010.
 
+\bibitem{Demirbas}
+M.~Demirbas.
+\newblock {INSIGHT: Internet-Sensor Integration for Habitat Monitoring}.
+\newblock {\em 2006 International Symposium on a World of Wireless, Mobile and
+  Multimedia Networks(WoWMoM'06)}, pages 553--558.
+
 \bibitem{Estrin2001}
 D~Estrin and L~Girod.
 \newblock {INSTRUMENTING THE WORLD WITH WIRELESS SENSOR NETWORKS}.
 \newblock {\em Acoustics, Speech, and \ldots}, 2001.
+
+\bibitem{Garcia-Sanchez2010b}
+Antonio-Javier Garcia-Sanchez, Felipe Garcia-Sanchez, Fernando Losilla, Pawel
+  Kulakowski, Joan Garcia-Haro, Alejandro Rodr\'{\i}guez, Jos\'{e}-Vicente
+  L\'{o}pez-Bao, and Francisco Palomares.
+\newblock {Wireless Sensor Network deployment for monitoring wildlife
+  passages.}
+\newblock {\em Sensors (Basel, Switzerland)}, 10(8):7236--62, January 2010.
 
 \bibitem{Hempstead2005}
 Mark Hempstead, Nikhil Tripathi, Patrick Mauro, Gu-Yeon Wei, and David Brooks.
@@ -67,6 +96,13 @@ JM~Kahn, RH~Katz, and KSJ Pister.
 \newblock {Next century challenges: mobile networking for “Smart Dust”}.
 \newblock {\em \ldots on Mobile computing and networking}, pages 271--278,
   1999.
+
+\bibitem{Kays2009}
+Roland Kays, Bart Kranstauber, Patrick Jansen, Chris Carbone, Marcus Rowcliffe,
+  Tony Fountain, and Sameer Tilak.
+\newblock {Camera traps as sensor networks for monitoring animal communities}.
+\newblock {\em 2009 IEEE 34th Conference on Local Computer Networks}, pages
+  811--818, October 2009.
 
 \bibitem{Lee2007}
 Jin-Shyan Lee, Yu-Wei Su, and Chung-Chou Shen.
@@ -125,6 +161,11 @@ R.~Szewczyk, Eric Osterweil, Joseph Polastre, Michael Hamilton, Alan
 \newblock {Habitat Monitoring With Sensor Networks}.
 \newblock {\em Communications of the ACM}, 47(6):34--40, 2004.
 
+\bibitem{Szewczyk2004c}
+Robert Szewczyk, Joseph Polastre, and Alan Mainwaring.
+\newblock {Lessons from a sensor network expedition}.
+\newblock {\em Wireless Sensor}, pages 307--322, 2004.
+
 \bibitem{Vaidya2004}
 N.H. Vaidya.
 \newblock {A wakeup scheme for sensor networks: achieving balance between
@@ -137,5 +178,9 @@ Marco Zennaro and Antoine Bagula.
 \newblock {Planning and deploying long distance wireless sensor networks: The
   integration of simulation and experimentation}.
 \newblock {\em \ldots and Wireless Networks}, pages 191--204, 2010.
+
+\bibitem{ZSL}
+ZSL.
+\newblock {Instant Wild – Live Wildlife Photographs}.
 
 \end{thebibliography}

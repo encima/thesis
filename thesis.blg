@@ -9,47 +9,48 @@ Warning--I didn't find a database entry for "gartner2013"
 Warning--I didn't find a database entry for "bluetooth2012bluetooth"
 Warning--there's a number but no volume in Akyildiz2002a
 Warning--there's a number but no volume in Bayat2012
+Warning--empty year in Demirbas
 Warning--empty year in Pizzocaro
 Warning--empty year in Schurgers
-You've used 20 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            637 strings with 9184 characters,
-and the built_in function-call counts, 7962 in all, are:
-= -- 779
-> -- 460
-< -- 8
-+ -- 182
-- -- 162
-* -- 609
-:= -- 1333
-add.period$ -- 60
-call.type$ -- 20
-change.case$ -- 141
+            682 strings with 10867 characters,
+and the built_in function-call counts, 11143 in all, are:
+= -- 1085
+> -- 659
+< -- 11
++ -- 261
+- -- 234
+* -- 867
+:= -- 1849
+add.period$ -- 80
+call.type$ -- 27
+change.case$ -- 198
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 276
-empty$ -- 512
-format.name$ -- 162
-if$ -- 1623
+cite$ -- 32
+duplicate$ -- 376
+empty$ -- 711
+format.name$ -- 234
+if$ -- 2272
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 20
-newline$ -- 103
-num.names$ -- 40
-pop$ -- 130
+int.to.str$ -- 27
+missing$ -- 26
+newline$ -- 137
+num.names$ -- 54
+pop$ -- 187
 preamble$ -- 1
-purify$ -- 121
+purify$ -- 171
 quote$ -- 0
-skip$ -- 215
+skip$ -- 303
 stack$ -- 0
-substring$ -- 472
-swap$ -- 80
-text.length$ -- 8
+substring$ -- 678
+swap$ -- 114
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
-warning$ -- 4
-while$ -- 78
-width$ -- 22
-write$ -- 217
-(There were 6 warnings)
+type$ -- 108
+warning$ -- 5
+while$ -- 107
+width$ -- 29
+write$ -- 289
+(There were 7 warnings)
