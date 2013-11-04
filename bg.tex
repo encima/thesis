@@ -40,6 +40,16 @@ According to \cite{Akyildiz2002}, there are eight factors that affect the design
 	Routing protocols specify how nodes in a WSN are organised, as well as how they transmit data throughout the network. In \cite{Akkaya2005}, the more popular routing protocols are surveyed and split into three of the main identified categories: data-centric, hierarchical and location-based. We use the aforementioned categories, as well as flat, to highlight some of the key protocols that are relevant to our work.
 	The protocols have the task of ensuring that a network is performing at its best, providing the best lifetime and ensuring reliable and consistent delivery of data. This must reduce \textit{flooding}, where nodes send every message to every link, aside from themselves, effectively flooding the network with unnecessary messages, and find a way to deliver data to the endpoint using the most efficient path possible.
 
+\subsection{Flat}
+	Initially, this was the most common structure for a WSN, dozens of nodes spread out over a geographical area, with one or more neighbours, sending observations to a single endpoint.
+
+\subsubsection{MCFA}
+	The Minimum Cost Forwarding Algorithm (MCFA) is an flat routing protocol that works by assigning costs to each node, based on how many hops they are from the base station \cite{Chen2001}. 
+
+Each node has a path-estimate of the cost of transmission from itself to the base station. The base station sends out a broadcast message and it is received by all nodes in range. The message contains a cost from the base station (initially zero) while every node has their cost set to infinity. If the cost in the message, plus the link it was received, is less than the current cost. If yes, the estimate is update on both the node and the message; the message is then passed on to other nodes in range. 
+
+	This approach allows for dynamic reconfiguration of the network, as well as a reduced overhead due to not having to maintain a global routing table on each node. The assumption with MCFA, however, is that the direction of routing is always towards a fixed endpoint.
+
 \subsection{Data-centric}
 	Data-centric routing protocols are not like traditional WSNs where nodes are given addresses; they use a method that involves the advertising, or querying, of the data that has been sensed and those with the relevant data can respond to the request.
 
@@ -55,8 +65,8 @@ When a node has sensed data, it sends an ADV message to all nodes within range. 
 
 SPIN eliminates the need for a global view of the network topology, as nodes only need to know their single hop neighbours. However, SPIN does not guarantee equal diffusion of data throughout the network as a node may be interested in the data sensed at the other edge of the network, with only nodes that are not interested in between. This would mean that those nodes would not request the data or pass it on.
 
-\subsubsection{SPIN-IT)
-	An extension to SPIN, SPIN-IT \nomenclature{SPIN-IT}{Sensor Protocols for Information via Negotation - Image Transfer}	uses a slightly different approach to receiving data and is developed solely for the transfer of images \cite{Woodrow2002}.
+\subsubsection{SPIN-IT}
+	An extension to SPIN, SPIN-IT \nomenclature{SPIN-IT}{Sensor Protocols for Information via Negotation - Image Transfer} uses a slightly different approach to receiving data and is developed solely for the transfer of images \cite{Woodrow2002}.
 	
 Nodes use the existing message structure of SPIN, but REQ messages are used as queries, sent to all nodes in transmission range. The receiving nodes keep these requests and generate a new REQ message, thus allowing nodes to store temporal paths. When a REQ reaches a node that has the desired data, it responds with a ROUTE-REPLY message. This message is used because images are large and resource-constrained WSNs would have a much shorter lifetime if a lot of unnecessary transmissions were made. The ROUTE-REPLY is used in case multiple nodes, in range of the requesting node, have the data it has requested and it can then choose the optimal route. As each node keeps a history of REQ messages, these can be used to trace the requested data back through the network, to the originating node, without the overhead of maintaining a global routing table.
 
@@ -66,7 +76,7 @@ Nodes use the existing message structure of SPIN, but REQ messages are used as q
 Within the network, a \textit{leader} is selected and this node is used to aggregate the data from nodes that were able to fulfil all, or some, of the query. At risk of failure, each query should result in a \textit{leader} being dynamically selected and it must have sufficient resources to be able to satisfy the request. This protocol was only proposed, and much of the technical detail has yet to be completed, but the concept of treating the network as a distributed database is a novel idea and this is one of the first protocols to suggest the use of a query language that could be used by people without specific domain knowledge.
 
 \subsection{Hierarchical}
-	Hierarchical networks are WSNs that contain nodes of different classes; this allows the network to be scalable, robust and can allow for a more connected network over a wider area.
+	Hierarchical networks are WSNs that contain nodes of different classes; nodes at the end of the network are typically clustered into groups and served by a gateway node. This gateway could be in charge of aggregating the data, processing the data, or simply forwarding it to an endpoint. Clusters of nodes allow the network to be spread out over a wider geographical area and gateway nodes can use a different transmission method to provide long distance links to the base station. Gateway nodes serving a cluster of nodes means that the network can scale easily as well, simply by adding a new cluster to the network.
 
 \subsubsection{PEGASIS}
 
@@ -75,12 +85,6 @@ Within the network, a \textit{leader} is selected and this node is used to aggre
 	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on 
 
 \subsubsection{GEAR}
-
-\subsection{Flat}
-	Initially, this was the most common structure for a WSN, dozens of nodes spread out over a geographical area, with one or more neighbours. 
-
-\subsubsection{MCFA}
-	
 
 \section{Biodiversity Sensor Networks}
 	In this section we will cover existing WSNs that are related to our motivating scenario or, more specifically, biodiversity focussed WSNs that have been deployed to monitor wildlife and/or the environment. WSNs for habitat, and wildlife, monitoring are especially important because these are areas that often need to be untouched by humans. Areas with high human disturbance can influence the abundance of species and some habitats, i.e. underground burrows, may be impossible to monitor without destruction.

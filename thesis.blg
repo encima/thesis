@@ -12,45 +12,45 @@ Warning--there's a number but no volume in Bayat2012
 Warning--empty year in Demirbas
 Warning--empty year in Pizzocaro
 Warning--empty year in Schurgers
-You've used 27 entries,
+You've used 31 entries,
             2118 wiz_defined-function locations,
-            682 strings with 10867 characters,
-and the built_in function-call counts, 11143 in all, are:
-= -- 1085
-> -- 659
-< -- 11
-+ -- 261
-- -- 234
-* -- 867
-:= -- 1849
-add.period$ -- 80
-call.type$ -- 27
-change.case$ -- 198
+            707 strings with 11563 characters,
+and the built_in function-call counts, 12397 in all, are:
+= -- 1212
+> -- 710
+< -- 12
++ -- 281
+- -- 250
+* -- 940
+:= -- 2054
+add.period$ -- 94
+call.type$ -- 31
+change.case$ -- 218
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 376
-empty$ -- 711
-format.name$ -- 234
-if$ -- 2272
+cite$ -- 36
+duplicate$ -- 434
+empty$ -- 818
+format.name$ -- 250
+if$ -- 2547
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 26
-newline$ -- 137
-num.names$ -- 54
-pop$ -- 187
+int.to.str$ -- 31
+missing$ -- 30
+newline$ -- 157
+num.names$ -- 62
+pop$ -- 210
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 187
 quote$ -- 0
-skip$ -- 303
+skip$ -- 344
 stack$ -- 0
-substring$ -- 678
-swap$ -- 114
-text.length$ -- 11
+substring$ -- 733
+swap$ -- 129
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
+type$ -- 124
 warning$ -- 5
-while$ -- 107
-width$ -- 29
-write$ -- 289
+while$ -- 119
+width$ -- 33
+write$ -- 333
 (There were 7 warnings)
