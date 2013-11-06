@@ -18,7 +18,8 @@
 \contentsline {subsubsection}{SPIN-IT}{9}
 \contentsline {subsubsection}{COUGAR}{10}
 \contentsline {subsection}{\numberline {2.2.3}Hierarchical}{10}
-\contentsline {subsubsection}{PEGASIS}{10}
-\contentsline {subsection}{\numberline {2.2.4}Location-based}{10}
-\contentsline {subsubsection}{GEAR}{11}
-\contentsline {section}{\numberline {2.3}Biodiversity Sensor Networks}{11}
+\contentsline {subsubsection}{TEEN}{10}
+\contentsline {subsection}{\numberline {2.2.4}Location-based}{11}
+\contentsline {subsubsection}{Span}{11}
+\contentsline {section}{\numberline {2.3}Biodiversity Sensor Networks}{12}
+\contentsline {section}{\numberline {2.4}Local and Global Knowledge}{13}

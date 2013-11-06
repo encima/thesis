@@ -1,10 +1,10 @@
 \chapter{Background}
 Using knowledge in a WSN is related to existing research into sensor networks that utilise context-awareness in order to improve their efficiency or adapt their sampling rate. 
 
-This chapter is split into the following sections. Section 2.1 outlines the issues surrounding WSN design and deployment. 
-Section 2.3 details relevant existing routing protocols for sensor networks. Section 2.2 shows some examples of existing WSNs that are related to our motivating scenario. Section 2.4 introduces research into local and global knowledge and Section 2.5 shows some related work into WSNs that utilise knowledge or context to prioritise data and/or improve efficiency.
+This chapter is split into the following sections. Section \ref{bg:wsni} outlines the issues surrounding WSN design and deployment. 
+Section \ref{bg:rp} details relevant existing routing protocols for sensor networks. Section \ref{bg:sm} highlights popular sensor middleware in use today. Section \ref{bg:bsn} shows some examples of existing WSNs that are related to our motivating scenario. Section \ref{bg:lgk} introduces research into local and global knowledge and Section \ref{bg:rsn} shows some related work into WSNs that utilise knowledge or context to prioritise data and/or improve efficiency.
 
-\section{Wireless Sensor Network Issues}
+\section{Wireless Sensor Network Issues} \label{bg:wsni}
 
 WSNs have been used in a number of domains, for a range of different purposes, from habitat monitoring \cite{Szewczyk2004a} to military purposes \cite{Pizzocaro} and healthcare \cite{Otto2006}. While these applications are vastly different, the technology behind each is very similar. Each requires the use of nodes with sensors attached and each node requires a power source and storage devices.
 
@@ -36,7 +36,7 @@ According to \cite{Akyildiz2002}, there are eight factors that affect the design
 	In \cite{Martinez2004}, nodes were deployed within glaciers and had to survive extreme temperatures, lasting without human intervention, for months at a time. \cite{Juang2002} attached collars to Zebras that had to withstand high speed movement, dust and high temperatures. The deployment of any node requires extensive research as to the environment that it will be deployed in and adjustments must be made to ensure it is able to survive for extended periods without continued maintenance.
 	Section \ref{bg:trans} also shows that environment does not simply affect the hardware, but humidity can reduce the transmission range significantly, as well as moisture collecting on wireless antenna can reduce the range for days at a time.
 
-\section{Routing Protocols}
+\section{Routing Protocols} \label{bg:rp} 
 	Routing protocols specify how nodes in a WSN are organised, as well as how they transmit data throughout the network. In \cite{Akkaya2005}, the more popular routing protocols are surveyed and split into three of the main identified categories: data-centric, hierarchical and location-based. We use the aforementioned categories, as well as flat, to highlight some of the key protocols that are relevant to our work.
 	The protocols have the task of ensuring that a network is performing at its best, providing the best lifetime and ensuring reliable and consistent delivery of data. This must reduce \textit{flooding}, where nodes send every message to every link, aside from themselves, effectively flooding the network with unnecessary messages, and find a way to deliver data to the endpoint using the most efficient path possible.
 
@@ -87,7 +87,6 @@ Clusters are assigned for a period of time and then new clusters are selected by
 
 For example, a network could be tasked with sensing humidity in a rainforest but the thresholds have been set such that nodes are transmitting readings that are not of interest. A user can change these thresholds and they will be pushed out to the nodes at the time that the next clusters are chosen, without any need to visit the node or configure them individually.
 
-
 \subsection{Location-based}
 	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on the region that nodes are deployed in.
 
@@ -98,9 +97,15 @@ An example of this would be node B placed between node A and C. C and A are unab
 
 Results showed that using Span, in a system that transmits using 802.11, provides an network lifetime increase of more than a factor of 2 over networks that just use the 802.11 protocol.
 
+\subsubsection{IGF}
+	
+
 ***Provide a concluding section for routing protocols here?***
 
-\section{Biodiversity Sensor Networks}
+\section{Sensor Middleware} \label{bg:sm}
+	Acting as a bridge between the hardware and the user, sensor middleware is 
+
+\section{Biodiversity Sensor Networks} \label{bg:bsn}
 	In this section we will cover existing WSNs that are related to our motivating scenario or, more specifically, biodiversity focussed WSNs that have been deployed to monitor wildlife and/or the environment. WSNs for habitat, and wildlife, monitoring are especially important because these are areas that often need to be untouched by humans. Areas with high human disturbance can influence the abundance of species and some habitats, i.e. underground burrows, may be impossible to monitor without destruction.
 
 	One of the most well known WSNs to monitor habitat is the network deployed on Great Duck Island (GDI), an island off the coast of Maine, USA. A network consisting of 32 nodes was deployed to monitor a bird, known as the Leach’s Storm Petrel \cite{Mainwaring2002}. This network used a clustering approach for groups of nodes to send data to a gateway, which would then route it back to the base station. The base station, located a few kilometres away on the island, has internet access and uploads the data to allow users to browse and process the data.
@@ -117,7 +122,8 @@ Results showed that using Span, in a system that transmits using 802.11, provide
 
 	Over the past fifteen years, WSNs have grown from a concept to a real solution for monitoring the habitats, movements and eating habits of wildlife all over the world. Whether it is using GPS collars to monitor the movement of cattle \cite{Juang2002}, monitoring animal habitats on a remote island or using cameras to capture the animals themselves, the popularity of these networks has grown considerably and advances in technology have allowed these networks to be deployed in places that humans cannot.
 
-\section{Local and Global Knowledge}
+\section{Local and Global Knowledge} \label{bg:lgk}
 	The environment of a sensor network is rich and varied and we believe that patterns in the data sensed can be used to inform the network on decisions surrounding the transmission and processing of newly sensed data. As our research began, we simply called this knowledge but, as our work continued, it became apparent that it could be split further.
 
 While we believe that we are the first to use the concept of local and global knowledge within the wireless sensor network domain, the terms have been around for many years. In 1999, a book that referred to local knowledge as \textit{indigenous knowledge} defined local knowledge as ‘systematic information that remains in the informal sector, usually unwritten and preserved in oral traditions rather than text’ \cite{LadislausM.Semali}. 
+

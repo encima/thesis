@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  4 NOV 2013 16:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  5 NOV 2013 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,6 +110,21 @@ LaTeX Warning: Citation `bluetooth2012bluetooth' on page 7 undefined on input l
 ine 30.
 
 [7] [8] [9] [10]
+
+LaTeX Warning: Citation `Manjeshwar2001' on page 11 undefined on input line 84.
+
+
+
+LaTeX Warning: Citation `Chen2002' on page 11 undefined on input line 95.
+
+[11]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+ [12]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ˜ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
@@ -119,16 +134,20 @@ Missing character: There is no ˜ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [11]) [12] (./thesis.bbl
-Underfull \hbox (badness 4765) in paragraph at lines 58--64
+
+
+LaTeX Warning: Citation `LadislausM.Semali' on page 13 undefined on input line 
+123.
+
+) [13] [14] (./thesis.bbl [15
+
+
+]
+Underfull \hbox (badness 4765) in paragraph at lines 64--70
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
-[13
-
-
-]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ž in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -181,20 +200,23 @@ Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
- [14] [15]
+[16] [17]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [16] (./thesis.aux (./intro.aux) (./bg.aux))
+) [18] (./thesis.aux (./intro.aux) (./bg.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 445 strings out of 493315
- 4867 string characters out of 6137905
+ 448 strings out of 493315
+ 4912 string characters out of 6137905
  60927 words of memory out of 5000000
- 3940 multiletter control sequences out of 15000+600000
+ 3943 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  23i,6n,19p,1105b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -202,10 +224,10 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (21 pages, 108499 bytes).
+Output written on thesis.pdf (23 pages, 113666 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
