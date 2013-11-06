@@ -103,7 +103,10 @@ Results showed that using Span, in a system that transmits using 802.11, provide
 ***Provide a concluding section for routing protocols here?***
 
 \section{Sensor Middleware} \label{bg:sm}
-	Acting as a bridge between the hardware and the user, sensor middleware is 
+	Acting as a bridge between the hardware and the user, sensor middleware is software that abstracts the underlying network from the user and provides a means of accessing sensed data and administrating how the network performs. These middlewares must not be specific to a single network and provide support for as many different sensor nodes as possible. In \cite{Yu2004}, a middleware is said to provide standardised services to many applications and perform operations that make effective use of limited system resource.
+
+\subsection{Issues}
+	
 
 \section{Biodiversity Sensor Networks} \label{bg:bsn}
 	In this section we will cover existing WSNs that are related to our motivating scenario or, more specifically, biodiversity focussed WSNs that have been deployed to monitor wildlife and/or the environment. WSNs for habitat, and wildlife, monitoring are especially important because these are areas that often need to be untouched by humans. Areas with high human disturbance can influence the abundance of species and some habitats, i.e. underground burrows, may be impossible to monitor without destruction.
@@ -126,4 +129,14 @@ Results showed that using Span, in a system that transmits using 802.11, provide
 	The environment of a sensor network is rich and varied and we believe that patterns in the data sensed can be used to inform the network on decisions surrounding the transmission and processing of newly sensed data. As our research began, we simply called this knowledge but, as our work continued, it became apparent that it could be split further.
 
 While we believe that we are the first to use the concept of local and global knowledge within the wireless sensor network domain, the terms have been around for many years. In 1999, a book that referred to local knowledge as \textit{indigenous knowledge} defined local knowledge as ‘systematic information that remains in the informal sector, usually unwritten and preserved in oral traditions rather than text’ \cite{LadislausM.Semali}. 
+
+Over the past twenty years, local knowledge has been used in various contexts, from researching lending and the credit market \cite{Stiglitz1990} to extracting local knowledge from natives to improve farming techniques \cite{DEWALT}. This research, as well as work that will be covered later, showed us that there are two kinds of knowledge: global and local. 
+
+It was from agriculture research that we were able to refine our definition of local knowledge, \cite{Joshi2001} defines local knowledge as ‘knowledge that farmers have derived locally through experience and experimentation’. They also say that indigenous knowledge is different in that it is culturally specific. From this definition, as well as our work with our motivating scenario, we were able to generalise the definition and expand upon it.
+
+We now define local knowledge as \textit{knowledge of an area, held by a domain expert, that has been gained through experience or experimentation}. This then means that global knowledge is \textit{knowledge of an area that can be accessed by anyone, without the need to visit the area directly}. The weather of a region is global knowledge because it can be found through a variety of media, whereas the level of a rain for a field within that region would be local knowledge, as it would require experimentation.
+
+Using these definitions, we believe that encoding local and/or global knowledge onto sensors will inform routing decisions to make better use of the bandwidth in resource-constrained WSNs by sending data that it believes to be important first, rather than just chronologically. Patterns in the data, and knowledge of the environment surrounding a node, will allow a node to infer what the data may be classified as, automate the classification process, learn from previously sensed data and utilise global knowledge of ongoing projects within the network to determine what data is thought to be of a higher priority.
+
+
 
