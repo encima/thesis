@@ -21,5 +21,8 @@
 \contentsline {subsubsection}{TEEN}{10}
 \contentsline {subsection}{\numberline {2.2.4}Location-based}{11}
 \contentsline {subsubsection}{Span}{11}
-\contentsline {section}{\numberline {2.3}Biodiversity Sensor Networks}{12}
-\contentsline {section}{\numberline {2.4}Local and Global Knowledge}{13}
+\contentsline {subsubsection}{GEAR}{12}
+\contentsline {section}{\numberline {2.3}Sensor Middleware}{12}
+\contentsline {subsection}{\numberline {2.3.1}Issues}{13}
+\contentsline {subsubsection}{Resource Constraints}{13}
+\contentsline {subsubsection}{Heterogeneity}{13}

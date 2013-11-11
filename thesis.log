@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  5 NOV 2013 17:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  11 NOV 2013 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -96,6 +96,15 @@ Chapter 1.
 
  (./bg.tex
 Chapter 2.
+
+LaTeX Warning: Reference `bg:bsn' on page 5 undefined on input line 5.
+
+
+LaTeX Warning: Reference `bg:lgk' on page 5 undefined on input line 5.
+
+
+LaTeX Warning: Reference `bg:rsn' on page 5 undefined on input line 5.
+
 [5
 
 
@@ -109,45 +118,38 @@ LaTeX Warning: Citation `gartner2013' on page 6 undefined on input line 19.
 LaTeX Warning: Citation `bluetooth2012bluetooth' on page 7 undefined on input l
 ine 30.
 
-[7] [8] [9] [10]
+[7] [8] [9] [10] [11]
 
-LaTeX Warning: Citation `Manjeshwar2001' on page 11 undefined on input line 84.
-
-
-
-LaTeX Warning: Citation `Chen2002' on page 11 undefined on input line 95.
-
-[11]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [12]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
+LaTeX Warning: Citation `Yu2001' on page 12 undefined on input line 101.
 
 
-LaTeX Warning: Citation `LadislausM.Semali' on page 13 undefined on input line 
-123.
+LaTeX Warning: Citation `Yu2004' on page 12 undefined on input line 110.
 
-) [13] [14] (./thesis.bbl [15
+
+LaTeX Warning: Citation `Wang2008c' on page 12 undefined on input line 112.
+
+
+LaTeX Warning: Citation `Hadim2006' on page 12 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Rahman' on page 12 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Yu2004' on page 12 undefined on input line 116.
+
+[12])
+Runaway argument?
+{ \par \section {Biodiversity Sensor Networks} \label {bg:bsn} In thi\ETC.
+! File ended while scanning use of \@xdblarg.
+<inserted text> 
+                \par 
+l.26 \include{bg}
+                 
+? 
+[13] (./thesis.bbl [14
 
 
 ]
-Underfull \hbox (badness 4765) in paragraph at lines 64--70
-[]\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
-ndo
- []
-
 Missing character: There is no √ in font cmr12!
 Missing character: There is no û in font cmr12!
 Missing character: There is no √ in font cmr12!
@@ -200,11 +202,7 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-[16] [17]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-) [18] (./thesis.aux (./intro.aux) (./bg.aux))
+ [15] [16]) [17] (./thesis.aux (./intro.aux) (./bg.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -213,21 +211,21 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 448 strings out of 493315
- 4912 string characters out of 6137905
+ 458 strings out of 493315
+ 4997 string characters out of 6137905
  60927 words of memory out of 5000000
- 3943 multiletter control sequences out of 15000+600000
+ 3953 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 23i,6n,19p,1105b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,6n,23p,1105b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (23 pages, 113666 bytes).
+Output written on thesis.pdf (22 pages, 110662 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -88,7 +88,7 @@ Clusters are assigned for a period of time and then new clusters are selected by
 For example, a network could be tasked with sensing humidity in a rainforest but the thresholds have been set such that nodes are transmitting readings that are not of interest. A user can change these thresholds and they will be pushed out to the nodes at the time that the next clusters are chosen, without any need to visit the node or configure them individually.
 
 \subsection{Location-based}
-	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on the region that nodes are deployed in.
+	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on the region that nodes are deployed in. **FLESH OUT**
 
 \subsubsection{Span}
 	Span is a protocol where nodes are selected as \textit{coordinators} based on their positions. A node can decide to be a coordinator based on the amount of energy it has and the number of neighbouring nodes it would benefit if they were able to use it as a bridge \cite{Chen2002}.
@@ -98,7 +98,7 @@ An example of this would be node B placed between node A and C. C and A are unab
 Results showed that using Span, in a system that transmits using 802.11, provides an network lifetime increase of more than a factor of 2 over networks that just use the 802.11 protocol.
 
 \subsubsection{GEAR}
-The Geographic Energy-Aware Routing protocol (GEAR) is similar to SPAN in that it makes routing choices based on both energy-awareness and location. Each node maintains an \textit{estimated cost] and a \textit{learning cost} of forwarding a packet through its neighbours. The estimated cost is calculated using the distance to the packet destination and the energy remaining on the node whereas the learning cost is the estimated cost that takes holes in the network into consideration \cite{Yu2001}. 
+The Geographic Energy-Aware Routing protocol (GEAR) is similar to SPAN in that it makes routing choices based on both energy-awareness and location. Each node maintains an \textit{estimated cost} and a \textit{learning cost} of forwarding a packet through its neighbours. The estimated cost is calculated using the distance to the packet destination and the energy remaining on the node whereas the learning cost is the estimated cost that takes holes in the network into consideration \cite{Yu2001}. 
 
 GEAR is designed to perform in two phases: forwarding a packet towards a region and disseminating a packet within a region. When sending a packet towards a destination, GEAR either sends a packet on to the node in range that is closest to the destination or, if such a node does not exist, then a hole is identified. If a hole is identified then the node that minimises a cost is selected.
 
@@ -111,14 +111,30 @@ To disseminate a packet within a geographic area, uses algorithms based on the d
 
 	In \cite{Wang2008c}, a middleware should include four major components: programming abstraction, system services, runtime support and Quality of Service (QoS) mechanisms. In this section, we will discuss the challenges surrounding middlewares for WSNs and highlight some existing middleware that are particularly relevant to our research problem and/or motivating scenario.
 
-\subsection{Issues}
+\subsection{Issues}\label{bg:sm:issues}
 	WSNs present a range of new challenges to existing middleware, due to their resource constraints, deployment environments and more. However, there has been research into the key issues that must be addressed in order for middleware to be considered suitable.
-	While there has been a number of surveys into these challenges \cite{Hadim2006, Rahman, Yu2004}, we will detail those that we believe to be most relevant to our work.
+	While there have been a number of surveys into these challenges \cite{Hadim2006, Rahman, Yu2004}, we will detail those that we believe to be most relevant to our work.
 	\subsubsection{Resource Constraints}
-		Unless a WSN is deployed in an open field with a consistent supply of sunlight, there will always be some constraints that prevent nodes from running indefinitely. This may be storage, battery life or processing limitations.
-	\subsubsection{Heterogeneity}
+		It is rare that nodes in a WSN would have a constant power source, unlimited memory and a casing that can survive a harsh environment without decaying. In order to ensure that the lifetime of nodes is mazimised, middleware needs to offer a power scheduling system that makes efficient use of the hardware on the node, typically turning off the radio at particular times.
 
-	\subsubsection{
+		Ideally, a middleware will be able to coordinate nodes through wireless communication, making efficient use of transmissions and dynamically modifying sleep schedules based on the power remaining.
+	\subsubsection{Heterogeneity}
+		Not every node in a network will have the same capabilities, manufacturer or hardware. WSN middleware needs to provide a standard interface to add data, regardless of the format it is recorded in. Some middlewares have been built for a specific set of hardware, however this homogeneity can provide increase the performance and efficiency of the network by only supporting one device.
+	\subsubsection{Real-world Integration}
+		WSNs are often tasked with recording phenomena that are time-crucial, so a sensor middleware should provide a real-time interface to the data that it has sensed. Ideally this data would be available outside of the network, though the use of an API.
+	\subsubsection{Quality of Service}
+		This issue is perhaps the most complex as QoS could apply to almost all aspects of the networks, such as efficiently using bandwidth, 100\% uptime for nodes, guaranteed packet delivery or access to data stores. Some of these requirements are managed by the implementation of the routiong protocol, the middleware should be able to monitor deployed nodes and report on their current status, as well as identify failures.
+
+\subsection{Existing Middlewares}
+	In this section, we identify existing middlewares, explain how they address the issues highlighted in Section \ref{bg:sm:issues} and highlight how they relate to our research. While there are a lot of existing middlewares, our research did not show any that directly utilised the environment to make informed classifications. We did, however, find some applications that utilise context and rules to administrate the network.
+
+	\subsubsection{FACTS}
+		One such example is the FACTS middleware, an approach that uses a fact repository to coordinate nodes. Rules can then be implemented to process sensed data and fired when certain conditions are met \cite{Terfloth2006}. More traditional sensor middlewares control the network and manage sensed data, this rule based approach allows for more flexibility, where rules can control the transmissions and process the data upon receipt.
+
+		
+	\subsubsection{IBM Sensor Fabric}
+	\subsubsection{GSN}
+		The 
 
 \section{Biodiversity Sensor Networks} \label{bg:bsn}
 	In this section we will cover existing WSNs that are related to our motivating scenario or, more specifically, biodiversity focussed WSNs that have been deployed to monitor wildlife and/or the environment. WSNs for habitat, and wildlife, monitoring are especially important because these are areas that often need to be untouched by humans. Areas with high human disturbance can influence the abundance of species and some habitats, i.e. underground burrows, may be impossible to monitor without destruction.
