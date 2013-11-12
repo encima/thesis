@@ -131,10 +131,75 @@ To disseminate a packet within a geographic area, uses algorithms based on the d
 	\subsubsection{FACTS}
 		One such example is the FACTS middleware, an approach that uses a fact repository to coordinate nodes. Rules can then be implemented to process sensed data and fired when certain conditions are met \cite{Terfloth2006}. More traditional sensor middlewares control the network and manage sensed data, this rule based approach allows for more flexibility, where rules can control the transmissions and process the data upon receipt.
 
-		
-	\subsubsection{IBM Sensor Fabric}
+		\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/facts_architecture}
+		\caption{FACTS Architecture}
+		\label{bg:fig:facts}
+		\end{figure}
+
+		Figure \ref{bg:fig:facts} shows the FACTS architecture, with the middleware holding the rulesets and a dstributed fact repository. Data within the network is stored as facts, providing a standard data format throughout the network and hardware abstraction. When new facts are received, ususally because of new sensing data, the rule engine checks to determine whether any rules should be fired. The ruleset definition language (RDL) is introduced here and each ruleset contains a group of relevant rules. Each rule is given a priority so that, if more than one rule is triggered by a fact, then the higher priority rules are fired first.
+
+		While FACTS itself does not utilise any local knowledge, the repository is used as a source for all previously sensed data and would prove as an excellent source of knowledge to assist with the classification of future readings. Also, the ability to add new rulesets, without technical knowledge of the hardware of each node, means that users of the network have the ability to add knowledge in the form of rules as they learn it.
+	
+	\subsubsection{ITA Sensor Fabric}
+	The ITA Sensor Fabric is collaboration project between IBM, the US Army and the UK MoD. Sensor Fabric, or Fabric, is a two-way messaging bus and set of middleware services connecting network assets to each other and users \cite{Wright2009b}.
+
+The core difference between the Fabric middleware and others is that not every node is sensing all of the time, sensor nodes are tasked when there is a requirement and they stop as soon as that task has been fulfilled. Similar to sinks in a traditional WSN, Fabric utilises Fabric nodes, which run the following three pieces of software:
+\begin{enumerate}
+	\item Message Broker - Provides the communication infrastructure.
+	\item Fabric Registry - Holds information about the current deployment, such as all nodes deployed, all assets, routing information and tasks. Deployed in the form of a database.
+	\item Fabric Manager - The main service on the node to track the status of connected sensors, establish communication channels, provide a container for processing, plug-ins and to extends the capabilities of the Fabric.
+\end{enumerate}
+
+Fabric runs on a Publish/Subscribe model, a sensing requirement is sent to a messaging broker as a subscription and this is distributed through all Fabric nodes and, thus, all sensor nodes. Sensor nodes then publish their data and the relevant data is sent to all applications that have subscribed to the data. 
+
+The plugin structure of Fabric makes it stand out from existing middlewares, allowing its functionality to be extended through web interfaces.
+
+Because Fabric has been developed for military purposes that cross countries, policy enforcement has been implemented to restrict access to the granularity of sensed data but these access levels do not simply apply to a military context. Using our motivating scenario, researchers and professors should see animal images whereas the Sabah Wildlife Department should see images of hunters and people in the forest.
+
 	\subsubsection{GSN}
-		The 
+		The Global Sensor Networks (GSN) is a middleware that has been developed to manage heterogeneous sensor networks and be suitable for those without any technical knowledge \cite{F2006}.
+
+GSN provides hardware abstraction through the use of  \textit{virtual sensors}, a data stream that abstracts implementation details from the actual sensed data. A virtual sensor can be comprised of many streams and it can even consist of many virtual sensors. 
+
+Virtual sensors are described using XML, with tags that consist of metadata for the sensor, the structure of the incoming data stream, SQL queries for processing the incoming data and querying times. What makes GSN stand out is that virtual sensors do not have to be sensors deployed within your network, or even sensors at all, some examples of GSN show virtual sensors being added that read in data from the weather websites. This also means that the underlying structure of the network is irrelevant to GSN, as well as the physical locations of the nodes. Unlike some middlewares that have an expectation of how data will be routed, GSN is decoupled from the routing protocol, allowing them to act independently.
+
+GSN is completely open source and, while it does not provide the plug-in architecture that is available in Fabric, the Java code can be modified to suit a specific deployment. 
+
+		\begin{figure}[p]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/gsn_arch.png}
+		\caption{GSN Architecture}
+		\label{bg:fig:gsn}
+		\end{figure}
+
+Figure \ref{bg:fig:gsn} outlines the architecture of GSN, showing that the virtual sensors are stored on a central node and their inputs are managed and stored. GSN also comes bundled with a web interface to show all active sensors and their most recent recordings, as well as the implementation of web services to access the data outside of the interface.
+
+Data from virtual sensors pass through the virtual sensor manager to the storage layer. Once the data has been stored, the query manager is invoked and queries are loaded from the repository and executed by the manager. The results of the queries are then handled by the notification manager and also made available to the web interface. Notifications can be extended to support many different forms of communication, such as SMS, email or web services.
+
+Virtual sensors do not natively support all hardware, although new virtual sensors can be described using XML, and there may be a need to implement an entirely new virtual sensor. In this case, technical knowledge is required, and new sensors can be implemented through use of the Java programming language. This provides more control over the use of XML and allows users to specify how sensed data is stored in a database, use external libraries to receive proprietary data, specify processing workflows before the data is stored or implement new notification methods for the users of the network.
+
+To show the simplicity of a basic virtual sensor, \cite{Aberer2007} describes a temperature sensor that we reproduce here in Listing \ref{bg:lst:gsn}. The file is human-readable and has a shallower learning curve than programming languages, with tags that explain what data they contain. In this example, the output structure shows that only a temperature reading is received and that the data should be stored permanently. The stream source specifies the content of the stream and the query details the standard query that should be used to extract data from GSN.
+
+\begin{lstlisting}
+<life-cycle pool-size="10" />
+<output-structure> 
+	<field name="TEMPERATURE" type="integer"/> 
+</output-structure>
+<storage permanent-storage="true" size="10s" /> 
+<input-stream name="dummy" rate="100" > 
+<stream-source alias="src1" sampling-rate="1" storage-size="1h">
+<address wrapper="remote"> <predicate key="type" val="temperature" /> <predicate key="location" val="bc143" /> </address> 
+<query>select avg(temperature) from WRAPPER</query>
+</stream-source>
+<query>select * from src1</query> 
+</input-stream>
+\caption{Virtual Temperature Sensor}
+\label{bg:lst:gsn}
+\end{lstlisting}
+
+The modularity and flexibility of GSN makes it different to existing middlewares as it has not been designed for any specific hardware and modules of the middleware can be replaced, such as the database. 
 
 \section{Biodiversity Sensor Networks} \label{bg:bsn}
 	In this section we will cover existing WSNs that are related to our motivating scenario or, more specifically, biodiversity focussed WSNs that have been deployed to monitor wildlife and/or the environment. WSNs for habitat, and wildlife, monitoring are especially important because these are areas that often need to be untouched by humans. Areas with high human disturbance can influence the abundance of species and some habitats, i.e. underground burrows, may be impossible to monitor without destruction.
@@ -166,4 +231,20 @@ We now define local knowledge as \textit{knowledge of an area, held by a domain 
 
 Using these definitions, we believe that encoding local and/or global knowledge onto sensors will inform routing decisions to make better use of the bandwidth in resource-constrained WSNs by sending data that it believes to be important first, rather than just chronologically. Patterns in the data, and knowledge of the environment surrounding a node, will allow a node to infer what the data may be classified as, automate the classification process, learn from previously sensed data and utilise global knowledge of ongoing projects within the network to determine what data is thought to be of a higher priority.
 
+\section{Relevant Existing Networks} \label{bg:rsn}
+	In this section, we discuss existing networks that have done work relating to our research question and/or our motivating scenario. While most of the existing networks relevant to Danau Girang have already been covered in Section \ref{bg:bsn}, there are some WSNs that are not directly related to biodiversity but have been deployed in harsh conditions or involve interdisciplinary collaboration.
 
+\subsection{Context-Awareness}
+	While standard WSNs have been prevalent for many decades, new research on the Internet of Things \cite{Atzori2010} has brought about interest in context-aware sensing, in some cases this is for small wearable devices to track fitness but the applications are much broader. Here we will look at WSNs that use context to make informed routing decisions, save power, or prioritise the transmission of data.
+	\subsubsection{AlarmNet}
+		Health monitoring is one of the more obvious choices for context awareness as classifying readings can often help determine the health of someone, rather than their self-reports. AlarmNet is a WSN that uses context to provide long-term health monitoring for people in assisted-living environments.
+	
+AlarmNet employs context-awareness to learn about the activity levels of the patient and uses that knowledge to save power and determine when changes in the readings may mean that the patient is at risk.
+	\subsubsection{MOPET}
+
+	\subsubsection{UNETS}
+		*UNETS is tiered and context aware
+\subsection{Harsh Environments} 
+	\subsubsection{GLACSWEB}
+
+\section{Summary}
