@@ -36,9 +36,12 @@
 \contentsline {section}{\numberline {2.5}Local and Global Knowledge}{20}
 \contentsline {section}{\numberline {2.6}Relevant Existing Networks}{21}
 \contentsline {subsection}{\numberline {2.6.1}Context-Awareness}{21}
-\contentsline {subsubsection}{AlarmNet}{21}
-\contentsline {subsubsection}{MOPET}{21}
-\contentsline {subsubsection}{UNETS}{21}
+\contentsline {subsubsection}{Health}{21}
+\contentsline {subsubsection}{Wearable Devices}{22}
+\contentsline {subsubsection}{UNETS}{22}
 \contentsline {subsection}{\numberline {2.6.2}Harsh Environments}{22}
 \contentsline {subsubsection}{GLACSWEB}{22}
-\contentsline {section}{\numberline {2.7}Summary}{22}
+\contentsline {subsubsection}{Reventador}{23}
+\contentsline {subsubsection}{Rainforest}{23}
+\contentsline {section}{\numberline {2.7}Summary}{23}
+\contentsline {chapter}{\numberline {3}Technical}{25}

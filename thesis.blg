@@ -1,58 +1,60 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
-A level-1 auxiliary file: intro.aux
-A level-1 auxiliary file: bg.aux
+A level-1 auxiliary file: Chap1/chapter.aux
+A level-1 auxiliary file: Chap2/chapter.aux
+A level-1 auxiliary file: Chap3/chapter.aux
 The style file: plain.bst
-Database file #1: library.bib
+Database file #1: refs/library.bib
 Warning--I didn't find a database entry for "gartner2013"
 Warning--I didn't find a database entry for "bluetooth2012bluetooth"
 Warning--there's a number but no volume in Akyildiz2002a
 Warning--there's a number but no volume in Bayat2012
 Warning--empty year in Demirbas
 Warning--empty year in DEWALT
+Warning--empty year in Maurer
 Warning--empty year in Pizzocaro
 Warning--empty year in Rahman
 Warning--empty year in Schurgers
-You've used 47 entries,
+You've used 53 entries,
             2118 wiz_defined-function locations,
-            813 strings with 14418 characters,
-and the built_in function-call counts, 17708 in all, are:
-= -- 1744
-> -- 959
-< -- 15
-+ -- 379
-- -- 332
-* -- 1319
-:= -- 2938
-add.period$ -- 142
-call.type$ -- 47
-change.case$ -- 306
+            851 strings with 15995 characters,
+and the built_in function-call counts, 20584 in all, are:
+= -- 2022
+> -- 1147
+< -- 19
++ -- 453
+- -- 400
+* -- 1557
+:= -- 3408
+add.period$ -- 160
+call.type$ -- 53
+change.case$ -- 358
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 628
-empty$ -- 1222
-format.name$ -- 332
-if$ -- 3643
+cite$ -- 61
+duplicate$ -- 722
+empty$ -- 1389
+format.name$ -- 400
+if$ -- 4230
 int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 46
-newline$ -- 236
-num.names$ -- 94
-pop$ -- 298
+int.to.str$ -- 53
+missing$ -- 52
+newline$ -- 266
+num.names$ -- 106
+pop$ -- 348
 preamble$ -- 1
-purify$ -- 260
+purify$ -- 306
 quote$ -- 0
-skip$ -- 486
+skip$ -- 564
 stack$ -- 0
-substring$ -- 1079
-swap$ -- 167
-text.length$ -- 15
+substring$ -- 1246
+swap$ -- 201
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 186
-warning$ -- 7
-while$ -- 176
-width$ -- 49
-write$ -- 501
-(There were 9 warnings)
+type$ -- 210
+warning$ -- 8
+while$ -- 204
+width$ -- 55
+write$ -- 566
+(There were 10 warnings)
