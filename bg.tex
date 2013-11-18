@@ -237,7 +237,7 @@ Using these definitions, we believe that encoding local and/or global knowledge 
 \subsection{Context-Awareness}
 	While standard WSNs have been prevalent for many decades, new research on the Internet of Things \cite{Atzori2010} has brought about interest in context-aware sensing, in some cases this is for small wearable devices to track fitness but the applications are much broader. Here we will look at WSNs that use context to make informed routing decisions, save power, or prioritise the transmission of data.
 
-	\subsubsection{AlarmNet}
+	\subsubsection{Health}
 		Health monitoring is one of the more obvious choices for context awareness as classifying readings can often help determine the health of someone, rather than their self-reports. AlarmNet is a WSN that uses context to provide long-term health monitoring for people in assisted-living environments.
 	
 AlarmNet employs context-awareness to learn about the activity levels of the patient and uses that knowledge to determine when changes in the readings may mean that the patient is at risk. Once the AlarmNet system has completed its learning period, deviations, from what it has recorded as the normal activities for the patient, are sent to nurses and doctors, with the idea that this information can assist with a diagnosis.
@@ -246,12 +246,33 @@ As some nodes in the system will be battery powered, AlarmNet also employs a sub
 
 This use of context has not only shown that it can assist with the lifetime of a network, but it can also provide valuable insight into sensed data to provide data enriched with semantics.
 
-	\subsubsection{MOPET}
+	\subsubsection{Wearable Devices}
 As wearable devices, such as the Fitbit and the Pebble smartwatch, are increasing in popularity, context-awareness is a useful tool to differentiate between the many activities that a person can undertake. The MObile PErsonal Trainer system (MOPET) is a wearable fitness devices that uses context to record data on jogging and fitness exercises \cite{Buttussi2008}. 
+
+While the project is five years old now, it is one of the earliest proof-of-concept devices created and shows how simple rules applied to sensor readings can be used to apply context. For example, the device consists of a GPS sensor and, when active, it is constantly recording positions. Using pairs of points, it is able to calculate the speed and, if the speed is consistent with jogging, then it records a running exercise.
+
+Fitness is not the only purpose for wearable computing, the eWatch is an early design for a \textit{smartwatch} that uses a microphone and light sensor to record the locations that the user visits, storing previous recordings in flash memory and matching them with current recordings \cite{Maurer}.
 
 	\subsubsection{UNETS}
 		*UNETS is tiered and context aware
-\subsection{Harsh Environments} 
+\subsection{Harsh Environments}
+	There are a number of situations where we may want to record data in an environment that is not safe for humans, such as a volcano \cite{Werner-Allen2006}, or that may be difficult for electronics to survive. In these cases, special considerations must be made during the design and deployment of the WSN, in order to ensure maximum  network lifetime with reliable readings.
 	\subsubsection{GLACSWEB}
+	Glacsweb is a sensor network to monitor the rate that which glaciers are melting. Deployed in Norway, specially designed sensors have been drilled into glaciers to monitor pressure, temperature, orientation and strain. Due to the high pressure and exposure to moisture, a polyester casing was used so that, once bonded, the node inside would not be recoverable.
+	\subsubsection{Reventador}
+	Volcano Reventador is in northern Ecuador and a WSN has been deployed on there to monitor eruptions. Similar to Glacsweb, weatherproof enclosures were used to prevent ash and moisture from breaking the sensors and long-range external antenna mounted to a pole was used to achieve communications over large distances when wireless communications have proven to be difficult \cite{Werner-Allen2006}.
+	\subsubsection{Rainforest}
+	There have been many studies on how the rainforest affects the range and quality of wireless links \cite{Figueiredo2009, Wark2008, Rahman2008}. In \cite{Figueiredo2009}, the humidity was shown to reduce 802.11 range by up to 78\% and \cite{Wark2008} explains that periods of rainfall reduce the link quality up to 100\% in some cases, resulting in the loss of a hop and this could prevent data from reaching the endpoint.
 
 \section{Summary}
+	In this chapter we have explored the components that make a WSN, as well as some existing deployments that are relevant to our motivating scenario. Sensor middlewares have come a long way in the past decade and increased capabilities for sensor nodes have allowed for more intense processing to be carried out before any data is seen by a human. Context is now used on sensor nodes to infer the activity it is undertaking or even to determine when it should wake to sample. 
+
+Local knowledge is not a new concept and it has been used for many years to extract information from indigenous people and in industry to adapt their processes to a local area, such as farming. However, we believe that our work is the first to apply local knowledge in the context of WSNs, but context-aware sensor networks support our hypothesis that knowledge of its surroundings, or of the data it has sensed, can improve network performance.
+
+The two primary components of a WSN that could be injected with local knowledge is the middleware and the routing protocol, each providing different benefits. Existing work has shown middleware that uses context-awareness can use that to make global changes to the network, such as power management, whereas routing protocols affect the data that is sampled and sent to the endpoint(s) of the network, such as adaptive thresholds.
+
+One issue in proving this hypothesis is the deployment of a network that utilises local knowledge. The deployment environment of our motivating scenario is not only interdisciplinary, it is in a region that is humid, dynamic and dense. Existing research has shown that the deployment of a WSN in these considerations means that range will be greatly reduced and changes in humidity can prevent communication altogether, as well as moisture affecting the hardware itself.
+To deploy a network, hardware must be adapted and the right communication medium must be chosen in order to maximise link quality and minimise dropped connections.
+
+In Chapter 2, we show how we used this research, as well as our own findings, to choose suitable hardware and experiments, that were informed by previous rainforest range tests in the literature,  supported our choice for communication medium.
+
