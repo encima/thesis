@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  18 NOV 2013 15:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  19 NOV 2013 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -86,6 +86,10 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 \@nomenclaturefile=\write3
 \openout3 = `thesis.nlo'.
 
@@ -95,18 +99,18 @@ Writing nomenclature file thesis.nlo
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
  (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count97
@@ -170,9 +174,9 @@ e
 ))
 \c@lstlisting=\count103
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 14.
+(Font)              <14.4> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
+(Font)              <7> on input line 17.
 
 [1
 
@@ -184,23 +188,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-)
+ [1
+
+])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [1
-
-] (./thesis.lof)
+ [2] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [2
+ [3
 
 ] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [3
+ [4
 
 ] [1]
 \openout2 = `Chap1/chapter.aux'.
@@ -211,164 +215,43 @@ Chapter 1.
 [1
 
 
-] [2] [3]) [4]
+] [2] [3]) [4] [5]
 \openout2 = `Chap2/chapter.aux'.
 
  (./Chap2/chapter.tex
 Chapter 2.
-
-LaTeX Warning: Citation `Szewczyk2004a' on page 5 undefined on input line 9.
-
-
-LaTeX Warning: Citation `Pizzocaro' on page 5 undefined on input line 9.
-
-
-LaTeX Warning: Citation `Otto2006' on page 5 undefined on input line 9.
-
-
-LaTeX Warning: Citation `Akyildiz2002' on page 5 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Mainwaring2002' on page 5 undefined on input line 14.
-
-[5
+[6
 
 
 
 ]
 
-LaTeX Warning: Citation `Intanagonwiwat2000' on page 6 undefined on input line 
-17.
-
-
-LaTeX Warning: Citation `Kahn' on page 6 undefined on input line 17.
-
-
-LaTeX Warning: Citation `Akyildiz2002a' on page 6 undefined on input line 17.
-
-
-LaTeX Warning: Citation `Corke2010a' on page 6 undefined on input line 17.
-
-
-LaTeX Warning: Citation `gartner2013' on page 6 undefined on input line 19.
-
-
-LaTeX Warning: Citation `Akyildiz2002' on page 6 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Segal2010a' on page 6 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Hempstead2005' on page 6 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Schurgers' on page 6 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Vaidya2004' on page 6 undefined on input line 24.
-
-
-LaTeX Warning: Citation `Estrin2001' on page 6 undefined on input line 24.
-
-[6]
-
-LaTeX Warning: Citation `Lee2007' on page 7 undefined on input line 29.
-
-
-LaTeX Warning: Citation `Swan2012' on page 7 undefined on input line 30.
-
-
-LaTeX Warning: Citation `bluetooth2012bluetooth' on page 7 undefined on input l
-ine 30.
-
-
-LaTeX Warning: Citation `Zennaro' on page 7 undefined on input line 31.
-
-
-LaTeX Warning: Citation `Bayat2012' on page 7 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Martinez2004' on page 7 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Juang2002' on page 7 undefined on input line 36.
+LaTeX Warning: Citation `gartner2013' on page 7 undefined on input line 19.
 
 [7]
 
-LaTeX Warning: Citation `Akkaya2005' on page 8 undefined on input line 40.
+LaTeX Warning: Citation `bluetooth2012bluetooth' on page 8 undefined on input l
+ine 30.
 
-
-LaTeX Warning: Citation `Chen2001' on page 8 undefined on input line 47.
-
-[8]
-
-LaTeX Warning: Citation `Heinzelman1999' on page 9 undefined on input line 57.
-
-
-LaTeX Warning: Citation `Woodrow2002' on page 9 undefined on input line 69.
-
-[9]
-
-LaTeX Warning: Citation `Yao2002' on page 10 undefined on input line 74.
-
-[10]
-
-LaTeX Warning: Citation `Manjeshwar2001' on page 11 undefined on input line 84.
-
-
-
-LaTeX Warning: Citation `Chen2002' on page 11 undefined on input line 94.
-
-[11]
-
-LaTeX Warning: Citation `Yu2001' on page 12 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Yu2004' on page 12 undefined on input line 110.
-
-
-LaTeX Warning: Citation `Wang2008c' on page 12 undefined on input line 112.
-
-
-LaTeX Warning: Citation `Hadim2006' on page 12 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Rahman' on page 12 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Yu2004' on page 12 undefined on input line 116.
-
-[12] [13]
-
-LaTeX Warning: Citation `Terfloth2006' on page 14 undefined on input line 132.
-
-<Chap2/figures/facts_architecture.jpg, id=63, 451.6875pt x 181.67876pt>
+[8] [9] [10] [11] [12] [13] [14] [15] [16]
+<Chap2/figures/facts_architecture.jpg, id=76, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
 Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
 e 136.
 (pdftex.def)             Requested size: 312.00119pt x 125.49985pt.
-
-
-LaTeX Warning: Citation `Wright2009b' on page 14 undefined on input line 146.
-
-[14]
-
-LaTeX Warning: Citation `F2006' on page 15 undefined on input line 162.
-
-[15] <Chap2/figures/gsn_arch.png, id=71, 371.3875pt x 453.695pt>
+ [17] [18]
+<Chap2/figures/gsn_arch.png, id=83, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
 Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 172.
 (pdftex.def)             Requested size: 312.00119pt x 381.15659pt.
+ [19] [20 <./Chap2/figures/facts_architecture.jpg> <./Chap2/figures/gsn_arch.pn
+g>]
 
-
-LaTeX Warning: Citation `Aberer2007' on page 16 undefined on input line 183.
-
-
-LaTeX Warning: Reference `bg:lst:gsn' on page 16 undefined on input line 183.
+LaTeX Warning: Reference `bg:lst:gsn' on page 21 undefined on input line 183.
 
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 186.
 
@@ -377,8 +260,7 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 186.
- [16] [17 <./Chap2/figures/facts_architecture.jpg> <./Chap2/figures/gsn_arch.pn
-g>]
+
 Overfull \hbox (61.19922pt too wide) in paragraph at lines 192--193
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -396,28 +278,11 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+ [21]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-
-
-LaTeX Warning: Citation `Mainwaring2002' on page 18 undefined on input line 207
-.
-
-
-LaTeX Warning: Citation `Szewczyk2004c' on page 18 undefined on input line 209.
-
-
-[18]
-
-LaTeX Warning: Citation `Demirbas' on page 19 undefined on input line 211.
-
-
-LaTeX Warning: Citation `Kays2009' on page 19 undefined on input line 215.
-
-
-LaTeX Warning: Citation `Ahumada2011a' on page 19 undefined on input line 215.
-
+ [22]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
@@ -425,101 +290,64 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-LaTeX Warning: Citation `Garcia-Sanchez2010b' on page 19 undefined on input lin
-e 215.
-
-
-LaTeX Warning: Citation `ZSL' on page 19 undefined on input line 217.
-
-
-LaTeX Warning: Citation `Juang2002' on page 19 undefined on input line 219.
-
-[19]
+[23]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-
-
-LaTeX Warning: Citation `LadislausM.Semali' on page 20 undefined on input line 
-224.
-
-
-LaTeX Warning: Citation `Stiglitz1990' on page 20 undefined on input line 226.
-
-
-LaTeX Warning: Citation `DEWALT' on page 20 undefined on input line 226.
-
-
-LaTeX Warning: Citation `Joshi2001' on page 20 undefined on input line 228.
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-[20]
-
-LaTeX Warning: Citation `Atzori2010' on page 21 undefined on input line 238.
-
-[21]
-
-LaTeX Warning: Citation `Buttussi2008' on page 22 undefined on input line 250.
-
-
-LaTeX Warning: Citation `Maurer' on page 22 undefined on input line 254.
-
-
-LaTeX Warning: Citation `Werner-Allen2006' on page 22 undefined on input line 2
-59.
-
-
-LaTeX Warning: Citation `Werner-Allen2006' on page 22 undefined on input line 2
-63.
-
-[22]
-
-LaTeX Warning: Citation `Figueiredo2009' on page 23 undefined on input line 265
-.
-
-
-LaTeX Warning: Citation `Wark2008' on page 23 undefined on input line 265.
-
-
-LaTeX Warning: Citation `Rahman2008' on page 23 undefined on input line 265.
-
-
-LaTeX Warning: Citation `Figueiredo2009' on page 23 undefined on input line 265
-.
-
-
-LaTeX Warning: Citation `Wark2008' on page 23 undefined on input line 265.
-
-[23]) [24]
+ [24] [25] [26] [27] [28]) [29]
 \openout2 = `Chap3/chapter.aux'.
 
  (./Chap3/chapter.tex
 Chapter 3.
-) [25
+
+LaTeX Warning: Reference `tech:motiv' on page 30 undefined on input line 4.
+
+
+LaTeX Warning: Reference `tech:hw' on page 30 undefined on input line 4.
+
+
+LaTeX Warning: Reference `tech:wireless' on page 30 undefined on input line 4.
+
+
+LaTeX Warning: Reference `tech:conc' on page 30 undefined on input line 4.
+
+[30
 
 
 
-] (./thesis.bbl [26
+] [31]
+
+LaTeX Warning: Citation `Nachman2008' on page 32 undefined on input line 24.
+
+[32]
+
+LaTeX Warning: Citation `instruments2012pandaboard' on page 33 undefined on inp
+ut line 37.
+
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no £ in font cmr12!
+) [33] (./thesis.bbl [34
 
 
-]
+] [35]
 Underfull \hbox (badness 4765) in paragraph at lines 109--115
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
-[27]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
+[36]
 Missing character: There is no √ in font cmr12!
 Missing character: There is no û in font cmr12!
 Missing character: There is no √ in font cmr12!
@@ -572,17 +400,16 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [28] [29]
-Underfull \hbox (badness 1067) in paragraph at lines 314--318
+ [37] [38] [39]
+Underfull \hbox (badness 1067) in paragraph at lines 336--340
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
-[30]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-) [31] (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux)
+) [40] (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux)
 (./Chap3/chapter.aux))
 
 LaTeX Warning: There were undefined references.
@@ -592,23 +419,23 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2972 strings out of 493315
- 42886 string characters out of 6137905
- 112003 words of memory out of 5000000
- 6374 multiletter control sequences out of 15000+600000
+ 3012 strings out of 493315
+ 43587 string characters out of 6137905
+ 112499 words of memory out of 5000000
+ 6410 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,32p,1113b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,32p,1113b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (36 pages, 209507 bytes).
+Output written on thesis.pdf (46 pages, 218271 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 180 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

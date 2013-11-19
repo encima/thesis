@@ -1,2 +1,57 @@
 \chapter{Technical}
-	In this chapter, we explain our motivating scenario in more detail, explore the sensor hardware that we researched and outline the results of experiments we undertook in the Malaysian rainforest. As highlighted in Section \ref{int:mot}, we have been working with Cardiff University School of Bioscience to design and deploy a WSN that utilises local knowledge, using an area of rainforest in Malaysia owned by the Sabah Wildlife Department.
+	In this chapter, we explain our motivating scenario in more detail, explore the sensor hardware that we researched and outline the results of experiments we undertook in the Malaysian rainforest. As highlighted in Section \ref{int:mot}, we have been working with Cardiff University School of Bioscience to design and deploy a WSN that utilises local knowledge, using an area of rainforest in Malaysia owned by the Sabah Wildlife Department, called Danau Girang.
+
+The structure of this chapter is as follows. Section \ref{tech:motiv} explains what we aimed to deploy in Danau Girang and what our considerations were. Secion \ref{tech:hw} introduces sensor hardware that is in use today and details the choices we made. Section \ref{tech:wireless} details the transmission medium choices we tried and also shows the results of experiments performed in both the UK and Malaysia. Finally, Section \ref{tech:conc} summarises our findings and explains the choices we made for the sensor nodes we used in DG. 
+
+\section{Danau Girang}
+	Based in Sabah, Malaysia, Danau Girang is a field centre located in Lot 6 of the Lower Kinabatangan Wildlife Sanctuary (LKWS), surrounded by secondary rainforest that had been logged up until the 1970s. Experiencing typical wet and dry seasons, the LKWS can receive more than 500mm of rainfall during the rainy season, dropping to lows of around 150mm during the dry seasons \cite{Walsh2009}, and up to 100\% humidity all year round. 
+
+Danau Girang is uniquely situated in a rainforest corridor that joins two areas of rainforest together, with the corridor surrounded by palm oil fields on each side. Because of this, animals use the corridor to move between the rainforest regions and some use it to enter the palm oil plantation for new feeding grounds. This gives Danau Girang insight into the movement patterns of these animals in the corridor as well as in the rainforest itself, with a wide variety of species that are not commonly seen in other tropical regions of the world. Due to the remote nature of the centre, power is provided by a set of diesel generators which, typically, provide power from 10 am to 1 pm and 5pm to 11pm daily. Wireless Internet access is provided by satellite with speeds comparable to that of 56k, although the upload speeds are considerably faster than downloads.
+
+As outlined in Section \ref{int:mot}, the corridor monitoring programme is a scheme that has been in place for more than five years to use wildlife cameras to track the movement of animals through the corridor and to capture species that are rare or unique to South-East Asia, such as the Bornean Clouded Leopard or Sun Bear. Currently, the use of Reconyx Hyperfire HC500 cameras are being used \cite{Reconyx}. These are standalone cameras that store a pre-defined set of images to an SD card on each trigger, which is triggered by an infrared (IR) motion sensor when the beam is broken. 
+
+Images must be collected manually every two weeks from the cameras and the batteries are changed at that point as well, although a typical charge should last three months. The cameras are equipped with watertight casing but, due to the humidity and the opening of the cameras every 2 weeks, silica gel is used to prevent moisture inside the camera. We believe that humidity also reduces the battery life, as the charge drops from three months to around three weeks within the first few months of usage. However, the lack of constant power availability could also negatively impact the charge cycles of the batteries when at the field centre, reducing their capacity. Each unit is secured to a tree and more dangerous sites, such as known elephant paths, have protective cases as well. 
+
+In 2010, twenty cameras were deployed for six month periods and then relocated based on the needs of the projects at the field centre. As of 2013, there are now ninety with a view to expand and dozens of projects within the field centre use the images gathered from these cameras. Initially, it was the job of visiting research students to collect the images but, since the number of deployed cameras has grown, full-time staff have been taken on to maintain them.
+
+Our belief is that we can use the LKWS, and the locations of the existing cameras, to deploy a WSN that uses local knowledge gained from the researchers at DG to automate the collection of images, improve the battery life by not exposing the internals of the camera to the elements so often and, most important, prioritise the flow of data through the network by in-network processing. 
+	
+Annual visits, lasting three weeks, have been made to DG to test out hardware, software and wireless choices, in an effort to optimise the network. These visits have also been used to extract local knowledge from the area and researchers, by semi-structured interviews and watching them work.
+
+\section{Hardware}
+	Before any visits were made to DG, meetings with the manager of the field centre, Benoit Goossens, were held in order to gain a better understanding of the environment and the project. This is where we were alerted to the humidity of the region and the fact that the failure rate of the Reconyx cameras has been as high as thirty per cent.
+
+Reconyx cameras have no external interface support and the only way to access the images is through the removable SD card, because of this there is no way of attaching external sensor hardware to the existing cameras. In-network processing is an important requirement for our WSN and this did limit our choices to nodes that are computationally capable than more common sensors, such as the IMote 2 \cite{Nachman2008}.
+
+In this section, we detail our research into suitable sensor hardware that met the following requirements:
+\begin{enumerate}
+	\item Able to perform basic processing
+	\item Common interface availability (Serial, USB)
+	\item Wireless enabled
+	\item Battery-powered
+	\item Expandable memory
+\end{enumerate}
+This section also details the modifications we made to the devices in order to ensure they would survive in a humid environment.
+
+\subsection{Pandaboard}
+
+Texas Instruments supported the development of a reference Single Board Computer (SBC) that had specs similar to that of a modern smartphone and was capable of running desktop Linux, known as the Pandaboard \cite{instruments2012pandaboard}. A dual core 1GhZ processor with 1GB of RAM, support for external storage, expansion ports, USB, Wi-Fi and Bluetooth in a board the size of two credit cards can be a powerful addition to a data heavy WSN, especially one that deals with images.
+
+There is no mention of Pandaboards in the literature being used in WSNs, but the low power of the system, and advanced capabilities, make it suitable for processing and transmitting data simultaneously. 
+	
+\subsection{IGEP v2}
+
+The IGEP v2 is another ARM based SBC that uses a 1GhZ single core processor with 512MB RAM and similar connectivity features to the Pandaboard, but around half the size. This does result in a reduced power draw and the device is still capable of running desktop Linux.
+
+Due to the smaller size, and easier commercial availability, the IGEP has been used as a sensor node to record, process and send readings from multiple devices, such as air temperature, GPS and oxygen saturation as part of environmental monitoring \cite{Resch}. In their research, they found that the IGEP achieved 9.1 hours of uptime using a 4000mAH battery, a capacity used in many modern smartphones.
+
+\subsection{Final Choice}
+	
+In the 
+
+\subsection{Adapting for Harsh Environments}
+
+\section{Transmission Medium}
+	In this section, we introduce the various wireless standards we researched, and tested, as well as detailing how the rainforest affected each medium.
+
+\section{Summary}
