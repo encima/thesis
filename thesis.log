@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  19 NOV 2013 16:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  25 NOV 2013 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -324,30 +324,54 @@ LaTeX Warning: Reference `tech:conc' on page 30 undefined on input line 4.
 
 
 
-] [31]
+] [31] [32] [33] [34]
+<Chap3/figures/bp_snr.png, id=137, 729.4452pt x 445.665pt>
+File: Chap3/figures/bp_snr.png Graphic file (type png)
 
-LaTeX Warning: Citation `Nachman2008' on page 32 undefined on input line 24.
+<use Chap3/figures/bp_snr.png>
+Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 64.
+(pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
 
-[32]
+<Chap3/figures/dg_snr.png, id=139, 728.4816pt x 445.1832pt>
+File: Chap3/figures/dg_snr.png Graphic file (type png)
 
-LaTeX Warning: Citation `instruments2012pandaboard' on page 33 undefined on inp
-ut line 37.
+<use Chap3/figures/dg_snr.png>
+Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 75.
+(pdftex.def)             Requested size: 175.49881pt x 107.24693pt.
+ [35 <./Chap3/figures/bp_snr.png>]
+Overfull \hbox (5.46674pt too wide) in paragraph at lines 88--89
+[]\OT1/cmr/m/n/12 Although the range of Wi-Fi is poor, for our re-quire-ments, 
+in both Malaysia
+ []
 
-Missing character: There is no Â in font cmr12!
-Missing character: There is no £ in font cmr12!
-) [33] (./thesis.bbl [34
+[36 <./Chap3/figures/dg_snr.png>]
+
+LaTeX Warning: Citation `Waspmote' on page 37 undefined on input line 93.
 
 
-] [35]
-Underfull \hbox (badness 4765) in paragraph at lines 109--115
+LaTeX Warning: Reference `sec:wifirange' on page 37 undefined on input line 95.
+
+
+[37] <Chap3/figures/pelican.jpg, id=152, 1284.8pt x 963.6pt>
+File: Chap3/figures/pelican.jpg Graphic file (type jpg)
+
+<use Chap3/figures/pelican.jpg>
+Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 113.
+(pdftex.def)             Requested size: 175.49881pt x 131.60953pt.
+) [38 <./Chap3/figures/pelican.jpg>]
+(./thesis.bbl [39
+
+
+] [40]
+Underfull \hbox (badness 4765) in paragraph at lines 117--123
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
+[41]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-[36]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ž in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -400,29 +424,27 @@ Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
- [37] [38] [39]
-Underfull \hbox (badness 1067) in paragraph at lines 336--340
+ [42] [43] [44]
+Underfull \hbox (badness 1067) in paragraph at lines 351--355
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
+[45]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [40] (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux)
+) [46] (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux)
 (./Chap3/chapter.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3012 strings out of 493315
- 43587 string characters out of 6137905
- 112499 words of memory out of 5000000
- 6410 multiletter control sequences out of 15000+600000
+ 3036 strings out of 493315
+ 44080 string characters out of 6137905
+ 112561 words of memory out of 5000000
+ 6430 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,6n,32p,1113b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -432,10 +454,10 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (46 pages, 218271 bytes).
+Output written on thesis.pdf (52 pages, 672125 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 205 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

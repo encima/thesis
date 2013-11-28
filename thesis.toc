@@ -49,5 +49,9 @@
 \contentsline {section}{\numberline {3.2}Hardware}{32}
 \contentsline {subsection}{\numberline {3.2.1}Pandaboard}{33}
 \contentsline {subsection}{\numberline {3.2.2}IGEP v2}{33}
-\contentsline {section}{\numberline {3.3}Transmission Medium}{33}
-\contentsline {section}{\numberline {3.4}Summary}{33}
+\contentsline {subsection}{\numberline {3.2.3}Waspmote}{34}
+\contentsline {section}{\numberline {3.3}Transmission Medium}{34}
+\contentsline {subsection}{\numberline {3.3.1}Wi-Fi}{34}
+\contentsline {subsection}{\numberline {3.3.2}Digimesh}{37}
+\contentsline {subsection}{\numberline {3.3.3}Adapting for Harsh Environments}{38}
+\contentsline {section}{\numberline {3.4}Summary}{38}

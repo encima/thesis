@@ -8,6 +8,7 @@ The style file: plain.bst
 Database file #1: refs/library.bib
 Warning--I didn't find a database entry for "gartner2013"
 Warning--I didn't find a database entry for "bluetooth2012bluetooth"
+Warning--I didn't find a database entry for "Waspmote"
 Warning--there's a number but no volume in Akyildiz2002a
 Warning--there's a number but no volume in Bayat2012
 Warning--empty year in Demirbas
@@ -15,46 +16,47 @@ Warning--empty year in DEWALT
 Warning--empty year in Maurer
 Warning--empty year in Pizzocaro
 Warning--empty year in Rahman
+Warning--empty year in Resch
 Warning--empty year in Schurgers
-You've used 57 entries,
+You've used 59 entries,
             2118 wiz_defined-function locations,
-            873 strings with 16640 characters,
-and the built_in function-call counts, 21831 in all, are:
-= -- 2146
-> -- 1196
-< -- 20
-+ -- 473
-- -- 416
-* -- 1630
-:= -- 3608
-add.period$ -- 172
-call.type$ -- 57
-change.case$ -- 378
+            886 strings with 17138 characters,
+and the built_in function-call counts, 22496 in all, are:
+= -- 2214
+> -- 1221
+< -- 21
++ -- 483
+- -- 424
+* -- 1670
+:= -- 3713
+add.period$ -- 179
+call.type$ -- 59
+change.case$ -- 388
 chr.to.int$ -- 0
-cite$ -- 65
-duplicate$ -- 775
-empty$ -- 1495
-format.name$ -- 416
-if$ -- 4501
+cite$ -- 68
+duplicate$ -- 806
+empty$ -- 1550
+format.name$ -- 424
+if$ -- 4647
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 55
-newline$ -- 285
-num.names$ -- 114
-pop$ -- 370
+int.to.str$ -- 59
+missing$ -- 57
+newline$ -- 295
+num.names$ -- 118
+pop$ -- 384
 preamble$ -- 1
-purify$ -- 322
+purify$ -- 330
 quote$ -- 0
-skip$ -- 611
+skip$ -- 633
 stack$ -- 0
-substring$ -- 1315
-swap$ -- 217
-text.length$ -- 20
+substring$ -- 1349
+swap$ -- 227
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 226
-warning$ -- 8
-while$ -- 216
-width$ -- 59
-write$ -- 607
-(There were 10 warnings)
+type$ -- 234
+warning$ -- 9
+while$ -- 223
+width$ -- 61
+write$ -- 628
+(There were 12 warnings)
