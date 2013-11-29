@@ -1,0 +1,25 @@
+\chapter{Architecture}
+	In this chapter, we propose a network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three tiered appraoch with each subsequent tier providing increased knowledge processing capabilities. 
+
+	We believe that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise data delivery that it believes to be important, rather than chronologically. We also believe that human input is a valuable learning process for such a network and feedback, from humans, on data that has been classified can be used to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
+
+	The rest of this chapter is structured as follows. Section 1 outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section 2 introduces an example, from our motivating scenario, that will be used to better explain each tier of the architecture. Section 3 explains the data collection tier. Section 4 explains the data processing tier. Section 5 explains the data aggregation tier. Section 6 concludes the chapter and summarises the key features of K-HAS.
+
+	\section{K-HAS}
+		K-HAS has been designed as an architecture for WSNs that is able to handle changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier.
+	
+	\section{Scenario}
+		In order to explain K-HAS more coherently, we will use an example from our motivating scenario that will show how sensed data is enriched, classified and prioritised as it moves through the network. In this example, a network of wireless cameras nodes are deployed in the Malaysian rainforest, tasked with sensing the movments of animals through a specific corridor of the rainforest. 
+
+		From previous research, we know that animals that are not of interest often move through that region of the forest at all times of the day, such as macaques and wild boar. However, researchers at Danau Girang also hypothesise that rare species, such as the clouded leopard, move through the corridor when certain conditions are met. These conditions are: a temperature between thirty and thirty five degrees celsius, a night with a full moon and a time between one a.m. and four a.m.
+
+		The network is using the K-HAS architecture and has been tasked with prioritising the transmission of clouded leopards, but they also want to receive all pictures; regardless of the content.
+	
+	\section{Data Collection}
+		The data collection (DC) tier is a very similar to standard nodes in a typical WSN, using hardware that has similar capabilities. These DC nodes are deployed at the edge of the network and tasked with sensing their environment, pre-processing the sensed data and using each other to relay data to the next tier.
+
+		DC nodes are capable of performing processing on data, such as the time it was recorded and its size, but their limited knowledge processing capabilities allow them to have an increased battery life and reduced size, making them suitable for a variety of deployments.
+
+	\section{Data Processing}
+
+	\section{Data Aggregation}
