@@ -1,5 +1,5 @@
 \chapter{Architecture}
-	In this chapter, we propose a network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three tiered appraoch with each subsequent tier providing increased knowledge processing capabilities. 
+	In this chapter, we propose a network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three tiered approach with each subsequent tier providing increased knowledge processing capabilities. 
 
 	We believe that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise data delivery that it believes to be important, rather than chronologically. We also believe that human input is a valuable learning process for such a network and feedback, from humans, on data that has been classified can be used to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
 
@@ -26,11 +26,11 @@
 
 \begin{lstlisting}
 if(reading.dateCreated.month == “JUNE” AND reading.timeCreated.between(17:00, 19:00)
-	props.write(‘Potential Otter sighting’)
+	data.write(‘Potential Otter sighting’)
 
 if(reading.temp == 37 AND reading.timeCreated.between(01:00, 05:00)
-	props.write(‘Potential Leopard sighting’)
-	props.write(‘PRIORITY=HIGH’)
+	data.write(‘Potential Leopard sighting’)
+	data.write(‘PRIORITY=HIGH’)
 \end{lstlisting}
 
 When the data is recorded by the DC node, the knowledge base is fired and inferences are made about the contents of the data. Each DC node has a different knowledge base encoded based on the local knowledge of the area that it is deployed in.  For example, a node deployed on the bank of a river would have a different knowledge base to a node deployed in the fields of a plantation.
@@ -41,6 +41,9 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not typically do any direct sensing. 
 
 Due to the greater capabilities, DP nodes have a much shorter battery life and a network typically consists of fewer DP nodes. This also allows DP nodes to run a complete rule engine and process complex data. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node infers that the the data is of a higher priority, then this data is processed first.
+
+	\subsection{Knowledge Base}
+	In our motivating scenario the network is image-based, this means that the DP node would perform image processing, as well as processing the image metadata. The increased knowledge processing capabilities allow DP nodes to run rules dynamically, learning from the sensed data. 
 
 
 	\section{Data Aggregation}

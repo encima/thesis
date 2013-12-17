@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  25 NOV 2013 13:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  17 DEC 2013 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -96,7 +96,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 
 Writing nomenclature file thesis.nlo
 (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux) (./Chap3/chapter.aux)
-)
+(./Chap4/chapter.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -111,7 +111,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
- (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count97
 \scratchdimen=\dimen111
@@ -329,46 +330,107 @@ LaTeX Warning: Reference `tech:conc' on page 30 undefined on input line 4.
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
-Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 64.
+Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 67.
 (pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
-
-<Chap3/figures/dg_snr.png, id=139, 728.4816pt x 445.1832pt>
+ [35 <./Chap3/figures/bp_snr.png>]
+<Chap3/figures/dg_snr.png, id=143, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
-Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 75.
+Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 78.
 (pdftex.def)             Requested size: 175.49881pt x 107.24693pt.
- [35 <./Chap3/figures/bp_snr.png>]
-Overfull \hbox (5.46674pt too wide) in paragraph at lines 88--89
+ [36 <./Chap3/figures/dg_snr.png>]
+Overfull \hbox (5.46674pt too wide) in paragraph at lines 91--92
 []\OT1/cmr/m/n/12 Although the range of Wi-Fi is poor, for our re-quire-ments, 
 in both Malaysia
  []
 
-[36 <./Chap3/figures/dg_snr.png>]
 
-LaTeX Warning: Citation `Waspmote' on page 37 undefined on input line 93.
+LaTeX Warning: Citation `Waspmote' on page 37 undefined on input line 96.
 
 
-LaTeX Warning: Reference `sec:wifirange' on page 37 undefined on input line 95.
+LaTeX Warning: Reference `sec:wifirange' on page 37 undefined on input line 98.
 
 
 [37] <Chap3/figures/pelican.jpg, id=152, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
-Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 113.
+Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 116.
 (pdftex.def)             Requested size: 175.49881pt x 131.60953pt.
-) [38 <./Chap3/figures/pelican.jpg>]
-(./thesis.bbl [39
+ [38]
+
+LaTeX Warning: Citation `WieczorekJDoringMDeGiovanniRRobertsonT' on page 39 und
+efined on input line 133.
+
+[39 <./Chap3/figures/pelican.jpg>]
+
+LaTeX Warning: Citation `Wieczorek2012a' on page 40 undefined on input line 135
+.
+
+[40]) [41]
+\openout2 = `Chap4/chapter.aux'.
+
+ (./Chap4/chapter.tex
+Chapter 4.
+[42
 
 
-] [40]
+
+] [43]
+
+LaTeX Warning: Reference `kb:dcrule' on page 44 undefined on input line 25.
+
+
+Overfull \hbox (5.0223pt too wide) in paragraph at lines 24--26
+\OT1/cmr/m/n/12 Reduced knowl-edge pro-cess-ing ca-pa-bil-i-ties and low mem-or
+y re-strict the knowl-
+ []
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no œ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no  in font cmr12!
+
+Overfull \hbox (230.39893pt too wide) in paragraph at lines 28--29
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+
+Overfull \hbox (82.34918pt too wide) in paragraph at lines 31--32
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+[44]) [45] (./thesis.bbl [46
+
+
+] [47]
 Underfull \hbox (badness 4765) in paragraph at lines 117--123
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
-[41]
+[48]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -424,27 +486,30 @@ Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
- [42] [43] [44]
-Underfull \hbox (badness 1067) in paragraph at lines 351--355
+ [49] [50] [51]
+Underfull \hbox (badness 1067) in paragraph at lines 367--371
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
-[45]
+[52]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [46] (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux)
-(./Chap3/chapter.aux))
+) [53] (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux)
+(./Chap3/chapter.aux) (./Chap4/chapter.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3036 strings out of 493315
- 44080 string characters out of 6137905
- 112561 words of memory out of 5000000
- 6430 multiletter control sequences out of 15000+600000
+ 3050 strings out of 493315
+ 44307 string characters out of 6137905
+ 112869 words of memory out of 5000000
+ 6437 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,6n,32p,1113b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -454,10 +519,10 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (52 pages, 672125 bytes).
+Output written on thesis.pdf (59 pages, 684143 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 227 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

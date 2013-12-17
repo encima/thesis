@@ -54,4 +54,17 @@
 \contentsline {subsection}{\numberline {3.3.1}Wi-Fi}{34}
 \contentsline {subsection}{\numberline {3.3.2}Digimesh}{37}
 \contentsline {subsection}{\numberline {3.3.3}Adapting for Harsh Environments}{38}
-\contentsline {section}{\numberline {3.4}Summary}{38}
+\contentsline {subsection}{\numberline {3.3.4}Commercial Solution}{38}
+\contentsline {section}{\numberline {3.4}Software}{39}
+\contentsline {subsection}{\numberline {3.4.1}GSN}{39}
+\contentsline {subsection}{\numberline {3.4.2}Darwin Core}{40}
+\contentsline {subsection}{\numberline {3.4.3}Triton}{40}
+\contentsline {section}{\numberline {3.5}Summary}{40}
+\contentsline {chapter}{\numberline {4}Architecture}{42}
+\contentsline {section}{\numberline {4.1}K-HAS}{43}
+\contentsline {section}{\numberline {4.2}Scenario}{43}
+\contentsline {section}{\numberline {4.3}Data Collection}{43}
+\contentsline {subsection}{\numberline {4.3.1}Knowledge Base}{44}
+\contentsline {section}{\numberline {4.4}Data Processing}{45}
+\contentsline {subsection}{\numberline {4.4.1}Knowledge Base}{45}
+\contentsline {section}{\numberline {4.5}Data Aggregation}{45}

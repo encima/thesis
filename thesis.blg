@@ -4,6 +4,7 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Chap1/chapter.aux
 A level-1 auxiliary file: Chap2/chapter.aux
 A level-1 auxiliary file: Chap3/chapter.aux
+A level-1 auxiliary file: Chap4/chapter.aux
 The style file: plain.bst
 Database file #1: refs/library.bib
 Warning--I didn't find a database entry for "gartner2013"
@@ -18,45 +19,45 @@ Warning--empty year in Pizzocaro
 Warning--empty year in Rahman
 Warning--empty year in Resch
 Warning--empty year in Schurgers
-You've used 59 entries,
+You've used 62 entries,
             2118 wiz_defined-function locations,
-            886 strings with 17138 characters,
-and the built_in function-call counts, 22496 in all, are:
-= -- 2214
-> -- 1221
+            901 strings with 17686 characters,
+and the built_in function-call counts, 23385 in all, are:
+= -- 2289
+> -- 1278
 < -- 21
-+ -- 483
-- -- 424
-* -- 1670
-:= -- 3713
-add.period$ -- 179
-call.type$ -- 59
-change.case$ -- 388
++ -- 506
+- -- 444
+* -- 1732
+:= -- 3865
+add.period$ -- 186
+call.type$ -- 62
+change.case$ -- 407
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 806
-empty$ -- 1550
-format.name$ -- 424
-if$ -- 4647
+cite$ -- 71
+duplicate$ -- 831
+empty$ -- 1620
+format.name$ -- 444
+if$ -- 4826
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 57
-newline$ -- 295
-num.names$ -- 118
-pop$ -- 384
+int.to.str$ -- 62
+missing$ -- 58
+newline$ -- 308
+num.names$ -- 124
+pop$ -- 410
 preamble$ -- 1
-purify$ -- 330
+purify$ -- 346
 quote$ -- 0
-skip$ -- 633
+skip$ -- 658
 stack$ -- 0
-substring$ -- 1349
-swap$ -- 227
+substring$ -- 1382
+swap$ -- 230
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 234
+type$ -- 246
 warning$ -- 9
-while$ -- 223
-width$ -- 61
-write$ -- 628
+while$ -- 230
+width$ -- 64
+write$ -- 654
 (There were 12 warnings)

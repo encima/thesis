@@ -1,4 +1,4 @@
-\chapter{Background}
+\chapter{Background}\label{chap:bg}
 Using knowledge in a WSN is related to existing research into sensor networks that utilise context-awareness in order to improve their efficiency or adapt their sampling rate. 
 
 This chapter is split into the following sections. Section \ref{bg:wsni} outlines the issues surrounding WSN design and deployment. 
@@ -125,7 +125,7 @@ To disseminate a packet within a geographic area, uses algorithms based on the d
 	\subsubsection{Quality of Service}
 		This issue is perhaps the most complex as QoS could apply to almost all aspects of the networks, such as efficiently using bandwidth, 100\% uptime for nodes, guaranteed packet delivery or access to data stores. Some of these requirements are managed by the implementation of the routiong protocol, the middleware should be able to monitor deployed nodes and report on their current status, as well as identify failures.
 
-\subsection{Existing Middlewares}
+\subsection{Existing Middlewares}\label{sec:middleware}
 	In this section, we identify existing middlewares, explain how they address the issues highlighted in Section \ref{bg:sm:issues} and highlight how they relate to our research. While there are a lot of existing middlewares, our research did not show any that directly utilised the environment to make informed classifications. We did, however, find some applications that utilise context and rules to administrate the network.
 
 	\subsubsection{FACTS}

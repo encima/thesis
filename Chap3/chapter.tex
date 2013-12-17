@@ -122,6 +122,24 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 	Using commercial hardware, either bespoke for sensing or more general-purpose, our experiments showed that the range experienced in practice is much less than what is expected. Due to the lack of available interfaces available on the Reconyx cameras in use at Danau Girang, any sensor node would have to be connected to an external camera.
 	Because of these factors, we began to look into commercial solutions that combined wildlife cameras with wireless transmission capabilities. 
 
+\section{Software}
+	\subsection{GSN}
+	Covering the sensor middleware in Chapter \ref{chap:bg}, our implementation in Danau Girang required a simple, extensible middleware that could be used by those without technical knowledge. Open source was also a feature that we looked for as it meant that we could easily edit the functionality of existing sensor support, as well as add support for sensors at a much lower level.
+
+	Our initial plan was to deploy the middleware on every node, so we wanted to use something that did not need to be compiled for an individual device. The Global Sensor Networks (GSN), covered in Section \ref{bg:sm}, middleware was chosen because it was implemented in the cross-platform Java programming language and it allowed for the description of sensors in XML, a language that can be used by those without any domain knowledge. Its extensive support for sensors and administrative web interface allows users to see the latest sensed data and view the location of each sensor on an interactive map. The open source nature allowed us to remove features to deploy a more basic version to be deployed on sensor nodes and implement new notification methods when sensed data is received, such as Twitter and SMS.
+
+
+	\subsection{Darwin Core}
+	To pass sensed data through the network, we first had to choose a standard format that would allow us to encode the sensed data, as well as enrich it with inferences made through processing. Darwin Core (DwC) is a body of standards with predefined terms that allows for the sharing of biodiversity occurrences through the means of XML and CSV data files \cite{WieczorekJDoringMDeGiovanniRRobertsonT}.
+
+The Global Biodiversity Information Facility (GBIF) indexes more than 300 million Darwin Core records published by organisations all over the web, allowing datasets that were previously siloed from the public to be accessed by both human and machine. The main of Darwin Core it to provide a common language for sharing biodiversity data that reuses standards from other domains \cite{Wieczorek2012a}.
+
+DwC follows a star record structure, where a record can contain many occurrences, which is the recording of a species in nature or in a dataset. In an occurrence, there is an \textit{event}, a recording of a species in space and time, enriched with other terms such as \textit{identification} and \textit{location}.
+
+The core file, \textit{meta.xml}, contains all of 
+	\subsection{Triton}
+
+
 \section{Summary}
 	In this chapter, we have shown the current hardware choices available for more computationally capable sensors and detailed our experimental results on how rainforest environments impact wireless transmissions. Although technologies, such as Wi-Fi, provide a high data rate, their range is limited and not suitable for sparse sensor networks; especially in a humid environment.
 	Newer technologies, designed for long-range communication in sensor networks, are becoming increasingly more viable and, while they do have lower data rates and less robust protocols, they are more suitable for a resource constrained WSN that requires minimal power draw when transmitting. 
