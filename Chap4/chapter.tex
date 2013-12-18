@@ -15,12 +15,12 @@
 
 		The network is using the K-HAS architecture and has been tasked with prioritising the transmission of clouded leopards, but they also want to receive all pictures; regardless of the content.
 	
-	\section{Data Collection}
+	\subsection{Data Collection}
 	The data collection (DC) tier is a very similar to standard nodes in a typical WSN, using hardware that has similar capabilities. These DC nodes are deployed at the edge of the network and tasked with sensing their environment, pre-processing the sensed data and using each other to relay data to the next tier.
 
 	DC nodes are capable of performing processing on data, such as the time it was recorded and its size, but their limited knowledge processing capabilities allow them to have an increased battery life and reduced size, making them suitable for a variety of deployments.
 
-	\subsection{Knowledge Base}
+	\subsubsection{Knowledge Base}
 	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of deployment. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
 	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base.
 
@@ -37,13 +37,20 @@ When the data is recorded by the DC node, the knowledge base is fired and infere
 
 Once a trigger has been processed, the data is packaged and then sent on to the Data Processing (DP) node.
 
-	\section{Data Processing}
+	\subsection{Data Processing}
 	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not typically do any direct sensing. 
 
-Due to the greater capabilities, DP nodes have a much shorter battery life and a network typically consists of fewer DP nodes. This also allows DP nodes to run a complete rule engine and process complex data. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node infers that the the data is of a higher priority, then this data is processed first.
+	Due to the greater capabilities, DP nodes have a much shorter battery life and a network typically consists of fewer DP nodes. This also allows DP nodes to run a complete rule engine and process complex data. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node infers that the data is of a higher priority, then this data is processed first.
 
-	\subsection{Knowledge Base}
-	In our motivating scenario the network is image-based, this means that the DP node would perform image processing, as well as processing the image metadata. The increased knowledge processing capabilities allow DP nodes to run rules dynamically, learning from the sensed data. 
+	In our current implementation, DP nodes use two different radios, a Zigbee radio to allow long range communication from DC nodes and a Wi-Fi radio that provides short range communication that allows for higher data rates.
 
-
-	\section{Data Aggregation}
+	\subsubsection{Knowledge Base}
+	In our motivating scenario the network is image-based, this means that the DP node would perform image processing, as well as processing the image metadata. The increased knowledge processing capabilities allow DP nodes to run rules dynamically, learning from the sensed data and providing classifications that change based on changes in the environment. For example, if a DP node has not seen an elephant before, and it is not aware of the object in the image, then it will await a human classification. The node will then record the time period that it receives elephant pictures, i.e. June to July, and become more alert the following year. Similarly, the node will know not to look for pictures of nocturnal animals during the day. This local knowledge allows processing power to be saved and, thus, time; this ensures that the processing of sensed data is optimised as much as possible in order to reduce the time it spends in the network.
+	
+	The rule engine used in our current implementation is Drools, a Java based rule engine that allows for rules to be defined in \textit{.drl} files and these can be loaded dynamically into a knowledge base. This flexibility allows to be changed on the fly without the need to restart the device, or even require human access, as all of this can be achieved through network communication. 
+	
+	Upon receiving sensed data from a DC node, the rule base is fired on the metadata of each file received. If the rules determine that the data is of interest or, in the best case scenario, provides a classification, then the data is packaged and sent on to the Data Aggregation (DA) node.
+	\subsection{Data Aggregation}
+	Sitting at the edge of the network, these are nodes with high knowledge-processing capabilities and would be accessible by users of the network. 
+	\section{Walkthrough}
+	
