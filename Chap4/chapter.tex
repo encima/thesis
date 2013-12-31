@@ -50,7 +50,46 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	The rule engine used in our current implementation is Drools, a Java based rule engine that allows for rules to be defined in \textit{.drl} files and these can be loaded dynamically into a knowledge base. This flexibility allows to be changed on the fly without the need to restart the device, or even require human access, as all of this can be achieved through network communication. 
 	
 	Upon receiving sensed data from a DC node, the rule base is fired on the metadata of each file received. If the rules determine that the data is of interest or, in the best case scenario, provides a classification, then the data is packaged and sent on to the Data Aggregation (DA) node.
+	
 	\subsection{Data Aggregation}
-	Sitting at the edge of the network, these are nodes with high knowledge-processing capabilities and would be accessible by users of the network. 
-	\section{Walkthrough}
+	Placed at the edge of the network, these are nodes with high knowledge-processing capabilities and would be accessible by users of the network. When DA nodes receive sensed data, it is unpacked and stored in a folder that represents the node that it originated from. 
+	
+	Any information added by the DP node is parsed and classifications are extracted. If a classification is found, it is stored and the DA node checks for any active projects that contain the classification. If a match is found then all users involved in the project are informed via their preferred method of communication. Using the motivating scenario as an example, the people involved with projects could be researchers and professors and they may be looking for images of leopards, requesting to be informed via Twitter.
+	
+	If a classification is not found, the data is made available to users and they are able to classify it.
+	
+	\subsubsection{Knowledge Base}
+	DA nodes would not typically experience the resource constraints that DC and DP nodes must compensate for. Because of this, they hold a global knowledge that contains a history of all observations made by all nodes, as well as the location and deployment times of all nodes in the network.
+	
+	While DC do not store any of the observations they capture, and DP nodes only store part of the observation that can be used in future classifications, DA nodes store the complete observation made by every DC node, as well as any extra data that is added by users upon receiving the sensed data.
+	
+	
+	
+	\section{Technological Components}
+	In this section, we describe the technologies used in every layer of K-HAS and how they integrate in order to use local knowledge based on their respective knowledge processing capabilities. The majority of components, both hardware and software, used in K-HAS are used so they are applicable for any WSN, but some choices have been made to remain in line with our motivating scenario and, thus, are more specifically suited for scientific observations.
+	
+	\subsection{Data Standard}
+		
+	
+	
+	\section{Implementation}
+	In this section, we discuss the implementation made for our motivating scenario, a deployment where the hardware choices were using the 'cutting edge' technology that was readily available and software packages that can be re-used in any scenario. 
+	
+	Experimentation in the Malaysian rainforest revealed that our ideal implementation of K-HAS was not feasible for a prototype that could be used by those without any domain knowledge. This was mainly due to the effects of the humidity and vegetation on the range of the DC nodes, but also because of the difficulty creating a DC node with a camera that could be remotely controlled.
+	
+	The key point of K-HAS' development was to show that local knowledge can improve the efficiency of the network, the quality of the data received and automate the processing of sensed data. In order to implement a network that showed this, we had to modify the architecture of K-HAS to create a network that was designed specifically for its use in Malaysia, as well as using commercial hardware that could be used by anyone. 
+	
+	While this implementation does not exactly match the architecture of K-HAS, the principles are the same and the implementation is based on the best technology that is currently available. We call this modification to K-HAS, the Local-knowledge Ontology-based Remote-sensing Informatics System (LORIS).
+	
+	\subsection{Hardware Used}
+		\subsubsection{Data Collection}
+		\subsubsection{Data Processing}
+		\subsubsection{Data Aggregation}	
+
+	\subsection{Software Used}
+		\subsubsection{Data Collection}
+		\subsubsection{Data Processing}
+		\subsubsection{Data Aggregation}	
+	
+	\subsection{Walkthrough}
 	
