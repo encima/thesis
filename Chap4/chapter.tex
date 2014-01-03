@@ -107,7 +107,7 @@ Darwin Core is suited to K-HAS because it fits our motivating scenario and the a
 		\item[Extensibility] A closed-source middleware can be used, but it must then support all sensor nodes and data types, as well as receive regular updates. Open-source, or extensible, middleware can be used to add support for newer nodes.
 	\end{description}
 	
-	GSN is a Java-based open-source middleware. New generic sensors can be added through XML files, while more complex sensors can be added through custom Java classes. GSN is covered in more detail in Section \ref{sec:GSN}. Because GSN can run on any architecture that supports the Java Virtual Machine (JVM) then it meets our portability requirements and the web interface to provide administrative functionality makes it usable by those without any domain knowledge. Finally, the ability to add new sensors through XML means that it can be extended by almost any user of the network and with very little guidance.
+	GSN is a Java-based open-source middleware. New generic sensors can be added through XML files, while more complex sensors can be added through custom Java classes. GSN is covered in more detail in Section \ref{sec:GSN}. Because GSN can run on any architecture that supports the Java Virtual Machine (JVM) then it meets our portability requirements and the web interface to provide administrative functionality makes it usable by those without any domain knowledge. Finally, the ability to add new sensors through XML means that it can be extended by almost any user of the network with very little guidance.
 	
 	\section{Implementation}
 	In this section, we discuss the implementation made for our motivating scenario, a deployment where the hardware choices were using the 'cutting edge' technology that was readily available and software packages that can be re-used in any scenario. 
@@ -118,8 +118,13 @@ Darwin Core is suited to K-HAS because it fits our motivating scenario and the a
 	
 	While this implementation does not exactly match the architecture of K-HAS, the principles are the same and the implementation is based on the best technology that is currently available. We call this modification to K-HAS, the Local-knowledge Ontology-based Remote-sensing Informatics System (LORIS).
 	
+	LORIS uses the same approach to knowledge-processing as K-HAS but, as experimentation revealed, the ideal architecture of K-HAS is not currently feasible in a humid rainforest and sensor nodes cannot be deployed 1km apart. To address this, we made a modification to the tiers used in K-HAS and adopted commercial hardware solutions that would overcome the difficulty we experienced with our own sensor solutions.
+	
 	\subsection{Hardware Used}
 		\subsubsection{Data Collection}
+			We described the experiments performed on wireless transmissions in Chapter \ref{chap:technical} and outlined that Wi-Fi communications in a humid rainforest was not possible beyond 30m, at least at ground level. We also discovered that Digimesh, despite the reported range of up 60km, was also limited. Taking this into consideration, we looked into a commercial solution that would be able to capture images and transmit over distances of more than a few hundred metres. The limitation of this approach means that no local processing can be performed on the device and it cannot run any custom programs. However, the benefit is that wireless sensing cameras are provided with the necessary hardware and robust software that allows for remote configuration and retrieval of images.
+			
+			With this in mind, we ordered 3 Buckeye X7D wireless cameras with a reported range of 1 mile.
 		\subsubsection{Data Processing}
 		\subsubsection{Data Aggregation}	
 
