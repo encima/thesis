@@ -11,7 +11,7 @@
 \DeclareCaptionFormat{listing}{%
   \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+\lstset{frame=lrb, xleftmargin=\fboxsep, xrightmargin=-\fboxsep, breaklines=true}
 
 \onehalfspacing
 
@@ -35,10 +35,13 @@ To Write...
 
 \pagenumbering{arabic}
 
-\include{Chap1/chapter}
-\include{Chap2/chapter}
-\include{Chap3/chapter}
-\include{Chap4/chapter}
+\include{Chap1/introduction}
+\include{Chap2/background}
+\include{Chap3/technical}
+\include{Chap4/architecture}
+\include{Chap5/ontology}
+\include{Chap6/implementation}
+\include{Chap4/experiments}
 
 \bibliographystyle{plain}
 \bibliography{refs/library}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  3 JAN 2014 17:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  3 JAN 2014 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -129,8 +129,12 @@ Package caption Info: listings package is loaded.
 
 
 Writing nomenclature file thesis.nlo
-(./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux) (./Chap3/chapter.aux)
-(./Chap4/chapter.aux))
+(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux) (./Chap4/architecture.aux)
+No file Chap5/ont.aux.
+(./Chap6/implementation.aux)
+No file Chap4/experiments.aux.
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -145,8 +149,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count98
 \scratchdimen=\dimen118
@@ -226,12 +229,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
  [1
 
-])
+]
+[2])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-
-[2] [3] (./thesis.lof)
+ [3] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
@@ -244,17 +247,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [5
 
 ] [1]
-\openout2 = `Chap1/chapter.aux'.
+\openout2 = `Chap1/introduction.aux'.
 
- (./Chap1/chapter.tex
+ (./Chap1/introduction.tex
 Chapter 1.
 [1
 
 
 ] [2] [3]) [4] [5]
-\openout2 = `Chap2/chapter.aux'.
+\openout2 = `Chap2/background.aux'.
 
- (./Chap2/chapter.tex
+ (./Chap2/background.tex
 Chapter 2.
 
 LaTeX Warning: Citation `Szewczyk2004a' on page 6 undefined on input line 9.
@@ -421,18 +424,8 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 186.
-
-Overfull \hbox (61.19922pt too wide) in paragraph at lines 192--193
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (463.04852pt too wide) in paragraph at lines 193--194
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 196.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -513,10 +506,10 @@ LaTeX Warning: Citation `Atzori2010' on page 25 undefined on input line 238.
 
 LaTeX Warning: Citation `Buttussi2008' on page 26 undefined on input line 250.
 
-
-LaTeX Warning: Citation `Maurer' on page 26 undefined on input line 254.
-
 [26]
+
+LaTeX Warning: Citation `Maurer' on page 27 undefined on input line 254.
+
 
 LaTeX Warning: Citation `Werner-Allen2006' on page 27 undefined on input line 2
 59.
@@ -543,9 +536,9 @@ LaTeX Warning: Citation `Figueiredo2009' on page 27 undefined on input line 265
 LaTeX Warning: Citation `Wark2008' on page 27 undefined on input line 265.
 
 [27] [28]) [29]
-\openout2 = `Chap3/chapter.aux'.
+\openout2 = `Chap3/technical.aux'.
 
- (./Chap3/chapter.tex
+ (./Chap3/technical.tex
 Chapter 3.
 
 LaTeX Warning: Reference `tech:motiv' on page 30 undefined on input line 4.
@@ -631,9 +624,9 @@ LaTeX Warning: Citation `Wieczorek2012a' on page 40 undefined on input line 135
 .
 
 [40]) [41]
-\openout2 = `Chap4/chapter.aux'.
+\openout2 = `Chap4/architecture.aux'.
 
- (./Chap4/chapter.tex
+ (./Chap4/architecture.tex
 Chapter 4.
 [42
 
@@ -719,15 +712,553 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 92--92
  []
 
 (/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/meta.xml
-[49] [50]) [51] [52]
+[49] [50]) [51]) [52]
+\openout2 = `Chap5/ontology.aux'.
 
-LaTeX Warning: Reference `chap:technical' on page 53 undefined on input line 12
-5.
+ (./Chap5/ontology.tex
+Chapter 5.
 
-[53]) [54]
+LaTeX Warning: Citation `Kahn1999' on page 53 undefined on input line 3.
+
+
+LaTeX Warning: Citation `Yao2002' on page 53 undefined on input line 3.
+
+
+LaTeX Warning: Citation `Whitehouse2006' on page 53 undefined on input line 3.
+
+[53
+
+
+
+] [54]
+
+LaTeX Warning: Citation `gwilliams2012local' on page 55 undefined on input line
+ 20.
+
+
+LaTeX Warning: Reference `khasarch' on page 55 undefined on input line 23.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/khasarch.png, id=211, 423.
+5825pt x 428.60126pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/khasarch.png Graphic 
+file (type png)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/khasarch.png>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/kh
+asarch.png used on input line 26.
+(pdftex.def)             Requested size: 423.58147pt x 428.6002pt.
+
+Overfull \hbox (33.58147pt too wide) in paragraph at lines 26--27
+[][] 
+ []
+
+[55] [56 </home/encima/Development/latex/thesis/Chap5/figures/khasarch.png>]
+[57]
+
+LaTeX Warning: Citation `Compton2009' on page 58 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Janowicz2010' on page 58 undefined on input line 60.
+
+[58]
+Overfull \hbox (6.7195pt too wide) in paragraph at lines 68--69
+[]\OT1/cmr/m/n/12 From this we have cat-e-gorised rel-e-vant ex-ist-ing on-tolo
+-gies into Observation-
+ []
+
+
+LaTeX Warning: Citation `McGuinness2004' on page 59 undefined on input line 74.
+
+
+
+LaTeX Warning: Citation `Madin2007' on page 59 undefined on input line 76.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/OBOEcore.JPG, id=225, 368.
+87813pt x 137.01187pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/OBOEcore.JPG Graphic 
+file (type jpg)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/OBOEcore.JPG>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/OB
+OEcore.JPG used on input line 80.
+(pdftex.def)             Requested size: 368.87721pt x 137.01154pt.
+
+
+LaTeX Warning: Reference `oboe' on page 59 undefined on input line 85.
+
+[59]
+
+LaTeX Warning: Citation `Botts' on page 60 undefined on input line 90.
+
+
+LaTeX Warning: Reference `omxml' on page 60 undefined on input line 95.
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
+[][][][][][][] 
+ []
+
+[60 </home/encima/Development/latex/thesis/Chap5/figures/OBOEcore.JPG>]
+
+LaTeX Warning: Reference `oandm' on page 61 undefined on input line 121.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/o&m_ontology.png, id=233, 
+643.40375pt x 285.065pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/o&m_ontology.png Grap
+hic file (type png)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/o&m_ontology.png>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/o&
+m_ontology.png used on input line 125.
+(pdftex.def)             Requested size: 321.70108pt x 142.53215pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[61]
+
+LaTeX Warning: Reference `dwca' on page 62 undefined on input line 137.
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 139--139
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 139--139
+[][][][][][][] 
+ []
+
+(/home/encima/Development/latex/thesis/Chap5/figures/dwc_arch/eml.xml [62 </hom
+e/encima/Development/latex/thesis/Chap5/figures/o&m_ontology.png>] [63]
+[64])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 144--144
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 144--144
+[][][][][][][] 
+ []
+
+(/home/encima/Development/latex/thesis/Chap5/figures/dwc_arch/meta.xml)
+Overfull \hbox (3.0pt too wide) in paragraph at lines 143--146
+$[]$ 
+ []
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/dwca.png, id=247, 661.4712
+5pt x 419.5675pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/dwca.png Graphic file
+ (type png)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/dwca.png>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/dw
+ca.png used on input line 149.
+(pdftex.def)             Requested size: 661.46964pt x 419.56647pt.
+ [65]
+Overfull \vbox (236.15071pt too high) has occurred while \output is active []
+
+
+[66]
+
+LaTeX Warning: Reference `dwc:set' on page 67 undefined on input line 154.
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 157--157
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 157--157
+[][][][][][][] 
+ []
+
+(/home/encima/Development/latex/thesis/Chap5/figures/dwc_arch/set.csv)
+Overfull \hbox (3.0pt too wide) in paragraph at lines 156--159
+$[]$ 
+ []
+
+
+LaTeX Warning: Citation `dwc_sw' on page 67 undefined on input line 160.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/dsw.jpg, id=255, 1734.48pt
+ x 782.925pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/dsw.jpg Graphic file 
+(type jpg)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/dsw.jpg>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/ds
+w.jpg used on input line 164.
+(pdftex.def)             Requested size: 1734.47578pt x 782.9231pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[67 </home/encima/Development/latex/thesis/Chap5/figures/dwca.png>]
+
+LaTeX Warning: Citation `Botts' on page 68 undefined on input line 175.
+
+[68 </home/encima/Development/latex/thesis/Chap5/figures/dsw.jpg>]
+
+LaTeX Warning: Citation `Robin2006' on page 69 undefined on input line 190.
+
+
+LaTeX Warning: Citation `lefort2011semantic' on page 69 undefined on input line
+ 251.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/ssnont.jpg, id=262, 681.74
+7pt x 404.712pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/ssnont.jpg Graphic fi
+le (type jpg)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/ssnont.jpg>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/ss
+nont.jpg used on input line 255.
+(pdftex.def)             Requested size: 681.74532pt x 404.71101pt.
+
+
+LaTeX Warning: Reference `ssnont' on page 69 undefined on input line 260.
+
+
+Overfull \hbox (27.37631pt too wide) in paragraph at lines 262--263
+[]\OT1/cmr/m/n/12 The ob-ser-va-tion pat-tern of SSN is cen-tred around 'Stimul
+i-Sensor-Observation',
+ []
+
+[69] [70 </home/encima/Development/latex/thesis/Chap5/figures/ssnont.jpg>]
+
+LaTeX Warning: Citation `Uschold1995' on page 71 undefined on input line 276.
+
+
+LaTeX Warning: Citation `Gruninger1995' on page 71 undefined on input line 281.
+
+
+[71]
+
+LaTeX Warning: Citation `Fernandez-Lopez1999' on page 72 undefined on input lin
+e 295.
+
+
+LaTeX Warning: Citation `Jimenez-Ruiz2008' on page 72 undefined on input line 3
+08.
+
+[72]
+
+LaTeX Warning: Citation `gomez1995evaluation' on page 73 undefined on input lin
+e 312.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+LaTeX Warning: Citation `REF!' on page 73 undefined on input line 314.
+
+
+LaTeX Warning: Citation `Gruninger1995' on page 73 undefined on input line 323.
+
+
+[73]
+
+LaTeX Warning: Citation `Choi2010' on page 74 undefined on input line 325.
+
+
+LaTeX Warning: Reference `tab:comp_qs' on page 74 undefined on input line 325.
+
+[74]
+
+LaTeX Warning: Reference `tab:concepts' on page 75 undefined on input line 357.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
+[]\OT1/cmr/bx/n/12 Subclass
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+[]\OT1/cmr/m/n/12 Node with lim-ited
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+[]\OT1/cmr/m/n/12 Node with knowledge-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+\OT1/cmr/m/n/12 processing ca-pa-bil-i-ties
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+\OT1/cmr/m/n/12 charged with serv-ing a
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 374--375
+\OT1/cmr/m/n/12 sub-set of DC Nodes and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+\OT1/cmr/m/n/12 pro-cess-ing their sensed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]\OT1/cmr/m/n/12 Data Ag-gre-ga-tion (DA)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+[]\OT1/cmr/m/n/12 Node with knowledge-
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 375--376
+\OT1/cmr/m/n/12 stores all knowl-edge and
+ []
+
+
+Underfull \hbox (badness 7869) in paragraph at lines 378--379
+[]\OT1/cmr/m/n/12 Person in-volved with a
+ []
+
+
+LaTeX Warning: Reference `khas_base_ont' on page 75 undefined on input line 384
+.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/khas_base.JPG, id=282, 228
+1.52374pt x 949.5475pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/khas_base.JPG Graphic
+ file (type jpg)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/khas_base.JPG>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/kh
+as_base.JPG used on input line 388.
+(pdftex.def)             Requested size: 2281.5182pt x 949.54518pt.
+
+
+LaTeX Warning: Citation `noy2001creating' on page 75 undefined on input line 39
+6.
+
+[75 </home/encima/Development/latex/thesis/Chap5/figures/khas_base.JPG>]
+[76]
+
+LaTeX Warning: Reference `bg' on page 77 undefined on input line 401.
+
+
+LaTeX Warning: Reference `buildcapture' on page 77 undefined on input line 401.
+
+
+
+LaTeX Warning: Reference `OBOE' on page 77 undefined on input line 403.
+
+
+LaTeX Warning: Citation `dwc_oboe' on page 77 undefined on input line 405.
+
+[77]
+
+LaTeX Warning: Citation `brickley2010foaf' on page 78 undefined on input line 4
+07.
+
+
+LaTeX Warning: Reference `khas_ont' on page 78 undefined on input line 415.
+
+
+</home/encima/Development/latex/thesis/Chap5/figures/khas_ontology.JPG, id=292,
+ 3852.3925pt x 1011.78pt>
+File: /home/encima/Development/latex/thesis/Chap5/figures/khas_ontology.JPG Gra
+phic file (type jpg)
+
+<use /home/encima/Development/latex/thesis/Chap5/figures/khas_ontology.JPG>
+Package pdftex.def Info: /home/encima/Development/latex/thesis/Chap5/figures/kh
+as_ontology.JPG used on input line 419.
+(pdftex.def)             Requested size: 3852.38315pt x 1011.77753pt.
+
+Overfull \hbox (110.82861pt too wide) in paragraph at lines 419--420
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `Brank2005' on page 78 undefined on input line 426.
+
+[78]
+
+LaTeX Warning: Reference `method:eval' on page 79 undefined on input line 434.
+
+
+LaTeX Warning: Reference `tab:comp_qs' on page 79 undefined on input line 434.
+
+
+LaTeX Warning: Citation `Poveda-Villalon2012' on page 79 undefined on input lin
+e 439.
+
+[79 </home/encima/Development/latex/thesis/Chap5/figures/khas_ontology.JPG>]
+
+LaTeX Warning: Reference `tab:comp_qs' on page 80 undefined on input line 445.
+
+
+LaTeX Warning: Reference `eval:comp_qs' on page 80 undefined on input line 445.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
+[]\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
+[]\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+[]\OT1/cmr/m/n/12 Find all \OT1/cmr/bx/n/12 Oc-cur-rence
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 454--454
+\OT1/cmr/m/n/12 within a spec-i-fied \OT1/cmr/bx/n/12 Date
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 454--454
+[]\OT1/cmr/m/n/12 Occurrence; Event; Date;
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 455--455
+[]\OT1/cmr/m/n/12 DCNode; In-di-vid-ual; Oc-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+[]\OT1/cmr/m/n/12 Occurrence record-edBy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+\OT1/cmr/m/n/12 DC-N-ode; Oc-cur-rence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
+[]\OT1/cmr/m/n/12 Occurrence; In-di-vid-ual;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
+[]\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
+\OT1/cmr/m/n/12 In-di-vid-ual; Oc-cur-rence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
+\OT1/cmr/m/n/12 ha-sEv-ent Event; Event
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 458--459
+[]\OT1/cmr/m/n/12 Individual oc-curredIn Oc-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
+[]\OT1/cmr/m/n/12 Person; Ad-min-is-tra-tor;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+[]\OT1/cmr/m/n/12 Administrator hasPro-ject
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+[]\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+[]\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+\OT1/cmr/m/n/12 To-ken; To-ken isOfT-ype
+ []
+
+
+Overfull \hbox (72.79134pt too wide) in paragraph at lines 448--465
+[][]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `ident' on page 80 undefined on input line 467.
+
+
+LaTeX Warning: Citation `Brewster2004' on page 80 undefined on input line 472.
+
+
+LaTeX Warning: Reference `bg:dwc' on page 80 undefined on input line 472.
+
+[80]
+
+LaTeX Warning: Reference `bg:dwc' on page 81 undefined on input line 476.
+
+
+LaTeX Warning: Reference `tab:dwc_eval' on page 81 undefined on input line 476.
+
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `dwc_oboe' on page 81 undefined on input line 499.
+
+[81]) [82] [83] [84]
+\openout2 = `Chap6/implementation.aux'.
+
+ (./Chap6/implementation.tex
+Chapter 6.
+[85
+
+
+
+]) [86]
+\openout2 = `Chap4/experiments.aux'.
+
+
+No file Chap4/experiments.tex.
 No file thesis.bbl.
-(./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux) (./Chap3/chapter.aux)
-(./Chap4/chapter.aux))
+(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ontology.aux)
+(./Chap6/implementation.aux) (./Chap4/experiments.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -736,23 +1267,23 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4683 strings out of 495031
- 70347 string characters out of 6181530
- 270244 words of memory out of 5000000
- 7801 multiletter control sequences out of 15000+600000
+ 4861 strings out of 495031
+ 75277 string characters out of 6181530
+ 332572 words of memory out of 5000000
+ 7939 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,7n,54p,1113b,1563s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,54p,1118b,1561s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (61 pages, 680202 bytes).
+Output written on thesis.pdf (93 pages, 1840195 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
+ 347 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

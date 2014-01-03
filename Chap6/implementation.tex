@@ -1,0 +1,24 @@
+\chapter{Implementation}
+	In this chapter, we discuss the implementation made for our motivating scenario, a deployment where the hardware choices were using the 'cutting edge' technology that was readily available and software packages that can be re-used in any scenario. 
+	
+	Experimentation in the Malaysian rainforest revealed that our ideal implementation of K-HAS was not feasible for a prototype that could be used by those without any domain knowledge. This was mainly due to the effects of the humidity and vegetation on the range of the DC nodes, but also because of the difficulty creating a DC node with a camera that could be remotely controlled.
+	
+	The key point of K-HAS' development was to show that local knowledge can improve the efficiency of the network, the quality of the data received and automate the processing of sensed data. In order to implement a network that showed this, we had to modify the architecture of K-HAS to create a network that was designed specifically for its use in Malaysia, as well as using commercial hardware that could be used by anyone. 
+	
+	While this implementation does not exactly match the architecture of K-HAS, the principles are the same and the implementation is based on the best technology that is currently available. We call this modification to K-HAS, the Local-knowledge Ontology-based Remote-sensing Informatics System (LORIS).
+	
+	LORIS uses the same approach to knowledge-processing as K-HAS but, as experimentation revealed, the ideal architecture of K-HAS is not currently feasible in a humid rainforest and sensor nodes cannot be deployed 1km apart. To address this, we made a modification to the tiers used in K-HAS and adopted commercial hardware solutions that would overcome the difficulty we experienced with our own sensor solutions.
+	
+	\subsection{Hardware Used}
+		\subsubsection{Data Collection}
+			We described the experiments performed on wireless transmissions in Chapter \ref{chap:technical} and outlined that Wi-Fi communications in a humid rainforest was not possible beyond 30m, at least at ground level. We also discovered that Digimesh, despite the reported range of up 60km, was also limited. Taking this into consideration, we looked into a commercial solution that would be able to capture images and transmit over distances of more than a few hundred metres. The limitation of this approach means that no local processing can be performed on the device and it cannot run any custom programs. However, the benefit is that wireless sensing cameras are provided with the necessary hardware and robust software that allows for remote configuration and retrieval of images.
+			
+			With this in mind, we ordered 3 Buckeye X7D wireless cameras with a reported range of 1 mile.
+		\subsubsection{Data Processing}
+		\subsubsection{Data Aggregation}	
+
+	\subsection{Software Used}
+		\subsubsection{Data Collection}
+		\subsubsection{Data Processing}
+		\subsubsection{Data Aggregation}	
+	
