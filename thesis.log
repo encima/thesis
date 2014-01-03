@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  2 JAN 2014 16:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  3 JAN 2014 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -231,17 +231,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `thesis.toc'.
 
 
-[2] (./thesis.lof)
+[2] [3] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [3
+ [4
 
 ] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [4
+ [5
 
 ] [1]
 \openout2 = `Chap1/chapter.aux'.
@@ -385,7 +385,7 @@ LaTeX Warning: Citation `Yu2004' on page 15 undefined on input line 116.
 
 LaTeX Warning: Citation `Terfloth2006' on page 17 undefined on input line 132.
 
-<Chap2/figures/facts_architecture.jpg, id=76, 451.6875pt x 181.67876pt>
+<Chap2/figures/facts_architecture.jpg, id=79, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
@@ -400,7 +400,7 @@ LaTeX Warning: Citation `Wright2009b' on page 17 undefined on input line 146.
 
 LaTeX Warning: Citation `F2006' on page 18 undefined on input line 162.
 
-[18] <Chap2/figures/gsn_arch.png, id=83, 371.3875pt x 453.695pt>
+[18] <Chap2/figures/gsn_arch.png, id=87, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
@@ -589,14 +589,14 @@ LaTeX Warning: Citation `Lib' on page 34 undefined on input line 49.
 
 LaTeX Warning: Citation `Dhawan2007' on page 34 undefined on input line 59.
 
-[34] <Chap3/figures/bp_snr.png, id=137, 729.4452pt x 445.665pt>
+[34] <Chap3/figures/bp_snr.png, id=140, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 67.
 (pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
  [35 <./Chap3/figures/bp_snr.png>]
-<Chap3/figures/dg_snr.png, id=143, 728.4816pt x 445.1832pt>
+<Chap3/figures/dg_snr.png, id=146, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
@@ -615,7 +615,7 @@ LaTeX Warning: Citation `Waspmote' on page 37 undefined on input line 96.
 LaTeX Warning: Reference `sec:wifirange' on page 37 undefined on input line 98.
 
 
-[37] <Chap3/figures/pelican.jpg, id=152, 1284.8pt x 963.6pt>
+[37] <Chap3/figures/pelican.jpg, id=155, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
@@ -650,28 +650,28 @@ Overfull \hbox (5.0223pt too wide) in paragraph at lines 24--26
 y re-strict the knowl-
  []
 
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 27--27
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 27--27
+[][][][][][][] 
+ []
+
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-
-Overfull \hbox (230.39893pt too wide) in paragraph at lines 28--29
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-
-Overfull \hbox (82.34918pt too wide) in paragraph at lines 31--32
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
@@ -694,7 +694,12 @@ LaTeX Warning: Citation `Wieczorek2012b' on page 47 undefined on input line 75.
 LaTeX Warning: Citation `Wieczorek2012a' on page 48 undefined on input line 77.
 
 
-
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/06/27 1.5pre1 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/07/10 1.5 (Carsten Heinz)
+)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 88--88
 [][][][][][][] 
  []
@@ -704,42 +709,50 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 88--88
 [][][][][][][] 
  []
 
-[48]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 112--112
+(/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/eml.xml [48])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 92--92
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 112--112
+Overfull \hbox (6.0pt too wide) in paragraph at lines 92--92
 [][][][][][][] 
  []
 
-[49] [50]) [51] [52]
+(/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/meta.xml
+[49] [50]) [51]
+
+LaTeX Warning: Reference `sec:GSN' on page 52 undefined on input line 110.
+
+[52]) [53]
 No file thesis.bbl.
 (./thesis.aux (./Chap1/chapter.aux) (./Chap2/chapter.aux) (./Chap3/chapter.aux)
 (./Chap4/chapter.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4536 strings out of 495031
- 67999 string characters out of 6181530
- 220338 words of memory out of 5000000
- 7668 multiletter control sequences out of 15000+600000
+ 4682 strings out of 495031
+ 70331 string characters out of 6181530
+ 270231 words of memory out of 5000000
+ 7800 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,7n,46p,1113b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,54p,1113b,1563s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (58 pages, 675215 bytes).
+Output written on thesis.pdf (60 pages, 678702 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
+ 230 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

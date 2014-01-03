@@ -24,7 +24,7 @@
 	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of deployment. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
 	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base.
 
-\begin{lstlisting}
+\begin{lstlisting}[breaklines=true, caption=Example DC Node Rules]
 if(reading.dateCreated.month == “JUNE” AND reading.timeCreated.between(17:00, 19:00)
 	data.write(‘Potential Otter sighting’)
 
@@ -85,61 +85,29 @@ DwC follows a star record structure, where a record can contain many occurrences
 
 Ecological Metadata Language (EML) is a metadata used by ecologists and the language is used to describe projects and those involved. This file acts as a form of certificate and descriptor as to what the data is related to and who owns it. The XML file, shown in Listing \ref{dwc:eml}, outlines a sample project and users involved in the project.
 
-\begin{lstlisting}[breaklines=true,label=dwc:eml,caption=Darwin Core: EML.xml]
- <creator>
-            <individualName>
-                <givenName>Christopher</givenName>
-                <surName>Gwilliams</surName>
-            </individualName>
-            <organizationName>Cardiff University</organizationName>
-            <positionName>PhD</positionName>
-            <address>
-                <city>Cardiff</city>
-                <administrativeArea>Cardiff</administrativeArea>
-                <postalCode>CF24 3AA</postalCode>
-                <country>Wales</country>
-            </address>
-            <phone></phone>
-            <electronicMailAddress>C.Gwilliams@cs.cf.ac.uk</electronicMailAddress>
-            <onlineUrl>christopher-gwilliams.com</onlineUrl>
-        </creator>
-        <pubDate>2012-07-26</pubDate>
-        <language>en</language>
-\end{lstlisting}
+\lstinputlisting[language=XML, firstline=0, lastline=21,breaklines=true,label=dwc:eml,caption=Darwin Core: EML.xml]{/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/eml.xml}
 
 The core file, \textit{meta.xml}, shown in Listing \ref{dwc:meta} lists the files that contains the actual sensed data, as well as the terms used to describe it. Examples include: date, time, location, type of data, filename and species contained.
 
-\begin{lstlisting}[breaklines=true,label=dwc:meta,caption=Darwin Core: meta.xml]
-<?xml version="1.0" encoding='utf-8'?>
-<archive xmlns="http://rs.tdwg.org/dwc/text/" metadata="eml.xml">
-    <core encoding="UTF-8" linesTerminatedBy="\n" fieldsTerminatedBy="," fieldsEnclosedBy='' ignoreHeaderLines="1" rowType="http://rs.tdwg.org/dwc/terms/Occurrence">
-        <files>
-            <location>set.csv</location>
-        </files>
-        <id index="0"/>
-        <field index="0" term="http://rs.tdwg.org/dwc/terms/occurrenceID"/>
-        <field index="1" term="http://rs.tdwg.org/dwc/terms/basisOfRecord"/>
-        <field index="2" term="http://rs.tdwg.org/dwc/terms/recordedBy"/>
-        <field index="3" term="http://rs.tdwg.org/dwc/terms/associatedMedia"/>
-        <field index="4" term="http://rs.tdwg.org/dwc/terms/eventDate"/>
-        <field index="5" term="http://rs.tdwg.org/dwc/terms/eventTime"/>
-        <field index="6" term="http://rs.tdwg.org/dwc/terms/locationID"/>
-        <field index="7" term="http://rs.tdwg.org/dwc/terms/scientificName"/>
-        <field index="8" term="http://rs.tdwg.org/dwc/terms/identifiedBy"/>
-        <field index="9" term="http://rs.tdwg.org/dwc/terms/dateIdentified"/>
-    </core>
-    <extension encoding="UTF-8" linesTerminatedBy="\n" fieldsTerminatedBy="," fieldsEnclosedBy='' ignoreHeaderLines="1" rowType="http://rs.gbif.org/terms/1.0/Image">
-        <files>
-            <location>images.csv</location>
-        </files>
-        <coreid index="0"/>
-        <field index="1" term="http://purl.org/dc/terms/identifier"/>
-    </extension>
-</archive>
-\end{lstlisting}
+\lstinputlisting[language=XML, breaklines=true,label=dwc:meta,caption=Darwin Core: meta.xml]{/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/meta.xml}
 
-Data files contain the actual sensed data, based on how it is supported, and these files are linked in \textit{meta.xml}. For example, temperature readings or direct human sightings would be stored in a CSV file and linked, however, images or video would require the metadata to be store in a CSV file and a filepath would be referenced within.
+Data files contain the actual sensed data, based on how it is supported, and these files are linked in \textit{meta.xml}. For example, temperature readings or direct human sightings would be stored in a CSV file and linked, however, images or video would require the metadata to be store in a CSV file and a filepath would be referenced in the XML. The structure of the CSV file contains a header line that matches the terms in the meta file and each line would be an observation. The terms are linked to the Darwin Core glossary so the archive can be validated and processed by a DwC archive reader.
+
+All of these files are then archived and sent as a ZIP folder throughout the network. If the sensed data is media based, then the media is included as well. DwC archive processing libraries are included on both DP and DA nodes.
+
+Darwin Core is suited to K-HAS because it fits our motivating scenario and the archive can be easily created by a DC node, as it does not require any heavy processing and all of the files are common formats.
 	
+	\subsection{Middleware}
+	The knowledge-processing capabilities of DA and DP nodes are the same and this is part of what makes K-HAS different from most other WSNs; both types of node run the sensor middleware, but each for different purposes. DA nodes use the middleware for administrating the network, receiving and archiving sensed data and allowing users to provide classifications. DP nodes use if for the receiving, sending and controlling the flow of processing of sensed data before it is passed on.
+	
+	Existing suitable middlewares have been detailed in Section \ref{sec:middleware} and our requirements for K-HAS were partially determined by the expertise of the users in our motivating scenario. Below is a list of our three core requirements:
+	\begin{description}
+		\item[Portability] Heterogeneous WSNs utilise nodes with different architectures and capabilities, if middleware is to be used on the nodes it must be able to run on these varied devices. 
+		\item[Usability] Users of K-HAS should not be expected to have knowledge of computer science or the underlying architecture, this network should be usable by almost anyone. The same must be said for the middleware as well.
+		\item[Extensibility] A closed-source middleware can be used, but it must then support all sensor nodes and data types, as well as receive regular updates. Open-source, or extensible, middleware can be used to add support for newer nodes.
+	\end{description}
+	
+	GSN is a Java-based open-source middleware. New generic sensors can be added through XML files, while more complex sensors can be added through custom Java classes. GSN is covered in more detail in Section \ref{sec:GSN}. Because GSN can run on any architecture that supports the Java Virtual Machine (JVM) then it meets our portability requirements and the web interface to provide administrative functionality makes it usable by those without any domain knowledge. Finally, the ability to add new sensors through XML means that it can be extended by almost any user of the network and with very little guidance.
 	
 	\section{Implementation}
 	In this section, we discuss the implementation made for our motivating scenario, a deployment where the hardware choices were using the 'cutting edge' technology that was readily available and software packages that can be re-used in any scenario. 

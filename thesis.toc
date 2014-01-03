@@ -70,14 +70,15 @@
 \contentsline {subsection}{\numberline {4.2.3}Data Aggregation}{46}
 \contentsline {subsubsection}{Knowledge Base}{47}
 \contentsline {section}{\numberline {4.3}Technological Components}{47}
-\contentsline {subsection}{\numberline {4.3.1}Data Standard}{47}
-\contentsline {section}{\numberline {4.4}Implementation}{51}
-\contentsline {subsection}{\numberline {4.4.1}Hardware Used}{52}
-\contentsline {subsubsection}{Data Collection}{52}
-\contentsline {subsubsection}{Data Processing}{52}
-\contentsline {subsubsection}{Data Aggregation}{52}
-\contentsline {subsection}{\numberline {4.4.2}Software Used}{52}
-\contentsline {subsubsection}{Data Collection}{52}
-\contentsline {subsubsection}{Data Processing}{52}
-\contentsline {subsubsection}{Data Aggregation}{52}
-\contentsline {subsection}{\numberline {4.4.3}Walkthrough}{52}
+\contentsline {subsection}{\numberline {4.3.1}Data Standard}{48}
+\contentsline {subsection}{\numberline {4.3.2}Middleware}{51}
+\contentsline {section}{\numberline {4.4}Implementation}{52}
+\contentsline {subsection}{\numberline {4.4.1}Hardware Used}{53}
+\contentsline {subsubsection}{Data Collection}{53}
+\contentsline {subsubsection}{Data Processing}{53}
+\contentsline {subsubsection}{Data Aggregation}{53}
+\contentsline {subsection}{\numberline {4.4.2}Software Used}{53}
+\contentsline {subsubsection}{Data Collection}{53}
+\contentsline {subsubsection}{Data Processing}{53}
+\contentsline {subsubsection}{Data Aggregation}{53}
+\contentsline {subsection}{\numberline {4.4.3}Walkthrough}{53}

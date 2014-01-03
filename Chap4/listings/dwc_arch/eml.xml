@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" 
+    xmlns:md="eml://ecoinformatics.org/methods-2.1.1" 
+    xmlns:proj="eml://ecoinformatics.org/project-2.1.1" 
+    xmlns:d="eml://ecoinformatics.org/dataset-2.1.1" 
+    xmlns:res="eml://ecoinformatics.org/resource-2.1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dc="http://purl.org/dc/terms/" 
+    packageId="e71fda1c-dcb9-4eae-81a9-183114978e44/eml-1.xml" system="GBIF-IPT" scope="system">
+    <dataset>
+        <alternateIdentifier>e71fda1c-dcb9-4eae-81a9-183114978e44</alternateIdentifier>
+        <title>Images from Danau Girang during the PTY Project 2011-12</title>
+        <creator>
+            <individualName>
+                <givenName>Christopher</givenName>
+                <surName>Gwilliams</surName>
+            </individualName>
+            <organizationName>Cardiff University</organizationName>
+            <positionName>PhD</positionName>
+            <address>
+                <city>Cardiff</city>
+                <administrativeArea>Cardiff</administrativeArea>
+                <postalCode>CF24 3AA</postalCode>
+                <country>Wales</country>
+            </address>
+            <phone></phone>
+            <electronicMailAddress>C.Gwilliams@cs.cf.ac.uk</electronicMailAddress>
+            <onlineUrl>christopher-gwilliams.com</onlineUrl>
+        </creator>
+        <pubDate>2012-07-26</pubDate>
+        <language>en</language>
+        <abstract>
+            <para></para>
+        </abstract>
+        <keywordSet>
+        	<keyword>Danau Girang</keyword>
+        	<keyword>Darwin Core</keyword>
+        </keywordSet>
+        <intellectualRights>
+            <para></para>
+        </intellectualRights>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription></geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-180</westBoundingCoordinate>
+                    <eastBoundingCoordinate>180</eastBoundingCoordinate>
+                    <northBoundingCoordinate>90</northBoundingCoordinate>
+                    <southBoundingCoordinate>-90</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <taxonomicCoverage>
+                <generalTaxonomicCoverage></generalTaxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankName></taxonRankName>
+                    <taxonRankValue></taxonRankValue>
+                    <commonName></commonName>
+                </taxonomicClassification>
+                
+            </taxonomicCoverage>
+        </coverage>
+        <contact>
+            <individualName>
+                <surName>Gwilliams</surName>
+            </individualName>
+            <electronicMailAddress>c.gwilliams@cs.cf.ac.uk</electronicMailAddress>
+        </contact>
+        <methods>
+        </methods>
+        <project>
+            <title>Using Local and Global Knowledge in Wireless Sensor Networks</title>
+        </project>
+    </dataset>
+    <additionalMetadata>
+    </additionalMetadata>
+</eml:eml>
