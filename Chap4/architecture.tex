@@ -1,5 +1,5 @@
 \chapter{Architecture}
-	In this chapter, we propose a network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three tiered approach with each subsequent tier providing increased knowledge processing capabilities. 
+	In this chapter, we explain our proposed network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three tiered approach with each subsequent tier providing increased knowledge processing capabilities. 
 
 	We believe that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise data delivery that it believes to be important, rather than chronologically. We also believe that human input is a valuable learning process for such a network and feedback, from humans, on data that has been classified can be used to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
 
@@ -95,7 +95,7 @@ Data files contain the actual sensed data, based on how it is supported, and the
 
 All of these files are then archived and sent as a ZIP folder throughout the network. If the sensed data is media based, then the media is included as well. DwC archive processing libraries are included on both DP and DA nodes.
 
-Darwin Core is suited to K-HAS because it fits our motivating scenario and the archive can be easily created by a DC node, as it does not require any heavy processing and all of the files are common formats.
+Darwin Core is suited to K-HAS because its use in scientific observations matches our motivating scenario and the archive can be easily created by a DC node, as it does not require any heavy processing and all of the files are common formats.
 	
 	\subsection{Middleware}
 	The knowledge-processing capabilities of DA and DP nodes are the same and this is part of what makes K-HAS different from most other WSNs; both types of node run the sensor middleware, but each for different purposes. DA nodes use the middleware for administrating the network, receiving and archiving sensed data and allowing users to provide classifications. DP nodes use if for the receiving, sending and controlling the flow of processing of sensed data before it is passed on.
@@ -109,5 +109,44 @@ Darwin Core is suited to K-HAS because it fits our motivating scenario and the a
 	
 	GSN is a Java-based open-source middleware. New generic sensors can be added through XML files, while more complex sensors can be added through custom Java classes. GSN is covered in more detail in Section \ref{sec:GSN}. Because GSN can run on any architecture that supports the Java Virtual Machine (JVM) then it meets our portability requirements and the web interface to provide administrative functionality makes it usable by those without any domain knowledge. Finally, the ability to add new sensors through XML means that it can be extended by almost any user of the network with very little guidance.
 	
-	\subsection{Walkthrough}
-	
+	\section{Walkthrough}
+		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.
+		
+		\subsection{Scenario}
+		%INCLUDE PICTURES OF LEOPARD AND PROCESSING
+			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare Clouded leopard and Sun bear are currently active at Danau Girang. The Clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the Sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed.All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
+			
+		\subsection{Data Collection}
+			A DC node is deployed along a ridge in the rainforest and consists of a wildlife camera with a wireless node attached. At 0200, the infra-red sensor detects movement and the camera triggers a set of 3 images to be captured. The DC node creates the DwC archive for the observation. Terms in the observation, such as time, date, species identified and location, are added to the meta.xml file and links to CSV files that contain the data for each term. A separate CSV file is created that holds the filename of each image that was taken.
+			
+			The DC node runs its rules on the metadata of the images and infers that the image may contain a Clouded leopard, this is because the image was taken in the early hours of the morning and the camera is deployed on a ridge.
+			
+			The inference is included in the archive and is compressed. The node then sends it through every DC node between the originating node and the DP node assigned. 
+
+	\subsection{Data Processing}			
+			The DP node receives the observation and it is unzipped and processed by the Darwin Core library. The images are read from the filenames provided in the CSV and processed using two methods. The EXIF tags in the image are extracted and the images themselves are processed using the Open Computer Vision (OpenCV) library.
+			
+		\subsubsection{EXiF}
+			EXIF (Exchangeable Image Format) tags are written to images at the time of capture. Examples of these tags can be time, date or camera serial no. The capabilities of the camera do affect how detailed the EXIF is, for example, a camera with GPS capabilities will enrich the image with the location. 
+			
+			Wildlife cameras have more functionality than common digital cameras, with details like moon phase, temperature or GPS location. Some devices even include the saturation, brightness and hue of each image. These capabilities allow the EXIF to be extremely detailed and this metadata can be used to find patterns in pictures that, when accompanied by local knowledge, assist with the classification of sensed data. 
+			
+			In this example, the knowledge base on the DP node is aware that Clouded leopards and Sun bears are nocturnal, but Clouded leopards have previously only seen when the temperature is between 30 to 35\celsius and only when the moon is not full. However, data on Sun bear is not as complete and the knowledge base only shows that the bear is nocturnal and can be seen at any time of night in any area of the rainforest. The DP node identifies that the moon phase is not full and that the temperature is 32\celsius, from this it determines that the image could contain either animal and it cannot make a final conclusion.
+			
+		\subsubsection{OpenCV}
+			OpenCV is a C++ library that allows popular image processing functions to be performed on one or more images. A program, called Triton, that utilises OpenCV, is run on the set of three images. These images are converted to black and white and combined to build a background model for the complete set. The detected background is then removed and the final image is then searched for objects, where objects in the foreground will be shown with white pixels. The largest object is then found in the image and extracted to create a template.
+			
+			Processed images of previously sensed images are stored on the DP node and associated with the confirmed classification, confirmed by a human or a node. The extracted image is then compared with the existing images, using the knowledge base to prioritise templates for comparison. In this example, nocturnal animals are prioritised and especially nocturnal animals with active projects associated. If the DP node has received an observation from the same DC node recently, then it will check for a classification on that and check for a match there first.
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
