@@ -117,14 +117,21 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare Clouded leopard and Sun bear are currently active at Danau Girang. The Clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the Sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed.All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
 			
 		\subsection{Data Collection}
-			A DC node is deployed along a ridge in the rainforest and consists of a wildlife camera with a wireless node attached. At 0200, the infra-red sensor detects movement and the camera triggers a set of 3 images to be captured. The DC node creates the DwC archive for the observation. Terms in the observation, such as time, date, species identified and location, are added to the meta.xml file and links to CSV files that contain the data for each term. A separate CSV file is created that holds the filename of each image that was taken.
+			A DC node is deployed along a ridge in the rainforest and consists of a wildlife camera with a wireless node attached. At 0200, the infra-red sensor detects movement and the camera triggers a set of 3 images to be captured. The DC node creates the DwC archive for the observation. Terms in the observation, such as time, date, species identified and location, are added to the meta.xml file and links to CSV files that contain the data for each term. A separate CSV file is created that holds the filename of each image that was taken. The image is shown below in Figure \ref{cl2}.
+			
+			\begin{figure}[!t]
+			\centering
+			\includegraphics[width=0.45\textwidth]{Chap4/figures/leopard2.JPG}
+			\caption{Clouded Leopard Image Capture}
+			\label{cl2}
+			\end{figure}
 			
 			The DC node runs its rules on the metadata of the images and infers that the image may contain a Clouded leopard, this is because the image was taken in the early hours of the morning and the camera is deployed on a ridge.
 			
-			The inference is included in the archive and is compressed. The node then sends it through every DC node between the originating node and the DP node assigned. 
+			The inference is included in the archive and is compressed. The node then sends it through every DC node between the originating node and the DP node assigned. To achieve the long range communications in the forest, Digimesh is used; the low transfer rate does mean that an archive takes several minutes to send but it allows a distance of up to 1km.
 
 	\subsection{Data Processing}			
-			The DP node receives the observation and it is unzipped and processed by the Darwin Core library. The images are read from the filenames provided in the CSV and processed using two methods. The EXIF tags in the image are extracted and the images themselves are processed using the Open Computer Vision (OpenCV) library.
+			The DP node receives the observation and it is unzipped and processed by the Darwin Core library. The images are read from the filenames provided in the CSV and processed using two methods. The EXIF tags in the image are extracted and the images themselves are processed using the Open Computer Vision (OpenCV) library. A unique feature of the DP node is that it uses two radios to allow links to both DA and DC nodes. DC nodes send archives using Digimesh, to achieve long range communcation, and DA nodes use Wi-Fi, to provide a faster transfer rate than Digimesh and a more standard method that allows other devices to connect, such as mobile phones or laptops.
 			
 		\subsubsection{EXiF}
 			EXIF (Exchangeable Image Format) tags are written to images at the time of capture. Examples of these tags can be time, date or camera serial no. The capabilities of the camera do affect how detailed the EXIF is, for example, a camera with GPS capabilities will enrich the image with the location. 
@@ -138,7 +145,10 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 			Processed images of previously sensed images are stored on the DP node and associated with the confirmed classification, confirmed by a human or a node. The extracted image is then compared with the existing images, using the knowledge base to prioritise templates for comparison. In this example, nocturnal animals are prioritised and especially nocturnal animals with active projects associated. If the DP node has received an observation from the same DC node recently, then it will check for a classification on that and check for a match there first.
 			
-			
+	This observation is the first trigger from the DC node in the past few hours, so there are no recent classifications. However, processing of the metadata showed that the image was taken at night, so the DP node uses its knowledge base to match the images to templates of nocturnal animals first. Triton then finds a match to an existing template of a Clouded leopard and completes its classification.
+	
+	\subsection{Classification}
+		The metadata processing of the image shows that it could be any nocturnal animal that is known to come out when the moon is not full and the temperature is 32\celsius. This is not a complete classification but the image processing has found a match. These findings are written into the DwC archive, using the ID of the DP node as the person that identified the image and the Clouded leopard as the species identified in the image. The archive is then zipped and sent on to the DA node. 
 			
 			
 			
