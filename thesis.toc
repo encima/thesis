@@ -62,63 +62,67 @@
 \contentsline {section}{\numberline {3.5}Summary}{40}
 \contentsline {chapter}{\numberline {4}Architecture}{42}
 \contentsline {section}{\numberline {4.1}K-HAS}{43}
-\contentsline {section}{\numberline {4.2}Scenario}{43}
-\contentsline {subsection}{\numberline {4.2.1}Data Collection}{43}
-\contentsline {subsubsection}{Knowledge Base}{44}
-\contentsline {subsection}{\numberline {4.2.2}Data Processing}{45}
+\contentsline {subsection}{\numberline {4.1.1}Data Collection}{43}
+\contentsline {subsubsection}{Knowledge Base}{43}
+\contentsline {subsection}{\numberline {4.1.2}Data Processing}{44}
 \contentsline {subsubsection}{Knowledge Base}{45}
-\contentsline {subsection}{\numberline {4.2.3}Data Aggregation}{46}
-\contentsline {subsubsection}{Knowledge Base}{47}
-\contentsline {section}{\numberline {4.3}Technological Components}{47}
-\contentsline {subsection}{\numberline {4.3.1}Data Standard}{48}
-\contentsline {subsection}{\numberline {4.3.2}Middleware}{51}
-\contentsline {section}{\numberline {4.4}Walkthrough}{52}
-\contentsline {subsection}{\numberline {4.4.1}Scenario}{53}
-\contentsline {subsection}{\numberline {4.4.2}Data Collection}{53}
-\contentsline {subsection}{\numberline {4.4.3}Data Processing}{54}
+\contentsline {subsection}{\numberline {4.1.3}Data Aggregation}{45}
+\contentsline {subsubsection}{Knowledge Base}{46}
+\contentsline {section}{\numberline {4.2}Technological Components}{47}
+\contentsline {subsection}{\numberline {4.2.1}Data Standard}{47}
+\contentsline {subsection}{\numberline {4.2.2}Middleware}{51}
+\contentsline {section}{\numberline {4.3}Walkthrough}{52}
+\contentsline {subsection}{\numberline {4.3.1}Scenario}{52}
+\contentsline {subsection}{\numberline {4.3.2}Data Collection}{52}
+\contentsline {subsection}{\numberline {4.3.3}Data Processing}{53}
 \contentsline {subsubsection}{EXiF}{54}
-\contentsline {subsubsection}{OpenCV}{55}
-\contentsline {chapter}{\numberline {5}Ontology}{56}
-\contentsline {section}{\numberline {5.1}Introduction}{56}
-\contentsline {section}{\numberline {5.2}Motivation}{57}
-\contentsline {subsection}{\numberline {5.2.1}K-HAS}{58}
-\contentsline {subsubsection}{Data Collection Node}{58}
-\contentsline {subsubsection}{Data Processing Node}{60}
-\contentsline {subsubsection}{Data Aggregation Node}{60}
-\contentsline {section}{\numberline {5.3}Background}{61}
-\contentsline {subsection}{\numberline {5.3.1}Observation-Centric Ontologies}{62}
-\contentsline {subsubsection}{OBOE}{62}
-\contentsline {subsubsection}{O\&M}{63}
-\contentsline {subsubsection}{Darwin Core SW}{65}
-\contentsline {subsection}{\numberline {5.3.2}Sensor-Centric Ontologies}{71}
-\contentsline {subsubsection}{SensorML}{71}
-\contentsline {subsubsection}{SSN}{72}
-\contentsline {subsubsection}{Findings}{73}
-\contentsline {section}{\numberline {5.4}Method}{74}
-\contentsline {subsection}{\numberline {5.4.1}Identify Purpose}{74}
-\contentsline {subsection}{\numberline {5.4.2}Build the Ontology}{74}
-\contentsline {subsubsection}{Capture}{74}
-\contentsline {subsubsection}{Code}{75}
-\contentsline {subsubsection}{Integrate Existing Ontologies}{75}
-\contentsline {subsection}{\numberline {5.4.3}Evaluation}{76}
-\contentsline {subsection}{\numberline {5.4.4}Documentation}{76}
-\contentsline {section}{\numberline {5.5}Results}{76}
-\contentsline {subsection}{\numberline {5.5.1}Identify Purpose}{76}
-\contentsline {subsection}{\numberline {5.5.2}Build the Ontology - Capture}{77}
-\contentsline {subsection}{\numberline {5.5.3}Build the Ontology - Code}{78}
-\contentsline {subsection}{\numberline {5.5.4}Build the Ontology - Integrate Existing Ontologies}{80}
-\contentsline {subsection}{\numberline {5.5.5}Ontology}{81}
-\contentsline {section}{\numberline {5.6}Evaluation}{81}
-\contentsline {subsection}{\numberline {5.6.1}Using the Ontology in an Application}{82}
-\contentsline {subsection}{\numberline {5.6.2}Competency Questions}{83}
-\contentsline {subsection}{\numberline {5.6.3}Comparing the Ontology with a Collection of Documents}{83}
-\contentsline {section}{\numberline {5.7}Conclusion}{84}
-\contentsline {chapter}{\numberline {6}Implementation}{88}
-\contentsline {subsection}{\numberline {6.0.1}Hardware Used}{89}
-\contentsline {subsubsection}{Data Collection}{89}
-\contentsline {subsubsection}{Data Processing}{89}
-\contentsline {subsubsection}{Data Aggregation}{89}
-\contentsline {subsection}{\numberline {6.0.2}Software Used}{89}
-\contentsline {subsubsection}{Data Collection}{89}
-\contentsline {subsubsection}{Data Processing}{89}
-\contentsline {subsubsection}{Data Aggregation}{89}
+\contentsline {subsubsection}{OpenCV}{54}
+\contentsline {subsubsection}{Classification}{55}
+\contentsline {subsection}{\numberline {4.3.4}Data Aggregation}{55}
+\contentsline {section}{\numberline {4.4}Rules}{56}
+\contentsline {subsection}{\numberline {4.4.1}Data Collection Nodes}{57}
+\contentsline {subsection}{\numberline {4.4.2}Data Processing Nodes}{58}
+\contentsline {chapter}{\numberline {5}Ontology}{59}
+\contentsline {section}{\numberline {5.1}Introduction}{59}
+\contentsline {section}{\numberline {5.2}Motivation}{60}
+\contentsline {subsection}{\numberline {5.2.1}K-HAS}{61}
+\contentsline {subsubsection}{Data Collection Node}{61}
+\contentsline {subsubsection}{Data Processing Node}{63}
+\contentsline {subsubsection}{Data Aggregation Node}{63}
+\contentsline {section}{\numberline {5.3}Background}{64}
+\contentsline {subsection}{\numberline {5.3.1}Observation-Centric Ontologies}{65}
+\contentsline {subsubsection}{OBOE}{65}
+\contentsline {subsubsection}{O\&M}{66}
+\contentsline {subsubsection}{Darwin Core SW}{68}
+\contentsline {subsection}{\numberline {5.3.2}Sensor-Centric Ontologies}{74}
+\contentsline {subsubsection}{SensorML}{74}
+\contentsline {subsubsection}{SSN}{75}
+\contentsline {subsubsection}{Findings}{76}
+\contentsline {section}{\numberline {5.4}Method}{77}
+\contentsline {subsection}{\numberline {5.4.1}Identify Purpose}{77}
+\contentsline {subsection}{\numberline {5.4.2}Build the Ontology}{77}
+\contentsline {subsubsection}{Capture}{77}
+\contentsline {subsubsection}{Code}{78}
+\contentsline {subsubsection}{Integrate Existing Ontologies}{78}
+\contentsline {subsection}{\numberline {5.4.3}Evaluation}{79}
+\contentsline {subsection}{\numberline {5.4.4}Documentation}{79}
+\contentsline {section}{\numberline {5.5}Results}{79}
+\contentsline {subsection}{\numberline {5.5.1}Identify Purpose}{79}
+\contentsline {subsection}{\numberline {5.5.2}Build the Ontology - Capture}{80}
+\contentsline {subsection}{\numberline {5.5.3}Build the Ontology - Code}{81}
+\contentsline {subsection}{\numberline {5.5.4}Build the Ontology - Integrate Existing Ontologies}{83}
+\contentsline {subsection}{\numberline {5.5.5}Ontology}{84}
+\contentsline {section}{\numberline {5.6}Evaluation}{84}
+\contentsline {subsection}{\numberline {5.6.1}Using the Ontology in an Application}{85}
+\contentsline {subsection}{\numberline {5.6.2}Competency Questions}{86}
+\contentsline {subsection}{\numberline {5.6.3}Comparing the Ontology with a Collection of Documents}{86}
+\contentsline {section}{\numberline {5.7}Conclusion}{87}
+\contentsline {chapter}{\numberline {6}Implementation}{91}
+\contentsline {subsection}{\numberline {6.0.1}Hardware Used}{92}
+\contentsline {subsubsection}{Data Collection}{92}
+\contentsline {subsubsection}{Data Processing}{92}
+\contentsline {subsubsection}{Data Aggregation}{92}
+\contentsline {subsection}{\numberline {6.0.2}Software Used}{92}
+\contentsline {subsubsection}{Data Collection}{92}
+\contentsline {subsubsection}{Data Processing}{92}
+\contentsline {subsubsection}{Data Aggregation}{92}

@@ -1,48 +1,7 @@
 \chapter{Ontology}
-%REWRITE INTRO TO FIT CHAPTER
-This sensed data can be described as an occurrence (or an observation), where a sensing device has recorded an event in space and time, that has been caused by a trigger. For example. a motion sensor would record an occurrence of a movement trigger, at the location it is deployed.
+In this chapter, we explain the ontology that we developed to formally define the structure of K-HAS, as well as the format of the sensed data that is passed through the network.
 
-We present an aligning ontology for representing the capture of occurrence data, within a sensor network, as well as the flow of knowledge for inferring the content of the sensed data.
-
-The rest of this paper is structured as follows: Section 2 outlines our motivation for the development of the K-HAS ontology, Section 3 summarises existing ontologies and other background research, Section 4 explains the methodology we used for the development of the ontology, Section 5 details the results of using the methodology and Section 6 is our evaluation. Section 7 details our conclusions and highlights planned future work.
-
-\section{Motivation}\label{motiv}
-This ontology has been developed to support our work developing a wireless sensor network that is capable of utilising the knowledge of the environment it is deployed in, as well as the knowledge of the data it has sensed. This knowledge can be classified as local or global. We have defined local knowledge as knowledge of an area that has been gained through experience, or experimentation. The area we have been implementing this network has been running a network of wildlife cameras for many years and has pre-existing data that has been manually collected by humans, this ontology also aims to provide a fixed structure to store, and classify, the thousands of pre-existing wildlife images that we currently have.
-
-A typical sensing node is capable of recording the data it has sensed and forwarding it to a neighbouring node, as well as routing sensed data from the neighbouring nodes. These nodes send all sensed data through the network, unaware of the content. This means that a large volume of data could be received at the endpoint which may contain false readings, empty readings and even duplicates from sensors that are close to each other.
-
-We hypothesise that nodes will be able to use local knowledge to infer whether sensed data is interesting; this could be through the metadata of an image, the text within a temperature reading or linking the newly sensed data with data that has previously been classified. In turn, this increases the efficiency of the network by prioritising data that is inferred to be of a higher importance.
-
-For example, a camera sensor node could be triggered to take a picture and also receive a picture from a neighbouring node. In a typical WSN, the node would forward the picture it had taken, as well as its own but, in a network that uses local knowledge, the node could see that the received picture has already been marked as important, forcing all nodes to prioritise this data before their own. This means that data received at the endpoint of the network is not chronological, or preferential to a particular node, rather it is based on the knowledge from data that has previously been sensed, as well as characteristics of the environment that have been encoded onto each node. 
-
-To test this, we have created an Knowledge-based Hierarchical Architecture for Sensing (K-HAS), a tiered architecture that is comprised of three tiers that attempt to classify and filter sensed data before reaching the endpoint \cite{gwilliams2012local}. In this section, we provide a short overview of this architecture to support the reasons for developing the ontology.
-
-\subsection{K-HAS}
-Through a collaboration with Cardiff School of Biosciences, we have developed the K-HAS architecture and implemented variations of it in the Malaysian rainforest with a view to capture, process and store images of wildlife with a significant reduction for any human involvement. K-HAS uses local and global knowledge through the use of rules encoded onto sensing nodes and dynamically adapts to changes in the network, such as new nodes added or changes in the sensed data. A simple overview of the K-HAS architecture is shown in Figure \ref{khasarch} and explained in detail below.
-
-\begin{figure}
-\includegraphics{/home/encima/Development/latex/thesis/Chap5/figures/khasarch.png}
-\caption{K-HAS Architecture}
-\label{khasarch}
-\end{figure}
-
-\subsubsection{Data Collection Node}
-Data Collection (DC) nodes can be standard sensing devices; low power with limited storage and knowledge-processing capabilities that allows them to operate in a \textit{forward-and-forget} fashion that means that they are unaware of their history of sensed data, as well as what is being sensed around them. At the time of deployment, these devices are encoded with a fixed knowledge base. This give the node some knowledge of its surroundings, such as location, bearing and projects it is involved with, and allows it to filter the data that it senses. For example, a camera node could be aware that it is facing a river that is closed off at night, so any images taken during that time can be discarded (or sent with the lowest priority).
-
-While these nodes do not have the capabilities to classify sensed data, they can enrich it and simplify the classification process for the next tier of the network.
-
-\subsubsection{Data Processing Node}
-These nodes do not perform any direct sensing, but they serve a subset of DC nodes, holding a more dynamic knowledge base that encompasses of the DC nodes it serves. Data Processing (DP) nodes have increased knowledge-processing capabilities and their storage capacity is significantly larger; because of this, they are able to run a more comprehensive rule management system and store a history of sensed data from DC nodes.
-
-When DP nodes receive data, rules are fired on every detail. For example, in the case of an image, rules are fired on the location of the DC node, the metadata of the file and the contents of the image; every aspect of the data is processed. If the data can be classified, through the rules, previous classifications or both, then it is sent on to the next tier. If the data cannot be classified, but some of the rules fired indicate that it may be of interest, then it is marked as such and passed on. Sometimes, no classification or inference about the data can be made, so it is sent on with no enrichment.
-
-\subsubsection{Data Aggregation Node}
-A Data Aggregation (DA) node serves as the endpoint for a K-HAS network, it holds a global knowledge base of every deployed node, as well as allowing users to administer the network. All the sensed data of the network is stored here and users are able to classify any data that has been received. If a user changes the classification from what was inferred by the DP node, then the DP node is informed of the change and performs any necessary updates to its knowledge base.
-
-For example, if a DP node sends a collection of images that it believes is a deer, based on the facts that it is facing into the forest and the extracted object from the images matches an existing template, but a user classifies it as a boar (which the node was not originally aware of), then the node updates its knowledge base and stores the template of the boar for future classifications.
-
-We found that we needed a structured format for the data being sent around the network, as well as a formal representation for the flow of knowledge. Developing an ontology allowed us to outline the core concepts that make K-HAS unique, as well as identify areas where we can reuse popular, existing tools and methodologies.
-
+This ontology provides those wanting to use K-HAS with a representation that is easy to reuse and deploy in a number of different scenarios, or even to select parts of the ontology that meet their requirements and implement those. 
 \section{Background}\label{bg}
 
 %COMPLETE THE BACKGROUND FOR EXISTING ONTOLOGIES
@@ -75,7 +34,7 @@ OBOE focuses on the concept of an \textit{observation}, which is made up of an e
 
     \begin{figure}
     \centering
-        \scalebox{0.63}{\includegraphics{/home/encima/Development/latex/thesis/Chap5/figures/OBOEcore.JPG}}
+        \scalebox{0.63}{\includegraphics{Chap5/figures/OBOEcore.JPG}}
     \caption{The Core of an OBOE Observation}
     \label{oboe}
     \end{figure}
@@ -471,7 +430,7 @@ In the data driven approach suggested by \cite{Brewster2004}, a corpus of docume
 
 As we have previously explained, an archive of Darwin Core files consists of a minimum of 3 files: a metadata file that contains information about the creator of the archive and the project it relates to (eml.xml), a metadata file that describes all of the files that contain the occurrence and the fields within them (meta.xml) and a csv file that contains the data relating to the occurrence itself. Within the archive, the core files that need to be mapped to K-HAS are the meta.xml and eml.xml files as this allows us to store what and who.
 
-We used the example files from the archive in Section \ref{bg:dwc} to extract the terms associated with an occurence and we mapped these terms to K-HAS concepts, the results can be seen in Table \ref{tab:dwc_eval}.
+We used the example files from the archive in Section \ref{bg:dwc} to extract the terms associated with an occurrence and we mapped these terms to K-HAS concepts, the results can be seen in Table \ref{tab:dwc_eval}.
 
 \begin{table}[h]
 \caption{Evaluation of K-HAS against Darwin Core Occurrence Terms} 

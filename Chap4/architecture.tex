@@ -8,14 +8,7 @@
 	\section{K-HAS}
 		K-HAS has been designed as an architecture for WSNs that is able to handle changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier.
 	
-	\section{Scenario}
-		In order to explain K-HAS more coherently, we will use an example from our motivating scenario that will show how sensed data is enriched, classified and prioritised as it moves through the network. In this example, a network of wireless cameras nodes are deployed in the Malaysian rainforest, tasked with sensing the movments of animals through a specific corridor of the rainforest. 
-
-		From previous research, we know that animals that are not of interest often move through that region of the forest at all times of the day, such as macaques and wild boar. However, researchers at Danau Girang also hypothesise that rare species, such as the clouded leopard, move through the corridor when certain conditions are met. These conditions are: a temperature between thirty and thirty five degrees celsius, a night with a full moon and a time between one a.m. and four a.m.
-
-		The network is using the K-HAS architecture and has been tasked with prioritising the transmission of clouded leopards, but they also want to receive all pictures; regardless of the content.
-	
-	\subsection{Data Collection}
+	\subsection{Data Collection}\label{khas:dc}
 	The data collection (DC) tier is a very similar to standard nodes in a typical WSN, using hardware that has similar capabilities. These DC nodes are deployed at the edge of the network and tasked with sensing their environment, pre-processing the sensed data and using each other to relay data to the next tier.
 
 	DC nodes are capable of performing processing on data, such as the time it was recorded and its size, but their limited knowledge processing capabilities allow them to have an increased battery life and reduced size, making them suitable for a variety of deployments.
@@ -147,11 +140,38 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 	This observation is the first trigger from the DC node in the past few hours, so there are no recent classifications. However, processing of the metadata showed that the image was taken at night, so the DP node uses its knowledge base to match the images to templates of nocturnal animals first. Triton then finds a match to an existing template of a Clouded leopard and completes its classification.
 	
-	\subsection{Classification}
+		\subsubsection{Classification}
 		The metadata processing of the image shows that it could be any nocturnal animal that is known to come out when the moon is not full and the temperature is 32\celsius. This is not a complete classification but the image processing has found a match. These findings are written into the DwC archive, using the ID of the DP node as the person that identified the image and the Clouded leopard as the species identified in the image. The archive is then zipped and sent on to the DA node. 
 			
+	\subsection{Data Aggregation}		
+			Upon receiving a DwC archive, it unarchived and processed by Darwin Core libraries, called by the middleware running on the node. The resulting archive is then inserted into a MySQL database and the files themselves are stored in a directory that maps to the DC node that captured the original observation. At the field centre, three users of the system have subscribed to updates for observations of Clouded leopards.
+			
+			As the archive is processed by the library, the species is extracted and this triggers a rule to notify the subscribers. The rule then queries the database and finds their preferred method of communication. In this case, one is a lecturer and wants to be emailed while the two remaining are students and want to be notified via Twitter, a social networking website. An email is drafted that contains the time, location and content of the observation, with the images attached, and sent on to the lecturer. The students are sent a short tweet that tells them a Clouded leopard has been spotted and a link to the middle image in the sequence is provided; the middle image is used because this local knowledge has shown that it is the most likely to contain the full subject in the image.
+			
+			The middleware on the node supports a web interface to allow users to perform administrative functions on the network, such as deploy a new node, on top of this there is a custom made website that shows all observations for every DC node. This allows users to log on and classify the images. In this case, the lecturer receives the email notification, reviews the attached images and clicks on the link to access the website to inform the DP node that the classification was correct. Due to the administrator position the lecturer has on the system, he is able to stop any users voting on the image and to simply confirm the classification.
+			
+			If there was no classification, then users would be able to vote on the contents and use the classification with the highest vote, or the classification made by an administrator. Once a classification has been made, it is stored in the database and written to the archive. This triggers the DA node to send that classification on to the DP node that sent the original archive. In this case, the DA node informed the DP node that it has been confirmed as a Clouded leopard and the DP node then stores the extracted image in the directory of Clouded leopard templates, to assist with future classifications.
 			
 			
+		\section{Rules}
+			This section explains the rules used in K-HAS in more detail, to highlight how classifications are made as well as how nodes in the network are monitored. Any examples made here relate to our motivating scenario. The rules on each node are a vital way of encoding local knowledge and a practical use to show how local knowledge, from users or previously sensed data, can be used classify newly sensed data.
+			
+			In K-HAS, we use the Drools rule engine, a Java based rule management system that uses forward chaining based inference. Forward chaining starts with some data, in our case a set of images, and uses inferences rules to extract more data. We use this method to make meaningful inferences from properties of the sensed data. For example, an image taken at 8pm could be put through Drools and an inference rule will tell the system to start by looking for nocturnal animals.
+			
+	\subsection{Data Collection Nodes}			
+			As explained in Section \ref{khas:dc}, DC nodes are unable to run the Drools engine and instead utilise static rules that are encoded at the time of deployment. Instead of utilising forward chaining to draw a single conclusion, these rules are executed one by one and the outcome of one does not affect the outcome of another. An example of such rules could be a rule to determine the time of day that an image was captured (such as morning, afternoon, evening or night) or a rule to determine what animals it is more likely to be based on the temperature and location of the node, shown in Listing \ref{lst:dcrule}. No rule engine is used by the DC node and the rules are executed in the code before the observation is archived and sent on.
+			
+		\begin{lstlisting}[caption=Encoded Data Collection Rule, label=lst:dcrule, breaklines=true]
+if img.temp > 32 && img.temp < 38 then
+	classification.potentialAnimals = [clouded_leopard, malay_civet, sun_bear]
+if img.time > 1800 && img.time < 0500 then
+	classification.animalBehaviour = nocturnal
+		\end{lstlisting}
+	
+	\subsection{Data Processing Nodes}
+		The increased knowledge-processing capabilities allow DP nodes to run a complete implementation of Drools, this means that forward chaining can be used and the knowledge base is dynamic, i.e. it can be updated whilst the network is deployed. 
+		
+		Rules are written in \textit{drl} files that are loaded into a knowledge session. Sessions, as well as the firing of rules, are handled by the Java code. The benefit of using Drools with a Java based middleware, such as GSN, allows the simple integration of the two technologies, allowing a sensor class in GSN to insert an archive into the session and run the rules. When sensed data is received from a DC node, it is unarchived and Drools is run on the DwC files describing the original observation, the metadata, the originating DC node and the knowledge base of the DP node. 
 			
 			
 			
