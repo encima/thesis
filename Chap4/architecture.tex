@@ -78,11 +78,11 @@ DwC follows a star record structure, where a record can contain many occurrences
 
 Ecological Metadata Language (EML) is a metadata used by ecologists and the language is used to describe projects and those involved. This file acts as a form of certificate and descriptor as to what the data is related to and who owns it. The XML file, shown in Listing \ref{dwc:eml}, outlines a sample project and users involved in the project.
 
-\lstinputlisting[language=XML, firstline=0, lastline=21,breaklines=true,label=dwc:eml,caption=Darwin Core: EML.xml]{/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/eml.xml}
+\lstinputlisting[language=XML, firstline=0, lastline=21,breaklines=true,label=dwc:eml,caption=Darwin Core: EML.xml]{Chap4/listings/dwc_arch/eml.xml}
 
 The core file, \textit{meta.xml}, shown in Listing \ref{dwc:meta} lists the files that contains the actual sensed data, as well as the terms used to describe it. Examples include: date, time, location, type of data, filename and species contained.
 
-\lstinputlisting[language=XML, breaklines=true,label=dwc:meta,caption=Darwin Core: meta.xml]{/home/encima/Development/latex/thesis/Chap4/listings/dwc_arch/meta.xml}
+\lstinputlisting[language=XML, breaklines=true,label=dwc:meta,caption=Darwin Core: meta.xml]{Chap4/listings/dwc_arch/meta.xml}
 
 Data files contain the actual sensed data, based on how it is supported, and these files are linked in \textit{meta.xml}. For example, temperature readings or direct human sightings would be stored in a CSV file and linked, however, images or video would require the metadata to be store in a CSV file and a filepath would be referenced in the XML. The structure of the CSV file contains a header line that matches the terms in the meta file and each line would be an observation. The terms are linked to the Darwin Core glossary so the archive can be validated and processed by a DwC archive reader.
 
@@ -134,9 +134,16 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			In this example, the knowledge base on the DP node is aware that Clouded leopards and Sun bears are nocturnal, but Clouded leopards have previously only seen when the temperature is between 30 to 35\celsius and only when the moon is not full. However, data on Sun bear is not as complete and the knowledge base only shows that the bear is nocturnal and can be seen at any time of night in any area of the rainforest. The DP node identifies that the moon phase is not full and that the temperature is 32\celsius, from this it determines that the image could contain either animal and it cannot make a final conclusion.
 			
 		\subsubsection{OpenCV}
-			OpenCV is a C++ library that allows popular image processing functions to be performed on one or more images. A program, called Triton, that utilises OpenCV, is run on the set of three images. These images are converted to black and white and combined to build a background model for the complete set. The detected background is then removed and the final image is then searched for objects, where objects in the foreground will be shown with white pixels. The largest object is then found in the image and extracted to create a template.
+			OpenCV is a C++ library that allows popular image processing functions to be performed on one or more images. A program, called Triton, that utilises OpenCV, is run on the set of three images. These images are converted to black and white and combined to build a background model for the complete set. The detected background is then removed and the final image is then searched for objects, where objects in the foreground will be shown with white pixels. The largest object is then found in the image and extracted to create a template, shown in Figure \ref{clproc}.
 			
-			Processed images of previously sensed images are stored on the DP node and associated with the confirmed classification, confirmed by a human or a node. The extracted image is then compared with the existing images, using the knowledge base to prioritise templates for comparison. In this example, nocturnal animals are prioritised and especially nocturnal animals with active projects associated. If the DP node has received an observation from the same DC node recently, then it will check for a classification on that and check for a match there first.
+			\begin{figure}[!t]
+			\centering
+			\includegraphics[width=0.45\textwidth]{Chap4/figures/leopard_proc}
+			\caption{Processed Image of Clouded Leopard}
+			\label{cl2}
+			\end{figure}
+			
+			Processed images of previously sensed images are stored on the DP node and associated with the confirmed classification, confirmed by a human or a node. Although the memory available on a DP node is typically around 32GB, this could easily fill in a matter of months if 3 full HD images were stored for every observation. Storing a single black and white template that contains a portion of the image is much more efficient and can still easily be associated with the classification made. The extracted image is then compared with the existing images, using the knowledge base to prioritise templates for comparison. In this example, nocturnal animals are prioritised and especially nocturnal animals with active projects associated. If the DP node has received an observation from the same DC node recently, then it will check for a classification on that and check for a match there first.
 			
 	This observation is the first trigger from the DC node in the past few hours, so there are no recent classifications. However, processing of the metadata showed that the image was taken at night, so the DP node uses its knowledge base to match the images to templates of nocturnal animals first. Triton then finds a match to an existing template of a Clouded leopard and completes its classification.
 	
@@ -171,7 +178,9 @@ if img.time > 1800 && img.time < 0500 then
 	\subsection{Data Processing Nodes}
 		The increased knowledge-processing capabilities allow DP nodes to run a complete implementation of Drools, this means that forward chaining can be used and the knowledge base is dynamic, i.e. it can be updated whilst the network is deployed. 
 		
-		Rules are written in \textit{drl} files that are loaded into a knowledge session. Sessions, as well as the firing of rules, are handled by the Java code. The benefit of using Drools with a Java based middleware, such as GSN, allows the simple integration of the two technologies, allowing a sensor class in GSN to insert an archive into the session and run the rules. When sensed data is received from a DC node, it is unarchived and Drools is run on the DwC files describing the original observation, the metadata, the originating DC node and the knowledge base of the DP node. 
+		Rules are written in \textit{drl} files that are loaded into a knowledge session. Sessions, as well as the firing of rules, are handled by the Java code. The benefit of using Drools with a Java based middleware, such as GSN, allows the simple integration of the two technologies, allowing a sensor class in GSN to insert an archive into the session and run the rules. When sensed data is received from a DC node, it is unarchived and Drools is run on the DwC files describing the original observation, the metadata, the originating DC node and the knowledge base of the DP node. Listing \ref{drools:dp} shows an example of some more simple rules that would be contained within the knowledge base.
+		
+		\lstinputlisting[caption=Drools Rule File, label=drools:dp]{Chap4/listings/rules.drl}
 			
 			
 			
