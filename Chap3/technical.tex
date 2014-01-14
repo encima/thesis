@@ -90,7 +90,7 @@ Finally, we considered using the researchers or animals at Danau Girang, as `dat
 			
 Although the range of Wi-Fi is poor, for our requirements, in both Malaysia and the UK, it did show that the results we experience in the UK are very similar to the results in Malaysia. This means that tests run in the UK should be indicative of what we can expect in Danau Girang.
 
-\subsection{Digimesh}
+\subsection{Digimesh}\label{tech:digimesh}
 		Due to the poor range results of Wi-Fi, we created a second prototype of the network, using Digimesh. Digimesh is a proprietary wireless protocol, based on the 802.15.4 standard and designed for devices with limited power. Using the same frequency as Wi-Fi, Digimesh has been reported to provide 7km of range, with a data rate of 250kbps.
 		
 In our prototype implementation, we are using Waspmote sensor boards \cite{Waspmote}, a general purpose node that is capable of transmitting through various communication mediums. Our Waspmotes are provided with Digimesh modules and a 2GB SD card to store sensed data.
@@ -123,21 +123,9 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 	Because of these factors, we began to look into commercial solutions that combined wildlife cameras with wireless transmission capabilities. -
 
 \section{Software}
-	\subsection{GSN}
-	Covering the sensor middleware in Chapter \ref{chap:bg}, our implementation in Danau Girang required a simple, extensible middleware that could be used by those without technical knowledge. Open source was also a feature that we looked for as it meant that we could easily edit the functionality of existing sensor support, as well as add support for sensors at a much lower level.
-
-	Our initial plan was to deploy the middleware on every node, so we wanted to use something that did not need to be compiled for an individual device. The Global Sensor Networks (GSN), covered in Section \ref{bg:sm}, middleware was chosen because it was implemented in the cross-platform Java programming language and it allowed for the description of sensors in XML, a language that can be used by those without any domain knowledge. Its extensive support for sensors and administrative web interface allows users to see the latest sensed data and view the location of each sensor on an interactive map. The open source nature allowed us to remove features to deploy a more basic version to be deployed on sensor nodes and implement new notification methods when sensed data is received, such as Twitter and SMS.
-
-
-	\subsection{Darwin Core}
-	To pass sensed data through the network, we first had to choose a standard format that would allow us to encode the sensed data, as well as enrich it with inferences made through processing. Darwin Core (DwC) is a body of standards with predefined terms that allows for the sharing of biodiversity occurrences through the means of XML and CSV data files \cite{WieczorekJDoringMDeGiovanniRRobertsonT}.
-
-The Global Biodiversity Information Facility (GBIF) indexes more than 300 million Darwin Core records published by organisations all over the web, allowing datasets that were previously siloed from the public to be accessed by both human and machine. The main of Darwin Core it to provide a common language for sharing biodiversity data that reuses standards from other domains \cite{Wieczorek2012a}.
-
-DwC follows a star record structure, where a record can contain many occurrences, which is the recording of a species in nature or in a dataset. In an occurrence, there is an \textit{event}, a recording of a species in space and time, enriched with other terms such as \textit{identification} and \textit{location}.
-
-The core file, \textit{meta.xml}, contains all of 
 	\subsection{Triton}
+	
+	\subsection{ODACH}
 
 
 \section{Summary}

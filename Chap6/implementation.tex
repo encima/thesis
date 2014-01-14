@@ -1,24 +1,38 @@
-\chapter{Implementation}
-	In this chapter, we discuss the implementation made for our motivating scenario, a deployment where the hardware choices were using the 'cutting edge' technology that was readily available and software packages that can be re-used in any scenario. 
+\chapter{LORIS}
+	In this chapter, we introduce the deployment of K-HAS in the Malaysian rainforest and highlight the issues we experienced deploying the architecture in a humid, dense rainforest. Experiments, carried out in the rainforest, had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected.
 	
-	Experimentation in the Malaysian rainforest revealed that our ideal implementation of K-HAS was not feasible for a prototype that could be used by those without any domain knowledge. This was mainly due to the effects of the humidity and vegetation on the range of the DC nodes, but also because of the difficulty creating a DC node with a camera that could be remotely controlled.
+	Yearly visits were made to the Danau Girang Field Centre (DGFC) to test different nodes, gather knowledge and trial iterations of K-HAS. The first visit showed us just how much the rainforest affected communications, but also allowed us to gather knowledge from researchers and cameras that had previously been deployed. Subsequent visits were then used to test our own nodes and software, based on the knowledge we had gained from the first visit. We developed K-HAS with a view to deploying it in Malaysia, however, it soon became clear that our design was  beyond what was currently available, as well as the time constraints.
 	
-	The key point of K-HAS' development was to show that local knowledge can improve the efficiency of the network, the quality of the data received and automate the processing of sensed data. In order to implement a network that showed this, we had to modify the architecture of K-HAS to create a network that was designed specifically for its use in Malaysia, as well as using commercial hardware that could be used by anyone. 
+	Developing a camera with both wireless and processing capabilities, as well as being waterproof, proved to a be an extremely difficult task, while wireless wildlife cameras were already commercially available with range far beyond what we had experienced. Before realising this, we attempted to use various node types connected to a camera, such as the Raspberry Pi and Waspmote nodes, both yielded problems with mounting an SD card that was readable by both camera and node. At the time, we were unable to create a camera combined with a node that could be left untouched for months at a time in a rainforest.
 	
-	While this implementation does not exactly match the architecture of K-HAS, the principles are the same and the implementation is based on the best technology that is currently available. We call this modification to K-HAS, the Local-knowledge Ontology-based Remote-sensing Informatics System (LORIS).
+	However, we still needed to implement a network to prove our hypothesis and we developed a modification to the K-HAS that utilised the latest commercially available hardware to provide an architecture that provides similar capabilities. Because these changes were made due to issues with deployment in Danau Girang, we chose to name it after a famous animal in Malaysia: LORIS. This stands for Local-knowledge Ontology-based Remote-sensing Informatics System.
 	
-	LORIS uses the same approach to knowledge-processing as K-HAS but, as experimentation revealed, the ideal architecture of K-HAS is not currently feasible in a humid rainforest and sensor nodes cannot be deployed 1km apart. To address this, we made a modification to the tiers used in K-HAS and adopted commercial hardware solutions that would overcome the difficulty we experienced with our own sensor solutions.
+	LORIS has been developed specifically for the Malaysian rainforest, our motivating scenario, and, as such, much of the hardware and software has been implemented to reflect this. However, the same approach could be used for other WSNs focussing on scientific observations with minor changes required.
 	
-	\subsection{Hardware Used}
-		\subsubsection{Data Collection}
-			We described the experiments performed on wireless transmissions in Chapter \ref{chap:technical} and outlined that Wi-Fi communications in a humid rainforest was not possible beyond 30m, at least at ground level. We also discovered that Digimesh, despite the reported range of up 60km, was also limited. Taking this into consideration, we looked into a commercial solution that would be able to capture images and transmit over distances of more than a few hundred metres. The limitation of this approach means that no local processing can be performed on the device and it cannot run any custom programs. However, the benefit is that wireless sensing cameras are provided with the necessary hardware and robust software that allows for remote configuration and retrieval of images.
-			
-			With this in mind, we ordered 3 Buckeye X7D wireless cameras with a reported range of 1 mile.
-		\subsubsection{Data Processing}
-		\subsubsection{Data Aggregation}	
-
-	\subsection{Software Used}
-		\subsubsection{Data Collection}
-		\subsubsection{Data Processing}
-		\subsubsection{Data Aggregation}	
+	The rest of this chapter is structured as follows. Section \ref{loris:arch} highlights the changes we had to make from K-HAS and explains the hardware used at each tier. Section \ref{loris:dep} explains how we planned and deployed the network and Section \ref{loris:res} details the results from the deployment in Malaysia.
 	
+	\section{Development}\label{loris:arch}
+		The aim of LORIS was to keep as much of the architecture of K-HAS as possible and reuse the ontology without the need for modification; serving as a form of validation. In order to do this, we identified the tiers of the network that were feasible and the areas that needed to be addressed. Regular power and cheap computers with good knowledge-processing capabilities meant that DA nodes were simple to deploy and, with the growth of powerful microcomputers like the Raspberry Pi, DP nodes were also in abundance. However, finding a reliable camera that could integrate with a node capable of processing observations that was also reliable enough to withstand the humid rainforest proved to be difficult.
+		
+		\subsection{Hardware}
+			\subsubsection{Data Collection}
+				Experiments were run yearly in Malaysia to test the performance of variations of hardware. As covered in Section \label{tech:wifirange}, the first year involved testing the range of Wi-Fi with an IGEP board. The limited range of 30m meant that, despite the high transfer rate, it was not possible. Wi-Fi was not designed for use in resource-constrained sensors, so the power consumption of the radio meant that it limited the lifetime of the node.
+				
+				The following year, we used the Digimesh protocol, explained in Section \label{tech:digimesh}, which provided a longer range and was developed for use in sensor networks.  While the range was suitable for the rainforest, it was not as much as we had anticipated and finding a method to mount an SD card on both the existing wildlife cameras and the Waspmote nodes. 
+				
+				From these experiments, we began to look into commercial alternatives that combined both the node and the camera. The most usable solution we found was the Raspberry Pi coupled with a camera attachment \cite{REFERENCE}, but it was not ready for use in the Malaysian rainforest or to be used for an extended unsupervised period. Existing wildlife manufacturers were then looked into and we found that wireless cameras had been manufactured, but they had no local processing capabilities and had not been used much in research. Based on these findings, we used Buckeye X7R cameras. Using the same Digimesh protocol as the Waspmote, they had a tested range of 1 mile and had been developed to withstand harsh environments.
+				
+				We expected to achieve around 800m of range and these proved to be suitable DC node replacements, despite the fact that we had to forgo local processing or the storage of any local knowledge.
+			\subsubsection{Data Processing and Aggregation}
+				Due to the lack of processing available on the DC nodes, and limited power availability, we combined the DP and DA nodes into one machine stored at DGFC, that contained both a Digimesh radio and an Internet connection. The benefit of using commercial grade hardware was the software that accompanied it; remote management and configuration software allowed users to modify the settings on each camera, as well as handling the retrieval of images from every node deployed. EXIF tags written to images could be modified, as well as how many images were captured for each observation. The software had been created to be used by those without any specialist knowledge and was easily used by researchers in the field centre.
+				
+				Each observation was saved into a directory that matched the ID of the camera it originated from and this meant that the existing software used in K-HAS could be used without modification.
+	
+		\section{Software}
+			\subsubsection{Data Collection}
+			\subsubsection{Data Processing}
+			\subsubsection{Data Aggregation}	
+	
+	\section{Deployment}\label{loris:dep}
+	\section{Results}\label{loris:res}
+	\section{Conclusion}\label{loris:conc}
