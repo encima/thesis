@@ -35,11 +35,10 @@
 				
 				\begin{figure}[!t]
 				\centering
-				\includegraphics[width=0.55\textwidth]{Chap6/figures/LORIS}
+				\includegraphics[width=0.70\textwidth]{Chap6/figures/LORIS}
 				\caption{LORIS Web Interface}
 				\label{fig:loris}
 				\end{figure}
-				
 				
 	\section{Deployment}\label{loris:dep}
 		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was no possible to use the cables without first securing them; because animals tampering with cameras was a common occurrence.
@@ -48,7 +47,7 @@
 	
 	    \begin{figure}[!t]
 	    \centering
-		\includegraphics[width=0.55\textwidth]{Chap6/figures/buckeye}
+		\includegraphics[width=0.70\textwidth]{Chap6/figures/buckeye}
 	    \caption{Camera Locations Around Danau Girang}
 	    \label{cam_locs}
 	    \end{figure}
@@ -71,5 +70,25 @@
 	
 	The pictures of humans from the first six days are not of use for the current motivating scenario, focussed on animals in the rainforest corridor, but one could see this network also being tasked to warn the authorities of hunters in restricted areas of the rainforest. However, the images we have of animals, while few are animals of interest due to the proximity of the cameras to humans, were processed and used to create templates for future observations. 
 	
-	More interestingly, we were able to infer further rules from the short deployment that helped us to narrow down the choice of animals to match to based on the time of day and location. For example, Figure \ref{buckeye_img} shows a lizard crossing the path of Camera 3 in the middle of the day and Figure \ref{buckeye_img_2} shows the lizard walking past in early afternoon. This allows us to encode a window in which the lizard is more likely to appear onto the static knowledge base of DC nodes or, in the case of LORIS, onto the DA and DP nodes.
+	    \begin{figure}[h]
+	    \centering
+		\includegraphics[width=0.65\textwidth]{Chap6/figures/buckeye_img}
+	    \caption{First Image of Lizard by Camera 3}
+	    \label{buckeye_img}
+	    \end{figure}
+	
+	More interestingly, we were able to infer further rules from the short deployment that helped us to narrow down the choice of animals to match to based on the time of day and location. For example, Figure \ref{buckeye_img} shows a lizard crossing the path of Camera 3 in the middle of the day and Figure \ref{buckeye_img_2} shows the lizard walking past in early afternoon on a different day. This allows us to encode a window of time  in which the lizard is more likely to appear onto the static knowledge base of DC nodes or, in the case of LORIS, onto the DA/DP node. Images an hour later were captured by the camera, showing the lizard walking in the opposite direction. While this was not every day, and the deployment time was too short to establish a pattern, it does help us to infer that a lizard passing by in early afternoon is likely to walk the same path approximately an hour later.
+	
+	    \begin{figure}[h]
+	    \centering
+		\includegraphics[width=0.65\textwidth]{Chap6/figures/buckeye_img_2}
+	    \caption{Second Image of Lizard by Camera 3}
+	    \label{buckeye_img_2}
+	    \end{figure}
+	
 	\section{Conclusion}\label{loris:conc}
+	 K-HAS was developed, with the motivating scenario in mind, as an ideal, general-purpose network architecture that is able to utilise the knowledge of its environment. However, experiments to support the design and deployment of such a network within the timeframe of this PhD showed that the current technology was not ready to support a network that would run without human intervention for extended periods. LORIS is our more specialised, cut down approach that can be implemented using hardware that is readily available, as well as software that we have open-sourced. 
+	
+	Our deployment in Malaysia has shown that local knowledge can assist with classifications and can be gained from even a few images collected within the first few days of deployment. Ideally, we would like to leave this network running for an extended period to infer rules from the sensed data and test the reliability of the network in harsh conditions. 
+	
+	LORIS has shown that local knowledge can be used to enrich sensed data, and automate classification, when it has been received at an endpoint, but we still maintain that K-HAS' aim of pushing local knowledge right out to the edge of the network will make the network more efficient and allow for a more timely delivery of important sensed data.  The main drawback of LORIS is that it relies on the chronological delivery mechanism used by the commercial cameras, whereas we believe that K-HAS can improve this mechanism by sending the data that it infers to be of a higher importance, rather than what was simply captured first.

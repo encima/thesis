@@ -116,7 +116,7 @@
 \contentsline {subsection}{\numberline {6.1.1}Data Collection}{90}
 \contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{90}
 \contentsline {section}{\numberline {6.2}Deployment}{92}
-\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{92}
+\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{93}
 \contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{93}
 \contentsline {section}{\numberline {6.3}Results}{94}
-\contentsline {section}{\numberline {6.4}Conclusion}{94}
+\contentsline {section}{\numberline {6.4}Conclusion}{95}

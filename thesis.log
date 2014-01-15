@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  15 JAN 2014 13:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  15 JAN 2014 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -259,21 +259,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
  [1
 
-] [2])
+] [2] [3])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [3] (./thesis.lof)
+ [4] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [4
+ [5
 
 ] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [5
+ [6
 
 ] [1]
 \openout2 = `Chap1/introduction.aux'.
@@ -303,7 +303,7 @@ LaTeX Warning: Citation `bluetooth2012bluetooth' on page 8 undefined on input l
 ine 30.
 
 [8] [9] [10] [11] [12] [13] [14] [15] [16]
-<Chap2/figures/facts_architecture.jpg, id=79, 451.6875pt x 181.67876pt>
+<Chap2/figures/facts_architecture.jpg, id=82, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
@@ -311,7 +311,7 @@ Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
 e 136.
 (pdftex.def)             Requested size: 312.00119pt x 125.49985pt.
  [17] [18]
-<Chap2/figures/gsn_arch.png, id=87, 371.3875pt x 453.695pt>
+<Chap2/figures/gsn_arch.png, id=90, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
@@ -384,14 +384,14 @@ LaTeX Warning: Reference `tech:conc' on page 30 undefined on input line 4.
 
 
 ] [31] [32] [33] [34]
-<Chap3/figures/bp_snr.png, id=140, 729.4452pt x 445.665pt>
+<Chap3/figures/bp_snr.png, id=143, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 67.
 (pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
  [35 <./Chap3/figures/bp_snr.png>]
-<Chap3/figures/dg_snr.png, id=146, 728.4816pt x 445.1832pt>
+<Chap3/figures/dg_snr.png, id=150, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
@@ -410,7 +410,7 @@ LaTeX Warning: Citation `Waspmote' on page 37 undefined on input line 96.
 LaTeX Warning: Reference `sec:wifirange' on page 37 undefined on input line 98.
 
 
-[37] <Chap3/figures/pelican.jpg, id=155, 1284.8pt x 963.6pt>
+[37] <Chap3/figures/pelican.jpg, id=158, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
@@ -502,7 +502,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
  []
 
 (./Chap4/listings/dwc_arch/meta.xml [48]) [49] [50] [51]
-<Chap4/figures/leopard2.JPG, id=201, 1927.2pt x 1084.05pt>
+<Chap4/figures/leopard2.JPG, id=204, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
@@ -512,7 +512,7 @@ Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 116.
 
 LaTeX Warning: Reference `clproc' on page 53 undefined on input line 136.
 
-<Chap4/figures/leopard_proc.png, id=205, 906.38625pt x 465.74pt>
+<Chap4/figures/leopard_proc.png, id=208, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
@@ -568,7 +568,7 @@ LaTeX Warning: Citation `McGuinness2004' on page 62 undefined on input line 31.
 
 LaTeX Warning: Citation `Madin2007' on page 62 undefined on input line 33.
 
-[62] <Chap5/figures/OBOEcore.JPG, id=239, 368.87813pt x 137.01187pt>
+[62] <Chap5/figures/OBOEcore.JPG, id=242, 368.87813pt x 137.01187pt>
 File: Chap5/figures/OBOEcore.JPG Graphic file (type jpg)
 
 <use Chap5/figures/OBOEcore.JPG>
@@ -588,7 +588,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
 [][][][][][][] 
  []
 
-[64] <Chap5/figures/o&m_ontology.png, id=246, 643.40375pt x 285.065pt>
+[64] <Chap5/figures/o&m_ontology.png, id=249, 643.40375pt x 285.065pt>
 File: Chap5/figures/o&m_ontology.png Graphic file (type png)
 
 <use Chap5/figures/o&m_ontology.png>
@@ -619,7 +619,7 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 100--103
 $[]$ 
  []
 
-<Chap5/figures/dwca.png, id=258, 661.47125pt x 419.5675pt>
+<Chap5/figures/dwca.png, id=261, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
@@ -647,7 +647,7 @@ $[]$
 
 LaTeX Warning: Citation `dwc_sw' on page 70 undefined on input line 117.
 
-<Chap5/figures/dsw.jpg, id=265, 1734.48pt x 782.925pt>
+<Chap5/figures/dsw.jpg, id=268, 1734.48pt x 782.925pt>
 File: Chap5/figures/dsw.jpg Graphic file (type jpg)
 
 <use Chap5/figures/dsw.jpg>
@@ -669,7 +669,7 @@ LaTeX Warning: Citation `Robin2006' on page 72 undefined on input line 147.
 LaTeX Warning: Citation `lefort2011semantic' on page 72 undefined on input line
  208.
 
-<Chap5/figures/ssnont.jpg, id=272, 681.747pt x 404.712pt>
+<Chap5/figures/ssnont.jpg, id=276, 681.747pt x 404.712pt>
 File: Chap5/figures/ssnont.jpg Graphic file (type jpg)
 
 <use Chap5/figures/ssnont.jpg>
@@ -775,7 +775,7 @@ Underfull \hbox (badness 7869) in paragraph at lines 335--336
 []\OT1/cmr/m/n/12 Person in-volved with a
  []
 
-<Chap5/figures/khas_base.JPG, id=292, 2281.52374pt x 949.5475pt>
+<Chap5/figures/khas_base.JPG, id=296, 2281.52374pt x 949.5475pt>
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
@@ -795,7 +795,7 @@ LaTeX Warning: Citation `dwc_oboe' on page 80 undefined on input line 362.
 LaTeX Warning: Citation `brickley2010foaf' on page 81 undefined on input line 3
 64.
 
-<Chap5/figures/khas_ontology.JPG, id=303, 3852.3925pt x 1011.78pt>
+<Chap5/figures/khas_ontology.JPG, id=306, 3852.3925pt x 1011.78pt>
 File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_ontology.JPG>
@@ -948,43 +948,56 @@ LaTeX Warning: Citation `REFERENCE' on page 90 undefined on input line 24.
 
 LaTeX Warning: Citation `buckeye' on page 90 undefined on input line 24.
 
-[90] <Chap6/figures/LORIS.png, id=336, 1425.325pt x 764.8575pt>
+[90] <Chap6/figures/LORIS.png, id=339, 1425.325pt x 764.8575pt>
 File: Chap6/figures/LORIS.png Graphic file (type png)
 
 <use Chap6/figures/LORIS.png>
 Package pdftex.def Info: Chap6/figures/LORIS.png used on input line 38.
-(pdftex.def)             Requested size: 214.50119pt x 115.09714pt.
+(pdftex.def)             Requested size: 272.99881pt x 146.4915pt.
  [91 <./Chap6/figures/LORIS.png>]
-
-LaTeX Warning: Reference `fig:buckeye' on page 92 undefined on input line 47.
-
-<Chap6/figures/buckeye.jpg, id=340, 1441.385pt x 833.1125pt>
+<Chap6/figures/buckeye.jpg, id=343, 1441.385pt x 833.1125pt>
 File: Chap6/figures/buckeye.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye.jpg>
-Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 51.
-(pdftex.def)             Requested size: 214.50119pt x 123.96992pt.
+Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 50.
+(pdftex.def)             Requested size: 272.99881pt x 157.78453pt.
  [92 <./Chap6/figures/buckeye.jpg>]
+Overfull \hbox (1.62372pt too wide) in paragraph at lines 67--68
+\OT1/cmr/m/n/12 Cam-era 3, de-spite be-ing routed through it, with an av-er-age
+ speeds of 1.8KB/s. 
+ []
 
-LaTeX Warning: Reference `cam_locs' on page 93 undefined on input line 66.
+[93] <Chap6/figures/buckeye_img.jpg, id=351, 770.88pt x 578.16pt>
+File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
 
-) [93] [94]
+<use Chap6/figures/buckeye_img.jpg>
+Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
+(pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
+ [94 <./Chap6/figures/buckeye_img.jpg>]
+<Chap6/figures/buckeye_img_2.jpg, id=355, 770.88pt x 578.16pt>
+File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
+
+<use Chap6/figures/buckeye_img_2.jpg>
+Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
+
+(pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
+ [95 <./Chap6/figures/buckeye_img_2.jpg>]) [96]
 \openout2 = `Chap4/experiments.aux'.
 
 
 No file Chap4/experiments.tex.
-(./thesis.bbl [95
+(./thesis.bbl [97
 
 
 
 
-] [96]
+] [98]
 Underfull \hbox (badness 4765) in paragraph at lines 117--123
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
-[97]
+[99]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -1040,17 +1053,17 @@ Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
- [98] [99] [100]
+ [100] [101] [102]
 Underfull \hbox (badness 1067) in paragraph at lines 367--371
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
-[101]
+[103]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [102] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+) [104] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
 (./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
 (./Chap6/implementation.aux) (./Chap4/experiments.aux))
 
@@ -1061,10 +1074,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5036 strings out of 493315
- 76312 string characters out of 6137905
- 353968 words of memory out of 5000000
- 8340 multiletter control sequences out of 15000+600000
+ 5047 strings out of 493315
+ 76637 string characters out of 6137905
+ 354001 words of memory out of 5000000
+ 8349 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,54p,1118b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1075,10 +1088,10 @@ usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (109 pages, 2646007 bytes).
+Output written on thesis.pdf (112 pages, 2975697 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
+ 416 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
