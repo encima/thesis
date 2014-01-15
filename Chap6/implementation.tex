@@ -1,5 +1,7 @@
 \chapter{LORIS}
-	In this chapter, we introduce the deployment of K-HAS in the Malaysian rainforest and highlight the issues we experienced deploying the architecture in a humid, dense rainforest. Experiments, carried out in the rainforest, had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected.
+	In this chapter, we detail the design and deployment of K-HAS in the Malaysian rainforest. We also highlight the issues we experienced deploying the architecture in a humid, dense rainforest for use by those without domain knowledge of WSNs.
+	
+	Experiments, carried out in the rainforest, had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected.
 	
 	Yearly visits were made to the Danau Girang Field Centre (DGFC) to test different nodes, gather knowledge and trial iterations of K-HAS. The first visit showed us just how much the rainforest affected communications, but also allowed us to gather knowledge from researchers and cameras that had previously been deployed. Subsequent visits were then used to test our own nodes and software, based on the knowledge we had gained from the first visit. We developed K-HAS with a view to deploying it in Malaysia, however, it soon became clear that our design was  beyond what was currently available, as well as the time constraints.
 	
@@ -7,32 +9,67 @@
 	
 	However, we still needed to implement a network to prove our hypothesis and we developed a modification to the K-HAS that utilised the latest commercially available hardware to provide an architecture that provides similar capabilities. Because these changes were made due to issues with deployment in Danau Girang, we chose to name it after a famous animal in Malaysia: LORIS. This stands for Local-knowledge Ontology-based Remote-sensing Informatics System.
 	
-	LORIS has been developed specifically for the Malaysian rainforest, our motivating scenario, and, as such, much of the hardware and software has been implemented to reflect this. However, the same approach could be used for other WSNs focussing on scientific observations with minor changes required.
+	LORIS has been developed specifically for the Malaysian rainforest, our motivating scenario, and, as such, much of the hardware and software has been implemented to reflect this. However, the same approach could be used for other WSNs focussing on scientific observations with minor changes required. Using the same ontology and underlying software as K-HAS.
 	
 	The rest of this chapter is structured as follows. Section \ref{loris:arch} highlights the changes we had to make from K-HAS and explains the hardware used at each tier. Section \ref{loris:dep} explains how we planned and deployed the network and Section \ref{loris:res} details the results from the deployment in Malaysia.
 	
-	\section{Development}\label{loris:arch}
+	\section{Architecture}\label{loris:arch}
 		The aim of LORIS was to keep as much of the architecture of K-HAS as possible and reuse the ontology without the need for modification; serving as a form of validation. In order to do this, we identified the tiers of the network that were feasible and the areas that needed to be addressed. Regular power and cheap computers with good knowledge-processing capabilities meant that DA nodes were simple to deploy and, with the growth of powerful microcomputers like the Raspberry Pi, DP nodes were also in abundance. However, finding a reliable camera that could integrate with a node capable of processing observations that was also reliable enough to withstand the humid rainforest proved to be difficult.
 		
-		\subsection{Hardware}
-			\subsubsection{Data Collection}
+		\subsection{Data Collection}
 				Experiments were run yearly in Malaysia to test the performance of variations of hardware. As covered in Section \label{tech:wifirange}, the first year involved testing the range of Wi-Fi with an IGEP board. The limited range of 30m meant that, despite the high transfer rate, it was not possible. Wi-Fi was not designed for use in resource-constrained sensors, so the power consumption of the radio meant that it limited the lifetime of the node.
 				
 				The following year, we used the Digimesh protocol, explained in Section \label{tech:digimesh}, which provided a longer range and was developed for use in sensor networks.  While the range was suitable for the rainforest, it was not as much as we had anticipated and finding a method to mount an SD card on both the existing wildlife cameras and the Waspmote nodes. 
 				
-				From these experiments, we began to look into commercial alternatives that combined both the node and the camera. The most usable solution we found was the Raspberry Pi coupled with a camera attachment \cite{REFERENCE}, but it was not ready for use in the Malaysian rainforest or to be used for an extended unsupervised period. Existing wildlife manufacturers were then looked into and we found that wireless cameras had been manufactured, but they had no local processing capabilities and had not been used much in research. Based on these findings, we used Buckeye X7R cameras. Using the same Digimesh protocol as the Waspmote, they had a tested range of 1 mile and had been developed to withstand harsh environments.
+				From these experiments, we began to look into commercial alternatives that combined both the node and the camera. The most usable solution we found was the Raspberry Pi coupled with a camera attachment \cite{REFERENCE}, but it was not ready for use in the Malaysian rainforest or to be used for an extended unsupervised period. Existing wildlife manufacturers were then looked into and we found that wireless cameras had been manufactured, but they had no local processing capabilities and had not been used much in research. Based on these findings, we used Buckeye X7R cameras \cite{buckeye}. Using the same Digimesh protocol as the Waspmote, they had a tested range of 1 mile and had been developed to withstand harsh environments.
 				
 				We expected to achieve around 800m of range and these proved to be suitable DC node replacements, despite the fact that we had to forgo local processing or the storage of any local knowledge.
-			\subsubsection{Data Processing and Aggregation}
+		\subsection{Data Processing and Aggregation}
 				Due to the lack of processing available on the DC nodes, and limited power availability, we combined the DP and DA nodes into one machine stored at DGFC, that contained both a Digimesh radio and an Internet connection. The benefit of using commercial grade hardware was the software that accompanied it; remote management and configuration software allowed users to modify the settings on each camera, as well as handling the retrieval of images from every node deployed. EXIF tags written to images could be modified, as well as how many images were captured for each observation. The software had been created to be used by those without any specialist knowledge and was easily used by researchers in the field centre.
 				
-				Each observation was saved into a directory that matched the ID of the camera it originated from and this meant that the existing software used in K-HAS could be used without modification.
-	
-		\section{Software}
-			\subsubsection{Data Collection}
-			\subsubsection{Data Processing}
-			\subsubsection{Data Aggregation}	
-	
+				Each observation was saved into a directory that matched the ID of the camera it originated from and this meant that the existing software used in K-HAS could be used without modification. Sensor middleware, such as GSN, is running on the same machine and virtual sensors listen for changes in each directory; where each virtual sensor represents a deployed camera.
+				
+				When new observations are detected, Drools runs on the images to start metadata and EXiF processing. Some rules had already been extracted from the processing of 120,000 images collected from our yearly visits to DGFC; other rules had to be added by users of the WSN. When an observation had been processed, rules were run once again to determine if a match could be made to existing projects and, if so, who should be notified.
+				
+				The web interface for classifying and viewing all observations was accessible by those within DGFC, as well as uploading rule files and new locations. Using this interface proved to be easier for those without a WSN background and the GSN interface had a steeper learning curve.	Figure \ref{fig:loris} shows the basic metadata of an observation, outlining where it was captured and when; as well as the images themselves.
+				
+				\begin{figure}[!t]
+				\centering
+				\includegraphics[width=0.55\textwidth]{Chap6/figures/LORIS}
+				\caption{LORIS Web Interface}
+				\label{fig:loris}
+				\end{figure}
+				
+				
 	\section{Deployment}\label{loris:dep}
+		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was no possible to use the cables without first securing them; because animals tampering with cameras was a common occurrence.
+		
+		For the initial week of the deployment, we wanted to test the robustness of the network before focussing on the data. This meant placing the cameras in locations where they would be triggered often and in an area where they would be affected by rainfall and humidity. Figure \ref{cam_locs} shows the locations of the cameras during both of the weeks that it was deployed. Buckeye 1 was deployed for the first week along the main path leading to the field centre from the river, this experienced the most traffic due to the number of researchers present at the time. 
+	
+	    \begin{figure}[!t]
+	    \centering
+		\includegraphics[width=0.55\textwidth]{Chap6/figures/buckeye}
+	    \caption{Camera Locations Around Danau Girang}
+	    \label{cam_locs}
+	    \end{figure}
+	
+	\subsection{Direct Connection}
+	For six days, we tested two Buckeye cameras that were near enough to the field centre to maintain an active connection to the base station. This meant that no hopping was involved and cameras were not reliant on each other to transmit images. Camera 1 was placed on a main path that guaranteed human foot traffic and Camera 3 was placed on a trail in the forest that, while experiencing minimal foot traffic, was expected to yield small mammals and birds.
+	
+	For the duration of the six days, the cameras did not report a drop in battery levels and a total of 1076 images were sent. Camera 1 was in a more open environment, despite being further away, and average speeds of 4KB/s were achieved. 
+	
+	Transmissions from Camera 3 were significantly hampered by the dense forest that it was surrounded by, as well as the fact that a low-gain antenna was used. We also speculate that the field centre itself acted as a barrier to the signal, as the base station was located on the opposite end. Because of this, we experienced an average speed of 1.2KB/s, taking around three minutes to receive an image. This is consistent with experiments conducted in previous years where dense, humid forest has led to a decreased range of, up to, 78\%. Lower frequencies do experience a longer range, but the data rate is significantly impacted.
+	
+	\subsection{1-Hop Network}
+	For a further five days, Camera 1 was moved deeper into the forest and Camera 3 was set up as a routing camera that forwarded images onto the base station, 63 images were taken during this period.
+	
+	The location of the moved camera is also shown in Figure \ref{cam_locs}. As was expected, the traffic of the network reduced significantly when the cameras were moved from the main path, with almost all 63 pictures being of animals. Due to animals moving a lot faster than humans, the number of pictures taken per trigger was increased to two, this would ensure network traffic was not overwhelming while increasing the chance of capturing the subject.
+	
+	Surprisingly, the speed of transmission from Camera 1 was faster than Camera 3, despite being routed through it, with an average speeds of 1.8KB/s.				
 	\section{Results}\label{loris:res}
+	Deploying a network for two weeks is not a robust experiment and does not show that LORIS can withstand months of running without human intervention. However, it does serve as a proof of concept that, using commercial hardware, a modified K-HAS network can be implemented and utilise the knowledge of its environment.
+	
+	The pictures of humans from the first six days are not of use for the current motivating scenario, focussed on animals in the rainforest corridor, but one could see this network also being tasked to warn the authorities of hunters in restricted areas of the rainforest. However, the images we have of animals, while few are animals of interest due to the proximity of the cameras to humans, were processed and used to create templates for future observations. 
+	
+	More interestingly, we were able to infer further rules from the short deployment that helped us to narrow down the choice of animals to match to based on the time of day and location. For example, Figure \ref{buckeye_img} shows a lizard crossing the path of Camera 3 in the middle of the day and Figure \ref{buckeye_img_2} shows the lizard walking past in early afternoon. This allows us to encode a window in which the lizard is more likely to appear onto the static knowledge base of DC nodes or, in the case of LORIS, onto the DA and DP nodes.
 	\section{Conclusion}\label{loris:conc}

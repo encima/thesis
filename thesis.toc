@@ -113,13 +113,10 @@
 \contentsline {section}{\numberline {5.5}Conclusion}{84}
 \contentsline {chapter}{\numberline {6}LORIS}{88}
 \contentsline {section}{\numberline {6.1}Architecture}{89}
-\contentsline {subsection}{\numberline {6.1.1}Hardware}{90}
-\contentsline {subsubsection}{Data Collection}{90}
-\contentsline {subsubsection}{Data Processing and Aggregation}{90}
-\contentsline {section}{\numberline {6.2}Software}{91}
-\contentsline {subsubsection}{Data Collection}{91}
-\contentsline {subsubsection}{Data Processing}{91}
-\contentsline {subsubsection}{Data Aggregation}{91}
-\contentsline {section}{\numberline {6.3}Deployment}{91}
-\contentsline {section}{\numberline {6.4}Results}{91}
-\contentsline {section}{\numberline {6.5}Conclusion}{91}
+\contentsline {subsection}{\numberline {6.1.1}Data Collection}{90}
+\contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{90}
+\contentsline {section}{\numberline {6.2}Deployment}{92}
+\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{92}
+\contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{93}
+\contentsline {section}{\numberline {6.3}Results}{94}
+\contentsline {section}{\numberline {6.4}Conclusion}{94}
