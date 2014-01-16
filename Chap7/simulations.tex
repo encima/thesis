@@ -1,1 +1,17 @@
 \chapter{Simulations}
+In this chapter, we detail simulations that we developed to test our hypothesis with a complete implementation of K-HAS. LORIS was implemented because current technology does not fully support the requirements of the K-HAS architecture, because of this we implemented a simulation of K-HAS that satisfies all of its requirements.
+
+Using RePast, a java-based network simulation tool, we created a network to emulate K-HAS. Repast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. Similar to the chaining of rules we described with Drools, ticks are the core of Repast's scheduling mechanism which can be used to schedule single events, as well as chaining events. Consider a train simulation. A train may take three hundred ticks to arrive at its destination, from the train arrival a scheduled event to open doors and make announcements which could schedule other events and so on.
+
+Agents are created, using the RePast SDK and Java classes are used to manipulate their behaviour. Simple networks may only contain basic agents with only a few variations from those provided by RePast. However, for more complex networks, a hierarchy of agents is required and Java's inheritance can then be used create subclasses of an agent.
+
+A 2D (or 3D) space is used to display the grid and the simulation is run within Repast's own GUI, that provides functionality such as editing the properties of classes, integrating with Matlab, taking screenshots and saving different configurations of the same network.
+
+The rest of this chapter is structured as follows. Section 2 describes the implementation of the network. Section 3 outlines the results and Section 4 compares these with LORIS and the current solution in our motivating scenario. Section 5 concludes our findings and highlights areas that require further experimentation.
+
+\section{K-HAS Implementation}
+As described in Chapter \ref{chap:arch}, K-HAS consists of three tiers: Data Collection, Data Processing and Data Aggregation. The DC tier focusses on capturing sensed data, performing basic processing and routing sensed data to the DP tier. The DP tier has more knowledge-processing capabilities and nodes are responsible for processing sensed data. Using a rule engine and a dynamic knowledge base, DP nodes process more than just the metadata of sensed data in order to create a classification. DP nodes have a direct connection to the DA node, which is the the endpoint in the K-HAS network, an Internet connected node that stores all sensed data from the network and acts as the central knowledge base.
+
+
+
+Before implementing, we designed the agents required based largely on the existing ontology. On top of this, we also needed to create an object to represent the DwC archives 
