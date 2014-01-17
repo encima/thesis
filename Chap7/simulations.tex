@@ -18,7 +18,11 @@ Before implementing, we designed the agents required based largely on the existi
 
 We also needed to create an object to represent the DwC archives, a Drools REST API had been implemented to work with the LORIS web interface, and much of the DwC archive code was reusable within RePast. 
 
-The structure of the simulation is shown below. Network builder instantiates all the nodes, places them on the grid and schedules necessary events. 
+The structure of the simulation is shown below. Network builder instantiates all the nodes, places them on randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection, depicted by a line between the node. The simulation can be run in one of two modes: random or based on a 2010 DG deployment. 
+
+DG mode means that it models a 6 month deployment in Danau Girang from 2010. All images taken in that time had the time they were taken, the original camera ID and the size of each image recorded into a CSV file. This file is read by the Network Builder and the contents are provided to each node. The first tick starts at the same time as the first image is taken. The number of deployed nodes matches the number of deployed cameras and, upon each tick, they check whether an image was taken by them at that tick. If so, an image is captured, archived and forwarded to the nearest DP node. This process runs, using the scheduler in RePast, for the six month deployment and the details of each archive (time captured, size, route taken, time taken to reach DA node) is saved into a CSV file when it reaches the DA node. Once the six month deployment has run, the simulation can either stop or continue randomly.
+
+The random mode uses metrics extracted from the images taken at Danau Girang, but the chance of an image being captured at a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. 
 
 \begin{itemize}
 \item Network Builder
@@ -41,8 +45,37 @@ The structure of the simulation is shown below. Network builder instantiates all
 \subsection{Darwin Core}
 The Darwin Core class represents a DwC archive, encapsulation Identification, Location, Occurrence, Image and Species. The images we have collected from Danau Girang were processed to find details such as the average size when taking at night and day, how often an average camera triggers and the percentage of images with animal content. These data were then used to specify how often a randomly placed node should capture an observation per tick.
 
-Upon each capture, and based on the 'time' of day, images are created, given a random size based on the maximum and minimum size found in the 120,000 images collected from DG and the sum of the images is used to calculate the size of the archive. Using this size, a DC node calculates how long the archive takes to send based on the size and the transmission rate, we assume that the rate stays constant for the duration of transmission.
+Upon each capture, and based on the `time' of day, images are created, given a random size based on the maximum and minimum size found in the 120,000 images collected from DG and the sum of the images is used to calculate the size of the archive. Using this size, a DC node calculates how long the archive takes to send based on the size and the transmission rate, we assume that the rate stays constant for the duration of transmission.
+When an archive is sent to the DP node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 143 seconds (ticks). To keep the classifications as general as possible, so that the simulation applies to any WSN for scientific observations, archives are not classified down to the species level, they are marked as \textit{interesting} or \textit{empty} and then forwarded to the DA node.
 
-When an archive is sent to the DP node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 143 seconds (ticks). 
 \subsection{Routing}
+The routing protocol used by K-HAS needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. The approach we use a modification the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{bg:rp}. A cost is assigned to each node, based on how far they are from the DA node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a base station.
+
+In K-HAS, DC nodes cannot connect directly to a DA node, because processing would not take place. K-HAS MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
+
+\subsubsection{Discovery}
+	Discovery begins at each DA node, scanning nodes in range for DP nodes and sending a broadcast packet with a cost of 0 to inform them that they are within range of a DA node which, in our implementation, uses Wi-Fi. Once received, DP nodes increment the count and forward the packet to any DC nodes within range of them, where we use the range of Digimesh. If the DC node that receives the broadcast does not have an existing route to a DA node, or the cost of the current route is higher than the received route, it adds an edge to the DP node, increments the count and forwards it to all nodes in range. This process continues until the broadcast reaches the edge of the network. Nodes do not have global knowledge of the route to the DA node, only of their neighbour with the lowest cost.
+	
+	This phase can be repeated throughout the course of the deployment, simply by scheduling it as an event to occur every n ticks. However, the simulation currently only uses the discovery phase at the beginning of the deployment.
+	
+\subsubsection{Transmission}
+	Once the discovery phase has been completed, providing nodes are within range of the DA node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
+	
+	In order to manage transmissions, DC nodes have a \tetxit{SendState} object that contains the next archive to send, the time to send it and whether it is currently sending. This is used to determine what operations to perform, once an archive has been sent, it is delete from the SendState and the sending flag is set to false. A new archive is then added and sent when the opportunity arises.
+	
+	When a DP node receives the archive, it begins processing and we have implemented both sending and processing as serial processes. DP nodes use the SendState as well, but they do not add any archive, they add an archive once it has been processed and they then select the oldest archive that has been classified as interesting, providing that an archive is not already waiting to be sent. The archive stores information about the route it takes, recording every hop, as well as the time it took from capture to DA node.
+	
+	Scheduled sending events run every thousand ticks, which is configurable, to check the sending state of the node and send any archives in the SendState. The node then waits for the number of ticks that it will take in order to transmit the archive.
+	
+	Once the DA node has received an archive, its details are written to a CSV, using an OutputRecorder class.
+
+\subsection{Results}
+
+\subsection{Improvements}
+-Provide a more dynamic processing time
+-Add battery life
+-Parallel processing and sending
+-Different data types
+-More realistic transmission.
+-Base chance of triggering on the camera location - DG.
 
