@@ -4,6 +4,16 @@
 	We believe that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise data delivery that it believes to be important, rather than chronologically. We also believe that human input is a valuable learning process for such a network and feedback, from humans, on data that has been classified can be used to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
 
 	The rest of this chapter is structured as follows. Section 1 outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section 2 introduces an example, from our motivating scenario, that will be used to better explain each tier of the architecture. Section 3 explains the data collection tier. Section 4 explains the data processing tier. Section 5 explains the data aggregation tier. Section 6 concludes the chapter and summarises the key features of K-HAS.
+	
+	%These may be better in the LORIS chapter if they are too implementation heavy?
+	\section{Middleware}
+	%Discuss why we chose GSN here
+	
+	\section{Knowledge Capture}	
+	%Explain web interface here
+	
+	\section{Knowledge Base}
+	%Discuss drools here and the API developed for access to it from Sitesy.
 
 	\section{K-HAS}
 		K-HAS has been designed as an architecture for WSNs that is able to handle changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier.
@@ -194,7 +204,7 @@ classification.animalBehaviour = nocturnal
 		
 		One of the key features of K-HAS is that it is not a static deployment. The knowledge that the network holds at the time of deployment will rarely be the same as the knowledge held after a few months. Humans enrich the existing knowledge base and the nodes are able to make inferences about the data they are sensing, improving their classifications the longer they are deployed.
 		
-		We believe that K-HAS is an architecture that can be suited to many different applications of WSNs and its general design allows it to be adapted to new scenarios with ease.
+		We believe that K-HAS is an architecture that suited to many different applications of WSNs and its general design allows it to be adapted to new scenarios with ease.
 		
 			
 			

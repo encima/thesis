@@ -12,6 +12,33 @@ The rest of this chapter is structured as follows. Section 2 describes the imple
 \section{K-HAS Implementation}
 As described in Chapter \ref{chap:arch}, K-HAS consists of three tiers: Data Collection, Data Processing and Data Aggregation. The DC tier focusses on capturing sensed data, performing basic processing and routing sensed data to the DP tier. The DP tier has more knowledge-processing capabilities and nodes are responsible for processing sensed data. Using a rule engine and a dynamic knowledge base, DP nodes process more than just the metadata of sensed data in order to create a classification. DP nodes have a direct connection to the DA node, which is the the endpoint in the K-HAS network, an Internet connected node that stores all sensed data from the network and acts as the central knowledge base.
 
+K-HAS was originally intended to be deployed around Danau Girang and, over the course of three years, we have collected several thousand images and local knowledge interviews in order to configure K-HAS before deployment. Because of this, the data we have collected was used to create a deployment of K-HAS using scientific observations, in order to fit with our motivating scenario. LORIS had already been deployed to capture scientific observations, so this made a comparison of the three (current manual solution, LORIS and K-HAS simulation) possible and because we already had metrics on areas of the network such as battery life, transmission time of a Darwin Core archive and processing time.
 
+Before implementing, we designed the agents required based largely on the existing ontology. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS, we used these to create properties for each transmission medium that could be used by each node object.
 
-Before implementing, we designed the agents required based largely on the existing ontology. On top of this, we also needed to create an object to represent the DwC archives 
+We also needed to create an object to represent the DwC archives, a Drools REST API had been implemented to work with the LORIS web interface, and much of the DwC archive code was reusable within RePast. 
+
+The structure of the simulation is shown below. Network builder instantiates all the nodes, places them on the grid and schedules necessary events. 
+
+\begin{itemize}
+\item Network Builder
+\item Node
+	\begin{itemize}
+	\item Data Collection
+	\item Data Processing
+	\item Data Aggregation
+	\end{itemize}
+\item Darwin Core
+	\begin{itemize}
+	\item Identification
+	\item Location
+	\item Occurrence
+	\item Image
+	\item Species
+	\end{itemize}	 
+\end{itemize}
+
+\subsection{Darwin Core}
+The Darwin Core class represents a DwC archive, encapsulation Identification, Location, Occurrence, Image and Species. The images we have collected from Danau Girang were processed to find details such as the average size when taking at night and day, how often an average camera triggers and the percentage of images with animal content.
+\subsection{Routing}
+
