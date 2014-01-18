@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  17 JAN 2014 14:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  17 JAN 2014 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -151,7 +151,7 @@ LaTeX Warning: Label `tech:wifirange' multiply defined.
 
 LaTeX Warning: Label `tech:digimesh' multiply defined.
 
-) (./Chap4/experiments.aux))
+) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -990,29 +990,37 @@ Chapter 7.
 
 
 
-]
+] [99] [100] [101] [102]
+Overfull \hbox (0.99892pt too wide) in paragraph at lines 62--63
+\OT1/cmr/m/n/12 range of the DA node, the trans-mis-sion phase be-gins where on
+ly DwC archives
+ []
 
-LaTeX Warning: Reference `chap:arch' on page 99 undefined on input line 13.
+! Undefined control sequence.
+l.64 ...age transmissions, DC nodes have a \tetxit
+                                                  {SendState} object that co...
 
-[99] [100] [101]) [102]
+? q
+OK, entering \batchmode...
+ [103]) [104]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
-) [103
+) [105
 
 
 
-] (./thesis.bbl [104
+] (./thesis.bbl [106
 
 
-] [105]
+] [107]
 Underfull \hbox (badness 4765) in paragraph at lines 117--123
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
-[106]
+ [108]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -1068,20 +1076,19 @@ Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
- [107] [108] [109]
+ [109] [110] [111]
 Underfull \hbox (badness 1067) in paragraph at lines 367--371
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
-[110]
+ [112]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-) [111] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
-(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
-(./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
-)
+) [113] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux) (./Ch
+ap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implem
+entation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1090,10 +1097,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5059 strings out of 493315
- 76823 string characters out of 6137905
- 354292 words of memory out of 5000000
- 8351 multiletter control sequences out of 15000+600000
+ 5061 strings out of 493315
+ 76873 string characters out of 6137905
+ 354607 words of memory out of 5000000
+ 8352 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,54p,1118b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1104,10 +1111,10 @@ usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (119 pages, 2985250 bytes).
+Output written on thesis.pdf (121 pages, 2988353 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
+ 445 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

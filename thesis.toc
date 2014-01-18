@@ -128,6 +128,8 @@
 \contentsline {section}{\numberline {7.1}K-HAS Implementation}{99}
 \contentsline {subsection}{\numberline {7.1.1}Darwin Core}{101}
 \contentsline {subsection}{\numberline {7.1.2}Routing}{102}
-\contentsline {subsection}{\numberline {7.1.3}Results}{102}
-\contentsline {subsection}{\numberline {7.1.4}Improvements}{102}
-\contentsline {chapter}{\numberline {8}Conclusion}{103}
+\contentsline {subsubsection}{Discovery}{102}
+\contentsline {subsubsection}{Transmission}{103}
+\contentsline {subsection}{\numberline {7.1.3}Results}{104}
+\contentsline {subsection}{\numberline {7.1.4}Improvements}{104}
+\contentsline {chapter}{\numberline {8}Conclusion}{105}
