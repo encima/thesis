@@ -5,16 +5,6 @@
 
 	The rest of this chapter is structured as follows. Section 1 outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section 2 introduces an example, from our motivating scenario, that will be used to better explain each tier of the architecture. Section 3 explains the data collection tier. Section 4 explains the data processing tier. Section 5 explains the data aggregation tier. Section 6 concludes the chapter and summarises the key features of K-HAS.
 	
-	%These may be better in the LORIS chapter if they are too implementation heavy?
-	\section{Middleware}
-	%Discuss why we chose GSN here
-	
-	\section{Knowledge Capture}	
-	%Explain web interface here
-	
-	\section{Knowledge Base}
-	%Discuss drools here and the API developed for access to it from Sitesy.
-
 	\section{K-HAS}
 		K-HAS has been designed as an architecture for WSNs that is able to handle changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier.
 	
@@ -111,6 +101,13 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	\end{description}
 	
 	GSN is a Java-based open-source middleware. New generic sensors can be added through XML files, while more complex sensors can be added through custom Java classes. GSN is covered in more detail in Section \ref{sec:GSN}. Because GSN can run on any architecture that supports the Java Virtual Machine (JVM) then it meets our portability requirements and the web interface to provide administrative functionality makes it usable by those without any domain knowledge. Finally, the ability to add new sensors through XML means that it can be extended by almost any user of the network with very little guidance.
+		
+	\section{Knowledge Capture}	
+		GSN is packaged with a web interface that allows users to see all nodes deployed and view the latest sensed data received. While the web interface is limited in functionality, we extended the 
+	
+	\section{Knowledge Base}
+	%Discuss drools here and the API developed for access to it from Sitesy.
+
 	
 	\section{Walkthrough}
 		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.

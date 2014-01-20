@@ -54,7 +54,7 @@ The routing protocol used by K-HAS needs to be dynamic in order to adapt to node
 In K-HAS, DC nodes cannot connect directly to a DA node, because processing would not take place. K-HAS MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
 
 \subsubsection{Discovery}
-	Discovery begins at each DA node, scanning nodes in range for DP nodes and sending a broadcast packet with a cost of 0 to inform them that they are within range of a DA node which, in our implementation, uses Wi-Fi. Once received, DP nodes increment the count and forward the packet to any DC nodes within range of them, where we use the range of Digimesh. We found that this method overloaded the DP nodes and all DC nodes within range would connect to the first DP node they receive the broadcast from. We then implemented a method, called \textit{load balancing}, which uses the connected DC nodes to a DP node to calculate whether it should offload nodes to a neighbouring DP node.
+	Discovery begins at each DA node, scanning nodes in range for DP nodes and sending a broadcast packet with a cost of 0 to inform them that they are within range of a DA node which, in our implementation, uses Wi-Fi. Once received, DP nodes increment the count and forward the packet to any DC nodes within range of them, where we use the range of Digimesh. We found that this method overloaded the DP nodes and all DC nodes within range would connect to the first DP node they receive the broadcast from. We then implemented a method, called \textit{load balancing}, which uses the DC nodes connected to a DP node to calculate whether it should offload new nodes to a neighbouring DP node.
 	
 	The maximum connections a DP node can have is determined by the total number of DC nodes in the network divided by the total number of DP nodes, which is held in the knowledge base of the DA node. Once a DP node has the maximum number of connections allowed, it starts to offload to a neighbouring DP node that is also in range of the DC node requesting a connection. If there are no neighbouring nodes then it simply goes over the maximum number of connections allowed, to save DC nodes being left with nowhere to send their data.
 	
@@ -71,7 +71,7 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	
 	Scheduled sending events run every thousand ticks, which is configurable, to check the sending state of the node and send any archives in the SendState. The node then waits for the number of ticks that it will take in order to transmit the archive.
 	
-	Once the DA node has received an archive, its details are written to a CSV, using an OutputRecorder class.
+	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each DA node are iterated over and written to a CSV file, with details like the path it took, total transmission time and time of capture.
 
 \subsection{Results}
 
