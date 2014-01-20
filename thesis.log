@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  17 JAN 2014 17:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  20 JAN 2014 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,24 +428,25 @@ Chapter 4.
 
 ]
 
-LaTeX Warning: Reference `kb:dcrule' on page 42 undefined on input line 28.
+LaTeX Warning: Reference `kb:dcrule' on page 42 undefined on input line 18.
 
 
-Overfull \hbox (5.0223pt too wide) in paragraph at lines 27--29
+Overfull \hbox (5.0223pt too wide) in paragraph at lines 17--19
 \OT1/cmr/m/n/12 Reduced knowl-edge pro-cess-ing ca-pa-bil-i-ties and low mem-or
 y re-strict the knowl-
  []
 
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 20--20
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 20--20
+[][][][][][][] 
+ []
+
 [42]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 30--30
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 30--30
-[][][][][][][] 
- []
-
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no œ in font cmr12!
@@ -470,9 +471,9 @@ Missing character: There is no ˜ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-[43] [44] [45]
+ [43] [44] [45]
 
-LaTeX Warning: Citation `Wieczorek2012b' on page 46 undefined on input line 78.
+LaTeX Warning: Citation `Wieczorek2012b' on page 46 undefined on input line 68.
 
 
 [46] (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -481,65 +482,67 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 91--91
+Overfull \hbox (6.0pt too wide) in paragraph at lines 81--81
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 91--91
+Overfull \hbox (6.0pt too wide) in paragraph at lines 81--81
 [][][][][][][] 
  []
 
 (./Chap4/listings/dwc_arch/eml.xml [47])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 95--95
+Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 95--95
+Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
 [][][][][][][] 
  []
 
-(./Chap4/listings/dwc_arch/meta.xml [48]) [49] [50] [51]
-<Chap4/figures/leopard2.JPG, id=204, 1927.2pt x 1084.05pt>
+(./Chap4/listings/dwc_arch/meta.xml [48]) [49] [50]
+
+LaTeX Warning: Reference `chap:ont' on page 51 undefined on input line 108.
+
+[51] <Chap4/figures/leopard2.JPG, id=204, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
-Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 126.
+Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 125.
 (pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
- [52 <./Chap4/figures/leopard2.JPG>]
+ [52] [53 <./Chap4/figures/leopard2.JPG>]
 
-LaTeX Warning: Reference `clproc' on page 53 undefined on input line 146.
+LaTeX Warning: Reference `clproc' on page 54 undefined on input line 145.
 
-[53] <Chap4/figures/leopard_proc.png, id=213, 906.38625pt x 465.74pt>
+<Chap4/figures/leopard_proc.png, id=212, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
-Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 150.
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 149.
 
 (pdftex.def)             Requested size: 175.49881pt x 90.17578pt.
- [54 <./Chap4/figures/leopard_proc.png>]
-[55] [56]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 180--180
+ [54] [55 <./Chap4/figures/leopard_proc.png>] [56]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 179--179
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 180--180
+Overfull \hbox (6.0pt too wide) in paragraph at lines 179--179
 [][][][][][][] 
  []
 
 [57]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 194--194
+Overfull \hbox (6.0pt too wide) in paragraph at lines 193--193
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 194--194
+Overfull \hbox (6.0pt too wide) in paragraph at lines 193--193
 [][][][][][][] 
  []
 
-(./Chap4/listings/rules.drl [58]) [59] [60]) [61]
+(./Chap4/listings/rules.drl [58] [59]) [60]) [61]
 \openout2 = `Chap5/ont.aux'.
 
  (./Chap5/ont.tex
@@ -991,13 +994,13 @@ Chapter 7.
 
 
 ] [99] [100] [101] [102]
-Overfull \hbox (0.99892pt too wide) in paragraph at lines 62--63
+Overfull \hbox (0.99892pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/12 range of the DA node, the trans-mis-sion phase be-gins where on
 ly DwC archives
  []
 
 ! Undefined control sequence.
-l.64 ...age transmissions, DC nodes have a \tetxit
+l.68 ...age transmissions, DC nodes have a \tetxit
                                                   {SendState} object that co...
 
 ? q
@@ -1097,10 +1100,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5061 strings out of 493315
- 76873 string characters out of 6137905
- 354607 words of memory out of 5000000
- 8352 multiletter control sequences out of 15000+600000
+ 5062 strings out of 493315
+ 76883 string characters out of 6137905
+ 355316 words of memory out of 5000000
+ 8353 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,54p,1118b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1111,7 +1114,7 @@ usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (121 pages, 2988353 bytes).
+Output written on thesis.pdf (121 pages, 2991072 bytes).
 PDF statistics:
  445 PDF objects out of 1000 (max. 8388607)
  291 compressed objects within 3 object streams
