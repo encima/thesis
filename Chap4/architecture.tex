@@ -102,13 +102,49 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	
 	GSN is a Java-based open-source middleware. New generic sensors can be added through XML files, while more complex sensors can be added through custom Java classes. GSN is covered in more detail in Section \ref{sec:GSN}. Because GSN can run on any architecture that supports the Java Virtual Machine (JVM) then it meets our portability requirements and the web interface to provide administrative functionality makes it usable by those without any domain knowledge. Finally, the ability to add new sensors through XML means that it can be extended by almost any user of the network with very little guidance.
 		
-	\section{Knowledge Capture}	
+	\subsection{Knowledge Capture}\label{arch:kc}
 		GSN is packaged with a web interface that allows users to see all nodes deployed and view the latest sensed data received. The web interface is targeted towards users with domain expertise and has limited functionality focussed towards sensor administration. However, it does make GSN accessible by more than one computer, as well as a variety of different architectures. For example, the admin webpage could be accessed on the machine that runs GSN, or from a tablet computer connected to the same network. We used the same approach to develop a web-based tool that provides access to all sensed data, as well as a simple interface for performing tasks, such as uploading new rules or updating the location of nodes.
 		
-		All sensed data is read from a MySQL database and users can view the metadata from each observation, such as location, date, time and temperature, as well as the data itself. From this, users are able to classify the data based on their role. Covered in detail in Chapter \ref{chap:ont}, K-HAS uses roles to control active projects and classifications; there are administrators and researchers. Researchers are involved in projects and receive notifications when relevant data has been received. They have access to the web interface and can vote on classifications for sensed data. Administrators lead projects and can create/complete them, but they also have the ability to finalise classifications. K-HAS follows a knowledge hierarchy where administrators are at the top, with DC nodes are at the bottom. When an administrator makes a classification, all prior classifications are ignored and the respective knowledge bases are updated.
+		All sensed data is read from a MySQL database and users can view the metadata from each observation, such as location, date, time and temperature, as well as the data itself. From this, users are able to classify the data based on their role. Covered in detail in Chapter \ref{chap:ont}, K-HAS uses roles to control active projects and classifications; there are administrators and researchers. Researchers are involved in projects and receive notifications when relevant data has been received. They have access to the web interface and can vote on classifications for sensed data. Administrators lead projects and can create/complete them, but they also have the ability to finalise classifications. K-HAS follows a knowledge hierarchy where administrators are at the top, with DC nodes at the bottom. When an administrator makes a classification, all prior classifications are ignored and the relevant knowledge bases are updated.
+		
+		Figure \ref{kc:loris} shows an observation where users can vote on the contents. An administrator can then confirm that classification and prevent further votes from being cast. This type of moderation means that it does not have to be specialists voting on sensed data that cannot be classified by DP nodes.
+		
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.45\textwidth]{Chap4/figures/loris}
+		\caption{Web Interface for Observations}
+		\label{kc:loris}
+		\end{figure}
+		
+		Viewing data for new observations is useful for gaining classifications and alerting members of a project, but viewing older sensed data allows patterns to be identified in order to create new rules. Figure \ref{kc:loris_data} shows a map of all deployed nodes in the area surrounding the field centre in our motivating scenario. When users select a node, a table is populated with all of the classified observations that it has captured; this can then be used to extract patterns from the data and create rules. For example, the two observations of the Malay Civet are only seen late at night, if further observations also showed this, then we could create a rule defining the active hours of the Malay Civet and, potentially, list days that it is likely to pass. These rules can then be written and uploaded to the knowledge base, which we cover in the next section.
+		
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.45\textwidth]{Chap4/figures/loris_data}
+		\caption{Web Interface for Classified Sensed Data}
+		\label{kc:loris_data}
+		\end{figure}
+
+		
 	
-	\section{Knowledge Base}
+	\subsection{Knowledge Base}\label{arch:kb}
 	%Discuss drools here and the API developed for access to it from Sitesy.
+	The Drools rule engine is a Java-based engine that uses forward chaining inference for the processing of rules, which means that rules are used to make meaningful inferences about data. Unlike DC nodes, which have limited knowledge processing capabilities, Drools is able to chain rules together and a rule that may not have been triggered at the start of processing may be triggered later if another inference is made. For example, a rule that is specifically for small mammals may not be triggered until an inference has been made that the image may contain small mammals based on the time and location of the observation.
+	
+	Drools is able to dynamically update its knowledge base, adding rules and firing them on observations that have already been loaded, as well as newer ones. This allows DP nodes to adapt to new rules and local knowledge whilst they are deployed. The use of \textit{drl} files use a mixture of Drools and Java syntax to define rules, allowing them to modify, or create, Java objects. This is one of the main reasons we chose Drools, as it can work with GSN and DwC Java objects, as well as the ability to run on any architecture that supports Java.
+	
+	The functionality of Drools is extensive and it is a very powerful engine, however, it does require specialist knowledge to use and manipulate rules. Using the LORIS web interface, detailed in Section \ref{arch:kc}, we created a simplified interface that uses a custom REST API for Drools, allowing users to create sessions, add rules, load data and fire rules, returning the output to the interface. Users can view, and load, existing drl files, shown in Figure \ref{kc:loris_drl}. 
+	
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.45\textwidth]{Chap4/figures/rules}
+		\caption{Web Interface for Drools Operations}
+		\label{kc:rloris_drl}
+		\end{figure}
+	
+	Once a file has been selected, users can view the rules and use the controls on the webpage to perform common operations. The \textit{Load Darwin Core} button loads all DwC archives that are stored in the MySQL database into the current Drools session and the \textit{Fire} button runs all loaded rules on the loaded data. If any of the rules trigger, then the output is presented to the user in the same page, allowing them to act on the results. For example, the location of observations could provide a narrowed down list of potential classifications, allowing an administrator to remove votes that do not match the list.
+	
+	Currently, these implementations have been developed for our motivational scenario, but much of these tools are general enough to be repurposed in order to apply to a variety of different WSNs. The Drools API can be used for any kind of sensed data and the web interface would require minor changes to be extensible.
 
 	
 	\section{Walkthrough}
@@ -171,9 +207,9 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	\section{Rules}
 		This section explains the rules used in K-HAS in more detail, to highlight how classifications are made as well as how nodes in the network are monitored. Any examples made here relate to our motivating scenario. The rules on each node are a vital way of encoding local knowledge and a practical use to show how local knowledge, from users or previously sensed data, can be used classify newly sensed data.
 		
-		In K-HAS, we use the Drools rule engine, a Java based rule management system that uses forward chaining based inference. Forward chaining starts with some data, in our case a set of images, and uses inferences rules to extract more data. We use this method to make meaningful inferences from properties of the sensed data. For example, an image taken at 8pm could be put through Drools and an inference rule will tell the system to start by looking for nocturnal animals.
+		As highlighted in Section \ref{arch:kb}, K-HAS uses the Drools rule engine, a Java based rule management system that uses forward chaining based inference. Forward chaining starts with some data, in our case a set of images, and uses inference rules to extract more data. We use this method to make meaningful inferences from properties of the sensed data. For example, an image taken at 8pm could be run through Drools and an inference rule will tell the system to start by looking for nocturnal animals.
 		
-	\subsection{Data Collection}			
+		\subsection{Data Collection}			
 		As explained in Section \ref{khas:dc}, DC nodes are unable to run the Drools engine and instead utilise static rules that are encoded at the time of deployment. Instead of utilising forward chaining to draw a single conclusion, these rules are executed one by one and the outcome of one does not affect the outcome of another. An example of such rules could be a rule to determine the time of day that an image was captured (such as morning, afternoon, evening or night) or a rule to determine what animals it is more likely to be based on the temperature and location of the node, shown in Listing \ref{lst:dcrule}. No rule engine is used by the DC node and the rules are executed in the code before the observation is archived and sent on.
 		
 	\begin{lstlisting}[caption=Encoded Data Collection Rule, label=lst:dcrule, breaklines=true]

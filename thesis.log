@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  20 JAN 2014 16:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  21 JAN 2014 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -505,58 +505,84 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
 
 LaTeX Warning: Reference `chap:ont' on page 51 undefined on input line 108.
 
-[51] <Chap4/figures/leopard2.JPG, id=204, 1927.2pt x 1084.05pt>
+[51] <Chap4/figures/loris.png, id=204, 1425.325pt x 764.8575pt>
+File: Chap4/figures/loris.png Graphic file (type png)
+
+<use Chap4/figures/loris.png>
+Package pdftex.def Info: Chap4/figures/loris.png used on input line 114.
+(pdftex.def)             Requested size: 175.49881pt x 94.17145pt.
+
+<Chap4/figures/loris_data.png, id=205, 1924.18875pt x 967.615pt>
+File: Chap4/figures/loris_data.png Graphic file (type png)
+
+<use Chap4/figures/loris_data.png>
+Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 123.
+(pdftex.def)             Requested size: 175.49881pt x 88.24799pt.
+ [52 <./Chap4/figures/loris.png> <./Chap4/figures/loris_data.png>]
+
+LaTeX Warning: Reference `kc:loris_drl' on page 53 undefined on input line 136.
+
+
+<Chap4/figures/rules.png, id=209, 1618.045pt x 698.61pt>
+File: Chap4/figures/rules.png Graphic file (type png)
+
+<use Chap4/figures/rules.png>
+Package pdftex.def Info: Chap4/figures/rules.png used on input line 140.
+(pdftex.def)             Requested size: 175.49881pt x 75.77068pt.
+ [53 <./Chap4/figures/rules.png>] [54]
+<Chap4/figures/leopard2.JPG, id=217, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
-Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 125.
+Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 161.
 (pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
- [52] [53 <./Chap4/figures/leopard2.JPG>]
+ [55 <./Chap4/figures/leopard2.JPG>]
 
-LaTeX Warning: Reference `clproc' on page 54 undefined on input line 145.
+LaTeX Warning: Reference `clproc' on page 56 undefined on input line 181.
 
-<Chap4/figures/leopard_proc.png, id=212, 906.38625pt x 465.74pt>
+[56] <Chap4/figures/leopard_proc.png, id=225, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
-Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 149.
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 185.
 
 (pdftex.def)             Requested size: 175.49881pt x 90.17578pt.
- [54] [55 <./Chap4/figures/leopard_proc.png>] [56]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 179--179
+ [57 <./Chap4/figures/leopard_proc.png>]
+[58] [59]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 215--215
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 179--179
+Overfull \hbox (6.0pt too wide) in paragraph at lines 215--215
 [][][][][][][] 
  []
 
-[57]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 193--193
+[60]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 229--229
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 193--193
+Overfull \hbox (6.0pt too wide) in paragraph at lines 229--229
 [][][][][][][] 
  []
 
-(./Chap4/listings/rules.drl [58] [59]) [60]) [61]
+(./Chap4/listings/rules.drl [61]) [62] [63]) [64]
 \openout2 = `Chap5/ont.aux'.
 
  (./Chap5/ont.tex
 Chapter 5.
-[62
+[65
 
 
 
 ]
 
-LaTeX Warning: Citation `Compton2009' on page 63 undefined on input line 17.
+LaTeX Warning: Citation `Compton2009' on page 66 undefined on input line 17.
 
 
-LaTeX Warning: Citation `Janowicz2010' on page 63 undefined on input line 17.
+LaTeX Warning: Citation `Janowicz2010' on page 66 undefined on input line 17.
 
 
 Overfull \hbox (6.7195pt too wide) in paragraph at lines 25--26
@@ -565,13 +591,13 @@ Overfull \hbox (6.7195pt too wide) in paragraph at lines 25--26
  []
 
 
-LaTeX Warning: Citation `McGuinness2004' on page 63 undefined on input line 31.
+LaTeX Warning: Citation `McGuinness2004' on page 66 undefined on input line 31.
 
 
 
-LaTeX Warning: Citation `Madin2007' on page 63 undefined on input line 33.
+LaTeX Warning: Citation `Madin2007' on page 66 undefined on input line 33.
 
-[63] <Chap5/figures/OBOEcore.JPG, id=245, 368.87813pt x 137.01187pt>
+[66] <Chap5/figures/OBOEcore.JPG, id=258, 368.87813pt x 137.01187pt>
 File: Chap5/figures/OBOEcore.JPG Graphic file (type jpg)
 
 <use Chap5/figures/OBOEcore.JPG>
@@ -579,9 +605,9 @@ Package pdftex.def Info: Chap5/figures/OBOEcore.JPG used on input line 37.
 (pdftex.def)             Requested size: 368.87721pt x 137.01154pt.
 
 
-LaTeX Warning: Citation `Botts' on page 64 undefined on input line 47.
+LaTeX Warning: Citation `Botts' on page 67 undefined on input line 47.
 
-[64 <./Chap5/figures/OBOEcore.JPG>]
+[67 <./Chap5/figures/OBOEcore.JPG>]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
 [][][][][][][] 
  []
@@ -591,13 +617,13 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
 [][][][][][][] 
  []
 
-[65] <Chap5/figures/o&m_ontology.png, id=253, 643.40375pt x 285.065pt>
+[68] <Chap5/figures/o&m_ontology.png, id=265, 643.40375pt x 285.065pt>
 File: Chap5/figures/o&m_ontology.png Graphic file (type png)
 
 <use Chap5/figures/o&m_ontology.png>
 Package pdftex.def Info: Chap5/figures/o&m_ontology.png used on input line 82.
 (pdftex.def)             Requested size: 321.70108pt x 142.53215pt.
- [66 <./Chap5/figures/o&m_ontology.png>]
+ [69 <./Chap5/figures/o&m_ontology.png>]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 96--96
 [][][][][][][] 
  []
@@ -607,7 +633,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 96--96
 [][][][][][][] 
  []
 
-(./Chap5/figures/dwc_arch/eml.xml [67] [68])
+(./Chap5/figures/dwc_arch/eml.xml [70] [71])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 101--101
 [][][][][][][] 
  []
@@ -622,17 +648,17 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 100--103
 $[]$ 
  []
 
-<Chap5/figures/dwca.png, id=264, 661.47125pt x 419.5675pt>
+<Chap5/figures/dwca.png, id=277, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
 Package pdftex.def Info: Chap5/figures/dwca.png used on input line 106.
 (pdftex.def)             Requested size: 661.46964pt x 419.56647pt.
- [69]
+ [72]
 Overfull \vbox (236.15071pt too high) has occurred while \output is active []
 
 
-[70]
+[73]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 114--114
 [][][][][][][] 
  []
@@ -648,9 +674,9 @@ $[]$
  []
 
 
-LaTeX Warning: Citation `dwc_sw' on page 71 undefined on input line 117.
+LaTeX Warning: Citation `dwc_sw' on page 74 undefined on input line 117.
 
-<Chap5/figures/dsw.jpg, id=271, 1734.48pt x 782.925pt>
+<Chap5/figures/dsw.jpg, id=284, 1734.48pt x 782.925pt>
 File: Chap5/figures/dsw.jpg Graphic file (type jpg)
 
 <use Chap5/figures/dsw.jpg>
@@ -660,19 +686,19 @@ Package pdftex.def Info: Chap5/figures/dsw.jpg used on input line 121.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[71 <./Chap5/figures/dwca.png>]
+[74 <./Chap5/figures/dwca.png>]
 
-LaTeX Warning: Citation `Botts' on page 72 undefined on input line 132.
+LaTeX Warning: Citation `Botts' on page 75 undefined on input line 132.
 
-[72 <./Chap5/figures/dsw.jpg>]
+[75 <./Chap5/figures/dsw.jpg>]
 
-LaTeX Warning: Citation `Robin2006' on page 73 undefined on input line 147.
+LaTeX Warning: Citation `Robin2006' on page 76 undefined on input line 147.
 
 
-LaTeX Warning: Citation `lefort2011semantic' on page 73 undefined on input line
+LaTeX Warning: Citation `lefort2011semantic' on page 76 undefined on input line
  208.
 
-<Chap5/figures/ssnont.jpg, id=279, 681.747pt x 404.712pt>
+<Chap5/figures/ssnont.jpg, id=291, 681.747pt x 404.712pt>
 File: Chap5/figures/ssnont.jpg Graphic file (type jpg)
 
 <use Chap5/figures/ssnont.jpg>
@@ -684,26 +710,26 @@ Overfull \hbox (27.37631pt too wide) in paragraph at lines 219--220
 i-Sensor-Observation',
  []
 
-[73] [74 <./Chap5/figures/ssnont.jpg>]
+[76] [77 <./Chap5/figures/ssnont.jpg>]
 
-LaTeX Warning: Citation `Uschold1995' on page 75 undefined on input line 233.
-
-
-LaTeX Warning: Citation `Gruninger1995' on page 75 undefined on input line 238.
+LaTeX Warning: Citation `Uschold1995' on page 78 undefined on input line 233.
 
 
-[75]
+LaTeX Warning: Citation `Gruninger1995' on page 78 undefined on input line 238.
 
-LaTeX Warning: Citation `Fernandez-Lopez1999' on page 76 undefined on input lin
+
+[78]
+
+LaTeX Warning: Citation `Fernandez-Lopez1999' on page 79 undefined on input lin
 e 252.
 
 
-LaTeX Warning: Citation `Jimenez-Ruiz2008' on page 76 undefined on input line 2
+LaTeX Warning: Citation `Jimenez-Ruiz2008' on page 79 undefined on input line 2
 65.
 
-[76]
+[79]
 
-LaTeX Warning: Citation `gomez1995evaluation' on page 77 undefined on input lin
+LaTeX Warning: Citation `gomez1995evaluation' on page 80 undefined on input lin
 e 269.
 
 Missing character: There is no ‚ in font cmr12!
@@ -713,17 +739,17 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-LaTeX Warning: Citation `REF!' on page 77 undefined on input line 271.
+LaTeX Warning: Citation `REF!' on page 80 undefined on input line 271.
 
 
-LaTeX Warning: Citation `Gruninger1995' on page 77 undefined on input line 280.
+LaTeX Warning: Citation `Gruninger1995' on page 80 undefined on input line 280.
 
 
-[77]
+[80]
 
-LaTeX Warning: Citation `Choi2010' on page 78 undefined on input line 282.
+LaTeX Warning: Citation `Choi2010' on page 81 undefined on input line 282.
 
-[78]
+[81]
 Underfull \hbox (badness 10000) in paragraph at lines 320--320
 []\OT1/cmr/bx/n/12 Subclass
  []
@@ -778,7 +804,7 @@ Underfull \hbox (badness 7869) in paragraph at lines 335--336
 []\OT1/cmr/m/n/12 Person in-volved with a
  []
 
-<Chap5/figures/khas_base.JPG, id=299, 2281.52374pt x 949.5475pt>
+<Chap5/figures/khas_base.JPG, id=311, 2281.52374pt x 949.5475pt>
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
@@ -786,19 +812,19 @@ Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 345.
 (pdftex.def)             Requested size: 2281.5182pt x 949.54518pt.
 
 
-LaTeX Warning: Citation `noy2001creating' on page 79 undefined on input line 35
+LaTeX Warning: Citation `noy2001creating' on page 82 undefined on input line 35
 3.
 
-[79 <./Chap5/figures/khas_base.JPG>] [80]
+[82 <./Chap5/figures/khas_base.JPG>] [83]
 
-LaTeX Warning: Citation `dwc_oboe' on page 81 undefined on input line 362.
+LaTeX Warning: Citation `dwc_oboe' on page 84 undefined on input line 362.
 
-[81]
+[84]
 
-LaTeX Warning: Citation `brickley2010foaf' on page 82 undefined on input line 3
+LaTeX Warning: Citation `brickley2010foaf' on page 85 undefined on input line 3
 64.
 
-<Chap5/figures/khas_ontology.JPG, id=309, 3852.3925pt x 1011.78pt>
+<Chap5/figures/khas_ontology.JPG, id=322, 3852.3925pt x 1011.78pt>
 File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_ontology.JPG>
@@ -814,14 +840,14 @@ Overfull \hbox (110.82861pt too wide) in paragraph at lines 376--377
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `Brank2005' on page 82 undefined on input line 383.
+LaTeX Warning: Citation `Brank2005' on page 85 undefined on input line 383.
 
-[82]
+[85]
 
-LaTeX Warning: Citation `Poveda-Villalon2012' on page 83 undefined on input lin
+LaTeX Warning: Citation `Poveda-Villalon2012' on page 86 undefined on input lin
 e 396.
 
-[83 <./Chap5/figures/khas_ontology.JPG>]
+[86 <./Chap5/figures/khas_ontology.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 409--410
 []\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
@@ -920,16 +946,16 @@ Overfull \hbox (72.79134pt too wide) in paragraph at lines 405--422
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `Brewster2004' on page 84 undefined on input line 429.
+LaTeX Warning: Citation `Brewster2004' on page 87 undefined on input line 429.
 
-[84]
+[87]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `dwc_oboe' on page 85 undefined on input line 456.
+LaTeX Warning: Citation `dwc_oboe' on page 88 undefined on input line 456.
 
-[85]) [86] [87] [88]
+[88]) [89] [90] [91]
 \openout2 = `Chap6/implementation.aux'.
 
  (./Chap6/implementation.tex
@@ -940,90 +966,84 @@ Overfull \hbox (8.62512pt too wide) in paragraph at lines 2--3
 HAS in the Malaysian
  []
 
-[89
+[92
 
 
 
-] [90]
+] [93]
 
-LaTeX Warning: Citation `REFERENCE' on page 91 undefined on input line 24.
+LaTeX Warning: Citation `REFERENCE' on page 94 undefined on input line 24.
 
 
-LaTeX Warning: Citation `buckeye' on page 91 undefined on input line 24.
+LaTeX Warning: Citation `buckeye' on page 94 undefined on input line 24.
 
-[91] <Chap6/figures/LORIS.png, id=342, 1425.325pt x 764.8575pt>
+[94] <Chap6/figures/LORIS.png, id=355, 1425.325pt x 764.8575pt>
 File: Chap6/figures/LORIS.png Graphic file (type png)
 
 <use Chap6/figures/LORIS.png>
 Package pdftex.def Info: Chap6/figures/LORIS.png used on input line 38.
 (pdftex.def)             Requested size: 272.99881pt x 146.4915pt.
- [92 <./Chap6/figures/LORIS.png>]
-<Chap6/figures/buckeye.jpg, id=347, 1441.385pt x 833.1125pt>
+ [95 <./Chap6/figures/LORIS.png>]
+<Chap6/figures/buckeye.jpg, id=360, 1441.385pt x 833.1125pt>
 File: Chap6/figures/buckeye.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 50.
 (pdftex.def)             Requested size: 272.99881pt x 157.78453pt.
- [93 <./Chap6/figures/buckeye.jpg>]
+ [96 <./Chap6/figures/buckeye.jpg>]
 Overfull \hbox (1.62372pt too wide) in paragraph at lines 67--68
 \OT1/cmr/m/n/12 Cam-era 3, de-spite be-ing routed through it, with an av-er-age
  speeds of 1.8KB/s. 
  []
 
-[94] <Chap6/figures/buckeye_img.jpg, id=354, 770.88pt x 578.16pt>
+[97] <Chap6/figures/buckeye_img.jpg, id=367, 770.88pt x 578.16pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
 (pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
- [95 <./Chap6/figures/buckeye_img.jpg>]
-<Chap6/figures/buckeye_img_2.jpg, id=359, 770.88pt x 578.16pt>
+ [98 <./Chap6/figures/buckeye_img.jpg>]
+<Chap6/figures/buckeye_img_2.jpg, id=371, 770.88pt x 578.16pt>
 File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img_2.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
 
 (pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
- [96 <./Chap6/figures/buckeye_img_2.jpg>]) [97]
+ [99 <./Chap6/figures/buckeye_img_2.jpg>]) [100]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
 Chapter 7.
-[98
+[101
 
 
 
-] [99] [100] [101] [102]
+] [102] [103] [104] [105]
 Overfull \hbox (0.99892pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/12 range of the DA node, the trans-mis-sion phase be-gins where on
 ly DwC archives
  []
 
-! Undefined control sequence.
-l.68 ...age transmissions, DC nodes have a \tetxit
-                                                  {SendState} object that co...
-
-? q
-OK, entering \batchmode...
- [103]) [104]
+[106]) [107]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
-) [105
+) [108
 
 
 
-] (./thesis.bbl [106
+] (./thesis.bbl [109
 
 
-] [107]
+] [110]
 Underfull \hbox (badness 4765) in paragraph at lines 117--123
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
- [108]
+[111]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
@@ -1079,19 +1099,20 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [109] [110] [111]
+ [112] [113] [114]
 Underfull \hbox (badness 1067) in paragraph at lines 367--371
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
- [112]
+[115]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-) [113] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux) (./Ch
-ap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implem
-entation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
+) [116] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
+(./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -1100,10 +1121,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5062 strings out of 493315
- 76883 string characters out of 6137905
- 355316 words of memory out of 5000000
- 8353 multiletter control sequences out of 15000+600000
+ 5082 strings out of 493315
+ 77335 string characters out of 6137905
+ 354376 words of memory out of 5000000
+ 8371 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,54p,1118b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1114,10 +1135,10 @@ usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (121 pages, 2991072 bytes).
+Output written on thesis.pdf (124 pages, 3414947 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
+ 457 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

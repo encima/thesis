@@ -65,7 +65,7 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 \subsubsection{Transmission}
 	Once the discovery phase has been completed, providing nodes are within range of the DA node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
 	
-	In order to manage transmissions, DC nodes have a \tetxit{SendState} object that contains the next archive to send, the time to send it and whether it is currently sending. This is used to determine what operations to perform, once an archive has been sent, it is delete from the SendState and the sending flag is set to false. A new archive is then added and sent when the opportunity arises.
+	In order to manage transmissions, DC nodes have a \textit{SendState} object that contains the next archive to send, the time to send it and whether it is currently sending. This is used to determine what operations to perform, once an archive has been sent, it is delete from the SendState and the sending flag is set to false. A new archive is then added and sent when the opportunity arises.
 	
 	When a DP node receives the archive, it begins processing and we have implemented both sending and processing as serial processes. DP nodes use the SendState as well, but they do not add any archive, they add an archive once it has been processed and they then select the oldest archive that has been classified as interesting, providing that an archive is not already waiting to be sent. The archive stores information about the route it takes, recording every hop, as well as the time it took from capture to DA node.
 	
@@ -73,13 +73,16 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	
 	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each DA node are iterated over and written to a CSV file, with details like the path it took, total transmission time and time of capture.
 
-\subsection{Results}
-
-\subsection{Improvements}
+\section{Results}
+	
+	
+\section{Improvements}
 -Provide a more dynamic processing time
 -Add battery life
 -Parallel processing and sending
 -Different data types
 -More realistic transmission.
 -Base chance of triggering on the camera location - DG.
+
+\section{Conclusion}
 
