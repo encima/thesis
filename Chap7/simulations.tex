@@ -72,17 +72,40 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	Scheduled sending events run every thousand ticks, which is configurable, to check the sending state of the node and send any archives in the SendState. The node then waits for the number of ticks that it will take in order to transmit the archive.
 	
 	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each DA node are iterated over and written to a CSV file, with details like the path it took, total transmission time and time of capture.
+	
+\subsection{Capture}
+	Using the existing data collected from Danau Girang, we calculated how often a camera triggers in a six month deployment, as well as how often the observation contained interesting content. 
+	
+	To calculate the count of interesting images, we processed every directory of images to extract the largest object in the foreground, using our Triton program. Once processed, we iterated through every directory, counted the total number of images and the total number of extracted images. We then calculated the average for each directory and then summed those averages divided by the total number of directories. This gave us a 20.7\% chance of an image being interesting.
+	
+	The chance of camera trigger was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561. A random number is generated every and compared to this, if the value is fewer than or equal to the chance, then an observation is captured.
 
 \section{Results}
+	As previously explained, the simulation runs in a random mode, or using data from an existing deployment. We added a property that ensured each simulation only ran for 15,552,000 seconds, simulating a six month deployment.
 	
+	Before any experiments were run, we calculated the transmission time for the current solution at Danau Girang. Using the creation date of each image, and the date that the SD card was collected, we found the average number of hours between capture and being received at the field centre, which was 491 hours. It should be noted that this time does not include the upload or processing of each archive, but there was no accurate way of calculating this, and it does not distinguish between empty and interesting observations.
+	
+	 We performed one hundred runs in which the simulation recorded between 57,000 and 60,000 observations in each run. At the end of each run, a CSV file is written with the details of each observation that is stored on every DA node; it does not take undelivered observations into account. After counting the observations, we calculate the total interesting images and their average time to be delivered. The runs resulted in an average transmission time of 49.3 hours for interesting observations and 2043 hours for empty observations. Figure \ref{fig:sim} shows the view of the simulation, with a list of the properties that can be set.
+	
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/khas_sim}
+	\caption{K-HAS Simulation}
+	\label{fig:sim}
+	\end{figure}
+	
+	**COMPARE TO LORIS HERE?**
+
 	
 \section{Improvements}
--Provide a more dynamic processing time
--Add battery life
--Parallel processing and sending
--Different data types
--More realistic transmission.
--Base chance of triggering on the camera location - DG.
+Although the simulations do show an improvement over the current implementation, there are features that could be added to ensure that the simulation models a real-world implementation as closely as possible. Currently, the processing time of DP nodes is based on the average time to process an archive, using a random time within a range would make this less static. 
+
+All nodes within the network do not use a battery life and, due to the short deployment time of LORIS, we do not have accurate information on how long batteries last on each node. This is most important on DC nodes as there may be hundreds deployed at any one time and the DA node must report when a DC node does not report for a while. This also goes for transmission, using a fixed range and transfer rate suits a dynamic network in an open environment but obstacles and weather affect the rate and this could be taken into account in a future implementation.
+
+In our implementation of K-HAS, we are using image-based scientific observations but the chance of a camera being triggered is the same for every DC node. In a future version, it would be more realistic to use different chances of triggering based on the cameras location, or based on random assignments. However, we believe that a more general, extensible simulation that was able to handle many different types of sensed data would be the truest model of K-HAS; using property files, as we currently do, to provide details on the sensed data, processing times and a knowledge base.
 
 \section{Conclusion}
+In this chapter we have detailed the development and results of our simulation of the K-HAS architecture. Current technology limits the implementation of the original architecture we developed, so using a simulation framework is the best alternative. We have modelled all variables based on existing data from our motivating scenario and results have shown that using knowledge bases on deployed nodes for the processing of observations within the network allows `interesting' sensed data to be prioritised and delivered to a DA node more than four hundred hours earlier than a manual solution; which does not include human processing time.
+
+While the simulation is not feature complete, we believe it is accurate enough to show how K-HAS utilises the knowledge-processing capabilities at each tier to process, and prioritise, sensed data based on knowledge gained from the environment, previously sensed data and from humans using the network.
 

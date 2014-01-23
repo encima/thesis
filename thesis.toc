@@ -129,6 +129,13 @@
 \contentsline {subsection}{\numberline {7.1.2}Routing}{105}
 \contentsline {subsubsection}{Discovery}{105}
 \contentsline {subsubsection}{Transmission}{106}
-\contentsline {subsection}{\numberline {7.1.3}Results}{107}
-\contentsline {subsection}{\numberline {7.1.4}Improvements}{107}
-\contentsline {chapter}{\numberline {8}Conclusion}{108}
+\contentsline {subsection}{\numberline {7.1.3}Capture}{107}
+\contentsline {section}{\numberline {7.2}Results}{108}
+\contentsline {section}{\numberline {7.3}Improvements}{108}
+\contentsline {section}{\numberline {7.4}Conclusion}{109}
+\contentsline {chapter}{\numberline {8}Conclusion}{111}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{111}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{111}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{111}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{111}
+\contentsline {section}{\numberline {8.2}Future Work}{111}

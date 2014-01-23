@@ -1,0 +1,52 @@
+\documentclass[12pt, a4paper]{report}
+
+\usepackage[refpage]{nomencl}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{gensymb}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb, xleftmargin=\fboxsep, xrightmargin=-\fboxsep, breaklines=true}
+
+\onehalfspacing
+
+\makenomenclature
+
+\begin{document}
+
+\title{Using Local and Global Knowledge in Wireless Sensor Networks}
+\author{Christopher Gwilliams\\Cardiff University}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\begin{abstract}
+To Write...
+\end{abstract}
+
+\pagenumbering{arabic}
+
+\include{Chap1/introduction}
+\include{Chap2/background}
+\include{Chap3/technical}
+\include{Chap4/architecture}
+\include{Chap5/ont}
+\include{Chap6/implementation}
+\include{Chap7/simulations}
+\include{Chap8/conclusion}
+
+\bibliographystyle{plain}
+\bibliography{refs/library}
+\end{document}
+
+
