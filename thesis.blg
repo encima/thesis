@@ -1,63 +1,85 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
-A level-1 auxiliary file: Chap1/chapter.aux
-A level-1 auxiliary file: Chap2/chapter.aux
-A level-1 auxiliary file: Chap3/chapter.aux
-A level-1 auxiliary file: Chap4/chapter.aux
+A level-1 auxiliary file: Chap1/introduction.aux
+A level-1 auxiliary file: Chap2/background.aux
+A level-1 auxiliary file: Chap3/technical.aux
+A level-1 auxiliary file: Chap4/architecture.aux
+A level-1 auxiliary file: Chap5/ont.aux
+A level-1 auxiliary file: Chap6/implementation.aux
+A level-1 auxiliary file: Chap7/simulations.aux
+A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plain.bst
 Database file #1: refs/library.bib
 Warning--I didn't find a database entry for "gartner2013"
 Warning--I didn't find a database entry for "bluetooth2012bluetooth"
 Warning--I didn't find a database entry for "Waspmote"
+Warning--I didn't find a database entry for "dwc_sw"
+Warning--I didn't find a database entry for "lefort2011semantic"
+Warning--I didn't find a database entry for "gomez1995evaluation"
+Warning--I didn't find a database entry for "REF!"
+Warning--I didn't find a database entry for "noy2001creating"
+Warning--I didn't find a database entry for "dwc_oboe"
+Warning--I didn't find a database entry for "brickley2010foaf"
+Warning--I didn't find a database entry for "REFERENCE"
+Warning--I didn't find a database entry for "buckeye"
 Warning--there's a number but no volume in Akyildiz2002a
 Warning--there's a number but no volume in Bayat2012
+Warning--there's a number but no volume in Botts
+Warning--empty year in Botts
+Warning--empty journal in Brank2005
+Warning--empty journal in Brewster2004
 Warning--empty year in Demirbas
 Warning--empty year in DEWALT
+Warning--empty journal in Fernandez-Lopez1999
+Warning--empty journal in Gruninger1995
+Warning--there's a number but no volume in Jimenez-Ruiz2008
 Warning--empty year in Maurer
 Warning--empty year in Pizzocaro
 Warning--empty year in Rahman
 Warning--empty year in Resch
+Warning--empty journal in Robin2006
 Warning--empty year in Schurgers
-You've used 62 entries,
+Warning--empty publisher in Uschold1995
+You've used 76 entries,
             2118 wiz_defined-function locations,
-            901 strings with 17686 characters,
-and the built_in function-call counts, 23385 in all, are:
-= -- 2289
-> -- 1278
-< -- 21
-+ -- 506
-- -- 444
-* -- 1732
-:= -- 3865
-add.period$ -- 186
-call.type$ -- 62
-change.case$ -- 407
+            988 strings with 18698 characters,
+and the built_in function-call counts, 26892 in all, are:
+= -- 2645
+> -- 1404
+< -- 22
++ -- 554
+- -- 478
+* -- 1941
+:= -- 4478
+add.period$ -- 229
+call.type$ -- 76
+change.case$ -- 465
 chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 831
-empty$ -- 1620
-format.name$ -- 444
-if$ -- 4826
+cite$ -- 94
+duplicate$ -- 986
+empty$ -- 1905
+format.name$ -- 478
+if$ -- 5544
 int.to.chr$ -- 0
-int.to.str$ -- 62
-missing$ -- 58
-newline$ -- 308
-num.names$ -- 124
-pop$ -- 410
+int.to.str$ -- 76
+missing$ -- 74
+newline$ -- 379
+num.names$ -- 152
+pop$ -- 469
 preamble$ -- 1
-purify$ -- 346
+purify$ -- 391
 quote$ -- 0
-skip$ -- 658
+skip$ -- 764
 stack$ -- 0
-substring$ -- 1382
-swap$ -- 230
-text.length$ -- 21
+substring$ -- 1559
+swap$ -- 244
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 246
-warning$ -- 9
-while$ -- 230
-width$ -- 64
-write$ -- 654
-(There were 12 warnings)
+type$ -- 300
+warning$ -- 18
+while$ -- 269
+width$ -- 78
+write$ -- 797
+(There were 30 warnings)

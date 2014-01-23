@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  22 JAN 2014 11:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  23 JAN 2014 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,43 +284,43 @@ Chapter 1.
 [1
 
 
-] [2] [3]) [4] [5]
+] [2] [3] [4] [5]) [6]
 \openout2 = `Chap2/background.aux'.
 
  (./Chap2/background.tex
 Chapter 2.
-[6
+[7
 
 
 
 ]
 
-LaTeX Warning: Citation `gartner2013' on page 7 undefined on input line 19.
+LaTeX Warning: Citation `gartner2013' on page 8 undefined on input line 19.
 
-[7]
+[8]
 
-LaTeX Warning: Citation `bluetooth2012bluetooth' on page 8 undefined on input l
+LaTeX Warning: Citation `bluetooth2012bluetooth' on page 9 undefined on input l
 ine 30.
 
-[8] [9] [10] [11] [12] [13] [14] [15] [16]
-<Chap2/figures/facts_architecture.jpg, id=82, 451.6875pt x 181.67876pt>
+[9] [10] [11] [12] [13] [14] [15] [16] [17]
+<Chap2/figures/facts_architecture.jpg, id=86, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
 Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
 e 136.
 (pdftex.def)             Requested size: 312.00119pt x 125.49985pt.
- [17] [18]
-<Chap2/figures/gsn_arch.png, id=90, 371.3875pt x 453.695pt>
+ [18] [19]
+<Chap2/figures/gsn_arch.png, id=93, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
 Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 172.
 (pdftex.def)             Requested size: 312.00119pt x 381.15659pt.
- [19] [20 <./Chap2/figures/facts_architecture.jpg> <./Chap2/figures/gsn_arch.pn
+ [20] [21 <./Chap2/figures/facts_architecture.jpg> <./Chap2/figures/gsn_arch.pn
 g>]
 
-LaTeX Warning: Reference `bg:lst:gsn' on page 21 undefined on input line 183.
+LaTeX Warning: Reference `bg:lst:gsn' on page 22 undefined on input line 183.
 
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 186.
 
@@ -337,11 +337,11 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
- [21]
+ [22]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [22]
+ [23]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
@@ -349,7 +349,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-[23]
+[24]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
@@ -362,65 +362,65 @@ Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [24] [25] [26] [27] [28]) [29]
+ [25] [26] [27] [28] [29]) [30]
 \openout2 = `Chap3/technical.aux'.
 
  (./Chap3/technical.tex
 Chapter 3.
 
-LaTeX Warning: Reference `tech:motiv' on page 30 undefined on input line 4.
+LaTeX Warning: Reference `tech:motiv' on page 31 undefined on input line 4.
 
 
-LaTeX Warning: Reference `tech:hw' on page 30 undefined on input line 4.
+LaTeX Warning: Reference `tech:hw' on page 31 undefined on input line 4.
 
 
-LaTeX Warning: Reference `tech:wireless' on page 30 undefined on input line 4.
+LaTeX Warning: Reference `tech:wireless' on page 31 undefined on input line 4.
 
 
-LaTeX Warning: Reference `tech:conc' on page 30 undefined on input line 4.
+LaTeX Warning: Reference `tech:conc' on page 31 undefined on input line 4.
 
-[30
+[31
 
 
 
-] [31] [32] [33] [34]
-<Chap3/figures/bp_snr.png, id=143, 729.4452pt x 445.665pt>
+] [32] [33] [34] [35]
+<Chap3/figures/bp_snr.png, id=147, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 67.
 (pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
- [35 <./Chap3/figures/bp_snr.png>]
-<Chap3/figures/dg_snr.png, id=150, 728.4816pt x 445.1832pt>
+ [36 <./Chap3/figures/bp_snr.png>]
+<Chap3/figures/dg_snr.png, id=153, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
 Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 78.
 (pdftex.def)             Requested size: 175.49881pt x 107.24693pt.
- [36 <./Chap3/figures/dg_snr.png>]
+ [37 <./Chap3/figures/dg_snr.png>]
 Overfull \hbox (5.46674pt too wide) in paragraph at lines 91--92
 []\OT1/cmr/m/n/12 Although the range of Wi-Fi is poor, for our re-quire-ments, 
 in both Malaysia
  []
 
 
-LaTeX Warning: Citation `Waspmote' on page 37 undefined on input line 96.
+LaTeX Warning: Citation `Waspmote' on page 38 undefined on input line 96.
 
 
-LaTeX Warning: Reference `sec:wifirange' on page 37 undefined on input line 98.
+LaTeX Warning: Reference `sec:wifirange' on page 38 undefined on input line 98.
 
 
-[37] <Chap3/figures/pelican.jpg, id=158, 1284.8pt x 963.6pt>
+[38] <Chap3/figures/pelican.jpg, id=161, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
 Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 116.
 (pdftex.def)             Requested size: 175.49881pt x 131.60953pt.
- [38] [39 <./Chap3/figures/pelican.jpg>])
-[40]
+ [39]) [40 <./Chap3/figures/pelican.jpg>]
 \openout2 = `Chap4/architecture.aux'.
 
- (./Chap4/architecture.tex
+
+(./Chap4/architecture.tex
 Chapter 4.
 [41
 
@@ -1025,11 +1025,7 @@ Overfull \hbox (0.99892pt too wide) in paragraph at lines 66--67
 ly DwC archives
  []
 
-[106] [107]
-
-LaTeX Warning: Reference `fig:sim' on page 108 undefined on input line 88.
-
-<Chap7/figures/khas_sim.png, id=401, 1451.4225pt x 1013.7875pt>
+[106] [107] <Chap7/figures/khas_sim.png, id=401, 1451.4225pt x 1013.7875pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
 
 <use Chap7/figures/khas_sim.png>
@@ -1044,86 +1040,57 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
-) [111
+[111
 
 
 
-] (./thesis.bbl [112
+] [112]
+Overfull \hbox (5.70146pt too wide) in paragraph at lines 21--22
+\OT1/cmr/m/n/12 In Chap-ter 6, we present the Local-knowledge Ontology-based Re
+mote-Sensing
+ []
+
+[113] [114] [115]) [116] [117] (./thesis.bbl [118
 
 
-] [113]
-Underfull \hbox (badness 4765) in paragraph at lines 117--123
+]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no Æ in font cmr12!
+ [119]
+Underfull \hbox (badness 4765) in paragraph at lines 150--156
 []\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
 ndo
  []
 
-[114]
+[120]
+Underfull \hbox (badness 1005) in paragraph at lines 193--197
+[]\OT1/cmr/m/n/12 Krzysztof Janow-icz and Michael Comp-ton.  The stimulus-senso
+r-
+ []
+
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
 Missing character: There is no √ in font cmr12!
 Missing character: There is no û in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ê in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ∞ in font cmr12!
+[121]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [115] [116] [117]
-Underfull \hbox (badness 1067) in paragraph at lines 367--371
+ [122] [123] [124]
+Underfull \hbox (badness 1067) in paragraph at lines 431--435
 []\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
 -ley,
  []
 
-[118]
+[125]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-) [119] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+) [126] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
 (./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
 (./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
 )
@@ -1135,13 +1102,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5089 strings out of 493315
- 77493 string characters out of 6137905
- 354376 words of memory out of 5000000
- 8376 multiletter control sequences out of 15000+600000
+ 5078 strings out of 493315
+ 77405 string characters out of 6137905
+ 354389 words of memory out of 5000000
+ 8365 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,54p,1118b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,54p,1884b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
@@ -1149,10 +1116,10 @@ usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (127 pages, 3511080 bytes).
+Output written on thesis.pdf (134 pages, 3527559 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
+ 491 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
