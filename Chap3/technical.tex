@@ -118,9 +118,76 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 			\label{tech:pelican}
 			\end{figure}
 
-%\section{Software}
-%	\subsection{Triton}
-%		Triton is an image-processing application that uses 
+\section{Software}
+	\subsection{Triton}
+		Triton is a C++ program that makes use of the Open Computer Vision (OpenCV) library for performing popular image processing functions. Triton takes in a set of images, combines them and builds a background model. Using this model, the foreground is extracted from the image and this is scanned for objects. If an object is found, it is extracted to a separate and saved as a black and white template, to minimise space and assist with future classifications.
+		
+		Primarily, we developed this tool to detect the huge number of empty images captured around Danau Girang, due to trees falling, movement of the Sun, fast animals or dirt on the lens. However, Triton proved to be quite effective when finding images of interest and it was modified to be used with our sensors. In this section, we explain how Triton was tested and compared with human observations. To ensure a valid comparison, we also compared both results to a random classifier.
+	
+		During a typical three month deployment along the Kinabatangan River more than 40,000 images can be taken. A large proportion of these images can be classed as false triggers. 
+		
+		Using the images, taken in sets of 3, and separating the images taken by specific cameras, we build a Gaussian background model and used that to detect animals in the foreground, classifying the detected foreground as the ROI, and extracting it.
+	
+		As mentioned in Section \ref{sec:scenario}, Figure \ref{origimg} shows an image taken by a wildlife camera. The dynamic background and light levels should be noted here. This image is number 1, in a set of 3, a background model is built from these images and added to the pre-existing background model built by that camera. The foreground of the image is then extracted and ROIs, larger than a threshold, are identified. The largest ROI is then extracted from the image and saved separately.
+	
+		From our visit to Danau Girang in 2011, we collected images from two different three month deployments, in two different lots in Danau Girang, giving us just over 70,000 of images to test our approach. The images are sorted by the camera and the date of collection. We process every 3 images as one set, building a background model of all three images.
+		
+		We manually process all of the images initially, marking images that are empty as false triggers. We then process the images, using our application, and a resulting processed image is created from every set of 3 images. If nothing is detected in a set then no image is created and that set is logged as empty. 
+		
+		There are four classifications that can be made with images sets:
+		\begin{description}
+			\item True positive: An ROI is extracted that contains the animal in the set.
+			\item False positive: An ROI is extracted that contains nothing of interest.
+			\item True negative: A false trigger is correctly identified and no ROI is extracted.
+			\item False negative: An image with interesting contents is classified as a false trigger and no ROI is extracted.
+		\end{description}
+		
+		The processed images are then compared with our manual findings. The accuracy of our application is calculated by the following equation:
+		
+		\begin{equation}Accuracy = (T_{p} + T_{n})/Total Sets\end{equation}
+		
+		Where T$_{p}$  is the number of true positive sets extracted and T$_{n}$  is the number of true negative sets.
+		
+		Table \ref{table:processing} shows experiments run on a camera deployed in Danau Girang, testing on 300 sets of 3 images. These images were manually processed and classified as interesting or empty, of the 300, 94 sets were identified as interesting. Using Triton, 53 of those interesting sets ({\it true positives}) were extracted, with another 17 {\it false positives} extracted. 201 {\it true negatives} were correctly identified and a further 5 were identified as {\it false negatives}. 
+		
+		Out of the 94 interesting sets, 77 were identified correctly, giving an accuracy of 82\% for finding sets of interest. Furthermore, of 206 empty sets, 201 were found, which gives a 98\% accuracy at finding empty images.
+	
+		These preliminary results show that our method is effective at detecting false positives but is less effective at detecting false negatives. It appears that these misclassifications primarily come from black and white images taken at night, images where minimal movement of the animal has caused a trigger and images where an animal has caused a trigger but it has been too fast moving to be in the second two images.
+		
+		After a longer deployment, we would be able to build up a more substantial background model to account for some of the animals being less dynamic in images and we expect this to decrease our error rate thus reducing the number of false negatives. 
+		
+		\begin{table*}
+			\hfill{}
+			\begin{tabular}{|l|l|c|c|c|c|}
+				\hline
+					True Positive & True Negative & False Positive  & False Negative & Total Image Sets \\
+				\hline
+					77 & 201 & 5 & 17 & 300 \\
+				\hline
+			\end{tabular}
+			\hfill{}
+			\caption{Classification Results}
+			\label{table:processing}
+		\end{table*}
+		
+		The results of Triton were compared to a random classifier, implemented in Python. Table \ref{table:random} shows the outcome, with 72 {\it true positives} extracted, resulting in an accuracy of 80\%. 73.3 {\it true negatives} from a total of 206 were found, giving an accuracy of 36\%. Although this set does not compare to the number of images collected in a six month deployment, human classification is a time consuming process and to have 900 classifications is complex. Although these could be crowdsourced, the reliability becomes questionable, in part due to the specialist nature of the images. This does show that our approach is quite close to the accuracy of a human when finding images of interest, but is able to do so in a fraction of the time, processing hundreds of images every minute. 
+		
+		Triton, coupled with a set of human eyes at the heart of the network, should prove to be an effective approach for prioritising images through the network, even when a classification cannot be made through the use of local knowledge. More importantly, in an area where the environment is as dynamic as the Malaysian rainforest, 97\% accuracy for detecting empty images can be crucial, if only for saving network bandwidth.
+		
+		\begin{table*}
+			\hfill{}
+			\begin{tabular}{|l|l|c|c|c|c|}
+				\hline
+					True Positive & True Negative & False Positive  & False Negative & Total Image Sets \\
+				\hline
+					72 & 73.3 & 78.3 & 75.3 & 300 \\
+				\hline
+			\end{tabular}
+			\hfill{}
+			\caption{Random Classifier Results}
+			\label{table:random}
+		\end{table*}			
+			%END OF INSERTION
 %	
 %	\subsection{ODACH}
 

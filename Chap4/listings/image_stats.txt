@@ -1,0 +1,37 @@
+Lot 5
+Camera 1 
+13.03.11 Folder
+
+900 images
+300 sets
+
+147 sets extracted by Triton
+
+58 sets extracted with interesting contents
+
+True positive: An ROI is extracted that contains the ani- mal in the set.
+False positive: An ROI is extracted that contains nothing of interest.
+True negative: A false trigger is correctly identified and no ROI is extracted.
+False negative: An image with interesting contents is clas- sified as a false trigger and no ROI is extracted
+
+Manual Processing:
+TP - 53
+FN - 37 
+TN - 205
+FP - 5
+
+Out of 90 interesting sets, 53 were correctly identified. This gives a 59% accuracy when detecting interesting images.
+
+Out of 210 uninteresting sets, 205 were identified correctly, giving 97% accuracy at detecting empty images.
+
+Total: 300
+
+Random Classifier:
+TP - 79 76 62 = 72
+FN - 67 81 74 = 73.3
+TN - 84 71 80 = 78.3
+FP - 70 72 84 = 75.3
+
+Out of 146 interesting sets,79 were found. Giving a 54% accuracy.
+
+Out of 154 empty sets, 84 were found, giving a 54.5% accuracy.
