@@ -94,7 +94,30 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	\label{fig:sim}
 	\end{figure}
 	
-	**COMPARE TO LORIS HERE?**
+	
+\begin{sidewaystable}[htp]
+%\footnotesize\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{l@{\hspace{6pt}} *{22}{c}}
+\toprule
+\hline
+\bfseries Mode & \textbf{Avg. Total Duration} & \textbf{Avg. TP Duration} & \textbf{\% TP Received} & \textbf{Avg. FP Duration} & \textbf{\% FP Received}\\ 
+\hline
+\midrule
+\bfseries NK-ALL
+& 597 &  &  &  &  \\
+\bfseries LK-ALL
+& 677 & 133 & 27.3 &  & \\
+\bfseries HK-ALL
+& 491 & 24 & 92 & 785 & 7.1\\
+\bfseries NK-LK
+& 749 & 292 & 13.9 &  &\\
+\bfseries LK-HK
+& 687 & 18 & 17.1 & 714 & 82.9\\
+\bottomrule
+\addlinespace
+\end{tabular}
+\caption{Simulation Results}\label{tab:observ}
+\end{sidewaystable}
 
 	
 \section{Improvements}

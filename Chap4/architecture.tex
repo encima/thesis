@@ -202,38 +202,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			The middleware on the node supports a web interface to allow users to perform administrative functions on the network, such as deploy a new node, on top of this there is a custom made website that shows all observations for every DC node. This allows users to log on and classify the images. In this case, the lecturer receives the email notification, reviews the attached images and clicks on the link to access the website to inform the DP node that the classification was correct. Due to the administrator position the lecturer has on the system, he is able to stop any users voting on the image and to simply confirm the classification.
 			
 			If there was no classification, then users would be able to vote on the contents and use the classification with the highest vote, or the classification made by an administrator. Once a classification has been made, it is stored in the database and written to the archive. This triggers the DA node to send that classification on to the DP node that sent the original archive. In this case, the DA node informed the DP node that it has been confirmed as a Clouded leopard and the DP node then stores the extracted image in the directory of Clouded leopard templates, to assist with future classifications.
-			
-			
-	\section{Rules}
-		This section explains the rules used in K-HAS in more detail, to highlight how classifications are made as well as how nodes in the network are monitored. Any examples made here relate to our motivating scenario. The rules on each node are a vital way of encoding local knowledge and a practical use to show how local knowledge, from users or previously sensed data, can be used classify newly sensed data.
-		
-		As highlighted in Section \ref{arch:kb}, K-HAS uses the Drools rule engine, a Java based rule management system that uses forward chaining based inference. Forward chaining starts with some data, in our case a set of images, and uses inference rules to extract more data. We use this method to make meaningful inferences from properties of the sensed data. For example, an image taken at 8pm could be run through Drools and an inference rule will tell the system to start by looking for nocturnal animals.
-		
-		\subsection{Data Collection}			
-		As explained in Section \ref{khas:dc}, DC nodes are unable to run the Drools engine and instead utilise static rules that are encoded at the time of deployment. Instead of utilising forward chaining to draw a single conclusion, these rules are executed one by one and the outcome of one does not affect the outcome of another. An example of such rules could be a rule to determine the time of day that an image was captured (such as morning, afternoon, evening or night) or a rule to determine what animals it is more likely to be based on the temperature and location of the node, shown in Listing \ref{lst:dcrule}. No rule engine is used by the DC node and the rules are executed in the code before the observation is archived and sent on.
-		
-	\begin{lstlisting}[caption=Encoded Data Collection Rule, label=lst:dcrule, breaklines=true]
-if img.temp > 32 && img.temp < 38 then
-classification.potentialAnimals = [clouded_leopard, malay_civet, sun_bear]
-if img.time > 1800 && img.time < 0500 then
-classification.animalBehaviour = nocturnal
-	\end{lstlisting}
-	
-	\subsection{Data Processing and Data Aggregation}
-		The increased knowledge-processing capabilities allow DP nodes to run a complete implementation of Drools, this means that forward chaining can be used and the knowledge base is dynamic, i.e. it can be updated whilst the network is deployed. 
-		
-		Rules are written in \textit{drl} files that are loaded into a knowledge session. Sessions, as well as the firing of rules, are handled by the Java code. The benefit of using Drools with a Java based middleware, such as GSN, allows the simple integration of the two technologies, allowing a sensor class in GSN to insert an archive into the session and run the rules. When sensed data is received from a DC node, it is unarchived and Drools is run on the DwC files describing the original observation, the metadata, the originating DC node and the knowledge base of the DP node.
-		
-		Listing \ref{drools:dp} shows an example of some more simple rules that would be contained within the knowledge base. In this file, the rules use existing local knowledge with the properties of the observation to infer the contents and then update the DwC archive, or return suggestions as to what the contents may be. For example, the \textit{Clouded Leopard Ridgeline} rule uses the location ID of the camera to match with a human description and uses local knowledge of the area and global knowledge of the time to infer that the image may contain a Clouded leopard.
-		
-		\lstinputlisting[caption=Drools Rule File, label=drools:dp]{Chap4/listings/rules.drl}
-		
-		These rules are very simple and only scrape the surface of the local knowledge that can be utilised, as well as how DwC archives can be effectively used to carry the data of these inferences, but it does show that Drools is a powerful rule engine and that these rules can be extended further to make full use of the knowledge base. 
-		
-		DA nodes use the same rule engine as DP nodes but rules are used for the post-processing of Darwin Core archives. For example, when a classified archive is received from a DP node, Drools is run to check if the classification matches an existing project. If it does, then it searches for those that are subscribed to the project and notifies them via their selected medium. Drools can also be used to monitor the nodes deployed in the network and check their status. Rules are run to check for archives from DC nodes and, if a node has not sent an archive in a set number of days, then administrators are informed that it may have run out of battery.
-		
-		More importantly, rules are vital for the exchange of knowledge between nodes in the network. If a user classifies an archive on a DA node, then rules are fired that identify the DP node that sent it and update its knowledge base so that the template it uses matches the updated classification.
-		
+					
 	\section{Conclusion}
 		In this chapter we have explained the architecture we have developed to allow knowledge to be encoded and utilised within a wireless sensor network. Using tiers of nodes, with varying levels of knowledge-processing capabilities, we can process observations within the network and deliver data that has, where possible, already been classified. Working as more of a subscribe-push method, users do not have to check a base station for new data, instead it is sent to them if it has been found to be part of a project they are subscribed to. If not, then the data is accessible to all users of the network through a web interface.
 		
