@@ -108,7 +108,17 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	The chance of camera trigger was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561. A random number is generated every and compared to this, if the value is fewer than or equal to the chance, then an observation is captured.
 
 \section{Results}
-	In this section, we explain the results for each scenario that we detailed in Section \ref{sim:imp}. Each scenario was run 100 times and the results of each run is written to a CSV file. We then process all of the CSV files for each scenario and extract the duration for all observations, as well as metrics for observations marked as interesting and empty. As expected, the NKALL is a slightly faster approach than LKALL but this does not include processing. LKALL is the best solution for WSNs where all nodes are not easily accessible and the lifetime of the network must be maximised.  Although the duration is slightly higher, the time for interesting images shows that prioritisation for interesting images takes place right at the edge of the network, delivering them faster than the NKLK scenario where only routing nodes have the knowledge processing capabilities to detect an interesting observation and prioritise it towards the central node.
+
+	In this section, we explain the results for each scenario that we detailed in Section \ref{sim:imp}. Each scenario was run 100 times, with each run lasting a six month deployment, and the results of each run is written to a CSV file. We then process all of the CSV files for each scenario and extract the duration for all observations, as well as metrics for observations marked as interesting and empty. Table \ref{tab:observ_int} and \ref{tab:observ_empty} show the transmission data for each scenario, aside from NK-ALL, and it is clear that HK-ALL is the most effective implementation. With knowledge on every node, HK-ALL is able to detect interesting observations right at the edge of the network and prioritise them through every node, giving an average duration of 83 hours for interesting observations. Perhaps more important is that 90.92\% of all interesting observations were true positives.
+
+	As knowledge is pushed out further to the edge of the network, the trend of reduced transmission time is clear and there is a significant drop in the duration of interesting observations. Another pattern to be observed here is that the percentage of empty images received by the central node decreased when there is more knowledge-processing capabilities, also meaning that the percentage of interesting observations increases.
+
+	With the increase of interesting observations there is an increase in the ratio of TP to FP images. A network with solely HK nodes results in nearly 91\% of all interesting images as TP. Although our implementation of K-HAS is only short of this by 1.8\%. This difference is minimal when the number of long life LK nodes are taken into account. These simulations prove that K-HAS is the best solution when many of the sensing nodes are placed in locations that are not easily accessible, allowing for a lifetime of 4 months or more; using the more capable HK nodes would mean that batteries would need to be replaced every 3 weeks. Relating this to our motivating scenario, nodes deployed more than a kilometre into thick rainforest are not easily accessible.
+
+
+
+
+	
 	
 \begin{table}[h]\footnotesize
 \centering
@@ -116,11 +126,11 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 \hline
 Mode  & Avg. Duration \\
 \hline
-NKALL & 597 \\
+NKALL & 730 \\
+NKLK  & 539 \\
 LKALL & 649 \\
-NKLK  & 714 \\
 LKHK  & 454 \\
-HKALL & 405 \\
+HKALL & 475 \\
 \hline
 \end{tabular}
 \caption{Simulation Results}\label{tab:observ}
@@ -129,12 +139,12 @@ HKALL & 405 \\
 \begin{table}[h]\footnotesize
 \begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
 \hline
-Mode & Avg. Interesting Duration & \% Interesting & Avg. TP Duration & \% TP &	Avg. FP Duration & \% FP \\
-\hline
-LKALL & 523 & 22.46 & 113 & 27.85 & & \\
-NKLK & 667 & 21.22 & 269 & 13.71 & & \\
-LKHK & 227 & 25.85 & 188 & 88.61 & 532 & 11.39 \\
-HKALL & 79 & 29.99 & 18 & 89.26 & 579 & 10.74 \\
+Mode & Avg. Interesting Duration & \% Interesting & \% TP & \% FP \\
+\hli
+NKLK & 753 & 21.36 & 15.41 & \\
+LKALL & 523 & 22.46 & & \\
+LKHK & 257 & 27.36 & 89.1 & 10.9 \\
+HKALL & 83 & 33.19 & 90.92 & 9.08 \\
 \hline
 \end{tabularx}
 \caption{Simulation Results for Interesting Observations}\label{tab:observ_int}
@@ -143,12 +153,12 @@ HKALL & 79 & 29.99 & 18 & 89.26 & 579 & 10.74 \\
 \begin{table}[h]\footnotesize
 \begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
 \hline
-Mode & Avg. Empty Duration & \% Empty & Avg. TN Duration & \% TN & Avg. FP Duration & \% FP  \\
+Mode & Avg. Empty Duration & \% Empty & \% TN & \% FN \\
 \hline
-LKALL & 800 & 77 & & & & \\
-NKLK & 727 & 78.78 & &  & & \\
-LKHK & 534 & 74.15 & 549 & 95.76 & 186 & 4.24 \\
-HKALL & 534 & 74.15 & 549 & 95.76 & 186 & 4.24 \\
+NKLK & 834 & 78.64 & &  \\
+LKALL & 686 & 77.54 & & \\
+LKHK & 646 & 72.64 & 95.51 & 4.49 \\
+HKALL & 670 & 66.81 & 93.69 & 6.31 \\
 \hline
 \end{tabularx}
 \caption{Simulation Results for Empty Observations}\label{tab:observ_empty}
