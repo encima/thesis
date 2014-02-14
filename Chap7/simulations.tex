@@ -9,28 +9,55 @@ A 2D (or 3D) space is used to display the grid and the simulation is run within 
 
 The rest of this chapter is structured as follows. Section 2 describes the implementation of the network. Section 3 outlines the results and Section 4 compares these with LORIS and the current solution in our motivating scenario. Section 5 concludes our findings and highlights areas that require further experimentation.
 
-\section{K-HAS Implementation}
-As described in Chapter \ref{chap:arch}, K-HAS consists of three tiers: Data Collection, Data Processing and Data Aggregation. The DC tier focusses on capturing sensed data, performing basic processing and routing sensed data to the DP tier. The DP tier has more knowledge-processing capabilities and nodes are responsible for processing sensed data. Using a rule engine and a dynamic knowledge base, DP nodes process more than just the metadata of sensed data in order to create a classification. DP nodes have a direct connection to the DA node, which is the the endpoint in the K-HAS network, an Internet connected node that stores all sensed data from the network and acts as the central knowledge base.
+\section{Implementation}\label{sim:imp}
+	While the aim of these simulations were to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the optimal solution, in terms of delivery of interesting data and in terms of network lifetime. The ideal solution would be to attach DP nodes to all cameras in the network, however the short battery life means that replacements would be made as often as the current manual solution. Because only one of these simulations matches K-HAS, the terminology used in this chapter is more generic and focussed on nodes that have knowledge but do not match our definitions of DP and DC nodes. Instead we use the term \textit{sensing node} to define a node that is capable of capturing an observation, \textit{routing node} to define a node that processes the data from sensing nodes and \textit{central node} to define the end point of the network, where data is made available to users. While these definitions are similar to DC, DP and DA nodes the key difference is that sensing and routing nodes possess have varying levels of knowledge processing capabilities, explained below:
+	
+	\begin{itemize}
+		\item No Knowledge (NK): The node possesses no knowledge processing capabilities.
+		\item Low Knowledge (LK): The node possesses basic knowledge processing capabilities and contains a static rule base.
+		\item High Knowledge (HK): The node possesses high knowledge processing capabilities and is able to process data, metadata and use a dynamic rule base.
+	\end{itemize}
+	
+	Using the results of the image processing application developed, explained in Section \ref{tech:sf:triton}, for the details of HK processing. Which means that it has 82\% accuracy at detecting TP images, with a 97\% accuracy for finding TN images. Nodes with LK do not have the ability to mark an image as empty, but they can mark an image as interesting. The results we have from out rule base are not as extensive as the results we have for Triton, so instead we use a predefined 10\% accuracy for detecting TPs. The scenarios we have implemented cover the possible combinations of HK, LK and NK, which we have outlined below:
+	
+	\begin{itemize}
+		\item NK-ALL: Sensing and routing nodes possess no knowledge processing capabilities.
+		\item LK- ALL: Sensing and routing nodes possess low knowledge processing capabilities.
+		\item NK-LK: Sensing nodes possess no knowledge processing and routing nodes have low knowledge.
+		\item LK-HK (K-HAS): Sensing nodes have low knowledge and routing nodes possess high knowledge.
+		\item HK-ALL: Sensing and routing nodes have high processing capabilities.
+	\end{itemize}
 
-K-HAS was originally intended to be deployed around Danau Girang and, over the course of three years, we have collected several thousand images and local knowledge interviews in order to configure K-HAS before deployment. Because of this, the data we have collected was used to create a deployment of K-HAS using scientific observations, in order to fit with our motivating scenario. LORIS had already been deployed to capture scientific observations, so this made a comparison of the three (current manual solution, LORIS and K-HAS simulation) possible and because we already had metrics on areas of the network such as battery life, transmission time of a Darwin Core archive and processing time.
+%\section{K-HAS Implementation}
+%As described in Chapter \ref{chap:arch}, K-HAS consists of three tiers: Data Collection, Data Processing and Data Aggregation. The DC tier focusses on capturing sensed data, performing basic processing and routing sensed data to the DP tier. The DP tier has more knowledge-processing capabilities and nodes are responsible for processing sensed data. Using a rule engine and a dynamic knowledge base, DP nodes process more than just the metadata of sensed data in order to create a classification. DP nodes have a direct connection to the DA node, which is the the endpoint in the K-HAS network, an Internet connected node that stores all sensed data from the network and acts as the central knowledge base.
+
+%K-HAS was originally intended to be deployed around Danau Girang and, over the course of three years, we have collected several thousand images and local knowledge interviews in order to configure K-HAS before deployment. Because of this, the data we have collected was used to create a deployment of K-HAS using scientific observations, in order to fit with our motivating scenario. LORIS had already been deployed to capture scientific observations, so this made a comparison of the three (current manual solution, LORIS and K-HAS simulation) possible and because we already had metrics on areas of the network such as battery life, transmission time of a Darwin Core archive and processing time.
 
 Before implementing, we designed the agents required based largely on the existing ontology. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS, we used these to create properties for each transmission medium that could be used by each node object.
 
 We also needed to create an object to represent the DwC archives, a Drools REST API had been implemented to work with the LORIS web interface, and much of the DwC archive code was reusable within RePast. 
 
-The structure of the simulation is shown below. Network builder instantiates all the nodes, places them on randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection, depicted by a line between the node. The simulation can be run in one of two modes: random or based on a 2010 DG deployment. 
+The structure of the simulation is shown below. Network builder instantiates all the nodes, places them on randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection, depicted by a line between the node. The simulation uses metrics extracted from the images taken at Danau Girang, but the chance of an image being captured at a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. Figure \ref{fig:sim} shows an example simulation of the LK-HK scenario.
 
-DG mode means that it models a 6 month deployment in Danau Girang from 2010. All images taken in that time had the time they were taken, the original camera ID and the size of each image recorded into a CSV file. This file is read by the Network Builder and the contents are provided to each node. The first tick starts at the same time as the first image is taken. The number of deployed nodes matches the number of deployed cameras and, upon each tick, they check whether an image was taken by them at that tick. If so, an image is captured, archived and forwarded to the nearest DP node. This process runs, using the scheduler in RePast, for the six month deployment and the details of each archive (time captured, size, route taken, time taken to reach DA node) is saved into a CSV file when it reaches the DA node. Once the six month deployment has run, the simulation can either stop or continue randomly.
 
-The random mode uses metrics extracted from the images taken at Danau Girang, but the chance of an image being captured at a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. 
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/khas_sim}
+	\caption{K-HAS Simulation}
+	\label{fig:sim}
+	\end{figure}
+
+%DG mode means that it models a 6 month deployment in Danau Girang from 2010. All images taken in that time had the time they were taken, the original camera ID and the size of each image recorded into a CSV file. This file is read by the Network Builder and the contents are provided to each node. The first tick starts at the same time as the first image is taken. The number of deployed nodes matches the number of deployed cameras and, upon each tick, they check whether an image was taken by them at that tick. If so, an image is captured, archived and forwarded to the nearest DP node. This process runs, using the scheduler in RePast, for the six month deployment and the details of each archive (time captured, size, route taken, time taken to reach DA node) is saved into a CSV file when it reaches the DA node. Once the six month deployment has run, the simulation can either stop or continue randomly.
+
+
 
 \begin{itemize}
 \item Network Builder
 \item Node
 	\begin{itemize}
-	\item Data Collection
-	\item Data Processing
-	\item Data Aggregation
+	\item Sensing
+	\item Routing
+	\item Central
 	\end{itemize}
 \item Darwin Core
 	\begin{itemize}
@@ -49,29 +76,29 @@ Upon each capture, and based on the `time' of day, images are created, given a r
 When an archive is sent to the DP node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 143 seconds (ticks). To keep the classifications as general as possible, so that the simulation applies to any WSN for scientific observations, archives are not classified down to the species level, they are marked as \textit{interesting} or \textit{empty} and then forwarded to the DA node.
 
 \subsection{Routing}
-The routing protocol used by K-HAS needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. The approach we use a modification the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{bg:rp}. A cost is assigned to each node, based on how far they are from the DA node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a base station.
+The routing protocol used by K-HAS needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. The approach we use a modification the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{bg:rp}. A cost is assigned to each node, based on how far they are from the central node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a base station. This protocol is used in all scenarios.
 
 In K-HAS, DC nodes cannot connect directly to a DA node, because processing would not take place. K-HAS MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
 
 \subsubsection{Discovery}
-	Discovery begins at each DA node, scanning nodes in range for DP nodes and sending a broadcast packet with a cost of 0 to inform them that they are within range of a DA node which, in our implementation, uses Wi-Fi. Once received, DP nodes increment the count and forward the packet to any DC nodes within range of them, where we use the range of Digimesh. We found that this method overloaded the DP nodes and all DC nodes within range would connect to the first DP node they receive the broadcast from. We then implemented a method, called \textit{load balancing}, which uses the DC nodes connected to a DP node to calculate whether it should offload new nodes to a neighbouring DP node.
+	Discovery begins at each central node, scanning nodes in range for routing nodes and sending a broadcast packet with a cost of 0 to inform them that they are within range of a central node which, in our implementation, uses Wi-Fi. Once received, routing nodes increment the count and forward the packet to any routing nodes within range of them, where we use the range of Digimesh. We found that this method overloaded the routing nodes and all sensing nodes within range would connect to the first routing node they receive the broadcast from. We then implemented a method, called \textit{load balancing}, which uses the sensing nodes connected to a routing node to calculate whether it should offload new nodes to a neighbouring routing node.
 	
-	The maximum connections a DP node can have is determined by the total number of DC nodes in the network divided by the total number of DP nodes, which is held in the knowledge base of the DA node. Once a DP node has the maximum number of connections allowed, it starts to offload to a neighbouring DP node that is also in range of the DC node requesting a connection. If there are no neighbouring nodes then it simply goes over the maximum number of connections allowed, to save DC nodes being left with nowhere to send their data.
+	The maximum connections a routing node can have is determined by the total number of sensing nodes in the network divided by the total number of routing nodes, which is held in the knowledge base of the central node. Once a routing node has the maximum number of connections allowed, it starts to offload to a neighbouring routing node that is also in range of the sensing node requesting a connection. If there are no neighbouring nodes then it simply goes over the maximum number of connections allowed, to save sensing nodes being left with nowhere to send their data.
 	
-	If the DC node that receives the broadcast does not have an existing route to a DA node, or the cost of the current route is higher than the received route, it adds an edge to the DP node, increments the count and forwards it to all nodes in range. This process continues until the broadcast reaches the edge of the network. Nodes do not have global knowledge of the route to the DA node, only of their neighbour with the lowest cost.
+	If the sensing node that receives the broadcast does not have an existing route to a central node, or the cost of the current route is higher than the received route, it adds an edge to the routing node, increments the count and forwards it to all nodes in range. This process continues until the broadcast reaches the edge of the network. Nodes do not have global knowledge of the route to the central node, only of their neighbour with the lowest cost.
 	
 	This phase can be repeated throughout the course of the deployment, simply by scheduling it as an event to occur every \textit{n} ticks. However, the simulation currently only uses the discovery phase at the beginning of the deployment.
 	
 \subsubsection{Transmission}
 	Once the discovery phase has been completed, providing nodes are within range of the DA node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
 	
-	In order to manage transmissions, DC nodes have a \textit{SendState} object that contains the next archive to send, the time to send it and whether it is currently sending. This is used to determine what operations to perform, once an archive has been sent, it is delete from the SendState and the sending flag is set to false. A new archive is then added and sent when the opportunity arises.
+	In order to manage transmissions, sensing nodes have a \textit{SendState} object that contains the next archive to send, the time to send it and whether it is currently sending. This is used to determine what operations to perform, once an archive has been sent, it is delete from the SendState and the sending flag is set to false. A new archive is then added and sent when the opportunity arises.
 	
-	When a DP node receives the archive, it begins processing and we have implemented both sending and processing as serial processes. DP nodes use the SendState as well, but they do not add any archive, they add an archive once it has been processed and they then select the oldest archive that has been classified as interesting, providing that an archive is not already waiting to be sent. The archive stores information about the route it takes, recording every hop, as well as the time it took from capture to DA node.
+	When a routing node receives the archive, it begins processing and we have implemented both sending and processing as serial processes. Routing nodes use the SendState as well, but they do not add any archive, they add an archive once it has been processed and they then select the oldest archive that has been classified as interesting, providing that an archive is not already waiting to be sent. The archive stores information about the route it takes, recording every hop, as well as the time it took from capture to central node.
 	
 	Scheduled sending events run every thousand ticks, which is configurable, to check the sending state of the node and send any archives in the SendState. The node then waits for the number of ticks that it will take in order to transmit the archive.
 	
-	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each DA node are iterated over and written to a CSV file, with details like the path it took, total transmission time and time of capture.
+	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each central node are iterated over and written to a CSV file, with details like the path it took, total transmission time and time of capture.
 	
 \subsection{Capture}
 	Using the existing data collected from Danau Girang, we calculated how often a camera triggers in a six month deployment, as well as how often the observation contained interesting content. 
@@ -81,44 +108,51 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	The chance of camera trigger was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561. A random number is generated every and compared to this, if the value is fewer than or equal to the chance, then an observation is captured.
 
 \section{Results}
-	As previously explained, the simulation runs in a random mode, or using data from an existing deployment. We added a property that ensured each simulation only ran for 15,552,000 seconds, simulating a six month deployment.
+	In this section, we explain the results for each scenario that we detailed in Section \ref{sim:imp}. Each scenario was run 100 times and the results of each run is written to a CSV file. We then process all of the CSV files for each scenario and extract the duration for all observations, as well as metrics for observations marked as interesting and empty. As expected, the NKALL is a slightly faster approach than LKALL but this does not include processing. LKALL is the best solution for WSNs where all nodes are not easily accessible and the lifetime of the network must be maximised.  Although the duration is slightly higher, the time for interesting images shows that prioritisation for interesting images takes place right at the edge of the network, delivering them faster than the NKLK scenario where only routing nodes have the knowledge processing capabilities to detect an interesting observation and prioritise it towards the central node.
 	
-	Before any experiments were run, we calculated the transmission time for the current solution at Danau Girang. Using the creation date of each image, and the date that the SD card was collected, we found the average number of hours between capture and being received at the field centre, which was 491 hours. It should be noted that this time does not include the upload or processing of each archive, but there was no accurate way of calculating this, and it does not distinguish between empty and interesting observations.
-	
-	 We performed one hundred runs in which the simulation recorded between 57,000 and 60,000 observations in each run. At the end of each run, a CSV file is written with the details of each observation that is stored on every DA node; it does not take undelivered observations into account. After counting the observations, we calculate the total interesting images and their average time to be delivered. The runs resulted in an average transmission time of 49.3 hours for interesting observations and 2043 hours for empty observations. Figure \ref{fig:sim} shows the view of the simulation, with a list of the properties that can be set.
-	
-	\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.70\textwidth]{Chap7/figures/khas_sim}
-	\caption{K-HAS Simulation}
-	\label{fig:sim}
-	\end{figure}
-	
-	
-\begin{sidewaystable}[htp]
-%\footnotesize\setlength{\tabcolsep}{2.5pt}
-\begin{tabular}{l@{\hspace{6pt}} *{22}{c}}
-\toprule
+\begin{table}[h]\footnotesize
+\centering
+\begin{tabular}{| c | c | c | }
 \hline
-\bfseries Mode & \textbf{Avg. Total Duration} & \textbf{Avg. TP Duration} & \textbf{\% TP Received} & \textbf{Avg. FP Duration} & \textbf{\% FP Received}\\ 
+Mode  & Avg. Duration \\
 \hline
-\midrule
-\bfseries NK-ALL
-& 597 &  &  &  &  \\
-\bfseries LK-ALL
-& 677 & 133 & 27.3 &  & \\
-\bfseries HK-ALL
-& 491 & 24 & 92 & 785 & 7.1\\
-\bfseries NK-LK
-& 749 & 292 & 13.9 &  &\\
-\bfseries LK-HK
-& 687 & 18 & 17.1 & 714 & 82.9\\
-\bottomrule
-\addlinespace
+NKALL & 597 \\
+LKALL & 649 \\
+NKLK  & 714 \\
+LKHK  & 454 \\
+HKALL & 405 \\
+\hline
 \end{tabular}
 \caption{Simulation Results}\label{tab:observ}
-\end{sidewaystable}
+\end{table}
 
+\begin{table}[h]\footnotesize
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
+\hline
+Mode & Avg. Interesting Duration & \% Interesting & Avg. TP Duration & \% TP &	Avg. FP Duration & \% FP \\
+\hline
+LKALL & 523 & 22.46 & 113 & 27.85 & & \\
+NKLK & 667 & 21.22 & 269 & 13.71 & & \\
+LKHK & 227 & 25.85 & 188 & 88.61 & 532 & 11.39 \\
+HKALL & 79 & 29.99 & 18 & 89.26 & 579 & 10.74 \\
+\hline
+\end{tabularx}
+\caption{Simulation Results for Interesting Observations}\label{tab:observ_int}
+\end{table}
+
+\begin{table}[h]\footnotesize
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
+\hline
+Mode & Avg. Empty Duration & \% Empty & Avg. TN Duration & \% TN & Avg. FP Duration & \% FP  \\
+\hline
+LKALL & 800 & 77 & & & & \\
+NKLK & 727 & 78.78 & &  & & \\
+LKHK & 534 & 74.15 & 549 & 95.76 & 186 & 4.24 \\
+HKALL & 534 & 74.15 & 549 & 95.76 & 186 & 4.24 \\
+\hline
+\end{tabularx}
+\caption{Simulation Results for Empty Observations}\label{tab:observ_empty}
+\end{table}
 	
 \section{Improvements}
 Although the simulations do show an improvement over the current implementation, there are features that could be added to ensure that the simulation models a real-world implementation as closely as possible. Currently, the processing time of DP nodes is based on the average time to process an archive, using a random time within a range would make this less static. 

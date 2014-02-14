@@ -119,7 +119,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 			\end{figure}
 
 \section{Software}
-	\subsection{Triton}
+	\subsection{Triton} \label{tech:sf:triton}
 		Triton is a C++ program that makes use of the Open Computer Vision (OpenCV) library for performing popular image processing functions. Triton takes in a set of images, combines them and builds a background model. Using this model, the foreground is extracted from the image and this is scanned for objects. If an object is found, it is extracted to a separate and saved as a black and white template, to minimise space and assist with future classifications.
 		
 		Primarily, we developed this tool to detect the huge number of empty images captured around Danau Girang, due to trees falling, movement of the Sun, fast animals or dirt on the lens. However, Triton proved to be quite effective when finding images of interest and it was modified to be used with our sensors. In this section, we explain how Triton was tested and compared with human observations. To ensure a valid comparison, we also compared both results to a random classifier.
@@ -138,8 +138,8 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 		\begin{description}
 			\item True positive: An ROI is extracted that contains the animal in the set.
 			\item False positive: An ROI is extracted that contains nothing of interest.
-			\item True negative: A false trigger is correctly identified and no ROI is extracted.
-			\item False negative: An image with interesting contents is classified as a false trigger and no ROI is extracted.
+			\item True negative: A camera is triggered with nothing of interest in the image and no ROI is extracted.
+			\item False negative: An image with interesting contents has no ROI extracted.
 		\end{description}
 		
 		The processed images are then compared with our manual findings. The accuracy of our application is calculated by the following equation:
