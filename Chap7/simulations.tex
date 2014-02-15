@@ -113,28 +113,14 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 
 	As knowledge is pushed out further to the edge of the network, the trend of reduced transmission time is clear and there is a significant drop in the duration of interesting observations. Another pattern to be observed here is that the percentage of empty images received by the central node decreased when there is more knowledge-processing capabilities, also meaning that the percentage of interesting observations increases.
 
-	With the increase of interesting observations there is an increase in the ratio of TP to FP images. A network with solely HK nodes results in nearly 91\% of all interesting images as TP. Although our implementation of K-HAS is only short of this by 1.8\%. This difference is minimal when the number of long life LK nodes are taken into account. These simulations prove that K-HAS is the best solution when many of the sensing nodes are placed in locations that are not easily accessible, allowing for a lifetime of 4 months or more; using the more capable HK nodes would mean that batteries would need to be replaced every 3 weeks. Relating this to our motivating scenario, nodes deployed more than a kilometre into thick rainforest are not easily accessible.
+	With the increase of interesting observations there is an increase in the ratio of TP to FP images. A network with solely HK nodes results in nearly 91\% of all interesting images as TP. Although our implementation of K-HAS is only short of this by 1.8\%. This difference is minimal when the number of long life LK nodes are taken into account. These simulations prove that K-HAS is the best solution when many of the sensing nodes are placed in locations that are not easily accessible, allowing for a lifetime of 4 months or more; using the more capable HK nodes would mean that batteries would need to be replaced every 3 weeks. Relating this to our motivating scenario, nodes deployed more than a kilometre into thick rainforest are not easily accessible. 
 
-
-
-
+	HK-ALL delivers more interesting images in a 6 month deployment and the percentage of empty images is very similar to LKHK, this is probably due to the fact that LK nodes are unable to detect empty images but both scenarios have empty images passing through HK nodes. For time critical WSN deployments with constant power availability, such as flood monitoring in a city, HK-ALL is the best solution as transmission methods faster than Zigbee can be used to reduce the speeds further, but it is clear that HK-ALL is the best scenario for rapid delivery of interesting observations.
 	
-	
-\begin{table}[h]\footnotesize
-\centering
-\begin{tabular}{| c | c | c | }
-\hline
-Mode  & Avg. Duration \\
-\hline
-NKALL & 730 \\
-NKLK  & 539 \\
-LKALL & 649 \\
-LKHK  & 454 \\
-HKALL & 475 \\
-\hline
-\end{tabular}
-\caption{Simulation Results}\label{tab:observ}
-\end{table}
+	However, not every WSN has access to constant power and some are deployed in areas that are not easily reachable by humans, such as underwater, rainforests or around volcanoes. LKHK is much more suited to these scenarios as the majority of the nodes have LK with a long battery life and only a small number of HK nodes are required.
+
+ 
+
 
 \begin{table}[h]\footnotesize
 \begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
