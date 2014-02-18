@@ -115,6 +115,13 @@
 		DA nodes use the same rule engine as DP nodes but rules are used for the post-processing of Darwin Core archives. For example, when a classified archive is received from a DP node, Drools is run to check if the classification matches an existing project. If it does, then it searches for those that are subscribed to the project and notifies them via their selected medium. Drools can also be used to monitor the nodes deployed in the network and check their status. Rules are run to check for archives from DC nodes and, if a node has not sent an archive in a set number of days, then administrators are informed that it may have run out of battery.
 		
 		More importantly, rules are vital for the exchange of knowledge between nodes in the network. If a user classifies an archive on a DA node, then rules are fired that identify the DP node that sent it and update its knowledge base so that the template it uses matches the updated classification.
+		
+		\subsection{Existing Data}
+			Throughout our visits to Danau Girang, we collected local knowledge through field work and interviews with the researchers based at Danau Girang. As well as this, we collected classifications made by the researchers for images that had been taken during camera deployment. Using these data, we have extracted patterns in animal movements in order to create some basic rules for the DC and DP nodes. In this section, we will describe the data we have and the methods used to extract rules.
+			
+			\subsubsection{Semi Structured Interviews}
+			
+			\subsubsection{Classified Images}
 
 		
 	\section{Conclusion}\label{loris:conc}
