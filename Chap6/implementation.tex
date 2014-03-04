@@ -133,9 +133,22 @@
 			
 			Although qualitative analysis is seen as subjective \ref{REFERENCE}, this method allowed us to gain knowledge we would not have learnt from our short time at the field centre, these face to face sessions gave us insight into patterns and observations that had been made by researchers who have been based at Danau Girang for many years. An example of this is that the global knowledge of the sleeping patterns for Clouded Leopards is that they are nocturnal, however, the camera trapping project has shown that their sleeping patterns around Danau Girang do not support this and they have been seen throughout the day and night. This could be due to the human impact, availability of prey or even the climate of the area, but, if researchers had just used this global knowledge then they would have seen fewer Clouded Leopards. Similarly, if we had used a rule to only look for Clouded Leopards at night, then a lot of images would have been misclassified. While this piece of local knowledge cannot be encoded into rules, but other excerpts can be.
 			
-			
 			\subsubsection{Classified Images}
-			When images are manually collected at Danau Girang, researchers process each image set and they have recently been recording the classifications. However, these classifications are only being recorded for currently ongoing projects and other images are ignored. 
+			When images are manually collected at Danau Girang, researchers process each image set and they have recently been recording the classifications. However, these classifications are only being recorded for currently ongoing projects and other images are ignored. During one of our visits, we collected a CSV file of 2650 confirmed classifications made by researchers. The data had not been cleaned and multiple users had used different names for the same species, we cleaned the data manually and matched it with the images in our database.
+			We then used the classifications for each species to determine any patterns by analysing the details recorded for each observation, which are listed below:
+			\begin{itemize}
+				\item Time
+				\item Date
+				\item Location
+				\item Temperature
+				\item Moonphase
+				\item Classification
+			\end{itemize}
+			
+			SQL queries provided these details for each species and we recorded patterns that could be identified. For example, if a Samba Deer was only spotted between the hours of 7pm and 4am then we could write a rule that the species is nocturnal. More detailed rules can be created if there are patterns across multiple details. A species that is only spotted in two of the twenty sites between the hours of 7pm and 4am means that nodes with local knowledge can make accurate classifications without the need for image processing. However, these rules are based on large amounts of data collected from an active, or previous, deployment. DC nodes in their early deployment stages would not have the data to make such detailed rules.
+			
+			Using the Weka package, we constructed a J48 decision tree to extract results from the result. 
+			
 
 		
 	\section{Conclusion}\label{loris:conc}
