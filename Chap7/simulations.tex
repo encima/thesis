@@ -5,12 +5,12 @@ Using RePast, a java-based network simulation tool, we created a network to emul
 
 Agents are created, using the RePast SDK and Java classes are used to manipulate their behaviour. Simple networks may only contain basic agents with only a few variations from those provided by RePast. However, for more complex networks, a hierarchy of agents is required and Java's inheritance can then be used create subclasses of an agent.
 
-A 2D (or 3D) space is used to display the grid and the simulation is run within Repast's own GUI, that provides functionality such as editing the properties of classes, integrating with Matlab, taking screenshots and saving different configurations of the same network.
+A 2D space is used to display the grid and the simulation is run within Repast's own GUI, that provides functionality such as editing the properties of classes, integrating with Matlab, taking screenshots and saving different configurations of the same network.
 
 The rest of this chapter is structured as follows. Section 2 describes the implementation of the network. Section 3 outlines the results and Section 4 compares these with LORIS and the current solution in our motivating scenario. Section 5 concludes our findings and highlights areas that require further experimentation.
 
 \section{Implementation}\label{sim:imp}
-	While the aim of these simulations were to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the optimal solution, in terms of delivery of interesting data and in terms of network lifetime. The ideal solution would be to attach DP nodes to all cameras in the network, however the short battery life means that replacements would be made as often as the current manual solution. Because only one of these simulations matches K-HAS, the terminology used in this chapter is more generic and focussed on nodes that have knowledge but do not match our definitions of DP and DC nodes. Instead we use the term \textit{sensing node} to define a node that is capable of capturing an observation, \textit{routing node} to define a node that processes the data from sensing nodes and \textit{central node} to define the end point of the network, where data is made available to users. While these definitions are similar to DC, DP and DA nodes the key difference is that sensing and routing nodes possess have varying levels of knowledge processing capabilities, explained below:
+	While the aim of these simulations were to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the optimal solution, in terms of delivery of interesting data and in terms of network lifetime. The ideal solution would be to attach DP nodes to all cameras in the network, however the short battery life means that replacements would be made as often as the current manual solution. Because only one of these simulations matches K-HAS, the terminology used in this chapter is more generic and focussed on nodes that have knowledge but do not match our definitions of DP and DC nodes. Instead we use the term \textit{sensing node} to define a node that is capable of capturing an observation, \textit{routing node} to define a node that processes the data from sensing nodes and \textit{central node} to define the end point of the network, where data is made available to users. While these definitions are similar to sensing, routing and central nodes the key difference is that sensing and routing nodes possess have varying levels of knowledge processing capabilities, explained below:
 	
 	\begin{itemize}
 		\item No Knowledge (NK): The node possesses no knowledge processing capabilities.
@@ -18,7 +18,7 @@ The rest of this chapter is structured as follows. Section 2 describes the imple
 		\item High Knowledge (HK): The node possesses high knowledge processing capabilities and is able to process data, metadata and use a dynamic rule base.
 	\end{itemize}
 	
-	Using the results of the image processing application developed, explained in Section \ref{tech:sf:triton}, for the details of HK processing. Which means that it has 82\% accuracy at detecting TP images, with a 97\% accuracy for finding TN images. Nodes with LK do not have the ability to mark an image as empty, but they can mark an image as interesting. The results we have from out rule base are not as extensive as the results we have for Triton, so instead we use a predefined 10\% accuracy for detecting TPs. The scenarios we have implemented cover the possible combinations of HK, LK and NK, which we have outlined below:
+	The scenarios we have implemented cover the possible combinations of HK, LK and NK, which we have outlined below:
 	
 	\begin{itemize}
 		\item NK-ALL: Sensing and routing nodes possess no knowledge processing capabilities.
@@ -27,11 +27,6 @@ The rest of this chapter is structured as follows. Section 2 describes the imple
 		\item LK-HK (K-HAS): Sensing nodes have low knowledge and routing nodes possess high knowledge.
 		\item HK-ALL: Sensing and routing nodes have high processing capabilities.
 	\end{itemize}
-
-%\section{K-HAS Implementation}
-%As described in Chapter \ref{chap:arch}, K-HAS consists of three tiers: Data Collection, Data Processing and Data Aggregation. The DC tier focusses on capturing sensed data, performing basic processing and routing sensed data to the DP tier. The DP tier has more knowledge-processing capabilities and nodes are responsible for processing sensed data. Using a rule engine and a dynamic knowledge base, DP nodes process more than just the metadata of sensed data in order to create a classification. DP nodes have a direct connection to the DA node, which is the the endpoint in the K-HAS network, an Internet connected node that stores all sensed data from the network and acts as the central knowledge base.
-
-%K-HAS was originally intended to be deployed around Danau Girang and, over the course of three years, we have collected several thousand images and local knowledge interviews in order to configure K-HAS before deployment. Because of this, the data we have collected was used to create a deployment of K-HAS using scientific observations, in order to fit with our motivating scenario. LORIS had already been deployed to capture scientific observations, so this made a comparison of the three (current manual solution, LORIS and K-HAS simulation) possible and because we already had metrics on areas of the network such as battery life, transmission time of a Darwin Core archive and processing time.
 
 Before implementing, we designed the agents required based largely on the existing ontology. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS, we used these to create properties for each transmission medium that could be used by each node object.
 
@@ -46,9 +41,6 @@ The structure of the simulation is shown below. Network builder instantiates all
 	\caption{K-HAS Simulation}
 	\label{fig:sim}
 	\end{figure}
-
-%DG mode means that it models a 6 month deployment in Danau Girang from 2010. All images taken in that time had the time they were taken, the original camera ID and the size of each image recorded into a CSV file. This file is read by the Network Builder and the contents are provided to each node. The first tick starts at the same time as the first image is taken. The number of deployed nodes matches the number of deployed cameras and, upon each tick, they check whether an image was taken by them at that tick. If so, an image is captured, archived and forwarded to the nearest DP node. This process runs, using the scheduler in RePast, for the six month deployment and the details of each archive (time captured, size, route taken, time taken to reach DA node) is saved into a CSV file when it reaches the DA node. Once the six month deployment has run, the simulation can either stop or continue randomly.
-
 
 
 \begin{itemize}
@@ -72,13 +64,13 @@ The structure of the simulation is shown below. Network builder instantiates all
 \subsection{Darwin Core}
 The Darwin Core class represents a DwC archive, encapsulation Identification, Location, Occurrence, Image and Species. The images we have collected from Danau Girang were processed to find details such as the average size when taking at night and day, how often an average camera triggers and the percentage of images with animal content. These data were then used to specify how often a randomly placed node should capture an observation per tick.
 
-Upon each capture, and based on the `time' of day, images are created, given a random size based on the maximum and minimum size found in the 120,000 images collected from DG and the sum of the images is used to calculate the size of the archive. Using this size, a DC node calculates how long the archive takes to send based on the size and the transmission rate, we assume that the rate stays constant for the duration of transmission.
-When an archive is sent to the DP node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 143 seconds (ticks). To keep the classifications as general as possible, so that the simulation applies to any WSN for scientific observations, archives are not classified down to the species level, they are marked as \textit{interesting} or \textit{empty} and then forwarded to the DA node.
+Upon each capture, and based on the `time' of day, images are created, given a random size based on the maximum and minimum size found in the 120,000 images collected from DG and the sum of the images is used to calculate the size of the archive. Using this size, a sensing node calculates how long the archive takes to send based on the size and the transmission rate, we assume that the rate stays constant for the duration of transmission.
+When an archive is sent to the routing node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 143 seconds (ticks). To keep the classifications as general as possible, so that the simulation applies to any WSN for scientific observations, archives are not classified down to the species level, they are marked as \textit{interesting} or \textit{empty} and then forwarded to the central node.
 
 \subsection{Routing}
-The routing protocol used by K-HAS needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. The approach we use a modification the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{bg:rp}. A cost is assigned to each node, based on how far they are from the central node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a base station. This protocol is used in all scenarios.
+The routing protocol used needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. The approach we use a modification the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{bg:rp}. A cost is assigned to each node, based on how far they are from the central node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a base station. This protocol is used in all scenarios.
 
-In K-HAS, DC nodes cannot connect directly to a DA node, because processing would not take place. K-HAS MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
+In our architecture, sensing nodes cannot connect directly to a central node, because processing would not take place. Our implementation of MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
 
 \subsubsection{Discovery}
 	Discovery begins at each central node, scanning nodes in range for routing nodes and sending a broadcast packet with a cost of 0 to inform them that they are within range of a central node which, in our implementation, uses Wi-Fi. Once received, routing nodes increment the count and forward the packet to any routing nodes within range of them, where we use the range of Digimesh. We found that this method overloaded the routing nodes and all sensing nodes within range would connect to the first routing node they receive the broadcast from. We then implemented a method, called \textit{load balancing}, which uses the sensing nodes connected to a routing node to calculate whether it should offload new nodes to a neighbouring routing node.
@@ -90,7 +82,7 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	This phase can be repeated throughout the course of the deployment, simply by scheduling it as an event to occur every \textit{n} ticks. However, the simulation currently only uses the discovery phase at the beginning of the deployment.
 	
 \subsubsection{Transmission}
-	Once the discovery phase has been completed, providing nodes are within range of the DA node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
+	Once the discovery phase has been completed, providing nodes are within range of the central node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
 	
 	In order to manage transmissions, sensing nodes have a \textit{SendState} object that contains the next archive to send, the time to send it and whether it is currently sending. This is used to determine what operations to perform, once an archive has been sent, it is delete from the SendState and the sending flag is set to false. A new archive is then added and sent when the opportunity arises.
 	
@@ -105,55 +97,115 @@ In K-HAS, DC nodes cannot connect directly to a DA node, because processing woul
 	
 	To calculate the count of interesting images, we processed every directory of images to extract the largest object in the foreground, using our Triton program. Once processed, we iterated through every directory, counted the total number of images and the total number of extracted images. We then calculated the average for each directory and then summed those averages divided by the total number of directories. This gave us a 20.7\% chance of an image being interesting.
 	
-	The chance of camera trigger was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561. A random number is generated every and compared to this, if the value is fewer than or equal to the chance, then an observation is captured.
-
-\section{Results}
-
-	In this section, we explain the results for each scenario that we detailed in Section \ref{sim:imp}. Each scenario was run 100 times, with each run lasting a six month deployment, and the results of each run is written to a CSV file. We then process all of the CSV files for each scenario and extract the duration for all observations, as well as metrics for observations marked as interesting and empty. Table \ref{tab:observ_int} and \ref{tab:observ_empty} show the transmission data for each scenario, aside from NK-ALL, and it is clear that HK-ALL is the most effective implementation. With knowledge on every node, HK-ALL is able to detect interesting observations right at the edge of the network and prioritise them through every node, giving an average duration of 83 hours for interesting observations. Perhaps more important is that 90.92\% of all interesting observations were true positives.
-
-	As knowledge is pushed out further to the edge of the network, the trend of reduced transmission time is clear and there is a significant drop in the duration of interesting observations. Another pattern to be observed here is that the percentage of empty images received by the central node decreased when there is more knowledge-processing capabilities, also meaning that the percentage of interesting observations increases.
-
-	With the increase of interesting observations there is an increase in the ratio of TP to FP images. A network with solely HK nodes results in nearly 91\% of all interesting images as TP. Although our implementation of K-HAS is only short of this by 1.8\%. This difference is minimal when the number of long life LK nodes are taken into account. These simulations prove that K-HAS is the best solution when many of the sensing nodes are placed in locations that are not easily accessible, allowing for a lifetime of 4 months or more; using the more capable HK nodes would mean that batteries would need to be replaced every 3 weeks. Relating this to our motivating scenario, nodes deployed more than a kilometre into thick rainforest are not easily accessible. 
-
-	HK-ALL delivers more interesting images in a 6 month deployment and the percentage of empty images is very similar to LKHK, this is probably due to the fact that LK nodes are unable to detect empty images but both scenarios have empty images passing through HK nodes. For time critical WSN deployments with constant power availability, such as flood monitoring in a city, HK-ALL is the best solution as transmission methods faster than Zigbee can be used to reduce the speeds further, but it is clear that HK-ALL is the best scenario for rapid delivery of interesting observations.
+	The chance of camera trigger was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561. A random number is generated every 1000 ticks and compared to this, if the value is fewer than or equal to the chance, then an observation is captured.
 	
-	However, not every WSN has access to constant power and some are deployed in areas that are not easily reachable by humans, such as underwater, rainforests or around volcanoes. LKHK is much more suited to these scenarios as the majority of the nodes have LK with a long battery life and only a small number of HK nodes are required.
+\subsection{Processing}
+	The types of knowledge processing capabilities that we outlined in Section \ref{sim:imp} are used in the simulation to determine which type of processing to perform on observations. The result of processing results in an image being marked as interesting or empty. The resulting outcome can be any of the following:
+		\begin{description}
+			\item True positive (TP): A region of interest is extracted that contains the animal in the set.
+			\item False positive (FP): A region of interest is extracted that contains nothing of interest.
+			\item True negative (TN): A camera is triggered with nothing of interest in the image and no region of interest is extracted.
+			\item False negative (FN): An image that is not empty is captured but no region of interest extracted.
+		\end{description}
+	
+	Using the results of the image processing application we developed, explained in Section \ref{tech:sf:triton}, for the details of HK processing. Which means that it has 82\% accuracy at detecting TP images, with a 98\% accuracy for finding TN images. Nodes with LK do not have the ability to mark an image as empty, but they can mark an image as interesting; however, the results we have from out rule base are not as extensive as the results we have for Triton, so instead we use a predefined 10\% accuracy for detecting TPs.
+	
 
+\section{Zigbee Results}
+The implementation of our architecture has been limited to using Zigbee as the transmission medium between all sensing nodes, with a Wi-Fi connection between routing nodes and a central node. Sensing nodes then send an observation when it is captured or, if it has not captured anything then it checks for a backlog every ten minutes. Sensing nodes check for new observations to process every five minutes. Each scenario was run a hundred times to simulate a 6 month duration. The time to process an observation using LK is much faster than HK, where image processing is involved in our scenario.
+
+Table \ref{tab:observ_int} shows the time for average transmission time, in hours, for interesting observations. Interesting observations consist of \textit{true positives} and \textit{false negatives}, which means that the spread of transmission times would be quite varied, because TPs would be prioritised but FPs would be treated as empty images. However, we can see that the total of interesting images almost doubles when all nodes have HK. More importantly, the difference between HK-ALL and LK-HK is fewer than 2\%, while still providing a battery advantage. With LKHK and HK-ALL, the median is much lower when compared to LK-ALL and NK-LK, due to the higher levels of knowledge processing capabilities.
+
+With the results broken down further, Table \ref{tab:observ_tp} shows the average duration for true positives and we can see that, while the median stays much the same for each scenario, average duration varies considerably. The average time for a TP to be sent is lower for LKHK than for LK-ALL, this could be due to the extra processing time for HK nodes or a processing backlog with a large number of observations. Although the duration of LK-HK is approximately twice that of LK-ALL, it does deliver more TPs, with 36.46\% of all images received being TP, compared with 8.45\% for LK-ALL.
 
 \begin{table}[h]\footnotesize
-\begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X|}
 \hline
-Mode & Avg. Interesting Duration & \% Interesting & \% TP & \% FP \\
+Scenario & Median & Mean & Standard Deviation & \% Total\\
 \hline
-NKLK & 753 & 21.36 & 15.41 & \\
-LKALL & 523 & 22.46 & & \\
-LKHK & 257 & 27.36 & 89.1 & 10.9 \\
-HKALL & 83 & 33.19 & 90.92 & 9.08 \\
+NKLK & 608 & 841.95 & 854.18 & 22.11\\
+LKALL & 127 & 652.33 & 868.09 & 24.35\\
+LKHK & 3 & 255.49 & 591.63 & 38.86\\
+HKALL & 2 & 59.57 & 320.48 & 40.78\\
 \hline
 \end{tabularx}
 \caption{Simulation Results for Interesting Observations}\label{tab:observ_int}
 \end{table}
 
 \begin{table}[h]\footnotesize
-\begin{tabularx}{\textwidth}{ |X|X|X|X|X|X|X| }
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X|}
 \hline
-Mode & Avg. Empty Duration & \% Empty & \% TN & \% FN \\
+Scenario & Median & Mean & Standard Deviation & \% Total\\
 \hline
-NKLK & 834 & 78.64 & &  \\
-LKALL & 686 & 77.54 & & \\
-LKHK & 646 & 72.64 & 95.51 & 4.49 \\
-HKALL & 670 & 66.81 & 93.69 & 6.31 \\
+NK-LK & 3 & 277.01 & 543.22 & 3.88\\
+LK-ALL & 2 & 99.73 & 353.16 & 8.45\\
+LK-HK & 3 & 207.09 & 518.11 & 36.46\\
+HK-ALL & 2 & 2.77 & 2.75 & 38.16\\
 \hline
 \end{tabularx}
-\caption{Simulation Results for Empty Observations}\label{tab:observ_empty}
+\caption{Simulation Results for True Positive Observations}\label{tab:observ_tp}
 \end{table}
+
+\begin{table}[h]\footnotesize
+\begin{tabularx}{\textwidth}{ |X|X|X|X|X|}
+\hline
+Scenario & Median & Mean & Standard Deviation & \% Total\\
+\hline
+LK-ALL & 675.5 & 945.94 & 916.11 & 15.9\\ 
+LK-HK & 683 & 989.02 & 1006.4 & 2.41\\
+HK-ALL & 553 & 885.65 & 931.19 & 2.6\\
+\hline
+\end{tabularx}
+\caption{Simulation Results for False Negative Observations}\label{tab:observ_fn}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Chap7/figures/scen_int}
+\caption{Mean Transmission Time for Interesting Observations in all Scenarios}
+\label{fig:obs_int}
+\end{figure}
 	
-\section{Improvements}
-Although the simulations do show an improvement over the current implementation, there are features that could be added to ensure that the simulation models a real-world implementation as closely as possible. Currently, the processing time of DP nodes is based on the average time to process an archive, although we know that some observations take longer to process than others and using a range based on the archive would be closer to a real world implementation.
+Nodes with HK processing power have much higher power requirements and require manual battery changes every 3 weeks, this power trade off does show that nodes of this type can deliver interesting observations significantly faster than nodes with LK. A number of WSNs will place nodes in places that are not easily accessible by humans and not expected to be visited so regularly. In our motivating scenario, some nodes could be rendered inaccessible by river floods for weeks at a time and regular human traffic can prevent animals from using those sites. The percentage of TPs delivered by LK-HK and HK-ALL are not that different, but the delivery time when using both HK and LK nodes does affect the delivery time. 
 
-All nodes within the network do not use a battery life and, due to the short deployment time of LORIS, we do not have accurate information on how long batteries last on each node. This is most important on sensing nodes as there may be hundreds deployed at any one time and the central node must report when a sensing node has not reported within a predefined period. This also goes for transmission, using a fixed range and transfer rate suits a dynamic network in an open environment but obstacles and weather affect the rate and this could be taken into account in a future implementation. Although we have basic figures on the lifetime of LK and HK nodes, it would still be useful to implement these valeus to determine how often a node would need to be replaced. Although, having data on how quick a battery drains on an active node compared to a node that does not trigger, or have to process data, often would be more accurate.
+The main difference between HK-ALL and LK-HK is that all twenty sensing nodes in HK-ALL have the ability to perform more intense data processing and determine what to prioritise with greater accuracy. Therefore, we tested different proportions of LK and HK sensing nodes within the LK-HK scenario in order to determine the best ratio between performance and network lifetime. Table \ref{tab:khas_int} shows the average duration for an interesting observation when 4, 8, 12, 16 and 20 of the 20 sensing nodes have HK, with the rest having LK processing capabilities. Figure \ref{fig:khas_int} illustrates how pushing knowledge further towards the edge of the network increases the delivery time and the percentage of interesting images. LK-HK16 and LK-HK20 have an average difference of three hours for interesting images, but LK-HK20 means that all nodes in the network have HK processing capabilities and, thus, a shorter battery life. While the difference in delivery time is not large, the extra LK nodes with a longer battery life means that they can be placed in areas that may not be easily accessible or need to remain undisturbed.
 
-In our implementations, we are using image-based scientific observations but the chance of a camera being triggered is the same for every sensing node. In a future version, it would be more realistic to use different chances of triggering based on the cameras location, or based on random assignments. However, we believe that a more general, extensible simulation that was able to handle many different types of sensed data would be the truest model of K-HAS; using property files, as we currently do, to provide details on the sensed data, processing times and a knowledge base.
+\begin{table}[h]\footnotesize
+\begin{tabularx}{\textwidth}{ |X|X|X|X|}
+\hline
+Scenario & Median & Mean & Standard Deviation \\
+\hline
+LK-HK 4 & 3 & 235.77 & 615.01 \\
+LK-HK 8 & 3 & 203.38 & 544.75 \\
+LK-HK 12 & 2 & 141.45 & 437.84 \\
+LK-HK16 & 2 & 66.14 & 643.56 \\
+LK-HK 20 & 2 & 63.96 & 316.62 \\
+\hline
+\end{tabularx}
+\caption{Simulation Results for Interesting Observations}\label{tab:khas_int}
+\end{table}
+
+\begin{table}[h]\footnotesize
+\begin{tabularx}{\textwidth}{ |X|X|X|X|}
+\hline
+Scenario & Median & Mean & Standard Deviation \\
+\hline
+LK-HK 4 & 3 & 235.77 & 615.01 \\
+LK-HK 8 & 3 & 203.38 & 544.75 \\
+LK-HK 12 & 2 & 141.45 & 437.84 \\
+LK-HK16 & 2 & 66.14 & 643.56 \\
+LK-HK 20 & 2 & 63.96 & 316.62 \\
+\hline
+\end{tabularx}
+\caption{Simulation Results for True Positive Observations}\label{tab:khas_tp}
+\end{table}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Chap7/figures/khas_int}
+\caption{Mean Transmission Time for Interesting Observations in LK-HK Variations}
+\label{fig:khas_int}
+\end{figure}
 
 \section{Conclusion}
 	
