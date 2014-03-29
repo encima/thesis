@@ -111,8 +111,12 @@ In our architecture, sensing nodes cannot connect directly to a central node, be
 	Using the results of the image processing application we developed, explained in Section \ref{tech:sf:triton}, for the details of HK processing. Which means that it has 82\% accuracy at detecting TP images, with a 98\% accuracy for finding TN images. Nodes with LK do not have the ability to mark an image as empty, but they can mark an image as interesting; however, the results we have from out rule base are not as extensive as the results we have for Triton, so instead we use a predefined 10\% accuracy for detecting TPs.
 	
 
-\section{Zigbee Results}
-The implementation of our architecture has been limited to using Zigbee as the transmission medium between all sensing nodes, with a Wi-Fi connection between routing nodes and a central node. Sensing nodes then send an observation when it is captured or, if it has not captured anything then it checks for a backlog every ten minutes. Sensing nodes check for new observations to process every five minutes. Each scenario was run a hundred times to simulate a 6 month duration. The time to process an observation using LK is much faster than HK, where image processing is involved in our scenario.
+\section{Results}
+Each scenario, outlined in Section \ref{sim:imp}, runs to simulate a 6 month deployment. Using our motivating scenario, we modelled each scenario on a fixed number of nodes: 1 central node, 4 routing nodes and 20 sensing nodes. The implementation of our architecture has been limited to using Zigbee as the transmission medium between all sensing nodes, with a Wi-Fi connection between routing nodes and a central node. Sensing nodes then send an observation when it is captured or, if it has not captured anything then it checks for a backlog every ten minutes. Sensing nodes check for new observations to process every five minutes. Each scenario was run a hundred times, with each run simulating a 6 month duration. The time to process an observation using LK has been simulated to take 5 seconds compared to the 90 seconds when a node has HK capabilities; these values have been chosen based on the average processing time we experienced with existing data.
+
+\subsection{Scenarios}
+
+This section details the results from each scenario of increasingly capable knowledge processing nodes. NK-ALL represents a 'standard' WSN where no nodes have knowledge processing capabilities and forward to a single endpoint. NK-LK simulates a network where sensing nodes have no knowledge processing capabilities, but routing nodes have LK, allowing them to detect whether an observation is interesting, but lack the knowledge to determine, with any confidence, whether an observation is of no interest. LK-ALL simulates a network where both sensing and routing nodes have LK capabilities. LK-HK is the Repast implementation of our K-HAS architecture; sensing nodes have LK and routing nodes have HK. HK-ALL has sensing and routing nodes that have HK capabilities. 
 
 Table \ref{tab:observ_int} shows the time for average transmission time, in hours, for interesting observations. Interesting observations consist of \textit{true positives} and \textit{false negatives}, which means that the spread of transmission times would be quite varied, because TPs would be prioritised but FPs would be treated as empty images. However, we can see that the total of interesting images almost doubles when all nodes have HK. More importantly, the difference between HK-ALL and LK-HK is fewer than 2\%, while still providing a battery advantage. With LKHK and HK-ALL, the median is much lower when compared to LK-ALL and NK-LK, due to the higher levels of knowledge processing capabilities.
 
@@ -161,14 +165,23 @@ HK-ALL & 553 & 885.65 & 931.19 & 2.6\\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{Chap7/figures/scen_int}
-\caption{Mean Transmission Time for Interesting Observations in all Scenarios}
-\label{fig:obs_int}
+\includegraphics[width=\textwidth]{Chap7/figures/all_int.png}
+\caption{Mean Transmission Time for Interesting Observations in All Scenarios}
+\label{fig:all_int}
 \end{figure}
-	
-Nodes with HK processing power have much higher power requirements and require manual battery changes every 3 weeks, this power trade off does show that nodes of this type can deliver interesting observations significantly faster than nodes with LK. A number of WSNs will place nodes in places that are not easily accessible by humans and not expected to be visited so regularly. In our motivating scenario, some nodes could be rendered inaccessible by river floods for weeks at a time and regular human traffic can prevent animals from using those sites. The percentage of TPs delivered by LK-HK and HK-ALL are not that different, but the delivery time when using both HK and LK nodes does affect the delivery time. 
 
-The main difference between HK-ALL and LK-HK is that all twenty sensing nodes in HK-ALL have the ability to perform more intense data processing and determine what to prioritise with greater accuracy. Therefore, we tested different proportions of LK and HK sensing nodes within the LK-HK scenario in order to determine the best ratio between performance and network lifetime. Table \ref{tab:khas_int} shows the average duration for an interesting observation when 4, 8, 12, 16 and 20 of the 20 sensing nodes have HK, with the rest having LK processing capabilities. Figure \ref{fig:khas_int} illustrates how pushing knowledge further towards the edge of the network increases the delivery time and the percentage of interesting images. LK-HK16 and LK-HK20 have an average difference of three hours for interesting images, but LK-HK20 means that all nodes in the network have HK processing capabilities and, thus, a shorter battery life. While the difference in transmission time is not that significant, the extra LK nodes with a longer battery life means that they can be placed in areas that may not be easily accessible or need to remain undisturbed.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Chap7/figures/all_int_percent.png}
+\caption{Percentage of Interesting Observations in All Scenarios}
+\label{fig:all_int_percent}
+\end{figure}
+
+Figure \ref{fig:all_int} shows the average transmission time for interesting observations across every scenario. NK-ALL has no points for TP and FN because of its lack of processing capabilities. The drop in transmission time for interesting images is clearly visible here, but there is an increase in TN transmission time when comparing LK-ALL and LK-HK. This spike is better explained with the use of Figure \ref{fig:all_int_percent}, showing that, although it takes longer for TP images to be delivered in LK-HK, the percentage of TP images increased in LK-HK by almost four times that of LK-ALL. The faster transmission times in HK-ALL can be explained by the fact that all nodes can accurately detect empty images right from the edge of the network and also prioritise interesting images with a greater accuracy than any other scenario. However, nodes with HK processing power have much higher power requirements and require battery changes every 3 weeks, this power trade off does show that nodes of this type can deliver interesting observations significantly faster than nodes with LK. A number of WSNs will place nodes in places that are not easily accessible by humans and not expected to be visited so regularly. In our motivating scenario, some nodes could be rendered inaccessible by river floods for weeks at a time and regular human traffic can prevent animals from using those sites. The percentage of TPs delivered by LK-HK and HK-ALL are not that different, but the delivery time when using both HK and LK nodes does affect the delivery time. 
+
+\subsection{LK-HK Scenarios}
+
+The main difference between HK-ALL and LK-HK is that all twenty sensing nodes in HK-ALL have the ability to perform more intense data processing and determine what observations to prioritise with greater accuracy. Whereas, LK-HK focusses on HK capabilities for the routing nodes and maximising the lifetime of sensing nodes by limiting them to LK capabilities. Therefore, we tested different proportions of LK and HK sensing nodes within the LK-HK scenario in order to determine the best ratio between performance and network lifetime. Table \ref{tab:khas_int} shows the average duration for an interesting observation when 4, 8, 12, 16 and 20 of the 20 sensing nodes have HK, with the rest having LK processing capabilities. Figure \ref{fig:khas_int_percent} illustrates how pushing knowledge further towards the edge of the network increases the delivery time and the percentage of interesting images. LK-HK 16 and LK-HK 20 have an average difference of three hours for interesting images, but LK-H K20 means that all nodes in the network have HK processing capabilities and, thus, a shorter battery life. While the difference in transmission time is not that significant, the extra LK nodes with a longer battery life means that they can be placed in areas that may not be easily accessible or need to remain undisturbed.
 
 \begin{table}[h]\footnotesize
 \begin{tabularx}{\textwidth}{ |X|X|X|X|}
@@ -202,10 +215,12 @@ LK-HK 20 & 2 & 63.96 & 316.62 \\
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\textwidth]{Chap7/figures/khas_int}
-\caption{Mean Transmission Time for Interesting Observations in LK-HK Variations}
-\label{fig:khas_int}
+\includegraphics[width=\textwidth]{Chap7/figures/khas_int_percent.png}
+\caption{Percentage of Interesting Observations in LK-HK Variations}
+\label{fig:khas_int_percent}
 \end{figure}
+
+\subsection{Unrestricted}
 
 \section{Conclusion}
 	

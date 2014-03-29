@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  6 MAR 2014 15:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  28 MAR 2014 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 78 languages loaded.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/report.cls
+Babel <3.9f> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,37 +24,37 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/nomencl/nomencl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen103
 \nom@tempdim=\dimen104
 \nomitemsep=\skip43
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -62,7 +62,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count89
 \lst@gtempboxa=\box26
 \lst@token=\toks15
@@ -76,24 +76,24 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count94
 \lst@maxwidth=\dimen110
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/07/10 1.5 (Carsten Heinz)
 \c@lstnumber=\count95
 \lst@skipnumbers=\count96
 \lst@framebox=\box27
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2007/02/22 1.4 listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/06/27 1.5pre1 listings configuration
 ))
-Package: listings 2007/02/22 1.4 (Carsten Heinz)
+Package: listings 2013/07/10 1.5 (Carsten Heinz)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -107,10 +107,10 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen111
@@ -124,10 +124,10 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@ContinuedFloat=\count97
 Package caption Info: listings package is loaded.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/rotating/rotating.sty
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count98
@@ -136,13 +136,13 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box28
 \rot@mess@toks=\toks16
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/was/gensymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen118
 \extrarowheight=\dimen119
@@ -185,20 +185,20 @@ LaTeX Warning: Label `tech:digimesh' multiply defined.
 ) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count100
 \scratchdimen=\dimen125
@@ -211,15 +211,15 @@ LaTeX Font Info:    ... okay on input line 23.
 \MPnumerator=\count104
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks20
-) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -228,22 +228,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -255,7 +255,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -263,33 +263,38 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \celsius on input line 23.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 23.
+LaTeX Info: Redefining \celsius on input line 24.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 24.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 23.
-Package gensymb Info: Using \Omega for \ohm on input line 23.
+LaTeX Info: Redefining \ohm on input line 24.
+Package gensymb Info: Using \Omega for \ohm on input line 24.
 
 Package gensymb Warning: Not defining \micro.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 28.
+(Font)              <14.4> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 28.
+(Font)              <7> on input line 29.
 [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 32.
+(Font)              <12> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 32.
+(Font)              <8> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 32.
+(Font)              <6> on input line 33.
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--47
+Overfull \hbox (17.44075pt too wide) in paragraph at lines 32--48
+[]  []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--48
 
  []
 
@@ -299,20 +304,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--47
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [5] (./thesis.lof)
+ [5] (./thesis.lof [6
+
+])
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [6
-
-] (./thesis.lot)
+ [7] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [7
 
-]
-[1]
+[8
+
+] [1]
 \openout2 = `Chap1/introduction.aux'.
 
  (./Chap1/introduction.tex
@@ -325,29 +330,151 @@ Chapter 1.
 
  (./Chap2/background.tex
 Chapter 2.
+
+LaTeX Warning: Citation `Szewczyk2004a' on page 7 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Pizzocaro' on page 7 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Otto2006' on page 7 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Akyildiz2002' on page 7 undefined on input line 11.
+
 [7
 
 
 
 ]
 
+LaTeX Warning: Citation `Mainwaring2002' on page 8 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Intanagonwiwat2000' on page 8 undefined on input line 
+17.
+
+
+LaTeX Warning: Citation `Kahn' on page 8 undefined on input line 17.
+
+
+LaTeX Warning: Citation `Akyildiz2002a' on page 8 undefined on input line 17.
+
+
+LaTeX Warning: Citation `Corke2010a' on page 8 undefined on input line 17.
+
+
 LaTeX Warning: Citation `gartner2013' on page 8 undefined on input line 19.
 
+
+LaTeX Warning: Citation `Akyildiz2002' on page 8 undefined on input line 22.
+
+
+LaTeX Warning: Citation `Segal2010a' on page 8 undefined on input line 22.
+
+
+LaTeX Warning: Citation `Hempstead2005' on page 8 undefined on input line 22.
+
+
+LaTeX Warning: Citation `Schurgers' on page 8 undefined on input line 22.
+
 [8]
+
+LaTeX Warning: Citation `Vaidya2004' on page 9 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Estrin2001' on page 9 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Lee2007' on page 9 undefined on input line 29.
+
+
+LaTeX Warning: Citation `Swan2012' on page 9 undefined on input line 30.
+
 
 LaTeX Warning: Citation `bluetooth2012bluetooth' on page 9 undefined on input l
 ine 30.
 
-[9] [10] [11] [12] [13] [14] [15] [16] [17]
-<Chap2/figures/facts_architecture.jpg, id=89, 451.6875pt x 181.67876pt>
+
+LaTeX Warning: Citation `Zennaro' on page 9 undefined on input line 31.
+
+
+LaTeX Warning: Citation `Bayat2012' on page 9 undefined on input line 32.
+
+[9]
+
+LaTeX Warning: Citation `Martinez2004' on page 10 undefined on input line 36.
+
+
+LaTeX Warning: Citation `Juang2002' on page 10 undefined on input line 36.
+
+
+LaTeX Warning: Citation `Akkaya2005' on page 10 undefined on input line 40.
+
+[10]
+
+LaTeX Warning: Citation `Chen2001' on page 11 undefined on input line 47.
+
+[11]
+
+LaTeX Warning: Citation `Heinzelman1999' on page 12 undefined on input line 57.
+
+
+
+LaTeX Warning: Citation `Woodrow2002' on page 12 undefined on input line 69.
+
+[12]
+
+LaTeX Warning: Citation `Yao2002' on page 13 undefined on input line 74.
+
+[13]
+
+LaTeX Warning: Citation `Manjeshwar2001' on page 14 undefined on input line 84.
+
+
+[14]
+
+LaTeX Warning: Citation `Chen2002' on page 15 undefined on input line 94.
+
+
+LaTeX Warning: Citation `Yu2001' on page 15 undefined on input line 101.
+
+[15]
+
+LaTeX Warning: Citation `Yu2004' on page 16 undefined on input line 110.
+
+
+LaTeX Warning: Citation `Wang2008c' on page 16 undefined on input line 112.
+
+
+LaTeX Warning: Citation `Hadim2006' on page 16 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Rahman' on page 16 undefined on input line 116.
+
+
+LaTeX Warning: Citation `Yu2004' on page 16 undefined on input line 116.
+
+[16] [17]
+
+LaTeX Warning: Citation `Terfloth2006' on page 18 undefined on input line 132.
+
+<Chap2/figures/facts_architecture.jpg, id=92, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
 Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
 e 136.
 (pdftex.def)             Requested size: 312.00119pt x 125.49985pt.
- [18] [19]
-<Chap2/figures/gsn_arch.png, id=96, 371.3875pt x 453.695pt>
+
+
+LaTeX Warning: Citation `Wright2009b' on page 18 undefined on input line 146.
+
+[18]
+
+LaTeX Warning: Citation `F2006' on page 19 undefined on input line 162.
+
+[19] <Chap2/figures/gsn_arch.png, id=99, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
@@ -356,11 +483,14 @@ Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 172.
  [20] [21 <./Chap2/figures/facts_architecture.jpg> <./Chap2/figures/gsn_arch.pn
 g>]
 
+LaTeX Warning: Citation `Aberer2007' on page 22 undefined on input line 183.
+
+
 LaTeX Warning: Reference `bg:lst:gsn' on page 22 undefined on input line 183.
 
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 186.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
@@ -368,7 +498,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 196.
 
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -377,13 +507,40 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [23]
+
+
+LaTeX Warning: Citation `Mainwaring2002' on page 23 undefined on input line 207
+.
+
+
+LaTeX Warning: Citation `Szewczyk2004c' on page 23 undefined on input line 209.
+
+
+
+LaTeX Warning: Citation `Demirbas' on page 23 undefined on input line 211.
+
+[23]
+
+LaTeX Warning: Citation `Kays2009' on page 24 undefined on input line 215.
+
+
+LaTeX Warning: Citation `Ahumada2011a' on page 24 undefined on input line 215.
+
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
+
+LaTeX Warning: Citation `Garcia-Sanchez2010b' on page 24 undefined on input lin
+e 215.
+
+
+LaTeX Warning: Citation `ZSL' on page 24 undefined on input line 217.
+
+
+LaTeX Warning: Citation `Juang2002' on page 24 undefined on input line 219.
 
 [24]
 Missing character: There is no ‚ in font cmr12!
@@ -392,13 +549,64 @@ Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
+
+
+LaTeX Warning: Citation `LadislausM.Semali' on page 25 undefined on input line 
+224.
+
+
+LaTeX Warning: Citation `Stiglitz1990' on page 25 undefined on input line 226.
+
+
+LaTeX Warning: Citation `DEWALT' on page 25 undefined on input line 226.
+
+
+LaTeX Warning: Citation `Joshi2001' on page 25 undefined on input line 228.
+
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [25] [26] [27] [28] [29]) [30]
+[25]
+
+LaTeX Warning: Citation `Atzori2010' on page 26 undefined on input line 238.
+
+[26]
+
+LaTeX Warning: Citation `Buttussi2008' on page 27 undefined on input line 250.
+
+[27]
+
+LaTeX Warning: Citation `Maurer' on page 28 undefined on input line 254.
+
+
+LaTeX Warning: Citation `Werner-Allen2006' on page 28 undefined on input line 2
+59.
+
+
+LaTeX Warning: Citation `Werner-Allen2006' on page 28 undefined on input line 2
+63.
+
+
+LaTeX Warning: Citation `Figueiredo2009' on page 28 undefined on input line 265
+.
+
+
+LaTeX Warning: Citation `Wark2008' on page 28 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Rahman2008' on page 28 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Figueiredo2009' on page 28 undefined on input line 265
+.
+
+
+LaTeX Warning: Citation `Wark2008' on page 28 undefined on input line 265.
+
+[28] [29]) [30]
 \openout2 = `Chap3/technical.aux'.
 
  (./Chap3/technical.tex
@@ -415,19 +623,44 @@ LaTeX Warning: Reference `tech:wireless' on page 31 undefined on input line 4.
 
 LaTeX Warning: Reference `tech:conc' on page 31 undefined on input line 4.
 
+
+LaTeX Warning: Citation `Walsh2009' on page 31 undefined on input line 7.
+
 [31
 
 
 
-] [32] [33] [34] [35]
-<Chap3/figures/bp_snr.png, id=150, 729.4452pt x 445.665pt>
+]
+
+LaTeX Warning: Citation `Reconyx' on page 32 undefined on input line 11.
+
+[32]
+
+LaTeX Warning: Citation `Nachman2008' on page 33 undefined on input line 24.
+
+[33]
+
+LaTeX Warning: Citation `instruments2012pandaboard' on page 34 undefined on inp
+ut line 38.
+
+
+LaTeX Warning: Citation `Resch' on page 34 undefined on input line 46.
+
+[34]
+
+LaTeX Warning: Citation `Lib' on page 35 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Dhawan2007' on page 35 undefined on input line 59.
+
+[35] <Chap3/figures/bp_snr.png, id=153, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 67.
 (pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
  [36 <./Chap3/figures/bp_snr.png>]
-<Chap3/figures/dg_snr.png, id=156, 728.4816pt x 445.1832pt>
+<Chap3/figures/dg_snr.png, id=159, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
@@ -446,7 +679,7 @@ LaTeX Warning: Citation `Waspmote' on page 38 undefined on input line 96.
 LaTeX Warning: Reference `sec:wifirange' on page 38 undefined on input line 98.
 
 
-[38] <Chap3/figures/pelican.jpg, id=164, 1284.8pt x 963.6pt>
+[38] <Chap3/figures/pelican.jpg, id=167, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
@@ -534,12 +767,20 @@ Missing character: There is no ò in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [46] [47] [48] [49]
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
+ [46] [47] [48]
+
+LaTeX Warning: Citation `Wieczorek2012b' on page 49 undefined on input line 68.
+
+
+
+LaTeX Warning: Citation `Wieczorek2012a' on page 49 undefined on input line 70.
+
+
+[49] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/06/27 1.5pre1 listings language file
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/07/10 1.5 (Carsten Heinz)
 )
 Overfull \hbox (6.0pt too wide) in paragraph at lines 81--81
 [][][][][][][] 
@@ -564,14 +805,14 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
 
 LaTeX Warning: Reference `chap:ont' on page 54 undefined on input line 108.
 
-[54] <Chap4/figures/loris.png, id=218, 1425.325pt x 764.8575pt>
+[54] <Chap4/figures/loris.png, id=221, 1425.325pt x 764.8575pt>
 File: Chap4/figures/loris.png Graphic file (type png)
 
 <use Chap4/figures/loris.png>
 Package pdftex.def Info: Chap4/figures/loris.png used on input line 114.
 (pdftex.def)             Requested size: 175.49881pt x 94.17145pt.
 
-<Chap4/figures/loris_data.png, id=219, 1924.18875pt x 967.615pt>
+<Chap4/figures/loris_data.png, id=222, 1924.18875pt x 967.615pt>
 File: Chap4/figures/loris_data.png Graphic file (type png)
 
 <use Chap4/figures/loris_data.png>
@@ -582,14 +823,14 @@ Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 123.
 LaTeX Warning: Reference `kc:loris_drl' on page 56 undefined on input line 136.
 
 
-<Chap4/figures/rules.png, id=223, 1618.045pt x 698.61pt>
+<Chap4/figures/rules.png, id=226, 1618.045pt x 698.61pt>
 File: Chap4/figures/rules.png Graphic file (type png)
 
 <use Chap4/figures/rules.png>
 Package pdftex.def Info: Chap4/figures/rules.png used on input line 140.
 (pdftex.def)             Requested size: 175.49881pt x 75.77068pt.
  [56 <./Chap4/figures/rules.png>] [57]
-<Chap4/figures/leopard2.JPG, id=230, 1927.2pt x 1084.05pt>
+<Chap4/figures/leopard2.JPG, id=234, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
@@ -599,7 +840,7 @@ Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 161.
 
 LaTeX Warning: Reference `clproc' on page 59 undefined on input line 181.
 
-[59] <Chap4/figures/leopard_proc.png, id=239, 906.38625pt x 465.74pt>
+[59] <Chap4/figures/leopard_proc.png, id=242, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
@@ -617,18 +858,36 @@ Chapter 5.
 
 
 ]
+
+LaTeX Warning: Citation `Compton2009' on page 65 undefined on input line 17.
+
+
+LaTeX Warning: Citation `Janowicz2010' on page 65 undefined on input line 17.
+
+
 Overfull \hbox (6.7195pt too wide) in paragraph at lines 25--26
 []\OT1/cmr/m/n/12 From this we have cat-e-gorised rel-e-vant ex-ist-ing on-tolo
 -gies into Observation-
  []
 
-[65] <Chap5/figures/OBOEcore.JPG, id=259, 368.87813pt x 137.01187pt>
+
+LaTeX Warning: Citation `McGuinness2004' on page 65 undefined on input line 31.
+
+
+
+LaTeX Warning: Citation `Madin2007' on page 65 undefined on input line 33.
+
+[65] <Chap5/figures/OBOEcore.JPG, id=262, 368.87813pt x 137.01187pt>
 File: Chap5/figures/OBOEcore.JPG Graphic file (type jpg)
 
 <use Chap5/figures/OBOEcore.JPG>
 Package pdftex.def Info: Chap5/figures/OBOEcore.JPG used on input line 37.
 (pdftex.def)             Requested size: 368.87721pt x 137.01154pt.
- [66 <./Chap5/figures/OBOEcore.JPG>]
+
+
+LaTeX Warning: Citation `Botts' on page 66 undefined on input line 47.
+
+[66 <./Chap5/figures/OBOEcore.JPG>]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
 [][][][][][][] 
  []
@@ -638,7 +897,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
 [][][][][][][] 
  []
 
-[67] <Chap5/figures/o&m_ontology.png, id=266, 643.40375pt x 285.065pt>
+[67] <Chap5/figures/o&m_ontology.png, id=269, 643.40375pt x 285.065pt>
 File: Chap5/figures/o&m_ontology.png Graphic file (type png)
 
 <use Chap5/figures/o&m_ontology.png>
@@ -669,7 +928,7 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 100--103
 $[]$ 
  []
 
-<Chap5/figures/dwca.png, id=278, 661.47125pt x 419.5675pt>
+<Chap5/figures/dwca.png, id=281, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
@@ -697,7 +956,7 @@ $[]$
 
 LaTeX Warning: Citation `dwc_sw' on page 73 undefined on input line 117.
 
-<Chap5/figures/dsw.jpg, id=285, 1734.48pt x 782.925pt>
+<Chap5/figures/dsw.jpg, id=288, 1734.48pt x 782.925pt>
 File: Chap5/figures/dsw.jpg Graphic file (type jpg)
 
 <use Chap5/figures/dsw.jpg>
@@ -707,12 +966,19 @@ Package pdftex.def Info: Chap5/figures/dsw.jpg used on input line 121.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[73 <./Chap5/figures/dwca.png>] [74 <./Chap5/figures/dsw.jpg>]
+[73 <./Chap5/figures/dwca.png>]
+
+LaTeX Warning: Citation `Botts' on page 74 undefined on input line 132.
+
+[74 <./Chap5/figures/dsw.jpg>]
+
+LaTeX Warning: Citation `Robin2006' on page 75 undefined on input line 147.
+
 
 LaTeX Warning: Citation `lefort2011semantic' on page 75 undefined on input line
  208.
 
-<Chap5/figures/ssnont.jpg, id=292, 681.747pt x 404.712pt>
+<Chap5/figures/ssnont.jpg, id=295, 681.747pt x 404.712pt>
 File: Chap5/figures/ssnont.jpg Graphic file (type jpg)
 
 <use Chap5/figures/ssnont.jpg>
@@ -724,7 +990,24 @@ Overfull \hbox (27.37631pt too wide) in paragraph at lines 219--220
 i-Sensor-Observation',
  []
 
-[75] [76 <./Chap5/figures/ssnont.jpg>] [77] [78]
+[75] [76 <./Chap5/figures/ssnont.jpg>]
+
+LaTeX Warning: Citation `Uschold1995' on page 77 undefined on input line 233.
+
+
+LaTeX Warning: Citation `Gruninger1995' on page 77 undefined on input line 238.
+
+
+[77]
+
+LaTeX Warning: Citation `Fernandez-Lopez1999' on page 78 undefined on input lin
+e 252.
+
+
+LaTeX Warning: Citation `Jimenez-Ruiz2008' on page 78 undefined on input line 2
+65.
+
+[78]
 
 LaTeX Warning: Citation `gomez1995evaluation' on page 79 undefined on input lin
 e 269.
@@ -738,7 +1021,15 @@ Missing character: There is no ù in font cmr12!
 
 LaTeX Warning: Citation `REF!' on page 79 undefined on input line 271.
 
-[79] [80]
+
+LaTeX Warning: Citation `Gruninger1995' on page 79 undefined on input line 280.
+
+
+[79]
+
+LaTeX Warning: Citation `Choi2010' on page 80 undefined on input line 282.
+
+[80]
 Underfull \hbox (badness 10000) in paragraph at lines 320--320
 []|\OT1/cmr/bx/n/12 Subclass
  []
@@ -793,7 +1084,7 @@ Underfull \hbox (badness 7869) in paragraph at lines 335--336
 []|\OT1/cmr/m/n/12 Person in-volved with a
  []
 
-<Chap5/figures/khas_base.JPG, id=312, 2281.52374pt x 949.5475pt>
+<Chap5/figures/khas_base.JPG, id=315, 2281.52374pt x 949.5475pt>
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
@@ -813,7 +1104,7 @@ LaTeX Warning: Citation `dwc_oboe' on page 83 undefined on input line 362.
 LaTeX Warning: Citation `brickley2010foaf' on page 84 undefined on input line 3
 64.
 
-<Chap5/figures/khas_ontology.JPG, id=323, 3852.3925pt x 1011.78pt>
+<Chap5/figures/khas_ontology.JPG, id=326, 3852.3925pt x 1011.78pt>
 File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_ontology.JPG>
@@ -828,7 +1119,15 @@ Overfull \hbox (110.82861pt too wide) in paragraph at lines 376--377
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[84] [85 <./Chap5/figures/khas_ontology.JPG>]
+
+LaTeX Warning: Citation `Brank2005' on page 84 undefined on input line 383.
+
+[84]
+
+LaTeX Warning: Citation `Poveda-Villalon2012' on page 85 undefined on input lin
+e 396.
+
+[85 <./Chap5/figures/khas_ontology.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 409--410
 []|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
@@ -926,6 +1225,9 @@ Overfull \hbox (72.79134pt too wide) in paragraph at lines 405--422
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Citation `Brewster2004' on page 86 undefined on input line 429.
+
 [86]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -955,17 +1257,22 @@ LaTeX Warning: Citation `REFERENCE' on page 93 undefined on input line 24.
 
 LaTeX Warning: Citation `buckeye' on page 93 undefined on input line 24.
 
-[93] <Chap6/figures/LORIS.png, id=356, 1425.325pt x 764.8575pt>
-File: Chap6/figures/LORIS.png Graphic file (type png)
+[93]
 
-<use Chap6/figures/LORIS.png>
-Package pdftex.def Info: Chap6/figures/LORIS.png used on input line 38.
-(pdftex.def)             Requested size: 272.99881pt x 146.4915pt.
- [94 <./Chap6/figures/LORIS.png>]
-<Chap6/figures/buckeye.jpg, id=361, 1441.385pt x 833.1125pt>
+! LaTeX Error: File `Chap6/figures/LORIS' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...width=0.70\textwidth]{Chap6/figures/LORIS}
+                                                  
+? q
+OK, entering \batchmode...
+ [94]
+<Chap6/figures/buckeye.jpg, id=363, 1441.385pt x 833.1125pt>
 File: Chap6/figures/buckeye.jpg Graphic file (type jpg)
-
-<use Chap6/figures/buckeye.jpg>
+ <use Chap6/figures/buckeye.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 50.
 (pdftex.def)             Requested size: 272.99881pt x 157.78453pt.
  [95 <./Chap6/figures/buckeye.jpg>]
@@ -974,21 +1281,24 @@ Overfull \hbox (1.62372pt too wide) in paragraph at lines 67--68
  speeds of 1.8KB/s. 
  []
 
-[96] <Chap6/figures/buckeye_img.jpg, id=368, 770.88pt x 578.16pt>
+ [96]
+<Chap6/figures/buckeye_img.jpg, id=370, 770.88pt x 578.16pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
-
-<use Chap6/figures/buckeye_img.jpg>
+ <use Chap6/figures/buckeye_img.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
 (pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
- [97 <./Chap6/figures/buckeye_img.jpg>]
-<Chap6/figures/buckeye_img_2.jpg, id=372, 770.88pt x 578.16pt>
-File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
 
-<use Chap6/figures/buckeye_img_2.jpg>
+<Chap6/figures/buckeye_img_2.jpg, id=371, 770.88pt x 578.16pt>
+File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
+ <use Chap6/figures/buckeye_img_2.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
 
 (pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
- [98 <./Chap6/figures/buckeye_img_2.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+ [97 <./Chap6/figures/buckeye_img.jpg>] [98 <./Chap6/figures/buckeye_img_2.jpg>
+]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
 [][][][][][][] 
  []
@@ -998,7 +1308,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
 [][][][][][][] 
  []
 
-[99]
+ [99]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
@@ -1008,100 +1318,88 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
 
-(./Chap4/listings/rules.drl [100] [101]) [102]
+ (./Chap4/listings/rules.drl [100]) [101] [102]
 
 LaTeX Warning: Reference `REFERENCE' on page 103 undefined on input line 132.
 
 
 LaTeX Warning: Reference `REFERENCE' on page 103 undefined on input line 134.
 
-[103] [104]) [105] [106]
+ [103] [104]) [105]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
 Chapter 7.
-[107
+ [106
 
 
 
-] [108] [109]
-<Chap7/figures/khas_sim.png, id=411, 1451.4225pt x 1013.7875pt>
+] [107] [108]
+<Chap7/figures/khas_sim.png, id=410, 1451.4225pt x 1013.7875pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
-
-<use Chap7/figures/khas_sim.png>
-Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 45.
+ <use Chap7/figures/khas_sim.png>
+Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 40.
 (pdftex.def)             Requested size: 272.99881pt x 190.67252pt.
- [110 <./Chap7/figures/khas_sim.png>] [111]
-[112]
-Overfull \hbox (0.99892pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/n/12 range of the DA node, the trans-mis-sion phase be-gins where on
-ly DwC archives
+ [109 <./Chap7/figures/khas_sim.png>] [110] [111] [112] [113] [114]
+Underfull \hbox (badness 6608) in paragraph at lines 135--135
+[]|\OT1/cmr/m/n/10 Standard De-
  []
 
-[113] [114] [115]
-Underfull \hbox (badness 1043) in paragraph at lines 147--147
-[]|\OT1/cmr/m/n/10 Avg. Empty
+
+Underfull \hbox (badness 6608) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/10 Standard De-
  []
 
-[116]) [117] [118]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 162--162
+[]|\OT1/cmr/m/n/10 Standard De-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+<Chap7/figures/scen_int.png, id=430, 558.085pt x 572.1375pt>
+File: Chap7/figures/scen_int.png Graphic file (type png)
+ <use Chap7/figures/scen_int.png>
+Package pdftex.def Info: Chap7/figures/scen_int.png used on input line 168.
+(pdftex.def)             Requested size: 390.0pt x 399.83002pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+ [115] [116]
+<Chap7/figures/khas_int.png, id=438, 558.085pt x 572.1375pt>
+File: Chap7/figures/khas_int.png Graphic file (type png)
+ <use Chap7/figures/khas_int.png>
+Package pdftex.def Info: Chap7/figures/khas_int.png used on input line 211.
+(pdftex.def)             Requested size: 390.0pt x 399.83002pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+ [117]) [118] [119 <./Chap7/figures/scen_int.png>] [120 <./Chap7/figures/khas_i
+nt.png>]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
-[119
+ [121
 
 
 
-] [120]
+] [122]
 Overfull \hbox (5.70146pt too wide) in paragraph at lines 21--22
 \OT1/cmr/m/n/12 In Chap-ter 6, we present the Local-knowledge Ontology-based Re
 mote-Sensing
  []
 
-[121] [122] [123]) [124] [125] (./thesis.bbl [126
-
-
-]
-Missing character: There is no ¬ in font cmr12!
-Missing character: There is no Æ in font cmr12!
- [127]
-Underfull \hbox (badness 4765) in paragraph at lines 150--156
-[]\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
-ndo
- []
-
-[128]
-Underfull \hbox (badness 1005) in paragraph at lines 193--197
-[]\OT1/cmr/m/n/12 Krzysztof Janow-icz and Michael Comp-ton.  The stimulus-senso
-r-
- []
-
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no û in font cmr12!
-[129]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
- [130] [131] [132]
-Underfull \hbox (badness 1067) in paragraph at lines 431--435
-[]\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
--ley,
- []
-
-[133]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-) [134] (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
-(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
-(./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
-)
+ [123] [124] [125]) [126] [127]
+No file thesis.bbl.
+ (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux) (./Chap3/tec
+hnical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implementatio
+n.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1110,26 +1408,26 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5283 strings out of 493315
- 80033 string characters out of 6137905
- 357953 words of memory out of 5000000
- 8557 multiletter control sequences out of 15000+600000
+ 5293 strings out of 495031
+ 79710 string characters out of 6181530
+ 354476 words of memory out of 5000000
+ 8312 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  38i,11n,54p,1510b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (143 pages, 3571932 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (137 pages, 3356551 bytes).
 PDF statistics:
- 527 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
+ 511 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
