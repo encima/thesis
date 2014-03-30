@@ -1,7 +1,7 @@
 \chapter{Simulations}
 In this chapter, we detail simulations that we developed to test our hypothesis with a complete implementation of K-HAS. LORIS was implemented because current technology does not fully support the requirements of the K-HAS architecture, because of this we implemented a simulation of K-HAS that satisfies all of its requirements.
 
-Using RePast, a java-based network simulation tool, we created a network to emulate K-HAS. Repast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. Similar to the chaining of rules we described with Drools, ticks are the core of Repast's scheduling mechanism which can be used to schedule single events, as well as chaining events. Consider a train simulation. A train may take three hundred ticks to arrive at its destination, from the train arrival a scheduled event to open doors and make announcements which could schedule other events and so on.
+Using RePast, a java-based network simulation tool, we created a network to emulate K-HAS. Repast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. Similar to the chaining of rules we described with Drools, ticks are the core of Repast's scheduling mechanism which can be used to schedule single events, as well as chaining events. Consider a train simulation; a train may take three hundred ticks to arrive at its destination, from the train arrival a scheduled event to open doors and make announcements which could schedule other events and so on.
 
 Agents are created, using the RePast SDK and Java classes are used to manipulate their behaviour. Simple networks may only contain basic agents with only a few variations from those provided by RePast. However, for more complex networks, a hierarchy of agents is required and Java's inheritance can then be used create subclasses of an agent.
 
@@ -18,7 +18,7 @@ The rest of this chapter is structured as follows. Section 2 describes the imple
 		\item High Knowledge (HK): The node possesses high knowledge processing capabilities and is able to process data, metadata and use a dynamic rule base.
 	\end{itemize}
 	
-	The scenarios we have implemented cover the possible combinations of HK, LK and NK, which we have outlined below:
+	While HK nodes are more accurate, their battery life is limited to 3 weeks, whereas using the less accurate LK nodes, they can run for approximately 3 months without human interaction. The scenarios we have implemented cover the possible combinations of HK, LK and NK, which we have outlined below:
 	
 	\begin{itemize}
 		\item NK-ALL: Sensing and routing nodes possess no knowledge processing capabilities.
@@ -32,7 +32,7 @@ Before implementing, we designed the agents required based largely on the existi
 
 We also needed to create an object to represent the DwC archives, a Drools REST API had been implemented to work with the LORIS web interface, and much of the DwC archive code was reusable within RePast. 
 
-The structure of the simulation is shown below. Network builder instantiates all the nodes, places them on randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection, depicted by a line between the node. The simulation uses metrics extracted from the images taken at Danau Girang, but the chance of an image being captured at a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. Figure \ref{fig:sim} shows an example simulation of the LK-HK scenario.
+The structure of the simulation is shown below. Network builder instantiates all the nodes, places them randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection; depicted by a line between the node. The simulation uses metrics extracted from the images taken at Danau Girang, but the chance of an image being captured at a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. Figure \ref{fig:sim} shows an example simulation of the LK-HK scenario.
 
 
 	\begin{figure}[h]
@@ -108,7 +108,7 @@ In our architecture, sensing nodes cannot connect directly to a central node, be
 			\item False negative (FN): An image that is not empty is captured but no region of interest extracted.
 		\end{description}
 	
-	Using the results of the image processing application we developed, explained in Section \ref{tech:sf:triton}, for the details of HK processing. Which means that it has 82\% accuracy at detecting TP images, with a 98\% accuracy for finding TN images. Nodes with LK do not have the ability to mark an image as empty, but they can mark an image as interesting; however, the results we have from out rule base are not as extensive as the results we have for Triton, so instead we use a predefined 10\% accuracy for detecting TPs.
+	Using the results of the image processing application we developed, explained in Section \ref{tech:sf:triton}, for the properties of HK processing, we found that it performed with an 82\% accuracy at detecting TP images, with a 98\% accuracy for finding TN images. Nodes with LK do not have the ability to mark an image as empty, but they can mark an image as interesting; however, the results we have from our rule base are not as extensive as the results we have for Triton, so instead we use a predefined 10\% accuracy for detecting TPs.
 	
 
 \section{Results}
@@ -133,7 +133,7 @@ LKHK & 3 & 255.49 & 591.63 & 38.86\\
 HKALL & 2 & 59.57 & 320.48 & 40.78\\
 \hline
 \end{tabularx}
-\caption{Simulation Results for Interesting Observations}\label{tab:observ_int}
+\caption{Transmission Time for Interesting Observations}\label{tab:observ_int}
 \end{table}
 
 \begin{table}[h]\footnotesize
@@ -147,7 +147,7 @@ LK-HK & 3 & 207.09 & 518.11 & 36.46\\
 HK-ALL & 2 & 2.77 & 2.75 & 38.16\\
 \hline
 \end{tabularx}
-\caption{Simulation Results for True Positive Observations}\label{tab:observ_tp}
+\caption{Transmission Time for True Positive Observations}\label{tab:observ_tp}
 \end{table}
 
 \begin{table}[h]\footnotesize
@@ -160,10 +160,10 @@ LK-HK & 683 & 989.02 & 1006.4 & 2.41\\
 HK-ALL & 553 & 885.65 & 931.19 & 2.6\\
 \hline
 \end{tabularx}
-\caption{Simulation Results for False Negative Observations}\label{tab:observ_fn}
+\caption{Transmission Time for False Negative Observations}\label{tab:observ_fn}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{Chap7/figures/all_int.png}
 \caption{Mean Transmission Time for Interesting Observations in All Scenarios}
@@ -188,14 +188,14 @@ The main difference between HK-ALL and LK-HK is that all twenty sensing nodes in
 \hline
 Scenario & Median & Mean & Standard Deviation \\
 \hline
-LK-HK 4 & 3 & 235.77 & 615.01 \\
-LK-HK 8 & 3 & 203.38 & 544.75 \\
-LK-HK 12 & 2 & 141.45 & 437.84 \\
-LK-HK16 & 2 & 66.14 & 643.56 \\
-LK-HK 20 & 2 & 63.96 & 316.62 \\
+LK-HK 4 & 2 & 153.21 & 462.75 \\
+LK-HK 8 & 2 & 146.04 & 428.79 \\
+LK-HK 12 & 2 & 156.95 & 461.67 \\
+LK-HK16 & 2 & 88.86 & 349.68 \\
+LK-HK 20 & 2 & 63.13 & 330.67 \\
 \hline
 \end{tabularx}
-\caption{Simulation Results for Interesting Observations}\label{tab:khas_int}
+\caption{Transmission Time Results for Interesting Observations}\label{tab:khas_int}
 \end{table}
 
 \begin{table}[h]\footnotesize
@@ -203,14 +203,14 @@ LK-HK 20 & 2 & 63.96 & 316.62 \\
 \hline
 Scenario & Median & Mean & Standard Deviation \\
 \hline
-LK-HK 4 & 3 & 235.77 & 615.01 \\
-LK-HK 8 & 3 & 203.38 & 544.75 \\
-LK-HK 12 & 2 & 141.45 & 437.84 \\
-LK-HK16 & 2 & 66.14 & 643.56 \\
-LK-HK 20 & 2 & 63.96 & 316.62 \\
+LK-HK 4 & 2 & 104.74 & 393.06 \\
+LK-HK 8 & 2 & 94.56 & 357.04 \\
+LK-HK 12 & 2 & 86.85 & 343.69 \\
+LK-HK16 & 2 & 29.15 & 191.82 \\
+LK-HK 20 & 2 & 2.08 & 1.93 \\
 \hline
 \end{tabularx}
-\caption{Simulation Results for True Positive Observations}\label{tab:khas_tp}
+\caption{Transmission Time Results for True Positive Observations}\label{tab:khas_tp}
 \end{table}
 
 \begin{figure}[!h]
@@ -219,8 +219,32 @@ LK-HK 20 & 2 & 63.96 & 316.62 \\
 \caption{Percentage of Interesting Observations in LK-HK Variations}
 \label{fig:khas_int_percent}
 \end{figure}
+\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Chap7/figures/all_total.png}
+\caption{Mean Duration for All Observations in Zigbee Scenarios}
+\label{fig:all_total}
+\end{figure}
 
-\subsection{Unrestricted}
+\subsection{Unrestricted Transmission Speeds}
+In this section, we manipulated the variables set in out original simulations, that were based on existing sensed data, to identify bottlenecks that prevented observations from being received immediately. Zigbee has a low transmission rate, of 2.77 Kbps, therefore we expected increasing the transmission rate of all nodes in the network to a rate in the thousands (61920 Kbps) to determine whether this would reduce the mean transmission time for all images. Figure \ref{fig:unres_int} shows that, when compared with Figure \ref{fig:all_int}, the transmission time is reduced in all scenarios, by up to half in some cases. HK-ALL shows that this increase allows for interesting observations to be delivered with almost no delay, in near real-time. However, with a rate that should allow almost all observations to be sent in a matter of seconds, many scenarios still have a delay of 600 hours. Figure \ref{fig:unres_total} shows the average duration for all observations received at the central node and, with Wi-Fi transmission rates, we expected this to be much higher. However, when compared with Figure \ref{fig:all_total}, which shows the average duration for all observations using Zigbee as the transmission medium, we can see that the transmission time for most scenarios reduces to fewer than 500 hours. HK-ALL, remains much the same, despite the faster transmission rate. 
+
+Another bottleneck that we identified was the duration that each node would check for new observations, and process them. In the current solution, Sensing nodes check every 10 minutes and Routing nodes check every 5. This delay could cause an observation to not be picked up immediately, as well as the transmission delay. To test this, we reduced the Sensing node check to every minute and the Routing node to check every 30 seconds for new observations. Using Zigbee, the mean transmission time for all observations, in the HK-ALL scenario, was 501.02 hours. Using the increased transmission rate, it was 354.34 hours and with the reduced checking delay, the time dropped to 1.58 hours. Therefore, in order to create a real time implementation of these scenarios, one would need to use a fast transmission medium, such as Wi-Fi, and increase the time delay to check for new data; both of which would reduce the battery life of the node. This solution would ensure that all sensed data would be received almost as soon as it was captured, however, our HK-ALL Zigbee implementation would deliver interesting images within 3 hours but conserve battery life by using a radio with less power consumption and checking for new data less often. This faster solution would be primarily suited to deployments where power is not a constraint whereas the real-time receipt of all sensed data is.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Chap7/figures/unres_all_int.png}
+\caption{Mean Duration for Interesting Observations in Unrestricted Scenarios}
+\label{fig:unres_int}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Chap7/figures/unres_all_total.png}
+\caption{Mean Duration for All Observations in Unrestricted Scenarios}
+\label{fig:unres_total}
+\end{figure}
 
 \section{Conclusion}
 	
@@ -228,5 +252,5 @@ In this chapter, we have detailed the development of simulations to show the dif
 
 Bridging the gap between HK-LK and HK-ALL we recorded the results when the number of HK nodes versus LK nodes was incremented by 4 on each run, until there were 20 in total. The results of these showed that LK-HK with all HK nodes was very similar in performance to HK-ALL, but with the same issues with node lifetime. However, with 16 HK and 4 LK nodes, the performance was similar, while allowing for 4 nodes with a longer battery life to be deployed.
 
-While the simulation is not feature complete, we believe it is accurate enough to show how LK-HK utilises the knowledge-processing capabilities at each tier to process, and prioritise, sensed data based on knowledge gained from the environment, previously sensed data and from humans using the network. We also show that LK-HK is not the ideal solution for every network, less accessible networks are better suited to LK-ALL and WSNs with constant power supplies would benefit from HK-ALL. LK-HK simply acts as the compromise between these scenarios that allow for the network lifetime to be maximised, while ensuring fast delivery of interesting sensed data. The number of HK nodes used in this scenario can also be varied, based on the accessibility of each node and the required lifetime of the network. Our results show that an increase in HK nodes being pushed out further towards the edge of the network creates an increase in the the percentage of interesting images delivered and a reduction in the transmission time.
+While the simulation is not feature complete, we believe it is accurate enough to show how LK-HK utilises the knowledge-processing capabilities at each tier to process, and prioritise, sensed data based on knowledge gained from the environment, previously sensed data and from humans using the network. We also show that LK-HK is not the ideal solution for every network, less accessible networks are better suited to LK-ALL and WSNs with constant power supplies would benefit from HK-ALL. LK-HK simply acts as the compromise between these scenarios that allow for the network lifetime to be maximised, while ensuring fast delivery of interesting sensed data. The number of HK nodes used in this scenario can also be varied, based on how accessible the location of each node is and the required lifetime of the network. For example, a WSN to handle the security in a block of apartments would not have power constraints but may need real time reporting on break-ins. However, a WSN based in a remote woodland with no access to solar power may not require real-time updates, but network lifetime will need to be maximised. In summary, our results show that an increase in HK nodes in the network creates an increase in the the percentage of interesting images delivered, as well as a reduction in the transmission time.
 

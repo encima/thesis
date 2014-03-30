@@ -133,13 +133,13 @@
 \contentsline {subsection}{\numberline {7.1.4}Processing}{113}
 \contentsline {section}{\numberline {7.2}Results}{114}
 \contentsline {subsection}{\numberline {7.2.1}Scenarios}{114}
-\contentsline {subsection}{\numberline {7.2.2}LK-HK Scenarios}{116}
-\contentsline {subsection}{\numberline {7.2.3}Unrestricted}{117}
-\contentsline {section}{\numberline {7.3}Conclusion}{117}
-\contentsline {chapter}{\numberline {8}Conclusion}{121}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{122}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{123}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{123}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{123}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{124}
-\contentsline {section}{\numberline {8.2}Future Work}{124}
+\contentsline {subsection}{\numberline {7.2.2}LK-HK Scenarios}{117}
+\contentsline {subsection}{\numberline {7.2.3}Unrestricted Transmission Speeds}{119}
+\contentsline {section}{\numberline {7.3}Conclusion}{123}
+\contentsline {chapter}{\numberline {8}Conclusion}{125}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{126}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{127}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{127}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{127}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{128}
+\contentsline {section}{\numberline {8.2}Future Work}{128}
