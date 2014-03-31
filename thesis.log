@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  30 MAR 2014 21:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2013.12.21)  31 MAR 2014 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1267,12 +1267,11 @@ Type  H <return>  for immediate help.
                                                   
 l.38 ...width=0.70\textwidth]{Chap6/figures/LORIS}
                                                   
-? q
-OK, entering \batchmode...
- [94]
-<Chap6/figures/buckeye.jpg, id=363, 1441.385pt x 833.1125pt>
+? 
+[94] <Chap6/figures/buckeye.jpg, id=363, 1441.385pt x 833.1125pt>
 File: Chap6/figures/buckeye.jpg Graphic file (type jpg)
- <use Chap6/figures/buckeye.jpg>
+
+<use Chap6/figures/buckeye.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 50.
 (pdftex.def)             Requested size: 272.99881pt x 157.78453pt.
  [95 <./Chap6/figures/buckeye.jpg>]
@@ -1281,34 +1280,36 @@ Overfull \hbox (1.62372pt too wide) in paragraph at lines 67--68
  speeds of 1.8KB/s. 
  []
 
- [96]
-<Chap6/figures/buckeye_img.jpg, id=370, 770.88pt x 578.16pt>
+[96] <Chap6/figures/buckeye_img.jpg, id=370, 770.88pt x 578.16pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
- <use Chap6/figures/buckeye_img.jpg>
+
+<use Chap6/figures/buckeye_img.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
 (pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
 
 <Chap6/figures/buckeye_img_2.jpg, id=371, 770.88pt x 578.16pt>
 File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
- <use Chap6/figures/buckeye_img_2.jpg>
+
+<use Chap6/figures/buckeye_img_2.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
 
 (pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
- [97 <./Chap6/figures/buckeye_img.jpg>] [98 <./Chap6/figures/buckeye_img_2.jpg>
-]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
-[][][][][][][] 
- []
-
+[97 <./Chap6/figures/buckeye_img.jpg>] [98 <./Chap6/figures/buckeye_img_2.jpg>]
 
 Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
 [][][][][][][] 
  []
 
- [99]
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
+[][][][][][][] 
+ []
+
+[99]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
@@ -1318,29 +1319,31 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
 
- (./Chap4/listings/rules.drl [100]) [101] [102]
+(./Chap4/listings/rules.drl [100]) [101] [102]
 
 LaTeX Warning: Reference `REFERENCE' on page 103 undefined on input line 132.
 
 
 LaTeX Warning: Reference `REFERENCE' on page 103 undefined on input line 134.
 
- [103] [104]) [105]
+[103] [104]) [105]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
 Chapter 7.
- [106
+[106
 
 
 
 ] [107] [108]
 <Chap7/figures/khas_sim.png, id=410, 1451.4225pt x 1013.7875pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
- <use Chap7/figures/khas_sim.png>
+
+<use Chap7/figures/khas_sim.png>
 Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 40.
 (pdftex.def)             Requested size: 272.99881pt x 190.67252pt.
- [109 <./Chap7/figures/khas_sim.png>] [110] [111] [112] [113] [114]
+ [109 <./Chap7/figures/khas_sim.png>] [110]
+[111] [112] [113] [114]
 Underfull \hbox (badness 6608) in paragraph at lines 135--135
 []|\OT1/cmr/m/n/10 Standard De-
  []
@@ -1351,42 +1354,44 @@ Underfull \hbox (badness 6608) in paragraph at lines 149--149
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \hbox (badness 6608) in paragraph at lines 162--162
 []|\OT1/cmr/m/n/10 Standard De-
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
- <Chap7/figures/all_int.png, id=430, 481.8pt x 481.8pt>
+<Chap7/figures/all_int.png, id=430, 481.8pt x 481.8pt>
 File: Chap7/figures/all_int.png Graphic file (type png)
- <use Chap7/figures/all_int.png>
+
+<use Chap7/figures/all_int.png>
 Package pdftex.def Info: Chap7/figures/all_int.png used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Chap7/figures/all_int_percent.png, id=431, 481.8pt x 481.8pt>
 File: Chap7/figures/all_int_percent.png Graphic file (type png)
- <use Chap7/figures/all_int_percent.png>
+
+<use Chap7/figures/all_int_percent.png>
 Package pdftex.def Info: Chap7/figures/all_int_percent.png used on input line 1
 75.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [115] [116] [117 <./Chap7/figures/all_int.png (PNG copy)>] [118 <./Chap7/figur
-es/all_int_percent.png (PNG copy)>]
-<Chap7/figures/khas_int_percent.png, id=446, 481.8pt x 481.8pt>
+[115] [116 <./Chap7/figures/all_int.png (PNG copy)>] [117 <./Chap7/figures/all_
+int_percent.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/khas_int_percent.png, id=443, 481.8pt x 481.8pt>
 File: Chap7/figures/khas_int_percent.png Graphic file (type png)
- <use Chap7/figures/khas_int_percent.png>
+
+<use Chap7/figures/khas_int_percent.png>
 Package pdftex.def Info: Chap7/figures/khas_int_percent.png used on input line 
 218.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1399,44 +1404,48 @@ Type  H <return>  for immediate help.
                                                   
 l.223 \begin
             {figure}[!h]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-<Chap7/figures/all_total.png, id=447, 481.8pt x 481.8pt>
+? 
+<Chap7/figures/all_total.png, id=444, 481.8pt x 481.8pt>
 File: Chap7/figures/all_total.png Graphic file (type png)
- <use Chap7/figures/all_total.png>
+
+<use Chap7/figures/all_total.png>
 Package pdftex.def Info: Chap7/figures/all_total.png used on input line 225.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [119] [120 <./Chap7/figures/khas_int_percent.png (PNG copy)>] [121 <./Chap7/fi
-gures/all_total.png (PNG copy)>]
-<Chap7/figures/unres_all_int.png, id=457, 481.8pt x 481.8pt>
+[118] [119 <./Chap7/figures/khas_int_percent.png (PNG copy)>] [120 <./Chap7/fig
+ures/all_total.png (PNG copy)>]
+<Chap7/figures/unres_all_int.png, id=454, 481.8pt x 481.8pt>
 File: Chap7/figures/unres_all_int.png Graphic file (type png)
- <use Chap7/figures/unres_all_int.png>
+
+<use Chap7/figures/unres_all_int.png>
 Package pdftex.def Info: Chap7/figures/unres_all_int.png used on input line 237
 .
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
-<Chap7/figures/unres_all_total.png, id=458, 481.8pt x 481.8pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Chap7/figures/unres_all_total.png, id=455, 481.8pt x 481.8pt>
 File: Chap7/figures/unres_all_total.png Graphic file (type png)
- <use Chap7/figures/unres_all_total.png>
+
+<use Chap7/figures/unres_all_total.png>
 Package pdftex.def Info: Chap7/figures/unres_all_total.png used on input line 2
 44.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [122 <./Chap7/figures/unres_all_int.png (PNG copy)>] [123 <./Chap7/figures/unr
-es_all_total.png (PNG copy)>]) [124]
+[121] [122 <./Chap7/figures/unres_all_int.png (PNG copy)>] [123 <./Chap7/figure
+s/unres_all_total.png (PNG copy)>]) [124]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
- [125
+[125
 
 
 
@@ -1446,11 +1455,12 @@ Overfull \hbox (5.70146pt too wide) in paragraph at lines 21--22
 mote-Sensing
  []
 
- [127] [128] [129]) [130] [131]
+[127] [128] [129]) [130] [131]
 No file thesis.bbl.
- (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux) (./Chap3/tec
-hnical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implementatio
-n.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
+(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
+(./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -1465,7 +1475,7 @@ Here is how much of TeX's memory you used:
  8332 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,54p,1623b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,54p,1613b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -1475,7 +1485,7 @@ fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (141 pages, 3431877 bytes).
+Output written on thesis.pdf (141 pages, 3431855 bytes).
 PDF statistics:
  526 PDF objects out of 1000 (max. 8388607)
  340 compressed objects within 4 object streams
