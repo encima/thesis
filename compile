@@ -5,4 +5,4 @@ bibtex thesis.tex
 pdflatex thesis.tex
 pdflatex thesis.tex
 now=`date +"%m_%d_%Y"`
-mv thesis.pdf thesis_chris_$now.pdf
+mv thesis.pdf output/thesis_chris_$now.pdf
