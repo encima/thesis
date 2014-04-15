@@ -161,7 +161,9 @@
 				\end{lstlisting}
 			\end{figure}
 			
-			Using the Weka package, we constructed a J48 decision tree and used the resulting model to create a collection of simple rules that could be run on a DC node. Figure \ref{imp:lst:rule1} shows a rule that was created from the output. Because the features used to generate the model are available in every observation, and do not require any external information, DC nodes are able to process the series of if-statements quickly. This method of knowledge-processing comes at the cost of accuracy, when compared to using existing data, image processing and/or a dynamic knowledge base, but the speed and simplicity of these rules mean that they can be run by almost any node, regardless of computational capability.
+			Using the Weka package, we constructed a J48 decision tree and used the resulting model to create a collection of simple rules that could be run on a DC node. Figure \ref{imp:lst:rule1} shows a rule that was created from the output. This rule checks the time of capture for the observation, the temperature and the moonphase; which has been converted into a numeric values. If the temperature is less than 26 degrees and the time is between 3pm and midnight, then there is a 25\% chance of the classification being a goat. The if-statements are executed in order and the classification that matches the properties of the observation, and has the highest percentage chance, is forwarded to a DP node.
+            
+            Because the features used to generate the rules are available in every observation, and do not require any external information, DC nodes are able to process the series of if-statements quickly. This method of knowledge-processing comes at the cost of accuracy, when compared to using existing data, image processing and/or a dynamic knowledge base, but the speed and simplicity of these rules mean that they can be run by almost any node, regardless of computational capability.
 
 		
 	\section{Conclusion}\label{loris:conc}
