@@ -108,21 +108,21 @@
 \contentsline {subsection}{\numberline {5.4.2}Competency Questions}{86}
 \contentsline {subsection}{\numberline {5.4.3}Comparing the Ontology with a Collection of Documents}{86}
 \contentsline {section}{\numberline {5.5}Conclusion}{87}
-\contentsline {chapter}{\numberline {6}LORIS}{91}
+\contentsline {chapter}{\numberline {6}Implementation}{91}
 \contentsline {section}{\numberline {6.1}Architecture}{92}
 \contentsline {subsection}{\numberline {6.1.1}Data Collection}{93}
 \contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{93}
 \contentsline {section}{\numberline {6.2}Deployment}{94}
-\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{95}
+\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{96}
 \contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{96}
-\contentsline {section}{\numberline {6.3}Results}{96}
+\contentsline {section}{\numberline {6.3}Results}{97}
 \contentsline {section}{\numberline {6.4}Rules}{98}
-\contentsline {subsection}{\numberline {6.4.1}Data Collection}{98}
+\contentsline {subsection}{\numberline {6.4.1}Data Collection}{99}
 \contentsline {subsection}{\numberline {6.4.2}Data Processing and Data Aggregation}{99}
 \contentsline {subsection}{\numberline {6.4.3}Existing Data}{102}
-\contentsline {subsubsection}{Semi Structured Interviews}{102}
+\contentsline {subsubsection}{Semi Structured Interviews}{103}
 \contentsline {subsubsection}{Existing Data}{104}
-\contentsline {section}{\numberline {6.5}Conclusion}{105}
+\contentsline {section}{\numberline {6.5}Conclusion}{106}
 \contentsline {chapter}{\numberline {7}Simulations}{108}
 \contentsline {section}{\numberline {7.1}Implementation}{109}
 \contentsline {subsection}{\numberline {7.1.1}Darwin Core}{111}

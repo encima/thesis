@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.18)  18 APR 2014 19:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.18)  21 APR 2014 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,48 +1264,43 @@ LaTeX Warning: Citation `REFERENCE' on page 93 undefined on input line 24.
 
 LaTeX Warning: Citation `buckeye' on page 93 undefined on input line 24.
 
-[93]
+[93] <Chap6/figures/loris.png, id=360, 1425.325pt x 764.8575pt>
+File: Chap6/figures/loris.png Graphic file (type png)
 
-! LaTeX Error: File `Chap6/figures/LORIS' not found.
+<use Chap6/figures/loris.png>
+Package pdftex.def Info: Chap6/figures/loris.png used on input line 38.
+(pdftex.def)             Requested size: 272.99881pt x 146.4915pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...width=0.70\textwidth]{Chap6/figures/LORIS}
-                                                  
-? q
-OK, entering \batchmode...
- [94]
-<Chap6/figures/buckeye.jpg, id=363, 1441.385pt x 833.1125pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[94] <Chap6/figures/buckeye.jpg, id=364, 1441.385pt x 833.1125pt>
 File: Chap6/figures/buckeye.jpg Graphic file (type jpg)
- <use Chap6/figures/buckeye.jpg>
+
+<use Chap6/figures/buckeye.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 50.
 (pdftex.def)             Requested size: 272.99881pt x 157.78453pt.
- [95 <./Chap6/figures/buckeye.jpg>]
+ [95 <./Chap6/figures/loris.png> <./Chap6/figures/buckeye.jpg>]
 Overfull \hbox (1.62372pt too wide) in paragraph at lines 67--68
 \OT1/cmr/m/n/12 Cam-era 3, de-spite be-ing routed through it, with an av-er-age
  speeds of 1.8KB/s. 
  []
 
- [96]
-<Chap6/figures/buckeye_img.jpg, id=370, 770.88pt x 578.16pt>
+[96] <Chap6/figures/buckeye_img.jpg, id=371, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
- <use Chap6/figures/buckeye_img.jpg>
-Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
-(pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
 
-<Chap6/figures/buckeye_img_2.jpg, id=371, 770.88pt x 578.16pt>
+<use Chap6/figures/buckeye_img.jpg>
+Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
+(pdftex.def)             Requested size: 253.49762pt x 190.11409pt.
+ [97 <./Chap6/figures/buckeye_img.jpg>]
+<Chap6/figures/buckeye_img_2.jpg, id=375, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
- <use Chap6/figures/buckeye_img_2.jpg>
+
+<use Chap6/figures/buckeye_img_2.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
 
-(pdftex.def)             Requested size: 253.49762pt x 190.12291pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
- [97 <./Chap6/figures/buckeye_img.jpg>] [98 <./Chap6/figures/buckeye_img_2.jpg>
-]
+(pdftex.def)             Requested size: 253.49762pt x 190.11409pt.
+ [98 <./Chap6/figures/buckeye_img_2.jpg>]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
 [][][][][][][] 
  []
@@ -1315,7 +1310,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
 [][][][][][][] 
  []
 
- [99]
+[99]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
@@ -1325,253 +1320,11 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
 
- (./Chap4/listings/rules.drl [100]) [101] [102]
+(./Chap4/listings/rules.drl [100] [101]) [102]
 
 LaTeX Warning: Reference `REFERENCE' on page 103 undefined on input line 132.
 
- [103] [104]
-Overfull \hbox (3.64935pt too wide) in paragraph at lines 155--156
-[][] 
- []
-
-
-Overfull \hbox (18.89929pt too wide) in paragraph at lines 156--157
-[][][][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 156--157
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 156--157
-[][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 156--157
-[][] 
- []
-
-
-Overfull \hbox (38.89929pt too wide) in paragraph at lines 156--157
-[][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 156--157
-[][] 
- []
-
-
-Overfull \hbox (38.89929pt too wide) in paragraph at lines 156--157
-[][] 
- []
-
-
-Overfull \hbox (24.79932pt too wide) in paragraph at lines 156--157
-[]  
- []
-
-
-Overfull \hbox (159.89905pt too wide) in paragraph at lines 157--158
-[][][][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (109.39917pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (116.44916pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (123.49915pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 157--158
-[][] 
- []
-
-
-Overfull \hbox (81.19922pt too wide) in paragraph at lines 157--158
-[]  
- []
-
-
-Overfull \hbox (18.89929pt too wide) in paragraph at lines 158--159
-[][][][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 158--159
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 158--159
-[][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 158--159
-[][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 158--159
-[][] 
- []
-
-
-Overfull \hbox (31.8493pt too wide) in paragraph at lines 158--159
-[][] 
- []
-
-
-Overfull \hbox (38.89929pt too wide) in paragraph at lines 158--159
-[][] 
- []
-
-
-Overfull \hbox (24.79932pt too wide) in paragraph at lines 158--159
-[]  
- []
-
-
-Overfull \hbox (75.2992pt too wide) in paragraph at lines 159--160
-[][][][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (109.39917pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (95.2992pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (102.34918pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (88.2492pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-
-Overfull \hbox (81.19922pt too wide) in paragraph at lines 159--160
-[]  
- []
-
-
-Overfull \hbox (216.29895pt too wide) in paragraph at lines 160--161
-[][][][] 
- []
-
-
-Overfull \hbox (144.64911pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (144.64911pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (144.64911pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (179.89905pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (144.64911pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (179.89905pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (144.64911pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (179.89905pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (144.64911pt too wide) in paragraph at lines 160--161
-[][] 
- []
-
-
-Overfull \hbox (137.59912pt too wide) in paragraph at lines 160--161
-[]  
- []
-
-
-LaTeX Warning: Float too large for page by 206.39998pt on input line 162.
-
+[103] [104]
 
 Package caption Warning: \label without proper \caption on input line 152.
 See the caption package documentation for explanation.
@@ -1580,22 +1333,24 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `imp:lst:rule1' on page 105 undefined on input line 16
 4.
 
- [105] [106]) [107]
+[105]) [106] [107]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
 Chapter 7.
- [108
+[108
 
 
 
 ] [109] [110]
-<Chap7/figures/khas_sim.png, id=416, 1451.4225pt x 1013.7875pt>
+<Chap7/figures/khas_sim.png, id=417, 1451.4225pt x 1013.7875pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
- <use Chap7/figures/khas_sim.png>
+
+<use Chap7/figures/khas_sim.png>
 Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 40.
 (pdftex.def)             Requested size: 272.99881pt x 190.67252pt.
- [111 <./Chap7/figures/khas_sim.png>] [112] [113] [114] [115] [116]
+ [111 <./Chap7/figures/khas_sim.png>] [112]
+[113] [114] [115] [116]
 Underfull \hbox (badness 6608) in paragraph at lines 135--135
 []|\OT1/cmr/m/n/10 Standard De-
  []
@@ -1610,76 +1365,84 @@ Underfull \hbox (badness 6608) in paragraph at lines 162--162
 []|\OT1/cmr/m/n/10 Standard De-
  []
 
- <Chap7/figures/all_int.png, id=436, 481.8pt x 481.8pt>
+<Chap7/figures/all_int.png, id=437, 481.8pt x 481.8pt>
 File: Chap7/figures/all_int.png Graphic file (type png)
- <use Chap7/figures/all_int.png>
+
+<use Chap7/figures/all_int.png>
 Package pdftex.def Info: Chap7/figures/all_int.png used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-<Chap7/figures/all_int_percent.png, id=437, 481.8pt x 481.8pt>
+<Chap7/figures/all_int_percent.png, id=438, 481.8pt x 481.8pt>
 File: Chap7/figures/all_int_percent.png Graphic file (type png)
- <use Chap7/figures/all_int_percent.png>
+
+<use Chap7/figures/all_int_percent.png>
 Package pdftex.def Info: Chap7/figures/all_int_percent.png used on input line 1
 75.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [117] [118 <./Chap7/figures/all_int.png (PNG copy)>] [119 <./Chap7/figures/all
-_int_percent.png (PNG copy)>]
+[117] [118 <./Chap7/figures/all_int.png (PNG copy)>] [119 <./Chap7/figures/all_
+int_percent.png (PNG copy)>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-<Chap7/figures/khas_int_percent.png, id=449, 481.8pt x 481.8pt>
+<Chap7/figures/khas_int_percent.png, id=450, 481.8pt x 481.8pt>
 File: Chap7/figures/khas_int_percent.png Graphic file (type png)
- <use Chap7/figures/khas_int_percent.png>
+
+<use Chap7/figures/khas_int_percent.png>
 Package pdftex.def Info: Chap7/figures/khas_int_percent.png used on input line 
 218.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-<Chap7/figures/all_total.png, id=450, 481.8pt x 481.8pt>
+<Chap7/figures/all_total.png, id=451, 481.8pt x 481.8pt>
 File: Chap7/figures/all_total.png Graphic file (type png)
- <use Chap7/figures/all_total.png>
+
+<use Chap7/figures/all_total.png>
 Package pdftex.def Info: Chap7/figures/all_total.png used on input line 225.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [120] [121 <./Chap7/figures/khas_int_percent.png (PNG copy)>] [122 <./Chap7/fi
-gures/all_total.png (PNG copy)>]
-<Chap7/figures/unres_all_int.png, id=460, 481.8pt x 481.8pt>
+[120] [121 <./Chap7/figures/khas_int_percent.png (PNG copy)>] [122 <./Chap7/fig
+ures/all_total.png (PNG copy)>]
+<Chap7/figures/unres_all_int.png, id=461, 481.8pt x 481.8pt>
 File: Chap7/figures/unres_all_int.png Graphic file (type png)
- <use Chap7/figures/unres_all_int.png>
+
+<use Chap7/figures/unres_all_int.png>
 Package pdftex.def Info: Chap7/figures/unres_all_int.png used on input line 237
 .
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-<Chap7/figures/unres_all_total.png, id=461, 481.8pt x 481.8pt>
+<Chap7/figures/unres_all_total.png, id=462, 481.8pt x 481.8pt>
 File: Chap7/figures/unres_all_total.png Graphic file (type png)
- <use Chap7/figures/unres_all_total.png>
+
+<use Chap7/figures/unres_all_total.png>
 Package pdftex.def Info: Chap7/figures/unres_all_total.png used on input line 2
 44.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [123] [124 <./Chap7/figures/unres_all_int.png (PNG copy)>] [125 <./Chap7/figur
-es/unres_all_total.png (PNG copy)>]) [126]
+[123] [124 <./Chap7/figures/unres_all_int.png (PNG copy)>] [125 <./Chap7/figure
+s/unres_all_total.png (PNG copy)>]) [126]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
- [127
+[127
 
 
 
@@ -1689,11 +1452,12 @@ Overfull \hbox (5.70146pt too wide) in paragraph at lines 21--22
 mote-Sensing
  []
 
- [129] [130] [131]) [132] [133]
+[129] [130] [131]) [132] [133]
 No file thesis.bbl.
- (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux) (./Chap3/tec
-hnical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implementatio
-n.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
+(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
+(./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -1702,10 +1466,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5327 strings out of 493304
- 80575 string characters out of 6139871
- 359105 words of memory out of 5000000
- 8594 multiletter control sequences out of 15000+600000
+ 5320 strings out of 493304
+ 80639 string characters out of 6139871
+ 358105 words of memory out of 5000000
+ 8598 multiletter control sequences out of 15000+600000
  9761 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,54p,1613b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1718,10 +1482,10 @@ fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (143 pages, 3435604 bytes).
+Output written on thesis.pdf (143 pages, 3930769 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
+ 533 PDF objects out of 1000 (max. 8388607)
  344 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

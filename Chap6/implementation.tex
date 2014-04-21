@@ -1,4 +1,4 @@
-\chapter{LORIS}
+\chapter{Implementation}
 	In this chapter, we detail the design and deployment of K-HAS in the Malaysian rainforest. We also highlight the issues we experienced deploying the architecture in a humid, dense rainforest for use by those without domain knowledge of WSNs.
 	
 	Experiments carried out in the rainforest had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected.
@@ -33,19 +33,19 @@
 				
 				The web interface for classifying and viewing all observations was accessible by those within DGFC, as well as uploading rule files and new locations. Using this interface proved to be easier for those without a WSN background and the GSN interface had a steeper learning curve.	Figure \ref{fig:loris} shows the basic metadata of an observation, outlining where it was captured and when; as well as the images themselves.
 				
-				\begin{figure}[!t]
+				\begin{figure}[h]
 				\centering
-				\includegraphics[width=0.70\textwidth]{Chap6/figures/LORIS}
+				\includegraphics[width=0.70\textwidth]{Chap6/figures/loris}
 				\caption{LORIS Web Interface}
 				\label{fig:loris}
 				\end{figure}
 				
 	\section{Deployment}\label{loris:dep}
-		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was no possible to use the cables without first securing them; because animals tampering with cameras was a common occurrence.
+		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was not possible to use the cables without first securing them; because animals tampering with cameras was a common occurrence.
 		
 		For the initial week of the deployment, we wanted to test the robustness of the network before focussing on the data. This meant placing the cameras in locations where they would be triggered often and in an area where they would be affected by rainfall and humidity. Figure \ref{cam_locs} shows the locations of the cameras during both of the weeks that it was deployed. Buckeye 1 was deployed for the first week along the main path leading to the field centre from the river, this experienced the most traffic due to the number of researchers present at the time. 
 	
-	    \begin{figure}[!t]
+	    \begin{figure}[h]
 	    \centering
 		\includegraphics[width=0.70\textwidth]{Chap6/figures/buckeye}
 	    \caption{Camera Locations Around Danau Girang}
@@ -151,13 +151,13 @@
 
 			\begin{figure}\label{imp:lst:rule1}
 				\begin{lstlisting}
-					if TIME > 1500 and TEMP <= 26:
-						if TIME < 0000:
-							if MOONPHASE <= 2:
-								CLASSIFICATION = GOAT (25\% chance)
-							if MOONPHASE > 2:
-								if DATE in JAN:
-									CLASSIFICATION = HUNTER (2.6\% chance)
+if TIME > 1500 and TEMP <= 26:
+    if TIME < 0000:
+        if MOONPHASE <= 2:
+            CLASSIFICATION = GOAT (25\% chance)
+        if MOONPHASE > 2:
+            if DATE in JAN:
+                CLASSIFICATION = HUNTER (2.6\% chance)
 				\end{lstlisting}
 			\end{figure}
 			
