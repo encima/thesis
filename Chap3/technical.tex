@@ -8,11 +8,11 @@ The structure of this chapter is as follows. Section \ref{tech:motiv} explains w
 
 Danau Girang is uniquely situated in a rainforest corridor that joins two areas of rainforest together, with the corridor surrounded by palm oil fields on each side. Because of this, animals use the corridor to move between the rainforest regions and some use it to enter the palm oil plantation for new feeding grounds. This gives Danau Girang insight into the movement patterns of these animals in the corridor as well as in the rainforest itself, with a wide variety of species that are not commonly seen in other tropical regions of the world. Due to the remote nature of the centre, power is provided by a set of diesel generators which, typically, provide power from 10 am to 1 pm and 5pm to 11pm daily. Wireless Internet access is provided by satellite with speeds comparable to that of 56k, although the upload speeds are considerably faster than downloads.
 
-As outlined in Section \ref{int:mot}, the corridor monitoring programme is a scheme that has been in place for more than five years to use wildlife cameras to track the movement of animals through the corridor and to capture species that are rare or unique to South-East Asia, such as the Bornean Clouded Leopard or Sun Bear. Currently, the use of Reconyx Hyperfire HC500 cameras are being used \cite{Reconyx}. These are standalone cameras that store a pre-defined set of images to an SD card on each trigger, which is triggered by an infrared (IR) motion sensor when the beam is broken. 
+As outlined in Section \ref{int:mot}, the corridor monitoring programme is a scheme that has been in place for more than five years, using wildlife cameras to track the movement of animals through the rainforest corridor and to capture species that are rare or unique to South-East Asia, such as the Bornean Clouded Leopard or Sun Bear. Currently, the use of Reconyx Hyperfire HC500 cameras are being used \cite{Reconyx}. These are standalone cameras that capture a user-defined number of images to an SD card on each trigger, which is triggered by an infrared (IR) motion sensor when the beam is broken. 
 
-Images must be collected manually every two weeks from the cameras and the batteries are changed at that point as well, although a typical charge should last three months. The cameras are equipped with watertight casing but, due to the humidity and the opening of the cameras every 2 weeks, silica gel is used to prevent moisture inside the camera. We believe that humidity also reduces the battery life, as the charge drops from three months to around three weeks within the first few months of usage. However, the lack of constant power availability could also negatively impact the charge cycles of the batteries when at the field centre, reducing their capacity. Each unit is secured to a tree and more dangerous sites, such as known elephant paths, have protective cases as well. 
+Images must be collected manually every two weeks from the cameras and the batteries are changed at that point as well, although a typical charge should last three months. The cameras are equipped with watertight casing but they are still exposed to moisture when the case is opened every two weeks and 100\% humidity seems to have an impact as well. Silica gel is used to prevent moisture inside the camera. We believe that humidity also reduces the battery life, as the charge drops from three months to around three weeks within the first few months of usage. However, the lack of constant power availability could also affect the charge of the batteries. Because power is not available all day, the batteries are charged for period of a few hours at a time. Not only does this reduce the number of charge cycles that these batteries can experience but it also means that they are never fully charged within one time period of power availability. Solar reachring is being researched to counteract this. Each camera is secured to a tree and more dangerous sites, such as known elephant paths, have protective cases as well. 
 
-In 2010, twenty cameras were deployed for six month periods and then relocated based on the needs of the projects at that time. As of 2013, there are now ninety 	with a view to expand and dozens of projects within the field centre use the images gathered from these cameras. Initially, it was the job of visiting research students to collect the images but, since the number of deployed cameras has grown, full-time staff have been taken on to maintain them.
+In 2010, twenty cameras were deployed for six month periods and then relocated based on the needs of the projects at that time. As of 2013, there are now ninety with a view to expand and dozens of projects within the field centre use the images gathered from these cameras. Initially, it was the job of visiting research students to collect the images but, since the number of deployed cameras has grown, full-time staff have been taken on to maintain them.
 
 Our belief is that we can use the LKWS, and the locations of the existing cameras, to deploy a WSN that uses local knowledge gained from the researchers at DG to automate the collection of images, improve the battery life by not exposing the internals of the camera to the elements so often and, most important, prioritise the flow of data through the network by in-network processing. 
 	
@@ -31,7 +31,7 @@ In this section, we detail our research into suitable sensor hardware that met t
 	\item Battery-powered
 	\item Expandable memory
 \end{enumerate}
-This section also details the modifications we made to the devices in order to ensure they would survive in a humid environment.
+This section also details the modifications we made to any devices we tested in order to ensure they would survive in a humid environment.
 
 \subsection{Pandaboard}
 
@@ -50,7 +50,7 @@ The Waspmote is a general purpose sensing board that is designed to allow plug-a
 
 One of the benefits of the Waspmote is that they are commercially available with an actively maintained programming environment.
 
-\section{Wireless Range Experiements}
+\section{Range Experiements}
 	In this section, we explain the experiments we carried out to test the performance of different transmission media in the UK as well as the Malaysian rainforest. While range is the most important feature, a data rate that can handle hundreds of large readings in a day is a requirement. Our motivating scenario is focussed on the transmission of sets of 3 images for every trigger; where a sensor can trigger hundreds of times in a day.
 
 \subsection{Wi-Fi}\label{tech:wifirange}
@@ -71,7 +71,7 @@ This experiment was run in a wooded area in the UK and in the rainforest at DG. 
 			
 	The graph does show a drop at 22m, this was due to the dense foliage that restricted the LOS between the base station and the receiving node, with five runs of this test we observed the same results. The primary aim of this experiment was to prove the viability of Wi-Fi and to to ensure our application functioned as intended, which it did. Further experiments could have been run to remove the anomaly but the results of the experiments in Danau Girang were the focus.
 		 
-	Despite the poor range from the tests in the UK, it was consistent with other studies reporting signal degradation of up to 78\% in areas with moderate foliage. We visited Danau Girang in 2011 to gather the requirements of the network and ensure the hardware is able to survive the humidity. Range experiments were run in the rainforest to see if a more humid environment impacts range any further, Figure \ref{malaysiasnr} shows this.
+	Despite the poor range from the tests in the UK, it was consistent with other studies reporting signal degradation of up to 78\% in areas with dense foliage. We visited Danau Girang in 2011 to gather the requirements of the network and ensure the hardware is able to survive the humidity. Range experiments were run in the rainforest to see if a more humid environment impacts range any further, Figure \ref{malaysiasnr} shows this.
 			
 			\begin{figure}[!t]
 			\centering
@@ -108,10 +108,10 @@ Experiments were run in 2 areas of the rainforest around Danau Girang and the re
 In more open areas of the rainforest, we achieved 199m on average, more dense regions of the forest reduced this to 102m on average. While these results are not as high as we achieved in the UK, they are still suitable to use Digimesh in the deployment of a WSN. This could be because we were using low-gain antennas and little configuration had been made on the Digimesh radio.
 
 \subsection{Adapting for Harsh Environments}
-	All of the hardware that we used for experiments had their components exposed and would have become compromised if moisture came in contact with them. To protect them from this, we used waterproof cases with a protective foam inside, known as Pelican cases, to keep the nodes watertight, but still allowing airflow, shown in Figure \ref{tech:pelican}.
+	All of the hardware that we used for experiments had their components exposed and would have become compromised if moisture came in contact with them. To protect them from this, we used waterproof cases with a protective foam inside, known as Pelican cases, to keep the nodes watertight, but still allowing airflow to displace the heat generated, shown in Figure \ref{tech:pelican}.
 	External antenna can be fed through the lip of the case, using thin cable, ensuring that the range of the transmissions is not affected by the case. 
 
-			\begin{figure}[!t]
+			\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.45\textwidth]{Chap3/figures/pelican}
 			\caption{Pelican Waterproof Case}
@@ -119,20 +119,22 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 			\end{figure}
 
 \section{Software}
+	In this section, we explain the image processing software we developed for the real time processing of images within the network, as well as the retrospective processing of images that has been taken during previous deployments.
+
 	\subsection{Triton} \label{tech:sf:triton}
 		Triton is a C++ program that makes use of the Open Computer Vision (OpenCV) library for performing popular image processing functions. Triton takes in a set of images, combines them and builds a background model. Using this model, the foreground is extracted from the image and this is scanned for objects. If an object is found, it is extracted to a separate and saved as a black and white template, to minimise space and assist with future classifications.
 		
-		Primarily, we developed this tool to detect the huge number of empty images captured around Danau Girang, due to trees falling, movement of the Sun, fast animals or dirt on the lens. However, Triton proved to be quite effective when finding images of interest and it was modified to be used with our sensors. In this section, we explain how Triton was tested and compared with human observations. To ensure a valid comparison, we also compared both results to a random classifier.
+		Primarily, we developed this tool to detect the large number of empty images captured around Danau Girang, due to trees falling, movement of the Sun, fast animals or dirt on the lens. However, Triton proved to be quite effective when finding images of interest and it was modified to be used with our sensors. In this section, we explain how Triton was tested and compared with human observations. To ensure a valid comparison, we also compared both results to a random classifier.
 	
-		During a typical three month deployment along the Kinabatangan River more than 40,000 images can be taken. A large proportion of these images can be classed as false triggers. 
+		During a typical three month deployment along the Kinabatangan River more than 40,000 images can be taken. A large proportion of these images can be classed as \textit{false triggers}; which are images captured by movement detected with the motion trigger of a camera when there is no object of interest. These can be caused by changes in the light, falling trees or animals moving too fast.
 		
-		Using the images, taken in sets of 3, and separating the images taken by specific cameras, we build a Gaussian background model and used that to detect animals in the foreground, classifying the detected foreground as the ROI, and extracting it.
+		Using the images, taken in sets of three, and separating the images taken by specific cameras, we build a Gaussian background model and used that to detect animals in the foreground, classifying the detected foreground as the ROI, and extracting it.
 	
 		As mentioned in Section \ref{sec:scenario}, Figure \ref{origimg} shows an image taken by a wildlife camera. The dynamic background and light levels should be noted here. This image is number 1, in a set of 3, a background model is built from these images and added to the pre-existing background model built by that camera. The foreground of the image is then extracted and ROIs, larger than a threshold, are identified. The largest ROI is then extracted from the image and saved separately.
 	
 		From our visit to Danau Girang in 2011, we collected images from two different three month deployments, in two different lots in Danau Girang, giving us just over 70,000 of images to test our approach. The images are sorted by the camera and the date of collection. We process every 3 images as one set, building a background model of all three images.
 		
-		We manually process all of the images initially, marking images that are empty as false triggers. We then process the images, using our application, and a resulting processed image is created from every set of 3 images. If nothing is detected in a set then no image is created and that set is logged as empty. 
+		We manually processed all of the images initially, marking images that are empty as false triggers. We then processed the images, using our application, and a resulting processed image is created from every set of 3 images. If nothing is detected in a set then no image is created and that set is logged as empty. 
 		
 		There are four classifications that can be made with images sets:
 		\begin{description}
@@ -148,7 +150,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 		
 		Where T$_{p}$  is the number of true positive sets extracted and T$_{n}$  is the number of true negative sets.
 		
-		Table \ref{table:processing} shows experiments run on a camera deployed in Danau Girang, testing on 300 sets of 3 images. These images were manually processed and classified as interesting or empty, of the 300, 94 sets were identified as interesting. Using Triton, 53 of those interesting sets ({\it true positives}) were extracted, with another 17 {\it false positives} extracted. 201 {\it true negatives} were correctly identified and a further 5 were identified as {\it false negatives}. 
+		Table \ref{table:processing} shows experiments run on a camera deployed in Danau Girang, testing on 300 sets of 3 images. These images were manually processed and classified as interesting or empty, of the 300, 94 sets were identified as interesting. Using Triton, 53 of those interesting sets (\textit{true positives}) were extracted, with another 17 \textit{false positives} extracted. 201 \textit{true negatives} were correctly identified and a further 5 were identified as \textit{false negatives}. 
 		
 		Out of the 94 interesting sets, 77 were identified correctly, giving an accuracy of 82\% for finding sets of interest. Furthermore, of 206 empty sets, 201 were found, which gives a 98\% accuracy at finding empty images.
 	
@@ -170,7 +172,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 			\label{table:processing}
 		\end{table*}
 		
-		The results of Triton were compared to a random classifier, implemented in Python. Table \ref{table:random} shows the outcome, with 72 {\it true positives} extracted, resulting in an accuracy of 80\%. 73.3 {\it true negatives} from a total of 206 were found, giving an accuracy of 36\%. Although this set does not compare to the number of images collected in a six month deployment, human classification is a time consuming process and to have 900 classifications is complex. Although these could be crowdsourced, the reliability becomes questionable, in part due to the specialist nature of the images. This does show that our approach is quite close to the accuracy of a human when finding images of interest, but is able to do so in a fraction of the time, processing hundreds of images every minute. 
+		The results of Triton were compared to a random classifier, implemented in Python. Table \ref{table:random} shows the outcome, with 72 \textit{true positives} extracted, resulting in an accuracy of 80\%. 73.3 \textit{true negatives} from a total of 206 were found, giving an accuracy of 36\%. Although this set does not compare to the number of images collected in a six month deployment, human classification is a time consuming process and to have 900 classifications is complex. Although these could be crowdsourced, the reliability becomes questionable, in part due to the specialist nature of the images. This does show that our approach is quite close to the accuracy of a human when finding images of interest, but is able to do so in a fraction of the time, processing hundreds of images every minute. 
 		
 		Triton, coupled with a set of human eyes at the heart of the network, should prove to be an effective approach for prioritising images through the network, even when a classification cannot be made through the use of local knowledge. More importantly, in an area where the environment is as dynamic as the Malaysian rainforest, 97\% accuracy for detecting empty images can be crucial, if only for saving network bandwidth.
 		
@@ -192,7 +194,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 %	\subsection{ODACH}
 
 \section{Conclusion}
-	In this chapter, we have shown the current hardware choices available for more computationally capable sensors and detailed our experimental results on how rainforest environments impact wireless transmissions. Although technologies, such as Wi-Fi, provide a high data rate, their range is limited and not suitable for sparse sensor networks; especially in a humid environment.
-	Newer technologies, designed for long-range communication in sensor networks, are becoming increasingly more viable and, while they do have lower data rates and less robust protocols, they are more suitable for a resource constrained WSN that requires minimal power draw when transmitting. 
-	Using general-purpose hardware also means that there is no protection against water, humidity and animal or human intervention. We have adapted existing waterproof cases to suit our needs and two week deployments have shown that they are able to prevent any moisture from entering the case.
+	In this chapter, we have shown the current hardware choices available for more computationally capable sensors and detailed our experimental results on how rainforest environments impact wireless transmissions. Although wireless technologies such as Wi-Fi provide a high data rate, their range is limited and not suitable for sparsely located nodes covering a large area; especially in a humid environment.
+	Newer wireless technologies, designed for long-range communication in sensor networks, are becoming increasingly more viable and, while they do have lower data rates and less robust protocols, they are more suitable for a resource constrained WSN that requires minimal power draw when transmitting. 
+	Using general-purpose hardware also means that there is no protection against water, humidity and animal or human intervention. We have adapted existing waterproof cases to suit our needs and preliminary short term deployments have shown that they are able to prevent any moisture from entering the case.
 	 
