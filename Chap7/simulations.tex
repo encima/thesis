@@ -131,43 +131,64 @@ In this section, we explains the results from simulating each scenario in a rand
 
 Each scenario, outlined in Section \ref{sim:imp}, runs to simulate a 6 month deployment. Using our motivating scenario, we modelled each scenario on a fixed number of nodes: 1 central node, 4 routing nodes and 20 sensing nodes. The implementation of our architecture has been limited to using Zigbee as the transmission medium between all sensing nodes, with a Wi-Fi connection between routing nodes and a central node. Sensing nodes then send an observation when it is captured or, if it has not captured anything then it checks for a backlog every ten minutes. Sensing nodes check for new observations to process every five minutes. We ran each scenario a hundred times, with each run simulating a 6 month duration. The time to process an observation using LK has been simulated to take 5 seconds compared to the 90 seconds when a node has HK capabilities; these values have been chosen based on the average processing time we derived using existing data. 
 
-The simulations were run in two modes: ideal and real world. Ideal used a fixed transmission rate (250kbps) for Zigbee links between all sensing nodes, with all observations being sent at the highest possible rate. Real world generates a random number for the transmission rate (between 20 and 250kbps) for each sensing node link, at the time of the network's initialisation. This models the large fluctuations in both speed and range that we observed in the Malaysian rainforest when we ran tests with Zigbee equipment. The Wi-Fi range remains constant because the distance of routing nodes from central nodes, in our motivating scenario, can be made small enough that a consistently good connection is achievable.
+The simulations were run in two modes: ideal transmission rate and variable transmission. Ideal used a fixed transmission rate (250kbps) for Zigbee links between all sensing nodes, with all observations being sent at the highest possible rate. Real world generates a random number for the transmission rate (between 20 and 250kbps) for each sensing node link, at the time of the network's initialisation. This models the large fluctuations in both speed and range that we observed in the Malaysian rainforest when we ran tests with Zigbee equipment. The Wi-Fi range remains constant because the distance of routing nodes from central nodes, in our motivating scenario, can be made small enough that a consistently good connection is achievable.
 
-\subsection{Ideal}
-The ideal mode runs with the transmission rates of all nodes at their theoretical maximum, giving the highest speed for both Zigbee and Wi-Fi. Figure \ref{fig:res:ideal:dur} shows the mean duration of any observation, interesting or empty, in each scenario. With the exception of NKALL, it is clear scenarios that, where more nodes have higher knowledge processing capabilities, the mean duration is increased. NKALL could be showing a higher average duration because the lack of knowledge on any of the nodes prevents it from prioritising observations, which means that some could be queued for longer before being sent on. One of the key points to note is that the difference in transmission time from capture to central node is typically no more than one hundred seconds. When compared with a standard, power efficient WSN with no knowledge processing capabilities, the reduced battery life may not be worth the trade off. However, these times are not solely for transmission, they also include in-network processing and prioritisation when they arrive at the central node. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/ideal_int_percent}
+	\caption{Percentage of Interesting Observations for All Scenarios.}
+	\label{fig:res:ideal:int}
+\end{figure}
 
-Figure \ref{fig:res:ideal:int} shows the percentage of interesting observations that arrive at the central node. Due to the short transmission time, almost all observations arrive in near real-time and, as such, the split between empty and interesting remains almost constant at approximately 80:20. However, the \textit{True Positive} observations are the most important as they are the interesting observations that have been marked as such. \textit{False Positives} are interesting observations that have been wrongly marked as empty. Increasing the knowledge processing capabilities of routing nodes, shown by the difference between LK-ALL and LK-HK, increases the number of TPs, as well as reducing the number of FPs. Another important point to note is that LK-HK and HK-ALL provide the same results, despite HK-ALL solely consisting of nodes with the highest knowledge processing capabilities.  This is probably due to the fact that all observations, in LK-HK, go through an HK routing node. 
+Figure \ref{fig:res:ideal:int} shows the percentage of interesting observations that arrive at the central node. Due to the short transmission time, almost all observations arrive in near real-time and, as such, the split between empty and interesting remains almost constant at approximately 80:20. However, the \textit{True Positive} observations are the most important as they are the interesting observations that have been marked as such. \textit{False Positives} are interesting observations that have been wrongly marked as empty. Increasing the knowledge processing capabilities of routing nodes, shown by the difference between LK-ALL and LK-HK, increases the number of TPs, as well as reducing the number of FPs. Another important point to note is that LK-HK and HK-ALL provide the same results, despite HK-ALL solely consisting of nodes with the highest knowledge processing capabilities.  This is probably due to the fact that all observations, in LK-HK, go through an HK routing node and, thus, would receive the same level of processing as in an HK-ALL scenario.
 
-While HK-ALL provides the benefit of all nodes having a more sophisticated knowledge base, the increased power consumption reduces their battery life to three weeks. If there is no discernible difference between HK-ALL and LK-HK, then our solution is not only more power efficient (because it consists of primarily LK sensing nodes with a three month battery life), but it would also be cheaper to deploy.
+These results support our hypothesis that LK-HK is the best scenario to choose in terms of timeliness of data delivery, quality of data delivered and network lifetime, as LK-HK has all sensing nodes with low knowledge processing capabilities, allowing them to run for several months. However, with HK-ALL, all sensing nodes run with higher capabilities and are limited to run for a maximum of three weeks before battery replacement is required.
+
+\subsection{Duration}
+The ideal transmission rate runs with the transmission rates of all nodes at their theoretical maximum, giving the highest speed for both Zigbee and Wi-Fi. Figure \ref{fig:res:ideal:dur} shows the mean duration of any observation, interesting or empty, in each scenario. With the exception of NKALL, it is clear scenarios that, where more nodes have higher knowledge processing capabilities, the mean duration is increased. NKALL could be showing a higher average duration because the lack of knowledge on any of the nodes prevents it from prioritising observations, which means that some could be queued for longer before being sent on. One of the key points to note is that the difference in transmission time from capture to central node is typically no more than one hundred seconds. When compared with a standard, power efficient WSN with no knowledge processing capabilities, the reduced battery life may not be worth the trade off. However, these times are not solely for transmission, they also include in-network processing and prioritisation when they arrive at the central node. 
 
 	\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.70\textwidth]{Chap7/figures/ideal_all_dur}
-	\caption{Mean Duration for All Observations in Ideal Mode.}
+	\caption{Mean Duration for All Observations with Ideal Transmission Rates.}
 	\label{fig:res:ideal:dur}
 	\end{figure}
 	
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.70\textwidth]{Chap7/figures/ideal_int_percent}
-	\caption{Percentage of Interesting Observations for All Scenarios.}
-	\label{fig:res:ideal:int}
-	\end{figure}
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/real_all_dur}
+	\caption{Mean Duration of All Observations under Variable Transmission Rate.}
+	\label{fig:real:dur}
+	\end{figure}	
 
-\subsection{Real World}
-
-During our visits to Danau Girang, we performed experiments for many different transmission methods: Wi-Fi, ZIgbee and RF. The results were always different to what we experienced in the UK and the variation in connectivity in just a few minutes, or metres, was astounding. Days where the humidity was one percent higher than the previous day could result in a 50\% range drop and rain for a few minutes could drop all connections for an hour afterwards. Modelling this in our simulations was necessary to accurately plan for what we could expect in Malaysia. Our planned network topology in Danau Girang has routing and central nodes so close to each other that the Wi-Fi connection remained fairly stable and connectivity should remain at 100\%. When simulating sensing nodes, we randomly set their transmission rate between 20 and 250kbps at the start of each run. As each scenario is being run 100 times, this way is more efficient while still allowing for variation in the transmission rates. 
+During our visits to Danau Girang, we performed experiments for many different transmission methods: Wi-Fi, Zigbee and RF. The results were always different to what we experienced in the UK and the variation in connectivity in just a few minutes, or metres, was astounding. Days where the humidity was one percent higher than the previous day could result in a 50\% range drop and rain for a few minutes could drop all connections for an hour afterwards. Modelling this in our simulations was necessary to accurately plan for what we could expect in Malaysia. Our planned network topology in Danau Girang has routing and central nodes so close to each other that the Wi-Fi connection remained fairly stable and connectivity should remain at 100\%. When simulating sensing nodes, we randomly set their transmission rate between 20 and 250kbps at the start of each run. As each scenario is being run 100 times, this method is more efficient while still allowing for variation in the transmission rates. 
 
 The number of interesting observations received in each scenario remained the same as in the ideal mode, as expected, but the fluctuation in transmission time (Figure \ref{fig:real:dur} is much larger, with some images taking 800 seconds, or 13 minutes. In our motivating scenario, this is not much of an issue. However, if the image was of a hunter or the scenario was building intrusion detection system, then thirteen minutes is a long delay that could cause considerable damage. Of course, using all Wi-Fi connections is a more feasible option, but situations where long range is required prevents this and these simulations do not currently take into account broken links in the network, where changes to the node's environment (such as a fallen tree) or an increase in humidity, could cause it to drop out of range for minutes or even hours. 
 
+The duration of an observation with both a variable and ideal transmission rate does not fluctuate largely and Figure \ref{fig:res:ideal:int} shows that the processing power of LK-HK vs. HK-ALL is identical. However, Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that the primary benefit of pushing HK processing capabilities out to the edge of the network allows for better prioritisation of observations. Sensing nodes with HK are able to determine whether a node is interesting or empty with much greate accuracy and these capabilities, right at the edge of the network, allows for an interesting observation to be processed as soon as it is captured and sent without further processing directly to a central node. The only delays being the processing time itself and the sending queue of intermediate nodes. Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur}, when compared with \ref{fig:real:dur}, highlight the transmission time difference between an interesting and an empty observation, with interesting observations arriving, on average, 120 seconds before empty observations. While these numbers may only be useful in time critical scenarios, WSNs with much worse transmission rates could experience a much larger time difference between interesting observations, especially when using long range FM frequencies that can transfer only a few bytes a second.
+
+    \begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/real_int_dur}
+	\caption{Mean Duration of Interesting Observations under Variable Transmission Rate.}
+	\label{fig:real:int:dur}
+	\end{figure}	
+
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.70\textwidth]{Chap7/figures/real_all_dur}
-	\caption{Percentage of Interesting Observations for All Scenarios.}
-	\label{fig:real:dur}
-	\end{figure}
-	
-The results of the real world mode show that Zigbee is still a viable method for our motivating scenario but, for mission critical WSNs, where real time transmissions are a requirement, then a method with a higher transmission rate would be needed. However, in the worst case, 800 seconds from capture to delivery of a processed observations is still very positive and would save countless man hours, as well as allowing users of the network to act on most of the received sensed data immediately, without having to first manually process it.
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/real_empty_dur}
+	\caption{Mean Duration of Empty Observations under Variable Transmission Rate.}
+	\label{fig:real:empty:dur}
+	\end{figure}	
+
+\subsection{Observation Saturation}
+
+With the transmission rates of Zigbee and Wi-Fi, an observation of three images, each under a megabyte in size, can be processed and sent in a matter of minutes; when there are only a few hops. However, with these network topologies, we are unable to see how each scenario handles prioritisation when it is unable to send every observation captured. This can be done by either reducing the transmission rate or increasing the chance of an observation being captured. We chose to increase the chance of an observation being captured and maintaining the transmission rate in order to keep the simulations in line with our motivating scenario. Existing data from Danau Girang has shown a seasonality change in the number of images captured and we know that some sites are more active than others, therefore making a higher chance of capture more fitting. 
+
+Imagine a scenario where flash floods in the rainforest prevent access to the nodes to change the battery and a mating season of sun bear has caused the capture rate to increase. The chance of an image capture has increased and users of the network have programmed the sensing nodes to increase their sleep duration to a minute; saturating the network with more images than can be sent in a six month period.
+
+We simulated this across all five scenarios and the results are detailed in this section. The duration is increased for all observations and there is an increase in the time it takes an interesting observations when compared to an empty observation. This is because so many more are being captured however, when you look at the number delivered, we can see that the number of interesting observations delivered is much greater. This means that the network is successfully prioritising observations it believes to be interesting and not sending those that are empty because of the time and bandwidth constraints.
+
 
 
 % \subsection{Scenarios}
