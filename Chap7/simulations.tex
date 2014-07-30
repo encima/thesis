@@ -181,7 +181,7 @@ The duration of an observation with both a variable and ideal transmission rate 
 	\label{fig:real:empty:dur}
 	\end{figure}	
 
-\subsection{Observation Saturation}
+\subsection{Network Saturation}
 
 With the transmission rates of Zigbee and Wi-Fi, an observation of three images, each under a megabyte in size, can be processed and sent in a matter of minutes; when there are only a few hops. However, with these network topologies, we are unable to see how each scenario handles prioritisation when it is unable to send every observation captured. This can be done by either reducing the transmission rate or increasing the chance of an observation being captured. We chose to increase the chance of an observation being captured and maintaining the transmission rate in order to keep the simulations in line with our motivating scenario. Existing data from Danau Girang has shown a seasonality change in the number of images captured and we know that some sites are more active than others, therefore making a higher chance of capture more fitting. 
 
@@ -189,7 +189,39 @@ Imagine a scenario where flash floods in the rainforest prevent access to the no
 
 We simulated this across all five scenarios and the results are detailed in this section. The duration is increased for all observations and there is an increase in the time it takes an interesting observations when compared to an empty observation. This is because so many more are being captured however, when you look at the number delivered, we can see that the number of interesting observations delivered is much greater. This means that the network is successfully prioritising observations it believes to be interesting and not sending those that are empty because of the time and bandwidth constraints.
 
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/saturated/total_dur}
+	\caption{Mean Duration of All Observations Across All Scenarios.}
+	\label{fig:sat:total:dur}
+	\end{figure}
 
+Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all observation does not differ much when the network is saturated, but we can see that the network must decide what images to send or drop when there are more observations than bandwidth available. This is shown more clearly when we compare \textit{interesting} and \textit{empty} observations. 
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/saturated/empty_dur}
+	\caption{Mean Duration of Empty Observations Across All Scenarios.}
+	\label{fig:sat:empty:dur}
+	\end{figure}
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/saturated/int_dur}
+	\caption{Mean Duration of Interesting Observations across All Scenarios.}
+	\label{fig:sat:int:dur}
+	\end{figure}
+
+The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) shows that the increase of knowledge processing capabilities improves the network's ability to filter out empty observations and a network with only HK nodes is able to defer empty observations from the time of capture so that bandwidth remains free for those that are interesting. Figure \ref{fig:sat:int:dur} shows the mean transmission time of interesting observations and it is clear to see that interesting observations misclassified as empty bring the average up somewhat but this ability to prioritise allows truly interesting observation to be delivered at a much faster rate. It is worth nothing that, while misclassified interesting observations take longer to reach the central node in higher knowledge scenarios, the number of them received is greatly reduced; as shown in Figure \ref{fig:sat:int:percent}.
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/saturated/int_percent}
+	\caption{Percentage of Interesting Observations across All Scenarios.}
+	\label{fig:sat:int:percent}
+	\end{figure}
+
+Saturating each scenario shows how different levels of knowledge processing across the the nodes can prioritise the delivery of interesting observations while filtering out observations that have been classified as empty. We can see that the HK-ALL scenario delivers the highest percentage of interesting observations (80\%), with a slightly higher average transmission time. Having HK on all nodes causes a large reduction in the lifetime of the network to 3 weeks. L-KHK (or KHAS) is a good alternative to this as it provides a network lifetime of 3 months for the majority of the nodes but still around 70\% of all images (same as LK-ALL) are interesting, but the majority of these are \textit{true positives}. In a network with limited access to a power source, LK-HK is the best implementation but, for networks with access to a continuous power source, HK-ALL can be used to increase the number of interesting observations delivered to the central node in a shorter time period.
 
 % \subsection{Scenarios}
 
