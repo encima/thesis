@@ -114,32 +114,43 @@ Experiments were run in 2 areas of the rainforest around Danau Girang and the re
 			
 In more open areas of the rainforest, we achieved 199m on average, more dense regions of the forest reduced this to 102m on average. While these results are not as high as we achieved in the UK, they are still suitable to use DigiMesh in the deployment of a WSN. This could be because we were using low-gain antennas and little configuration had been made on the DigiMesh radio.
 
-\subsection{Adapting for Harsh Environments}
+\subsection{Adapting and Optimising for Harsh Environments}
 	All of the hardware that we used for experiments had their components exposed and would have become compromised if moisture came in contact with them. To protect them from this, we used waterproof cases with a protective foam inside, known as Pelican cases, to keep the nodes watertight, but still allowing airflow to displace the heat generated, shown in Figure \ref{fig:tech:pelican}.
 	External antenna can be fed through the lip of the case, using thin cable, ensuring that the range of the transmissions is not affected by the case. 
 
 			\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.45\textwidth]{Chap3/figures/pelican}
+			\includegraphics[width=0.65\textwidth]{Chap3/figures/pelican}
 			\caption{Pelican Waterproof Case}
 			\label{fig:tech:pelican}
 			\end{figure}
+
+	After experiencing poor range results, we considered running antennae up through the trees to the canopy so there would have been no foliage to block signals and the humidity would have been lower. However, this was not possible because of conservation issues and the fact that inhabitants of the rainforest could easily damage the antenna wire.
+
+	Typically, WSNs in urban areas can use mains power and more remote networks utilise solar, or other renewable energy sources. In an area of dense foliage and high canopy cover, solar power is not a viable energy source. While DigiMesh has a lower transmission rate than Wi-Fi, its power requirements are lower, which maximises network lfietime for WSNs that are do not have access to constant power or a renewable energy source.
 
 \section{Software}\label{tech:sw}
 	In this section, we explain the image processing software we developed for the real time processing of images within the network, as well as the retrospective processing of images that has been taken during previous deployments.
 
 	\subsection{Triton} \label{tech:sf:triton}
-		Triton is a C++ program that makes use of the Open Computer Vision (OpenCV) library for performing popular image processing functions. Triton takes in a set of images, combines them and builds a background model. Using this model, the foreground is extracted from the image and this is scanned for objects. If an object is found, it is extracted to a separate and saved as a black and white template, to minimise space and assist with future classifications.
+		Triton is a C++ program that makes use of the Open Computer Vision (OpenCV) library for performing popular image processing functions. Triton takes in a set of images, combines them and builds a background model. Using this model, the foreground is extracted from the image and this is scanned for objects. If an object is found, it is extracted to a new image and saved as a black and white template, to minimise space and assist with future classifications.
 		
 		Primarily, we developed this tool to detect the large number of empty images captured around Danau Girang, due to trees falling, movement of the Sun, fast animals or dirt on the lens. However, Triton proved to be quite effective when finding images of interest and it was modified to be used with our sensors. In this section, we explain how Triton was tested and compared with human observations. To ensure a valid comparison, we also compared both results to a random classifier.
 	
-		During a typical three month deployment along the Kinabatangan River more than 40,000 images can be taken. A large proportion of these images can be classed as \textit{false triggers}; which are images captured by movement detected with the motion trigger of a camera when there is no object of interest. These can be caused by changes in the light, falling trees or animals moving too fast.
+		During a typical three month deployment along the Kinabatangan River more than 40,000 images can be taken. A large proportion of these images can be classed as \textit{false triggers}; occurring when a camera is triggered by the motion detector but there is no object of interest. These can be caused by changes in the light, falling trees or animals moving too fast to remain in the shot in the delay between the motion detector triggering and the camera capturing an image.
 		
-		Using the images, taken in sets of three, and separating the images taken by specific cameras, we build a Gaussian background model and used that to detect animals in the foreground, classifying the detected foreground as the ROI, and extracting it.
+		We organised the images collected by the original camera that captured them and separating them into sets of three, because that is the number of images that the cameras were configured to take at each trigger. From this, we built a Gaussian background model \cite{REFERENCE} for each set and used the resulting model to detect objects in the foreground, classifying the detected foreground as the Region Of Interest (ROI), and extracting it.
 	
-		As mentioned in Section \ref{sec:scenario}, Figure \ref{origimg} shows an image taken by a wildlife camera. The dynamic background and light levels should be noted here. This image is number 1, in a set of 3, a background model is built from these images and added to the pre-existing background model built by that camera. The foreground of the image is then extracted and ROIs, larger than a threshold, are identified. The largest ROI is then extracted from the image and saved separately.
+		Figure \ref{tech:reconyx} shows an image taken by a wildlife camera. The dynamic background and light levels make it very difficult to extract an object of interest. This image is number 1, in a set of 3, a background model is built from these images and added to the pre-existing background model built by that camera. The foreground of the image is then extracted and ROIs, larger than a threshold, are identified. The largest ROI is then extracted from the image and saved separately.
+
+			\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.65\textwidth]{Chap3/figures/reconyx.jpg}
+			\caption{Reconyx Hyperfire Wildlife Camera}
+			\label{tech:reconyx}
+			\end{figure}
 	
-		From our visit to Danau Girang in 2011, we collected images from two different three month deployments, in two different lots in Danau Girang, giving us just over 70,000 of images to test our approach. The images are sorted by the camera and the date of collection. We process every 3 images as one set, building a background model of all three images.
+		From our visit to Danau Girang in 2011, we collected images from two different three month deployments, with the same cameras placed in different sites around Danau Girang for each deployment, giving us just over 70,000 of images to test our approach. The images are sorted by the camera location and the date of collection. We process every 3 images as one set, building a background model of all three images.
 		
 		We manually processed all of the images initially, marking images that are empty as false triggers. We then processed the images, using our application, and a resulting processed image is created from every set of 3 images. If nothing is detected in a set then no image is created and that set is logged as empty. 
 		
@@ -157,7 +168,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 		
 		Where T$_{p}$  is the number of true positive sets extracted and T$_{n}$  is the number of true negative sets.
 		
-		Table \ref{table:processing} shows experiments run on a camera deployed in Danau Girang, testing on 300 sets of 3 images. These images were manually processed and classified as interesting or empty, of the 300, 94 sets were identified as interesting. Using Triton, 53 of those interesting sets (\textit{true positives}) were extracted, with another 17 \textit{false positives} extracted. 201 \textit{true negatives} were correctly identified and a further 5 were identified as \textit{false negatives}. 
+		Table \ref{table:processing} shows experiments run on images from a randomly selected camera deployed in Danau Girang, testing on 300 sets of 3 images. These images were manually processed and classified as interesting or empty, of the 300, 94 sets were identified as interesting. Using Triton, 77 of those interesting sets (\textit{true positives}) were extracted, with another 17 \textit{false positives} extracted. 201 \textit{true negatives} were correctly identified and a further 5 were identified as \textit{false negatives}. 
 		
 		Out of the 94 interesting sets, 77 were identified correctly, giving an accuracy of 82\% for finding sets of interest. Furthermore, of 206 empty sets, 201 were found, which gives a 98\% accuracy at finding empty images.
 	
@@ -201,7 +212,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 %	\subsection{ODACH}
 
 \section{Conclusion}\label{tech:conc}
-	In this chapter, we have shown the current hardware choices available for more computationally capable sensors and detailed our experimental results on how rainforest environments impact wireless transmissions. Although wireless technologies such as Wi-Fi provide a high data rate, their range is limited and not suitable for sparsely located nodes covering a large area; especially in a humid environment.
+	In this chapter, we have shown the current hardware choices available for more computationally capable sensors and detailed our experimental results on how rainforest environments impact wireless transmissions. Although wireless technologies such as Wi-Fi provide a high data rate, their range is limited and not suitable for sparsely located nodes covering a large area; especially in a humid environment. Commerical Wi-Fi solutions are becoming more widepsread in open, public places, such as: shopping malls, airports and universitites, but these places allow for multiple routers, constant power supply and a greater range as routers are placed as high as possible to maximise coverage.
 	Newer wireless technologies, designed for long-range communication in sensor networks, are becoming increasingly more viable and, while they do have lower data rates and less robust protocols, they are more suitable for a resource constrained WSN that requires minimal power draw when transmitting. 
-	Using general-purpose hardware also means that there is no protection against water, humidity and animal or human intervention. We have adapted existing waterproof cases to suit our needs and preliminary short term deployments have shown that they are able to prevent any moisture from entering the case.
+	Using general-purpose hardware also means that there is no protection against water, humidity and animal or human intervention. We have adapted existing waterproof cases to suit our needs and preliminary short term deployments have shown that they are able to prevent moisture from entering the case.
 	 
