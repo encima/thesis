@@ -72,7 +72,9 @@ SPIN eliminates the need for a global view of the network topology, as nodes onl
 Nodes use the existing message structure of SPIN, but REQ messages are used as queries, sent to all nodes in transmission range. The receiving nodes keep these requests and generate a new REQ message, thus allowing nodes to store temporal paths. When a REQ reaches a node that has the desired data, it responds with a ROUTE-REPLY message. This message is used because images are large and resource-constrained WSNs would have a much shorter lifetime if a lot of unnecessary transmissions were made. The ROUTE-REPLY is used in case multiple nodes, in range of the requesting node, have the data it has requested and it can then choose the optimal route. As each node keeps a history of REQ messages, these can be used to trace the requested data back through the network, to the originating node, without the overhead of maintaining a global routing table.
 
 \subsubsection{COUGAR}
-	A slightly different data-centric approach is the proposed COUGAR protocol, viewing the network as a distributed database. Cougar is similar to SPIN because it does not forward data as soon as it is sensed, instead COUGAR uses a query language that abstracts the underlying network structure and uses received queries to generate a plan that utilises in-network processing to provide an answer based on the sensed data stored on all deployed nodes \cite{Yao2002}.
+	A slightly different data-centric approach is the proposed COUGAR protocol, viewing the network as a distributed database. Cougar is similar to SPIN because it does not forward data as soon as it is sensed, instead COUGAR uses a query language that abstracts the underlying network structure and uses received queries to generate a plan that utilises in-network processing to provide an answer based on the sensed data stored on all deployed nodes \cite{Yao2002}. 
+
+	For example, in a building monitoring network, a user could query a base station for offices that are unoccupied. The base station then sends that query to all nodes in range and it is then dispersed throughout the network. Nodes that have data that can satisfy the query send back their results and these are combined as they move back through the network to the base station. The user then receives that data, along with the nodes that have provided it.
 
 Within the network, a \textit{leader} is selected and this node is used to aggregate the data from nodes that were able to fulfil all, or some, of the query. At risk of failure, each query should result in a \textit{leader} being dynamically selected and it must have sufficient resources to be able to satisfy the request. This protocol was only proposed, and much of the technical detail has yet to be completed, but the concept of treating the network as a distributed database is a novel idea and this is one of the first protocols to suggest the use of a query language that could be used by people without specific domain knowledge.
 
@@ -89,7 +91,7 @@ Clusters are assigned for a period of time and then new clusters are selected by
 For example, a network could be tasked with sensing humidity in a rainforest but the thresholds have been set such that nodes are transmitting readings that are not of interest. A user can change these thresholds and they will be pushed out to the nodes at the time that the next clusters are chosen, without any need to visit the node or configure them individually.
 
 \subsection{Location-based}
-	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on the region that nodes are deployed in. **FLESH OUT**
+	Instead of using the physical addresses of nodes, or the data they store, location-based protocols are based on the region that nodes are deployed in. Location-based routing relies on the fact that each node is aware of its own location and is also aware of the destination's location.
 
 \subsubsection{Span}
 	Span is a protocol where nodes are selected as \textit{coordinators} based on their positions. A node can decide to be a coordinator based on the amount of energy it has and the number of neighbouring nodes it would benefit if they were able to use it as a bridge \cite{Chen2002}.
@@ -110,7 +112,7 @@ To disseminate a packet within a geographic area, GEAR uses algorithms based on 
 \section{Sensor Middleware} \label{bg:sm}
 	Acting as a bridge between the hardware and the user, sensor middleware is software that abstracts the underlying network from the user and provides a means of accessing sensed data and administrating how the network performs. These middlewares must not be specific to a single network and provide support for as many different sensor nodes as possible. In \cite{Yu2004}, a middleware is said to provide standardised services to many applications and perform operations that make effective use of limited system resources.
 
-	In \cite{Wang2008c}, a middleware should include four major components: programming abstraction, system services, runtime support and Quality of Service (QoS) mechanisms. In this section, we will discuss the challenges surrounding middlewares for WSNs and highlight some existing middleware that are particularly relevant to our research problem and/or motivating scenario.
+	In \cite{Wang2008c}, a middleware should include four major components: programming abstraction, system services, runtime support and Quality of Service (QoS) mechanisms. In this section, we will discuss the challenges surrounding middlewares for WSNs and highlight some existing middleware that are particularly relevant to our research problem and motivating scenario.
 
 \subsection{Issues}\label{bg:sm:issues}
 	WSNs present a range of new challenges to existing middleware, due to their resource constraints, deployment environments and more. However, there has been research into the key issues that must be addressed in order for middleware to be considered suitable.
@@ -254,8 +256,8 @@ While the project is five years old now, it is one of the earliest proof-of-conc
 
 Fitness is not the only purpose for wearable computing, the eWatch is an early design for a \textit{smartwatch} that uses a microphone and light sensor to record the locations that the user visits, storing previous recordings in flash memory and matching them with current recordings \cite{Maurer}.
 
-	\subsubsection{UNETS}
-		*UNETS is tiered and context aware
+	% \subsubsection{UNETS}
+	% 	*UNETS is tiered and context aware
 \subsection{Harsh Environments}
 	There are a number of situations where we may want to record data in an environment that is not safe for humans, such as a volcano \cite{Werner-Allen2006}, or that may be difficult for electronics to survive. In these cases, special considerations must be made during the design and deployment of the WSN, in order to ensure maximum  network lifetime with reliable readings.
 	\subsubsection{GLACSWEB}
