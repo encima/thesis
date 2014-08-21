@@ -1,4 +1,4 @@
-\chapter{Simulations}
+\chapter{Simulation Experiments and Evaluation of the Architecture}
 In this chapter, we explain the simulations we developed to test our K-HAS architecture. Using nodes with knowledge-processing capabilities to deliver interesting data quicker than a standard WSN. We have developed a simulation for our proposed architecture, K-HAS, as well as variations on the knowledge processing capabilities of the nodes at each tier.
 
 The simulations were developed to determine whether K-HAS is the best mix of processing and collection nodes that maximises network lifetime while minimising the transmission time of interesting data. This was done by using a fixed network structure and changing the knowledge-processing capabilities on each node at every tier; ranging from no knowlege on all node to the maximum knowledge-processing capabilities across the network. The more knowledge-processing capabilities that are pushed out towards the edge of the network, the more the network lifetime is reduced.
@@ -221,6 +221,13 @@ The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) show
 	\label{fig:sat:int:percent}
 	\end{figure}
 
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/saturated/int_vs_empty}
+	\caption{Percentage of Interesting Compared to Empty Observations across All Scenarios.}
+	\label{fig:sat:int:empty}
+	\end{figure}
+
 Saturating each scenario shows how different levels of knowledge processing across the the nodes can prioritise the delivery of interesting observations while filtering out observations that have been classified as empty. We can see that the HK-ALL scenario delivers the highest percentage of interesting observations (80\%), with a slightly higher average transmission time. Having HK on all nodes causes a large reduction in the lifetime of the network to 3 weeks. L-KHK (or KHAS) is a good alternative to this as it provides a network lifetime of 3 months for the majority of the nodes but still around 70\% of all images (same as LK-ALL) are interesting, but the majority of these are \textit{true positives}. In a network with limited access to a power source, LK-HK is the best implementation but, for networks with access to a continuous power source, HK-ALL can be used to increase the number of interesting observations delivered to the central node in a shorter time period.
 
 % \subsection{Scenarios}
@@ -357,13 +364,17 @@ Saturating each scenario shows how different levels of knowledge processing acro
 
 \section{Conclusion}
 	
-In this chapter, we have detailed the development of simulations to show the different scenarios for pushing knowledge further out into a network. Using different levels of knowledge processing capabilities on nodes, we have shown that a network with HK processing capabilities can detect and prioritise interesting images, while simultaneously delaying empty images for a time when the network is not busy. However, using a network that solely comprises of HK nodes results in a battery life that lasts for 3 weeks on each node. The K-HAS network architecture we have proposed provides a combination of HK and LK nodes, distributed based on their role in the network, for example, nodes tasked with sensing and forwarding images only have LK processing capabilities. These simulations have shown that the HK-LK scenario results in a delay of interesting image delivery, when compared to LK-ALL, but the percentage of interesting images delivered is significantly increased.
+In this chapter, we have detailed the development of simulations to show the different scenarios for pushing knowledge out to the edge of a network. Using different levels of knowledge processing capabilities on nodes, we have shown that a network with HK processing capabilities can detect and prioritise interesting images, while simultaneously delaying empty images for a time when the network is not busy. However, using a network that solely comprises of HK nodes results in a battery life that lasts for 3 weeks on each node. The LK-HK network architecture we have proposed provides a combination of HK and LK nodes, distributed based on their role in the network, for example, nodes tasked with sensing and forwarding images only have LK processing capabilities. These simulations have shown that the HK-LK scenario results in a delay of interesting image delivery, when compared to LK-ALL, but the percentage of interesting images delivered is significantly increased.
 
-Using a real world mode, we have seen that the variation in transmission times can be quite large, but the difference between LK-HK and HK-ALL is not that great. This suggests that our K-HAS solution  is the best solution for most scenarios as it provides a longer network lifetime with same ratio of TP:FN images as a network where every node is equipped with HK.
+Using a model of real world transmission rates, we have seen that the variation in transmission times can be quite large, but the difference between LK-HK and HK-ALL is not that great. This suggests that our K-HAS solution  is the best solution for most scenarios as it provides a longer network lifetime with same ratio of TP:FN images as a network where every node is equipped with HK.
 
 While the simulation is not feature complete, we believe it is accurate enough to show how LK-HK utilises the knowledge-processing capabilities at each tier to process, and prioritise, sensed data based on knowledge gained from the environment, previously sensed data and from humans using the network. Our results also show that the difference between LK-HK and HK-ALL is  not significant enough to warrant the loss in network lifetime. However, not every scenario would be suited to this. NK-LK shows a slightly faster transmission time and a much longer network lifetime, as most nodes would not have any processing power. While the processing of sensed data would not be enough to rely on, it could act as pre-processing that could be processed further once power is not an issue. This would be well suited for networks where nodes have limited power and are not easily accessible, such as bird nest monitoring networks. 
 
-LK-HK allows sensed data to be processed, and delivered, in near real-time with approximately 87\% of all interesting data being correctly classified. This number could increase the longer that the network is deployed and this is something we would like to investigate in the future.
+LK-HK allows sensed data to be processed, and delivered, in near real-time with approximately 87\% of all interesting data being correctly classified. This number could increase the longer that the network is deployed, which is something we would like to investigate in the future.
+
+Finally, we simulated the situation where there is more sensed data than the bandwidth available. The greater knowledge-processing capabilities of HK-ALL scenarios ensured that empty images were delayed and interesting observations were sent with a greater priority. While there were interesting observations misclassified as empty that were delayed, they made up less than 10\% of all interesting observations. LK-HK did receive fewer interesting observations, most likely due to its limited ability to prioritise sensed data right from the edge of the network, but the majority of interesting observations were true positives and they were prioritised over empty observations. LK-ALL, with a longer network lifetime of LK-HK and HK-ALL, did not prioritise interesting over empty data effectively but still provided more true positives than false negatives.
+
+We can conclude that, for a power efficient WSN, the results from these simulations suggest that LK-HK can deliver many of the same benefits that HK-ALL provides while not pushing HK to the edge of the network, reducing the network lifetime. If power was of no concern, HK-ALL is able to deliver more interesting observations and prioritise more accurately from the edge of the network, as well as filtering important data more effectively when the network is saturated.
 
 
 
