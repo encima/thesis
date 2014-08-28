@@ -1,29 +1,36 @@
-\chapter{An Architecture for Wireless Sensor Networks}\label{chap:arch}
+\chapter{Wireless Sensor Network Architecture Design and Technical Details}\label{chap:arch}
 	In this chapter, we explain our proposed network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three-tiered, hierarchical approach with each subsequent tier providing increased knowledge processing capabilities. 
 
 	We aim to show that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise the delivery of interesting sensed data. We also believe that human input is a valuable learning process for such a network and feedback, from humans, on data that has been classified can be used to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
 
 	The rest of this chapter is structured as follows. Section 1 outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section 2 introduces an example, from our motivating scenario, that will be used to better explain each tier of the architecture. Section 3 explains the data collection tier. Section 4 explains the data processing tier. Section 5 explains the data aggregation tier. Section 6 concludes the chapter and summarises the key features of K-HAS.
+
+	\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.65\textwidth]{Chap4/figures/khasarch}
+			\caption{Overview of K-HAS Architecture}
+			\label{arch:khas:arch}
+			\end{figure}
 	
 	\section{K-HAS}
-		K-HAS has been designed as an architecture for WSNs that is able to handle changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier.
+		K-HAS has been designed as an architecture for WSNs that is able to adapt to changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier. Figure \ref{arch:khas:arch} shows a high level overview of K-HAS, showing the flow of data from each tier.
 	
 	\subsection{Data Collection}\label{khas:dc}
-	The data collection (DC) tier is a very similar to standard nodes in a typical WSN, using hardware that has similar capabilities. These DC nodes are deployed at the edge of the network and tasked with sensing their environment, pre-processing the sensed data and using each other to relay data to the next tier.
+	The data collection (DC) tier is very similar to sensor nodes commonly used in a WSN, using hardware that has similar, limited capabilities to nodes such as: the I-Mote and Waspmote. These DC nodes are deployed at the edge of the network and tasked with sensing their environment, pre-processing the sensed data and using each other to relay data to the next tier.
 
-	DC nodes are capable of performing processing on data, such as the time it was recorded and its size, but their limited knowledge processing capabilities allow them to have an increased battery life and reduced size, making them suitable for a variety of deployments.
-
+	DC nodes are capable of performing processing on data, such as the time it was recorded and its size, but their limited knowledge processing capabilities allow them to have an increased battery life and reduced size, making them suitable for a variety of deployments as they can be integrated easily with existing devices (i.e. cameras) and be easily disguised, or hidden.
+% YOU ARE HERE
 	\subsubsection{Knowledge Base}
-	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of deployment. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
-	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base.
+	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of deployment. This is because they do not have the processing power to handle a complete knowledge base and their hardware limitations prevent them from receiving, and updating their knowledge bases once running. Some nodes within this class do not have the capability to process text files within the file system and, therefore, must have the knowledge added to their operational code. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
+	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base and highlights that the core structure of this file is simply a list of if statements that can be executed one after the other. Forward chaing is not used here because processing times need to be kept to a minimum and a chain of rules being fired could easily overwhelm the node. 
 
 \begin{lstlisting}[breaklines=true, caption={Example DC Node Rules}, label={kb:dcrule}]
-if(reading.dateCreated.month == “JUNE” AND reading.timeCreated.between(17:00, 19:00)
-	data.write(‘Potential Otter sighting’)
+if(Date of observation is “JUNE” AND time of observation is between 17:00 and 19:00
+	add to observation(‘Potential Otter sighting’)
 
-if(reading.temp == 37 AND reading.timeCreated.between(01:00, 05:00)
-	data.write(‘Potential Leopard sighting’)
-	data.write(‘PRIORITY=HIGH’)
+if(temperature is 37 AND time of observation is between 01:00 and 05:00
+	add to observation(‘Potential Leopard sighting’)
+	prioritise observation as important
 \end{lstlisting}
 
 When the data is recorded by the DC node, the knowledge base is fired and inferences are made about the contents of the data. Each DC node has a static knowledge base loaded onto it before it is deployed, which is based on the local knowledge of the area that it is to be deployed in.  For example, a node deployed on the bank of a river would have a different knowledge base to a node deployed in the fields of a plantation.
@@ -31,34 +38,36 @@ When the data is recorded by the DC node, the knowledge base is fired and infere
 Once a trigger has been processed, the data is packaged and then sent on to the Data Processing (DP) node.
 
 	\subsection{Data Processing}
-	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not typically do any direct sensing. 
+	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not perform any direct sensing. 
 
-	Due to the greater capabilities, DP nodes have a much shorter battery life and a network typically consists of fewer DP nodes. These capabilities allow DP nodes to run a complete rule engine and process complex data. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
+	Due to the greater capabilities, DP nodes have a much shorter battery life than DC nodes and a network typically consists of fewer DP nodes. These capabilities, such as increased memory and higher processing power, allow DP nodes to run a complete rule engine and process more than just files, they can perform the same tasks as most modern computers, such as: image processing, audio processing or reading metadata from files that requires extra libraries. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
 
 	In our current implementation, DP nodes use two different radios, a Zigbee radio to allow long range communication from DC nodes and a Wi-Fi radio that provides short range communication that allows for higher data rates.
 
 	\subsubsection{Knowledge Base}
 	In our motivating scenario the network is image-based, this means that the DP node would perform image processing, as well as processing the image metadata. The increased knowledge processing capabilities allow DP nodes to run rules dynamically, learning from the sensed data and providing classifications that change based on changes in the environment. For example, if a DP node has not seen an elephant before, and it is not aware of the object in the image, then it will await a human classification. The node will then record the time period that it receives elephant pictures, i.e. June to July, and become more alert the following year. Similarly, the node will know not to look for pictures of nocturnal animals during the day. This local knowledge allows processing power to be saved and, thus, time; this ensures that the processing of sensed data is optimised as much as possible in order to reduce the time it spends in the network.
 	
-	The rule engine used in our current implementation is Drools, a Java based rule engine that allows for rules to be defined in \textit{.drl} files and these can be loaded dynamically into a knowledge base. This flexibility allows to be changed on the fly without the need to restart the device, or even require human access, as all of this can be achieved through network communication. 
+	% The rule engine used in our current implementation is Drools, a Java based rule engine that allows for rules to be defined in \textit{.drl} files and these can be loaded dynamically into a knowledge base. This flexibility allows to be changed on the fly without the need to restart the device, or even require human access, as all of this can be achieved through network communication. 
 	
 	Upon receiving sensed data from a DC node, the rule base is fired on the metadata of each file received. If the rules determine that the data is of interest or, in the best case scenario, provides a classification, then the data is packaged and sent on to the Data Aggregation (DA) node.
 	
 	\subsection{Data Aggregation}
-	Placed at the root of the network, these are nodes with high knowledge-processing capabilities and would be accessible by users of the network. When DA nodes receive sensed data, it is unpacked and stored in a folder that represents the node that it originated from. 
+	Placed at the root of the network, these are nodes with the same knowledge-processing capabilities as DP nodes (although they typically have greater memory and processing power) and would be accessible by users of the network. When DA nodes receive sensed data, it is unpacked and stored with a link to the node that the data originated from. Compared with a standard WSN, these nodes can be compared with a base station, or endpoint.
 	
 	Any information added by the DP node is parsed and classifications are extracted. If a classification is found, it is stored and the DA node checks for any active projects that contain the classification. If a match is found then all users involved in the project are informed via their preferred method of communication. Using the motivating scenario as an example, the people involved with projects could be researchers and professors and they may be looking for images of leopards, requesting to be informed via Twitter.
 	
 	All sensed data received, regardless of whether it has been classified, is accessible through a web interface hosted by each DA node. The interface shows all of the sensed data from each deployment, along with the associated classification. More importantly, it allows users to classify the data using a voting system. Users have roles which give them different privileges within the system. Normal users are able to vote and the majority vote is seen to be the current classification.
 	
 	However, privileged users are able to confirm a classification and prevent any further votes. Once a classification has been confirmed, it is then sent back to the DP node it originated from. If the classification made by a user is different to the one inferred by the node, then it updates its knowledge base and acknowledges receipt.
+
+	This system is vital in the early stages of deployment as this is used to build up a knowledge base. The more user classifications there are, the more accurate the network will be in the future. After a few months of classifications, K-HAS is then able to use the knowledge base to make more informed classifications, requiring fewer classifications/confirmations from users. The exception to this is sensed data that cannot be matched to the knowledge base.
 	
 	\subsubsection{Knowledge Base}
-	DA nodes do not typically experience the resource constraints that DC and DP nodes must compensate for. Because of this, they hold a global knowledge that contains a history of all observations made by all nodes, as well as the location and deployment times of all nodes in the network.
+	DA nodes do not typically experience the resource constraints that DC and DP nodes must compensate for. Because of this, they hold a global knowledge that contains a history of all observations made by all nodes, as well as the location and deployment times of all nodes in the network. When nodes are deployed, this is updated, by users, to show the location of the node and when it was placed. 
 	
-	While DC do not store any of the observations they capture, and DP nodes only store part of the observation that can be used in future classifications, DA nodes store the complete observation made by every DC node, as well as any extra data that is added by users upon receiving the sensed data.
+	While DC do not store any of the observations they capture, and DP nodes only store part of the observation that can be used in future classifications, DA nodes store the complete observation made by every DC node, as well as any extra knowledge that is added by users upon receiving the sensed data. What is stored by the the DP node is dependent on the deployed purpose of the network. For example, in our motivating scenario, we store: the processed image, the classification, the node it originated from and the date and time it was captured.
 	
-	As well as this, DA nodes provide administrative operations on the network, such as the recording of node locations, time of deployment and viewing all active nodes. This allows the DA node to monitor active nodes and alert users if a node has not sent any data in a while. The longer a K-HAS network runs, the more knowledge a DA node gains. The relevant parts of this knowledge are then relayed back to DP nodes, updating their knowledge bases as to what clasifications were correct and which need updating for future observations.
+	As well as this, DA nodes provide administrative operations on the network, such as the recording of node locations, time of deployment and viewing all active nodes. This allows the DA node to monitor active nodes and alert users if a node has not sent any data in a while. The longer a K-HAS network runs, the more knowledge a DA node gains, both from users that classify observations and from changes in the sensed data. The relevant parts of this knowledge are then relayed back to DP nodes, updating their knowledge bases as to what clasifications were correct and which need updating for future observations.
 	
 	
 	\section{Technological Components}
@@ -91,7 +100,7 @@ All of these files are then archived and sent as a ZIP folder throughout the net
 Darwin Core is suited to K-HAS because its use in scientific observations matches our motivating scenario and the archive can be easily created by a DC node, as it does not require any heavy processing and all of the files are common formats.
 	
 	\subsection{Middleware}
-	The knowledge-processing capabilities of DA and DP nodes are the same and this is part of what makes K-HAS different from most other WSNs; both types of node run the sensor middleware, but each for different purposes. DA nodes use the middleware for administrating the network, receiving and archiving sensed data and allowing users to provide classifications. DP nodes use if for the receiving, sending and controlling the flow of processing of sensed data before it is passed on.
+	The knowledge-processing capabilities of DA and DP nodes are the same and this is part of what makes K-HAS different from most other WSNs; both types of node run the sensor middleware, but each for different purposes. DA nodes use the middleware for administrating the network, receiving and archiving sensed data and allowing users to provide classifications. DP nodes use it for the receiving, sending and controlling the flow of processing of sensed data before it is passed on.
 	
 	Existing suitable middlewares have been detailed in Section \ref{sec:middleware} and our requirements for K-HAS were partially determined by the expertise of the users in our motivating scenario. Below is a list of our three core requirements:
 	\begin{description}
@@ -111,7 +120,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.65\textwidth]{Chap4/figures/loris}
+		\includegraphics[width=0.75\textwidth]{Chap4/figures/loris}
 		\caption{Web Interface for Observations}
 		\label{kc:loris}
 		\end{figure}
@@ -119,7 +128,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		Viewing data for new observations is useful for gaining classifications and alerting members of a project, but viewing older sensed data allows patterns to be identified in order to create new rules. Figure \ref{kc:loris_data} shows a map of all deployed nodes in the area surrounding the field centre in our motivating scenario. When users select a node, a table is populated with all of the classified observations that it has captured; this can then be used to extract patterns from the data and create rules. For example, the two observations of the Malay Civet are only seen late at night, if further observations also showed this, then we could create a rule defining the active hours of the Malay Civet and, potentially, list days that it is likely to pass. These rules can then be written and uploaded to the knowledge base.
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.65\textwidth]{Chap4/figures/loris_data}
+		\includegraphics[width=0.75\textwidth]{Chap4/figures/loris_data}
 		\caption{Web Interface for Classified Sensed Data}
 		\label{kc:loris_data}
 		\end{figure}
@@ -132,11 +141,11 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	
 	Drools is able to dynamically update its knowledge base, adding rules and firing them on observations that have already been loaded, as well as newer ones. This allows DP nodes to adapt to new rules and local knowledge whilst they are deployed. The use of \textit{drl} files use a mixture of Drools and Java syntax to define rules, allowing them to modify, or create, Java objects. For example, a rule could be triggered on the receipt of sensed data and create a DwC object from the received data, process it and perform checks on the result that would trigger different rules based on that result. This is one of the main reasons we chose Drools, as it can work with GSN and DwC Java objects, as well as the ability to run on any architecture that supports Java.
 	
-	The functionality of Drools is extensive and the engine is very powerful, however, it does require specialist knowledge to use and manipulate rules. Using a custom developed Drools web interface , detailed in Section \ref{arch:kc}, we created a simplified interface that uses a custom REST API for Drools, allowing users to create sessions, add rules, load data and fire rules, returning the output to the interface. Users can view, and load, existing drl files, shown in Figure \ref{kc:loris_drl}. 
+	The functionality of Drools is extensive and the engine is very powerful, however, it does require specialist knowledge to use and manipulate rules. Using a custom developed Drools web interface , detailed in Section \ref{arch:kc}, we created a simplified interface that uses a custom REST API for Drools, allowing users to create sessions, add rules, load data and fire rules, returning the output to the interface. Users can view, and load, existing drl files, shown in Figure \ref{kc:rloris_drl}. 
 	
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.45\textwidth]{Chap4/figures/rules}
+		\includegraphics[width=0.65\textwidth]{Chap4/figures/rules}
 		\caption{Web Interface for Drools Operations}
 		\label{kc:rloris_drl}
 		\end{figure}
@@ -146,7 +155,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	Currently, these implementations have been developed for our motivational scenario, but much of these tools are general enough to be repurposed in order to apply to a variety of different WSNs. The Drools API can be used for any kind of sensed data and the web interface would require minor changes to be extensible.
 
 	\subsection{Routing Protocol}\label{arch:routing}
-		The routing protocol we have selected for K-HAS is not fixed for every deployment but, from our research, we selected a modification of the Mininum Cost Forwarding Algorithm (MCFA) as it allows for changes in the topology of the network and does not require every node to have a global view of the network.
+		The routing protocol we have selected for K-HAS is not fixed for every deployment but, from our research, we modified the commonly used Mininum Cost Forwarding Algorithm (MCFA) as it allows for changes in the topology of the network and does not require every node to have a global view of the network.
 
 		On deployment of all nodes, a DA node sends out a packet containing the number zero, representing the number of hops to the DA node. Nodes in range receive the packet, store it along with the identifier of the originating node and then send it once it has been incremented by one. The next nodes receiving that packet and does the same. If a node has a number stored that is higher than the one it receives then it is replaced and sent on until the nodes at the edge of the network are reached.
 
@@ -161,16 +170,23 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.
 		
 		\subsection{Scenario}
-			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare Clouded leopard and Sun bear are currently active at Danau Girang. The Clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the Sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed.All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
+			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare clouded leopard and sun bear are currently active at Danau Girang. The Clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the Sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed. All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
 			
 		\subsection{Data Collection}
 			A DC node is deployed along a ridge in the rainforest and consists of a wildlife camera with a wireless node attached. At 0200, the infra-red sensor detects movement and the camera triggers a set of 3 images to be captured. The DC node creates the DwC archive for the observation. Terms in the observation, such as time, date, species identified and location, are added to the meta.xml file and links to CSV files that contain the data for each term. A separate CSV file is created that holds the filename of each image that was taken. The image is shown below in Figure \ref{cl2}.
 			
 			\begin{figure}[!t]
 			\centering
-			\includegraphics[width=0.45\textwidth]{Chap4/figures/leopard2.JPG}
+			\includegraphics[width=0.65\textwidth]{Chap4/figures/leopard2.JPG}
 			\caption{Clouded Leopard Image Capture}
 			\label{cl2}
+			\end{figure}
+
+			\begin{figure}[!t]
+			\centering
+			\includegraphics[width=0.65\textwidth]{Chap4/figures/leopard_proc}
+			\caption{Processed Image of Clouded Leopard}
+			\label{clproc}
 			\end{figure}
 			
 			The DC node runs its rules on the metadata of the images and infers that the image may contain a Clouded leopard, this is because the image was taken in the early hours of the morning and the camera is deployed on a ridge. DC nodes run simple, non-chaining rules based on the file metadata and details about the node, such as location, but these rules are fixed from the time of deployment and are not updated until the network is redeployed.
@@ -192,9 +208,9 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 			\begin{figure}[!t]
 			\centering
-			\includegraphics[width=0.45\textwidth]{Chap4/figures/leopard_proc}
+			\includegraphics[width=0.55\textwidth]{Chap4/figures/leopard_proc}
 			\caption{Processed Image of Clouded Leopard}
-			\label{cl2}
+			\label{clproc}
 			\end{figure}
 			
 			Processed images of previously sensed images are stored on the DP node and associated with the confirmed classification, confirmed by a human or a node. Although the memory available on a DP node is typically around 32GB, this could easily fill in a matter of months if 3 full HD images were stored for every observation. Storing a single black and white template that contains a portion of the image is much more efficient and can still easily be associated with the classification made. The extracted image is then compared with the existing images, using the knowledge base to prioritise templates for comparison. In this example, nocturnal animals are prioritised and especially nocturnal animals with active projects associated. If the DP node has received an observation from the same DC node recently, then it will check for a classification on that and check for a match there first.
@@ -207,7 +223,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	\subsection{Data Aggregation}		
 			Upon receiving a DwC archive, it unarchived and processed by Darwin Core libraries, called by the middleware running on the node. The resulting archive is then inserted into a MySQL database and the files themselves are stored in a directory that maps to the DC node that captured the original observation. At the field centre, three users of the system have subscribed to updates for observations of Clouded leopards.
 			
-			As the archive is processed by the library, the species is extracted and this triggers a rule to notify the subscribers. The rule then queries the database and finds their preferred method of communication. In this case, one is a lecturer and wants to be emailed while the two remaining are students and want to be notified via Twitter, a social networking website. An email is drafted that contains the time, location and content of the observation, with the images attached, and sent on to the lecturer. The students are sent a short tweet that tells them a Clouded leopard has been spotted and a link to the middle image in the sequence is provided; the middle image is used because this local knowledge has shown that it is the most likely to contain the full subject in the image.
+			As the archive is processed by the library, the species is extracted and this triggers a rule to notify the subscribers. The rule then queries the database and finds their preferred method of communication. In this case, one is a lecturer and wants to be emailed while the two remaining are students and want to be notified via Twitter, a social networking website. An email is generated that contains the time, location and content of the observation, with the images attached, and sent on to the lecturer. The students are sent a short tweet that tells them a Clouded leopard has been spotted and a link to the middle image in the sequence is provided; the middle image is used because this local knowledge has shown that it is the most likely to contain the full subject in the image. In order to maintain privacy, a `direct message' can be sent on Twitter so this the message is not public.
 			
 			The middleware on the node supports a web interface to allow users to perform administrative functions on the network, such as deploy a new node, on top of this there is a custom made website that shows all observations for every DC node. This allows users to log on and classify the images. In this case, the lecturer receives the email notification, reviews the attached images and clicks on the link to access the website to inform the DP node that the classification was correct. Due to the administrator position the lecturer has on the system, he is able to stop any users voting on the image and to simply confirm the classification.
 			
@@ -218,7 +234,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		
 		One of the key features of K-HAS is that it is not a static deployment. The knowledge that the network holds at the time of deployment will rarely be the same as the knowledge held after a few months. Humans enrich the existing knowledge base and the nodes are able to make inferences about the data they are sensing, improving their classifications the longer they are deployed.
 		
-		We believe that K-HAS is an architecture suited to many different applications of WSNs and its general design allows it to be adapted to new scenarios with ease.
+		In Chapter 6, we explain how we implemented a variation of K-HAS in our motivating scenario and Chapter 7 shows our evaluation of the K-HAS architecture, but Chpater 5 will first outline the development of an ontology to support the architecture described here.
 		
 			
 			

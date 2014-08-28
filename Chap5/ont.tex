@@ -1,5 +1,5 @@
-\chapter{An Ontology for the K-HAS Architecture}
-In this chapter, we explain the ontology that we developed to formally define the structure of K-HAS, as well as the format of the sensed data that is passed through the network.
+\chapter{An Ontology for the K-HAS Architecture}\label{chap:on}
+In this chapter, we explain the ontology that we developed to formally the components within K-HAS, the structure of the sensed data and the users involved with the network, as well as the format of the sensed data that is passed through the network.
 
 This ontology provides those wanting to use K-HAS with a representation that is easy to reuse and deploy in a number of different scenarios, or even to select parts of the ontology that meet their requirements and implement those. 
 \section{Background}\label{bg}
@@ -14,13 +14,13 @@ Before we were able to implement K-HAS, we needed to model the flow of knowledge
 
 Making it computer readable has allowed us to reuse classes in the development of software for each tier. For example, we were able to develop a common Darwin Core java library that is used in this ontology and in our GSN middleware to unzip and process received archives.
 
-During the development of the K-HAS ontology, we researched existing ontologies that were popular in the domains that K-HAS covered. These included scientific observations and sensor hardware.
+During the development of the K-HAS ontology, we researched existing ontologies that were commonly used in the domains that K-HAS covered. These included scientific observations and sensor hardware.
 
-Looking into existing ontologies, we found that there had been many surveys on representing sensors in the semantic web \cite{Compton2009}, \cite{Janowicz2010}, outlines the existing work. These surveys clearly highlighted that these ontologies had been split into two branches; observation-centric and sensor-centric.
+Looking into existing ontologies, we found that there had been many surveys on representing sensors in the semantic web: \cite{Compton2009}, \cite{Janowicz2010}, outlines the existing work. These surveys clearly highlighted that these ontologies had been split into two branches; observation-centric and sensor-centric.
 
 Observation-centric ontologies focus on the data that is sensed, and its content; whereas sensor-centric ontologies detail the components that make up a sensor, and the operations they perform to turn sensed data into an output.
 
-We found few ontologies that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data. This could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is recieved, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
+We found no ontologies that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data. This could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
 
 K-HAS has been developed to be used with any sensors and is not specific to wildlife cameras, therefore we also looked into sensor-based ontologies that concentrate on the hardware and the individual capabilities of each device within the network.
 
@@ -30,25 +30,25 @@ From this we have categorised relevant existing ontologies into Observation-Cent
 %This can be seen as an ontological representation of the OpenGIS Observations and Measurements (O\&M) Standard \cite{botts2008ogc} that provides a framework for representing observations, measurements and procedures within sensor systems.
 
 \subsubsection{OBOE}\label{OBOE}
-The Extensible Observation Ontology (known in reverse as OBOE) is a popular suite of ontologies used to represent scientific observations. Initially starting as base ontology for ecological observations, it has now grown into a suite of extensions that make it suited for chemistry, bioinformatics, anatomy and others. OBOE is represented by OWL-DL \cite{McGuinness2004} and allows the characteristics of a generic scientific observation to be linked to domain specific characteristics.
+The Extensible Observation Ontology (known in reverse as OBOE) is a popular suite of ontologies used to represent scientific observations \cite{Madin2007b}. Initially starting as base ontology for ecological observations, it has now grown into a suite of extensions that make it suited for chemistry, bioinformatics, anatomy and others. OBOE is represented by OWL-DL \cite{McGuinness2004} and allows the characteristics of a generic scientific observation to be linked to domain specific characteristics.
 
 OBOE focuses on the concept of an \textit{observation}, which is made up of an entity, a measurement and a characteristic \cite{Madin2007}. An example of an observation could be a researcher observing an animal (the entity) and recording the gender (the measurement) as male (the characteristic). A single observation could then consist of multiple observations within it, such as gender, location, species and the number of species observed. 
 
     \begin{figure}
     \centering
-        \scalebox{0.63}{\includegraphics{Chap5/figures/OBOEcore.JPG}}
+        \scalebox{0.73}{\includegraphics{Chap5/figures/OBOEcore.JPG}}
     \caption{The Core of an OBOE Observation}
     \label{oboe}
     \end{figure}
 
-Figure \ref{oboe} shows the basic structure of a core OBOE observation, outlining the five key classes that are linked by seven properties. While this is the core structure of OBOE, domain specific extensions have been implemented by utilising `extension points' that are part of OBOE's core. It is clear to see that OBOE follows the O\&M Standard (below) very closely, providing extensions to the core classes that allows more information about each to be encoded, adding context and enhancing the value of an observation.
+Figure \ref{oboe} shows the basic structure of a core OBOE observation, outlining the five key classes that are linked by seven properties. While this is the core structure of OBOE, domain specific extensions have been implemented by utilising `extension points' that are part of OBOE's core. OBOE follows the O\&M Standard (below) very closely, providing extensions to the core classes that allows more information about each to be encoded, adding context and enhancing the value of an observation.
 
 The primary benefits of OBOE are that it is generic enough to cover almost all types of scientification observation and domain extensions allow for more specific details to be stored.
 
 \subsubsection{O\&M}
 The OpenGIS Consortium (OGC) Observations and Measurements Standard aims to provide a framework suitable for recording any observation made by a sensor, regardless of the domain \cite{Botts}. 
 
-The key difference to note with O\&M is that \textit{observation} and \textit{measurement} are not just classes. They also denote an action.
+The key difference, when compared to other ontologies, to note with O\&M is that \textit{observation} and \textit{measurement} are not just classes. They also denote an action.
 An observation is an action that causes a result, yielding a value and a measurement is a set of operations that provide some result(s).
 
 O\&M provides a conceptual model, as well as XML encoding for observations and measurements. The listing \ref{omxml} shows an observation of a vehicle in a given time and place. Similar to the encoding of a measurement with the standard and protocol used in OBOE, O\&M provides support for the recording of the procedure used to gain the measurement for the observation. 
@@ -120,7 +120,7 @@ In order to represent DwC occurrences in an ontological format, work has been do
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.13}{\includegraphics{Chap5/figures/dsw.jpg}}
+        \scalebox{0.23}{\includegraphics{Chap5/figures/dsw.jpg}}
     \caption{Darwin-SW}
     \label{darwin-sw}
     \end{figure}
@@ -260,7 +260,7 @@ This step involves coding the terms identified in the previous step into a forma
 
 \subsubsection{Integrate Existing Ontologies}
  % - join all ontologies that match/overlap with the identified terms
-Some of the literature (REFERENCE) recommends that this step is carried out at the same time as the two steps prior, so that the ontology is developed with existing ontologies in mind. This also allows overlap to be identified, and incorporated, early. Being aware of popular ontologies within the domain, before development begins, is a more logical approach and does avoid the need to create new terms for existing concepts.
+Some of the literature (REFERENCE) recommends that this step is carried out at the same time as the two steps prior, so that the ontology is developed with existing ontologies in mind. This also allows overlap to be identified, and incorporated, early. Being aware of commonly-used ontologies within the domain, before development begins, is a more logical approach and does avoid the need to create new terms for existing concepts.
 
 Existing ontologies can be integrated by importing them and linking the existing terms to the terms identified in the ontology that is being developed. However, there is also the method of developing the ontology completely, so that it is consistent without the need to rely on existing ontologies and creating `sameAs' relationships between the terms identified and only the required terms in the existing ontologies.
 
@@ -268,12 +268,12 @@ In \cite{Jimenez-Ruiz2008}, it is recommended that, when importing external onto
 
 
 \subsection{Evaluation}\label{method:eval}
-For the evaluation, Uschold and King adopt the definition of \cite{gomez1995evaluation}: “to make a technical judgement of the ontologies, their associated software environment, and documentation with respect to a frame of reference ... The frame of reference may be requirements specifications, competency questions, and/or the real world”.
+For the evaluation, Uschold and King adopt the definition of \cite{Fernandez-Lopez1997}: “to make a technical judgement of the ontologies, their associated software environment, and documentation with respect to a frame of reference..." The frame of reference may be requirements specifications, competency questions, and/or the real world”.
 
-There are some well documented methods for evaluating ontologies in the literature, \cite{REF!} proposes using the competency questions, used in the first step, to ensure that they can all be fully answered by the finished ontology. 
+There are some well documented methods for evaluating ontologies in the literature, \cite{Uschold} proposes using the competency questions, used in the first step, to ensure that they can all be fully answered by the finished ontology. 
 
 \subsection{Documentation}
-Although this step is listed at the end of the development cycle, it seems more fitting to document all major aspects of the ontology as it is being developed. Documentation of the ontology should include: any assumptions, all concepts introduced, all ontologies that have been incorporated (by whatever meeans) and any primitives used for the definitions of concepts.
+Although this step is listed at the end of the development cycle, it seems more fitting to document all major aspects of the ontology as it is being developed. Documentation of the ontology should include: any assumptions, all concepts introduced, all ontologies that have been incorporated (by whatever means) and any primitives used for the definitions of concepts.
 
 \section{Results}
 This section details our results when using the Uschold and King methodology, accompanied by more recent research for particular steps, to develop the K-HAS ontology. 
@@ -344,7 +344,7 @@ Mapping these concepts, a diagram of the base K-HAS ontology is shown in Figure 
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.13}{\includegraphics{Chap5/figures/khas_base.JPG}}
+        \scalebox{0.23}{\includegraphics{Chap5/figures/khas_base.JPG}}
     \caption{K-HAS Base Ontology}
     \label{khas_base_ont}
     \end{figure}
@@ -352,22 +352,22 @@ Mapping these concepts, a diagram of the base K-HAS ontology is shown in Figure 
 
 
 \subsection{Build the Ontology - Code}
-Once the concepts had been identified (and agreed upon), the ontology must be coded. We used Protege 4.2.2 \cite{noy2001creating} and implemented K-HAS in the Web Ontology Language (OWL), creating a core file that could be expanded; should we need to import existing ontologies.
+Once the concepts had been identified (and agreed upon), the ontology must be coded. We used Protege 4.2.2 \cite{Noy2000a} and implemented K-HAS in the Web Ontology Language (OWL), creating a core file that could be expanded; should we need to import existing ontologies.
 
 \subsection{Build the Ontology - Integrate Existing Ontologies}
 Our proposal for K-HAS is focused on scientific observations. Because of this, the focal point of our existing ontology research is of ontologies that are centred around scientific observations, this allows us to create a more generic ontology that is still able to capture all of the semantic details associated with a wildlife observation.
 
-As explained in Section \ref{bg}, our research of existing ontologies covered two categories: observation-centric and sensor-centric. We identified ontologies, within multiple domains, that satisfied many of K-HAS' requirements, but not all. Using the core concepts outlined in Section \ref{buildcapture}, we created a minimal ontology and used the results of our research to map K-HAS concepts to those that had already been identified.
+As explained in Section \ref{bg}, our research of existing ontologies covered two categories: observation-centric and sensor-centric. We identified ontologies, within multiple domains, that satisfied many of our requirements for K-HAS, but not all. Using the core concepts outlined in Section \ref{buildcapture}, we created a minimal ontology and used the results of our research to map K-HAS concepts to those that had already been identified.
 
 During this process we found that we had determined concepts that mapped to existing ontologies, but may not share identical structures, or even the same name. For example, the OBOE ontology describes the concept of an occurrence, which is very similar to our occurrence and the occurrence in the Darwin Core-SW ontology. When we found these mappings, we used \textit{sameAs} relationship to form a link that allows data stored according to these existing ontologies to map directly to K-HAS. However, the structure of an OBOE observation is, as outlined in Section \ref{OBOE}, is more generic for all types of scientific observation and depicts the observation of an entity, containing a measurement of a particular characteristic. Whereas the structure of a Darwin Core observation is more limited to scientific observations of taxa which allows it to have more predefined terms, such as location, species name and the evidence for the recorded individual. Because of this, it was difficult to create a structure that encapsulated both OBOE and Darwin Core due to the generality of an OBOE observation compared to the more specific structure of DwC.
 
 Research showed that Darwin Core maps to K-HAS' requirements more completely, as well as the fact that there has been work to represent Darwin Core Observations in OBOE \cite{dwc_oboe}, K-HAS occurrences map directly to Darwin Core and elements that are similar to OBOE have been linked by the \textit{sameAs} relationship. This does mean that full OBOE observations cannot map directly, but K-HAS, and Darwin Core, occurrences can be converted, if necessary. However, using the terms in our ontology we can create a subset of an observation that does not include all of the terms defined in OBOE but can still map to all three ontologies.
 
-For the sensor hardware of K-HAS, we found that the SensorML ontology maps directly to our concepts and we also realised that we did not need to recreate concepts that may already exist in popular ontologies outside of the domain spaces we researched. For example, the Friend of a Friend (FOAF) ontology \cite{brickley2010foaf} is an ontology designed to create machine-readable pages that describe people, so it is more logical that K-HAS reuses existing terms from popular ontologies to allow pre-existing data to be mapped with ease.
+For the sensor hardware of K-HAS, we found that the SensorML ontology maps directly to our concepts and we also realised that we did not need to recreate concepts that may already exist in popular ontologies outside of the domain spaces we researched. For example, the Friend of a Friend (FOAF) ontology \cite{Document2010} is an ontology designed to create machine-readable pages that describe people, so it is more logical that K-HAS reuses existing terms from popular ontologies to allow pre-existing data to be mapped with ease.
 
 % INCLUDE TABLE TO MATCH TERMS TO EXISTING ONTOLOGIES??
 
-\subsection{Ontology}
+\subsection{Extend theOntology}
 
 Whilst researching popular ontologies, we became aware that some classes identified for K-HAS were not satisfied by what is currently available, these are prefixed with khas and shown in Figure \ref{khas_ont}. The final step for creating the ontology was to add these concepts to the linked ontologies, we call these \textit{extension concepts}, concepts unique to K-HAS which do not exist in any other ontology. These terms were linked to the unique layered architecture of K-HAS and we defined them within a new K-HAS namespace, changing our ontology from an alingment of existing ontologies to an extension of these.
 
@@ -375,7 +375,7 @@ The final ontology is shown in Figure \ref{khas_ont} and shows how each concept 
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.16}{\includegraphics[angle=90]{Chap5/figures/khas_ontology.JPG}}
+        \scalebox{0.26}{\includegraphics[angle=90]{Chap5/figures/khas_ontology.JPG}}
     \caption{K-HAS Ontology}
     \label{khas_ont}
     \end{figure}
@@ -408,16 +408,16 @@ In Table \ref{tab:comp_qs} we have identified some basic competency questions th
 \hline
 \textbf{Competency Questions} & \textbf{Concepts} & \textbf{Relationships}\\ 
 \hline
-Find all \textbf{Occurrences} of an \textbf{Individual} & Occurrence; Individual & Occurrence  occurrenceOf Individual \\
-Find all \textbf{Occurrences} of an \textbf{Individual} at a \textbf{Location} & Occurrence, Token, Individual, Location, Identification & Occurrence hasEvidence Token; Token isBasisForID Identification; Identification identifies Individual \\
-Find all \textbf{Occurrence} within a specified \textbf{Date} and \textbf{Time} range & Occurrence; Event; Date; Time & Occurrence atEvent Event; Event hasTime Time; Event hasDate; Date \\
-Find all \textbf{Data-Collection Nodes} that have recorded an \textbf{Occurrence} of an \textbf{Individual} & DCNode; Individual; Occurrence & Occurrence recordedBy DCNode; Occurrence occurrenceOf Individual \\  
-Find all \textbf{Locations} of an \textbf{Individual} & Occurrence; Individual; Event; Location & Occurrence occurrenceOf Individual; Occurrence hasEvent Event; Event locatedAt Location \\
+Find all \textbf{Occurrences} of an \textbf{Individual} & Occurrence; Individual & Occurrence occurrenceOf Individual \\
+Find all \textbf{Occurrences} of an \textbf{Individual} at a \textbf{Location} & Occurrence, Token, Individual, Location, Identification & Occurrence hasEvidence Token \\ Token isBasisForID Identification \\ Identification identifies Individual \\
+Find all \textbf{Occurrence} within a specified \textbf{Date} and \textbf{Time} range & Occurrence; Event; Date; Time & Occurrence atEvent Event \\ Event hasTime Time \\ Event hasDate Date \\
+Find all \textbf{Data-Collection Nodes} that have recorded an \textbf{Occurrence} of an \textbf{Individual} & DCNode; Individual; Occurrence & Occurrence recordedBy DCNode \\ Occurrence occurrenceOf Individual \\  
+Find all \textbf{Locations} of an \textbf{Individual} & Occurrence; Individual; Event; Location & Occurrence occurrenceOf Individual \\ Occurrence hasEvent Event \\ Event locatedAt Location \\
 Find the storage location of a \textbf{Project} & Project, Data Aggregation Node & Project storedBy DataAggregationNode \\ 
-Find all \textbf{Projects} containing an \textbf{Individual} & Individual, Project; Occurrence & Individual occurredIn Occurrence; Occurrence heldIn Project \\
-Find all \textbf{Persons} involved in a \textbf{Project} & Person; Administrator; Worker; Project & Administrator hasProject Project; Worker hasProject Project \\
+Find all \textbf{Projects} containing an \textbf{Individual} & Individual, Project; Occurrence & Individual occurredIn Occurrence \\ Occurrence heldIn Project \\
+Find all \textbf{Persons} involved in a \textbf{Project} & Person; Administrator; Worker; Project & Administrator hasProject Project \\ Worker hasProject Project \\
 Find all the \textbf{Evidence} that supports an \textbf{Occurrence} & Occurrence; Token & Occurrence hasEvidence Evidence \\
-Find all the \textbf{Types} of evidence that supports an \textbf{Occurrence} & Occurrence; Token; Type & Occurrence hasEvidence Token; Token isOfType Type \\
+Find all the \textbf{Types} of evidence that supports an \textbf{Occurrence} & Occurrence; Token; Type & Occurrence hasEvidence Token \\Token isOfType Type \\
 \hline 
 \end{tabular}
 \label{eval:comp_qs}
@@ -459,7 +459,7 @@ Each term within a Darwin Core observation maps to K-HAS with only a few changes
 
 \section{Conclusion}
 
-In this chapter we have presented an ontology for the K-HAS architecture and described our methodology for development, as well as showing that existing ontologies are not complete enough to cover K-HAS' requirements. The K-HAS ontology we present is an alignment of ontologies that are spread across multiple domains and provides a complete solution for a sensor network that deals with scientific observations and we believe this is the first extension ontology that combines sensor-centric and observation-centric ontologies. We have also extended this alignment to include concepts that model the unique features of K-HAS, but this ontology should be suitable for any sensor network that deals with observations.
+In this chapter we have presented an ontology for the K-HAS architecture and described our methodology for development, as well as showing that existing ontologies are not complete enough to cover our requirements for K-HAS. The K-HAS ontology we present is an alignment of ontologies that are spread across multiple domains and provides a complete solution for a sensor network that deals with scientific observations and we believe this is the first extension ontology that combines sensor-centric and observation-centric ontologies. We have also extended this alignment to include concepts that model the unique features of K-HAS, but this ontology should be suitable for any sensor network that deals with observations.
 
 Our evaluation has shown that the ontology is logically consistent and that existing scientific observations, in other formats, can be mapped across to K-HAS with few changes. The competency questions we identified during the design phase of the ontology can all be satisfied by the resulting ontology and our K-HAS network currently stores data with a schema that follows the design of this ontology.
 
