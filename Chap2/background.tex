@@ -46,10 +46,13 @@ According to \cite{Akyildiz2002}, there are at least eight factors that affect t
 \subsection{Flat}
 	Initially, this was the most common structure for a WSN, dozens of nodes spread out over a geographical area, with one or more neighbours, sending observations to a single endpoint.
 
-\subsubsection{MCFA}
-	The Minimum Cost Forwarding Algorithm (MCFA) is a flat routing protocol that works by assigning costs to each node, based on how many hops they are from the endpoint \cite{Chen2001}. 
+\subsubsection{MCFA} \label{bg:rp:mcfa}
+	The Minimum Cost Forwarding Algorithm (MCFA) is a flat routing protocol that works by assigning costs to each node, based on how many hops they are from the endpoint \cite{Ye2001}. 
+}
 
 Each node has a path-estimate of the cost of transmission from itself to the base station. The base station sends out a broadcast message and it is received by all nodes in range. The message contains a cost from the base station (initially zero) while every node has their cost set to infinity. The cost is stored at the node, incremented and sent on to all nodes in range. If the received cost is less than the current cost stored on the node, then the cost (and the neighbour) is updated and passed on.
+
+Each message has a cost associated with it, which is based on the hops it has completed so far. A node that receives the message forwards it only if it's cost matches the sum of the source node's cost (contained within the message) and the message's current cost. This ensures that all messages are sent through the minimum cost path, without storing explicit path information on each node.
 % If the cost in the message, plus the link it was received, is less than the current cost. If yes, the estimate is update on both the node and the message; the message is then passed on to other nodes in range. 
 
 	This approach allows for dynamic reconfiguration of the network, as well as a reduced overhead due to not having to maintain a global routing table on each node. The assumption with MCFA, however, is that the direction of routing is always towards a fixed endpoint.
