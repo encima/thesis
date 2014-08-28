@@ -1,20 +1,20 @@
-\chapter{Implementation of a Wireless Sensor Network in the Malaysian Rainforest}
+\chapter{Deployment in the Malaysian Rainforest}
 	In this chapter, we detail the design and deployment of a modified K-HAS in the Malaysian rainforest. We also highlight the issues we experienced deploying the architecture in a humid, dense rainforest for use by those without domain knowledge of WSNs.
 	
 	Experiments carried out in the rainforest had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected.
 	
 	Yearly visits were made to the Danau Girang Field Centre (DGFC) to test different nodes, gather knowledge and trial iterations of K-HAS. The first visit showed us just how much the rainforest affected communications, but also allowed us to gather knowledge from researchers and cameras that had previously been deployed. Subsequent visits were then used to test our own nodes and software, based on the knowledge we had gained from the first visit. We developed K-HAS with a view to deploying it in Malaysia, however, it soon became clear that our design was  beyond what was currently available, as well as the time constraints.
 	
-	Developing a camera with both wireless and processing capabilities, as well as being waterproof, proved to a be an extremely difficult task, while wireless wildlife cameras were already commercially available with range much higher than what our experiments had yielded. This could be because of their test environments being places such as American forest with less dense foliage, lower canopies and much lower humidity and using wireless technologies that are not licensed for worldwide use. For our own node designs, we attempted to use various node types connected to a camera, such as the Raspberry Pi and Waspmote nodes, both yielded problems with mounting an SD card that was readable by both camera and node. At the time, we were unable to create a camera combined with a node that could be left untouched for months at a time in a rainforest.
+	Developing a camera with both wireless and processing capabilities, as well as being waterproof, proved to a be an extremely difficult task, while wireless wildlife cameras were already commercially available with range much higher than what our experiments had yielded. This could be because of their test environments being places such as American forest with less dense foliage, lower canopies and much lower humidity and using wireless technologies that are not licensed for worldwide use. For our own node designs, we attempted to use various node types connected to a camera, such as the Raspberry Pi and Waspmote nodes; both yielded problems with mounting an SD card that was readable by both camera and node. At the time, we were unable to create a camera combined with a node that could be left untouched for months at a time in a rainforest.
 	
-	However, we still needed to implement a network to prove our hypothesis, thus we developed a modification to the K-HAS that utilised the latest commercially available hardware to provide an architecture that provides similar capabilities. Because these changes were made due to issues with deployment in Danau Girang, we chose to name it LORIS, after a famous animal in Malaysia. A Slow Loris is a small, nocturnal primate commonly found in South and Southeast Asia but in our context it is an acronym that stands for Local-knowledge Ontology-based Remote-sensing Informatics System.
+	However, we still needed to implement a network to evaluate our approach, thus we developed a modification to the K-HAS that utilised the latest commercially available hardware to provide an architecture that provides similar capabilities. Because these changes were made due to issues with deployment in Danau Girang, we chose to name it LORIS, after a famous animal in Malaysia. A Slow Loris is a small, nocturnal primate commonly found in South and Southeast Asia but in our context it is an acronym that stands for Local-knowledge Ontology-based Remote-sensing Informatics System.
 	
-	LORIS has been developed specifically for the Malaysian rainforest, our motivating scenario, and, as such, much of the hardware and software has been implemented to reflect this. However, the same approach could be used for other WSNs focussing on scientific observations with minor changes required. Using the same ontology and underlying software as K-HAS.
+	LORIS has been developed specifically for the Malaysian rainforest, our motivating scenario and, as such, much of the hardware and software has been implemented to reflect this.
 	
 	The rest of this chapter is structured as follows. Section \ref{loris:arch} highlights the changes we had to make from K-HAS and explains the hardware used at each tier. Section \ref{loris:dep} explains how we planned and deployed the network and Section \ref{loris:res} details the results from the deployment in Malaysia.
 	
-	\section{Architecture}\label{loris:arch}
-		The aim of LORIS was to keep as much of the architecture of K-HAS as possible and reuse the ontology without the need for modification; serving as a form of validation. In order to do this, we identified the tiers of the network that were feasible and the areas that needed to be addressed. Regular power and cheap computers with good knowledge-processing capabilities meant that DA nodes were simple to deploy and, with the growth of powerful microcomputers like the Raspberry Pi, DP nodes were also in abundance. However, finding a reliable camera that could integrate with a node capable of processing observations that was also reliable enough to withstand the humid rainforest proved to be difficult.
+	\section{ Deployment Architecture}\label{loris:arch}
+		The aim of LORIS was to keep as much of the architecture of K-HAS as possible and reuse the ontology without the need for modification; serving as a form of validation. In order to do this, we identified the tiers of the network that could be deployed in the rainforest, given the hardware and wireless constraints, and the areas that needed to be addressed. Regular power and cheap computers with good knowledge-processing capabilities meant that DA nodes were simple to deploy and, with the growth of powerful microcomputers like the Raspberry Pi, DP nodes were also in abundance. However, finding a reliable camera that could integrate with a node capable of processing observations that was also reliable enough to withstand the humid rainforest proved to be difficult.
 		
 		\subsection{Data Collection}
 				Experiments were run yearly in Malaysia to test the performance of variations of hardware. As covered in Section \label{tech:wifirange}, the first year involved testing the range of Wi-Fi with an IGEP board. The limited range of 30m meant that, despite the high transfer rate, it was not possible. Wi-Fi was not designed for use in resource-constrained sensors, so the power consumption of the radio meant that it limited the lifetime of the node.
@@ -35,36 +35,36 @@
 				
 				\begin{figure}[h]
 				\centering
-				\includegraphics[width=0.70\textwidth]{Chap6/figures/loris}
+				\includegraphics[width=\textwidth]{Chap6/figures/loris}
 				\caption{LORIS Web Interface}
 				\label{fig:loris}
 				\end{figure}
 				
 	\section{Deployment}\label{loris:dep}
-		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was not possible to use the cables without first securing them; because animals tampering with cameras was a common occurrence.
+		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was not possible to use the cables without first securing them, because animals tampering with cameras was a common occurrence.
 		
 		For the initial week of the deployment, we wanted to test the robustness of the network before focussing on the data. This meant placing the cameras in locations where they would be triggered often and in an area where they would be affected by rainfall and humidity. Figure \ref{cam_locs} shows the locations of the cameras during both of the weeks that it was deployed. Buckeye 1 was deployed for the first week along the main path leading to the field centre from the river, this experienced the most traffic due to the number of researchers present at the time. 
 	
 	    \begin{figure}[h]
 	    \centering
-		\includegraphics[width=0.70\textwidth]{Chap6/figures/buckeye}
+		\includegraphics[width=\textwidth]{Chap6/figures/buckeye}
 	    \caption{Camera Locations Around Danau Girang}
 	    \label{cam_locs}
 	    \end{figure}
 	
 		\subsection{Direct Connection}
-		For six days, we tested two Buckeye cameras that were near enough to the field centre to maintain an active connection to the base station. This meant that no hopping was involved and cameras were not reliant on each other to transmit images. Camera 1 was placed on a main path that guaranteed human foot traffic and Camera 3 was placed on a trail in the forest that, while experiencing minimal foot traffic, was expected to yield small mammals and birds.
+		For six days, we tested two Buckeye cameras that were near enough to the field centre to maintain an active connection to the base station. This meant that no hopping was involved and cameras were not reliant on each other to transmit images. Buckeye 1 was placed on a main path that guaranteed human foot traffic and Buckeye 3 was placed on a trail in the forest that, while experiencing minimal foot traffic, was expected to yield small mammals and birds.
 		
-		For the duration of the six days, the cameras did not report a drop in battery levels and a total of 1076 images were sent. Camera 1 was in a more open environment, despite being further away, and average speeds of 4KB/s were achieved. 
+		For the duration of the six days, the cameras did not report a drop in battery levels and a total of 1076 images were sent. Buckeye 1 was in a more open environment, despite being further away, and average speeds of 4KB/s were achieved. 
 		
-		Transmissions from Camera 3 were significantly hampered by the dense forest that it was surrounded by, as well as the fact that a low-gain antenna was used. We also speculate that the field centre itself acted as a barrier to the signal, as the base station was located on the opposite end. Because of this, we experienced an average speed of 1.2KB/s, taking around three minutes to receive an image. This is consistent with experiments conducted in previous years where dense, humid forest has led to a decreased range of, up to, 78\%. Lower frequencies do experience a longer range, but the data rate is significantly impacted.
+		Transmissions from Buckeye 3 were significantly hampered by the dense forest that it was surrounded by, as well as the fact that a low-gain antenna was used. We also speculate that the field centre itself acted as a barrier to the signal, as the base station was located on the opposite end. Because of this, we experienced an average speed of 1.2KB/s, taking around three minutes to receive an image. This is consistent with experiments conducted in previous years where dense, humid forest has led to a decreased range of, up to, 78\%. Lower frequencies do experience a longer range, but the data rate is significantly impacted.
 		
 		\subsection{1-Hop Network}
-		For a further five days, Camera 1 was moved further into the forest and Camera 3 was set up as a routing camera that forwarded images onto the base station, 63 images were taken during this period.
+		For a further five days, Buckeye 1 was moved further into the forest and Buckeye 3 was set up as a routing camera that forwarded images onto the base station, 63 images were taken during this period.
 		
 		The location of the moved camera is also shown in Figure \ref{cam_locs}. As was expected, the traffic of the network reduced significantly when the cameras were moved from the main path, with almost all 63 pictures being of animals. Due to animals moving a lot faster than humans, the number of pictures taken per trigger was increased to two, this would ensure network traffic was not overwhelming while increasing the chance of capturing the subject.
 		
-		Surprisingly, the speed of transmission from Camera 1 was faster than Camera 3, despite being routed through it, with an average speeds of 1.8KB/s.				
+		Surprisingly, the speed of transmission from Buckeye 1 was faster than Buckeye 3, despite being routed through it, with an average speeds of 1.8KB/s.				
 		\section{Results}\label{loris:res}
 		Deploying a network for two weeks is not a robust experiment and does not show that LORIS can withstand months of running without human intervention. However, it does serve as a proof of concept that, using commercial hardware, a modified K-HAS network can be implemented and utilise the knowledge of its environment.
 		
@@ -73,16 +73,16 @@
 		    \begin{figure}[h]
 		    \centering
 			\includegraphics[width=0.65\textwidth]{Chap6/figures/buckeye_img}
-		    \caption{First Image of Lizard by Camera 3}
+		    \caption{First Image of Lizard by Buckeye 3}
 		    \label{buckeye_img}
 		    \end{figure}
 		
-		More interestingly, we were able to infer further rules from the short deployment that helped us to narrow down the choice of animals to match to based on the time of day and location. For example, Figure \ref{buckeye_img} shows a lizard crossing the path of Camera 3 in the middle of the day and Figure \ref{buckeye_img_2} shows the lizard walking past in early afternoon on a different day. This allows us to encode a window of time  in which the lizard is more likely to appear onto the static knowledge base of DC nodes or, in the case of LORIS, onto the DA/DP node. Images an hour later were captured by the camera, showing the lizard walking in the opposite direction. While this was not every day, and the deployment time was too short to establish a pattern, it does help us to infer that a lizard passing by in early afternoon is likely to walk the same path approximately an hour later.
+		More interestingly, we were able to infer further rules from the short deployment that helped us to narrow down the choice of animals to match to based on the time of day and location. For example, Figure \ref{buckeye_img} shows a lizard crossing the path of Buckeye 3 in the middle of the day and Figure \ref{buckeye_img_2} shows the lizard walking past in early afternoon on a different day. This allows us to encode a window of time  in which the lizard is more likely to appear onto the static knowledge base of DC nodes or, in the case of LORIS, onto the DA/DP node. Images an hour later were captured by the camera, showing the lizard walking in the opposite direction. While this was not every day, and the deployment time was too short to establish a pattern, it does help us to infer that a lizard passing by in early afternoon is likely to walk the same path approximately an hour later.
 		
 		    \begin{figure}[h]
 		    \centering
 			\includegraphics[width=0.65\textwidth]{Chap6/figures/buckeye_img_2}
-		    \caption{Second Image of Lizard by Camera 3}
+		    \caption{Second Image of Lizard by Buckeye 3}
 		    \label{buckeye_img_2}
 		    \end{figure}
 	
@@ -131,7 +131,7 @@
 			
 			These questions have been designed to be as open as possible to allow the interviewees to provide as much detail as they wish, or even transition to a different topic. The interviews were recorded and later transcribed to text. We then used a software package called Dedoose \ref{REFERENCE}, which is an online tool that is used for performing qualitative analysis on text based documents. Uploading our documents to the service allowed us to manually review the responses to each question and highlight, or `tag', excerpts of interest and link to other excerpts that had either been mentioned by another interviewee; or were related to other comments. Each excerpt was tagged with the subject it was discussing, for example, a comment on the accessibility of an area of the forest during certain times of the year were tagged as \textit{local knowledge}. The excerpts were combined and exported into a CSV file that detailed who the interviewee was, the content of the excerpt and the tag.
 			
-			This method allowed us to gain knowledge we would not have learnt from our short time at the field centre, these face to face sessions gave us insight into patterns and observations that had been made by researchers who have been based at Danau Girang for many years. An example of this is the global knowledge of the sleeping patterns of Clouded Leopards. It is widely accepted that they are nocturnal however, the camera trapping project has shown that their sleeping patterns around Danau Girang do not support this and they have been seen throughout the day and night. This could be due to the human impact, availability of prey or even the climate of the area, but, if researchers had just used this global knowledge then they would have seen fewer Clouded Leopards. Similarly, if we had used a rule to only look for Clouded Leopards at night, then a lot of images would have been misclassified. While this piece of local knowledge cannot be encoded into rules because it simply means that Clouded Leopards around Danau Girang can be seen both day and night, but other excerpts can be.
+			This method allowed us to gain knowledge we would not have learnt from our short time at the field centre, these face to face sessions gave us insight into patterns and observations that had been made by researchers who have been based at Danau Girang for many years. An example of this is the global knowledge of the sleeping patterns of Clouded Leopards. It is widely accepted that they are nocturnal however, the camera trapping project has shown that their sleeping patterns around Danau Girang do not support this and they have been seen throughout the day and night. This could be due to the human impact, availability of prey or even the climate of the area, but, if researchers had just used this global knowledge then they would have seen fewer Clouded Leopards. Similarly, if we had used a rule to only look for Clouded Leopards at night, then a lot of images would have been misclassified. While it cannot be directly encoded, this is an example of local knowledge overriding global knowledge.
 
 			While we were not able to construct a full set of rules from these findings, the results have provided support for patterns extracted from existing data that has been classified by researchers, which we discuss further in the next section. 
 			
@@ -167,7 +167,7 @@ if TIME > 1500 and TEMP <= 26:
 	\section{Conclusion}\label{loris:conc}
 	 K-HAS was developed, with the motivating scenario in mind, as an ideal, general-purpose network architecture that is able to utilise the knowledge of its environment. However, experiments to support the design and deployment of such a network within the timeframe of this PhD showed that the current technology was not ready to support a network that would run without human intervention for extended periods. LORIS is our more specialised, cut down approach that can be implemented using commercial hardware that is readily available, as well as software that we have open-sourced. 
 	
-	Our deployment in Malaysia has proven that local knowledge can assist with classifications and can be gained from even a few images collected within the first few days of deployment. Ideally, we would like to leave this network running for an extended period to infer rules from the sensed data and test the reliability of the network in harsh conditions. 
+	Our deployment in Malaysia has shown that local knowledge can assist with classifications and can be gained from even a few images collected within the first few days of deployment. Ideally, we would like to leave this network running for an extended period to infer rules from the sensed data and test the reliability of the network in harsh conditions. From both the visit and the deployment, we have offered evidence for the existence of local knowledge and provided a method that can be used to extract it from field experts. 
     
         The rules extracted from the interviews and classified data we collected while deploying LORIS can be used as a static knowledge base for DC nodes in the K-HAS architecture, or as the basic starting knowledge base for the DA node in LORIS. As more classifications are made to new sensed data, this same process can be used to create new rules for previously unrecorded classifications, as well as refine existing rules. 
 	

@@ -344,7 +344,7 @@ Mapping these concepts, a diagram of the base K-HAS ontology is shown in Figure 
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.23}{\includegraphics{Chap5/figures/khas_base.JPG}}
+        \scalebox{0.17}{\includegraphics[angle=90]{Chap5/figures/khas_base.JPG}}
     \caption{K-HAS Base Ontology}
     \label{khas_base_ont}
     \end{figure}
@@ -375,7 +375,7 @@ The final ontology is shown in Figure \ref{khas_ont} and shows how each concept 
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.26}{\includegraphics[angle=90]{Chap5/figures/khas_ontology.JPG}}
+        \scalebox{0.14}{\includegraphics[angle=90]{Chap5/figures/khas_ontology.JPG}}
     \caption{K-HAS Ontology}
     \label{khas_ont}
     \end{figure}
@@ -409,15 +409,25 @@ In Table \ref{tab:comp_qs} we have identified some basic competency questions th
 \textbf{Competency Questions} & \textbf{Concepts} & \textbf{Relationships}\\ 
 \hline
 Find all \textbf{Occurrences} of an \textbf{Individual} & Occurrence; Individual & Occurrence occurrenceOf Individual \\
-Find all \textbf{Occurrences} of an \textbf{Individual} at a \textbf{Location} & Occurrence, Token, Individual, Location, Identification & Occurrence hasEvidence Token \\ Token isBasisForID Identification \\ Identification identifies Individual \\
-Find all \textbf{Occurrence} within a specified \textbf{Date} and \textbf{Time} range & Occurrence; Event; Date; Time & Occurrence atEvent Event \\ Event hasTime Time \\ Event hasDate Date \\
-Find all \textbf{Data-Collection Nodes} that have recorded an \textbf{Occurrence} of an \textbf{Individual} & DCNode; Individual; Occurrence & Occurrence recordedBy DCNode \\ Occurrence occurrenceOf Individual \\  
-Find all \textbf{Locations} of an \textbf{Individual} & Occurrence; Individual; Event; Location & Occurrence occurrenceOf Individual \\ Occurrence hasEvent Event \\ Event locatedAt Location \\
+Find all \textbf{Occurrences} of an \textbf{Individual} at a \textbf{Location} & Occurrence, Token, Individual, Location, Identification & Occurrence hasEvidence Token \\ 
+& & Token isBasisForID Identification \\ 
+& & Identification identifies Individual \\
+Find all \textbf{Occurrence} within a specified \textbf{Date} and \textbf{Time} range & Occurrence; Event; Date; Time & Occurrence atEvent Event \\
+& & Event hasTime Time \\ 
+& & Event hasDate Date \\
+Find all \textbf{Data-Collection Nodes} that have recorded an \textbf{Occurrence} of an \textbf{Individual} & DCNode; Individual; Occurrence & Occurrence recordedBy DCNode \\
+& & Occurrence occurrenceOf Individual \\  
+Find all \textbf{Locations} of an \textbf{Individual} & Occurrence; Individual; Event; Location & Occurrence occurrenceOf Individual \\ 
+& & Occurrence hasEvent Event \\ 
+& & Event locatedAt Location \\
 Find the storage location of a \textbf{Project} & Project, Data Aggregation Node & Project storedBy DataAggregationNode \\ 
-Find all \textbf{Projects} containing an \textbf{Individual} & Individual, Project; Occurrence & Individual occurredIn Occurrence \\ Occurrence heldIn Project \\
-Find all \textbf{Persons} involved in a \textbf{Project} & Person; Administrator; Worker; Project & Administrator hasProject Project \\ Worker hasProject Project \\
+Find all \textbf{Projects} containing an \textbf{Individual} & Individual, Project; Occurrence & Individual occurredIn Occurrence \\ 
+& & Occurrence heldIn Project \\
+Find all \textbf{Persons} involved in a \textbf{Project} & Person; Administrator; Worker; Project & Administrator hasProject Project \\ 
+& & Worker hasProject Project \\
 Find all the \textbf{Evidence} that supports an \textbf{Occurrence} & Occurrence; Token & Occurrence hasEvidence Evidence \\
-Find all the \textbf{Types} of evidence that supports an \textbf{Occurrence} & Occurrence; Token; Type & Occurrence hasEvidence Token \\Token isOfType Type \\
+Find all the \textbf{Types} of evidence that supports an \textbf{Occurrence} & Occurrence; Token; Type & Occurrence hasEvidence Token \\ 
+& & Token isOfType Type \\
 \hline 
 \end{tabular}
 \label{eval:comp_qs}
