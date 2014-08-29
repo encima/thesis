@@ -85,7 +85,7 @@ We tested Wi-Fi range using two IGEP boards, because they could be powered by 4 
 			
 This experiment was run in a wooded area in the UK and in the rainforest at DGFC. The specified maximum range of 802.11g is 120m. When considering attenuation and obstacles we were expecting the signal to be reduced by up to 50\% in the UK. However, we found that we received a maximum range of 30m, with LOS. Figure \ref{cardiffsnr} shows the results we experienced, while testing in the UK, some of the drops in signal can be attributed to dense foliage and readings that were not LOS, but a maximum range of 31m, with an SNR of 29.5 dBm, is less than we expected, as the UK does not experience high humidity often.
 			
-	The graph does show a drop at 22m: this was due to unusually dense foliage that restricted the LOS between the base station and the receiving node. With five runs of this test we observed the same results. The primary aim of this experiment was to prove the viability of Wi-Fi and to ensure our application functioned as intended, which it did. Further experiments could have been run to remove the anomaly but the results of the experiments in Danau Girang were the focus.
+	The graph does show a drop at 22m: this was due to unusually dense foliage that restricted the LOS between the base station and the receiving node. With five runs of this test we observed the same results. The primary aim of this experiment was to show the viability of Wi-Fi and to ensure our application functioned as intended, which it did. Further experiments could have been run to remove the anomaly but the results of the experiments in Danau Girang were the focus.
 		 
 	Despite the poor range from the tests in the UK, it was consistent with other studies reporting signal degradation of up to 78\% in areas with dense foliage. We visited Danau Girang in 2011 to gather the requirements of the network and ensure the hardware is able to survive the humidity. Range experiments were run in the rainforest to see if a more humid environment impacts range any further, Figure \ref{malaysiasnr} shows this.
 
@@ -128,9 +128,9 @@ The receiving node prints out variables related to the received packet, such as:
 					
 Initial experiments were run in a moderately vegetated area in the UK which yielded 497m of range. Limitations with buildings preventing us from testing any further but the signal strength still proved to be strong.
 			
-The initial results for the range tests proved positive and DigiMesh does seem to be a viable solution to account for the lack of range when using Wi-Fi. As the frequency is the same as 802.11g, thus licensing it for worldwide use, we expected similar results in Danau Girang..
+The initial results for the range tests showed positive and DigiMesh does seem to be a viable solution to account for the lack of range when using Wi-Fi. As the frequency is the same as 802.11g, thus licensing it for worldwide use, we expected similar results in Danau Girang..
 						
-Experiments were run in 2 areas of the rainforest around Danau Girang and the results yielded were not the same as we experienced in the UK, and thick vegetation proved to have a significant impact on the range, reducing it by almost 50\%.
+Experiments were run in 2 areas of the rainforest around Danau Girang and the results yielded were not the same as we experienced in the UK, and thick vegetation had a significant impact on the range, reducing it by almost 50\%.
 			
 In more open areas of the rainforest, we achieved 199m on average, more dense regions of the forest reduced this to 102m on average. While these results are not as high as we achieved in the UK, they are still suitable to use DigiMesh in the deployment of a WSN. This could be because we were using low-gain antennas and little configuration had been made on the DigiMesh radio.
 
@@ -236,7 +236,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 		
 		The results of Triton were compared to a random classifier, implemented in Python, that ran through a directory of images and generated a random number for each file. If the generated number was less than 0.25, then it was marked as true positive, between 0.25 and 0.49 marked it as false positive, between 0.5 and 0.74 was a true negative and between 0.75 and 1 was a false negative. Table \ref{table:random} shows the outcome, with 72 \textit{true positives} extracted, resulting in an accuracy of 80\%. 73.3 \textit{true negatives} from a total of 206 were found, giving an accuracy of 36\%. Although this set does not compare to the number of images collected in a six month deployment, human classification is a time consuming process and to have 900 classifications is complex. Although these could be crowdsourced, the reliability becomes questionable, in part due to the specialist nature of the images. This does show that our approach is quite close to the accuracy of a human when finding images of interest, but is able to do so in a fraction of the time, processing hundreds of images every minute. 
 		
-		Triton, coupled with a set of human eyes at the heart of the network, should prove to be an effective approach for prioritising images through the network, even when a classification cannot be made through the use of local knowledge. More importantly, in an area where the environment is as dynamic as the Malaysian rainforest, 97\% accuracy for detecting empty images can be crucial, if only for saving network bandwidth.
+		Triton, coupled with a set of human eyes at the heart of the network, should be an effective approach for prioritising images through the network, even when a classification cannot be made through the use of local knowledge. More importantly, in an area where the environment is as dynamic as the Malaysian rainforest, 97\% accuracy for detecting empty images can be crucial, if only for saving network bandwidth.
 		
 		\begin{footnotesize}
 		\begin{table*}
