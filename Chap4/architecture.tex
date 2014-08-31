@@ -1,7 +1,7 @@
 \chapter{Wireless Sensor Network Architecture Design and Technical Details}\label{chap:arch}
 	In this chapter, we explain our proposed network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three-tiered, hierarchical approach with each subsequent tier providing increased knowledge processing capabilities. 
 
-	We aim to show that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise the delivery of interesting sensed data. We also believe that human input is a valuable learning process for such a network and feedback, from humans, on data that has been classified can be used to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
+	We aim to show that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise the delivery of interesting sensed data. We also believe that human input is a valuable way for such a network to learn about classifications it has made correctly, and incorrectly, and use that knowledge to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
 
 	The rest of this chapter is structured as follows. Section 1 outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section 2 introduces an example, from our motivating scenario, that will be used to better explain each tier of the architecture. Section 3 explains the data collection tier. Section 4 explains the data processing tier. Section 5 explains the data aggregation tier. Section 6 concludes the chapter and summarises the key features of K-HAS.
 
@@ -48,7 +48,8 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	In our motivating scenario the network is image-based, this means that the DP node would perform image processing, as well as processing the image metadata. The increased knowledge processing capabilities allow DP nodes to run rules dynamically, learning from the sensed data and providing classifications that change based on changes in the environment. For example, if a DP node has not seen an elephant before, and it is not aware of the object in the image, then it will await a human classification. The node will then record the time period that it receives elephant pictures, i.e. June to July, and become more alert the following year. Similarly, the node will know not to look for pictures of nocturnal animals during the day. This local knowledge allows processing power to be saved and, thus, time; this ensures that the processing of sensed data is optimised as much as possible in order to reduce the time it spends in the network.
 	
 	% The rule engine used in our current implementation is Drools, a Java based rule engine that allows for rules to be defined in \textit{.drl} files and these can be loaded dynamically into a knowledge base. This flexibility allows to be changed on the fly without the need to restart the device, or even require human access, as all of this can be achieved through network communication. 
-	
+	The rule engine used should allow for rules to be dynamically inserted into the rule base, so that rules can be updated through network communication.
+
 	Upon receiving sensed data from a DC node, the rule base is fired on the metadata of each file received. If the rules determine that the data is of interest or, in the best case scenario, provides a classification, then the data is packaged and sent on to the Data Aggregation (DA) node.
 	
 	\subsection{Data Aggregation}
@@ -64,10 +65,15 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	
 	\subsubsection{Knowledge Base}
 	DA nodes do not typically experience the resource constraints that DC and DP nodes must compensate for. Because of this, they hold a global knowledge that contains a history of all observations made by all nodes, as well as the location and deployment times of all nodes in the network. When nodes are deployed, this is updated, by users, to show the location of the node and when it was placed. 
+
+	Every classification sent from DP nodes is stored in a database and contains all information about an observation: date, time, originating node, route taken within the network, location, sensed data, classification of sensed data. They also hold information all projects running, for example: a project to track elephant movements within the forest. When sensed data that could be related to the project is received, such as an image with an elephant classification, users associated with that project are informed through email, or other means.
 	
 	While DC do not store any of the observations they capture, and DP nodes only store part of the observation that can be used in future classifications, DA nodes store the complete observation made by every DC node, as well as any extra knowledge that is added by users upon receiving the sensed data. What is stored by the the DP node is dependent on the deployed purpose of the network. For example, in our motivating scenario, we store: the processed image, the classification, the node it originated from and the date and time it was captured.
 	
-	As well as this, DA nodes provide administrative operations on the network, such as the recording of node locations, time of deployment and viewing all active nodes. This allows the DA node to monitor active nodes and alert users if a node has not sent any data in a while. The longer a K-HAS network runs, the more knowledge a DA node gains, both from users that classify observations and from changes in the sensed data. The relevant parts of this knowledge are then relayed back to DP nodes, updating their knowledge bases as to what clasifications were correct and which need updating for future observations.
+	As well as this, the functionality of DA nodes can be extended to provide administrative operations on the network, such as the recording of node locations, time of deployment and viewing all active nodes. This allows the DA node to monitor active nodes and alert users if a node has not sent any data in a while. The longer a K-HAS network runs, the more knowledge a DA node gains, both from users that classify observations and from changes in the sensed data. This knowledge are then relayed back to DP nodes, updating their knowledge bases as to what clasifications were correct and which need updating for future observations.
+
+	\subsubsection{Feedback Loop}
+	The feedback loop is a protocol within K-HAS, that uses human input, and other sources, to update DP nodes. When a DP node classifies sensed data, it stores some of that to assist with future classifications. What is stored depends on the type of sensed data. For example, images would mean that the DP node would store the resulting processed image, its classification and information about the time it was taken, the camera that took it and the location. When that is sent to the DA node, a human would then look at the image and mark the classification as correct, or modify it if it was not. Once that classification has been finalised, the DA node sends either a confirmation or a modification to the DP node that sent it, updating its knowledge base. This protocol seeks to reduce the number of incorrect classifications the longer the network is deployed and allows the nodes to be dynamic and `learn' throughout the lifetime of the network. It also allows node to adapt quickly to new data, if a DP node is unable to classify an image of an animal it does not yet have template images for, the knowledge of a human expert can provide those templates and the feedback loop will deliver that knowledge.
 	
 	
 	\section{Technological Components}
@@ -84,18 +90,45 @@ DwC Archives follow a star file structure, where a record can contain many occur
 	\item Meta.xml
 	\item Data files
 \end{enumerate}
+Darwin Core is a body of standards for representing, sharing and storing observations, we explain this in more detail in Section \ref{arch:tech:dwc}. While it does not have the extensions available to OBOE, Darwin Core is extremely concise for recording observations within the biological diversity domain and aims to be a standard reference for sharing these observations.
 
-Ecological Metadata Language (EML) is a metadata used by ecologists and the language is used to describe projects and those involved. This file acts as a form of certificate and descriptor as to what the data is related to and who owns it. The XML file, shown in Listing \ref{dwc:eml}, outlines a sample project and users involved in the project.
+The standard structure of a Darwin Core Archive (DwC-A) is a star record; an archive of files with a core metadata file that describes the content of all other files within the archive.
 
-\lstinputlisting[language=XML, firstline=0, lastline=21,breaklines=true,label=dwc:eml,caption=Darwin Core: EML.xml]{Chap4/listings/dwc_arch/eml.xml}
+The record shown in figure \ref{dwca} represents a DwC-A that conforms to the star schema. The ecological metadata language document contains all of the details about the project, such as who is involved, the institution code, contact details and the project(s) related to the observation, shown in Listing \ref{dwc:eml}.
 
-The core file, \textit{meta.xml}, shown in Listing \ref{dwc:meta} lists the files that contains the actual sensed data, as well as the terms used to describe it. Examples include: date, time, location, type of data, filename and species contained.
+\lstinputlisting[language=XML, caption=Darwin Core Ecological Metadata File, label=dwc:eml]{Chap5/figures/dwc_arch/eml.xml}
 
-\lstinputlisting[language=XML, breaklines=true,label=dwc:meta,caption=Darwin Core: meta.xml]{Chap4/listings/dwc_arch/meta.xml}
+The descriptor file is an xml document that contains the column headers in the attached files and the mappings of those headers to DwC terms, an example file is shown in Listing \ref{dwc:meta}. This file shows that this is an archive containing the sighting of an individual, and that the sighting has been split into two files. The largest benefit of Darwin Core is its modularity. Extension files can be added to enrich the data for each occurrence. In this example the extension file is named as \textit{images.csv} and contains image-based evidence to support the observation.
 
-Data files contain the actual sensed data, based on how it is supported, and these files are linked in \textit{meta.xml}. For example, temperature readings or direct human sightings would be stored in a CSV file and linked, however, images or video would require the metadata to be store in a CSV file and a filepath would be referenced in the XML. The structure of the CSV file contains a header line that matches the terms in the meta file and each line would be an observation. The terms are linked to the Darwin Core glossary so the archive can be validated and processed by a DwC archive reader.
+\noindent\begin{minipage}{\textwidth}
+\lstinputlisting[language=XML, caption=Darwin Core Descriptor File, label=dwc:meta]{Chap5/figures/dwc_arch/meta.xml}
+\end{minipage}
 
-All of these files are then archived and sent as a ZIP folder throughout the network. If the sensed data is media based, then the media is included as well. DwC archive processing libraries are included on both DP and DA nodes.
+    \begin{figure}
+    \centering
+      \includegraphics[width=\textwidth{0.65}]{Chap5/figures/dwca.png}
+    \caption{A Darwin Core Star Archive}
+    \label{dwca}
+    \end{figure}
+
+Listing \ref{dwc:set} shows the comma-separated central file (Basis of Resource) containing the core details of the observation, i.e. the animal observed, and the column headings map to the descriptor file. Other linked files are typically linked by the unique ID of the observation, containing information that extends the observation and provides further context.
+
+\noindent\begin{minipage}{\textwidth}
+\lstinputlisting[caption=Darwin Core Occurrence Data, label=dwc:set]{Chap5/figures/dwc_arch/set.csv}
+\end{minipage}
+
+
+% Ecological Metadata Language (EML) is a metadata used by ecologists and the language is used to describe projects and those involved. This file acts as a form of certificate and descriptor as to what the data is related to and who owns it. The XML file, shown in Listing \ref{arch:dwc:eml}, outlines a sample project and users involved in the project.
+
+% \lstinputlisting[language=XML, firstline=0, lastline=21,breaklines=true,label=arch:dwc:eml,caption=Darwin Core: EML.xml]{Chap4/listings/dwc_arch/eml.xml}
+
+% The core file, \textit{meta.xml}, shown in Listing \ref{arch:dwc:meta} lists the files that contains the actual sensed data, as well as the terms used to describe it. Examples include: date, time, location, type of data, filename and species contained.
+
+% \lstinputlisting[language=XML, breaklines=true,label=arch:dwc:meta,caption=Darwin Core: meta.xml]{Chap4/listings/dwc_arch/meta.xml}
+
+% Data files contain the actual sensed data, based on how it is supported, and these files are linked in \textit{meta.xml}. For example, temperature readings or direct human sightings would be stored in a CSV file and linked, however, images or video would require the metadata to be store in a CSV file and a filepath would be referenced in the XML. The structure of the CSV file contains a header line that matches the terms in the meta file and each line would be an observation. The terms are linked to the Darwin Core glossary so the archive can be validated and processed by a DwC archive reader.
+
+All of these files are then archived and sent as a ZIP folder throughout the network. If the sensed data is media based, then the media is included as well. Libraries to process DwC archives are included on both DP and DA nodes.
 
 Darwin Core is suited to K-HAS because its use in scientific observations matches our motivating scenario and the archive can be easily created by a DC node, as it does not require any heavy processing and all of the files are common formats.
 	
@@ -120,7 +153,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.75\textwidth]{Chap4/figures/loris}
+		\includegraphics[width=\textwidth]{Chap4/figures/loris}
 		\caption{Web Interface for Observations}
 		\label{kc:loris}
 		\end{figure}
@@ -128,7 +161,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		Viewing data for new observations is useful for gaining classifications and alerting members of a project, but viewing older sensed data allows patterns to be identified in order to create new rules. Figure \ref{kc:loris_data} shows a map of all deployed nodes in the area surrounding the field centre in our motivating scenario. When users select a node, a table is populated with all of the classified observations that it has captured; this can then be used to extract patterns from the data and create rules. For example, the two observations of the Malay Civet are only seen late at night, if further observations also showed this, then we could create a rule defining the active hours of the Malay Civet and, potentially, list days that it is likely to pass. These rules can then be written and uploaded to the knowledge base.
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.75\textwidth]{Chap4/figures/loris_data}
+		\includegraphics[width=\textwidth]{Chap4/figures/loris_data}
 		\caption{Web Interface for Classified Sensed Data}
 		\label{kc:loris_data}
 		\end{figure}
@@ -145,7 +178,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.65\textwidth]{Chap4/figures/rules}
+		\includegraphics[width=\textwidth]{Chap4/figures/rules}
 		\caption{Web Interface for Drools Operations}
 		\label{kc:rloris_drl}
 		\end{figure}
@@ -179,14 +212,14 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 			\begin{figure}[!t]
 			\centering
-			\includegraphics[width=0.65\textwidth]{Chap4/figures/leopard2.JPG}
+			\includegraphics[width=\textwidth]{Chap4/figures/leopard2.JPG}
 			\caption{Clouded Leopard Image Capture}
 			\label{cl2}
 			\end{figure}
 
 			\begin{figure}[!t]
 			\centering
-			\includegraphics[width=0.65\textwidth]{Chap4/figures/leopard_proc}
+			\includegraphics[width=\textwidth]{Chap4/figures/leopard_proc}
 			\caption{Processed Image of Clouded Leopard}
 			\label{clproc}
 			\end{figure}
@@ -210,7 +243,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 			\begin{figure}[!t]
 			\centering
-			\includegraphics[width=0.55\textwidth]{Chap4/figures/leopard_proc}
+			\includegraphics[width=\textwidth]{Chap4/figures/leopard_proc}
 			\caption{Processed Image of Clouded Leopard}
 			\label{clproc}
 			\end{figure}
@@ -229,7 +262,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 			The middleware on the node supports a web interface to allow users to perform administrative functions on the network, such as deploy a new node, on top of this there is a custom made website that shows all observations for every DC node. This allows users to log on and classify the images. In this case, the lecturer receives the email notification, reviews the attached images and clicks on the link to access the website to inform the DP node that the classification was correct. Due to the administrator position the lecturer has on the system, he is able to stop any users voting on the image and to simply confirm the classification.
 			
-			If there was no classification, then users would be able to vote on the contents and use the classification with the highest vote, or the classification made by an administrator. Once a classification has been made, it is stored in the database and written to the archive. This triggers the DA node to send that classification on to the DP node that sent the original archive. In this case, the DA node informed the DP node that it has been confirmed as a Clouded leopard and the DP node then stores the extracted image in the directory of Clouded leopard templates, to assist with future classifications. This updated template causes the rule base of the DP node to be updated so similar data processed in the future would be correctly identified. The longer the network is deployed, the more knowledge DP nodes gain and the more accurate their classifications can be. For example, a change in season could cause a new, previously unknown animal to migrate to the rainforest. With human assistance, the animal can be identified and determined whether it is of interest. This knowledge can then be stored and sent on to DP nodes to prioritise and classify correctly the next time that it is captured.
+			If there was no classification, then users would be able to vote on the contents and use the classification with the highest vote, or the classification made by an administrator. Once a classification has been made, it is stored in the database and written to the archive. This triggers the DA node to send that classification on to the DP node that sent the original archive. In this case, the DA node informed the DP node that it has been confirmed as a Clouded leopard and the DP node then stores the extracted image in the directory of Clouded leopard templates, to assist with future classifications. This updated template causes the rule base of the DP node to be updated so similar data processed in the future would be correctly identified. The longer the network is deployed, the more knowledge DP nodes gain and the more accurate their classifications can be. For example, a change in season could cause a new, previously unknown animal to migrate to the rainforest. With human assistance, the animal can be identified and determined whether it is of interest. This knowledge can then be stored and sent on to DP nodes to prioritise and classify correctly the next time that it is captured. The feedback loop protocol is currently only a design and has been minimally implemented as a proof of concept.
 					
 	\section{Conclusion}
 		In this chapter we have explained the architecture we have developed to allow knowledge to be encoded and utilised within a wireless sensor network. Using tiers of nodes, with varying levels of knowledge-processing capabilities, we can process observations within the network and deliver data that has, where possible, already been classified. Working as more of a subscribe-push method, users do not have to check a base station for new data, instead it is sent to them if it has been found to be part of a project they are subscribed to. If not, then the data is accessible to all users of the network through a web interface.

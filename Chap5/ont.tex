@@ -81,7 +81,7 @@ O\&M provides a conceptual model, as well as XML encoding for observations and m
 
     \begin{figure}[h]
     \centering
-	\includegraphics[scale=0.65]{Chap5/figures/o&m_ontology.png}
+	\includegraphics[width=\textwidth]{Chap5/figures/o&m_ontology.png}
     \caption{The OGC O\&M Ontology}
     \label{oandm}
     \end{figure}
@@ -89,38 +89,12 @@ O\&M provides a conceptual model, as well as XML encoding for observations and m
 The structure of an observation within O\&M is focussed on the action and the result, this makes it suited for sensor networks across many domains that perform a wide range of observations. Because the users of the O\&M standard are spread across many domains, each with their own terms and definitions, the creation of an ontology for the standard aimed to remain as generic as other observation-centric ontologies. 
 
 \subsubsection{Darwin Core SW}\label{bg:dwc}
-Darwin Core is a body of standards for representing, sharing and storing observations, we explain this in more detail in Section \ref{arch:tech:dwc}. While it does not have the extensions available to OBOE, Darwin Core is extremely concise for recording observations within the biological diversity domain and aims to be a standard reference for sharing these observations.
 
-The standard structure of a Darwin Core Archive (DwC-A) is a star record; an archive of files with a core metadata file that describes the content of all other files within the archive.
-
-The record shown in figure \ref{dwca} represents a DwC-A that conforms to the star schema. The ecological metadata language document contains all of the details about the project, such as who is involved, the institution code, contact details and the project(s) related to the observation, shown in Listing \ref{dwc:eml}.
-
-\lstinputlisting[language=XML, caption=Darwin Core Ecological Metadata File, label=dwc:eml]{Chap5/figures/dwc_arch/eml.xml}
-
-The descriptor file is an xml document that contains the column headers in the attached files and the mappings of those headers to DwC terms, an example file is shown in Listing \ref{dwc:meta}. This file shows that this is an archive containing the sighting of an individual, and that the sighting has been split into two files. The largest benefit of Darwin Core is its modularity. Extension files can be added to enrich the data for each occurrence. In this example the extension file is named as \textit{images.csv} and contains image-based evidence to support the observation.
-
-\noindent\begin{minipage}{\textwidth}
-\lstinputlisting[language=XML, caption=Darwin Core Descriptor File, label=dwc:meta]{Chap5/figures/dwc_arch/meta.xml}
-\end{minipage}
-
-    \begin{figure}
-    \centering
-      \scalebox{0.53}{\includegraphics{Chap5/figures/dwca.png}}
-    \caption{A Darwin Core Star Archive}
-    \label{dwca}
-    \end{figure}
-
-Listing \ref{dwc:set} shows the comma-separated central file (Basis of Resource) containing the core details of the observation, i.e. the animal observed, and the column headings map to the descriptor file. Other linked files are typically linked by the unique ID of the observation, containing information that extends the observation and provides further context.
-
-\noindent\begin{minipage}{\textwidth}
-\lstinputlisting[caption=Darwin Core Occurrence Data, label=dwc:set]{Chap5/figures/dwc_arch/set.csv}
-\end{minipage}
-
-In order to represent DwC occurrences in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{dwc_sw} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
+In order to represent DwC occurrences, explained in detail in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{dwc_sw} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.23}{\includegraphics{Chap5/figures/dsw.jpg}}
+  \includegraphics[width=\textwidth]{Chap5/figures/dsw.jpg}
     \caption{Darwin-SW}
     \label{darwin-sw}
     \end{figure}
@@ -209,12 +183,12 @@ These definitions outline the core concepts of SensorML, a \textit{system} that 
 \subsubsection{SSN}
 The Semantic Sensor Network (SSN) Ontology is the most fitting ontology for our requirements, as it covers systems processes and observations. Developed by the W3C after an extensive review of existing ontologies \cite{lefort2011semantic}, the SSN ontology is designed to allow focus on a variety of perspectives, such as the sensor within the network or the data that has been observed.
 
-    \begin{figure*}
+    \begin{figure}
     \centering
-        \scalebox{0.50}{\includegraphics{Chap5/figures/ssnont.jpg}}
+        \includegraphics[width=\textwidth]{Chap5/figures/ssnont.jpg}
     \caption{SSN Ontology}
     \label{ssnont}
-    \end{figure*}
+    \end{figure}
     
 Figure \ref{ssnont} shows the model for the SSN ontology, displaying the relationships that connect each class, as well as their associated properties. It also highlights the modular approach that has been taken, separating the system from the process and the observation.
 
@@ -344,7 +318,7 @@ Mapping these concepts, a diagram of the base K-HAS ontology is shown in Figure 
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.17}{\includegraphics[angle=90]{Chap5/figures/khas_base.JPG}}
+        \includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/khas_base.JPG}
     \caption{K-HAS Base Ontology}
     \label{khas_base_ont}
     \end{figure}
@@ -375,7 +349,7 @@ The final ontology is shown in Figure \ref{khas_ont} and shows how each concept 
 
     \begin{figure}[h]
     \centering
-        \scalebox{0.14}{\includegraphics[angle=90]{Chap5/figures/khas_ontology.JPG}}
+        \includegraphics[angle=90, width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/khas_ontology.JPG}
     \caption{K-HAS Ontology}
     \label{khas_ont}
     \end{figure}

@@ -8,7 +8,7 @@ Based in Sabah, Malaysia, Danau Girang Field Centre is located in Lot 6 of the L
 
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.8\textwidth]{Chap3/figures/field_centre}
+		\includegraphics[width=\textwidth]{Chap3/figures/field_centre}
 		\caption{The Main Buidling at DGFC}
 		\label{tech:fig:map}
 		\end{figure}
@@ -17,7 +17,7 @@ Danau Girang is in a unique location, situated in a rainforest corridor (figure 
 
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.8\textwidth]{Chap3/figures/dgmap}
+		\includegraphics[width=\textwidth]{Chap3/figures/dgmap}
 		\caption{Aerial View of Danau Girang Field Centre and the Surrounding Area}
 		\label{tech:fig:map}
 		\end{figure}
@@ -26,7 +26,7 @@ The corridor monitoring programme is a scheme that has been in place for more th
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.8\textwidth]{Chap3/figures/hc500}
+		\includegraphics[width=\textwidth]{Chap3/figures/hc500}
 		\caption{Reconyx HC500 Camera}
 		\label{tech:fig:map}
 		\end{figure}
@@ -35,6 +35,10 @@ Images must be manually collected every two weeks from the cameras and the batte
 
 % @TODO: Check the number of cameras
 In 2010, twenty cameras were deployed for six month periods and then relocated based on the needs of the projects at that time. Currently, there are now ninety with a view to expand and dozens of projects within the field centre use the images gathered from these cameras. Initially, it was the job of visiting research students to collect the images but, since the number of deployed cameras has grown, full-time staff have been taken on to maintain them.
+
+Images that have been collected are stored on an external hard drive in the field centre and a spreadsheet is updated with information about each image, such as data, time , camera, filename and location. Research students and, later, staff, manually inspected each image and added their classification to the spreadsheet. Because so many images came through the field centre each week, this was a long process and it was not uncommon for it to be a few weeks before the images were classified. Research student in charge of the cameras were usually on projects lasting 6 months so, until staff members were recently employed, their methods of cataloguing were quite different. Sometimes, each student created a different spreadsheet for their time at DG and ignored the classification of images that did not contain the animal their project was focussed on. While this has improved now, staff members are tasked with combining these spreadsheets from the past few years and classifying all the images that have been left empty.
+
+With image processing, we can automate the classification process. Using common tools and widely accepted methods, we can use existing images (that have been classified) to create templates and match new images to these templates and classify them, when possible. Humans can then check the classification and provide feedback on its validity, but it removes the wait of weeks for a classification and automates the cataloguing, classification and storing of the images, when received at the field centre. This method should also allow us to alert researchers when our system believes an image of particular interest, such as a rare animal, has been taken.
 
 Our belief is that we can use the LKWS, and the locations of the existing cameras, to deploy a WSN that uses local knowledge gained from the researchers at DGFC to automate the collection of images, improve the battery life by not exposing the internals of the camera to the elements so often and, most important, prioritise the flow of data through the network by in-network processing. 
 	
@@ -56,27 +60,48 @@ In this section, we detail our research into suitable sensor hardware that met t
 It should be noted that there are many devices out there that met the above criteria but we selected devices that had a large development community. At the time of writing, there are now many more, but this research was carried out in 2010, when the market for low-cost, high-power, small form factor single board computers (SBCs) was starting to grow. While we did research many more devices, the three listed below are the devices we physically trialled and tested.
 This section also details the modifications we made to any devices we tested in order to ensure they would survive in a humid environment.
 
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=\textwidth]{Chap3/figures/pandaboard}
+		\caption{Pandaboard}
+		\label{tech:fig:pandaboard}
+		\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=\textwidth]{Chap3/figures/igep}
+		\caption{IGEP v2}
+		\label{tech:fig:igep}
+		\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=\textwidth]{Chap3/figures/waspmote}
+		\caption{Waspmote}
+		\label{tech:fig:waspmote}
+		\end{subfigure}
+\caption{Sensor Node Hardware}
+\label{tech:fig:nodes}
+\end{figure}
+
 \subsection{Pandaboard}
 
-Texas Instruments supported the development of a reference Single Board Computer (SBC) that had specs similar to that of a modern smartphone and was capable of running desktop Linux, known as the Pandaboard \cite{instruments2012pandaboard}. A dual core 1GhZ ARM processor with 1GB of RAM, support for external storage, expansion ports, USB, Wi-Fi and Bluetooth in a board the size of two credit cards can be a powerful addition to a data heavy WSN, especially one that deals with images.
+Texas Instruments supported the development of a reference Single Board Computer (SBC) that had specs similar to that of a modern smartphone (Figure \ref{tech:fig:pandaboard}) and was capable of running desktop Linux, known as the Pandaboard \cite{instruments2012pandaboard}. A dual core 1GhZ ARM processor with 1GB of RAM, support for external storage, expansion ports, USB, Wi-Fi and Bluetooth in a board the size of two credit cards can be a powerful addition to a data heavy WSN, especially one that deals with images.
 
 There is no mention of Pandaboards in the literature being used in WSNs but the low power of the system and advanced capabilities make it suitable for processing and transmitting data simultaneously. 
 	
 \subsection{IGEP v2}
 
-The IGEP v2 is another ARM based SBC that uses a 1GhZ single core processor with 512MB RAM and similar connectivity features to the Pandaboard, but around half the size. This does result in a reduced power draw and the device is still capable of running desktop Linux.
+The IGEP v2 (Figure \ref{tech:fig:igep}) is another ARM based SBC that uses a 1GhZ single core processor with 512MB RAM and similar connectivity features to the Pandaboard, but around half the size. This does result in a reduced power draw and the device is still capable of running desktop Linux.
 
 Due to the smaller size, and easier commercial availability, the IGEP has been used as a sensor node to record, process and send readings from multiple devices, such as air temperature, GPS and oxygen saturation as part of environmental monitoring \cite{Resch}. In their research, they found that the IGEP achieved 9.1 hours of uptime using a 4000mAH battery, a capacity used in many modern smartphones.
 
 \subsection{Waspmote}
-The Waspmote is a general purpose sensing board that is designed to allow plug-and-play connectivity for multiple sensor modules. The node can be programmed with C++, using the Standard Development Kit (SDK) developed by the manufacturer. The processing power is not comparable to the more powerful SBCs, but the 600mAh battery is reported to last three months and the size is much smaller \cite{waspmote}.
+The Waspmote (Figure \ref{tech:fig:waspmote}) is a general purpose sensing board that is designed to allow plug-and-play connectivity for multiple sensor modules. The node can be programmed with C++, using the Standard Development Kit (SDK) developed by the manufacturer. The processing power is not comparable to the more powerful SBCs, but the 600mAh battery is reported to last three months and the size is much smaller \cite{waspmote}.
 
 One of the benefits of the Waspmote is that they are commercially available with an actively maintained programming environment.
 
 \section{Range Experiments}\label{tech:wireless}
 	In this section, we explain the experiments we carried out to test the performance of different transmission media in the UK as well as the Malaysian rainforest. While range is the most important feature, a data rate that can handle hundreds of large readings in a day is a requirement. Our motivating scenario is focussed on the transmission of sets of 3 images (each around 800KB) for every trigger; where a sensor can trigger hundreds of times in a day.
 
-\subsection{Wi-Fi}\label{tec:wifirange}
+\subsection{Wi-Fi}\label{section:tech:wifirange}
 Wi-Fi was already available on our initial test platforms and the high data rate made it suitable for sending a large volume of images in a short period. We knew that current cameras deployed in DGFC were up to 1km apart and we did not expect to cover that range completely, but we did expect to achieve that coverage by using intermediate nodes.
 
 Research, outlined in Section \ref{bg:trans}, showed that the rainforest could reduce the range by up to 78\% and the ideal maximum range of 2.4GhZ Wi-Fi is 100m \cite{Dhawan2007}. 
@@ -109,7 +134,7 @@ This experiment was run in a wooded area in the UK and in the rainforest at DGFC
 						
 			Comparing figures \ref{cardiffsnr} and \ref{malaysiasnr} shows that the maximum distance to receive a signal is approximately the same in Malaysia as it is in the UK.  There are more signal drops but this seems to be due to denser foliage blocking the line of sight. However, it does suggest that the humid environment of the rainforest does not have a significant impact on the received signal. It is clear that the denser rainforest does impact the signal-to-noise ratio in a much shorter distance from the base station but a link is still made, allowing for a successful transmission of data.
 			
-Due to the poor Wi-Fi performance, we researched alternative methods to increase the range without impacting the environment the network is to be deployed in. We considered using intermediate nodes, not attached to cameras, to account for the lack of range but, because some cameras can be up to 1km apart, we would need more than 30 nodes to create a connection between two locations.
+Poor Wi-Fi performance led us to research alternative methods to increase the range without impacting the environment the network is to be deployed in. We considered using intermediate nodes, not attached to cameras, to account for the lack of range but, because some cameras can be up to 1km apart, we would need more than 30 nodes to create a connection between two locations.
 			
 We also researched wireless technologies that are more common in sensor networks. This does mean that the data rate is not as high as Wi-Fi and error correction in packet streams is not always as robust, but it is more suited to sensor networks, using less power and providing longer range.
 			
@@ -122,7 +147,7 @@ Although the range of Wi-Fi is poor, for our requirements, in both Malaysia and 
 		
 In our prototype implementation, we are using Waspmote sensor boards \cite{waspmote}, a general purpose node that is capable of transmitting through various communication mediums. Our Waspmotes are provided with DigiMesh modules and a 2GB SD card to store sensed data.
 		
-When testing the range of the Waspmotes, we followed a similar method to that which is outlined in Section \ref{tec:wifirange}. One board is in a fixed location and running a C++ application to poll for nodes in the network. Once a node is found it sends a message to the node every 10 seconds. The second board is set to scan the network and receive packets as soon as a base node is found; this node is then moved to different locations.
+When testing the range of the Waspmotes, we followed a similar method to that which is outlined in Section \ref{section:tech:wifirange}. One board is in a fixed location and running a C++ application to poll for nodes in the network. Once a node is found it sends a message to the node every 10 seconds. The second board is set to scan the network and receive packets as soon as a base node is found; this node is then moved to different locations.
 			
 The receiving node prints out variables related to the received packet, such as: Received Signal Strength Indicator (RSSI), source MAC address and packet ID. However, not all packets are received so the RSSI can display 0 if there are errors reading or if packet collision occurs. We found this to affect the results and have just used the two nodes to identify the maximum distance they can be apart, while maintaining a stable connection.
 					
@@ -135,12 +160,12 @@ Experiments were run in 2 areas of the rainforest around Danau Girang and the re
 In more open areas of the rainforest, we achieved 199m on average, more dense regions of the forest reduced this to 102m on average. While these results are not as high as we achieved in the UK, they are still suitable to use DigiMesh in the deployment of a WSN. This could be because we were using low-gain antennas and little configuration had been made on the DigiMesh radio.
 
 \subsection{Adapting and Optimising for Harsh Environments}
-	All of the hardware that we used for experiments had their components exposed and would have become compromised if moisture came in contact with them. To protect them from this, we used waterproof cases with a protective foam inside, known as Pelican cases, to keep the nodes watertight, but still allowing airflow to displace the heat generated, shown in Figure \ref{fig:tech:pelican}.
+	All of the hardware that we used for experiments had their components exposed, as shown in Figure \ref{tech:fig:nodes} and would have become compromised if moisture came in contact with them. To protect them from this, we used waterproof cases with a protective foam inside, known as Pelican cases, to keep the nodes watertight, but still allowing airflow to displace the heat generated, shown in Figure \ref{fig:tech:pelican}.
 	External antenna can be fed through the lip of the case, using thin cable, ensuring that the range of the transmissions is not affected by the case. 
 
 			\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.65\textwidth]{Chap3/figures/pelican}
+			\includegraphics[width=\textwidth]{Chap3/figures/pelican}
 			\caption{Pelican Waterproof Case}
 			\label{fig:tech:pelican}
 			\end{figure}
@@ -167,17 +192,17 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{Chap3/figures/IMG_0568}
+  \includegraphics[width=\textwidth]{Chap3/figures/IMG_0568}
   \caption{Image 1 of 3}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
-\includegraphics[width=\linewidth]{Chap3/figures/IMG_0569}
+\includegraphics[width=\textwidth]{Chap3/figures/IMG_0569}
   \caption{Image 2 of 3}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
- \includegraphics[width=\linewidth]{Chap3/figures/IMG_0570}
+ \includegraphics[width=\textwidth]{Chap3/figures/IMG_0570}
   \caption{Image 3 of 3}
 \end{subfigure}
 \caption{Sequence of 3 Images Captured on a Reconyx Trigger}
@@ -186,7 +211,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 
 			\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.65\textwidth]{Chap3/figures/PROC_IMG_0568}
+			\includegraphics[width=\textwidth]{Chap3/figures/PROC_IMG_0568}
 			\caption{Resulting Processed Image from Original Set of 3}
 			\label{tech:reconyx:processed}
 			\end{figure}

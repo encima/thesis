@@ -10,12 +10,35 @@
 \usepackage{gensymb} 
 \usepackage{tabularx}
 \usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+
+\definecolor{sh_comment}{rgb}{0.12, 0.38, 0.18 } %adjusted, in Eclipse: {0.25, 0.42, 0.30 } = #3F6A4D
+\definecolor{sh_keyword}{rgb}{0.37, 0.08, 0.25}  % #5F1441
+\definecolor{sh_string}{rgb}{0.06, 0.10, 0.98} % #101AF9
 
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{%
   \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-\lstset{frame=lrb, xleftmargin=\fboxsep, xrightmargin=-\fboxsep, breaklines=true, basicstyle=\ttfamily\scriptsize}
+% \lstset{frame=lrb, xleftmargin=\fboxsep, xrightmargin=-\fboxsep, breaklines=true, basicstyle=\ttfamily\scriptsize}
+\lstset {
+ frame=ltrb,
+ rulesepcolor=\color{black},
+ showspaces=false,showtabs=false,tabsize=2,
+ numberstyle=\tiny,numbers=left,
+ basicstyle= \ttfamily\scriptsize,
+ stringstyle=\color{sh_string},
+ keywordstyle = \color{sh_keyword}\bfseries,
+ commentstyle=\color{sh_comment}\itshape,
+ captionpos=b,
+ xleftmargin=0.7cm, xrightmargin=0.5cm,
+ lineskip=-0.3em,
+ float,
+ floatplacement=H,
+ escapebegin={\lstsmallmath}, escapeend={\lstsmallmathend},
+ breaklines=true
+}
 
 \onehalfspacing
 
