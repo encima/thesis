@@ -126,16 +126,16 @@
 \contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{121}{chapter.7}
 \contentsline {section}{\numberline {7.1}Simulation Environment}{122}{section.7.1}
 \contentsline {section}{\numberline {7.2}Experiment Design}{123}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{125}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{126}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}Routing}{127}{subsection.7.2.2}
-\contentsline {subsubsection}{Discovery}{127}{section*.77}
-\contentsline {subsubsection}{Transmission}{128}{section*.78}
+\contentsline {subsubsection}{Discovery}{127}{section*.78}
+\contentsline {subsubsection}{Transmission}{128}{section*.79}
 \contentsline {subsection}{\numberline {7.2.3}Capture}{129}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Processing}{129}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.4}Processing}{130}{subsection.7.2.4}
 \contentsline {section}{\numberline {7.3}Results}{130}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Duration}{132}{subsection.7.3.1}
 \contentsline {subsection}{\numberline {7.3.2}Network Saturation}{134}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4}Conclusion}{135}{section.7.4}
+\contentsline {section}{\numberline {7.4}Conclusion}{136}{section.7.4}
 \contentsline {chapter}{\numberline {8}Conclusions and Future Work}{147}{chapter.8}
 \contentsline {section}{\numberline {8.1}Summary of Contributions}{148}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}K-HAS}{149}{subsection.8.1.1}
@@ -143,6 +143,6 @@
 \contentsline {subsection}{\numberline {8.1.3}LORIS}{149}{subsection.8.1.3}
 \contentsline {subsection}{\numberline {8.1.4}Simulations}{150}{subsection.8.1.4}
 \contentsline {section}{\numberline {8.2}Future Work}{150}{section.8.2}
-\contentsline {chapter}{Appendices}{164}{section*.89}
+\contentsline {chapter}{Appendices}{164}{section*.90}
 \contentsline {chapter}{\numberline {A}K-HAS Ontology}{165}{Appendix.1.A}
 \contentsline {chapter}{\numberline {B}Interview Transcript: Gill Bolongon}{168}{Appendix.1.B}
