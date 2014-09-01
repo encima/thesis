@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/encima/ontologies/2013/4/alignment"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/encima/ontologies/2013/4/alignment">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.oclc.org/NET/ssnx/ssn</Import>
+    <Import>http://purl.org/dsw/</Import>
+    <Import>http://ecoinformatics.org/oboe/oboe.1.0/oboe.owl</Import>
+    <Import>http://www.semanticweb.org/encima/ontologies/2013/4/k_has</Import>
+    <Declaration>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/DecimalLatitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/DecimalLongitude"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/LocationRemarks"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLng"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRemark"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ObservationCollection"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Project"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Identification"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Node"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/dc/terms/Location"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Location"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/dsw/Token"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Token"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/Event"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/Identification"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Identification"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Occurrence"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DUL.owl#Agent"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Agent"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DUL.owl#Event"/>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Agent"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRemark"/>
+            <Class IRI="http://rs.tdwg.org/dwc/terms/LocationRemarks"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Location"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasLat"/>
+            <Class IRI="http://rs.tdwg.org/dwc/terms/DecimalLatitude"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/encima/ontologies/2013/4/k_has#Location"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasLng"/>
+            <Class IRI="http://rs.tdwg.org/dwc/terms/DecimalLongitude"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://rs.tdwg.org/dwc/terms/DecimalLatitude</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">dwc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://rs.tdwg.org/dwc/terms/DecimalLongitude</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">dwc
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://rs.tdwg.org/dwc/terms/LocationRemarks</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">dwc</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
