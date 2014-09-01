@@ -7,7 +7,7 @@
 
 	\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.65\textwidth]{Chap4/figures/khasarch}
+			\includegraphics[width=0.65\textwidth]{Chap4/figures/khasarch} 
 			\caption{Overview of K-HAS Architecture}
 			\label{arch:khas:arch}
 			\end{figure}
@@ -106,7 +106,7 @@ The descriptor file is an xml document that contains the column headers in the a
 
     \begin{figure}
     \centering
-      \includegraphics[width=\textwidth{0.65}]{Chap5/figures/dwca.png}
+      \includegraphics[width=\textwidth]{Chap5/figures/dwca.png}
     \caption{A Darwin Core Star Archive}
     \label{dwca}
     \end{figure}
@@ -147,7 +147,31 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	\subsection{Knowledge Capture}\label{arch:kc}
 		GSN is packaged with a web interface that allows users to see all nodes deployed and view the latest sensed data received. The web interface is targeted towards users with domain expertise and has limited functionality focussed towards sensor administration. However, it does make GSN accessible by more than one computer, as well as a variety of different architectures. For example, the admin webpage could be accessed on the machine that runs GSN, or from a tablet computer connected to the same network. We used the same approach to develop a web-based tool that provides access to all sensed data, as well as a simple interface for performing tasks, such as uploading new rules or updating the location of nodes.
 		
-		All sensed data is read from a MySQL database and users can view the metadata from each observation, such as location, date, time and temperature, as well as the data itself. From this, users are able to classify the data based on their role. Covered in detail in Chapter \ref{chap:ont}, K-HAS uses roles to control active projects and classifications; there are administrators and researchers. Researchers are involved in projects and receive notifications when relevant data has been received. They have access to the web interface and can vote on classifications for sensed data. Administrators lead projects and can create/complete them, but they also have the ability to finalise classifications. K-HAS follows a knowledge hierarchy where administrators are at the top, with DC nodes at the bottom. When an administrator makes a classification, all prior classifications are ignored and the relevant knowledge bases are updated.
+		All sensed data is read from a MySQL database and users can view the metadata from each observation, such as location, date, time and temperature, as well as the data itself. From this, users are able to classify the data based on their role. Shown in the ontology in Chapter \ref{chap:ont}, K-HAS uses roles to control active projects and classifications; there are administrators and researchers. Researchers are involved in projects and receive notifications when relevant data has been received. They have access to the web interface and can vote on classifications for sensed data. Administrators lead projects and can create/complete them, but they also have the ability to finalise classifications. K-HAS follows a knowledge hierarchy (Figure \ref{arch:kno:hier}), with administrators are at the top and DC nodes at the bottom. While there are more DC nodes in the node, their knowledge bases are more limited and classifications are trusted less than classifications made by DP nodes. Although there are fewer DP nodes, their knowledge bases are more detailed. Researchers and admins do not share a level on the knowledge hierarchy because we assume that administrators would be more experienced domain experts. For example, researchers could be students at Danau Girang, whereas an admin would be a professor with more experience. When an administrator makes a classification, all prior classifications are ignored and the feedback loop protocol is used to update nodes.
+
+		\begin{figure}[!h]
+			\centering
+			\begin{tikzpicture}
+
+			\def \h {5};
+			\def \f {.7};
+
+			\foreach \y in  {0,1,2,3} {
+			    \def \w { \h*\f-\y*\f };
+			    \def \v { \y*\f-\h*\f };
+			    \draw (\v,\y) -- (\w,\y);
+			}
+
+			\draw (-\h*\f,0)  -- (0,\h);
+			\draw (\h*\f,0)  -- (0,\h);
+			\node at (0,0) [above] {DC Nodes};
+			\node at (0,1) [above] {DP and DA Nodes};
+			\node at (0,2) [above] {Researchers};
+			\node at (0,3) [above] {Admins};
+			\end{tikzpicture}
+			\caption{Knowledge Hierarchy for K-HAS}
+			\label{arch:kno:hier}
+		\end{figure}
 		
 		Figure \ref{kc:loris} shows an observation where users can vote on the contents. An administrator can then confirm that classification and prevent further votes from being cast. This type of moderation means that it does not have to be specialists voting on sensed data that cannot be classified by DP nodes.
 		

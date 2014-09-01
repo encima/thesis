@@ -11,18 +11,10 @@ A level-1 auxiliary file: Chap7/simulations.aux
 A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plain.bst
 Database file #1: refs/library.bib
-Warning--I didn't find a database entry for "gartner2013"
 Warning--I didn't find a database entry for "bluetooth2012bluetooth"
-Warning--I didn't find a database entry for "Waspmote"
 Warning--I didn't find a database entry for "dwc_sw"
 Warning--I didn't find a database entry for "lefort2011semantic"
-Warning--I didn't find a database entry for "gomez1995evaluation"
-Warning--I didn't find a database entry for "REF!"
-Warning--I didn't find a database entry for "noy2001creating"
-Warning--I didn't find a database entry for "dwc_oboe"
-Warning--I didn't find a database entry for "brickley2010foaf"
-Warning--I didn't find a database entry for "REFERENCE"
-Warning--I didn't find a database entry for "buckeye"
+Warning--to sort, need author or key in dgfc
 Warning--there's a number but no volume in Akyildiz2002a
 Warning--there's a number but no volume in Bayat2012
 Warning--there's a number but no volume in Botts
@@ -31,55 +23,63 @@ Warning--empty journal in Brank2005
 Warning--empty journal in Brewster2004
 Warning--empty year in Demirbas
 Warning--empty year in DEWALT
+Warning--empty journal in Document2010
+Warning--there's a number but no volume in Document2010
 Warning--empty journal in Fernandez-Lopez1999
 Warning--empty journal in Gruninger1995
 Warning--there's a number but no volume in Jimenez-Ruiz2008
 Warning--empty year in Maurer
 Warning--empty year in Pizzocaro
+Warning--there's a number but no volume in Raghunathan2002
 Warning--empty year in Rahman
 Warning--empty year in Resch
 Warning--empty journal in Robin2006
+Warning--empty year in Sadagopan
 Warning--empty year in Schurgers
 Warning--empty publisher in Uschold1995
-You've used 76 entries,
+Warning--empty journal in Uschold
+Warning--empty year in Uschold
+Warning--there's a number but no volume in Sarajevo2014
+Warning--there's a number but no volume in Zivkovic2004
+You've used 95 entries,
             2118 wiz_defined-function locations,
-            988 strings with 18698 characters,
-and the built_in function-call counts, 26892 in all, are:
-= -- 2645
-> -- 1404
-< -- 22
-+ -- 554
-- -- 478
-* -- 1941
-:= -- 4478
-add.period$ -- 229
-call.type$ -- 76
-change.case$ -- 465
+            1070 strings with 20246 characters,
+and the built_in function-call counts, 32487 in all, are:
+= -- 3182
+> -- 1679
+< -- 25
++ -- 663
+- -- 568
+* -- 2317
+:= -- 5408
+add.period$ -- 279
+call.type$ -- 95
+change.case$ -- 567
 chr.to.int$ -- 0
-cite$ -- 94
-duplicate$ -- 986
-empty$ -- 1905
-format.name$ -- 478
-if$ -- 5544
+cite$ -- 122
+duplicate$ -- 1192
+empty$ -- 2338
+format.name$ -- 568
+if$ -- 6698
 int.to.chr$ -- 0
-int.to.str$ -- 76
-missing$ -- 74
-newline$ -- 379
-num.names$ -- 152
-pop$ -- 469
+int.to.str$ -- 95
+missing$ -- 88
+newline$ -- 467
+num.names$ -- 188
+pop$ -- 592
 preamble$ -- 1
-purify$ -- 391
+purify$ -- 474
 quote$ -- 0
-skip$ -- 764
+skip$ -- 933
 stack$ -- 0
-substring$ -- 1559
-swap$ -- 244
-text.length$ -- 22
+substring$ -- 1838
+swap$ -- 284
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 300
-warning$ -- 18
-while$ -- 269
-width$ -- 78
-write$ -- 797
+type$ -- 376
+warning$ -- 27
+while$ -- 324
+width$ -- 97
+write$ -- 977
 (There were 30 warnings)

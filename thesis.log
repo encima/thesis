@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.4)  28 APR 2014 20:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  1 SEP 2014 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 78 languages loaded.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/report.cls
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,37 +24,37 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/nomencl/nomencl.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen103
 \nom@tempdim=\dimen104
 \nomitemsep=\skip43
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -62,7 +62,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count89
 \lst@gtempboxa=\box26
 \lst@token=\toks15
@@ -76,24 +76,24 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count94
 \lst@maxwidth=\dimen110
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count95
 \lst@skipnumbers=\count96
 \lst@framebox=\box27
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2007/02/22 1.4 listings configuration
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
-Package: listings 2007/02/22 1.4 (Carsten Heinz)
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -107,10 +107,10 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen111
@@ -124,10 +124,10 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@ContinuedFloat=\count97
 Package caption Info: listings package is loaded.
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/rotating/rotating.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count98
@@ -136,13 +136,13 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box28
 \rot@mess@toks=\toks16
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/was/gensymb.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/05/13 v2.10 `tabularx' package (DPC)
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen118
 \extrarowheight=\dimen119
@@ -158,1163 +158,1237 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@cols=\count99
 \TX@ftn=\toks18
 )
-\@nomenclaturefile=\write3
-\openout3 = `thesis.nlo'.
-
-
-Writing nomenclature file thesis.nlo
-(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
-(./Chap3/technical.aux) (./Chap4/architecture.aux
-
-LaTeX Warning: Label `cl2' multiply defined.
-
-) (./Chap5/ont.aux
-
-LaTeX Warning: Label `dwc:eml' multiply defined.
-
-
-LaTeX Warning: Label `dwc:meta' multiply defined.
-
-) (./Chap6/implementation.aux
-
-LaTeX Warning: Label `tech:wifirange' multiply defined.
-
-
-LaTeX Warning: Label `tech:digimesh' multiply defined.
-
-) (./Chap7/simulations.aux) (./Chap8/conclusion.aux))
-\openout1 = `thesis.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen125
-\scratchbox=\box29
-\nofMPsegments=\count101
-\nofMParguments=\count102
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen126
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
-\everyMPtoPDFconversion=\toks20
-) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count100
+\c@subtable=\count101
 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen125
+\Hy@linkcounter=\count102
+\Hy@pagecounter=\count103
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count104
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count105
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen126
+\Fld@menulength=\count106
+\Field@Width=\dimen127
+\Fld@charsize=\dimen128
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count107
+\c@Item=\count108
+\c@Hfootnote=\count109
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count110
+\c@bookmark@seq@number=\count111
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip48
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count112
+\c@@ppsavesec=\count113
+\c@@ppsaveapp=\count114
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen129
+\pgfutil@tempdimb=\dimen130
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box29
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks22
+))
+\pgf@x=\dimen131
+\pgf@y=\dimen132
+\pgf@xa=\dimen133
+\pgf@ya=\dimen134
+\pgf@xb=\dimen135
+\pgf@yb=\dimen136
+\pgf@xc=\dimen137
+\pgf@yc=\dimen138
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count115
+\c@pgf@countb=\count116
+\c@pgf@countc=\count117
+\c@pgf@countd=\count118
+\t@pgf@toka=\toks23
+\t@pgf@tokb=\toks24
+\t@pgf@tokc=\toks25
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count119
+\pgfsyssoftpath@bigbuffer@items=\count120
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen139
+\pgfmath@count=\count121
+\pgfmath@box=\box30
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count122
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen140
+\pgf@picmaxx=\dimen141
+\pgf@picminy=\dimen142
+\pgf@picmaxy=\dimen143
+\pgf@pathminx=\dimen144
+\pgf@pathmaxx=\dimen145
+\pgf@pathminy=\dimen146
+\pgf@pathmaxy=\dimen147
+\pgf@xx=\dimen148
+\pgf@xy=\dimen149
+\pgf@yx=\dimen150
+\pgf@yy=\dimen151
+\pgf@zx=\dimen152
+\pgf@zy=\dimen153
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen154
+\pgf@path@lasty=\dimen155
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen156
+\pgf@shorten@start@additional=\dimen157
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box31
+\pgf@hbox=\box32
+\pgf@layerbox@main=\box33
+\pgf@picture@serial@count=\count123
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen158
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen159
+\pgf@pt@y=\dimen160
+\pgf@pt@temp=\dimen161
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen162
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen163
+\pgf@sys@shading@range@num=\count124
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box34
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box35
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen164
+\pgf@nodesepend=\dimen165
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen166
+\pgffor@skip=\dimen167
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count125
+\pgfplotmarksize=\dimen168
+)
+\tikz@lastx=\dimen169
+\tikz@lasty=\dimen170
+\tikz@lastxsaved=\dimen171
+\tikz@lastysaved=\dimen172
+\tikzleveldistance=\dimen173
+\tikzsiblingdistance=\dimen174
+\tikz@figbox=\box36
+\tikz@figbox@bg=\box37
+\tikz@tempbox=\box38
+\tikz@tempbox@bg=\box39
+\tikztreelevel=\count126
+\tikznumberofchildren=\count127
+\tikznumberofcurrentchild=\count128
+\tikz@fig@count=\count129
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count130
+\pgfmatrixcurrentcolumn=\count131
+\pgf@matrix@numberofcolumns=\count132
+)
+\tikz@expandcount=\count133
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+\@nomenclaturefile=\write4
+\openout4 = `thesis.nlo'.
+
+
+Writing nomenclature file thesis.nlo
+(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux
+
+LaTeX Warning: Label `tech:fig:map' multiply defined.
+
+
+LaTeX Warning: Label `tech:fig:map' multiply defined.
+
+) (./Chap4/architecture.aux
+
+LaTeX Warning: Label `clproc' multiply defined.
+
+) (./Chap5/ont.aux) (./Chap6/implementation.aux
+
+LaTeX Warning: Label `tech:digimesh' multiply defined.
+
+) (./Chap7/simulations.aux) (./Chap8/conclusion.aux) (./App/appendix.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count134
+\scratchdimen=\dimen175
+\scratchbox=\box40
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count137
+\MPscratchDim=\dimen176
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count106
+\c@lstlisting=\count140
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \celsius on input line 23.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 23.
+LaTeX Info: Redefining \celsius on input line 49.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 49.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 23.
-Package gensymb Info: Using \Omega for \ohm on input line 23.
+LaTeX Info: Redefining \ohm on input line 49.
+Package gensymb Info: Using \Omega for \ohm on input line 49.
 
 Package gensymb Warning: Not defining \micro.
 
+\AtBeginShipoutBox=\box41
+Package hyperref Info: Link coloring OFF on input line 49.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count141
+)
+LaTeX Info: Redefining \ref on input line 49.
+LaTeX Info: Redefining \pageref on input line 49.
+LaTeX Info: Redefining \nameref on input line 49.
+
+(./thesis.out) (./thesis.out)
+\@outlinefile=\write5
+\openout5 = `thesis.out'.
+
+ ABD: EveryShipout initializing macros
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 28.
+(Font)              <14.4> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 28.
+(Font)              <7> on input line 55.
+ [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./thes
+is.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+
 [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 32.
+] [2] [3])
+\tf@toc=\write6
+\openout6 = `thesis.toc'.
 
-Overfull \hbox (17.21437pt too wide) in paragraph at lines 31--47
-[]  []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--47
-
- []
-
-[1] (./thesis.toc [2
-
-] [3] [4])
-\tf@toc=\write4
-\openout4 = `thesis.toc'.
-
- [5] (./thesis.lof [6
+ [4] (./thesis.lof [5
 
 ])
-\tf@lof=\write5
-\openout5 = `thesis.lof'.
+\tf@lof=\write7
+\openout7 = `thesis.lof'.
 
- [7] (./thesis.lot)
-\tf@lot=\write6
-\openout6 = `thesis.lot'.
+ [6] (./thesis.lot)
+\tf@lot=\write8
+\openout8 = `thesis.lot'.
 
+ [7
 
-[8
-
-] [1]
+]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.64 \end{abstract}
+                    [1]
 \openout2 = `Chap1/introduction.aux'.
 
  (./Chap1/introduction.tex
 Chapter 1.
-[1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.5 
+     [1
 
 
-]
-
-LaTeX Warning: Citation `Akyildiz2002' on page 2 undefined on input line 9.
-
-
-LaTeX Warning: Citation `Joshi2001' on page 2 undefined on input line 13.
-
-[2] [3] [4] [5]) [6]
+] [2] [3] [4] [5]) [6] [7]
 \openout2 = `Chap2/background.aux'.
 
  (./Chap2/background.tex
 Chapter 2.
+[8
 
-LaTeX Warning: Citation `Szewczyk2004a' on page 7 undefined on input line 9.
 
 
-LaTeX Warning: Citation `Pizzocaro' on page 7 undefined on input line 9.
+] [9]
 
+LaTeX Warning: Citation `bluetooth2012bluetooth' on page 10 undefined on input 
+line 31.
 
-LaTeX Warning: Citation `Otto2006' on page 7 undefined on input line 9.
+[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+<Chap2/figures/gsn_arch.png, id=907, 371.3875pt x 453.695pt>
+File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
+<use Chap2/figures/gsn_arch.png>
+Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 154.
+(pdftex.def)             Requested size: 312.00119pt x 381.15659pt.
 
-LaTeX Warning: Citation `Akyildiz2002' on page 7 undefined on input line 11.
 
-[7
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+[22] [23 <./Chap2/figures/gsn_arch.png>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 182--182
+[][][][][][][] 
+ []
 
 
-]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 182--182
+[][][][][][][] 
+ []
 
-LaTeX Warning: Citation `Mainwaring2002' on page 8 undefined on input line 14.
 
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 182--182
+[]$[]$ 
+ []
 
-LaTeX Warning: Citation `Intanagonwiwat2000' on page 8 undefined on input line 
-17.
-
-
-LaTeX Warning: Citation `Kahn' on page 8 undefined on input line 17.
-
-
-LaTeX Warning: Citation `Akyildiz2002a' on page 8 undefined on input line 17.
-
-
-LaTeX Warning: Citation `Corke2010a' on page 8 undefined on input line 17.
-
-
-LaTeX Warning: Citation `gartner2013' on page 8 undefined on input line 19.
-
-
-LaTeX Warning: Citation `Akyildiz2002' on page 8 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Segal2010a' on page 8 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Hempstead2005' on page 8 undefined on input line 22.
-
-
-LaTeX Warning: Citation `Schurgers' on page 8 undefined on input line 22.
-
-[8]
-
-LaTeX Warning: Citation `Vaidya2004' on page 9 undefined on input line 24.
-
-
-LaTeX Warning: Citation `Estrin2001' on page 9 undefined on input line 24.
-
-
-LaTeX Warning: Citation `Lee2007' on page 9 undefined on input line 29.
-
-
-LaTeX Warning: Citation `Swan2012' on page 9 undefined on input line 30.
-
-
-LaTeX Warning: Citation `bluetooth2012bluetooth' on page 9 undefined on input l
-ine 30.
-
-
-LaTeX Warning: Citation `Zennaro' on page 9 undefined on input line 31.
-
-
-LaTeX Warning: Citation `Bayat2012' on page 9 undefined on input line 32.
-
-[9]
-
-LaTeX Warning: Citation `Martinez2004' on page 10 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Juang2002' on page 10 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Akkaya2005' on page 10 undefined on input line 40.
-
-[10]
-
-LaTeX Warning: Citation `Chen2001' on page 11 undefined on input line 47.
-
-[11]
-
-LaTeX Warning: Citation `Heinzelman1999' on page 12 undefined on input line 57.
-
-
-
-LaTeX Warning: Citation `Woodrow2002' on page 12 undefined on input line 69.
-
-[12]
-
-LaTeX Warning: Citation `Yao2002' on page 13 undefined on input line 74.
-
-[13]
-
-LaTeX Warning: Citation `Manjeshwar2001' on page 14 undefined on input line 84.
-
-
-[14]
-
-LaTeX Warning: Citation `Chen2002' on page 15 undefined on input line 94.
-
-
-LaTeX Warning: Citation `Yu2001' on page 15 undefined on input line 101.
-
-[15]
-
-LaTeX Warning: Citation `Yu2004' on page 16 undefined on input line 110.
-
-
-LaTeX Warning: Citation `Wang2008c' on page 16 undefined on input line 112.
-
-
-LaTeX Warning: Citation `Hadim2006' on page 16 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Rahman' on page 16 undefined on input line 116.
-
-
-LaTeX Warning: Citation `Yu2004' on page 16 undefined on input line 116.
-
-[16] [17]
-
-LaTeX Warning: Citation `Terfloth2006' on page 18 undefined on input line 132.
-
-<Chap2/figures/facts_architecture.jpg, id=92, 451.6875pt x 181.67876pt>
+<Chap2/figures/facts_architecture.jpg, id=925, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
 Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
-e 136.
+e 193.
 (pdftex.def)             Requested size: 312.00119pt x 125.49985pt.
+ [24 <./Chap2/figures/facts_architecture.jpg>] [25]
+Overfull \hbox (1.78775pt too wide) in paragraph at lines 218--218
+[]\OT1/cmr/bx/n/17.28 Biodiversity and En-vi-ron-men-tal Mon-i-tor-
+ []
 
-
-LaTeX Warning: Citation `Wright2009b' on page 18 undefined on input line 146.
-
-[18]
-
-LaTeX Warning: Citation `F2006' on page 19 undefined on input line 162.
-
-[19] <Chap2/figures/gsn_arch.png, id=99, 371.3875pt x 453.695pt>
-File: Chap2/figures/gsn_arch.png Graphic file (type png)
-
-<use Chap2/figures/gsn_arch.png>
-Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 172.
-(pdftex.def)             Requested size: 312.00119pt x 381.15659pt.
- [20] [21 <./Chap2/figures/facts_architecture.jpg> <./Chap2/figures/gsn_arch.pn
-g>]
-
-LaTeX Warning: Citation `Aberer2007' on page 22 undefined on input line 183.
-
-
-LaTeX Warning: Reference `bg:lst:gsn' on page 22 undefined on input line 183.
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 186.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 186.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 196.
-
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
- [22]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-
-
-LaTeX Warning: Citation `Mainwaring2002' on page 23 undefined on input line 207
-.
-
-
-LaTeX Warning: Citation `Szewczyk2004c' on page 23 undefined on input line 209.
-
-
-
-LaTeX Warning: Citation `Demirbas' on page 23 undefined on input line 211.
-
-[23]
-
-LaTeX Warning: Citation `Kays2009' on page 24 undefined on input line 215.
-
-
-LaTeX Warning: Citation `Ahumada2011a' on page 24 undefined on input line 215.
-
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
-LaTeX Warning: Citation `Garcia-Sanchez2010b' on page 24 undefined on input lin
-e 215.
-
-
-LaTeX Warning: Citation `ZSL' on page 24 undefined on input line 217.
-
-
-LaTeX Warning: Citation `Juang2002' on page 24 undefined on input line 219.
-
-[24]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
-
-LaTeX Warning: Citation `LadislausM.Semali' on page 25 undefined on input line 
-224.
-
-
-LaTeX Warning: Citation `Stiglitz1990' on page 25 undefined on input line 226.
-
-
-LaTeX Warning: Citation `DEWALT' on page 25 undefined on input line 226.
-
-
-LaTeX Warning: Citation `Joshi2001' on page 25 undefined on input line 228.
-
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-[25]
-
-LaTeX Warning: Citation `Atzori2010' on page 26 undefined on input line 238.
-
 [26]
-
-LaTeX Warning: Citation `Buttussi2008' on page 27 undefined on input line 250.
-
-[27]
-
-LaTeX Warning: Citation `Maurer' on page 28 undefined on input line 254.
-
-
-LaTeX Warning: Citation `Werner-Allen2006' on page 28 undefined on input line 2
-59.
-
-
-LaTeX Warning: Citation `Werner-Allen2006' on page 28 undefined on input line 2
-63.
-
-
-LaTeX Warning: Citation `Figueiredo2009' on page 28 undefined on input line 265
-.
-
-
-LaTeX Warning: Citation `Wark2008' on page 28 undefined on input line 265.
-
-
-LaTeX Warning: Citation `Rahman2008' on page 28 undefined on input line 265.
-
-
-LaTeX Warning: Citation `Figueiredo2009' on page 28 undefined on input line 265
-.
-
-
-LaTeX Warning: Citation `Wark2008' on page 28 undefined on input line 265.
-
-[28] [29]) [30]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [27] [28]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [29]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ò in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [30] [31] [32] [33]) [34]
 \openout2 = `Chap3/technical.aux'.
 
  (./Chap3/technical.tex
 Chapter 3.
-
-LaTeX Warning: Reference `tech:motiv' on page 31 undefined on input line 4.
-
-
-LaTeX Warning: Reference `tech:hw' on page 31 undefined on input line 4.
-
-
-LaTeX Warning: Reference `tech:wireless' on page 31 undefined on input line 4.
-
-
-LaTeX Warning: Reference `tech:conc' on page 31 undefined on input line 4.
-
-
-LaTeX Warning: Citation `Walsh2009' on page 31 undefined on input line 7.
-
-[31
+[35
 
 
 
-]
+] <Chap3/figures/field_centre.jpg, id=1058, 1638.12pt x 1228.59pt>
+File: Chap3/figures/field_centre.jpg Graphic file (type jpg)
 
-LaTeX Warning: Citation `Reconyx' on page 32 undefined on input line 11.
+<use Chap3/figures/field_centre.jpg>
+Package pdftex.def Info: Chap3/figures/field_centre.jpg used on input line 11.
+(pdftex.def)             Requested size: 390.0pt x 292.48679pt.
+ [36 <./Chap3/figures/field_centre.jpg>]
+<Chap3/figures/dgmap.jpg, id=1065, 2099.845pt x 1374.13374pt>
+File: Chap3/figures/dgmap.jpg Graphic file (type jpg)
 
-[32]
+<use Chap3/figures/dgmap.jpg>
+Package pdftex.def Info: Chap3/figures/dgmap.jpg used on input line 20.
+(pdftex.def)             Requested size: 390.0pt x 255.21721pt.
 
-LaTeX Warning: Citation `Nachman2008' on page 33 undefined on input line 24.
+<Chap3/figures/hc500.jpg, id=1067, 313.17pt x 301.125pt>
+File: Chap3/figures/hc500.jpg Graphic file (type jpg)
 
-[33]
-
-LaTeX Warning: Citation `instruments2012pandaboard' on page 34 undefined on inp
-ut line 38.
-
-
-LaTeX Warning: Citation `Resch' on page 34 undefined on input line 46.
-
-[34]
-
-LaTeX Warning: Citation `Lib' on page 35 undefined on input line 49.
+<use Chap3/figures/hc500.jpg>
+Package pdftex.def Info: Chap3/figures/hc500.jpg used on input line 29.
+(pdftex.def)             Requested size: 390.0pt x 375.01309pt.
 
 
-LaTeX Warning: Citation `Dhawan2007' on page 35 undefined on input line 59.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35] <Chap3/figures/bp_snr.png, id=153, 729.4452pt x 445.665pt>
+[37 <./Chap3/figures/dgmap.jpg>] [38 <./Chap3/figures/hc500.jpg>] [39] [40]
+<Chap3/figures/pandaboard.jpg, id=1089, 602.25pt x 443.6575pt>
+File: Chap3/figures/pandaboard.jpg Graphic file (type jpg)
+
+<use Chap3/figures/pandaboard.jpg>
+Package pdftex.def Info: Chap3/figures/pandaboard.jpg used on input line 66.
+(pdftex.def)             Requested size: 195.0pt x 143.65216pt.
+
+<Chap3/figures/igep.jpg, id=1090, 3468.96pt x 2312.64pt>
+File: Chap3/figures/igep.jpg Graphic file (type jpg)
+
+<use Chap3/figures/igep.jpg>
+Package pdftex.def Info: Chap3/figures/igep.jpg used on input line 71.
+(pdftex.def)             Requested size: 195.0pt x 129.9657pt.
+
+<Chap3/figures/waspmote.png, id=1091, 301.125pt x 280.04625pt>
+File: Chap3/figures/waspmote.png Graphic file (type png)
+
+<use Chap3/figures/waspmote.png>
+Package pdftex.def Info: Chap3/figures/waspmote.png used on input line 76.
+(pdftex.def)             Requested size: 195.0pt x 181.35701pt.
+ [41] [42 <./Chap3/figures/pandaboard.jpg> <./Chap3/figures/igep.jpg> <./Chap3/
+figures/waspmote.png (PNG copy)>] [43] [44]
+<Chap3/figures/bp_snr.png, id=1128, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
-Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 67.
-(pdftex.def)             Requested size: 175.49881pt x 107.22018pt.
- [36 <./Chap3/figures/bp_snr.png>]
-<Chap3/figures/dg_snr.png, id=159, 728.4816pt x 445.1832pt>
+Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 121.
+(pdftex.def)             Requested size: 195.0pt x 119.13431pt.
+
+<Chap3/figures/dg_snr.png, id=1130, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
-Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 78.
-(pdftex.def)             Requested size: 175.49881pt x 107.24693pt.
- [37 <./Chap3/figures/dg_snr.png>]
-Overfull \hbox (5.46674pt too wide) in paragraph at lines 91--92
+Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 127.
+(pdftex.def)             Requested size: 195.0pt x 119.16174pt.
+ [45 <./Chap3/figures/bp_snr.png> <./Chap3/figures/dg_snr.png>]
+Overfull \hbox (5.46674pt too wide) in paragraph at lines 143--144
 []\OT1/cmr/m/n/12 Although the range of Wi-Fi is poor, for our re-quire-ments, 
 in both Malaysia
  []
 
+[46]
+Overfull \hbox (7.63622pt too wide) in paragraph at lines 162--162
+[]\OT1/cmr/bx/n/14.4 Adapting and Op-ti-mis-ing for Harsh En-vi-ron-ments 
+ []
 
-LaTeX Warning: Citation `Waspmote' on page 38 undefined on input line 96.
-
-
-LaTeX Warning: Reference `sec:wifirange' on page 38 undefined on input line 98.
-
-
-[38] <Chap3/figures/pelican.jpg, id=167, 1284.8pt x 963.6pt>
+<Chap3/figures/pelican.jpg, id=1148, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
-Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 116.
-(pdftex.def)             Requested size: 175.49881pt x 131.60953pt.
+Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 168.
+(pdftex.def)             Requested size: 390.0pt x 292.49341pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39] [40 <./Chap3/figures/pelican.jpg>]
+[47] [48 <./Chap3/figures/pelican.jpg>] [49]
+<Chap3/figures/IMG_0568.jpg, id=1166, 1927.2pt x 1084.05pt>
+File: Chap3/figures/IMG_0568.jpg Graphic file (type jpg)
 
-LaTeX Warning: Reference `sec:scenario' on page 41 undefined on input line 133.
+<use Chap3/figures/IMG_0568.jpg>
+Package pdftex.def Info: Chap3/figures/IMG_0568.jpg used on input line 195.
+(pdftex.def)             Requested size: 195.0pt x 109.68503pt.
+
+<Chap3/figures/IMG_0569.jpg, id=1167, 1927.2pt x 1084.05pt>
+File: Chap3/figures/IMG_0569.jpg Graphic file (type jpg)
+
+<use Chap3/figures/IMG_0569.jpg>
+Package pdftex.def Info: Chap3/figures/IMG_0569.jpg used on input line 200.
+(pdftex.def)             Requested size: 195.0pt x 109.68503pt.
+
+<Chap3/figures/IMG_0570.jpg, id=1168, 1927.2pt x 1084.05pt>
+File: Chap3/figures/IMG_0570.jpg Graphic file (type jpg)
+
+<use Chap3/figures/IMG_0570.jpg>
+Package pdftex.def Info: Chap3/figures/IMG_0570.jpg used on input line 205.
+(pdftex.def)             Requested size: 195.0pt x 109.68503pt.
+
+<Chap3/figures/PROC_IMG_0568.jpg, id=1169, 488.82625pt x 296.10625pt>
+File: Chap3/figures/PROC_IMG_0568.jpg Graphic file (type jpg)
+
+<use Chap3/figures/PROC_IMG_0568.jpg>
+Package pdftex.def Info: Chap3/figures/PROC_IMG_0568.jpg used on input line 214
+.
+(pdftex.def)             Requested size: 390.0pt x 236.24825pt.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Warning: Reference `origimg' on page 41 undefined on input line 133.
-
-[41]
-Overfull \hbox (46.74336pt too wide) in paragraph at lines 162--171
-[]  []
+[50 <./Chap3/figures/IMG_0568.jpg> <./Chap3/figures/IMG_0569.jpg> <./Chap3/figu
+res/IMG_0570.jpg>] [51 <./Chap3/figures/PROC_IMG_0568.jpg>]
+Overfull \hbox (44.13228pt too wide) in paragraph at lines 248--257
+ [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--171
-
+[52]
+Overfull \hbox (44.13228pt too wide) in paragraph at lines 269--278
+ [] 
  []
 
-[42]
-Overfull \hbox (46.74336pt too wide) in paragraph at lines 180--189
-[]  []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--189
-
- []
-
-[43]) [44]
+[53]) [54]
 \openout2 = `Chap4/architecture.aux'.
 
  (./Chap4/architecture.tex
 Chapter 4.
-[45
+[55
 
 
 
-]
+] <Chap4/figures/khasarch.png, id=1201, 423.5825pt x 428.60126pt>
+File: Chap4/figures/khasarch.png Graphic file (type png)
 
-LaTeX Warning: Reference `kb:dcrule' on page 46 undefined on input line 18.
-
-
-Overfull \hbox (5.0223pt too wide) in paragraph at lines 17--19
+<use Chap4/figures/khasarch.png>
+Package pdftex.def Info: Chap4/figures/khasarch.png used on input line 10.
+(pdftex.def)             Requested size: 253.49762pt x 256.5022pt.
+ [56 <./Chap4/figures/khasarch.png>]
+Overfull \hbox (5.0223pt too wide) in paragraph at lines 24--26
 \OT1/cmr/m/n/12 Reduced knowl-edge pro-cess-ing ca-pa-bil-i-ties and low mem-or
 y re-strict the knowl-
  []
 
+Missing character: There is no ‚ in font cmtt8!
+Missing character: There is no Ä in font cmtt8!
+Missing character: There is no ú in font cmtt8!
+Missing character: There is no ‚ in font cmtt8!
+Missing character: There is no Ä in font cmtt8!
+Missing character: There is no ù in font cmtt8!
+[57]
+Missing character: There is no ‚ in font cmtt8!
+Missing character: There is no Ä in font cmtt8!
+Missing character: There is no ò in font cmtt8!
+Missing character: There is no ‚ in font cmtt8!
+Missing character: There is no Ä in font cmtt8!
+Missing character: There is no ô in font cmtt8!
+Missing character: There is no ‚ in font cmtt8!
+Missing character: There is no Ä in font cmtt8!
+Missing character: There is no ò in font cmtt8!
+Missing character: There is no ‚ in font cmtt8!
+Missing character: There is no Ä in font cmtt8!
+Missing character: There is no ô in font cmtt8!
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 20--20
+Overfull \hbox (6.0pt too wide) in paragraph at lines 34--34
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 20--20
+Overfull \hbox (6.0pt too wide) in paragraph at lines 34--34
 [][][][][][][] 
  []
 
-[46]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ò in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
- [47] [48] [49]
 
-LaTeX Warning: Citation `Wieczorek2012b' on page 50 undefined on input line 68.
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 34--34
+[]$[]$ 
+ []
 
-
-
-LaTeX Warning: Citation `Wieczorek2012a' on page 50 undefined on input line 70.
-
-
-[50] (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
+[58] [59] [60] [61] [62]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 81--81
+(./Chap5/figures/dwc_arch/eml.xml
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+ [63]) [64]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 99--99
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 81--81
-[][][][][][][] 
- []
-
-(./Chap4/listings/dwc_arch/eml.xml [51])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
+Overfull \hbox (6.0pt too wide) in paragraph at lines 99--99
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 85--85
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 99--99
+[]$[]$ 
+ []
+
+(./Chap5/figures/dwc_arch/meta.xml)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 104--104
 [][][][][][][] 
  []
 
-(./Chap4/listings/dwc_arch/meta.xml [52]) [53] [54]
 
-LaTeX Warning: Reference `chap:ont' on page 55 undefined on input line 108.
+Overfull \hbox (6.0pt too wide) in paragraph at lines 104--104
+[][][][][][][] 
+ []
 
-[55] <Chap4/figures/loris.png, id=224, 1425.325pt x 764.8575pt>
+
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 104--104
+[]$[]$ 
+ []
+
+<Chap5/figures/dwca.png, id=1341, 661.47125pt x 419.5675pt>
+File: Chap5/figures/dwca.png Graphic file (type png)
+
+<use Chap5/figures/dwca.png>
+Package pdftex.def Info: Chap5/figures/dwca.png used on input line 109.
+(pdftex.def)             Requested size: 390.0pt x 247.36981pt.
+ (./Chap5/figures/dwc_arch/set.csv)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 117--117
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 117--117
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 117--117
+[]$[]$ 
+ []
+
+[65] [66 <./Chap5/figures/dwca.png>] [67]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[68] <Chap4/figures/loris.png, id=1395, 1425.325pt x 764.8575pt>
 File: Chap4/figures/loris.png Graphic file (type png)
 
 <use Chap4/figures/loris.png>
-Package pdftex.def Info: Chap4/figures/loris.png used on input line 114.
-(pdftex.def)             Requested size: 175.49881pt x 94.17145pt.
+Package pdftex.def Info: Chap4/figures/loris.png used on input line 180.
+(pdftex.def)             Requested size: 390.0pt x 209.28026pt.
 
-<Chap4/figures/loris_data.png, id=225, 1924.18875pt x 967.615pt>
+<Chap4/figures/loris_data.png, id=1397, 1924.18875pt x 967.615pt>
 File: Chap4/figures/loris_data.png Graphic file (type png)
 
 <use Chap4/figures/loris_data.png>
-Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 123.
-(pdftex.def)             Requested size: 175.49881pt x 88.24799pt.
- [56 <./Chap4/figures/loris.png> <./Chap4/figures/loris_data.png>]
-
-LaTeX Warning: Reference `kc:loris_drl' on page 57 undefined on input line 136.
-
-
-<Chap4/figures/rules.png, id=229, 1618.045pt x 698.61pt>
+Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 188.
+(pdftex.def)             Requested size: 390.0pt x 196.11813pt.
+ [69 <./Chap4/figures/loris.png>] [70 <./Chap4/figures/loris_data.png>]
+<Chap4/figures/rules.png, id=1409, 1618.045pt x 698.61pt>
 File: Chap4/figures/rules.png Graphic file (type png)
 
 <use Chap4/figures/rules.png>
-Package pdftex.def Info: Chap4/figures/rules.png used on input line 140.
-(pdftex.def)             Requested size: 175.49881pt x 75.77068pt.
- [57 <./Chap4/figures/rules.png>] [58]
-<Chap4/figures/leopard2.JPG, id=237, 1927.2pt x 1084.05pt>
+Package pdftex.def Info: Chap4/figures/rules.png used on input line 205.
+(pdftex.def)             Requested size: 390.0pt x 168.38403pt.
+ [71 <./Chap4/figures/rules.png>] [72] [73]
+<Chap4/figures/leopard2.JPG, id=1425, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
-Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 161.
-(pdftex.def)             Requested size: 175.49881pt x 98.71817pt.
- [59 <./Chap4/figures/leopard2.JPG>]
+Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 239.
+(pdftex.def)             Requested size: 390.0pt x 219.37006pt.
 
-LaTeX Warning: Reference `clproc' on page 60 undefined on input line 181.
-
-[60] <Chap4/figures/leopard_proc.png, id=245, 906.38625pt x 465.74pt>
+<Chap4/figures/leopard_proc.png, id=1426, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
-Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 185.
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 246.
 
-(pdftex.def)             Requested size: 175.49881pt x 90.17578pt.
- [61 <./Chap4/figures/leopard_proc.png>]
-[62] [63]) [64]
+(pdftex.def)             Requested size: 390.0pt x 200.39932pt.
+ [74 <./Chap4/figures/leopard2.JPG>]
+[75 <./Chap4/figures/leopard_proc.png>]
+File: Chap4/figures/leopard_proc.png Graphic file (type png)
+ <use Chap4/figures/leopard_proc.png>
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 270.
+
+(pdftex.def)             Requested size: 390.0pt x 200.39932pt.
+
+[76] [77] [78] [79]) [80]
 \openout2 = `Chap5/ont.aux'.
 
  (./Chap5/ont.tex
 Chapter 5.
-[65
+[81
 
 
 
-]
-
-LaTeX Warning: Citation `Compton2009' on page 66 undefined on input line 17.
-
-
-LaTeX Warning: Citation `Janowicz2010' on page 66 undefined on input line 17.
-
-
-Overfull \hbox (6.7195pt too wide) in paragraph at lines 25--26
+] [82]
+Overfull \hbox (6.7195pt too wide) in paragraph at lines 27--28
 []\OT1/cmr/m/n/12 From this we have cat-e-gorised rel-e-vant ex-ist-ing on-tolo
 -gies into Observation-
  []
 
-
-LaTeX Warning: Citation `McGuinness2004' on page 66 undefined on input line 31.
-
-
-
-LaTeX Warning: Citation `Madin2007' on page 66 undefined on input line 33.
-
-[66] <Chap5/figures/OBOEcore.JPG, id=265, 368.87813pt x 137.01187pt>
+<Chap5/figures/OBOEcore.JPG, id=1478, 368.87813pt x 137.01187pt>
 File: Chap5/figures/OBOEcore.JPG Graphic file (type jpg)
 
 <use Chap5/figures/OBOEcore.JPG>
-Package pdftex.def Info: Chap5/figures/OBOEcore.JPG used on input line 37.
+Package pdftex.def Info: Chap5/figures/OBOEcore.JPG used on input line 39.
 (pdftex.def)             Requested size: 368.87721pt x 137.01154pt.
-
-
-LaTeX Warning: Citation `Botts' on page 67 undefined on input line 47.
-
-[67 <./Chap5/figures/OBOEcore.JPG>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
+ [83 <./Chap5/figures/OBOEcore.JPG>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 78--78
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 54--54
+Overfull \hbox (6.0pt too wide) in paragraph at lines 78--78
 [][][][][][][] 
  []
 
-[68] <Chap5/figures/o&m_ontology.png, id=272, 643.40375pt x 285.065pt>
+
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 78--78
+[]$[]$ 
+ []
+
+[84] <Chap5/figures/o&m_ontology.png, id=1519, 643.40375pt x 285.065pt>
 File: Chap5/figures/o&m_ontology.png Graphic file (type png)
 
 <use Chap5/figures/o&m_ontology.png>
-Package pdftex.def Info: Chap5/figures/o&m_ontology.png used on input line 82.
-(pdftex.def)             Requested size: 321.70108pt x 142.53215pt.
- [69 <./Chap5/figures/o&m_ontology.png>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 96--96
-[][][][][][][] 
- []
+Package pdftex.def Info: Chap5/figures/o&m_ontology.png used on input line 84.
+(pdftex.def)             Requested size: 390.0pt x 172.7976pt.
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 96--96
-[][][][][][][] 
- []
+LaTeX Warning: Citation `dwc_sw' on page 85 undefined on input line 93.
 
-(./Chap5/figures/dwc_arch/eml.xml [70] [71])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 101--101
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 101--101
-[][][][][][][] 
- []
-
-(./Chap5/figures/dwc_arch/meta.xml)
-Overfull \hbox (3.0pt too wide) in paragraph at lines 100--103
-$[]$ 
- []
-
-<Chap5/figures/dwca.png, id=284, 661.47125pt x 419.5675pt>
-File: Chap5/figures/dwca.png Graphic file (type png)
-
-<use Chap5/figures/dwca.png>
-Package pdftex.def Info: Chap5/figures/dwca.png used on input line 106.
-(pdftex.def)             Requested size: 661.46964pt x 419.56647pt.
- [72]
-Overfull \vbox (236.15071pt too high) has occurred while \output is active []
-
-
-[73]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 114--114
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 114--114
-[][][][][][][] 
- []
-
-(./Chap5/figures/dwc_arch/set.csv)
-Overfull \hbox (3.0pt too wide) in paragraph at lines 113--116
-$[]$ 
- []
-
-
-LaTeX Warning: Citation `dwc_sw' on page 74 undefined on input line 117.
-
-<Chap5/figures/dsw.jpg, id=291, 1734.48pt x 782.925pt>
+<Chap5/figures/dsw.jpg, id=1521, 1734.48pt x 782.925pt>
 File: Chap5/figures/dsw.jpg Graphic file (type jpg)
 
 <use Chap5/figures/dsw.jpg>
-Package pdftex.def Info: Chap5/figures/dsw.jpg used on input line 121.
-(pdftex.def)             Requested size: 1734.47578pt x 782.9231pt.
+Package pdftex.def Info: Chap5/figures/dsw.jpg used on input line 97.
+(pdftex.def)             Requested size: 390.0pt x 176.03105pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[74 <./Chap5/figures/dwca.png>]
+[85 <./Chap5/figures/o&m_ontology.png>] [86 <./Chap5/figures/dsw.jpg>]
 
-LaTeX Warning: Citation `Botts' on page 75 undefined on input line 132.
+LaTeX Warning: Citation `lefort2011semantic' on page 87 undefined on input line
+ 184.
 
-[75 <./Chap5/figures/dsw.jpg>]
-
-LaTeX Warning: Citation `Robin2006' on page 76 undefined on input line 147.
-
-
-LaTeX Warning: Citation `lefort2011semantic' on page 76 undefined on input line
- 208.
-
-<Chap5/figures/ssnont.jpg, id=299, 681.747pt x 404.712pt>
+<Chap5/figures/ssnont.jpg, id=1538, 681.747pt x 404.712pt>
 File: Chap5/figures/ssnont.jpg Graphic file (type jpg)
 
 <use Chap5/figures/ssnont.jpg>
-Package pdftex.def Info: Chap5/figures/ssnont.jpg used on input line 212.
-(pdftex.def)             Requested size: 681.74532pt x 404.71101pt.
+Package pdftex.def Info: Chap5/figures/ssnont.jpg used on input line 188.
+(pdftex.def)             Requested size: 390.0pt x 231.52809pt.
 
-Overfull \hbox (27.37631pt too wide) in paragraph at lines 219--220
-[]\OT1/cmr/m/n/12 The ob-ser-va-tion pat-tern of SSN is cen-tred around 'Stimul
+Overfull \hbox (27.37631pt too wide) in paragraph at lines 195--196
+[]\OT1/cmr/m/n/12 The ob-ser-va-tion pat-tern of SSN is cen-tred around `Stimul
 i-Sensor-Observation',
  []
 
-[76] [77 <./Chap5/figures/ssnont.jpg>]
-
-LaTeX Warning: Citation `Uschold1995' on page 78 undefined on input line 233.
-
-
-LaTeX Warning: Citation `Gruninger1995' on page 78 undefined on input line 238.
-
-
-[78]
-
-LaTeX Warning: Citation `Fernandez-Lopez1999' on page 79 undefined on input lin
-e 252.
-
-
-LaTeX Warning: Citation `Jimenez-Ruiz2008' on page 79 undefined on input line 2
-65.
-
-[79]
-
-LaTeX Warning: Citation `gomez1995evaluation' on page 80 undefined on input lin
-e 269.
-
+[87] [88 <./Chap5/figures/ssnont.jpg>] [89] [90]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-
-LaTeX Warning: Citation `REF!' on page 80 undefined on input line 271.
-
-
-LaTeX Warning: Citation `Gruninger1995' on page 80 undefined on input line 280.
-
-
-[80]
-
-LaTeX Warning: Citation `Choi2010' on page 81 undefined on input line 282.
-
-[81]
-Underfull \hbox (badness 10000) in paragraph at lines 320--320
+ [91] [92]
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
 []|\OT1/cmr/bx/n/12 Subclass
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 []|\OT1/cmr/m/n/12 Node with lim-ited
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 []|\OT1/cmr/m/n/12 Node with knowledge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 \OT1/cmr/m/n/12 processing ca-pa-bil-i-ties
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 \OT1/cmr/m/n/12 charged with serv-ing a
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 331--332
+Underfull \hbox (badness 1062) in paragraph at lines 307--308
 \OT1/cmr/m/n/12 sub-set of DC Nodes and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 \OT1/cmr/m/n/12 pro-cess-ing their sensed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
 []|\OT1/cmr/m/n/12 Data Ag-gre-ga-tion (DA)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 []|\OT1/cmr/m/n/12 Node with knowledge-
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 332--333
+Underfull \hbox (badness 2334) in paragraph at lines 308--309
 \OT1/cmr/m/n/12 stores all knowl-edge and
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 335--336
+Underfull \hbox (badness 7869) in paragraph at lines 311--312
 []|\OT1/cmr/m/n/12 Person in-volved with a
  []
 
-<Chap5/figures/khas_base.JPG, id=319, 2281.52374pt x 949.5475pt>
+<Chap5/figures/khas_base.JPG, id=1599, 2281.52374pt x 949.5475pt>
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
-Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 345.
+Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 321.
 (pdftex.def)             Requested size: 2281.5182pt x 949.54518pt.
 
 
-LaTeX Warning: Citation `noy2001creating' on page 82 undefined on input line 35
-3.
-
-[82 <./Chap5/figures/khas_base.JPG>] [83]
-
-LaTeX Warning: Citation `dwc_oboe' on page 84 undefined on input line 362.
-
-[84]
-
-LaTeX Warning: Citation `brickley2010foaf' on page 85 undefined on input line 3
-64.
-
-<Chap5/figures/khas_ontology.JPG, id=329, 3852.3925pt x 1011.78pt>
-File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
-
-<use Chap5/figures/khas_ontology.JPG>
-Package pdftex.def Info: Chap5/figures/khas_ontology.JPG used on input line 376
-.
-(pdftex.def)             Requested size: 3852.38315pt x 1011.77753pt.
-
-Overfull \hbox (110.82861pt too wide) in paragraph at lines 376--377
- [][] 
- []
+LaTeX Warning: Float too large for page by 24.49854pt on input line 324.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[93] [94] [95]
+<Chap5/figures/khas_ontology.JPG, id=1623, 3852.3925pt x 1011.78pt>
+File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
 
-LaTeX Warning: Citation `Brank2005' on page 85 undefined on input line 383.
+<use Chap5/figures/khas_ontology.JPG>
+Package pdftex.def Info: Chap5/figures/khas_ontology.JPG used on input line 352
+.
+(pdftex.def)             Requested size: 3852.38315pt x 1011.77753pt.
 
-[85]
 
-LaTeX Warning: Citation `Poveda-Villalon2012' on page 86 undefined on input lin
-e 396.
+LaTeX Warning: Float too large for page by 24.50056pt on input line 355.
 
-[86 <./Chap5/figures/khas_ontology.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[96] [97]
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 []|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 []|\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 []|\OT1/cmr/m/n/12 Find all \OT1/cmr/bx/n/12 Oc-cur-rence
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 411--411
+Underfull \hbox (badness 4060) in paragraph at lines 389--389
 \OT1/cmr/m/n/12 within a spec-i-fied \OT1/cmr/bx/n/12 Date
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 411--411
+Underfull \hbox (badness 1005) in paragraph at lines 389--389
 []|\OT1/cmr/m/n/12 Occurrence; Event; Date;
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 412--412
+Underfull \hbox (badness 1127) in paragraph at lines 392--392
 []|\OT1/cmr/m/n/12 DCNode; In-di-vid-ual; Oc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 []|\OT1/cmr/m/n/12 Occurrence record-edBy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
-\OT1/cmr/m/n/12 DC-N-ode; Oc-cur-rence
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--413
-[]|\OT1/cmr/m/n/12 Occurrence; In-di-vid-ual;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 []|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
-\OT1/cmr/m/n/12 In-di-vid-ual; Oc-cur-rence
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+[]|\OT1/cmr/m/n/12 Occurrence; In-di-vid-ual;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
-\OT1/cmr/m/n/12 ha-sEv-ent Event; Event
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+[]|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 415--416
+Underfull \hbox (badness 1253) in paragraph at lines 398--399
 []|\OT1/cmr/m/n/12 Individual oc-curredIn Oc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--416
+Underfull \hbox (badness 10000) in paragraph at lines 400--400
 []|\OT1/cmr/m/n/12 Person; Ad-min-is-tra-tor;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 []|\OT1/cmr/m/n/12 Administrator hasPro-ject
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 []|\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 []|\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
-\OT1/cmr/m/n/12 To-ken; To-ken isOfT-ype
- []
-
-
-Overfull \hbox (72.79134pt too wide) in paragraph at lines 405--422
+Overfull \hbox (72.79134pt too wide) in paragraph at lines 381--408
 [][]
  []
 
+[98]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `Brewster2004' on page 87 undefined on input line 429.
-
-[87]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Citation `dwc_oboe' on page 88 undefined on input line 456.
-
-[88]) [89] [90] [91]
+[99]) [100] [101 <./Chap5/figures/khas_base.JPG>] [102 <./Chap5/figures/khas_on
+tology.JPG>] [103] [104]
 \openout2 = `Chap6/implementation.aux'.
 
  (./Chap6/implementation.tex
 Chapter 6.
-
-Overfull \hbox (8.62512pt too wide) in paragraph at lines 2--3
-\OT1/cmr/m/n/12 In this chap-ter, we de-tail the de-sign and de-ploy-ment of K-
-HAS in the Malaysian
- []
-
-[92
+[105
 
 
 
-] [93]
-
-LaTeX Warning: Citation `REFERENCE' on page 94 undefined on input line 24.
-
-
-LaTeX Warning: Citation `buckeye' on page 94 undefined on input line 24.
-
-[94] <Chap6/figures/loris.png, id=363, 1425.325pt x 764.8575pt>
+] [106] [107]
+Missing character: There is no √ in font cmr12!
+Missing character: There is no ü in font cmr12!
+ [108]
+<Chap6/figures/loris.png, id=1706, 1425.325pt x 764.8575pt>
 File: Chap6/figures/loris.png Graphic file (type png)
 
 <use Chap6/figures/loris.png>
 Package pdftex.def Info: Chap6/figures/loris.png used on input line 38.
-(pdftex.def)             Requested size: 272.99881pt x 146.4915pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[95] <Chap6/figures/buckeye.jpg, id=367, 1441.385pt x 833.1125pt>
+(pdftex.def)             Requested size: 390.0pt x 209.28026pt.
+ [109 <./Chap6/figures/loris.png>]
+<Chap6/figures/buckeye.jpg, id=1712, 1441.385pt x 833.1125pt>
 File: Chap6/figures/buckeye.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye.jpg used on input line 50.
-(pdftex.def)             Requested size: 272.99881pt x 157.78453pt.
- [96 <./Chap6/figures/loris.png> <./Chap6/figures/buckeye.jpg>]
-Overfull \hbox (1.62372pt too wide) in paragraph at lines 67--68
-\OT1/cmr/m/n/12 Cam-era 3, de-spite be-ing routed through it, with an av-er-age
- speeds of 1.8KB/s. 
+(pdftex.def)             Requested size: 390.0pt x 225.41373pt.
+ [110 <./Chap6/figures/buckeye.jpg>]
+Overfull \hbox (3.74315pt too wide) in paragraph at lines 67--68
+\OT1/cmr/m/n/12 Buck-eye 3, de-spite be-ing routed through it, with an av-er-ag
+e speeds of 1.8KB/s. 
  []
 
-[97] <Chap6/figures/buckeye_img.jpg, id=374, 963.6pt x 722.7pt>
+[111] <Chap6/figures/buckeye_img.jpg, id=1722, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
-(pdftex.def)             Requested size: 253.49762pt x 190.11409pt.
- [98 <./Chap6/figures/buckeye_img.jpg>]
-<Chap6/figures/buckeye_img_2.jpg, id=378, 963.6pt x 722.7pt>
+(pdftex.def)             Requested size: 390.0pt x 292.4934pt.
+ [112 <./Chap6/figures/buckeye_img.jpg>]
+<Chap6/figures/buckeye_img_2.jpg, id=1730, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img_2.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
 
-(pdftex.def)             Requested size: 253.49762pt x 190.11409pt.
- [99 <./Chap6/figures/buckeye_img_2.jpg>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 97--97
-[][][][][][][] 
- []
-
-[100]
+(pdftex.def)             Requested size: 390.0pt x 292.4934pt.
+ [113 <./Chap6/figures/buckeye_img_2.jpg>] (./Chap4/listings/rules.drl [114])
 Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
@@ -1324,172 +1398,285 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 111--111
 [][][][][][][] 
  []
 
-(./Chap4/listings/rules.drl [101] [102]) [103]
 
-LaTeX Warning: Reference `REFERENCE' on page 104 undefined on input line 132.
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 111--111
+[]$[]$ 
+ []
 
-[104] [105]
+[115]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
 
-Package caption Warning: \label without proper \caption on input line 152.
-See the caption package documentation for explanation.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
 
 
-LaTeX Warning: Reference `imp:lst:rule1' on page 106 undefined on input line 16
-4.
+LaTeX Warning: Reference `REFERENCE' on page 116 undefined on input line 132.
 
-[106]) [107] [108]
+[116] [117]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 160--160
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 160--160
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (34.1432pt too wide) in paragraph at lines 160--160
+[]$[]$ 
+ []
+
+[118] [119]) [120]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
 Chapter 7.
-[109
+[121
 
 
 
-] [110] [111] [112]
-<Chap7/figures/khas_sim.png, id=424, 1451.4225pt x 1013.7875pt>
+] [122] [123] [124]
+<Chap7/figures/khas_sim.png, id=1837, 1451.4225pt x 1013.7875pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
 
 <use Chap7/figures/khas_sim.png>
 Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 55.
 (pdftex.def)             Requested size: 272.99881pt x 190.67252pt.
- [113 <./Chap7/figures/khas_sim.png>] [114]
-[115] [116] [117] [118]
-Underfull \hbox (badness 6608) in paragraph at lines 150--150
-[]|\OT1/cmr/m/n/10 Standard De-
- []
+ [125 <./Chap7/figures/khas_sim.png>] [126]
+[127] [128] [129] [130]
+<Chap7/figures/ideal_int_percent.png, id=1870, 481.8pt x 481.8pt>
+File: Chap7/figures/ideal_int_percent.png Graphic file (type png)
 
-
-Underfull \hbox (badness 6608) in paragraph at lines 164--164
-[]|\OT1/cmr/m/n/10 Standard De-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 6608) in paragraph at lines 177--177
-[]|\OT1/cmr/m/n/10 Standard De-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Chap7/figures/all_int.png, id=444, 481.8pt x 481.8pt>
-File: Chap7/figures/all_int.png Graphic file (type png)
-
-<use Chap7/figures/all_int.png>
-Package pdftex.def Info: Chap7/figures/all_int.png used on input line 183.
+<use Chap7/figures/ideal_int_percent.png>
+Package pdftex.def Info: Chap7/figures/ideal_int_percent.png used on input line
+ 139.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+ [131 <./Chap7/figures/ideal_int_percent.png>] <Chap7/figures/ideal_all_dur.png
+, id=1878, 481.8pt x 481.8pt>
+File: Chap7/figures/ideal_all_dur.png Graphic file (type png)
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Chap7/figures/all_int_percent.png, id=445, 481.8pt x 481.8pt>
-File: Chap7/figures/all_int_percent.png Graphic file (type png)
-
-<use Chap7/figures/all_int_percent.png>
-Package pdftex.def Info: Chap7/figures/all_int_percent.png used on input line 1
-90.
-(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[119] [120] [121 <./Chap7/figures/all_int.png (PNG copy)>] [122 <./Chap7/figure
-s/all_int_percent.png (PNG copy)>]
-<Chap7/figures/khas_int_percent.png, id=459, 481.8pt x 481.8pt>
-File: Chap7/figures/khas_int_percent.png Graphic file (type png)
-
-<use Chap7/figures/khas_int_percent.png>
-Package pdftex.def Info: Chap7/figures/khas_int_percent.png used on input line 
-233.
-(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Chap7/figures/all_total.png, id=460, 481.8pt x 481.8pt>
-File: Chap7/figures/all_total.png Graphic file (type png)
-
-<use Chap7/figures/all_total.png>
-Package pdftex.def Info: Chap7/figures/all_total.png used on input line 240.
-(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[123] [124 <./Chap7/figures/khas_int_percent.png (PNG copy)>] [125 <./Chap7/fig
-ures/all_total.png (PNG copy)>]
-<Chap7/figures/unres_all_int.png, id=471, 481.8pt x 481.8pt>
-File: Chap7/figures/unres_all_int.png Graphic file (type png)
-
-<use Chap7/figures/unres_all_int.png>
-Package pdftex.def Info: Chap7/figures/unres_all_int.png used on input line 252
+<use Chap7/figures/ideal_all_dur.png>
+Package pdftex.def Info: Chap7/figures/ideal_all_dur.png used on input line 153
 .
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
-<Chap7/figures/unres_all_total.png, id=472, 481.8pt x 481.8pt>
-File: Chap7/figures/unres_all_total.png Graphic file (type png)
 
-<use Chap7/figures/unres_all_total.png>
-Package pdftex.def Info: Chap7/figures/unres_all_total.png used on input line 2
-59.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/real_all_dur.png, id=1879, 481.8pt x 481.8pt>
+File: Chap7/figures/real_all_dur.png Graphic file (type png)
+
+<use Chap7/figures/real_all_dur.png>
+Package pdftex.def Info: Chap7/figures/real_all_dur.png used on input line 160.
+
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[126 <./Chap7/figures/unres_all_int.png (PNG copy)>] [127 <./Chap7/figures/unre
-s_all_total.png (PNG copy)>]) [128]
+[132] [133] <Chap7/figures/real_int_dur.png, id=1895, 481.8pt x 481.8pt>
+File: Chap7/figures/real_int_dur.png Graphic file (type png)
+
+<use Chap7/figures/real_int_dur.png>
+Package pdftex.def Info: Chap7/figures/real_int_dur.png used on input line 173.
+
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/real_empty_dur.png, id=1896, 481.8pt x 481.8pt>
+File: Chap7/figures/real_empty_dur.png Graphic file (type png)
+
+<use Chap7/figures/real_empty_dur.png>
+Package pdftex.def Info: Chap7/figures/real_empty_dur.png used on input line 18
+0.
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[134] <Chap7/figures/saturated/total_dur.png, id=1901, 481.8pt x 481.8pt>
+File: Chap7/figures/saturated/total_dur.png Graphic file (type png)
+
+<use Chap7/figures/saturated/total_dur.png>
+Package pdftex.def Info: Chap7/figures/saturated/total_dur.png used on input li
+ne 195.
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/saturated/empty_dur.png, id=1903, 481.8pt x 481.8pt>
+File: Chap7/figures/saturated/empty_dur.png Graphic file (type png)
+
+<use Chap7/figures/saturated/empty_dur.png>
+Package pdftex.def Info: Chap7/figures/saturated/empty_dur.png used on input li
+ne 204.
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/saturated/int_dur.png, id=1904, 481.8pt x 481.8pt>
+File: Chap7/figures/saturated/int_dur.png Graphic file (type png)
+
+<use Chap7/figures/saturated/int_dur.png>
+Package pdftex.def Info: Chap7/figures/saturated/int_dur.png used on input line
+ 211.
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/saturated/int_percent.png, id=1908, 481.8pt x 481.8pt>
+File: Chap7/figures/saturated/int_percent.png Graphic file (type png)
+
+<use Chap7/figures/saturated/int_percent.png>
+Package pdftex.def Info: Chap7/figures/saturated/int_percent.png used on input 
+line 220.
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Chap7/figures/saturated/int_vs_empty.png, id=1909, 481.8pt x 481.8pt>
+File: Chap7/figures/saturated/int_vs_empty.png Graphic file (type png)
+
+<use Chap7/figures/saturated/int_vs_empty.png>
+Package pdftex.def Info: Chap7/figures/saturated/int_vs_empty.png used on input
+ line 227.
+(pdftex.def)             Requested size: 390.0pt x 390.01324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[135] [136]) [137] [138 <./Chap7/figures/ideal_all_dur.png>] [139 <./Chap7/figu
+res/real_all_dur.png>] [140 <./Chap7/figures/real_int_dur.png>] [141 <./Chap7/f
+igures/real_empty_dur.png>] [142 <./Chap7/figures/saturated/total_dur.png>]
+[143 <./Chap7/figures/saturated/empty_dur.png>] [144 <./Chap7/figures/saturated
+/int_dur.png>] [145 <./Chap7/figures/saturated/int_percent.png>] [146 <./Chap7/
+figures/saturated/int_vs_empty.png>]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
 Chapter 8.
-[129
+[147
 
 
 
-] [130]
+] [148]
 Overfull \hbox (5.70146pt too wide) in paragraph at lines 21--22
 \OT1/cmr/m/n/12 In Chap-ter 6, we present the Local-knowledge Ontology-based Re
 mote-Sensing
  []
 
-[131] [132] [133]) [134] [135]
-No file thesis.bbl.
-(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+[149] [150] [151] [152]) [153] (./thesis.bbl
+Underfull \hbox (badness 2050) in paragraph at lines 45--48
+[]\OT1/cmr/m/n/12 IF Aky-ildiz.  A Sur-vey on Sen-sor Net-works.  \OT1/cmr/m/it
+/12 Com-mun. ...\OT1/cmr/m/n/12 ,
+ []
+
+[154
+
+
+]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no Æ in font cmr12!
+ [155]
+Underfull \hbox (badness 4765) in paragraph at lines 154--160
+[]\OT1/cmr/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fer-na
+ndo
+ []
+
+[156]
+Underfull \hbox (badness 1005) in paragraph at lines 217--221
+[]\OT1/cmr/m/n/12 Krzysztof Janow-icz and Michael Comp-ton.  The stimulus-senso
+r-
+ []
+
+[157]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [158] [159] [160] [161]
+Underfull \hbox (badness 1067) in paragraph at lines 503--507
+[]\OT1/cmr/m/n/12 J. Wright, C. Gib-son, F. Berga-m-aschi, K. Mar-cus, R. Press
+-ley,
+ []
+
+[162]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+) [163]
+\openout2 = `App/appendix.aux'.
+
+ (./App/appendix.tex [164
+
+
+
+]
+Appendix A.
+[165
+
+]
+Appendix B.
+) [166
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
+ (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
 (./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
 (./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
-)
+(./App/appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 1AF0A909F5ECBF7812350AA366ED8D95;7390.
+
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 5320 strings out of 493315
- 81126 string characters out of 6137905
- 358809 words of memory out of 5000000
- 8591 multiletter control sequences out of 15000+600000
- 9761 words of font info for 34 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,11n,54p,1613b,1535s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (145 pages, 3933435 bytes).
+ 19192 strings out of 493117
+ 354327 string characters out of 6135434
+ 604416 words of memory out of 5000000
+ 21529 multiletter control sequences out of 15000+600000
+ 10398 words of font info for 37 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,11n,54p,1594b,1820s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on thesis.pdf (175 pages, 10015005 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
- 0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2243 PDF objects out of 2487 (max. 8388607)
+ 1976 compressed objects within 20 object streams
+ 696 named destinations out of 1000 (max. 500000)
+ 1100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
