@@ -47,13 +47,17 @@ A 2D space is used to display the grid and the simulation is run within Repast's
 Before implementing, we designed the agents required based largely on the existing ontology. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS. We used these to create properties for each transmission medium that could be used by each node object. Table \ref{sim:tab:terms} shows how the K-HAS terms, introduced in Chapter \ref{chap:arch}, and LORIS terms, detailed in Chapter \ref{chap:imp}, map to the node types described above. 
 
 \begin{table}[h]
-\begin{tabular}{lll}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
 \textbf{Network Type} & \textbf{Original Term} & \textbf{Maps To}          \\
+\hline
 K-HAS                 & DC Node                & Sensing Node + LK         \\
                       & DP Node                & Routing Node + HK         \\
                       & DA Node                & Central Node + HK         \\
 LORIS                 & Buckeye                & Sensing Node + LK         \\
-                      & DA and DP              & Routing/Central Node + HK
+                      & DA and DP              & Routing/Central Node + HK \\
+\hline
 \end{tabular}
 \caption{Mapping of K-HAS to Simulation Terminology}
 \label{sim:tab:terms}

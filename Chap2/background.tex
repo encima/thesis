@@ -177,8 +177,7 @@ To show the simplicity of a basic virtual sensor, \cite{Aberer2007} describes a 
 </stream-source>
 <query>select * from src1</query> 
 </input-stream>
-\caption{Virtual Temperature Sensor}
-\label{bg:lst:gsn}
+
 \end{lstlisting}
 
 The modularity and flexibility of GSN makes it different to existing middlewares as it has not been designed for any specific hardware and modules of the middleware can be replaced, such as the database. 
@@ -197,7 +196,43 @@ The modularity and flexibility of GSN makes it different to existing middlewares
 
 		Figure \ref{bg:fig:facts} shows the FACTS architecture, with the middleware holding the rulesets and a dstributed fact repository. Data within the network is stored as facts, providing a standard data format throughout the network and hardware abstraction. When new facts are received, ususally because of new sensing data, the rule engine checks to determine whether any rules should be fired. The ruleset definition language (RDL) is used here and each ruleset contains a group of relevant rules. Each rule is given a priority so that, if more than one rule is triggered by a fact, then the higher priority rules are fired first.
 
+		Listing \ref{bg:facts:rule} shows a FACTS rule, written in Haskell, that determines which geegraphic areas are covered by nodes. The name of each rule has no prefix, statements are prefixed with `->' and conditions are prefixed with `<-'. The \textit{sendRange} rule runs after a timer expires and removes that timer. Lines 4 to 12 set a \textit{rangeFact} fact that contains the range it expects to be able to cover. The rest of the rule sends the fact to all nodes within range and sets a new fact to show that it has sent its range information. 
+
+		The \textit(xyMinCovered) is a simplified rule that, upon receipt of range information from neighbouring nodes, checks whether the range of the neighbouring node overlaps with its own range and the final \textit{determineCoverage} rule then stores that coverage information in a fact as knowledge of whether or not it is the only node to cover a particular geographic region. This can then be used to inform future routing and sleeping decisions.
+
+		\begin{lstlisting}[caption={Coverage Algorithm in FACTS Rules}, label={bg:facts:rule}]
+ sendRange
+ <- Exists Timer.expiredSlot
+ -> Retract Timer.expiredSlot 
+ -> Define "rangeFact"
+ -> Set ("rangeFact" "xMin")
+	(posXSlot - System.txRadiusSlot)
+-> Set ("rangeFact" "xMax") 
+	(posXSlot + System.txRadiusSlot)
+-> Set ("rangeFact" "yMin")
+	(posYSlot - System.txRadiusSlot)
+-> Set ("rangeFact" "yMax")
+	(posYSlot + System.txRadiusSlot)
+-> Send 0 System.txPowerSlot 
+	("rangeFact" [(("rangeFact" "owner")
+	== nodeIDSlot)])
+-> Define "rangeSendFact"
+
+xyMinCovered
+<- Exists "rangeSendFact"
+<- Eval ((posXSlot - System.txRadiusSlot)
+	< ("rangeFact" "xMin"))
+<- Eval ((posYSlot - System.txRadiusSlot)
+	< ("rangeFact" "yMin"))
+-> Define "xyMinCoveredFact" 
+
+determineCoverage
+<- Exists xyMinCoveredFact"
+-> Define "coveredFact
+		\end{lstlisting}
+
 		While FACTS itself does not utilise any local knowledge, the repository is used as a source for all previously sensed data and would be an excellent source of knowledge to assist with the classification of future readings. Also, the ability to add new rulesets, without technical knowledge of the hardware of each node means that users of the network have the ability to add knowledge in the form of less technical, high-level rules.
+
 	\subsubsection{ITA Sensor Fabric}
 	The ITA Sensor Fabric is collaboration project between IBM, the US Army and the UK MoD. Sensor Fabric, or Fabric, is a two-way messaging bus and set of middleware services connecting network assets to each other and users \cite{Wright2009b}.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  1 SEP 2014 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  2 SEP 2014 08:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,57 +1175,57 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
  [91] [92]
-Underfull \hbox (badness 10000) in paragraph at lines 296--296
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
 []|\OT1/cmr/bx/n/12 Subclass
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 []|\OT1/cmr/m/n/12 Node with lim-ited
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 []|\OT1/cmr/m/n/12 Node with knowledge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 processing ca-pa-bil-i-ties
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 charged with serv-ing a
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 307--308
+Underfull \hbox (badness 1062) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 sub-set of DC Nodes and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 pro-cess-ing their sensed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
 []|\OT1/cmr/m/n/12 Data Ag-gre-ga-tion (DA)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 []|\OT1/cmr/m/n/12 Node with knowledge-
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 308--309
+Underfull \hbox (badness 2334) in paragraph at lines 310--311
 \OT1/cmr/m/n/12 stores all knowl-edge and
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 311--312
+Underfull \hbox (badness 7869) in paragraph at lines 313--314
 []|\OT1/cmr/m/n/12 Person in-volved with a
  []
 
@@ -1233,11 +1233,11 @@ Underfull \hbox (badness 7869) in paragraph at lines 311--312
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
-Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 321.
+Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 323.
 (pdftex.def)             Requested size: 2281.5182pt x 949.54518pt.
 
 
-LaTeX Warning: Float too large for page by 24.49854pt on input line 324.
+LaTeX Warning: Float too large for page by 24.49854pt on input line 326.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1247,94 +1247,94 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_ontology.JPG>
-Package pdftex.def Info: Chap5/figures/khas_ontology.JPG used on input line 352
+Package pdftex.def Info: Chap5/figures/khas_ontology.JPG used on input line 354
 .
 (pdftex.def)             Requested size: 3852.38315pt x 1011.77753pt.
 
 
-LaTeX Warning: Float too large for page by 24.50056pt on input line 355.
+LaTeX Warning: Float too large for page by 24.50056pt on input line 357.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [96] [97]
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 []|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 []|\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
 []|\OT1/cmr/m/n/12 Find all \OT1/cmr/bx/n/12 Oc-cur-rence
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 389--389
+Underfull \hbox (badness 4060) in paragraph at lines 392--392
 \OT1/cmr/m/n/12 within a spec-i-fied \OT1/cmr/bx/n/12 Date
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 389--389
+Underfull \hbox (badness 1005) in paragraph at lines 392--392
 []|\OT1/cmr/m/n/12 Occurrence; Event; Date;
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 392--392
+Underfull \hbox (badness 1127) in paragraph at lines 395--395
 []|\OT1/cmr/m/n/12 DCNode; In-di-vid-ual; Oc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 []|\OT1/cmr/m/n/12 Occurrence record-edBy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 []|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 []|\OT1/cmr/m/n/12 Occurrence; In-di-vid-ual;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 []|\OT1/cmr/m/n/12 Occurrence oc-cur-renceOf
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 398--399
+Underfull \hbox (badness 1253) in paragraph at lines 401--402
 []|\OT1/cmr/m/n/12 Individual oc-curredIn Oc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--400
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 []|\OT1/cmr/m/n/12 Person; Ad-min-is-tra-tor;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 []|\OT1/cmr/m/n/12 Administrator hasPro-ject
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 []|\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 []|\OT1/cmr/m/n/12 Occurrence ha-sEv-i-dence
  []
 
 
-Overfull \hbox (72.79134pt too wide) in paragraph at lines 381--408
-[][]
+Overfull \hbox (72.79134pt too wide) in paragraph at lines 384--411
+ [][] 
  []
 
 [98]
@@ -1456,11 +1456,11 @@ File: Chap7/figures/khas_simulation.png Graphic file (type png)
 
 <use Chap7/figures/khas_simulation.png>
 Package pdftex.def Info: Chap7/figures/khas_simulation.png used on input line 7
-0.
+4.
 (pdftex.def)             Requested size: 272.99881pt x 272.09453pt.
  [126 <./Chap7/figures/khas_simulation.png>]
 
-LaTeX Warning: Citation `Gupta2003' on page 127 undefined on input line 106.
+LaTeX Warning: Citation `Gupta2003' on page 127 undefined on input line 110.
 
 [127] [128] [129] [130]
 <Chap7/figures/ideal_int_percent.png, id=1877, 481.8pt x 481.8pt>
@@ -1468,7 +1468,7 @@ File: Chap7/figures/ideal_int_percent.png Graphic file (type png)
 
 <use Chap7/figures/ideal_int_percent.png>
 Package pdftex.def Info: Chap7/figures/ideal_int_percent.png used on input line
- 154.
+ 158.
 (pdftex.def)             Requested size: 390.0pt x 390.01324pt.
 
 
@@ -1478,7 +1478,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Chap7/figures/ideal_all_dur.png Graphic file (type png)
 
 <use Chap7/figures/ideal_all_dur.png>
-Package pdftex.def Info: Chap7/figures/ideal_all_dur.png used on input line 162
+Package pdftex.def Info: Chap7/figures/ideal_all_dur.png used on input line 166
 .
 (pdftex.def)             Requested size: 195.0pt x 194.99559pt.
 
@@ -1486,7 +1486,7 @@ Package pdftex.def Info: Chap7/figures/ideal_all_dur.png used on input line 162
 File: Chap7/figures/real_all_dur.png Graphic file (type png)
 
 <use Chap7/figures/real_all_dur.png>
-Package pdftex.def Info: Chap7/figures/real_all_dur.png used on input line 167.
+Package pdftex.def Info: Chap7/figures/real_all_dur.png used on input line 171.
 
 (pdftex.def)             Requested size: 195.0pt x 194.99559pt.
 
@@ -1497,7 +1497,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Chap7/figures/real_int_dur.png Graphic file (type png)
 
 <use Chap7/figures/real_int_dur.png>
-Package pdftex.def Info: Chap7/figures/real_int_dur.png used on input line 190.
+Package pdftex.def Info: Chap7/figures/real_int_dur.png used on input line 194.
 
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
@@ -1508,8 +1508,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Chap7/figures/real_empty_dur.png Graphic file (type png)
 
 <use Chap7/figures/real_empty_dur.png>
-Package pdftex.def Info: Chap7/figures/real_empty_dur.png used on input line 19
-7.
+Package pdftex.def Info: Chap7/figures/real_empty_dur.png used on input line 20
+1.
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
 
@@ -1520,7 +1520,7 @@ File: Chap7/figures/saturated/total_dur.png Graphic file (type png)
 
 <use Chap7/figures/saturated/total_dur.png>
 Package pdftex.def Info: Chap7/figures/saturated/total_dur.png used on input li
-ne 212.
+ne 216.
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
 
@@ -1531,7 +1531,7 @@ File: Chap7/figures/saturated/empty_dur.png Graphic file (type png)
 
 <use Chap7/figures/saturated/empty_dur.png>
 Package pdftex.def Info: Chap7/figures/saturated/empty_dur.png used on input li
-ne 221.
+ne 225.
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
 
@@ -1542,7 +1542,7 @@ File: Chap7/figures/saturated/int_dur.png Graphic file (type png)
 
 <use Chap7/figures/saturated/int_dur.png>
 Package pdftex.def Info: Chap7/figures/saturated/int_dur.png used on input line
- 228.
+ 232.
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
 
@@ -1553,7 +1553,7 @@ File: Chap7/figures/saturated/int_percent.png Graphic file (type png)
 
 <use Chap7/figures/saturated/int_percent.png>
 Package pdftex.def Info: Chap7/figures/saturated/int_percent.png used on input 
-line 237.
+line 241.
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
 
@@ -1564,7 +1564,7 @@ File: Chap7/figures/saturated/int_vs_empty.png Graphic file (type png)
 
 <use Chap7/figures/saturated/int_vs_empty.png>
 Package pdftex.def Info: Chap7/figures/saturated/int_vs_empty.png used on input
- line 244.
+ line 248.
 (pdftex.def)             Requested size: 312.00119pt x 312.01207pt.
 
 
@@ -1678,7 +1678,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
 Here is how much of TeX's memory you used:
  20305 strings out of 493117
  368544 string characters out of 6135434
- 819783 words of memory out of 5000000
+ 819782 words of memory out of 5000000
  22167 multiletter control sequences out of 15000+600000
  10566 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1695,7 +1695,7 @@ cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
 texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on thesis.pdf (183 pages, 10014691 bytes).
+Output written on thesis.pdf (183 pages, 10015009 bytes).
 PDF statistics:
  2845 PDF objects out of 2984 (max. 8388607)
  2562 compressed objects within 26 object streams
