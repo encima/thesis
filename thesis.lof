@@ -8,7 +8,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces GSN Architecture \cite {F2006}\relax }}{24}{figure.caption.13}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces FACTS Architecturei \cite {Terfloth2006}\relax }}{26}{figure.caption.15}
 \addvspace {10\p@ }
@@ -31,7 +30,7 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Processed Image of Clouded Leopard\relax }}{79}{figure.caption.43}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Processed Image of Clouded Leopard\relax }}{81}{figure.caption.46}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation\relax }}{87}{figure.caption.49}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation\relax }}{88}{figure.caption.49}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology\relax }}{89}{figure.caption.51}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW\relax }}{90}{figure.caption.53}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{92}{figure.caption.56}
@@ -44,15 +43,16 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{118}{figure.caption.70}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces LK-HK Simulation Example in RePast Simulator\relax }}{132}{figure.caption.74}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{138}{figure.caption.77}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{139}{figure.caption.78}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration of Interesting Observations under Variable Transmission Rate.\relax }}{142}{figure.caption.79}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of Empty Observations under Variable Transmission Rate.\relax }}{143}{figure.caption.80}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of All Observations Across All Scenarios.\relax }}{144}{figure.caption.81}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Mean Duration of Empty Observations Across All Scenarios.\relax }}{145}{figure.caption.82}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Mean Duration of Interesting Observations across All Scenarios.\relax }}{146}{figure.caption.83}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Percentage of Interesting Observations across All Scenarios.\relax }}{147}{figure.caption.84}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios.\relax }}{148}{figure.caption.85}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{139}{figure.caption.77}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{140}{figure.caption.78}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration under Variable Transmission Rate\relax }}{143}{figure.caption.79}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of All Observations Across All Scenarios.\relax }}{144}{figure.caption.80}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of Empty Observations Across All Scenarios.\relax }}{145}{figure.caption.81}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Mean Duration of Interesting Observations across All Scenarios.\relax }}{146}{figure.caption.82}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Percentage of Interesting Observations across All Scenarios.\relax }}{147}{figure.caption.83}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios.\relax }}{148}{figure.caption.84}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

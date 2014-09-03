@@ -5,8 +5,7 @@
 \contentsline {chapter}{List of Publications}{xiii}{Doc-Start}
 \contentsline {chapter}{List of Figures}{xiv}{Doc-Start}
 \contentsline {chapter}{List of Tables}{xvii}{Doc-Start}
-\contentsline {chapter}{List of Algorithms}{xviii}{Doc-Start}
-\contentsline {chapter}{List of Acronyms}{xix}{Doc-Start}
+\contentsline {chapter}{List of Acronyms}{xviii}{Doc-Start}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Local Knowledge Problem}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}
@@ -143,7 +142,7 @@
 \contentsline {subsection}{\numberline {7.2.3}Capture}{135}{subsection.7.2.3}
 \contentsline {subsection}{\numberline {7.2.4}Processing}{136}{subsection.7.2.4}
 \contentsline {section}{\numberline {7.3}Results}{137}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Duration}{140}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.1}Duration}{139}{subsection.7.3.1}
 \contentsline {subsection}{\numberline {7.3.2}Network Saturation}{142}{subsection.7.3.2}
 \contentsline {section}{\numberline {7.4}Conclusion}{147}{section.7.4}
 \contentsline {chapter}{\numberline {8}Conclusions and Future Work}{151}{chapter.8}
@@ -154,6 +153,8 @@
 \contentsline {subsection}{\numberline {8.1.4}Simulations}{154}{subsection.8.1.4}
 \contentsline {section}{\numberline {8.2}Future Work}{155}{section.8.2}
 \contentsline {chapter}{Bibliography}{158}{section.8.2}
-\contentsline {chapter}{Appendices}{169}{section*.86}
+\contentsline {chapter}{Appendices}{169}{section*.85}
 \contentsline {chapter}{\numberline {A}K-HAS Ontology}{170}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Interview Transcript: Gill Bolongon}{173}{Appendix.1.B}
+\contentsline {chapter}{\numberline {B}Example Drools Rules Used in LORIS}{173}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}Interview Transcript: Gill Bolongon}{174}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Qualitative Analysis Extract}{180}{Appendix.1.D}

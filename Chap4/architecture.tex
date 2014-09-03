@@ -29,7 +29,7 @@
 if(month of observation is JUNE AND time of observation is between 17:00 and 19:00 and active otter project is TRUE)
 	add to observation(‘Potential Otter sighting’)
 	prioritise observation as imporant
-if(temperature is 37 AND time of observation is between 01:00 and 05:00)
+if(temperature is 37 AND time of observation is between 01:00 and 05:00 and active leopard project is TRUE)
 	add to observation(‘Potential Leopard sighting’)
 	prioritise observation as important
 \end{lstlisting}
@@ -41,7 +41,7 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	\subsection{Data Processing}
 	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not perform any direct sensing. 
 
-	Due to the greater capabilities, DP nodes have a much shorter battery life than DC nodes and a network typically consists of fewer DP nodes. These capabilities, such as increased memory and higher processing power, allow DP nodes to run a complete rule engine and process more than just files, they can perform the same tasks as most modern computers, such as: image processing, audio processing or reading metadata from files that requires extra libraries. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
+	Due to the greater capabilities, DP nodes have a much shorter battery life than DC nodes and a network typically consists of fewer DP nodes. These capabilities, such as increased memory and higher processing power, allow DP nodes to run a complete rule management system and process more than just files, they can perform the same tasks as most modern computers, such as: image processing, audio processing or reading metadata from files that requires extra libraries. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
 
 	In our current implementation, DP nodes use two different radios, a Zigbee radio to allow long range communication from DC nodes and a Wi-Fi radio that provides short range communication that allows for higher data rates.
 
@@ -195,7 +195,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	
 	\subsection{Knowledge Base}\label{arch:kb}
 	%Discuss drools here and the API developed for access to it from Sitesy.
-	The Drools rule engine is a Java-based engine that uses forward chaining inference for the processing of rules, which means that rules are used to make meaningful inferences about data. Unlike DC nodes, which have limited knowledge processing capabilities, Drools is able to chain rules together and a rule that may not have been triggered at the start of processing may be triggered later if another inference is made. For example, a rule that is specifically for small mammals may not be triggered until an inference has been made that the image may contain small mammals based on the time and location of the observation.
+	The Drools rule engine is a Java-based engine that uses forward chaining inference for the processing of rules \cite{proctor2005drools}, which means that rules are used to make meaningful inferences about data. Unlike DC nodes, which have limited knowledge processing capabilities, Drools is able to chain rules together and a rule that may not have been triggered at the start of processing may be triggered later if another inference is made. For example, a rule that is specifically for small mammals may not be triggered until an inference has been made that the image may contain small mammals based on the time and location of the observation.
 	
 	Drools is able to dynamically update its knowledge base, adding rules and firing them on observations that have already been loaded, as well as newer ones. This allows DP nodes to adapt to new rules and local knowledge whilst they are deployed. The use of \textit{drl} files use a mixture of Drools and Java syntax to define rules, allowing them to modify, or create, Java objects. For example, a rule could be triggered on the receipt of sensed data and create a DwC object from the received data, process it and perform checks on the result that would trigger different rules based on that result. This is one of the main reasons we chose Drools, as it can work with GSN and DwC Java objects, as well as the ability to run on any architecture that supports Java.
 	
