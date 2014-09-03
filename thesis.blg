@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Chap1/introduction.aux
@@ -10,6 +10,7 @@ A level-1 auxiliary file: Chap6/implementation.aux
 A level-1 auxiliary file: Chap7/simulations.aux
 A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plain.bst
+A level-1 auxiliary file: App/appendix.aux
 Database file #1: refs/library.bib
 Warning--I didn't find a database entry for "bluetooth2012bluetooth"
 Warning--I didn't find a database entry for "dwc_sw"
@@ -41,45 +42,45 @@ Warning--empty journal in Uschold
 Warning--empty year in Uschold
 Warning--there's a number but no volume in Sarajevo2014
 Warning--there's a number but no volume in Zivkovic2004
-You've used 95 entries,
+You've used 98 entries,
             2118 wiz_defined-function locations,
-            1070 strings with 20246 characters,
-and the built_in function-call counts, 32487 in all, are:
-= -- 3182
-> -- 1679
+            1084 strings with 20668 characters,
+and the built_in function-call counts, 33257 in all, are:
+= -- 3251
+> -- 1727
 < -- 25
-+ -- 663
-- -- 568
-* -- 2317
-:= -- 5408
-add.period$ -- 279
-call.type$ -- 95
-change.case$ -- 567
++ -- 682
+- -- 584
+* -- 2360
+:= -- 5548
+add.period$ -- 287
+call.type$ -- 98
+change.case$ -- 584
 chr.to.int$ -- 0
-cite$ -- 122
-duplicate$ -- 1192
-empty$ -- 2338
-format.name$ -- 568
-if$ -- 6698
+cite$ -- 125
+duplicate$ -- 1219
+empty$ -- 2394
+format.name$ -- 584
+if$ -- 6852
 int.to.chr$ -- 0
-int.to.str$ -- 95
-missing$ -- 88
-newline$ -- 467
-num.names$ -- 188
-pop$ -- 592
+int.to.str$ -- 98
+missing$ -- 90
+newline$ -- 481
+num.names$ -- 194
+pop$ -- 614
 preamble$ -- 1
-purify$ -- 474
+purify$ -- 488
 quote$ -- 0
-skip$ -- 933
+skip$ -- 956
 stack$ -- 0
-substring$ -- 1838
-swap$ -- 284
+substring$ -- 1853
+swap$ -- 287
 text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 376
+type$ -- 388
 warning$ -- 27
-while$ -- 324
-width$ -- 97
-write$ -- 977
+while$ -- 330
+width$ -- 100
+write$ -- 1005
 (There were 30 warnings)

@@ -3,17 +3,18 @@
 
 	We aim to show that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise the delivery of interesting sensed data. We also believe that human input is a valuable way for such a network to learn about classifications it has made correctly, and incorrectly, and use that knowledge to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
 
-	The rest of this chapter is structured as follows. Section 1 outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section 2 introduces an example, from our motivating scenario, that will be used to better explain each tier of the architecture. Section 3 explains the data collection tier. Section 4 explains the data processing tier. Section 5 explains the data aggregation tier. Section 6 concludes the chapter and summarises the key features of K-HAS.
+	The rest of this chapter is structured as follows. Section \ref{arch:khas} outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section \ref{arch:tech} details the software and data standard choices we made for our implementation of K-HAS. Section \ref{arch:walk} provides a sample walkthrough of K-HAS, relating to our motivating scenario and Section \ref{arch:conc} concludes the chapter.
 
 	\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.65\textwidth]{Chap4/figures/khasarch} 
-			\caption{Overview of K-HAS Architecture}
+			\caption{Overview of the K-HAS Architecture}
 			\label{arch:khas:arch}
 			\end{figure}
 	
-	\section{K-HAS}
+	\section{K-HAS}\label{arch:khas}
 		K-HAS has been designed as an architecture for WSNs that is able to adapt to changes in the data sensed, as well as the structure of the network. By pushing knowledge bases out to the edge of the network, all nodes in the network have some awareness of the data they are sensing, as well as how important it is, based on the current projects that the network is involved in. This is achieved by using rules with different levels of granularity based on the knowledge processing capabilities of that tier. Figure \ref{arch:khas:arch} shows a high level overview of K-HAS, showing the flow of data from each tier.
+	
 	
 	\subsection{Data Collection}\label{khas:dc}
 	The data collection (DC) tier is very similar to sensor nodes commonly used in a WSN, using hardware that has similar, limited capabilities to nodes such as: the I-Mote and Waspmote. These DC nodes are deployed at the edge of the network and tasked with sensing their environment, pre-processing the sensed data and using each other to relay data to the next tier.
@@ -25,10 +26,10 @@
 	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base and highlights that the core structure of this file is simply a list of if statements that can be executed one after the other. Forward chaing is not used here because processing times need to be kept to a minimum and a chain of rules being fired could easily overwhelm the node. 
 
 \begin{lstlisting}[breaklines=true, caption={Example DC Node Rules}, label={kb:dcrule}]
-if(Date of observation is “JUNE” AND time of observation is between 17:00 and 19:00
+if(month of observation is JUNE AND time of observation is between 17:00 and 19:00 and active otter project is TRUE)
 	add to observation(‘Potential Otter sighting’)
-
-if(temperature is 37 AND time of observation is between 01:00 and 05:00
+	prioritise observation as imporant
+if(temperature is 37 AND time of observation is between 01:00 and 05:00)
 	add to observation(‘Potential Leopard sighting’)
 	prioritise observation as important
 \end{lstlisting}
@@ -76,7 +77,7 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	The feedback loop is a protocol within K-HAS, that uses human input, and other sources, to update DP nodes. When a DP node classifies sensed data, it stores some of that to assist with future classifications. What is stored depends on the type of sensed data. For example, images would mean that the DP node would store the resulting processed image, its classification and information about the time it was taken, the camera that took it and the location. When that is sent to the DA node, a human would then look at the image and mark the classification as correct, or modify it if it was not. Once that classification has been finalised, the DA node sends either a confirmation or a modification to the DP node that sent it, updating its knowledge base. This protocol seeks to reduce the number of incorrect classifications the longer the network is deployed and allows the nodes to be dynamic and `learn' throughout the lifetime of the network. It also allows node to adapt quickly to new data, if a DP node is unable to classify an image of an animal it does not yet have template images for, the knowledge of a human expert can provide those templates and the feedback loop will deliver that knowledge.
 	
 	
-	\section{Technological Components}
+	\section{Technological Components}\label{arch:tech}
 	In this section, we describe the technologies used in our designs of K-HAS and how they integrate in order to use local knowledge based on their respective knowledge processing capabilities. The majority of components, both hardware and software, used in K-HAS are used so they are applicable for any WSN, but some choices have been made to remain in line with our motivating scenario and, thus, are more specifically suited for the capture of scientific observations.
 	
 	\subsection{Data Standard}\label{arch:tech:dwc}
@@ -225,7 +226,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		In a running mode, nodes do not query for the neighbour with the lowest hop count, or broadcast the sensed data to all nodes in range, they send to the node stored as their nearest neighbour. If that fails, then a query is sent out to find other available nodes in range and then sent to the one with the lowest hop count. If the nearest neighbour node is unavailable for more then three attempts, then it broadcasts a request to run the configuration mode again.
 
 	
-	\section{Walkthrough}
+	\section{Walkthrough}\label{arch:walk}
 		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.
 		
 		\subsection{Scenario}
@@ -288,7 +289,7 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 			
 			If there was no classification, then users would be able to vote on the contents and use the classification with the highest vote, or the classification made by an administrator. Once a classification has been made, it is stored in the database and written to the archive. This triggers the DA node to send that classification on to the DP node that sent the original archive. In this case, the DA node informed the DP node that it has been confirmed as a Clouded leopard and the DP node then stores the extracted image in the directory of Clouded leopard templates, to assist with future classifications. This updated template causes the rule base of the DP node to be updated so similar data processed in the future would be correctly identified. The longer the network is deployed, the more knowledge DP nodes gain and the more accurate their classifications can be. For example, a change in season could cause a new, previously unknown animal to migrate to the rainforest. With human assistance, the animal can be identified and determined whether it is of interest. This knowledge can then be stored and sent on to DP nodes to prioritise and classify correctly the next time that it is captured. The feedback loop protocol is currently only a design and has been minimally implemented as a proof of concept.
 					
-	\section{Conclusion}
+	\section{Conclusion}\label{arch:conc}
 		In this chapter we have explained the architecture we have developed to allow knowledge to be encoded and utilised within a wireless sensor network. Using tiers of nodes, with varying levels of knowledge-processing capabilities, we can process observations within the network and deliver data that has, where possible, already been classified. Working as more of a subscribe-push method, users do not have to check a base station for new data, instead it is sent to them if it has been found to be part of a project they are subscribed to. If not, then the data is accessible to all users of the network through a web interface.
 		
 		One of the key features of K-HAS is that it is not a static deployment. The knowledge that the network holds at the time of deployment will rarely be the same as the knowledge held after a few months. Humans enrich the existing knowledge base and the nodes are able to make inferences about the data they are sensing, improving their classifications the longer they are deployed.
