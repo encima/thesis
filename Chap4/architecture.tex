@@ -95,9 +95,32 @@ Darwin Core is a body of standards for representing, sharing and storing observa
 
 The standard structure of a Darwin Core Archive (DwC-A) is a star record; an archive of files with a core metadata file that describes the content of all other files within the archive.
 
-The record shown in figure \ref{dwca} represents a DwC-A that conforms to the star schema. The ecological metadata language document contains all of the details about the project, such as who is involved, the institution code, contact details and the project(s) related to the observation, shown in Listing \ref{dwc:eml}.
+The record shown in figure \ref{dwca} represents a DwC-A that conforms to the star schema. The ecological metadata language (EML) document contains all of the details about the project, such as who is involved, the institution code, contact details and the project(s) related to the observation. Listing \ref{dwc:eml} shows a fragment of the EML file and a complete DwC archive can be found in Appendix \ref{appendix:dwc}.
 
-\lstinputlisting[language=XML, caption=Darwin Core Ecological Metadata File, label=dwc:eml]{Chap5/figures/dwc_arch/eml.xml}
+% \lstinputlisting[language=XML, caption=Darwin Core Ecological Metadata File, label=dwc:eml]{Chap5/figures/dwc_arch/eml.xml}
+\begin{lstlisting}[caption=Darwin Core Ecological Metadata File, label=dwc:eml, breaklines=true, language=XML]
+ <dataset>
+<alternateIdentifier>e71fda1c-dcb9-4eae-81a9-183114978e44</alternateIdentifier>
+<title>Images from Danau Girang during the PTY Project 2011-12</title>
+<creator>
+<individualName>
+<givenName>Christopher</givenName>
+<surName>Gwilliams</surName>
+</individualName>
+<organizationName>Cardiff University</organizationName>
+<positionName>PhD</positionName>
+<address>
+<city>Cardiff</city>
+<administrativeArea>Cardiff</administrativeArea>
+<postalCode>CF24 3AA</postalCode>
+<country>Wales</country>
+</address>
+<phone>(+44)2920 123456</phone>
+<electronicMailAddress>C.Gwilliams@cs.cf.ac.uk</electronicMailAddress>
+<onlineUrl>christopher-gwilliams.com</onlineUrl>
+</creator>
+<pubDate>2012-07-26</pubDate>
+ \end{lstlisting}
 
 The descriptor file is an xml document that contains the column headers in the attached files and the mappings of those headers to DwC terms, an example file is shown in Listing \ref{dwc:meta}. This file shows that this is an archive containing the sighting of an individual, and that the sighting has been split into two files. The largest benefit of Darwin Core is its modularity. Extension files can be added to enrich the data for each occurrence. In this example the extension file is named as \textit{images.csv} and contains image-based evidence to support the observation.
 

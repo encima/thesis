@@ -76,19 +76,19 @@
 \contentsline {subsubsection}{Feedback Loop}{67}{section*.36}
 \contentsline {section}{\numberline {4.2}Technological Components}{67}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Data Standard}{68}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Middleware}{72}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Knowledge Capture}{73}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Knowledge Base}{75}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Routing Protocol}{77}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.2}Middleware}{71}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Knowledge Capture}{72}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Knowledge Base}{74}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Routing Protocol}{76}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Walkthrough}{78}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Scenario}{79}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Data Collection}{79}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Data Processing}{81}{subsection.4.3.3}
-\contentsline {subsubsection}{EXiF}{81}{section*.44}
-\contentsline {subsubsection}{Image Processing}{82}{section*.45}
-\contentsline {subsubsection}{Classification}{83}{section*.47}
+\contentsline {subsection}{\numberline {4.3.1}Scenario}{78}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Data Collection}{78}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Data Processing}{80}{subsection.4.3.3}
+\contentsline {subsubsection}{EXiF}{80}{section*.44}
+\contentsline {subsubsection}{Image Processing}{81}{section*.45}
+\contentsline {subsubsection}{Classification}{82}{section*.47}
 \contentsline {subsection}{\numberline {4.3.4}Data Aggregation}{83}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Conclusion}{85}{section.4.4}
+\contentsline {section}{\numberline {4.4}Conclusion}{84}{section.4.4}
 \contentsline {chapter}{\numberline {5}An Ontology for the K-HAS Architecture}{86}{chapter.5}
 \contentsline {section}{\numberline {5.1}Background}{86}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Observation-Centric Ontologies}{88}{subsection.5.1.1}
@@ -155,7 +155,8 @@
 \contentsline {section}{\numberline {8.2}Future Work}{159}{section.8.2}
 \contentsline {chapter}{Bibliography}{162}{section.8.2}
 \contentsline {chapter}{Appendices}{173}{section*.88}
-\contentsline {chapter}{\numberline {A}K-HAS Ontology}{174}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Example Drools Rules Used in LORIS}{177}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}Interview Transcript: Gill Bolongon}{178}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Qualitative Analysis Extract}{184}{Appendix.1.D}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{174}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}K-HAS Ontology}{176}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}Example Drools Rules Used in LORIS}{179}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Interview Transcript: Gill Bolongon}{180}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Qualitative Analysis Extract}{186}{Appendix.1.E}
