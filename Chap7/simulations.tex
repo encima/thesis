@@ -201,7 +201,7 @@ The duration of an observation with both a variable and ideal transmission rate 
 	\caption{Empty Observations.}
 	\label{fig:real:empty:dur}
 	\end{subfigure}	
-	\caption{Mean Duration under Variable Transmission Rate}
+\caption{Mean Duration under Variable Transmission Rate}
 \end{figure}
 
 \subsection{Network Saturation}
@@ -223,16 +223,18 @@ Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all obse
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/empty_dur}
-	\caption{Mean Duration of Empty Observations Across All Scenarios.}
-	\label{fig:sat:empty:dur}
-	\end{figure}
+		\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=\textwidth]{Chap7/figures/saturated/empty_dur}
+		\caption{Empty.}
+		\label{fig:sat:empty:dur}
+		\end{subfigure}
 
-	\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/int_dur}
-	\caption{Mean Duration of Interesting Observations across All Scenarios.}
-	\label{fig:sat:int:dur}
+		\begin{subfigure}{.5\textwidth}
+		\includegraphics[width=textwidth]{Chap7/figures/saturated/int_dur}
+		\caption{Interesting.}
+		\label{fig:sat:int:dur}
+		\end{subfigure}
+	\caption{Mean Duration of Observations across All Scenarios}
 	\end{figure}
 
 The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) shows that the increase of knowledge processing capabilities improves the network's ability to filter out empty observations and a network with only HK nodes is able to defer empty observations from the time of capture so that bandwidth remains free for those that are interesting. Figure \ref{fig:sat:int:dur} shows the mean transmission time of interesting observations and it is clear to see that interesting observations misclassified as empty bring the average up somewhat but this ability to prioritise allows truly interesting observation to be delivered at a much faster rate. It is worth nothing that, while misclassified interesting observations take longer to reach the central node in higher knowledge scenarios, the number of them received is greatly reduced; as shown in Figure \ref{fig:sat:int:percent}.
