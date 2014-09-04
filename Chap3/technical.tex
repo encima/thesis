@@ -98,10 +98,10 @@ The Waspmote (Figure \ref{tech:fig:waspmote}) is a general purpose sensing board
 
 One of the benefits of the Waspmote is that they are commercially available with an actively maintained programming environment.
 
-\subsection{Conclusion}
+\subsection{Conclusion} \label{tech:hw:conc}
 The capabilities of each of these boards vary greatly from running a subset of C on an embedded OS to running full desktop Linux. Each visit we made to Danai Girang allowed us to test these devices and determine their eligibility for nodes that would survive in the Malaysian rainforest and yield usable range, which we discuss in the next section.
 
-The tradeoff with these devices is that the Waspmote nodes, with limiting processing capabilities, is reported to yield a battery life of 6 months. Our tests yielded approximately 3 months, with minimal sleep scheduling, so this number does seem reasonable. However, the IGEP and Pandaboards are able to run any software that has been compiled for an ARM processor and do so within an unrestricted operating system. While this does allow them the flexibility to process data with the same power as a five year old desktop computer, our battery life tests drained the board within 6 hours when using 4 D cell batteries. We managed to increase this number by loading a power-efficient modification of the Arch Linux distro, removing any support for displays or running of a GUI, disabling unused ports and disabling the radios for as much of the uptime as possible.
+The tradeoff with these devices is that the Waspmote nodes, with limiting processing capabilities, is reported to yield a battery life of 6 months. Our tests yielded approximately 3 months, with minimal sleep scheduling, so this number does seem reasonable. However, the IGEP and Pandaboards are able to run any software that has been compiled for an ARM processor and do so within an unrestricted operating system. While this does allow them the flexibility to process data with the same power as a five year old desktop computer, our battery life tests drained the board within 6 hours when using 4 D cell batteries. We managed to increase this number by loading a power-efficient modification of the Arch Linux distro, removing any support for displays or running of a GUI, disabling unused ports and disabling the radios for as much of the uptime as possible. With these changes, we were able to achieve approximately three weeks of running with sleep periods.
 
 Most SBCs, while having a reduced battery life, contain common I/O ports, such as: USB, VGA, Ethernet and Serial. This extensibility enables us to add additional wireless capabilities. For example, sensor nodes may require the use of a long range wireless medium but the endpoint of a network uses Wi-Fi to allow users to connect to it and upload sensed data to the Internet; this can be done by adding a long-range wireless radio to an I/O port and providing software support.
 
@@ -150,7 +150,7 @@ Finally, we considered using the researchers or animals at Danau Girang, as `dat
 			
 Although the range of Wi-Fi is poor, for our requirements, in both Malaysia and the UK, it did show that the results we experience in the UK are very similar to the results in Malaysia. This means that tests run in the UK should be indicative of what we can expect in Danau Girang.
 
-\subsection{DigiMesh}\label{tech:digimesh}
+\subsection{DigiMesh}\label{tech:range:digimesh}
 		Due to the poor range results of Wi-Fi, we created a second prototype of the network, using DigiMesh. DigiMesh is a proprietary wireless protocol, based on the 802.15.4 standard and designed for devices with limited power. Using the same frequency as Wi-Fi, DigiMesh has been reported to provide 7km of range, with a data rate of 250kbps.
 		
 In our prototype implementation, we are using Waspmote sensor boards \cite{waspmote}, a general purpose node that is capable of transmitting through various communication mediums. Our Waspmotes are provided with DigiMesh modules and a 2GB SD card to store sensed data.

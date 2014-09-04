@@ -1,7 +1,7 @@
 \chapter{Deployment in the Malaysian Rainforest}\label{chap:imp}
 	In this chapter, we detail the design and deployment of a modified K-HAS in the Malaysian rainforest. We also highlight the issues we experienced deploying the architecture in a humid, dense rainforest for use by those without domain knowledge of WSNs.
 	
-	Experiments carried out in the rainforest had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected.
+	Experiments carried out in the rainforest had already shown that the range of wireless communications could be reduced by up to 80\% and we expected that the lifetime of nodes in such conditions would be affected, based on experiments explained in Section \ref{tech:wireless}.
 	
 	Yearly visits were made to the Danau Girang Field Centre (DGFC) to test different nodes, gather knowledge and trial iterations of K-HAS. The first visit showed us just how much the rainforest affected communications, but also allowed us to gather knowledge from researchers and cameras that had previously been deployed. Subsequent visits were then used to test our own nodes and software, based on the knowledge we had gained from the first visit. We developed K-HAS with a view to deploying it in Malaysia, however, it soon became clear that our design was  beyond what was currently available, as well as the time constraints.
 	
@@ -11,15 +11,15 @@
 	
 	LORIS has been developed specifically for the Malaysian rainforest, our motivating scenario and, as such, much of the hardware and software has been implemented to reflect this.
 	
-	The rest of this chapter is structured as follows. Section \ref{loris:arch} highlights the changes we had to make from K-HAS and explains the hardware used at each tier. Section \ref{loris:dep} explains how we planned and deployed the network and Section \ref{loris:res} details the results from the deployment in Malaysia.
+	The rest of this chapter is structured as follows. Section \ref{loris:arch} highlights the changes we had to make from K-HAS and explains the hardware used at each tier. Section \ref{loris:dep} explains how we planned and deployed the network. Section \ref{loris:res} details the results from the deployment in Malaysia and Section \ref{loris:conc} concludes the chapter with a summary of our results.
 	
 	\section{ Deployment Architecture}\label{loris:arch}
 		The aim of LORIS was to keep as much of the architecture of K-HAS as possible and reuse the ontology without the need for modification; serving as a form of validation. In order to do this, we identified the tiers of the network that could be deployed in the rainforest, given the hardware and wireless constraints, and the areas that needed to be addressed. Regular power and cheap computers with good knowledge-processing capabilities meant that DA nodes were simple to deploy and, with the growth of powerful microcomputers like the Raspberry Pi, DP nodes were also in abundance. However, finding a reliable camera that could integrate with a node capable of processing observations that was also reliable enough to withstand the humid rainforest proved to be difficult.
 		
 		\subsection{Data Collection}
-				Experiments were run yearly in Malaysia to test the performance of variations of hardware. As covered in Section \label{tech:wifirange}, the first year involved testing the range of Wi-Fi with an IGEP board. The limited range of 30m meant that, despite the high transfer rate, it was not possible. Wi-Fi was not designed for use in resource-constrained sensors, so the power consumption of the radio meant that it limited the lifetime of the node.
+				Experiments were run yearly in Malaysia to test the performance of variations of hardware. As covered in Section \ref{tech:wifirange}, the first year involved testing the range of Wi-Fi with an IGEP board. The limited range of 30m meant that, despite the high transfer rate, it was not possible. Wi-Fi was not designed for use in resource-constrained sensors, so the power consumption of the radio meant that it limited the lifetime of the node.
 				
-				The following year, we used the Digimesh protocol, explained in Section \label{tech:digimesh}, which provided a longer range and was developed for use in sensor networks.  While the range was suitable for the rainforest, it was not as much as we had anticipated. The other difficulty proved in mounting an SD card on two devices at the same time, the existing wildlife cameras and our Waspmote nodes, without causing corruption from read/write clashes.
+				The following year, we used the Digimesh protocol, explained in Section \ref{tech:range:digimesh}, which provided a longer range and was developed for use in sensor networks.  While the range was suitable for the rainforest, it was not as much as we had anticipated. The other difficulty proved in mounting an SD card on two devices at the same time, the existing wildlife cameras and our Waspmote nodes, without causing corruption from read/write clashes.
 				
 				From these experiments, we began to look into commercial alternatives that combined both the node and the camera. The most usable solution we found was the Raspberry Pi coupled with a camera attachment \cite{Sarajevo2014}, but it was not ready for use in the Malaysian rainforest or to be used for an extended unsupervised period. Existing wildlife manufacturers were then looked into and we found that wireless cameras had been manufactured, but they had no local processing capabilities and had not been used much in research. Based on these findings, we used Buckeye X7R cameras \cite{Buckeye}. Using the same Digimesh protocol as the Waspmote, they had a tested range of 1 mile and their casing had been developed to withstand harsh environments. The 1 mile range was tested in a more open woodland in the US but the higher quality components used, as well as their modifiable antenna supported our theory that we would achieve better range with their cameras.
 				
@@ -106,9 +106,14 @@
 		
 		Rules are written in \textit{drl} files that are loaded into a knowledge session. Sessions, as well as the firing of rules, are handled by the Java code. The benefit of using Drools with a Java based middleware, such as GSN, allows the simple integration of the two technologies, allowing a sensor class in GSN to insert an archive into the session and run the rules. When sensed data is received from a DC node, it is unarchived and Drools is run on the DwC files describing the original observation, the metadata, the originating DC node and the knowledge base of the DP node.
 		
-		Listing \ref{drools:dp} shows an example of some more simple rules that would be contained within the knowledge base. In this file, the rules use existing local knowledge with the properties of the observation to infer the contents and then update the DwC archive, or return suggestions as to what the contents may be. For example, the \textit{Clouded Leopard Ridgeline} rule uses the location ID of the camera to match with a human description and uses local knowledge of the area and global knowledge of the time to infer that the image may contain a Clouded leopard.
+		Listing \ref{drools:dp} shows a psuedocode example of some more simple rules that could be contained within the knowledge base, a full listing is in Appendix \ref{appendix:drools}. In a rules file, existing local knowledge is used with the properties of a new observation to infer the contents and then update the DwC archive, or return suggestions as to what the contents may be. For example, the sample rule uses the location ID of the camera to check if it is near a plantation and uses local knowledge of the area and global knowledge of the time to infer that the image may contain a sun bear or malay civet, based on the knowledge that they have been known to forage in the plantation at night when there are no humans.
 		
-		\lstinputlisting[caption=Drools Rule File, label=drools:dp]{Chap4/listings/rules.drl}
+		\begin{lstlisting}[breaklines=true, caption={Pseudocode of a Drools Rules File}, label={drools:dp}]
+rule "Plantation night"
+	when New_Sensed_Data
+		if location of node is Plantation and time of day is night
+			Print "Likely a sun bear or malay civet"
+				\end{lstlisting}
 		
 		These rules are very simple and only scrape the surface of the local knowledge that can be utilised, as well as how DwC archives can be effectively used to carry the data of these inferences, but it does show that Drools is a powerful rule engine and that these rules can be extended further to make full use of the knowledge base. 
 		

@@ -36,7 +36,7 @@ OBOE focuses on the concept of an \textit{observation}, which is made up of an e
 
     \begin{figure}
     \centering
-        \scalebox{0.73}{\includegraphics{Chap5/figures/OBOEcore.JPG}}
+        \includegraphics[width=\textwidth]{Chap5/figures/OBOEcore.JPG}
     \caption{The Core of an OBOE Observation}
     \label{oboe}
     \end{figure}
@@ -48,7 +48,7 @@ The primary benefits of OBOE are that it is generic enough to cover almost all t
 \subsubsection{O\&M}
 The OpenGIS Consortium (OGC) Observations and Measurements Standard aims to provide a framework suitable for recording any observation made by a sensor, regardless of the domain \cite{Botts}. 
 
-The key difference, when compared to other ontologies, to note with O\&M is that \textit{observation} and \textit{measurement} are not just classes. They also denote an action.
+The key difference with O\&M, when compared to other ontologies, is that \textit{observation} and \textit{measurement} are not just classes. They also denote an action.
 An observation is an action that causes a result, yielding a value and a measurement is a set of operations that provide some result(s).
 
 O\&M provides a conceptual model, as well as XML encoding for observations and measurements. The listing \ref{omxml} shows an observation of a vehicle in a given time and place. Similar to the encoding of a measurement with the standard and protocol used in OBOE, O\&M provides support for the recording of the procedure used to gain the measurement for the observation. 
@@ -82,7 +82,7 @@ O\&M provides a conceptual model, as well as XML encoding for observations and m
     \begin{figure}[h]
     \centering
 	\includegraphics[width=\textwidth]{Chap5/figures/o&m_ontology.png}
-    \caption{The OGC O\&M Ontology}
+    \caption{The OGC O\&M Ontology \cite{Probst}}
     \label{oandm}
     \end{figure}
  
@@ -90,11 +90,11 @@ The structure of an observation within O\&M is focussed on the action and the re
 
 \subsubsection{Darwin Core SW}\label{bg:dwc}
 
-In order to represent DwC occurrences, explained in detail in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{dwc_sw} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
+In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{dwc_sw} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
 
     \begin{figure}[h]
     \centering
-  \includegraphics[width=\textwidth]{Chap5/figures/dsw.jpg}
+  \includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/dsw.jpg}
     \caption{Darwin-SW}
     \label{darwin-sw}
     \end{figure}
@@ -185,7 +185,7 @@ The Semantic Sensor Network (SSN) Ontology is the most fitting ontology for our 
 
     \begin{figure}
     \centering
-        \includegraphics[width=\textwidth]{Chap5/figures/ssnont.jpg}
+        \includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/ssnont.jpg}
     \caption{SSN Ontology}
     \label{ssnont}
     \end{figure}
@@ -193,6 +193,11 @@ The Semantic Sensor Network (SSN) Ontology is the most fitting ontology for our 
 Figure \ref{ssnont} shows the model for the SSN ontology, displaying the relationships that connect each class, as well as their associated properties. It also highlights the modular approach that has been taken, separating the system from the process and the observation.
 
 The observation pattern of SSN is centred around `Stimuli-Sensor-Observation', which can be simply described by an event causing a sensor to trigger and create an encompassing observation to store details about the event, as well as the device that recorded the event. While SSN is focussed on sensors, capturing the measurement capabilities of each sensing device that makes up a system and specifics on its lifespan, the development of the ontology arose from the review of sensor-centric ontologies as well, recording data about observations is a structure very similar to O\&M.
+
+\subsubsection{SUMO}
+The Standard Upper Ontology (SUMO) is an ontology that links sensor hardware and sensor data ontologies to assist with searching and evaluating distributed and heterogenous sensor networks \cite{Eid2007}. SUMO combines the Sensor Data Ontology (SDO) and Sensor Hierarchy Ontology (SHO) with the ability to `plug in' extension ontologies. SHO contains knowledge models for the hardware of the network, such as sensors and data processing units, allowing attributes like the accuracy and/or range to be specified. SDO describes the data sensed by the network, including the spatial and/or temporal observations.
+
+SUMO's development did follow a similar approach to the one described in this chapter, combining existing ontologies, but it is more focussed on retrieval of sensed data through queries constructed using both hardware details and properties of the sensed data and does not fulfil all of the requirements we identified when developing K-HAS.
 
 \subsubsection{Findings}
 There are many ontologies that are suited for sensor-based scientific observations and ontologies that allow for the description of sensor hardware are very complete. However, in our research, we were unable to find a complete ontology that allowed for a sensor to be described as well as specifics of the observation. SSN was the closest that we found for this, but it was still very hardware focussed and aimed at a technical audience. SSN primarily describes the hardware of each node and their capabilities, whereas our requirements are for both hardware and sensed data to be represented in a single ontology.
@@ -225,16 +230,16 @@ The capture stage involves defining the concepts and terms that the ontology wil
 \item Middle Out - A combination of the two, this process involves specialising, and generalising, the classes identified in the middle layer of the hierarchy.
 \end{enumerate}
 % REFERENCE THE ONTOLOGY 101 PAPER
-As for the capture of the knowledge used to identify the classes needed, this is an area that has been documented, but primarily provides recommendations. \cite{Fernandez-Lopez1999} suggests interviews with domain experts, iteratively brainstorming with a group actively involved in the development of the ontology. This stagehas often been referred to as the knowledge-acquisition stage.
+As for the capture of the knowledge used to identify the classes needed, this is an area that has been documented, but primarily provides recommendations. \cite{Fernandez-Lopez1999} suggests interviews with domain experts, iteratively brainstorming with a group actively involved in the development of the ontology. This stage has often been referred to as the knowledge-acquisition stage.
 % and **REFERENCE** recommends the use of Common KADS \cite{Hoog1992}, a knowledge analysis methodology used to develop knowledge-intensive systems.
 
 \subsubsection{Code}
  % - perform the above step in a formal language (i.e. OWL)
-This step involves coding the terms identified in the previous step into a formal language, such as the Web Ontology Language (OWL).
+This step involves coding the terms identified in the previous step into a formal language, such as the Web Ontology Language (OWL) \cite{McGuinness2004}.
 
 \subsubsection{Integrate Existing Ontologies}
  % - join all ontologies that match/overlap with the identified terms
-Some of the literature (REFERENCE) recommends that this step is carried out at the same time as the two steps prior, so that the ontology is developed with existing ontologies in mind. This also allows overlap to be identified, and incorporated, early. Being aware of commonly-used ontologies within the domain, before development begins, is a more logical approach and does avoid the need to create new terms for existing concepts.
+This step can carried out at the same time as the step above, so that the ontology is developed with existing ontologies in mind. This also allows overlap to be identified, and incorporated, early. Being aware of commonly-used ontologies within the domain, before development begins, is a more logical approach and does avoid the need to create new terms for existing concepts.
 
 Existing ontologies can be integrated by importing them and linking the existing terms to the terms identified in the ontology that is being developed. However, there is also the method of developing the ontology completely, so that it is consistent without the need to rely on existing ontologies and creating `sameAs' relationships between the terms identified and only the required terms in the existing ontologies.
 
@@ -259,7 +264,6 @@ To determine the scope that K-HAS should cover, we identified a set of competenc
 
 \begin{table}[h]
 \centering
-\caption{Competency Questions} 
 \begin{tabular}{ p{10cm}}
 \hline
 \textbf{Competency Questions}\\ 
@@ -276,6 +280,7 @@ Find all the \textbf{Evidence} that supports an \textbf{Occurrence}\\
 Find all the \textbf{Types} of evidence that supports an \textbf{Occurrence} \\
 \hline 
 \end{tabular}
+\caption{Competency Questions} 
 \label{tab:comp_qs}
 \end{table} 
 
@@ -292,7 +297,6 @@ Table \ref{tab:concepts} outlines the core concepts we have identified for K-HAS
 
 \begin{table}
 \centering
-\caption{K-HAS Concepts} 
 \begin{tabular}{p{5cm}|p{2cm}|p{5cm}}
 \hline
 \textbf{Concept} & \textbf{Subclass Of} & \textbf{Definition}\\ 
@@ -313,6 +317,7 @@ Administrator & Person & Person in charge of a project (or projects). \\
 Worker & Person & Person involved with a project. \\
 \hline 
 \end{tabular}
+\caption{K-HAS Concepts} 
 \label{tab:concepts}
 \end{table}
 
@@ -343,9 +348,9 @@ For the sensor hardware of K-HAS, we found that the SensorML ontology maps direc
 
 % INCLUDE TABLE TO MATCH TERMS TO EXISTING ONTOLOGIES??
 
-\subsection{Extend theOntology}
+\subsection{Extend the Ontology}
 
-Whilst researching popular ontologies, we became aware that some classes identified for K-HAS were not satisfied by what is currently available, these are prefixed with khas and shown in Figure \ref{khas_ont}. The final step for creating the ontology was to add these concepts to the linked ontologies, we call these \textit{extension concepts}, concepts unique to K-HAS which do not exist in any other ontology. These terms were linked to the unique layered architecture of K-HAS and we defined them within a new K-HAS namespace, changing our ontology from an alingment of existing ontologies to an extension of these.
+Whilst researching widely-used ontologies, we became aware that some classes identified for K-HAS were not satisfied by what is currently available, these are prefixed with khas and shown in Figure \ref{khas_ont}. The final step for creating the ontology was to add these concepts to the linked ontologies, we call these \textit{extension concepts}, concepts unique to K-HAS which do not exist in any other ontology. These terms were linked to the unique layered architecture of K-HAS and we defined them within a new K-HAS namespace, changing our ontology from an alingment of existing ontologies to an extension of these.
 
 The final ontology is shown in Figure \ref{khas_ont} (with the complete code in Appendix \label{appendix:ontology}) and shows how each concept maps to existing ontologies. The figure shows that there were only five extension concepts unique to K-HAS that can be subclassed from the \textit{person} concept in the FOAF ontology and \textit{node} in the SensorML ontology.
 
@@ -380,7 +385,6 @@ We have a customised build of K-HAS running that receives data from a variety of
 In Table \ref{tab:comp_qs} we have identified some basic competency questions that we expected K-HAS to be able to satisfy with the concepts we had identified, Table \ref{eval:comp_qs} shows how the original questions are satisfied by K-HAS. We have mapped the terms we originally used to the terms used in K-HAS (and the linked ontologies) and shown the concepts involved with each question, as well as the relationships linking them.
 \begin{table}[h]
 \centering
-\caption{Competency Questions} 
 \begin{tabular}{ p{5cm}p{5cm}p{5cm}}
 \hline
 \textbf{Competency Questions} & \textbf{Concepts} & \textbf{Relationships}\\ 
@@ -407,6 +411,7 @@ Find all the \textbf{Types} of evidence that supports an \textbf{Occurrence} & O
 & & Token isOfType Type \\
 \hline 
 \end{tabular}
+\caption{Competency Questions} 
 \label{eval:comp_qs}
 \end{table} 
 
@@ -417,7 +422,7 @@ Within the domain of scientific observations, Darwin Core is a popular choice fo
 
 In the data driven approach suggested by \cite{Brewster2004}, a corpus of documents, related to the domain that the ontology covers, and the keyword content is matched with the terms used in the ontology. Because Darwin Core observations are structured into archives of files, explained in Section \ref{bg:dwc}, we evaluated the K-HAS ontology by combining the approach of comparing a corpus of documents related to the domain with human evaluation of ensuring an ontology met a set of requirements to create a method that ensured existing scientific sensed observations could be mapped to K-HAS with little to no modification.
 
-As we have previously explained, an archive of Darwin Core files consists of a minimum of 3 files: a metadata file that contains information about the creator of the archive and the project it relates to (eml.xml), a metadata file that describes all of the files that contain the occurrence and the fields within them (meta.xml) and a csv file that contains the data relating to the occurrence itself. Within the archive, the core files that need to be mapped to K-HAS are the meta.xml and eml.xml files as this allows us to store what and who.
+As explained in Section \ref{arch:tech:dwc}, an archive of Darwin Core files consists of a minimum of 3 files: a metadata file that contains information about the creator of the archive and the project it relates to (eml.xml), a metadata file that describes all of the files that contain the occurrence and the fields within them (meta.xml) and a csv file that contains the data relating to the occurrence itself. Within the archive, the core files that need to be mapped to K-HAS are the meta.xml and eml.xml files as this allows us to store what and who.
 
 We used files from a DwC archive made available online to extract the terms associated with an occurrence and we mapped these terms to K-HAS concepts, the results can be seen in Table \ref{tab:dwc_eval}.
 

@@ -14,43 +14,42 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces The Main Buidling at DGFC\relax }}{39}{figure.caption.22}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Aerial View of Danau Girang Field Centre and the Surrounding Area\relax }}{40}{figure.caption.23}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Reconyx HC500 Camera\relax }}{41}{figure.caption.24}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Sensor Node Hardware\relax }}{56}{figure.caption.25}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Signal-to-Noise Ratio for Wi-Fi\relax }}{57}{figure.caption.26}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Pelican Waterproof Case\relax }}{57}{figure.caption.27}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Sequence of 3 Images Captured on a Reconyx Trigger\relax }}{58}{figure.caption.28}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Resulting Processed Image from Original Set of 3\relax }}{58}{figure.caption.29}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sensor Node Hardware\relax }}{57}{figure.caption.25}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Signal-to-Noise Ratio for Wi-Fi\relax }}{58}{figure.caption.26}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Pelican Waterproof Case\relax }}{58}{figure.caption.27}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Sequence of 3 Images Captured on a Reconyx Trigger\relax }}{59}{figure.caption.28}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Resulting Processed Image from Original Set of 3\relax }}{59}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of the K-HAS Architecture\relax }}{60}{figure.caption.32}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces A Darwin Core Star Archive\relax }}{70}{figure.caption.37}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Knowledge Hierarchy for K-HAS\relax }}{73}{figure.caption.38}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Web Interface for Observations\relax }}{73}{figure.caption.39}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Web Interface for Classified Sensed Data\relax }}{74}{figure.caption.40}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Web Interface for Drools Operations\relax }}{75}{figure.caption.41}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Clouded Leopard Image Capture\relax }}{79}{figure.caption.42}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Processed Image of Clouded Leopard\relax }}{79}{figure.caption.43}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Processed Image of Clouded Leopard\relax }}{81}{figure.caption.46}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of the K-HAS Architecture\relax }}{61}{figure.caption.32}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces A Darwin Core Star Archive\relax }}{71}{figure.caption.37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Knowledge Hierarchy for K-HAS\relax }}{74}{figure.caption.38}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Web Interface for Observations\relax }}{74}{figure.caption.39}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Web Interface for Classified Sensed Data\relax }}{75}{figure.caption.40}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Web Interface for Drools Operations\relax }}{76}{figure.caption.41}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Clouded Leopard Image Capture\relax }}{80}{figure.caption.42}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Processed Image of Clouded Leopard\relax }}{80}{figure.caption.43}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Processed Image of Clouded Leopard\relax }}{82}{figure.caption.46}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation\relax }}{88}{figure.caption.49}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology\relax }}{89}{figure.caption.51}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW\relax }}{90}{figure.caption.53}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{92}{figure.caption.56}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces K-HAS Base Ontology\relax }}{106}{figure.caption.63}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces K-HAS Ontology\relax }}{107}{figure.caption.64}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation\relax }}{89}{figure.caption.49}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology \cite {Probst}\relax }}{90}{figure.caption.51}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW\relax }}{107}{figure.caption.53}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{108}{figure.caption.56}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces K-HAS Base Ontology\relax }}{109}{figure.caption.64}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces K-HAS Ontology\relax }}{110}{figure.caption.65}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces LORIS Web Interface\relax }}{114}{figure.caption.67}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Camera Locations Around Danau Girang\relax }}{115}{figure.caption.68}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{117}{figure.caption.69}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{118}{figure.caption.70}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces LORIS Web Interface\relax }}{117}{figure.caption.68}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Camera Locations Around Danau Girang\relax }}{118}{figure.caption.69}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{121}{figure.caption.70}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{122}{figure.caption.71}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces LK-HK Simulation Example in RePast Simulator\relax }}{132}{figure.caption.74}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{139}{figure.caption.77}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{140}{figure.caption.78}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration under Variable Transmission Rate\relax }}{143}{figure.caption.79}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of All Observations Across All Scenarios.\relax }}{144}{figure.caption.80}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of Empty Observations Across All Scenarios.\relax }}{145}{figure.caption.81}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Mean Duration of Interesting Observations across All Scenarios.\relax }}{146}{figure.caption.82}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Percentage of Interesting Observations across All Scenarios.\relax }}{147}{figure.caption.83}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios.\relax }}{148}{figure.caption.84}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces LK-HK Simulation Example in RePast Simulator\relax }}{134}{figure.caption.75}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{141}{figure.caption.78}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{142}{figure.caption.79}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration under Variable Transmission Rate\relax }}{150}{figure.caption.82}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of All Observations Across All Scenarios.\relax }}{151}{figure.caption.84}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of Observations across All Scenarios\relax }}{152}{figure.caption.85}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Percentage of Interesting Observations across All Scenarios.\relax }}{153}{figure.caption.86}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios.\relax }}{154}{figure.caption.87}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
