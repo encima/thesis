@@ -1,2 +1,2 @@
-eventID, basisOfRecord, recordedBy, eventDate, eventTime, locationID, scientificName, identifiedBy, dateIdentified
-1,	MovingImage,	1,	2012-07-26,	14:21,	1,	"",	"",	""
+eventID, basisOfRecord, recordedBy, eventDate, locationID, scientificName, identifiedBy, dateIdentified
+'1',	'MovingImage',	'1', '2012-07-26 14:21', '1', 'Neofelis Nebulosa', 'Camera3', '2012-07-26 15:06'
