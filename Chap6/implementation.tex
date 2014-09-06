@@ -112,6 +112,10 @@
 rule "Plantation night"
 	when New_Sensed_Data
 		if location of node is Plantation and time of day is night
+			write to file set.CSV
+				dateIdentified = \today
+				scientificName = sun bear
+				identifiedBy = node ID
 			Print "Likely a sun bear or malay civet"
 				\end{lstlisting}
 		
