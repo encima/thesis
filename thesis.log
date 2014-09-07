@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  7 SEP 2014 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  7 SEP 2014 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1108,12 +1108,6 @@ Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
 e 190.
 (pdftex.def)             Requested size: 330.56538pt x 132.96812pt.
  [26 <./Chap2/figures/facts_architecture.jpg>] [27]
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
-)
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 251.
-
 Overfull \hbox (19.64265pt too wide) in paragraph at lines 251--252
 \T1/ptm/m/n/12 In [[]], the In-ter-net of Things (IoT) is de-scribed as the ``c
 oncept of per-vas-ive things...which,
@@ -1137,21 +1131,21 @@ less on input line 8.
 
 
 
-] <Chap3/figures/field_centre.jpg, id=1268, 1638.12pt x 1228.59pt>
+] <Chap3/figures/field_centre.jpg, id=1267, 1638.12pt x 1228.59pt>
 File: Chap3/figures/field_centre.jpg Graphic file (type jpg)
 
 <use Chap3/figures/field_centre.jpg>
 Package pdftex.def Info: Chap3/figures/field_centre.jpg used on input line 11.
 (pdftex.def)             Requested size: 413.20515pt x 309.90251pt.
  [37 <./Chap3/figures/field_centre.jpg>]
-<Chap3/figures/dgmap.jpg, id=1275, 2099.845pt x 1374.13374pt>
+<Chap3/figures/dgmap.jpg, id=1274, 2099.845pt x 1374.13374pt>
 File: Chap3/figures/dgmap.jpg Graphic file (type jpg)
 
 <use Chap3/figures/dgmap.jpg>
 Package pdftex.def Info: Chap3/figures/dgmap.jpg used on input line 20.
 (pdftex.def)             Requested size: 413.20515pt x 270.39772pt.
 
-<Chap3/figures/hc500.jpg, id=1277, 313.17pt x 301.125pt>
+<Chap3/figures/hc500.jpg, id=1276, 313.17pt x 301.125pt>
 File: Chap3/figures/hc500.jpg Graphic file (type jpg)
 
 <use Chap3/figures/hc500.jpg>
@@ -1162,42 +1156,42 @@ Package pdftex.def Info: Chap3/figures/hc500.jpg used on input line 29.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [38 <./Chap3/figures/dgmap.jpg>] [39 <./Chap3/figures/hc500.jpg>] [40] [41]
-<Chap3/figures/pandaboard.jpg, id=1297, 602.25pt x 443.6575pt>
+<Chap3/figures/pandaboard.jpg, id=1296, 602.25pt x 443.6575pt>
 File: Chap3/figures/pandaboard.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pandaboard.jpg>
 Package pdftex.def Info: Chap3/figures/pandaboard.jpg used on input line 66.
 (pdftex.def)             Requested size: 206.60257pt x 152.19548pt.
 
-<Chap3/figures/igep.jpg, id=1298, 3468.96pt x 2312.64pt>
+<Chap3/figures/igep.jpg, id=1297, 3468.96pt x 2312.64pt>
 File: Chap3/figures/igep.jpg Graphic file (type jpg)
 
 <use Chap3/figures/igep.jpg>
 Package pdftex.def Info: Chap3/figures/igep.jpg used on input line 71.
 (pdftex.def)             Requested size: 206.60257pt x 137.72906pt.
 
-<Chap3/figures/waspmote.png, id=1299, 301.125pt x 280.04625pt>
+<Chap3/figures/waspmote.png, id=1298, 301.125pt x 280.04625pt>
 File: Chap3/figures/waspmote.png Graphic file (type png)
 
 <use Chap3/figures/waspmote.png>
 Package pdftex.def Info: Chap3/figures/waspmote.png used on input line 76.
 (pdftex.def)             Requested size: 206.60257pt x 192.14673pt.
  [42] [43] [44] [45]
-<Chap3/figures/bp_snr.png, id=1336, 729.4452pt x 445.665pt>
+<Chap3/figures/bp_snr.png, id=1335, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 129.
 (pdftex.def)             Requested size: 206.60257pt x 126.227pt.
 
-<Chap3/figures/dg_snr.png, id=1338, 728.4816pt x 445.1832pt>
+<Chap3/figures/dg_snr.png, id=1337, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
 Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 135.
 (pdftex.def)             Requested size: 206.60257pt x 126.25357pt.
  [46] [47] [48]
-<Chap3/figures/pelican.jpg, id=1358, 1284.8pt x 963.6pt>
+<Chap3/figures/pelican.jpg, id=1357, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
@@ -1207,28 +1201,28 @@ Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 176.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49] <Chap3/figures/IMG_0568.jpg, id=1368, 1927.2pt x 1084.05pt>
+[49] <Chap3/figures/IMG_0568.jpg, id=1367, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0568.jpg Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0568.jpg>
 Package pdftex.def Info: Chap3/figures/IMG_0568.jpg used on input line 203.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/IMG_0569.jpg, id=1369, 1927.2pt x 1084.05pt>
+<Chap3/figures/IMG_0569.jpg, id=1368, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0569.jpg Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0569.jpg>
 Package pdftex.def Info: Chap3/figures/IMG_0569.jpg used on input line 208.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/IMG_0570.jpg, id=1370, 1927.2pt x 1084.05pt>
+<Chap3/figures/IMG_0570.jpg, id=1369, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0570.jpg Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0570.jpg>
 Package pdftex.def Info: Chap3/figures/IMG_0570.jpg used on input line 213.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/PROC_IMG_0568.jpg, id=1371, 488.82625pt x 296.10625pt>
+<Chap3/figures/PROC_IMG_0568.jpg, id=1370, 488.82625pt x 296.10625pt>
 File: Chap3/figures/PROC_IMG_0568.jpg Graphic file (type jpg)
 
 <use Chap3/figures/PROC_IMG_0568.jpg>
@@ -1248,7 +1242,7 @@ nr.png> <./Chap3/figures/dg_snr.png> <./Chap3/figures/pelican.jpg>] [57 <./Chap
 
  (./Chap4/architecture.tex
 Chapter 4.
-<Chap4/figures/khasarch.png, id=1418, 423.5825pt x 428.60126pt>
+<Chap4/figures/khasarch.png, id=1417, 423.5825pt x 428.60126pt>
 File: Chap4/figures/khasarch.png Graphic file (type png)
 
 <use Chap4/figures/khasarch.png>
@@ -1273,8 +1267,11 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 ) [67]
-(./Chap5/figures/dwc_arch/meta.xml)
-<Chap5/figures/dwca.png, id=1507, 661.47125pt x 419.5675pt>
+(./Chap5/figures/dwc_arch/meta.xml
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
+)
+<Chap5/figures/dwca.png, id=1506, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
@@ -1913,10 +1910,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 494.
  ) 
 Here is how much of TeX's memory you used:
- 24170 strings out of 493117
- 418886 string characters out of 6135434
- 900830 words of memory out of 5000000
- 25602 multiletter control sequences out of 15000+600000
+ 24094 strings out of 493117
+ 417933 string characters out of 6135434
+ 900076 words of memory out of 5000000
+ 25528 multiletter control sequences out of 15000+600000
  52844 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,54p,1594b,1930s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1933,7 +1930,7 @@ pe1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (211 pages, 10142758 bytes).
+Output written on thesis.pdf (211 pages, 10142475 bytes).
 PDF statistics:
  3374 PDF objects out of 3580 (max. 8388607)
  3057 compressed objects within 31 object streams

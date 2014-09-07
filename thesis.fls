@@ -346,9 +346,6 @@ INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT Chap2/figures/facts_architecture.jpg
 INPUT Chap2/figures/facts_architecture.jpg
-INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrb8t.tfm
 OUTPUT Chap3/technical.aux
 INPUT Chap3/technical.tex
 INPUT Chap3/technical.tex
@@ -366,6 +363,7 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT Chap5/figures/dwc_arch/meta.xml
 INPUT Chap5/figures/dwc_arch/meta.xml
 INPUT Chap5/figures/dwc_arch/meta.xml
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/courier/pcrb8t.tfm
 INPUT Chap5/figures/dwca.png
 INPUT Chap5/figures/dwca.png
 INPUT Chap5/figures/dwc_arch/set.csv
