@@ -12,10 +12,14 @@ A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plain.bst
 A level-1 auxiliary file: App/appendix.aux
 Database file #1: refs/library.bib
-Warning--I didn't find a database entry for "bluetooth2012bluetooth"
-Warning--I didn't find a database entry for "dwc_sw"
 Warning--I didn't find a database entry for "lefort2011semantic"
 Warning--to sort, need author or key in dgfc
+Warning--to sort, need author or key in nest
+Warning--to sort, need author or key in fitbit
+Warning--to sort, need author or key in ifttt
+Warning--to sort, need author or key in xively
+Warning--to sort, need author or key in dweet
+Warning--to sort, need author or key in opensense
 Warning--there's a number but no volume in Akyildiz2002a
 Warning--there's a number but no volume in Bayat2012
 Warning--there's a number but no volume in Botts
@@ -31,6 +35,8 @@ Warning--empty journal in Fernandez-Lopez1999
 Warning--empty journal in Gruninger1995
 Warning--there's a number but no volume in Jimenez-Ruiz2008
 Warning--empty year in Maurer
+Warning--empty journal in Moreau2008
+Warning--there's a number but no volume in Moreau2008
 Warning--empty year in Pizzocaro
 Warning--there's a number but no volume in Raghunathan2002
 Warning--empty year in Rahman
@@ -43,45 +49,45 @@ Warning--empty journal in Uschold
 Warning--empty year in Uschold
 Warning--there's a number but no volume in Sarajevo2014
 Warning--there's a number but no volume in Zivkovic2004
-You've used 105 entries,
+You've used 115 entries,
             2118 wiz_defined-function locations,
-            1120 strings with 21975 characters,
-and the built_in function-call counts, 35970 in all, are:
-= -- 3522
-> -- 1867
-< -- 28
-+ -- 737
-- -- 632
-* -- 2548
-:= -- 5984
-add.period$ -- 309
-call.type$ -- 105
-change.case$ -- 629
+            1141 strings with 22489 characters,
+and the built_in function-call counts, 38025 in all, are:
+= -- 3698
+> -- 1944
+< -- 29
++ -- 771
+- -- 656
+* -- 2647
+:= -- 6269
+add.period$ -- 326
+call.type$ -- 115
+change.case$ -- 670
 chr.to.int$ -- 0
-cite$ -- 133
-duplicate$ -- 1320
-empty$ -- 2594
-format.name$ -- 632
-if$ -- 7430
+cite$ -- 151
+duplicate$ -- 1409
+empty$ -- 2816
+format.name$ -- 656
+if$ -- 7894
 int.to.chr$ -- 0
-int.to.str$ -- 105
-missing$ -- 96
-newline$ -- 515
-num.names$ -- 208
-pop$ -- 666
+int.to.str$ -- 115
+missing$ -- 100
+newline$ -- 552
+num.names$ -- 216
+pop$ -- 749
 preamble$ -- 1
-purify$ -- 526
+purify$ -- 558
 quote$ -- 0
-skip$ -- 1033
+skip$ -- 1129
 stack$ -- 0
-substring$ -- 2015
-swap$ -- 319
-text.length$ -- 28
+substring$ -- 2068
+swap$ -- 335
+text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 416
-warning$ -- 28
-while$ -- 357
-width$ -- 108
-write$ -- 1079
-(There were 31 warnings)
+type$ -- 454
+warning$ -- 36
+while$ -- 366
+width$ -- 118
+write$ -- 1148
+(There were 37 warnings)

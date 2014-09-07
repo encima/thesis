@@ -1,7 +1,8 @@
 \chapter{An Ontology for the K-HAS Architecture}\label{chap:ont}
 In this chapter, we explain the ontology that we developed to formally define the components within K-HAS, the structure of the sensed data, the users involved with the network, as well as the format of the sensed data that is passed through the network.
 
-This ontology is for those wanting to use K-HAS with a representation that is easy to reuse and deploy in a number of different scenarios, or even to select parts of the ontology that meet their requirements and implement those. Terms have been used to map to widely-used ontologies in the domains of scientific observation, sensors and people. For areas of the ontology where terms did not exist, we have used simple, common sensical names to represent them.
+This ontology is for those wanting to use K-HAS with a representation that is easy to reuse and deploy in a number of different scenarios, or even to select parts of the ontology that meet their requirements and implement those. Terms have been used to map to widely-used ontologies in the domains of scientific observation, sensors and people. For areas of the ontology where terms did not exist, we have used simple, common sensical names to represent them. 
+
 \section{Background}\label{bg}
 
 %COMPLETE THE BACKGROUND FOR EXISTING ONTOLOGIES
@@ -20,7 +21,7 @@ Looking into existing ontologies, we found that there had been many surveys on r
 
 Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{Botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SSN \cite{lefort2011semantic} and SensorML\cite{Botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
 
-We found one existing ontology that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, covered in Section \ref{ont:sumo}. This could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
+We found one existing ontology that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo}. This could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
 
 K-HAS has been developed to be used with any sensors and is not specific to wildlife cameras, therefore we also looked into sensor-based ontologies that concentrate on the hardware and the individual capabilities of each device within the network.
 
@@ -90,7 +91,7 @@ The structure of an observation within O\&M is focussed on the action and the re
 
 \subsubsection{Darwin Core SW}\label{bg:dwc}
 
-In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{dwc_sw} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
+In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{Baskauf} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
 
     \begin{figure}[h]
     \centering
@@ -100,6 +101,27 @@ In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, i
     \end{figure}
 
 While Darwin-SW does not represent all of the classes within the DwC namespace, it contains the core classes required to record an occurrence, to a more-detailed level than OBOE. The downside of this is that the specificity of the terms limits DwC to ecological observations, making it far less generic than OBOE and other alternatives. There are positive aspects that, for those that need to record ecological observations, DwC allows for a greater level of detail and  can be mapped to OBOE with ease.
+
+Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living specimen which, is this case, is a tree. \cite{Baskauf2011}. Darwin-SW, and Darwin Core, terms are used to describe the identification of the tree, such as the by whom it was identified, the date and the taxon. The full source can be seen in Appendix \ref{appendix:darwinsw} and includes links to existing related occurrences, other images of the individual and relationships to other resources.
+
+\begin{lstlisting}[caption={Darwin-SW Representation of an Identification}, label={ont:darwinsw}, language=XML]
+<dsw:hasIdentification>
+  <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/vanderbilt/12-126#2002-04-10baskauf">
+        <dcterms:description>Determination of Ginkgo biloba L. sensu Flora of North America (1993) for the individual http://bioimages.vanderbilt.edu/vanderbilt/12-126</dcterms:description>
+        <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification" />
+        
+        <!-- In lieu of stable external identifiers for taxon concepts, I'm defining some onsite -->
+        <dsw:toTaxon rdf:resource="http://bioimages.vanderbilt.edu/taxonConcepts#183269-fna1993" />
+        
+        <dwc:identifiedBy>Steven J. Baskauf</dwc:identifiedBy>
+        <dsw:idBy rdf:resource="http://bioimages.vanderbilt.edu/contact/baskauf" />
+        <dwc:dateIdentified>2002-04-10</dwc:dateIdentified>
+        
+        <!-- Relationship of the identification to other resources -->
+        <dsw:idBasedOn rdf:resource="http://bioimages.vanderbilt.edu/baskauf/10554"/>
+  </rdf:Description>
+</dsw:hasIdentification>
+\end{lstlisting}
 
 \subsection{Sensor-Centric Ontologies}
 Sensor-centric ontologies are more focussed on the structure of the sensor, the network and the sensing processes involved. 
@@ -270,7 +292,7 @@ To determine the scope that K-HAS should cover, we identified a set of competenc
 \hline
 Find all \textbf{Occurrences} of an \textbf{Individual} \\
 Find all \textbf{Occurrences} of an \textbf{Individual} at a \textbf{Location}\\
-Find all \textbf{Occurrence} within a specified \textbf{Date} and \textbf{Time} range \\
+Find all \textbf{Occurrences} within a specified \textbf{Date} and \textbf{Time} range \\
 Find all \textbf{Sensors} that have recorded an \textbf{Occurrence} of an \textbf{Individual}\\ 
 Find all \textbf{Locations} of an \textbf{Individual}  \\
 Find the storage location of a \textbf{Project} \\ 
@@ -453,6 +475,8 @@ Each term within a Darwin Core observation maps to K-HAS with only a few changes
 \section{Conclusion}
 
 In this chapter we have presented an ontology for the K-HAS architecture and described our methodology for development, as well as showing that existing ontologies are not complete enough to cover our requirements for K-HAS. The K-HAS ontology we present is an alignment of ontologies that are spread across multiple domains and provides a complete solution for a sensor network that deals with scientific observations and we believe this is the first extension ontology that combines sensor-centric and observation-centric ontologies. We have also extended this alignment to include concepts that model the unique features of K-HAS, but this ontology should be suitable for any sensor network that deals with observations.
+
+While the main benefits of this ontology is that it provides a high-level overview of our network architecture and allows those that want to implement K-HAS to re-use all, or some, parts of the ontology, it is also used in the network itself to allow sensed data to be mapped to data stores, define how classifications should be made and determine if certain users have permissions to edit an observation. Using the ontology, we can ensure that all nodes use the same data standard and use a pre-defined user model that can be easily implemented in variations of K-HAS. On top of this, the competency questions, outlined in Table \ref{eval:comp_qs} also form the basis of queries that can be carried out on sensed data, nodes, users and projects within K-HAS, linking them all through a common model.
 
 Our evaluation has shown that the ontology is logically consistent and that existing scientific observations, in other formats, can be mapped across to K-HAS with few changes. The competency questions we identified during the design phase of the ontology can all be satisfied by the resulting ontology and our K-HAS network currently stores data with a schema that follows the design of this ontology.
 
