@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  6 SEP 2014 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  7 SEP 2014 08:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1785,15 +1785,22 @@ Overfull \hbox (8.41023pt too wide) in paragraph at lines 30--31
 ams and micro-computers,
  []
 
-[159] [160]) [161] (./thesis.bbl
+[159] [160]
+
+LaTeX Warning: Citation `Moreau2008' on page 161 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Moreau2008' on page 161 undefined on input line 46.
+
+) [161] [162] (./thesis.bbl
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 44.
 
-[162
+[163
 
 
-] [163] [164]
+] [164] [165]
 Underfull \hbox (badness 1609) in paragraph at lines 170--176
 []\T1/ptm/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fernand
 o Losilla,
@@ -1805,13 +1812,13 @@ Underfull \hbox (badness 1067) in paragraph at lines 170--176
 Vicente
  []
 
-[165] [166] [167] [168] [169] [170]
+[166] [167] [168] [169] [170] [171]
 Underfull \hbox (badness 1939) in paragraph at lines 540--545
 \T1/ptm/m/n/12 Ren-ato Gio-vanni, Tim Robertson, and David Vie-glais.  Dar-win 
 Core:
  []
 
-[171]) [172]
+[172]) [173]
 \openout2 = `App/appendix.aux'.
 
  (./App/appendix.tex
@@ -1819,7 +1826,7 @@ Core:
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 1.
 
-[173
+[174
 
 
 
@@ -1830,29 +1837,29 @@ Appendix A.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 58.
 
-[174
+[175
 
 ]) (./Chap4/listings/dwc_arch/meta.xml) (./Chap4/listings/dwc_arch/set.csv) (./
-Chap4/listings/dwc_arch/images.csv) [175]
+Chap4/listings/dwc_arch/images.csv) [176]
 Appendix B.
 (./App/listings/align.owl
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 57.
 
-[176
+[177
 
-] [177]
+] [178]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 135.
-) [178]
+) [179]
 Appendix C.
 (./Chap4/listings/rules.drl)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 14.
 
-[179
+[180
 
 ]
 Appendix D.
@@ -1861,11 +1868,11 @@ Appendix D.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 50.
 
-[180
+[181
 
-] [181] [182] [183] [184]) [185]
+] [182] [183] [184] [185]) [186]
 Appendix E.
-<App/figures/roshan_extract.png, id=2894, 753.81625pt x 766.865pt>
+<App/figures/roshan_extract.png, id=2898, 753.81625pt x 766.865pt>
 File: App/figures/roshan_extract.png Graphic file (type png)
 
 <use App/figures/roshan_extract.png>
@@ -1880,7 +1887,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--490
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 490.
 
-[186
+[187
 
  <./App/figures/roshan_extract.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 494.
@@ -1903,10 +1910,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 494.
  ) 
 Here is how much of TeX's memory you used:
- 23899 strings out of 493117
- 414938 string characters out of 6135434
+ 23901 strings out of 493117
+ 414958 string characters out of 6135434
  899651 words of memory out of 5000000
- 25440 multiletter control sequences out of 15000+600000
+ 25441 multiletter control sequences out of 15000+600000
  52844 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,54p,1594b,1879s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1923,10 +1930,10 @@ pe1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (208 pages, 10125925 bytes).
+Output written on thesis.pdf (209 pages, 10127379 bytes).
 PDF statistics:
- 3222 PDF objects out of 3580 (max. 8388607)
- 2909 compressed objects within 30 object streams
- 1311 named destinations out of 1440 (max. 500000)
+ 3226 PDF objects out of 3580 (max. 8388607)
+ 2912 compressed objects within 30 object streams
+ 1312 named destinations out of 1440 (max. 500000)
  1209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
