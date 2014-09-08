@@ -47,6 +47,8 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/nomencl/nomencl.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/nomencl/nomencl.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty

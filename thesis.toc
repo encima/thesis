@@ -4,9 +4,9 @@
 \contentsline {chapter}{Contents}{vii}{Doc-Start}
 \contentsline {chapter}{List of Publications}{xiv}{Doc-Start}
 \contentsline {chapter}{List of Figures}{xv}{Doc-Start}
-\contentsline {chapter}{List of Tables}{xviii}{Doc-Start}
-\contentsline {chapter}{Listings\markboth {\MakeUppercase {Listings}}{\MakeUppercase {Listings}}}{xix}{Doc-Start}
-\contentsline {chapter}{List of Acronyms}{xx}{Doc-Start}
+\contentsline {chapter}{List of Tables}{xvii}{Doc-Start}
+\contentsline {chapter}{Listings\markboth {\MakeUppercase {Listings}}{\MakeUppercase {Listings}}}{xviii}{Doc-Start}
+\contentsline {chapter}{List of Acronyms}{xix}{Doc-Start}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Local Knowledge Problem}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}
@@ -40,10 +40,10 @@
 \contentsline {subsubsection}{Quality of Service}{22}{section*.11}
 \contentsline {subsection}{\numberline {2.3.2}Existing Middleware}{23}{subsection.2.3.2}
 \contentsline {subsubsection}{GSN}{23}{section*.12}
-\contentsline {subsubsection}{FACTS}{26}{section*.14}
-\contentsline {subsubsection}{ITA Sensor Fabric}{27}{section*.16}
-\contentsline {subsubsection}{Sensor Web Enablement}{28}{section*.17}
-\contentsline {subsubsection}{Internet of Things}{29}{section*.18}
+\contentsline {subsubsection}{FACTS}{25}{section*.14}
+\contentsline {subsubsection}{ITA Sensor Fabric}{28}{section*.16}
+\contentsline {subsubsection}{Sensor Web Enablement}{29}{section*.17}
+\contentsline {subsubsection}{Internet of Things}{30}{section*.18}
 \contentsline {section}{\numberline {2.4}Biodiversity and Environmental Monitoring Sensor Networks}{31}{section.2.4}
 \contentsline {subsubsection}{GLACSWEB}{33}{section*.19}
 \contentsline {subsubsection}{Reventador}{33}{section*.20}
@@ -52,111 +52,112 @@
 \contentsline {section}{\numberline {2.6}Summary}{35}{section.2.6}
 \contentsline {chapter}{\numberline {3}Hardware Research and Exploratory Experiments in a Rainforest Environment}{37}{chapter.3}
 \contentsline {section}{\numberline {3.1}Danau Girang Field Centre}{38}{section.3.1}
-\contentsline {section}{\numberline {3.2}Hardware}{42}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pandaboard}{43}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}IGEP v2}{44}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Waspmote}{44}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Conclusion}{44}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Transmission Media}{45}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Wi-Fi}{46}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}DigiMesh}{48}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Adapting and Optimising for Harsh Environments}{49}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Software}{50}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Triton}{50}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Conclusion}{54}{section.3.5}
-\contentsline {chapter}{\numberline {4}Wireless Sensor Network Architecture Design and Technical Details}{59}{chapter.4}
-\contentsline {section}{\numberline {4.1}K-HAS}{60}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Data Collection}{60}{subsection.4.1.1}
-\contentsline {subsubsection}{Knowledge Base}{61}{section*.33}
-\contentsline {subsection}{\numberline {4.1.2}Data Processing}{62}{subsection.4.1.2}
-\contentsline {subsubsection}{Knowledge Base}{63}{section*.34}
-\contentsline {subsection}{\numberline {4.1.3}Data Aggregation}{64}{subsection.4.1.3}
-\contentsline {subsubsection}{Knowledge Base}{65}{section*.35}
-\contentsline {subsubsection}{Feedback Loop}{66}{section*.36}
-\contentsline {section}{\numberline {4.2}Technological Components}{66}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Data Standard}{67}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Middleware}{70}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Knowledge Capture}{71}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Knowledge Base}{73}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Routing Protocol}{75}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Walkthrough}{77}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Scenario}{77}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Data Collection}{77}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Data Processing}{79}{subsection.4.3.3}
-\contentsline {subsubsection}{EXiF}{80}{section*.44}
-\contentsline {subsubsection}{Image Processing}{80}{section*.45}
-\contentsline {subsubsection}{Classification}{81}{section*.46}
-\contentsline {subsection}{\numberline {4.3.4}Data Aggregation}{82}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Conclusion}{83}{section.4.4}
-\contentsline {chapter}{\numberline {5}An Ontology for the K-HAS Architecture}{85}{chapter.5}
-\contentsline {section}{\numberline {5.1}Background}{85}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Observation-Centric Ontologies}{87}{subsection.5.1.1}
-\contentsline {subsubsection}{OBOE}{87}{section*.47}
-\contentsline {subsubsection}{O\&M}{88}{section*.49}
-\contentsline {subsubsection}{Darwin Core SW}{90}{section*.51}
-\contentsline {subsection}{\numberline {5.1.2}Sensor-Centric Ontologies}{91}{subsection.5.1.2}
-\contentsline {subsubsection}{SensorML}{91}{section*.53}
-\contentsline {subsubsection}{SSN}{92}{section*.54}
-\contentsline {subsubsection}{SUMO}{93}{section*.56}
-\contentsline {subsubsection}{Findings}{93}{section*.57}
-\contentsline {section}{\numberline {5.2}Method}{94}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Identify Purpose}{94}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Build the Ontology}{95}{subsection.5.2.2}
-\contentsline {subsubsection}{Capture}{95}{section*.58}
-\contentsline {subsubsection}{Code}{96}{section*.59}
-\contentsline {subsubsection}{Integrate Existing Ontologies}{96}{section*.60}
-\contentsline {subsection}{\numberline {5.2.3}Evaluation}{96}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Documentation}{97}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Results}{97}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Identify Purpose}{97}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Build the Ontology - Capture}{98}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Build the Ontology - Code}{100}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Build the Ontology - Integrate Existing Ontologies}{100}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Extend the Ontology}{101}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Evaluation}{102}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Using the Ontology in an Application}{103}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Competency Questions}{103}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Comparing the Ontology with a Collection of Documents}{104}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Conclusion}{105}{section.5.5}
-\contentsline {chapter}{\numberline {6}Deployment in the Field}{113}{chapter.6}
-\contentsline {section}{\numberline {6.1} Deployment Architecture}{114}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Data Collection}{115}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{116}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Deployment}{117}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{118}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{119}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Results}{120}{section.6.3}
-\contentsline {section}{\numberline {6.4}Rules}{121}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Data Processing and Data Aggregation}{122}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Existing Data}{124}{subsection.6.4.2}
-\contentsline {subsubsection}{Semi Structured Interviews}{124}{section*.71}
-\contentsline {subsubsection}{Existing Data}{126}{section*.72}
-\contentsline {section}{\numberline {6.5}Conclusion}{127}{section.6.5}
-\contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{129}{chapter.7}
-\contentsline {section}{\numberline {7.1}Simulation Environment}{130}{section.7.1}
-\contentsline {section}{\numberline {7.2}Experiment Design}{131}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{134}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Routing}{135}{subsection.7.2.2}
-\contentsline {subsubsection}{Discovery}{136}{section*.75}
-\contentsline {subsubsection}{Transmission}{137}{section*.76}
-\contentsline {subsection}{\numberline {7.2.3}Capture}{138}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Processing}{138}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}Results}{139}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Duration}{142}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Network Saturation}{144}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4}Conclusion}{146}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{155}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{156}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{157}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{157}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{157}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{158}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}Future Work}{159}{section.8.2}
-\contentsline {chapter}{Bibliography}{163}{section.8.2}
-\contentsline {chapter}{Appendices}{175}{section*.87}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{176}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{178}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{180}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{183}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{184}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{190}{Appendix.1.F}
+\contentsline {section}{\numberline {3.2}Hardware}{41}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Pandaboard}{42}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}IGEP v2}{42}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Waspmote}{43}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Conclusion}{43}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Transmission Media}{44}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Wi-Fi}{44}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}DigiMesh}{47}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Adapting and Optimising for Harsh Environments}{48}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Software}{49}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Triton}{49}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Conclusion}{53}{section.3.5}
+\contentsline {chapter}{\numberline {4}Wireless Sensor Network Architecture Design and Technical Details}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}K-HAS}{56}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Data Collection}{56}{subsection.4.1.1}
+\contentsline {subsubsection}{Knowledge Base}{56}{section*.33}
+\contentsline {subsection}{\numberline {4.1.2}Data Processing}{58}{subsection.4.1.2}
+\contentsline {subsubsection}{Knowledge Base}{58}{section*.34}
+\contentsline {subsection}{\numberline {4.1.3}Data Aggregation}{59}{subsection.4.1.3}
+\contentsline {subsubsection}{Knowledge Base}{60}{section*.35}
+\contentsline {subsubsection}{Feedback Loop}{61}{section*.36}
+\contentsline {section}{\numberline {4.2}Technological Components}{62}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Data Standard}{62}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Middleware}{66}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Knowledge Capture}{67}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Knowledge Base}{69}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Routing Protocol}{71}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Walkthrough}{72}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Scenario}{72}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Data Collection}{73}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Data Processing}{74}{subsection.4.3.3}
+\contentsline {subsubsection}{EXIF}{75}{section*.44}
+\contentsline {subsubsection}{Image Processing}{76}{section*.45}
+\contentsline {subsubsection}{Classification}{76}{section*.46}
+\contentsline {subsection}{\numberline {4.3.4}Data Aggregation}{77}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Conclusion}{78}{section.4.4}
+\contentsline {chapter}{\numberline {5}An Ontology for the K-HAS Architecture}{80}{chapter.5}
+\contentsline {section}{\numberline {5.1}Background}{80}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Observation-Centric Ontologies}{82}{subsection.5.1.1}
+\contentsline {subsubsection}{OBOE}{82}{section*.47}
+\contentsline {subsubsection}{O\&M}{84}{section*.49}
+\contentsline {subsubsection}{Darwin Core SW}{86}{section*.51}
+\contentsline {subsubsection}{SUMO - Sensor Data Ontology}{87}{section*.53}
+\contentsline {subsection}{\numberline {5.1.2}Sensor-Centric Ontologies}{88}{subsection.5.1.2}
+\contentsline {subsubsection}{SensorML}{88}{section*.54}
+\contentsline {subsubsection}{SSN}{89}{section*.55}
+\contentsline {subsubsection}{SUMO - Sensor Hierarchy Ontology}{90}{section*.57}
+\contentsline {subsubsection}{Findings}{91}{section*.58}
+\contentsline {section}{\numberline {5.2}Method}{92}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Identify Purpose}{92}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Build the Ontology}{92}{subsection.5.2.2}
+\contentsline {subsubsection}{Capture}{93}{section*.59}
+\contentsline {subsubsection}{Code}{93}{section*.60}
+\contentsline {subsubsection}{Integrate Existing Ontologies}{93}{section*.61}
+\contentsline {subsection}{\numberline {5.2.3}Evaluation}{94}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Documentation}{94}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Results}{95}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Identify Purpose}{95}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Build the Ontology - Capture}{96}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Build the Ontology - Code}{96}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Build the Ontology - Integrate Existing Ontologies}{98}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Extend the Ontology}{100}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Evaluation}{100}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Using the Ontology in an Application}{102}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Competency Questions}{102}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Comparing the Ontology with a Collection of Documents}{103}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Conclusion}{104}{section.5.5}
+\contentsline {chapter}{\numberline {6}Deployment in the Field}{108}{chapter.6}
+\contentsline {section}{\numberline {6.1} Deployment Architecture}{109}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Data Collection}{110}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{111}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Deployment}{112}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Direct Connection}{113}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{113}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Results}{114}{section.6.3}
+\contentsline {section}{\numberline {6.4}Rules}{115}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Data Processing and Data Aggregation}{115}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Existing Data}{117}{subsection.6.4.2}
+\contentsline {subsubsection}{Semi Structured Interviews}{117}{section*.72}
+\contentsline {subsubsection}{Existing Data}{119}{section*.73}
+\contentsline {section}{\numberline {6.5}Conclusion}{121}{section.6.5}
+\contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{123}{chapter.7}
+\contentsline {section}{\numberline {7.1}Simulation Environment}{124}{section.7.1}
+\contentsline {section}{\numberline {7.2}Experiment Design}{125}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{128}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Routing}{129}{subsection.7.2.2}
+\contentsline {subsubsection}{Discovery}{129}{section*.76}
+\contentsline {subsubsection}{Transmission}{130}{section*.77}
+\contentsline {subsection}{\numberline {7.2.3}Capture}{131}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Processing}{132}{subsection.7.2.4}
+\contentsline {section}{\numberline {7.3}Results}{133}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Duration}{135}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Network Saturation}{137}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Conclusion}{140}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{143}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{144}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{145}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{145}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{145}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{146}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Future Work}{147}{section.8.2}
+\contentsline {chapter}{Bibliography}{150}{section.8.2}
+\contentsline {chapter}{Appendices}{167}{section*.88}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{168}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{170}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{172}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{175}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{176}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{182}{Appendix.1.F}
