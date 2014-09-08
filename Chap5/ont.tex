@@ -47,7 +47,7 @@ Figure \ref{oboe} shows the basic structure of a core OBOE observation, outlinin
 The primary benefits of OBOE are that it is generic enough to cover almost all types of scientification observation and domain extensions allow for more specific details to be stored.
 
 \subsubsection{O\&M}
-The OpenGIS Consortium (OGC) Observations and Measurements Standard aims to provide a framework suitable for recording any observation made by a sensor, regardless of the domain \cite{Botts}. 
+The Open Geospatial Consortium (OGC) Observations and Measurements Standard aims to provide a framework suitable for recording any observation made by a sensor, regardless of the domain \cite{Botts}. 
 
 The key difference with O\&M, when compared to other ontologies, is that \textit{observation} and \textit{measurement} are not just classes. They also denote an action.
 An observation is an action that causes a result, yielding a value and a measurement is a set of operations that provide some result(s).
@@ -102,7 +102,7 @@ In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, i
 
 While Darwin-SW does not represent all of the classes within the DwC namespace, it contains the core classes required to record an occurrence, to a more-detailed level than OBOE. The downside of this is that the specificity of the terms limits DwC to ecological observations, making it far less generic than OBOE and other alternatives. There are positive aspects that, for those that need to record ecological observations, DwC allows for a greater level of detail and  can be mapped to OBOE with ease.
 
-Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living specimen which, is this case, is a tree. \cite{Baskauf2011}. Darwin-SW, and Darwin Core, terms are used to describe the identification of the tree, such as the by whom it was identified, the date and the taxon. The full source can be seen in Appendix \ref{appendix:darwinsw} and includes links to existing related occurrences, other images of the individual and relationships to other resources.
+Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living specimen which, is this case, is a tree. \cite{Baskauf2011}. Darwin-SW, and Darwin Core, terms are used to describe the identification of the tree, such as the by whom it was identified, the date and the taxon. The full source can be seen in Appendix \ref{appendix:dsw} and includes links to existing related occurrences, other images of the individual and relationships to other resources.
 
 \begin{lstlisting}[caption={Darwin-SW Representation of an Identification}, label={ont:darwinsw}, language=XML]
 <dsw:hasIdentification>
@@ -110,7 +110,7 @@ Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living spec
         <dcterms:description>Determination of Ginkgo biloba L. sensu Flora of North America (1993) for the individual http://bioimages.vanderbilt.edu/vanderbilt/12-126</dcterms:description>
         <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification" />
         
-        <!-- In lieu of stable external identifiers for taxon concepts, I'm defining some onsite -->
+        <!-- In lieu of stable external identifiers for taxon concepts, Im defining some onsite -->
         <dsw:toTaxon rdf:resource="http://bioimages.vanderbilt.edu/taxonConcepts#183269-fna1993" />
         
         <dwc:identifiedBy>Steven J. Baskauf</dwc:identifiedBy>

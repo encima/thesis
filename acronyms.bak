@@ -1,0 +1,21 @@
+\chapter*{List of Acronyms} 
+\begin{acronym}
+\acro{DA}{Data Aggregation}
+\acro{DC}{Data Collection}
+\acro{DG}{Danau Girang}
+\acro{DGFC}{Danau Girang Field Centre}
+\acro{DP}{Data Processing}
+\acro{DwC}{Darwin Core}
+\acro{FN}{False Negative}
+\acro{FP}{False Positive}
+\acro{GK}{Global Knowledge}
+\acro{HK}{High Knowledge}
+\acro{K-HAS}{Knowledge-Based Hierarchical Architecture for Sensing}
+\acro{LK}{Local Knowledge}
+\acro{MK}{Minimal Knowledge}
+\acro{LORIS}{Local-knowledge Ontology-based Remote-sensing Informatics System}
+\acro{NK}{No Knowledge}
+\acro{TN}{True Negative}
+\acro{TP}{True Positive}
+\acro{WSN}{Wireless Sensor Network}
+\end{acronym}

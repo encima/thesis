@@ -38,7 +38,7 @@ When the data is recorded by the DC node, the knowledge base is fired and infere
 
 Once a trigger has been processed, the data is packaged and then sent on to the Data Processing (DP) node.
 
-	\subsection{Data Processing}
+	\subsection{Data Processing}\label{khas:dp}
 	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not perform any direct sensing. 
 
 	Due to the greater capabilities, DP nodes have a much shorter battery life than DC nodes and a network typically consists of fewer DP nodes. These capabilities, such as increased memory and higher processing power, allow DP nodes to run a rule management system, that would not be possible on nodes unable to run a desktop grade operating system, that is able to handle more complex rules and process more than just files, they can perform the same tasks as most modern computers, such as: image processing, audio processing or reading metadata from files that requires extra libraries. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
