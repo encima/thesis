@@ -1,4 +1,4 @@
-\chapter{Wireless Sensor Network Architecture Design and Technical Details}\label{chap:arch}
+\chapter{Wireless Sensor Network Architecture Design}\label{chap:arch}
 	In this chapter, we explain our proposed network architecture that uses local and global knowledge to make informed routing decisions and to classify sensed data within the network. Our approach, K-HAS, uses a three-tiered, hierarchical approach with each subsequent tier providing increased knowledge processing capabilities. 
 
 	We aim to show that sensors capable of processing knowledge will provide a more efficient network and be able to prioritise the delivery of interesting sensed data. We also believe that human input is a valuable way for such a network to learn about classifications it has made correctly, and incorrectly, and use that knowledge to inform future classifications. To prove this, we have developed an architecture that uses different levels of knowledge processing throughout the network, the Knowledge-based Hierarchical Architecture for Sensing (K-HAS).
@@ -23,14 +23,14 @@
 
 	\subsubsection{Knowledge Base}
 	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of deployment. This is because they do not have the processing power to handle a complete knowledge base and their hardware limitations prevent them from updating their knowledge bases once running. Some nodes within this class do not have the capability to process text files within the file system and, therefore, must have the knowledge added to their operational code. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
-	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base and highlights that the core structure of this file is simply a list of if statements that can be executed one after the other. Forward chaing is not used here because processing times need to be kept to a minimum and a chain of rules being fired could easily overwhelm the node. If any rules are fired that suggest the observation may be interesting, it is prioritised through the network and potential classifications are encoded within the observation before it is sent on.
+	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base and highlights that the core structure of this file is simply a list of if statements that can be executed one after the other. Forward chaining is not used here because processing times need to be kept to a minimum and a chain of rules being fired could easily overwhelm the node. If any rules are fired that suggest the observation may be interesting, it is prioritised through the network and potential classifications are encoded within the observation before it is sent on.
 
-\begin{lstlisting}[breaklines=true, caption={Example DC Node Rules}, label={kb:dcrule}]
+\begin{lstlisting}[breaklines=true, caption={Pseudocode DC Node Rules}, label={kb:dcrule}]
 if month of observation is JUNE AND time of observation is between 17:00 and 19:00 and active otter project is TRUE
-	add classification to observation(‘Potential Otter sighting’)
+	add classification to observation(`Potential Otter sighting')
 	prioritise observation as interesting
 if temperature is 37 AND time of observation is between 01:00 and 05:00 and active leopard project is TRUE
-	add classification to observation(‘Potential Leopard sighting’)
+	add classification to observation(`Potential Leopard sighting')
 	prioritise observation as interesting
 \end{lstlisting}
 
@@ -96,9 +96,9 @@ Darwin Core is a body of standards for representing, sharing and storing observa
 The standard structure of a Darwin Core Archive (DwC-A) is a star record; an archive of files with a core metadata file that describes the content of all other files within the archive.
 
 The record shown in figure \ref{dwca} represents a DwC-A that conforms to the star schema. The ecological metadata language (EML) document contains all of the details about the project, such as who is involved, the institution code, contact details and the project(s) related to the observation. Listing \ref{dwc:eml} shows a fragment of the EML file and a complete DwC archive can be found in Appendix \ref{appendix:dwc}.
-
+\vspace{\baselineskip}
 % \lstinputlisting[language=XML, caption=Darwin Core Ecological Metadata File, label=dwc:eml]{Chap5/figures/dwc_arch/eml.xml}
-\begin{lstlisting}[caption=Darwin Core Ecological Metadata File, label=dwc:eml, breaklines=true, language=XML]
+\begin{lstlisting}[caption=Darwin Core Ecological Metadata File Fragment, label=dwc:eml, breaklines=true, language=XML]
  <dataset>
 <alternateIdentifier>e71fda1c-dcb9-4eae-81a9-183114978e44</alternateIdentifier>
 <title>Images from Danau Girang during the PTY Project 2011-12</title>
@@ -123,7 +123,7 @@ The record shown in figure \ref{dwca} represents a DwC-A that conforms to the st
  \end{lstlisting}
 
 The descriptor file is an xml document that contains the column headers in the attached files and the mappings of those headers to DwC terms, an example file is shown in Listing \ref{dwc:meta}. This file shows that this is an archive containing the sighting of an individual, and that the sighting has been split into two files. The largest benefit of Darwin Core is its modularity. Extension files can be added to enrich the data for each occurrence. In this example the extension file is named as \textit{images.csv} and contains image-based evidence to support the observation.
-
+\vspace{\baselineskip}
 \noindent\begin{minipage}{\textwidth}
 \lstinputlisting[language=XML, caption=Darwin Core Descriptor File, label=dwc:meta]{Chap5/figures/dwc_arch/meta.xml}
 \end{minipage}
@@ -136,7 +136,7 @@ The descriptor file is an xml document that contains the column headers in the a
     \end{figure}
 
 Listing \ref{dwc:set} shows the comma-separated central file (Basis of Resource) containing the core details of the observation, i.e. the animal observed, and the column headings map to the descriptor file. Other linked files are typically linked by the unique ID of the observation, containing information that extends the observation and provides further context.
-
+\vspace{\baselineskip}
 \noindent\begin{minipage}{\textwidth}
 \lstinputlisting[caption=Darwin Core Occurrence Data, label=dwc:set]{Chap5/figures/dwc_arch/set.csv}
 \end{minipage}

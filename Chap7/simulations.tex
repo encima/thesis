@@ -1,13 +1,13 @@
 \chapter{Simulation Experiments and Evaluation of the Architecture}
 In this chapter, we present the results of simulation experiments developed to evaluate and explore choices offered by our K-HAS architecture. Using nodes with knowledge-processing capabilities to deliver interesting data quicker than a standard WSN, we have developed a simulation for our proposed architecture, K-HAS, as well as variations on the knowledge processing capabilities of the nodes at each tier.
 
-The simulations were developed to determine whether K-HAS is the best mix of processing and collection nodes that maximises network lifetime while minimising the transmission time of interesting data. This was done by using a network structure, that matched our motivating scenario, and changing the knowledge-processing capabilities on each node at every tier; ranging from no knowlege on every node to the maximum knowledge-processing capabilities across the network. We aim to show that the more knowledge-processing capabilities that are pushed out towards the edge of the network, the more the network lifetime is reduced.
+The simulations were developed to determine whether K-HAS is the best mix of processing and collection nodes that maximises network lifetime while minimising the transmission time of interesting data. This was done by using a network structure, that matched our motivating scenario, and changing the knowledge-processing capabilities on each node at every tier; ranging from no knowlege on every node to the maximum knowledge-processing capabilities across the network. We aim to show that the more knowledge-processing capabilities that are pushed out towards the edge of the network, the more effective the network becomes at prioritising data that it believes to be interesting and delaying what it believes to be empty.
 
 This chapter is structured as follows. Section \ref{sim:sim} describes the implementation of the network. Section \ref{sim:imp} outlines the results and Section \ref{sim:res} compares these with LORIS and the current solution in our motivating scenario. Section \ref{sim:conc} concludes our findings and highlights areas that require further experimentation.
 
 \section{Simulation Environment}\label{sim:sim}
 
-Using RePast Simphony \cite{Collier2003}, a agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. Similar to the chaining of rules we described with Drools, ticks are the core of RePast's scheduling mechanism which can be used to schedule single events, as well as chaining events. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run that would simulate the camera's capture of an image and transmitting it to an endpoint.
+Using RePast Simphony \cite{Collier2003}, a agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run that would simulate the camera's capture of an image and transmitting it to an endpoint.
 %train may take three hundred for it to arrive at its destination. When the simulation reaches three hundred ticks, a scheduled event could run that would open the train doors, make an announcement and so on.
 
 RePast was chosen because we did not require the low level network configuration provided by other tools, such as NS2 \cite{mccanne1997network}, but we did need to modify and record the behaviour between nodes as they capture and process sensed data. RePast's event scheduling allows for nodes to be modelled as agents and the dynamic configuration allowed us to modify the simulations during run time. The aim of these simulations was to visualise how different knowledge-processing capabilities can affect the prioritisation and transmission time of observations, as well as the accuracy of their classifications. RePast allowed us to utilise existing Java code we were using in our K-HAS middleware and develop a base simulation that could be configured easily with XML files.
@@ -34,7 +34,7 @@ A 2D space is used to display the grid and the simulation is run within RePast's
 		\item High Knowledge (HK): The node possesses high knowledge processing capabilities and is able to process data, metadata and use a dynamic rule base (Section \ref{khas:dp}).
 	\end{itemize}
 	
-	HK nodes, while their higher knowledge-processing capabilities allow them to classify observations with a greater accuracy, their battery life is much shorter than MK nodes, due to their increased power needs (Section \ref{tech:hw}. In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty and, in our scenario, match to a species, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. Twenty five nodes have been used because this is the number of cameras used when we first visited Danau Girang and the number we experimented with in subsequent visits. These scenarios were developed to determine which combination of MK, NK and HK nodes allowed for the greatest network lifetime, as well as the greatest accuracy when delivering interesting sensed data, and they have been outlined below:
+	The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty and, in our scenario, match to a species, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. Twenty five nodes have been used because this is the number of cameras used when we first visited Danau Girang and the number we experimented with in subsequent visits. These scenarios were developed to determine which combination of MK, NK and HK nodes allowed for the greatest network lifetime, as well as the greatest accuracy when delivering interesting sensed data, and they have been outlined below:
 	
 	\begin{itemize}
 		\item NK-ALL: Sensing and routing nodes possess no knowledge processing capabilities.
@@ -44,7 +44,7 @@ A 2D space is used to display the grid and the simulation is run within RePast's
 		\item HK-ALL: Sensing and routing nodes have high processing capabilities.
 	\end{itemize}
 
-Before implementing, we designed the agents required based largely on the existing ontology. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS. We used these to create properties for each transmission medium that could be used by each node object. Table \ref{sim:tab:terms} shows how the K-HAS terms, introduced in Chapter \ref{chap:arch}, and LORIS terms, detailed in Chapter \ref{chap:imp}, map to the node types described above. The nodes used in our simulations map directly to the ontology.
+Before implementing, we designed the agents required based largely on the ontology proposed in Chapter \ref{chap:ont}. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS. We used these to create properties for each transmission medium that could be used by each node object. Table \ref{sim:tab:terms} shows how the K-HAS terms, introduced in Chapter \ref{chap:arch}, and LORIS terms, detailed in Chapter \ref{chap:imp}, map to the node types described above. The nodes used in our simulations map directly to the ontology.
 
 \begin{table}[h]
 \centering
@@ -55,7 +55,7 @@ Before implementing, we designed the agents required based largely on the existi
 K-HAS                 & DC Node                & Sensing Node + MK         \\
                       & DP Node                & Routing Node + HK         \\
                       & DA Node                & Central Node + HK         \\
-LORIS                 & Buckeye                & Sensing Node + MK         \\
+LORIS                 & Buckeye                & Sensing Node + NK         \\
                       & DA and DP              & Routing/Central Node + HK \\
 \hline
 \end{tabular}
@@ -143,7 +143,7 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 			\item False negative (FN): An image containing an animal has no ROI extracted.
 		\end{description}
 	
-	Using the results of our image processing application (explained in Section \ref{tech:sf:triton}) for the properties of HK processing, we encoded that an 82\% accuracy at detecting TP images, with a 98\% accuracy for finding TN images. Nodes with MK do not have the ability to mark an image as empty, but they can mark an image as interesting. However, the results we have from our rule base are not as extensive as the results we have for Triton (due to limited local knowledge and existing rules approved by domain experts), so instead we use a predefined 10\% accuracy for detecting TPs. This 10\% is used because we needed to show the difference between a node with MK and a node with HK. HK nodes have the ability to process the contents and metadata of sensed data, with access to libraries and a dynamic knowledge base. MK nodes are able to look at the basic metadata and only have a static knowledge base, limited in size. In future work, we could test with greater accuracy or, with more rules, we could run experiments to find the exact accuracy of an MK node. An interesting image is an image that contains an animal and can be either a TP or FN. Empty images are those that have no contents and can be either FP or TN.
+	Using the results of our image processing application (explained in Section \ref{tech:sf:triton}) for the properties of HK processing, we encoded that an 82\% accuracy at detecting TP images, with a 98\% accuracy for finding TN images. Nodes with MK do not have the ability to mark an image as empty, but they can mark an image as interesting. However, the results we have from our rule base are not as extensive as the results we have for Triton (due to limited local knowledge and existing rules approved by domain experts), so instead we use a predefined 10\% accuracy for detecting TPs. This 10\% is used because we needed to show the difference between a node with MK and a node with HK. HK nodes have the ability to process the contents and metadata of sensed data, with access to libraries and a dynamic knowledge base. MK nodes are able to look at the basic metadata and only have a static knowledge base, limited in size. In future work, we could test with greater accuracy or, with more rules, we could run experiments to find the exact accuracy of an MK node. An interesting image is an image that contains an animal and can be either a TP or FN. Empty images are those that do not contain an animal and can be either FP or TN.
 	
 
 \section{Results}\label{sim:res}
@@ -160,15 +160,15 @@ The simulations were run in two modes: ideal transmission rate and variable tran
 	\label{fig:res:ideal:int}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering 
-\begin{subfigure}{.8\textwidth}
-  \includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_total}
+\begin{subfigure}{.9\textwidth}
+  \includegraphics{Chap7/figures/ideal/all_total}
 	\caption{Ideal Transmission Rates.}
 	\label{fig:res:ideal:dur}
 \end{subfigure}
-\begin{subfigure}{.8\textwidth}
-  \includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_total}
+\begin{subfigure}{.9\textwidth}
+  \includegraphics{Chap7/figures/real/all_total}
 	\caption{Variable Transmission Rate.}
 	\label{fig:real:dur}
 \end{subfigure}
@@ -200,9 +200,28 @@ HKALL & 42511 & 9671        & 22.7           & 32840 & 18.9     \\
 \label{sim:tab:ideal}
 \end{table}
 
-During our visits to Danau Girang, we performed experiments for many different transmission methods: Wi-Fi, Zigbee and RF. The results were always different to what we experienced in the UK and the variation in connectivity in just a few minutes, or metres, was astounding. Days where the humidity was one percent higher than the previous day could result in a 50\% range drop and rain for a few minutes could drop all connections for an hour afterwards. Modelling this in our simulations was necessary to accurately plan for what we could expect in Malaysia. Our planned network topology in Danau Girang has routing and central nodes so close to each other that the Wi-Fi connection remained fairly stable and connectivity should remain at 100\%. When simulating sensing nodes, we randomly set their transmission rate between 20 and 250kbps at the start of each run. As each scenario is being run 100 times, this method is more efficient while still allowing for variation in the transmission rates. 
+During our visits to Danau Girang, we performed experiments for many different transmission methods: Wi-Fi, Zigbee and RF. The results were always different to what we experienced in the UK and the variation in connectivity in just a few minutes, or metres, was extreme in some cases. Days where the humidity was one percent higher than the previous day could result in a 50\% range drop and rain for a few minutes could drop all connections for an hour afterwards. Modelling this in our simulations was necessary to accurately plan for what we could expect in Malaysia. Our planned network topology in Danau Girang has routing and central nodes so close to each other that the Wi-Fi connection remained fairly stable and connectivity should remain at 100\%. When simulating sensing nodes, we randomly set their transmission rate between 20 and 250kbps at the start of each run. As each scenario is being run 100 times, this method is more efficient while still allowing for variation in the transmission rates. 
 
 The number of interesting observations received in each scenario remained similar to the ideal mode (see Tables \ref{sim:tab:ideal} and \ref{sim:tab:variable}), as expected, but the fluctuation in transmission time (Figure \ref{fig:real:dur}) is much larger, with some images taking 800 seconds, or 13 minutes. In our motivating scenario, this is not much of an issue. However, if the image was of a hunter or the scenario was building intrusion detection system, then thirteen minutes is a long delay that could cause considerable damage. Of course, using all Wi-Fi connections is a more feasible option, but situations where long range is required prevents this and these simulations do not currently take into account broken links in the network, where changes to the node's environment (such as a fallen tree) that could block its signal or an increase in humidity, could cause it to drop out of range for minutes or even hours. 
+
+
+
+The duration of an observation with both a variable and ideal transmission rate does not fluctuate largely and Figure \ref{fig:res:ideal:int} shows that the processing power of MK-HK vs. HK-ALL is identical. However, Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that the primary benefit of pushing HK processing capabilities out to the edge of the network allows for better prioritisation of observations. Sensing nodes with HK are able to determine whether an observation is interesting or empty with much greater accuracy than MK and these capabilities, right at the edge of the network, allows for an interesting observation to be processed as soon as it is captured and sent without further processing directly to a central node. The only delays being the processing time itself and the sending queue of intermediate nodes. Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that, when a network is not saturated, interesting and empty observations take a similar amount of time to pass through the network; with the exception of the HK-ALL scenario. WSNs with much worse transmission rates could experience a much larger time difference between interesting observations, especially when using long range FM frequencies that can transfer only a few bytes a second.
+\begin{figure}[H]
+\centering
+    \begin{subfigure}{\textwidth}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_int}
+	\caption{Interesting Observations.}
+	\label{fig:real:int:dur}
+	\end{subfigure}	
+
+	\begin{subfigure}{\textwidth}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_empty}
+	\caption{Empty Observations.}
+	\label{fig:real:empty:dur}
+	\end{subfigure}	
+\caption{Mean Duration under Variable Transmission Rate}
+\end{figure}
 
 \begin{table}[h]
 \centering
@@ -221,24 +240,9 @@ HKALL & 43011 & 9935        & 23.1           & 33076 & 18.9     \\
 \label{sim:tab:variable}
 \end{table}
 
-The duration of an observation with both a variable and ideal transmission rate does not fluctuate largely and Figure \ref{fig:res:ideal:int} shows that the processing power of MK-HK vs. HK-ALL is identical. However, Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that the primary benefit of pushing HK processing capabilities out to the edge of the network allows for better prioritisation of observations. Sensing nodes with HK are able to determine whether an observation is interesting or empty with much greater accuracy than MK and these capabilities, right at the edge of the network, allows for an interesting observation to be processed as soon as it is captured and sent without further processing directly to a central node. The only delays being the processing time itself and the sending queue of intermediate nodes. Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that, when a network is not saturated, interesting and empty observations take a similar amount of time to pass through the network; with the exception of the HK-ALL scenario. WSNs with much worse transmission rates could experience a much larger time difference between interesting observations, especially when using long range FM frequencies that can transfer only a few bytes a second.
-\begin{figure}[h]
-\centering
-    \begin{subfigure}{0.8\textwidth}
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_int}
-	\caption{Interesting Observations.}
-	\label{fig:real:int:dur}
-	\end{subfigure}	
-
-	\begin{subfigure}{0.8\textwidth}
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_empty}
-	\caption{Empty Observations.}
-	\label{fig:real:empty:dur}
-	\end{subfigure}	
-\caption{Mean Duration under Variable Transmission Rate}
-\end{figure}
-
 \subsection{Network Saturation}
+
+
 
 With the transmission rates of Zigbee and Wi-Fi, an observation of three images, each under a megabyte in size, can be processed and sent in a matter of minutes; when there are only a few hops. However, with these network topologies, we are unable to see how each scenario handles prioritisation when it is unable to send every observation captured. This can be done by either reducing the transmission rate or increasing the chance of an observation being captured. We chose to increase the chance of an observation being captured and maintaining the transmission rate in order to keep the simulations in line with our motivating scenario. Existing data from Danau Girang has shown a seasonality change in the number of images captured and we know that some sites are more active than others, therefore making a higher chance of capture more fitting. 
 
@@ -265,7 +269,7 @@ We simulated this across all five scenarios and the results are detailed in this
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/saturated/all_total}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_total}
 	\caption{Mean Duration of All Observations Across All Scenarios}
 	\label{fig:sat:total:dur}
 	\end{figure}
@@ -274,13 +278,13 @@ Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all obse
 
 	\begin{figure}[h]
 	\centering
-		\begin{subfigure}{0.8\textwidth}
+		\begin{subfigure}{0.7\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_empty}
 		\caption{Empty.}
 		\label{fig:sat:empty:dur}
 		\end{subfigure}
 
-		\begin{subfigure}{0.8\textwidth}
+		\begin{subfigure}{0.7\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int}
 		\caption{Interesting.}
 		\label{fig:sat:int:dur}
@@ -292,14 +296,14 @@ The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) show
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_percent}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_percent}
 	\caption{Percentage of Interesting Observations across All Scenarios}
 	\label{fig:sat:int:percent}
 	\end{figure}
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_empt}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_empt}
 	\caption{Percentage of Interesting Compared to Empty Observations across All Scenarios}
 	\label{fig:sat:int:empty}
 	\end{figure}

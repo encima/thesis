@@ -1,7 +1,7 @@
-\chapter{An Ontology for the K-HAS Architecture}\label{chap:ont}
+\chapter{An Ontology for Knowledge-Based Wireless Sensor Networks}\label{chap:ont}
 In this chapter, we explain the ontology we have proposed to formally define the components within K-HAS, the structure of the sensed data, the users involved with the network, as well as the format of the sensed data that is passed through the network.
 
-This ontology is for those wanting to use K-HAS with a representation that is easy to reuse and deploy in a number of different scenarios, or even to select parts of the ontology that meet their requirements and implement those. Terms have been used to map to widely-used ontologies in the domains of scientific observation, sensors and people. For areas of the ontology where terms did not exist, we have used simple, common sensical names to represent them. 
+This ontology is for those wanting to use K-HAS with a representation that is easy to reuse and deploy in a number of different scenarios, or even to select parts of the ontology that meet their requirements and implement those. Terms have been used to map to widely-used ontologies in the domains of scientific observation, sensors and people. However, our proposed architecture defines new terms that do not exist in current ontologies, thus we extend the existing ontologies to cover these terms.
 
 \section{Background}\label{bg}
 
@@ -21,7 +21,7 @@ Looking into existing ontologies, we found that there had been many surveys on r
 
 Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{Botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SSN \cite{Compton2012} and SensorML\cite{Botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
 
-We found one existing ontology that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo:sdo} and Section \ref{ont:sumo:sho}. This could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
+We found one existing ontology, the Standard Upper Merged Ontology (SUMO), that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo:sdo} and Section \ref{ont:sumo:sho}. The reason there are so few could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
 
 K-HAS has been developed to be used with any sensors and is not specific to wildlife cameras, therefore we also looked into sensor-based ontologies that concentrate on the hardware and the individual capabilities of each device within the network.
 
@@ -53,7 +53,7 @@ The key difference with O\&M, when compared to other ontologies, is that \textit
 An observation is an action that causes a result, yielding a value and a measurement is a set of operations that provide some result(s).
 
 O\&M provides a conceptual model, as well as XML encoding for observations and measurements. The listing \ref{omxml} shows an observation of a vehicle in a given time and place. Similar to the encoding of a measurement with the standard and protocol used in OBOE, O\&M provides support for the recording of the procedure used to gain the measurement for the observation. 
-
+\vspace{\baselineskip}
 \begin{lstlisting}[caption=An Observation of a Vehicle encoded in O\&M, label=omxml, breaklines=true, language=XML]
  <?xml version="1.0" encoding="windows-1250"?>
  <om:GeometryObservation gml:id="geom1610" 
@@ -91,11 +91,11 @@ The structure of an observation within O\&M is focussed on the action and the re
 
 \subsubsection{Darwin Core SW}\label{bg:dwc}
 
-In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{Baskauf} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised.
+In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, in an ontological format, work has been done to represent Darwin Core terms, as an ontology, in OWL. Darwin-Semantic Web (Darwin-SW) \cite{Baskauf} is the project that aims to do this and many of the core terms associated with an occurrence have already been formalised and Figure \ref{darwin-sw} shows those terms.
 
-    \begin{figure}[h]
+    \begin{figure}[h!]
     \centering
-  \includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/dsw.jpg}
+  \includegraphics[width=\textwidth]{Chap5/figures/dsw.jpg}
     \caption{Darwin-SW}
     \label{darwin-sw}
     \end{figure}
@@ -103,7 +103,7 @@ In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, i
 While Darwin-SW does not represent all of the classes within the DwC namespace, it contains the core classes required to record an occurrence, to a more-detailed level than OBOE. The downside of this is that the specificity of the terms limits DwC to ecological observations, making it far less generic than OBOE and other alternatives. There are positive aspects that, for those that need to record ecological observations, DwC allows for a greater level of detail and  can be mapped to OBOE with ease.
 
 Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living specimen which, is this case, is a tree. \cite{Baskauf2011}. Darwin-SW, and Darwin Core, terms are used to describe the identification of the tree, such as the by whom it was identified, the date and the taxon. The full source can be seen in Appendix \ref{appendix:dsw} and includes links to existing related occurrences, other images of the individual and relationships to other resources.
-
+\vspace{\baselineskip}
 \begin{lstlisting}[caption={Darwin-SW Representation of an Identification}, label={ont:darwinsw}, language=XML]
 <dsw:hasIdentification>
   <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/vanderbilt/12-126#2002-04-10baskauf">
@@ -210,9 +210,9 @@ These definitions outline the core concepts of SensorML, a \textit{system} that 
 \subsubsection{SSN}
 The Semantic Sensor Network (SSN) Ontology is the most fitting ontology for our requirements, as it covers systems processes and observations. Developed by the W3C after an extensive review of existing ontologies \cite{Compton2012}, the SSN ontology is designed to allow focus on a variety of perspectives, such as the sensor within the network or the data that has been observed.
 
-    \begin{figure}
+    \begin{figure}[h]
     \centering
-        \includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/ssnont.jpg}
+        \includegraphics[width=\textwidth]{Chap5/figures/ssnont.jpg}
     \caption{SSN Ontology}
     \label{ssnont}
     \end{figure}
@@ -290,7 +290,7 @@ The need to create the K-HAS ontology was partly due to the reasons outlined by 
 
 To determine the scope that K-HAS should cover, we identified a set of competency questions that represent what we expect K-HAS to cover within the domain. In order to present this, we used an approach similar to that of \cite{Choi2010}, which can be seen in Table \ref{tab:comp_qs}.
 
-\begin{table}[!t]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{ p{10cm}}
 \hline
@@ -323,9 +323,9 @@ Over the course of eighteen months, which involved 2 field visits and several br
 
 Table \ref{tab:concepts} outlines the core concepts we have identified for K-HAS to be complete, as well as the definitions we have used for the architecture. When integrating existing ontologies, the definitions of similar terms would need to match with our definitions or we would not deem them the same as the K-HAS concepts.
 
-\begin{table}[!t]
+\begin{table}[ht!]
 \centering
-\begin{tabular}{p{5cm}|p{2cm}|p{5cm}}
+\begin{tabular}{|p{5cm}|p{2cm}|p{5cm}|}
 \hline
 \textbf{Concept} & \textbf{Subclass Of} & \textbf{Definition}\\ 
 \hline
@@ -351,9 +351,9 @@ Worker & Person & Person involved with a project. \\
 
 Mapping these concepts, a diagram of the base K-HAS ontology is shown in Figure \ref{khas_base_ont}. The next step is to create the ontology and map the concepts identified to existing ontologies within the same domain space(s).
 
-    \begin{figure}[h]
+    \begin{figure}[H]
     \centering
-        \includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/khas_base.JPG}
+        \includegraphics[width=\textwidth]{Chap5/figures/khas_base.JPG}
     \caption{K-HAS Base Ontology}
     \label{khas_base_ont}
     \end{figure}
@@ -382,7 +382,7 @@ Whilst researching widely-used ontologies, we became aware that some classes ide
 
 The final ontology is shown in Figure \ref{khas_ont} (with the complete code in Appendix \ref{appendix:ontology}) and shows how each concept maps to existing ontologies. The figure shows that there were only five extension concepts unique to K-HAS that can be subclassed from the \textit{person} concept in the FOAF ontology and \textit{node} in the SensorML ontology.
 
-    \begin{figure}[h]
+    \begin{figure}[H]
     \centering
         \includegraphics[angle=90, width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/khas_ontology.JPG}
     \caption{K-HAS Ontology}
@@ -411,9 +411,9 @@ We have a customised build of K-HAS running that receives data from a variety of
 \subsection{Competency Questions}
 
 In Table \ref{tab:comp_qs} we have identified some basic competency questions that we expected K-HAS to be able to satisfy with the concepts we had identified, Table \ref{eval:comp_qs} shows how the original questions are satisfied by K-HAS. We have mapped the terms we originally used to the terms used in K-HAS (and the linked ontologies) and shown the concepts involved with each question, as well as the relationships linking them.
-\begin{table}[h]
-\centering
-\begin{tabular}{ p{5cm}p{5cm}p{5cm}}
+\begin{table}[H]
+%\centering
+\begin{tabular}{|p{5cm}|p{4cm}|p{4cm}|}
 \hline
 \textbf{Competency Questions} & \textbf{Concepts} & \textbf{Relationships}\\ 
 \hline
@@ -454,10 +454,9 @@ As explained in Section \ref{arch:tech:dwc}, an archive of Darwin Core files con
 
 We used files from a DwC archive made available online to extract the terms associated with an occurrence and we mapped these terms to K-HAS concepts, the results can be seen in Table \ref{tab:dwc_eval}.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
-\caption{Evaluation of K-HAS against Darwin Core Occurrence Terms} 
-\begin{tabular}{ p{5cm}p{5cm}p{5cm}}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
 \textbf{Darwin Core Term} & \textbf{K-HAS Concept}\\ 
 \hline
@@ -473,6 +472,7 @@ identifiedBy & Person \\
 dateIdentified & Identification \\
 \hline 
 \end{tabular}
+\caption{Evaluation of K-HAS against Darwin Core Occurrence Terms} 
 \label{tab:dwc_eval}
 \end{table} 
 
