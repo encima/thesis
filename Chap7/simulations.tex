@@ -150,9 +150,9 @@ In this section, we explains the results from simulating each scenario in a rand
 
 Each scenario, outlined in Section \ref{sim:imp}, runs to simulate a 6 month deployment. Using our motivating scenario, we modelled each scenario on a fixed number of nodes: 1 central node, 4 routing nodes and 20 sensing nodes. The implementation of our architecture has been limited to using Zigbee as the transmission medium between all sensing nodes, with a Wi-Fi connection between routing nodes and a central node. Sensing nodes then send an observation when it is captured or, if it has not captured anything then it checks for a backlog every ten minutes. Sensing nodes check for new observations to process every five minutes. We ran each scenario a hundred times, with each run simulating a 6 month duration. The time to process an observation using MK has been simulated to take 5 seconds compared to the 90 seconds when a node has HK capabilities; these values have been chosen based on the average processing time we derived using existing data. 
 
-\begin{figure}[h]
+\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_int_percent}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/ideal/all_int_percent}
 	\caption{Percentage of Interesting Observations for All Scenarios.}
 	\label{fig:res:ideal:int}
 \end{figure}
@@ -161,12 +161,12 @@ The simulations were run in two modes: ideal transmission rate and variable tran
 
 \begin{figure}[ht!]
 \centering 
-\begin{subfigure}{\textwidth}
+\begin{subfigure}{0.7\textwidth}
   \includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_total}
 	\caption{Ideal Transmission Rates.}
 	\label{fig:res:ideal:dur}
 \end{subfigure}
-\begin{subfigure}{\textwidth}
+\begin{subfigure}{0.7\textwidth}
   \includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_total}
 	\caption{Variable Transmission Rate.}
 	\label{fig:real:dur}
@@ -206,15 +206,15 @@ The number of interesting observations received in each scenario remained simila
 
 
 The duration of an observation with both a variable and ideal transmission rate does not fluctuate largely and Figure \ref{fig:res:ideal:int} shows that the processing power of MK-HK vs. HK-ALL is identical. However, Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that the primary benefit of pushing HK processing capabilities out to the edge of the network allows for better prioritisation of observations. Sensing nodes with HK are able to determine whether an observation is interesting or empty with much greater accuracy than MK and these capabilities, right at the edge of the network, allows for an interesting observation to be processed as soon as it is captured and sent without further processing directly to a central node. The only delays being the processing time itself and the sending queue of intermediate nodes. Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that, when a network is not saturated, interesting and empty observations take a similar amount of time to pass through the network; with the exception of the HK-ALL scenario. WSNs with much worse transmission rates could experience a much larger time difference between interesting observations, especially when using long range FM frequencies that can transfer only a few bytes a second.
-\begin{figure}[H]
+\begin{figure}[ht!]
 \centering
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{0.7\textwidth}
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_int}
 	\caption{Interesting Observations.}
 	\label{fig:real:int:dur}
 	\end{subfigure}	
 
-	\begin{subfigure}{\textwidth}
+	\begin{subfigure}{0.7\textwidth}
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_empty}
 	\caption{Empty Observations.}
 	\label{fig:real:empty:dur}
@@ -266,24 +266,24 @@ HKALL & 192010 & 155656      & 81             & 36353  & 18.9     \\
 
 We simulated this across all five scenarios and the results are detailed in this section. The duration is increased for all observations (Figure \ref{fig:sat:total:dur}) and there is an increase in the time it takes an interesting observations when compared to an empty observation. Table \ref{sim:tab:satur} shows the average number of observation captured across all scenarios, however, when you look at the number delivered, we can see that the number of interesting observations delivered is much greater. This means that the network is successfully prioritising observations it believes to be interesting and not sending those that are empty because of the time and bandwidth constraints.
 
-	\begin{figure}[h]
+	\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_total}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_total}
 	\caption{Mean Duration of All Observations Across All Scenarios}
 	\label{fig:sat:total:dur}
 	\end{figure}
 
 Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all observation does not differ much between scenarios (with all scenarios at approximately 400 seconds) when the network is saturated, but we can see that the network must decide what images to send or drop when there are more observations than bandwidth available. HK-ALL is the slowest of these because of the increased time it takes to process and image with HK. This is shown more clearly when we compare \textit{interesting} and \textit{empty} observations. The red line (showing false positives) only exists for MK-HK and HK-ALL scenarios because MK nodes are not able to classify an observation as empty and, as such, NK-ALL, NK-MK and MK-ALL do not generate any false positives.
 
-	\begin{figure}[h]
+	\begin{figure}[ht!]
 	\centering
-		\begin{subfigure}{\textwidth}
+		\begin{subfigure}{0.7\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_empty}
 		\caption{Empty.}
 		\label{fig:sat:empty:dur}
 		\end{subfigure}
 
-		\begin{subfigure}{\textwidth}
+		\begin{subfigure}{0.7\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int}
 		\caption{Interesting.}
 		\label{fig:sat:int:dur}
@@ -293,16 +293,16 @@ Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all obse
 
 The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) shows that the increase of knowledge processing capabilities improves the network's ability to filter out empty observations and a network with only HK nodes is able to defer empty observations from the time of capture so that bandwidth remains free for those that are interesting. Figure \ref{fig:sat:int:dur} shows the mean transmission time of interesting observations and we can see that interesting observations misclassified as empty bring the average duration for interesting observations up to approximately 400 seconds but the ability to prioritise allows TP observations to be delivered at a much faster rate of between 300 and 400 seconds, compared to more than 800 seconds for empty observations. It is worth nothing that, while misclassified interesting observations (FP) take longer to reach the central node in higher knowledge scenarios, the number of them received is greatly reduced from between 30\% and 45\% in MK scenarios to less than 20\% for HK scenarios; as shown in Figure \ref{fig:sat:int:percent}.
 
-	\begin{figure}[h]
+	\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_percent}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_percent}
 	\caption{Percentage of Interesting Observations across All Scenarios}
 	\label{fig:sat:int:percent}
 	\end{figure}
 
-	\begin{figure}[h]
+	\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_empt}
+	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_empt}
 	\caption{Percentage of Interesting Compared to Empty Observations across All Scenarios}
 	\label{fig:sat:int:empty}
 	\end{figure}
