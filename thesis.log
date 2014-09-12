@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  12 SEP 2014 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.1)  12 SEP 2014 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,8 +829,12 @@ LaTeX Warning: Label `tech:fig:map' multiply defined.
 
 LaTeX Warning: Label `tech:fig:map' multiply defined.
 
-) (./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implementation.aux)
-(./Chap7/simulations.aux) (./Chap8/conclusion.aux) (./App/appendix.aux))
+) (./Chap4/architecture.aux
+
+LaTeX Warning: Label `cl2' multiply defined.
+
+) (./Chap5/ont.aux) (./Chap6/implementation.aux) (./Chap7/simulations.aux)
+(./Chap8/conclusion.aux) (./App/appendix.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 350.
@@ -1090,7 +1094,7 @@ less on input line 11.
 
 
 ] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
-<Chap2/figures/gsn_arch.png, id=1136, 371.3875pt x 453.695pt>
+<Chap2/figures/gsn_arch.png, id=1138, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
@@ -1101,7 +1105,7 @@ Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 153.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23] [24 <./Chap2/figures/gsn_arch.png>] [25]
-<Chap2/figures/facts_architecture.jpg, id=1168, 451.6875pt x 181.67876pt>
+<Chap2/figures/facts_architecture.jpg, id=1170, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
@@ -1126,21 +1130,21 @@ less on input line 8.
 
 
 
-] <Chap3/figures/field_centre.jpg, id=1323, 1638.12pt x 1228.59pt>
+] <Chap3/figures/field_centre.jpg, id=1325, 1638.12pt x 1228.59pt>
 File: Chap3/figures/field_centre.jpg Graphic file (type jpg)
 
 <use Chap3/figures/field_centre.jpg>
 Package pdftex.def Info: Chap3/figures/field_centre.jpg used on input line 11.
 (pdftex.def)             Requested size: 413.20515pt x 309.90251pt.
  [38 <./Chap3/figures/field_centre.jpg>]
-<Chap3/figures/dg_map.png, id=1331, 1111.15125pt x 413.545pt>
+<Chap3/figures/dg_map.png, id=1333, 1111.15125pt x 413.545pt>
 File: Chap3/figures/dg_map.png Graphic file (type png)
 
 <use Chap3/figures/dg_map.png>
 Package pdftex.def Info: Chap3/figures/dg_map.png used on input line 20.
 (pdftex.def)             Requested size: 413.20515pt x 153.7854pt.
 
-<Chap3/figures/hc500.jpg, id=1334, 313.17pt x 301.125pt>
+<Chap3/figures/hc500.jpg, id=1336, 313.17pt x 301.125pt>
 File: Chap3/figures/hc500.jpg Graphic file (type jpg)
 
 <use Chap3/figures/hc500.jpg>
@@ -1151,21 +1155,21 @@ Package pdftex.def Info: Chap3/figures/hc500.jpg used on input line 29.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [39 <./Chap3/figures/dg_map.png>] [40 <./Chap3/figures/hc500.jpg>] [41]
-[42] <Chap3/figures/pandaboard.jpg, id=1360, 602.25pt x 443.6575pt>
+[42] <Chap3/figures/pandaboard.jpg, id=1362, 602.25pt x 443.6575pt>
 File: Chap3/figures/pandaboard.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pandaboard.jpg>
 Package pdftex.def Info: Chap3/figures/pandaboard.jpg used on input line 66.
 (pdftex.def)             Requested size: 206.60257pt x 152.19548pt.
 
-<Chap3/figures/igep.jpg, id=1361, 3468.96pt x 2312.64pt>
+<Chap3/figures/igep.jpg, id=1363, 3468.96pt x 2312.64pt>
 File: Chap3/figures/igep.jpg Graphic file (type jpg)
 
 <use Chap3/figures/igep.jpg>
 Package pdftex.def Info: Chap3/figures/igep.jpg used on input line 71.
 (pdftex.def)             Requested size: 206.60257pt x 137.72906pt.
 
-<Chap3/figures/waspmote.png, id=1362, 301.125pt x 280.04625pt>
+<Chap3/figures/waspmote.png, id=1364, 301.125pt x 280.04625pt>
 File: Chap3/figures/waspmote.png Graphic file (type png)
 
 <use Chap3/figures/waspmote.png>
@@ -1173,49 +1177,49 @@ Package pdftex.def Info: Chap3/figures/waspmote.png used on input line 76.
 (pdftex.def)             Requested size: 206.60257pt x 192.14673pt.
  [43] [44 <./Chap3/figures/pandaboard.jpg> <./Chap3/figures/igep.jpg> <./Chap3/
 figures/waspmote.png (PNG copy)>] [45] [46]
-[47] <Chap3/figures/bp_snr.png, id=1398, 729.4452pt x 445.665pt>
+[47] <Chap3/figures/bp_snr.png, id=1400, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 129.
 (pdftex.def)             Requested size: 371.88211pt x 227.20453pt.
 
-<Chap3/figures/dg_snr.png, id=1399, 728.4816pt x 445.1832pt>
+<Chap3/figures/dg_snr.png, id=1401, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
 Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 135.
 (pdftex.def)             Requested size: 371.88211pt x 227.26459pt.
  [48 <./Chap3/figures/bp_snr.png> <./Chap3/figures/dg_snr.png>] [49] [50]
-<Chap3/figures/pelican.jpg, id=1421, 1284.8pt x 963.6pt>
+<Chap3/figures/pelican.jpg, id=1423, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
 Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 176.
 (pdftex.def)             Requested size: 413.20515pt x 309.90215pt.
  [51] [52 <./Chap3/figures/pelican.jpg>]
-[53] <Chap3/figures/IMG_0568.jpg, id=1439, 1927.2pt x 1084.05pt>
+[53] <Chap3/figures/IMG_0568.jpg, id=1441, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0568.jpg Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0568.jpg>
 Package pdftex.def Info: Chap3/figures/IMG_0568.jpg used on input line 203.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/IMG_0569.jpg, id=1440, 1927.2pt x 1084.05pt>
+<Chap3/figures/IMG_0569.jpg, id=1442, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0569.jpg Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0569.jpg>
 Package pdftex.def Info: Chap3/figures/IMG_0569.jpg used on input line 208.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/IMG_0570.jpg, id=1441, 1927.2pt x 1084.05pt>
+<Chap3/figures/IMG_0570.jpg, id=1443, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0570.jpg Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0570.jpg>
 Package pdftex.def Info: Chap3/figures/IMG_0570.jpg used on input line 213.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/PROC_IMG_0568.jpg, id=1442, 488.82625pt x 296.10625pt>
+<Chap3/figures/PROC_IMG_0568.jpg, id=1444, 488.82625pt x 296.10625pt>
 File: Chap3/figures/PROC_IMG_0568.jpg Graphic file (type jpg)
 
 <use Chap3/figures/PROC_IMG_0568.jpg>
@@ -1233,7 +1237,7 @@ res/IMG_0570.jpg>] [55 <./Chap3/figures/PROC_IMG_0568.jpg>] [56] [57]) [58]
 
 (./Chap4/architecture.tex
 Chapter 4.
-<Chap4/figures/khasarch.png, id=1474, 423.5825pt x 428.60126pt>
+<Chap4/figures/khasarch.png, id=1477, 423.5825pt x 428.60126pt>
 File: Chap4/figures/khasarch.png Graphic file (type png)
 
 <use Chap4/figures/khasarch.png>
@@ -1267,7 +1271,7 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
 )
-<Chap5/figures/dwca.png, id=1546, 661.47125pt x 419.5675pt>
+<Chap5/figures/dwca.png, id=1548, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
@@ -1286,7 +1290,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-<Chap4/figures/loris.png, id=1619, 1230.5975pt x 758.835pt>
+<Chap4/figures/loris.png, id=1621, 1230.5975pt x 758.835pt>
 File: Chap4/figures/loris.png Graphic file (type png)
 
 <use Chap4/figures/loris.png>
@@ -1296,7 +1300,7 @@ Package pdftex.def Info: Chap4/figures/loris.png used on input line 209.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Chap4/figures/loris_data.png, id=1621, 1620.0525pt x 870.25125pt>
+<Chap4/figures/loris_data.png, id=1623, 1620.0525pt x 870.25125pt>
 File: Chap4/figures/loris_data.png Graphic file (type png)
 
 <use Chap4/figures/loris_data.png>
@@ -1307,50 +1311,56 @@ Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 217.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [74 <./Chap4/figures/loris.png>] [75 <./Chap4/figures/loris_data.png>]
-<Chap4/figures/rules.png, id=1640, 1046.91125pt x 682.55pt>
+<Chap4/figures/rules.png, id=1642, 1046.91125pt x 682.55pt>
 File: Chap4/figures/rules.png Graphic file (type png)
 
 <use Chap4/figures/rules.png>
 Package pdftex.def Info: Chap4/figures/rules.png used on input line 234.
 (pdftex.def)             Requested size: 413.20515pt x 269.3908pt.
  [76 <./Chap4/figures/rules.png>] [77] [78]
-<Chap4/figures/leopard2.JPG, id=1655, 1927.2pt x 1084.05pt>
+<Chap4/figures/topology.png, id=1657, 1009.7725pt x 409.53pt>
+File: Chap4/figures/topology.png Graphic file (type png)
+
+<use Chap4/figures/topology.png>
+Package pdftex.def Info: Chap4/figures/topology.png used on input line 267.
+(pdftex.def)             Requested size: 413.20515pt x 167.58344pt.
+
+<Chap4/figures/leopard2.JPG, id=1659, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
-Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 268.
+Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 277.
 (pdftex.def)             Requested size: 413.20515pt x 232.4211pt.
-
-<Chap4/figures/leopard_proc.png, id=1656, 906.38625pt x 465.74pt>
+ [79 <./Chap4/figures/topology.png>]
+<Chap4/figures/leopard_proc.png, id=1665, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
-Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 275.
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 284.
 
 (pdftex.def)             Requested size: 413.20515pt x 212.3242pt.
- [79 <./Chap4/figures/leopard2.JPG>]
-[80 <./Chap4/figures/leopard_proc.png>] [81] [82] [83] [84]) [85]
+ [80 <./Chap4/figures/leopard2.JPG> <./Chap4/figures/leopard_proc.png>] [81] [8
+2] [83] [84] [85]) [86]
 \openout2 = `Chap5/ont.aux'.
 
-
-(./Chap5/ont.tex
+ (./Chap5/ont.tex
 Chapter 5.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 13.
 
-[86
+[87
 
 
 
-] [87] <Chap5/figures/OBOEcore.JPG, id=1722, 368.87813pt x 137.01187pt>
+] [88] <Chap5/figures/OBOEcore.JPG, id=1731, 368.87813pt x 137.01187pt>
 File: Chap5/figures/OBOEcore.JPG Graphic file (type jpg)
 
 <use Chap5/figures/OBOEcore.JPG>
 Package pdftex.def Info: Chap5/figures/OBOEcore.JPG used on input line 40.
 (pdftex.def)             Requested size: 413.20515pt x 153.47523pt.
- [88] [89 <./Chap5/figures/OBOEcore.JPG>]
-<Chap5/figures/o&m_ontology.png, id=1739, 643.40375pt x 285.065pt>
+ [89] [90 <./Chap5/figures/OBOEcore.JPG>]
+<Chap5/figures/o&m_ontology.png, id=1748, 643.40375pt x 285.065pt>
 File: Chap5/figures/o&m_ontology.png Graphic file (type png)
 
 <use Chap5/figures/o&m_ontology.png>
@@ -1360,17 +1370,17 @@ Package pdftex.def Info: Chap5/figures/o&m_ontology.png used on input line 85.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[90] <Chap5/figures/darwinsw.png, id=1770, 1639.12375pt x 700.6175pt>
+[91] <Chap5/figures/darwinsw.png, id=1779, 1639.12375pt x 700.6175pt>
 File: Chap5/figures/darwinsw.png Graphic file (type png)
 
 <use Chap5/figures/darwinsw.png>
 Package pdftex.def Info: Chap5/figures/darwinsw.png used on input line 98.
 (pdftex.def)             Requested size: 413.20515pt x 176.61855pt.
- [91 <./Chap5/figures/o&m_ontology.png> <./Chap5/figures/darwinsw.png>]
+ [92 <./Chap5/figures/o&m_ontology.png> <./Chap5/figures/darwinsw.png>]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 113.
- [92] [93]
-<Chap5/figures/ssnont.jpg, id=1826, 681.747pt x 404.712pt>
+ [93] [94]
+<Chap5/figures/ssnont.jpg, id=1835, 681.747pt x 404.712pt>
 File: Chap5/figures/ssnont.jpg Graphic file (type jpg)
 
 <use Chap5/figures/ssnont.jpg>
@@ -1380,7 +1390,7 @@ Package pdftex.def Info: Chap5/figures/ssnont.jpg used on input line 215.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[94] [95 <./Chap5/figures/ssnont.jpg>] [96] [97] [98] [99] [100]
+[95] [96 <./Chap5/figures/ssnont.jpg>] [97] [98] [99] [100] [101]
 Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []|\T1/ptm/b/n/12 Subclass
  []
@@ -1435,26 +1445,26 @@ Underfull \hbox (badness 2237) in paragraph at lines 342--343
 \T1/ptm/m/n/12 sensed data for the whole
  []
 
-<Chap5/figures/khas_base.JPG, id=1886, 2281.52374pt x 949.5475pt>
+<Chap5/figures/khas_base.JPG, id=1895, 2281.52374pt x 949.5475pt>
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
 Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 356.
 (pdftex.def)             Requested size: 413.20515pt x 171.96886pt.
- [101 <./Chap5/figures/khas_base.JPG>]
-[102] [103]
-<Chap5/figures/khas_ontology.JPG, id=1910, 3852.3925pt x 1011.78pt>
+ [102 <./Chap5/figures/khas_base.JPG>]
+[103] [104]
+<Chap5/figures/khas_ontology.JPG, id=1920, 3852.3925pt x 1011.78pt>
 File: Chap5/figures/khas_ontology.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_ontology.JPG>
 Package pdftex.def Info: Chap5/figures/khas_ontology.JPG used on input line 387
 .
 (pdftex.def)             Requested size: 3852.38315pt x 1011.77753pt.
- [104]
+ [105]
 Overfull \vbox (26.88904pt too high) has occurred while \output is active []
 
 
-[105 <./Chap5/figures/khas_ontology.JPG>] [106]
+[106 <./Chap5/figures/khas_ontology.JPG>] [107]
 Underfull \hbox (badness 10000) in paragraph at lines 420--421
 []|\T1/ptm/m/n/12 Occurrence oc-cur-
  []
@@ -1549,7 +1559,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 438--439
 []|\T1/ptm/m/n/12 Occurrence ha-sEvid-
  []
 
-[107] [108] [109] [110]) [111] [112]
+[108] [109] [110] [111]) [112] [113]
 \openout2 = `Chap6/implementation.aux'.
 
  (./Chap6/implementation.tex
@@ -1558,41 +1568,41 @@ Chapter 6.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 9.
 
-[113
+[114
 
 
 
-] [114] [115] [116]
-<Chap6/figures/loris.png, id=2003, 1425.325pt x 764.8575pt>
+] [115] [116] [117]
+<Chap6/figures/loris.png, id=2012, 1425.325pt x 764.8575pt>
 File: Chap6/figures/loris.png Graphic file (type png)
 
 <use Chap6/figures/loris.png>
 Package pdftex.def Info: Chap6/figures/loris.png used on input line 38.
 (pdftex.def)             Requested size: 413.20515pt x 221.73296pt.
- [117 <./Chap6/figures/loris.png>]
-<Chap6/figures/buckeye.png, id=2009, 980.66376pt x 425.59pt>
+ [118 <./Chap6/figures/loris.png>]
+<Chap6/figures/buckeye.png, id=2018, 980.66376pt x 425.59pt>
 File: Chap6/figures/buckeye.png Graphic file (type png)
 
 <use Chap6/figures/buckeye.png>
 Package pdftex.def Info: Chap6/figures/buckeye.png used on input line 50.
 (pdftex.def)             Requested size: 413.20515pt x 179.31804pt.
- [118 <./Chap6/figures/buckeye.png>] [119]
-<Chap6/figures/buckeye_img.jpg, id=2020, 963.6pt x 722.7pt>
+ [119 <./Chap6/figures/buckeye.png>] [120]
+<Chap6/figures/buckeye_img.jpg, id=2029, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 75.
 (pdftex.def)             Requested size: 413.20515pt x 309.89479pt.
- [120 <./Chap6/figures/buckeye_img.jpg>]
-<Chap6/figures/buckeye_img_2.jpg, id=2027, 963.6pt x 722.7pt>
+ [121 <./Chap6/figures/buckeye_img.jpg>]
+<Chap6/figures/buckeye_img_2.jpg, id=2037, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img_2.jpg>
 Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 84.
 
 (pdftex.def)             Requested size: 413.20515pt x 309.89479pt.
- [121 <./Chap6/figures/buckeye_img_2.jpg>] [122] [123] [124] [125] [126] [127])
- [128]
+ [122 <./Chap6/figures/buckeye_img_2.jpg>] [123] [124] [125] [126] [127] [128])
+ [129]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
@@ -1601,34 +1611,34 @@ Chapter 7.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 12.
 
-[129
+[130
 
 
 
-] [130] [131] [132] [133]
-<Chap7/figures/khas_sim.png, id=2129, 512.91624pt x 504.88625pt>
+] [131] [132] [133] [134]
+<Chap7/figures/khas_sim.png, id=2139, 512.91624pt x 504.88625pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
 
 <use Chap7/figures/khas_sim.png>
 Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 73.
 (pdftex.def)             Requested size: 289.24234pt x 284.71426pt.
- [134 <./Chap7/figures/khas_sim.png>] [135]
-[136]
+ [135 <./Chap7/figures/khas_sim.png>] [136]
+[137]
 Overfull \hbox (2.05154pt too wide) in paragraph at lines 115--116
 []\T1/ptm/m/n/12 This phase can be re-peated through-out the course of the de-p
 loy-ment, simply by schedul-
  []
 
-[137] [138] [139]
-<Chap7/figures/ideal/all_int_percent.png, id=2167, 481.8pt x 481.8pt>
+[138] [139] [140]
+<Chap7/figures/ideal/all_int_percent.png, id=2177, 481.8pt x 481.8pt>
 File: Chap7/figures/ideal/all_int_percent.png Graphic file (type png)
 
 <use Chap7/figures/ideal/all_int_percent.png>
 Package pdftex.def Info: Chap7/figures/ideal/all_int_percent.png used on input 
 line 155.
 (pdftex.def)             Requested size: 289.24234pt x 289.25131pt.
- [140 <./Chap7/figures/ideal/all_int_percent.png>]
-<Chap7/figures/ideal/all_total.png, id=2174, 481.8pt x 481.8pt>
+ [141 <./Chap7/figures/ideal/all_int_percent.png>]
+<Chap7/figures/ideal/all_total.png, id=2183, 481.8pt x 481.8pt>
 File: Chap7/figures/ideal/all_total.png Graphic file (type png)
 
 <use Chap7/figures/ideal/all_total.png>
@@ -1636,80 +1646,80 @@ Package pdftex.def Info: Chap7/figures/ideal/all_total.png used on input line 1
 65.
 (pdftex.def)             Requested size: 231.39474pt x 231.39369pt.
 
-<Chap7/figures/real/all_total.png, id=2175, 481.8pt x 481.8pt>
+<Chap7/figures/real/all_total.png, id=2184, 481.8pt x 481.8pt>
 File: Chap7/figures/real/all_total.png Graphic file (type png)
 
 <use Chap7/figures/real/all_total.png>
 Package pdftex.def Info: Chap7/figures/real/all_total.png used on input line 17
 0.
 (pdftex.def)             Requested size: 231.39474pt x 231.39369pt.
- [141] [142 <./Chap7/figures/ideal/all_total.png> <./Chap7/figures/real/all_tot
-al.png>] [143]
-<Chap7/figures/real/all_int.png, id=2202, 481.8pt x 481.8pt>
+ [142] [143 <./Chap7/figures/ideal/all_total.png> <./Chap7/figures/real/all_tot
+al.png>] [144]
+<Chap7/figures/real/all_int.png, id=2212, 481.8pt x 481.8pt>
 File: Chap7/figures/real/all_int.png Graphic file (type png)
 
 <use Chap7/figures/real/all_int.png>
-Package pdftex.def Info: Chap7/figures/real/all_int.png used on input line 212.
+Package pdftex.def Info: Chap7/figures/real/all_int.png used on input line 210.
 
 (pdftex.def)             Requested size: 231.39474pt x 231.39369pt.
 
-<Chap7/figures/real/all_empty.png, id=2203, 481.8pt x 481.8pt>
+<Chap7/figures/real/all_empty.png, id=2213, 481.8pt x 481.8pt>
 File: Chap7/figures/real/all_empty.png Graphic file (type png)
 
 <use Chap7/figures/real/all_empty.png>
 Package pdftex.def Info: Chap7/figures/real/all_empty.png used on input line 21
-8.
+6.
 (pdftex.def)             Requested size: 231.39474pt x 231.39369pt.
- [144]
+ [145]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[145 <./Chap7/figures/real/all_int.png> <./Chap7/figures/real/all_empty.png>]
+[146 <./Chap7/figures/real/all_int.png> <./Chap7/figures/real/all_empty.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[146] <Chap7/figures/saturated/all_total.png, id=2221, 481.8pt x 481.8pt>
+[147] <Chap7/figures/saturated/all_total.png, id=2231, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_total.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_total.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_total.png used on input li
-ne 271.
+ne 269.
 (pdftex.def)             Requested size: 289.24234pt x 289.25131pt.
- [147 <./Chap7/figures/saturated/all_total.png>]
-<Chap7/figures/saturated/all_empty.png, id=2228, 481.8pt x 481.8pt>
+ [148 <./Chap7/figures/saturated/all_total.png>]
+<Chap7/figures/saturated/all_empty.png, id=2238, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_empty.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_empty.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_empty.png used on input li
-ne 281.
+ne 279.
 (pdftex.def)             Requested size: 231.39474pt x 231.39369pt.
 
-<Chap7/figures/saturated/all_int.png, id=2229, 481.8pt x 481.8pt>
+<Chap7/figures/saturated/all_int.png, id=2239, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_int.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_int.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_int.png used on input line
- 287.
+ 285.
 (pdftex.def)             Requested size: 231.39474pt x 231.39369pt.
 
-<Chap7/figures/saturated/all_int_percent.png, id=2233, 481.8pt x 481.8pt>
+<Chap7/figures/saturated/all_int_percent.png, id=2243, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_int_percent.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_int_percent.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_int_percent.png used on in
-put line 298.
+put line 296.
 (pdftex.def)             Requested size: 289.24234pt x 289.25131pt.
 
-<Chap7/figures/saturated/all_int_empt.png, id=2234, 481.8pt x 481.8pt>
+<Chap7/figures/saturated/all_int_empt.png, id=2244, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_int_empt.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_int_empt.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_int_empt.png used on input
- line 305.
+ line 303.
 (pdftex.def)             Requested size: 289.24234pt x 289.25131pt.
- [148] [149 <./Chap7/figures/saturated/all_empty.png> <./Chap7/figures/saturate
-d/all_int.png>] [150 <./Chap7/figures/saturated/all_int_percent.png>] [151 <./C
-hap7/figures/saturated/all_int_empt.png>]) [152]
+ [149] [150 <./Chap7/figures/saturated/all_empty.png> <./Chap7/figures/saturate
+d/all_int.png>] [151 <./Chap7/figures/saturated/all_int_percent.png>] [152 <./C
+hap7/figures/saturated/all_int_empt.png>]) [153]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
@@ -1718,17 +1728,17 @@ Chapter 8.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 6.
 
-[153
+[154
 
 
 
-] [154] [155] [156]
+] [155] [156] [157]
 Overfull \hbox (8.41023pt too wide) in paragraph at lines 30--31
 []\T1/ptm/m/n/12 With more time, we could cre-ate cus-tom DC nodes us-ing web-c
 ams and micro-computers,
  []
 
-[157] [158]) [159] (./thesis.bbl
+[158] [159]) [160] (./thesis.bbl
 Underfull \hbox (badness 1325) in paragraph at lines 9--12
 []\T1/ptm/m/n/12 Danau Gir-ang Field Centre.  URL []$\T1/pcr/m/n/10 http : / / 
 www . cardiff . ac . uk / biosi /
@@ -1780,7 +1790,7 @@ Underfull \hbox (badness 4366) in paragraph at lines 55--67
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 67.
 
-[160
+[161
 
 
 ]
@@ -1801,7 +1811,7 @@ Underfull \hbox (badness 4391) in paragraph at lines 89--97
 6.  doi: $10 .
  []
 
-[161]
+[162]
 Underfull \hbox (badness 10000) in paragraph at lines 134--138
 []\T1/ptm/m/n/12 Mike Botts, George Per-civall, Carl Reed, and John Dav-id-son.
 
@@ -1813,7 +1823,7 @@ Underfull \hbox (badness 1331) in paragraph at lines 134--138
 b en-able-ment: Over-view and high level
  []
 
-[162]
+[163]
 Underfull \hbox (badness 10000) in paragraph at lines 198--204
 []\T1/ptm/m/n/12 Michael Compton, CA Hen-son, and Hol-ger Neuhaus.  A Sur-
  []
@@ -1836,7 +1846,7 @@ Underfull \hbox (badness 2951) in paragraph at lines 219--226
 \T1/pcr/m/n/10 http : / /
  []
 
-[163]
+[164]
 Underfull \hbox (badness 1137) in paragraph at lines 236--245
 \T1/ptm/m/n/12 27$.  URL []$\T1/pcr/m/n/10 http : / / ieeexplore . ieee . org /
  lpdocs / epic03 / wrapper . htm ?
@@ -1848,7 +1858,7 @@ Underfull \hbox (badness 2065) in paragraph at lines 268--272
 ng on-to-lo-
  []
 
-[164]
+[165]
 Underfull \hbox (badness 1609) in paragraph at lines 294--305
 []\T1/ptm/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fernand
 o Losilla,
@@ -1884,7 +1894,7 @@ Underfull \hbox (badness 4366) in paragraph at lines 294--305
  / articlerender . fcgi ? artid =
  []
 
-[165] [166]
+[166] [167]
 Underfull \hbox (badness 1394) in paragraph at lines 465--471
 []\T1/ptm/m/n/12 L Joshi and M Van Noord-wijk.  Bring-ing Local Know-ledge into
  Per-
@@ -1902,13 +1912,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--471
 ations /
  []
 
-[167] [168]
+[168] [169]
 Underfull \hbox (badness 1137) in paragraph at lines 538--546
 \T1/ptm/m/n/12 925197$.  URL []$\T1/pcr/m/n/10 http : / / ieeexplore . ieee . o
 rg / lpdocs / epic03 / wrapper .
  []
 
-[169]
+[170]
 Underfull \hbox (badness 10000) in paragraph at lines 592--597
 \T1/pcr/m/n/10 publication / 39996724 _ The _ Open _ Provenance _ Model _ (v1 .
  01 ) /file /
@@ -1926,7 +1936,7 @@ Underfull \hbox (badness 1990) in paragraph at lines 627--632
 / link . springer . com / chapter / 10 . 1007 /
  []
 
-[170]
+[171]
 Underfull \hbox (badness 5490) in paragraph at lines 666--672
 []\T1/ptm/m/n/12 Bernd Resch, T. Blaschke, and M. Mittl-boeck.  Live Geo-graphy
 :
@@ -1944,13 +1954,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 666--672
 / resch _ et _ al _
  []
 
-[171]
+[172]
 Underfull \hbox (badness 1137) in paragraph at lines 689--696
 \T1/ptm/m/n/12 985819$.  URL []$\T1/pcr/m/n/10 http : / / ieeexplore . ieee . o
 rg / lpdocs / epic03 / wrapper .
  []
 
-[172]
+[173]
 Underfull \hbox (badness 2005) in paragraph at lines 804--810
 \T1/ptm/m/n/12 In-ter-net of Things.  \T1/ptm/m/it/12 ...Conf. Adv. Fu-tur. In-
 ter-net\T1/ptm/m/n/12 , (c):139--144, 2011.
@@ -1962,13 +1972,13 @@ Underfull \hbox (badness 4366) in paragraph at lines 804--810
  php ? view = article & articleid =
  []
 
-[173] [174]
+[174] [175]
 Underfull \hbox (badness 2818) in paragraph at lines 871--881
 \T1/ptm/m/n/12 0029715$.  URL []$\T1/pcr/m/n/10 http : / / www . pubmedcentral 
 . nih . gov / articlerender .
  []
 
-[175]) [176]
+[176]) [177]
 \openout2 = `App/appendix.aux'.
 
  (./App/appendix.tex
@@ -1976,7 +1986,7 @@ Underfull \hbox (badness 2818) in paragraph at lines 871--881
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 1.
 
-[177
+[178
 
 
 
@@ -1987,34 +1997,34 @@ Appendix A.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 58.
 
-[178
+[179
 
 ]) (./Chap4/listings/dwc_arch/meta.xml) (./Chap4/listings/dwc_arch/set.csv) (./
-Chap4/listings/dwc_arch/images.csv) [179]
+Chap4/listings/dwc_arch/images.csv) [180]
 Appendix B.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 53.
 
-[180
+[181
 
-] [181]
+] [182]
 Appendix C.
 (./App/listings/align.owl
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 57.
 
-[182
+[183
 
-] [183]) [184]
+] [184]) [185]
 Appendix D.
 (./Chap4/listings/rules.drl)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 97.
 
-[185
+[186
 
 ]
 Appendix E.
@@ -2023,11 +2033,11 @@ Appendix E.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 50.
 
-[186
+[187
 
-] [187] [188] [189] [190]) [191]
+] [188] [189] [190] [191]) [192]
 Appendix F.
-<App/figures/roshan_extract.png, id=3295, 753.81625pt x 766.865pt>
+<App/figures/roshan_extract.png, id=3305, 753.81625pt x 766.865pt>
 File: App/figures/roshan_extract.png Graphic file (type png)
 
 <use App/figures/roshan_extract.png>
@@ -2043,7 +2053,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--493
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 493.
 
-[192
+[193
 
  <./App/figures/roshan_extract.png>]
 
@@ -2058,7 +2068,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7C4057D712FEA49B354CC493A9FF394D;8008.
+(rerunfilecheck)             Checksum: 9B05BA0F0B57058141641495439BFC97;8008.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2066,10 +2076,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 24623 strings out of 493117
- 425928 string characters out of 6135434
- 922686 words of memory out of 5000000
- 26007 multiletter control sequences out of 15000+600000
+ 24632 strings out of 493117
+ 426110 string characters out of 6135434
+ 922731 words of memory out of 5000000
+ 26013 multiletter control sequences out of 15000+600000
  52844 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,54p,1739b,1891s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2086,10 +2096,10 @@ pe1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (215 pages, 10838045 bytes).
+Output written on thesis.pdf (216 pages, 11728160 bytes).
 PDF statistics:
- 3652 PDF objects out of 4296 (max. 8388607)
- 3323 compressed objects within 34 object streams
- 1464 named destinations out of 1728 (max. 500000)
- 1201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3663 PDF objects out of 4296 (max. 8388607)
+ 3331 compressed objects within 34 object streams
+ 1466 named destinations out of 1728 (max. 500000)
+ 1206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -257,8 +257,17 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 	\section{Walkthrough}\label{arch:walk}
 		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.
 		
-		\subsection{Scenario}
+		\subsection{Scenario}\label{arch:scen}
 			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare clouded leopard and sun bear are currently active at Danau Girang. The clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed. All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
+
+			In order to explain the K-HAS architecture, we need to show the planned topology for the network in Danau Girang, which is based on the positions of the cameras in 2010. The triangle icon shows the location of the DA node (at the field centre), with DP nodes (square icons) placed near the DA node because of the poor range of Wi-Fi (Section \ref{tech:wifi}). Circle icons represent the DC nodes and they link to the nodes with the fewest hops to a DA node, as long as that route includes a DP node. 
+
+			\begin{figure}[!t]
+			\centering
+			\includegraphics[width=\textwidth]{Chap4/figures/topology}
+			\caption{Proposed Architecture for K-HAS in Danau Girang}
+			\label{cl2}
+			\end{figure}
 			
 		\subsection{Data Collection}
 			A DC node is deployed along a ridge in the rainforest and consists of a wildlife camera with a wireless node attached. At 0200, the infra-red sensor detects movement and the camera triggers a set of 3 images to be captured. The DC node creates the DwC archive for the observation. Terms that describe the observation, such as time, date, species identified and location, are added to the meta.xml file and links to CSV files that contain the data for each term. Any field that can be completed, such as time, location and date, are added to the set.csv file. A separate CSV file is created that holds the filename of each image that was taken. The image is shown in Figure \ref{cl2}.

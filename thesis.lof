@@ -27,29 +27,30 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Web Interface for Observations\relax }}{74}{figure.caption.39}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Web Interface for Classified Sensed Data\relax }}{75}{figure.caption.40}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Web Interface for Drools Operations\relax }}{76}{figure.caption.41}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Clouded Leopard Image Capture\relax }}{79}{figure.caption.42}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Processed Image of Clouded Leopard\relax }}{80}{figure.caption.43}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Proposed Architecture for K-HAS in Danau Girang\relax }}{79}{figure.caption.42}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Clouded Leopard Image Capture\relax }}{80}{figure.caption.43}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Processed Image of Clouded Leopard\relax }}{80}{figure.caption.44}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation \cite {Madin2007}\relax }}{89}{figure.caption.48}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology \cite {Probst}\relax }}{91}{figure.caption.50}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW Entity-Relationship Model \cite {Baskauf}\relax }}{91}{figure.caption.52}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{95}{figure.caption.56}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces K-HAS Base Ontology\relax }}{101}{figure.caption.64}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces K-HAS Ontology\relax }}{105}{figure.caption.65}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation \cite {Madin2007}\relax }}{90}{figure.caption.49}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology \cite {Probst}\relax }}{92}{figure.caption.51}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW Entity-Relationship Model \cite {Baskauf}\relax }}{92}{figure.caption.53}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{96}{figure.caption.57}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces K-HAS Base Ontology\relax }}{102}{figure.caption.65}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces K-HAS Ontology\relax }}{106}{figure.caption.66}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces LORIS Web Interface\relax }}{117}{figure.caption.68}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Camera Locations Around Danau Girang\relax }}{118}{figure.caption.69}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{120}{figure.caption.70}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{121}{figure.caption.71}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces LORIS Web Interface\relax }}{118}{figure.caption.69}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Camera Locations Around Danau Girang\relax }}{119}{figure.caption.70}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{121}{figure.caption.71}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{122}{figure.caption.72}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces MK-HK Simulation Example in RePast Simulator\relax }}{134}{figure.caption.75}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{140}{figure.caption.78}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{142}{figure.caption.79}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration under Variable Transmission Rate\relax }}{145}{figure.caption.81}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of All Observations Across All Scenarios\relax }}{147}{figure.caption.84}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of Observations across All Scenarios\relax }}{149}{figure.caption.85}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Percentage of Interesting Observations across All Scenarios\relax }}{150}{figure.caption.86}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios\relax }}{151}{figure.caption.87}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces MK-HK Simulation Example in RePast Simulator\relax }}{135}{figure.caption.76}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{141}{figure.caption.79}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{143}{figure.caption.80}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration under Variable Transmission Rate\relax }}{146}{figure.caption.82}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of All Observations Across All Scenarios\relax }}{148}{figure.caption.85}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of Observations across All Scenarios\relax }}{150}{figure.caption.86}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Percentage of Interesting Observations across All Scenarios\relax }}{151}{figure.caption.87}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios\relax }}{152}{figure.caption.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
