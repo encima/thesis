@@ -17,7 +17,7 @@ Danau Girang is in a unique location, situated in a rainforest corridor (figure 
 
 		\begin{figure}[h]
 		\centering
-		\includegraphics[width=\textwidth]{Chap3/figures/dgmap}
+		\includegraphics[width=\textwidth]{Chap3/figures/dg_map}
 		\caption{Aerial View of Danau Girang Field Centre and the Surrounding Area}
 		\label{tech:fig:map}
 		\end{figure}
@@ -93,10 +93,10 @@ The IGEP v2 (Figure \ref{tech:fig:igep}) is another ARM based SBC that uses a 1G
 
 Due to the smaller size, and easier commercial availability, the IGEP has been used as a sensor node to record, process and send readings from multiple devices, such as air temperature, GPS and oxygen saturation as part of environmental monitoring \cite{Resch}. In their research, they found that the IGEP achieved 9.1 hours of uptime using a 4000mAH battery, a capacity used in many modern smartphones.
 
-\subsection{Waspmote}
-The Waspmote (Figure \ref{tech:fig:waspmote}) is a general purpose sensing board that is designed to allow plug-and-play connectivity for multiple sensor modules. The node can be programmed with C++, using the Standard Development Kit (SDK) developed by the manufacturer. The processing power is not comparable to the more powerful SBCs, but the 600mAh battery is reported to last three months and the size is much smaller \cite{waspmote}.
+\subsection{Waspmote}\label{tech:waspmote}
+The Waspmote (Figure \ref{tech:fig:waspmote}) is a general purpose sensing board that is designed to allow plug-and-play connectivity for multiple sensor modules. The node can be programmed with C++, using the Standard Development Kit (SDK) developed by the manufacturer and uploaded via USB. The processing power is not comparable to the more powerful SBCs, but the 600mAh battery is reported to last three months and the size is much smaller \cite{waspmote}.
 
-One of the benefits of the Waspmote is that they are commercially available with an actively maintained programming environment.
+One of the primary benefits of the Waspmote is that they are commercially available with an actively maintained programming environment.
 
 \subsection{Discussion} \label{tech:hw:conc}
 The capabilities of each of these boards vary greatly from running a subset of C on an embedded OS to running full desktop Linux. Each visit we made to Danai Girang allowed us to test these devices and determine their eligibility for nodes that would survive in the Malaysian rainforest and yield usable range, which we discuss in the next section.

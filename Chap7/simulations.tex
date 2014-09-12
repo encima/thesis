@@ -34,7 +34,7 @@ A 2D space is used to display the grid and the simulation is run within RePast's
 		\item High Knowledge (HK): The node possesses high knowledge processing capabilities and is able to process data, metadata and use a dynamic rule base (Section \ref{khas:dp}).
 	\end{itemize}
 	
-	The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty and, in our scenario, match to a species, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. Twenty five nodes have been used because this is the number of cameras used when we first visited Danau Girang and the number we experimented with in subsequent visits. These scenarios were developed to determine which combination of MK, NK and HK nodes allowed for the greatest network lifetime, as well as the greatest accuracy when delivering interesting sensed data, and they have been outlined below:
+	The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty and, in our scenario, match to a species, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had a between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim} and explained later in this section. These scenarios were developed to determine which combination of MK, NK and HK nodes allowed for the greatest network lifetime, as well as the greatest accuracy when delivering interesting sensed data, and they have been outlined below:
 	
 	\begin{itemize}
 		\item NK-ALL: Sensing and routing nodes possess no knowledge processing capabilities.
@@ -63,15 +63,14 @@ LORIS                 & Buckeye                & Sensing Node + NK         \\
 \label{sim:tab:terms}
 \end{table}
 
+Using a Java library we developed for DwC archives during the implementation of LORIS (Section \ref{loris:arch}), we were able to implement DwC archives as the data standard in our simulations, this allowed us to model the prioritisation of sensed data, as well as the classification of observations, in the same way that an actual WSN would.
 
-We also needed to create an object to represent the DwC archives, in order to accurately simulate the transmission and processing time of an observation. A Drools REST API had been implemented to work with the LORIS web interface, and much of the code to hand DwC archives was reusable within RePast. 
-
-The structure of the simulation is as follows: The \textit{network builder} instantiates all the nodes, places them randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection; depicted by a line between the node. The simulation uses metrics, such as the size of the image, extracted from the images taken at Danau Girang and the chance of an image being captured by a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. Figure \ref{fig:sim} shows an example topology of the MK-HK scenario, sensing nodes are marked in yellow, routing nodes in green and the central node is red. Black edges are used to link the nodes. We can see that one DP node is disconnected because it is out of range of the central node, each node is placed randmonly on the space and links are established between all nodes that are in range. Network parameters are set in a configuration file, before the simulation runs, such as: the number of each node type and the size of the space.
+The structure of the simulation is as follows: The \textit{network builder} instantiates all the nodes, places them randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection; depicted by a line between the node. The simulation uses metrics, such as the size of the image, extracted from the images taken at Danau Girang and the chance of an image being captured by a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. Figure \ref{fig:sim} shows an example topology of the MK-HK scenario, sensing nodes are marked in yellow, routing nodes in green and the central node is red. Black edges are used to link the nodes. Each node is placed randmonly on the space and links are established between neighbouring nodes with the fewest hops to a central node. Network parameters are set in a configuration file, before the simulation runs, such as: the number of each node type and the size of the space.
 
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.70\textwidth]{Chap7/figures/khas_simulation}
+	\includegraphics[width=0.70\textwidth]{Chap7/figures/khas_sim}
 	\caption{MK-HK Simulation Example in RePast Simulator}
 	\label{fig:sim}
 	\end{figure}
@@ -96,7 +95,7 @@ The structure of the simulation is as follows: The \textit{network builder} inst
 %\end{itemize}
 
 \subsection{Darwin Core}
-The Darwin Core class represents a DwC archive, encapsulating \textit{Identification}, \textit{Location}, \textit{Occurrence}, \textit{Image} and \textit{Species}. The images we have collected from Danau Girang were processed to find details such as the average size when captured at night and day, how often an average camera triggers and the percentage of images with animal content. These data were then used to specify how often a randomly placed node should capture an observation per tick.
+The Darwin Core class represents a DwC archive, encapsulating \textit{Identification}, \textit{Location}, \textit{Occurrence}, \textit{Image} and \textit{Species} (Section \ref{buildcapture}). The images we have collected from Danau Girang were processed to find details such as the average size when captured at night and day, how often an average camera triggers and the percentage of images with animal content. These data were then used to specify how often a randomly placed node should capture an observation per tick.
 
 Upon each capture, images are created and given a random size, between the maximum and minimum size found in the 120,000 images collected from DG. The sum of the image sizes is used to calculate the size of the archive. Using this size, a sensing node calculates how long the archive takes to send based on the size and the transmission rate. We assume that the rate stays constant for the duration of transmission.
 When an archive is sent to the routing node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 43 seconds (ticks), explained in detail in Section \ref{tech:sf:triton}. To keep the classifications as general as possible, so that the simulation applies to any WSN for scientific observations, archives are not classified down to the species level, they are marked as \textit{interesting} or \textit{empty} and then forwarded to the central node.
@@ -151,8 +150,6 @@ In this section, we explains the results from simulating each scenario in a rand
 
 Each scenario, outlined in Section \ref{sim:imp}, runs to simulate a 6 month deployment. Using our motivating scenario, we modelled each scenario on a fixed number of nodes: 1 central node, 4 routing nodes and 20 sensing nodes. The implementation of our architecture has been limited to using Zigbee as the transmission medium between all sensing nodes, with a Wi-Fi connection between routing nodes and a central node. Sensing nodes then send an observation when it is captured or, if it has not captured anything then it checks for a backlog every ten minutes. Sensing nodes check for new observations to process every five minutes. We ran each scenario a hundred times, with each run simulating a 6 month duration. The time to process an observation using MK has been simulated to take 5 seconds compared to the 90 seconds when a node has HK capabilities; these values have been chosen based on the average processing time we derived using existing data. 
 
-The simulations were run in two modes: ideal transmission rate and variable transmission. Ideal used a fixed transmission rate (250kbps) for Zigbee links between all sensing nodes, with all observations being sent at the highest possible rate. Variable generates a random number for the transmission rate (between 20 and 250kbps) for each sensing node link, at the time of the network's initialisation. This models the large fluctuations in both speed and range that we observed in the Malaysian rainforest when we ran tests with Zigbee equipment. The Wi-Fi range remains constant because the distance of routing nodes from central nodes, in our motivating scenario, can be made small enough that a consistently good connection is achievable.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_int_percent}
@@ -160,15 +157,17 @@ The simulations were run in two modes: ideal transmission rate and variable tran
 	\label{fig:res:ideal:int}
 \end{figure}
 
-\begin{figure}[H]
+The simulations were run in two modes: ideal transmission rate and variable transmission. Ideal used a fixed transmission rate (250kbps) for Zigbee links between all sensing nodes, with all observations being sent at the highest possible rate. Variable generates a random number for the transmission rate (between 20 and 250kbps) for each sensing node link, at the time of the network's initialisation. This models the large fluctuations in both speed and range that we observed in the Malaysian rainforest when we ran tests with Zigbee equipment. The Wi-Fi range remains constant because the distance of routing nodes from central nodes, in our motivating scenario, can be made small enough that a consistently good connection is achievable.
+
+\begin{figure}[ht!]
 \centering 
-\begin{subfigure}{.9\textwidth}
-  \includegraphics{Chap7/figures/ideal/all_total}
+\begin{subfigure}{\textwidth}
+  \includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_total}
 	\caption{Ideal Transmission Rates.}
 	\label{fig:res:ideal:dur}
 \end{subfigure}
-\begin{subfigure}{.9\textwidth}
-  \includegraphics{Chap7/figures/real/all_total}
+\begin{subfigure}{\textwidth}
+  \includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_total}
 	\caption{Variable Transmission Rate.}
 	\label{fig:real:dur}
 \end{subfigure}
@@ -269,7 +268,7 @@ We simulated this across all five scenarios and the results are detailed in this
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_total}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_total}
 	\caption{Mean Duration of All Observations Across All Scenarios}
 	\label{fig:sat:total:dur}
 	\end{figure}
@@ -278,13 +277,13 @@ Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all obse
 
 	\begin{figure}[h]
 	\centering
-		\begin{subfigure}{0.7\textwidth}
+		\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_empty}
 		\caption{Empty.}
 		\label{fig:sat:empty:dur}
 		\end{subfigure}
 
-		\begin{subfigure}{0.7\textwidth}
+		\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int}
 		\caption{Interesting.}
 		\label{fig:sat:int:dur}
@@ -296,14 +295,14 @@ The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) show
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_percent}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_percent}
 	\caption{Percentage of Interesting Observations across All Scenarios}
 	\label{fig:sat:int:percent}
 	\end{figure}
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_empt}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_empt}
 	\caption{Percentage of Interesting Compared to Empty Observations across All Scenarios}
 	\label{fig:sat:int:empty}
 	\end{figure}

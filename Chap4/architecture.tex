@@ -22,7 +22,13 @@
 	DC nodes are capable of performing processing on data, such as the time it was recorded and its size, but their limited knowledge processing capabilities allow them to have an increased battery life and reduced size, making them suitable for a variety of deployments as they can be integrated easily with existing devices (i.e. cameras) and be easily disguised, or hidden.
 
 	\subsubsection{Knowledge Base}
-	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of deployment. This is because they do not have the processing power to handle a complete knowledge base and their hardware limitations prevent them from updating their knowledge bases once running. Some nodes within this class do not have the capability to process text files within the file system and, therefore, must have the knowledge added to their operational code. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
+	Reduced knowledge processing capabilities and low memory restrict the knowledge that these nodes can hold and they are limited to a static knowledge base that is encoded at the time of 	deployment. DC nodes run an operating system designed for embedded devices, the size of the operating system is minimal when compared to an operating system used on modern desktop computers and provides much more limited functionality, such as sleep scheduling, basic filesystem access and the capabilities to run a variation of popular languages. 
+
+	For example, TinyOS \cite{Levis2005} is an operating system designed for sensor nodes and uses a dialect of the C language, called nesC, that is optimised for the memory constraints of most sensor nodes. The operating system exposes components that allow basic commands, such as reading from the sensor interface or sending a message. Commands are executed as a request to perform some action and events signal the completion of that action. Intensive tasks, such as data processing, can be scheduled to run at a later time, ensuring that the low-power node remains responsive and preventing any calls from blocking other events.
+
+	The Waspmote nodes, explained in Section \ref{tech:waspmote}, do not run any operating system and any event handling, networking or memory management is performed solely by the single file application that is uploaded to the node through the bootloader. Performing intensive tasks, such as local data processing, can drain the battery of the node, cause it to fill the available memory or even cause the node to go down. DC nodes do not have the safeguards in place that most operating systems and applications do, operational code must be lightweight, responsive and ensure that events do not run for longer than intended. 
+
+	Some nodes within this class do not have the capability to process text files within the file system and, therefore, must have the knowledge added to their operational code. DC nodes only perform simple operations on the properties and content of the data that they sense, such as the time it was recorded, the location and its size. For more complex data, such as images and video, DC nodes do not possess the computational power required to process them and instead use the metadata associated.
 	Unlike modern rule engines, these static rules do not use forward chaining and the outcome of one rule does not cause the rules to be fired again. Listing \ref{kb:dcrule} shows an example of some of the rules in the knowledge base and highlights that the core structure of this file is simply a list of if statements that can be executed one after the other. Forward chaining is not used here because processing times need to be kept to a minimum and a chain of rules being fired could easily overwhelm the node. If any rules are fired that suggest the observation may be interesting, it is prioritised through the network and potential classifications are encoded within the observation before it is sent on.
 
 \begin{lstlisting}[breaklines=true, caption={Pseudocode DC Node Rules}, label={kb:dcrule}]
@@ -41,7 +47,7 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	\subsection{Data Processing}\label{khas:dp}
 	DP nodes act as cluster heads of the network, serving a subset of all deployed DC nodes. When data is sensed, it is forwarded through all DC nodes to the DP node that is tasked with serving the originating DC node. These nodes have more knowledge-processing capabilities than a DC node and do not perform any direct sensing. 
 
-	Due to the greater capabilities, DP nodes have a much shorter battery life than DC nodes and a network typically consists of fewer DP nodes. These capabilities, such as increased memory and higher processing power, allow DP nodes to run a rule management system, that would not be possible on nodes unable to run a desktop grade operating system, that is able to handle more complex rules and process more than just files, they can perform the same tasks as most modern computers, such as: image processing, audio processing or reading metadata from files that requires extra libraries. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
+	Due to the greater capabilities, DP nodes have a much shorter battery life than DC nodes and a network typically consists of fewer DP nodes. These capabilities, such as increased memory and higher processing power, allow DP nodes to run a rule management system (such as Drools \cite{proctor2005drools}), that would not be possible on nodes that run on an OS for embdedded systems, that is able to handle more complex rules and process more than just files, they can perform the same tasks as most modern computers, such as: image processing, audio processing or reading metadata from files that requires extra libraries. When a DP node receives data, it processes everything associated, this includes metadata, the data itself and the inferences made by the DC node. If the DC node has inferred that the data is of a higher priority, then this data is processed first. This is done by prioritising the data at two stages: once it has been received and when it is about to be sent.
 
 	In our current implementation, DP nodes use two different radios, a Zigbee radio to allow long range communication from DC nodes and a Wi-Fi radio that provides short range communication that allows for higher data rates.
 
@@ -99,31 +105,30 @@ The record shown in figure \ref{dwca} represents a DwC-A that conforms to the st
 \vspace{\baselineskip}
 % \lstinputlisting[language=XML, caption=Darwin Core Ecological Metadata File, label=dwc:eml]{Chap5/figures/dwc_arch/eml.xml}
 \begin{lstlisting}[caption=Darwin Core Ecological Metadata File Fragment, label=dwc:eml, breaklines=true, language=XML]
- <dataset>
 <alternateIdentifier>e71fda1c-dcb9-4eae-81a9-183114978e44</alternateIdentifier>
 <title>Images from Danau Girang during the PTY Project 2011-12</title>
 <creator>
-<individualName>
-<givenName>Christopher</givenName>
-<surName>Gwilliams</surName>
-</individualName>
-<organizationName>Cardiff University</organizationName>
-<positionName>PhD</positionName>
-<address>
-<city>Cardiff</city>
-<administrativeArea>Cardiff</administrativeArea>
-<postalCode>CF24 3AA</postalCode>
-<country>Wales</country>
-</address>
-<phone>(+44)2920 123456</phone>
-<electronicMailAddress>C.Gwilliams@cs.cf.ac.uk</electronicMailAddress>
+	<individualName>
+		<givenName>Christopher</givenName>
+		<surName>Gwilliams</surName>
+	</individualName>
+	<organizationName>Cardiff University</organizationName>
+	<positionName>PhD</positionName>
+	<address>
+		<city>Cardiff</city>
+		<administrativeArea>Cardiff</administrativeArea>
+		<postalCode>CF24 3AA</postalCode>
+		<country>Wales</country>
+	</address>
+	<phone>(+44)2920 123456</phone>
+	<electronicMailAddress>C.Gwilliams@cs.cf.ac.uk</electronicMailAddress>
 <onlineUrl>christopher-gwilliams.com</onlineUrl>
 </creator>
 <pubDate>2012-07-26</pubDate>
  \end{lstlisting}
 
 The descriptor file is an xml document that contains the column headers in the attached files and the mappings of those headers to DwC terms, an example file is shown in Listing \ref{dwc:meta}. This file shows that this is an archive containing the sighting of an individual, and that the sighting has been split into two files. The largest benefit of Darwin Core is its modularity. Extension files can be added to enrich the data for each occurrence. In this example the extension file is named as \textit{images.csv} and contains image-based evidence to support the observation.
-\vspace{\baselineskip}
+
 \noindent\begin{minipage}{\textwidth}
 \lstinputlisting[language=XML, caption=Darwin Core Descriptor File, label=dwc:meta]{Chap5/figures/dwc_arch/meta.xml}
 \end{minipage}
@@ -136,7 +141,7 @@ The descriptor file is an xml document that contains the column headers in the a
     \end{figure}
 
 Listing \ref{dwc:set} shows the comma-separated central file (Basis of Resource) containing the core details of the observation, i.e. the animal observed, and the column headings map to the descriptor file. Other linked files are typically linked by the unique ID of the observation, containing information that extends the observation and provides further context.
-\vspace{\baselineskip}
+
 \noindent\begin{minipage}{\textwidth}
 \lstinputlisting[caption=Darwin Core Occurrence Data, label=dwc:set]{Chap5/figures/dwc_arch/set.csv}
 \end{minipage}
