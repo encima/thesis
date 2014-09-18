@@ -260,13 +260,13 @@ Darwin Core is suited to K-HAS because its use in scientific observations matche
 		\subsection{Scenario}\label{arch:scen}
 			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare clouded leopard and sun bear are currently active at Danau Girang. The clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed. All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
 
-			In order to explain the K-HAS architecture, we need to show the planned topology for the network in Danau Girang, which is based on the positions of the cameras in 2010. The triangle icon shows the location of the DA node (at the field centre), with DP nodes (square icons) placed near the DA node because of the poor range of Wi-Fi (Section \ref{tech:wifi}). Circle icons represent the DC nodes and they link to the nodes with the fewest hops to a DA node, as long as that route includes a DP node. 
+			In order to explain the K-HAS architecture, we need to show the planned topology for the network in Danau Girang, which is based on the positions of the cameras in 2010. Figure \ref{topol} shows a section of the proposed topology around the field centre, with the rest of the network spreading out along the river on both sides. The triangle icon shows the location of the DA node (at the field centre), with DP nodes (square icons) placed near the DA node because of the poor range of Wi-Fi (Section \ref{tech:wifi}). Circle icons represent the DC nodes and they link to the nodes with the fewest hops to a DA node, as long as that route includes a DP node. 
 
 			\begin{figure}[!t]
 			\centering
 			\includegraphics[width=\textwidth]{Chap4/figures/topology}
-			\caption{Proposed Architecture for K-HAS in Danau Girang}
-			\label{cl2}
+			\caption{Section of Proposed Topology for K-HAS in Danau Girang}
+			\label{topol}
 			\end{figure}
 			
 		\subsection{Data Collection}

@@ -93,7 +93,7 @@
 \contentsline {subsection}{\numberline {5.1.1}Observation-Centric Ontologies}{89}{subsection.5.1.1}
 \contentsline {subsubsection}{OBOE}{89}{section*.48}
 \contentsline {subsubsection}{O\&M}{90}{section*.50}
-\contentsline {subsubsection}{Darwin Core SW}{91}{section*.52}
+\contentsline {subsubsection}{Darwin Core SW}{92}{section*.52}
 \contentsline {subsubsection}{SUMO - Sensor Data Ontology}{93}{section*.54}
 \contentsline {subsection}{\numberline {5.1.2}Sensor-Centric Ontologies}{94}{subsection.5.1.2}
 \contentsline {subsubsection}{SensorML}{94}{section*.55}
@@ -154,10 +154,10 @@
 \contentsline {subsection}{\numberline {8.1.4}Simulations}{157}{subsection.8.1.4}
 \contentsline {section}{\numberline {8.2}Future Work}{158}{section.8.2}
 \contentsline {chapter}{Bibliography}{161}{section.8.2}
-\contentsline {chapter}{Appendices}{178}{section*.89}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{179}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{181}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{183}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{186}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{187}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{193}{Appendix.1.F}
+\contentsline {chapter}{Appendices}{176}{section*.89}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{177}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{179}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{181}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{184}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{185}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{191}{Appendix.1.F}

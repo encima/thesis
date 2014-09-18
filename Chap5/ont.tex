@@ -5,13 +5,9 @@ This ontology is for those wanting to use deploy a WSN that uses knowledge to cl
 
 \section{Background}\label{bg}
 
-%COMPLETE THE BACKGROUND FOR EXISTING ONTOLOGIES
-
-%MAYBE INCLUDE SUBSECTION FOR DEVELOPMENT METHODOLOGIES (IS THIS 2 DIFFERENT PAPERS?)
-
 K-HAS was developed in order to provide a generic architecture for wireless sensor networks to utilise the local knowledge contained within their environment to process sensed data and, therefore, make more efficient use of the network bandwidth by prioritising sensed data that is deemed to be more valuable. We have defined local knowledge as knowledge of an area that has been gained through experience, or experimentation.
 
-Before we were able to implement K-HAS, we needed to model the flow of knowledge within the network. Developing an ontology for K-HAS means that we can do this, as well as provide a computer-readable model for all of the classes and components used by K-HAS, and the relationships between them.
+Before we were able to implement K-HAS, we needed a high-level model that defined relationships between each tier of the architecture, as well as the data standard used to transport sensed data from DC nodes to an endpoint. Developing an ontology for K-HAS means that we can do this, as well as provide a computer-readable model for all of the classes and components used by K-HAS.
 
 Making it computer readable has allowed us to reuse classes in the development of software for each tier. For example, we were able to develop a common Darwin Core java library that is used in this ontology and in our GSN middleware to unzip and process received archives.
 
@@ -28,7 +24,6 @@ K-HAS has been developed to be used with any sensors and is not specific to wild
 From this we have categorised relevant existing ontologies into Observation-Centric and Sensor-Centric ontologies.
 
 \subsection{Observation-Centric Ontologies}
-%This can be seen as an ontological representation of the OpenGIS Observations and Measurements (O\&M) Standard \cite{botts2008ogc} that provides a framework for representing observations, measurements and procedures within sensor systems.
 
 \subsubsection{OBOE}\label{OBOE}
 The Extensible Observation Ontology (known in reverse as OBOE) is a popular suite of ontologies used to represent scientific observations \cite{Madin2007b}. Initially starting as base ontology for ecological observations, it has now grown into a suite of extensions that make it suited for chemistry, bioinformatics, anatomy and others. OBOE is represented by OWL-DL \cite{McGuinness2004} and allows the characteristics of a generic scientific observation to be linked to domain specific characteristics.
