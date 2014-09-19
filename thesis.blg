@@ -12,7 +12,6 @@ A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: App/appendix.aux
 Database file #1: refs/refs.bib
-Warning--I didn't find a database entry for "botts2008ogc"
 Warning--to sort, need author or key in dgfc
 Warning--to sort, need author or key in nest
 Warning--to sort, need author or key in fitbit
@@ -43,45 +42,45 @@ Warning--empty year in proctor2005drools
 Warning--empty year in Reconyx
 Warning--empty year in dwc_oboe
 Warning--empty year in ZSL
-You've used 118 entries,
+You've used 117 entries,
             2773 wiz_defined-function locations,
-            1278 strings with 27787 characters,
-and the built_in function-call counts, 63101 in all, are:
-= -- 5672
-> -- 3902
+            1272 strings with 27718 characters,
+and the built_in function-call counts, 62363 in all, are:
+= -- 5616
+> -- 3827
 < -- 93
-+ -- 1332
-- -- 1206
-* -- 5117
-:= -- 9272
-add.period$ -- 387
-call.type$ -- 118
-change.case$ -- 749
++ -- 1306
+- -- 1182
+* -- 5037
+:= -- 9152
+add.period$ -- 384
+call.type$ -- 117
+change.case$ -- 738
 chr.to.int$ -- 110
-cite$ -- 273
-duplicate$ -- 2845
-empty$ -- 5004
-format.name$ -- 1353
-if$ -- 13564
-int.to.chr$ -- 9
+cite$ -- 271
+duplicate$ -- 2824
+empty$ -- 4964
+format.name$ -- 1328
+if$ -- 13419
+int.to.chr$ -- 8
 int.to.str$ -- 1
-missing$ -- 103
-newline$ -- 590
-num.names$ -- 444
-pop$ -- 1699
+missing$ -- 102
+newline$ -- 585
+num.names$ -- 440
+pop$ -- 1679
 preamble$ -- 1
-purify$ -- 633
+purify$ -- 623
 quote$ -- 0
-skip$ -- 2316
+skip$ -- 2299
 stack$ -- 0
-substring$ -- 2347
-swap$ -- 550
+substring$ -- 2327
+swap$ -- 547
 text.length$ -- 53
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1278
+type$ -- 1267
 warning$ -- 30
-while$ -- 530
+while$ -- 526
 width$ -- 0
-write$ -- 1520
-(There were 31 warnings)
+write$ -- 1507
+(There were 30 warnings)

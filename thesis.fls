@@ -385,8 +385,8 @@ INPUT Chap5/figures/ssnont.jpg
 INPUT Chap5/figures/ssnont.jpg
 INPUT Chap5/figures/khas_base.JPG
 INPUT Chap5/figures/khas_base.JPG
-INPUT Chap5/figures/khas_ontology.JPG
-INPUT Chap5/figures/khas_ontology.JPG
+INPUT Chap5/figures/khas_ontology_copy.jpg
+INPUT Chap5/figures/khas_ontology_copy.jpg
 OUTPUT Chap6/implementation.aux
 INPUT Chap6/implementation.tex
 INPUT Chap6/implementation.tex

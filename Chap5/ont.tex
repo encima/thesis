@@ -1,7 +1,7 @@
 \chapter{An Ontology for Knowledge-Based Wireless Sensor Networks}\label{chap:ont}
 In this chapter, we explain the ontology we have proposed to formally define the components within K-HAS, the structure of the sensed data, the users involved with the network, as well as the format of the sensed data that is passed through the network.
 
-This ontology is for those wanting to use deploy a WSN that uses knowledge to classify the scientific observations recorded, or even to select parts of the ontology that meet their requirements and implement those. Terms have been used to map to widely-used ontologies in the domains of scientific observation, sensors and people. However, our proposed architecture (Chapter \ref{chap:arch}) defines new terms that do not exist in current ontologies, thus we extend the alignment of these existing ontologies to create an ontology that encompasses the ontologies as well as defining new terms to match out architecture.
+This ontology is for those wanting to deploy a WSN that uses knowledge to classify the scientific observations recorded, or even to select parts of the ontology that meet their requirements and implement those. Terms have been used to map to widely-used ontologies in the domains of scientific observation, sensors and people. However, our proposed architecture (Chapter \ref{chap:arch}) defines new terms that do not exist in current ontologies, thus we extend the alignment of these existing ontologies to create an ontology that encompasses the ontologies as well as defining new terms to match our architecture.
 
 \section{Background}\label{bg}
 
@@ -15,13 +15,13 @@ During the development of the K-HAS ontology, we researched existing ontologies 
 
 Looking into existing ontologies, we found that there had been many surveys on representing sensors in the semantic web: \cite{Compton2009}, \cite{Janowicz2010}, outlines the existing work. These surveys clearly highlighted that these ontologies had been split into two branches; observation-centric and sensor-centric.
 
-Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{Botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SSN \cite{Compton2012} and SensorML\cite{Botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
+Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SSN \cite{Compton2012} and SensorML\cite{botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
 
 We found one existing ontology, the Standard Upper Merged Ontology (SUMO), that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo:sdo} and Section \ref{ont:sumo:sho}. The reason there are so few could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
 
 K-HAS has been developed to be used with any sensors and is not specific to wildlife cameras, therefore we also looked into sensor-based ontologies that concentrate on the hardware and the individual capabilities of each device within the network.
 
-From this we have categorised relevant existing ontologies into Observation-Centric and Sensor-Centric ontologies.
+% From this we have categorised relevant existing ontologies into Observation-Centric and Sensor-Centric ontologies.
 
 \subsection{Observation-Centric Ontologies}
 
@@ -42,7 +42,7 @@ Figure \ref{oboe} shows the basic structure of a core OBOE observation, outlinin
 The primary benefits of OBOE are that it is generic enough to cover almost all types of scientific observation and domain extensions allow for more specific details to be stored.
 
 \subsubsection{O\&M}
-The Open Geospatial Consortium (OGC) Observations and Measurements Standard aims to provide a framework suitable for recording any observation made by a sensor, regardless of the domain \cite{Botts}. 
+The Open Geospatial Consortium (OGC) Observations and Measurements Standard aims to provide a framework suitable for recording any observation made by a sensor, regardless of the domain \cite{botts}. 
 
 A key feature of O\&M is that \textit{observation} and \textit{measurement} are not just classes. They also denote an action.
 An observation is an action that causes a result, yielding a value and a measurement is a set of operations that provide some result(s).
@@ -127,7 +127,7 @@ The SDO describes the sensing properties of a device beyond the hardware and the
 Sensor-centric ontologies are more focussed on the structure of the sensor, the network and the sensing processes involved. 
 
 \subsubsection{SensorML}
-The Sensor Markup Language (SensorML) Standard has been developed by the OGC, and complements the O\&M Standard, to enable the discovery and tasking of internet-connected sensors \cite{Botts}.
+The Sensor Markup Language (SensorML) Standard has been developed by the OGC, and complements the O\&M Standard, to enable the discovery and tasking of internet-connected sensors \cite{botts}.
 
 SensorML provides an XML schema for describing a sensor, its capabilities and the processes available. At the core, SensorML comprises of:
 \begin{enumerate}
@@ -359,7 +359,7 @@ Mapping these concepts, a diagram of the base K-HAS ontology is shown in Figure 
 Once the concepts had been identified (and agreed upon), the ontology must be coded. We used Protege 4.2.2 \cite{Noy2000a} and implemented K-HAS in the Web Ontology Language (OWL), creating a core file that could be expanded; should we need to import existing ontologies.
 
 \subsection{Build the Ontology - Integrate Existing Ontologies}
-Our proposal for K-HAS is focused on scientific observations. Because of this, the focal point of our existing ontology research is of ontologies that are centred around scientific observations, this allows us to create a more generic ontology that is still able to capture all of the semantic details associated with a wildlife observation.
+Our proposal for K-HAS is focused on scientific observations. Because of this, the focal point of our existing ontology research is on ontologies that are centred around scientific observations. This allows us to create a more generic ontology that is still able to capture all of the semantic details associated with a wildlife observation.
 
 As explained in Section \ref{bg}, our research of existing ontologies covered two categories: observation-centric and sensor-centric. We identified ontologies, within multiple domains, that satisfied many of our requirements for K-HAS, but not all. Using the core concepts outlined in Section \ref{buildcapture}, we created a minimal ontology and used the results of our research to map K-HAS concepts to those that had already been identified.
 
@@ -379,7 +379,7 @@ The final ontology is shown in Figure \ref{khas_ont} (with the complete code in 
 
     \begin{figure}[H]
     \centering
-        \includegraphics[angle=90, width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/khas_ontology.JPG}
+        \includegraphics[angle=90, width=\textwidth, height=\textheight, keepaspectratio]{Chap5/figures/khas_ontology_copy.jpg}
     \caption{K-HAS Ontology}
     \label{khas_ont}
     \end{figure}

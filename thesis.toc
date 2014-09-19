@@ -150,7 +150,7 @@
 \contentsline {section}{\numberline {8.1}Summary of Contributions}{155}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}K-HAS}{156}{subsection.8.1.1}
 \contentsline {subsection}{\numberline {8.1.2}Ontology}{156}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{156}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{157}{subsection.8.1.3}
 \contentsline {subsection}{\numberline {8.1.4}Simulations}{157}{subsection.8.1.4}
 \contentsline {section}{\numberline {8.2}Future Work}{158}{section.8.2}
 \contentsline {chapter}{Bibliography}{161}{section.8.2}
