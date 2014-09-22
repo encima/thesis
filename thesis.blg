@@ -12,6 +12,33 @@ A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: App/appendix.aux
 Database file #1: refs/refs.bib
+I was expecting a `,' or a `}'---line 279 of file refs/refs.bib
+ :   
+ :   Publisher                = {CEUR Publications (1999)}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 287 of file refs/refs.bib
+ :   
+ :   Publisher                = {American Asociation for Artificial Intelligence}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 307 of file refs/refs.bib
+ :   
+ :   Publisher                = {Molecular Diversity Preservation International}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1098 of file refs/refs.bib
+ :   
+ :   Url                     = {http://pandaboard.org/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "Janowicz2010"
+refers to entry "DBLP:conf/semweb/2010ssn", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/semweb/2010ssn"
+Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
+while executing---line 1347 of file plainnat.bst
+Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
+while executing---line 1347 of file plainnat.bst
 Warning--to sort, need author or key in dgfc
 Warning--to sort, need author or key in nest
 Warning--to sort, need author or key in fitbit
@@ -19,23 +46,23 @@ Warning--to sort, need author or key in ifttt
 Warning--to sort, need author or key in xively
 Warning--to sort, need author or key in dweet
 Warning--to sort, need author or key in opensense
+Warning--to sort, need author or key in instruments2012pandaboard
 Warning--empty year in dgfc
 Warning--empty year in dweet
 Warning--empty year in fitbit
 Warning--empty year in ifttt
+Warning--empty year in instruments2012pandaboard
 Warning--empty year in nest
 Warning--empty year in opensense
 Warning--empty year in xively
 Warning--empty institution in Aberer2007
-Warning--empty journal in Brank2005
-Warning--empty journal in Brewster2004
 Warning--empty year in Buckeye
-Warning--empty journal in Fernandez-Lopez1999
-Warning--empty journal in Fernandez-Lopez1997
-Warning--empty journal in Gruninger1995
+Warning--empty title in Brewster2004
 Warning--can't use both volume and number fields in Hempstead2005
-Warning--empty year in instruments2012pandaboard
-Warning--empty journal in Joshi2001
+Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
+while executing---line 1429 of file plainnat.bst
+Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
+while executing---line 1429 of file plainnat.bst
 Warning--empty year in waspmote
 Warning--can't use both volume and number fields in Martonosi2003
 Warning--empty year in proctor2005drools
@@ -44,43 +71,43 @@ Warning--empty year in dwc_oboe
 Warning--empty year in ZSL
 You've used 117 entries,
             2773 wiz_defined-function locations,
-            1272 strings with 27718 characters,
-and the built_in function-call counts, 62363 in all, are:
-= -- 5616
-> -- 3827
-< -- 93
-+ -- 1306
-- -- 1182
-* -- 5037
-:= -- 9152
-add.period$ -- 384
+            1275 strings with 28832 characters,
+and the built_in function-call counts, 62279 in all, are:
+= -- 5595
+> -- 3812
+< -- 91
++ -- 1301
+- -- 1177
+* -- 5033
+:= -- 9113
+add.period$ -- 381
 call.type$ -- 117
-change.case$ -- 738
+change.case$ -- 734
 chr.to.int$ -- 110
-cite$ -- 271
-duplicate$ -- 2824
-empty$ -- 4964
-format.name$ -- 1328
-if$ -- 13419
+cite$ -- 268
+duplicate$ -- 2837
+empty$ -- 5008
+format.name$ -- 1322
+if$ -- 13425
 int.to.chr$ -- 8
 int.to.str$ -- 1
 missing$ -- 102
-newline$ -- 585
-num.names$ -- 440
-pop$ -- 1679
+newline$ -- 581
+num.names$ -- 438
+pop$ -- 1687
 preamble$ -- 1
-purify$ -- 623
+purify$ -- 621
 quote$ -- 0
-skip$ -- 2299
+skip$ -- 2290
 stack$ -- 0
-substring$ -- 2327
-swap$ -- 547
-text.length$ -- 53
+substring$ -- 2304
+swap$ -- 551
+text.length$ -- 52
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1267
-warning$ -- 30
-while$ -- 526
+warning$ -- 26
+while$ -- 521
 width$ -- 0
-write$ -- 1507
-(There were 30 warnings)
+write$ -- 1505
+(There were 9 error messages)

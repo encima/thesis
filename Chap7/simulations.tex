@@ -7,7 +7,7 @@ This chapter is structured as follows. Section \ref{sim:sim} describes the imple
 
 \section{Simulation Environment}\label{sim:sim}
 
-Using RePast Simphony \cite{Collier2003}, a agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run that would simulate the camera's capture of an image and transmitting it to an endpoint.
+Using RePast Simphony \cite{Collier2003}, a agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run to simulate the camera's capture of an image and transmitting it to an endpoint.
 %train may take three hundred for it to arrive at its destination. When the simulation reaches three hundred ticks, a scheduled event could run that would open the train doors, make an announcement and so on.
 
 RePast was chosen because we did not require the low level network configuration provided by other tools, such as NS2 \cite{mccanne1997network}, but we did need to modify and record the behaviour between nodes as they capture and process sensed data. RePast's event scheduling allows for nodes to be modelled as agents and the dynamic configuration allowed us to modify the simulations during run time. The aim of these simulations was to visualise how different knowledge-processing capabilities can affect the prioritisation and transmission time of observations, as well as the accuracy of their classifications. RePast allowed us to utilise existing Java code we were using in our K-HAS middleware and develop a base simulation that could be configured easily with XML files.
@@ -44,7 +44,7 @@ A 2D space is used to display the grid and the simulation is run within RePast's
 		\item HK-ALL: Sensing and routing nodes have high processing capabilities.
 	\end{itemize}
 
-Before implementing, we designed the agents required based largely on the ontology proposed in Chapter \ref{chap:ont}. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS. We used these to create properties for each transmission medium that could be used by each node object. Table \ref{sim:tab:terms} shows how the K-HAS terms, introduced in Chapter \ref{chap:arch}, and LORIS terms, detailed in Chapter \ref{chap:imp}, map to the node types described above. The nodes used in our simulations map directly to the ontology.
+Before implementing, we designed the agents required based on the nodes described in the ontology we proposed in Chapter \ref{chap:ont}. Using that, we created a hierarchy of nodes inheriting common properties from a node object. As previously mentioned, we had metrics on range and transmission times from previous experiments and the deployment of LORIS. We used these to create properties for each transmission medium that could be used by each node object. Table \ref{sim:tab:terms} shows how the K-HAS terms, introduced in Chapter \ref{chap:arch}, and LORIS terms, detailed in Chapter \ref{chap:imp}, map to the node types described above. The nodes used in our simulations map directly to the ontology.
 
 \begin{table}[h]
 \centering
@@ -70,7 +70,7 @@ The structure of the simulation is as follows: The \textit{network builder} inst
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.70\textwidth]{Chap7/figures/khas_sim}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/khas_sim}
 	\caption{MK-HK Simulation Example in RePast Simulator}
 	\label{fig:sim}
 	\end{figure}
@@ -105,7 +105,7 @@ The routing protocol used needs to be dynamic in order to adapt to nodes being a
 
 In our K-HAS architecture, sensing nodes cannot connect directly to a central node because processing would not take place. Because of this, we used the same routing method across all scenarios. Our implementation of MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
 
-\subsubsection{Discovery}
+\subsubsection{Discovery}\label{sim:disc}
 	Discovery begins at each central node, scanning nodes in range for routing nodes and sending a broadcast packet, with a cost of 0, to inform them that they are within range of a central node. Links between Central and Routing nodes use W-Fi in all of our scenarios. Once received, routing nodes increment the count and forward the packet to any routing nodes within range of them, where we use the range of Zigbee. We found that this method overloaded the routing nodes and all sensing nodes within range would connect to the first routing node they receive the broadcast from. We then implemented a method, called \textit{load balancing} \cite{Gupta2003}, which uses the sensing nodes connected to a routing node to calculate whether it should offload new nodes to a neighbouring routing node.
 	
 	The maximum connections a routing node can have is determined by the total number of sensing nodes in the network divided by the total number of routing nodes, which is held in the knowledge base of the central node. Once a routing node has the maximum number of connections allowed, it starts to offload to a neighbouring routing node that is also in range of the sensing node requesting a connection. If there are no neighbouring nodes then the routing node exceeds the maximum number of connections allowed, to save sensing nodes being left with nowhere to send their data.
@@ -152,7 +152,7 @@ Each scenario, outlined in Section \ref{sim:imp}, runs to simulate a 6 month dep
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/ideal/all_int_percent}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_int_percent}
 	\caption{Percentage of Interesting Observations for All Scenarios.}
 	\label{fig:res:ideal:int}
 \end{figure}
@@ -161,12 +161,12 @@ The simulations were run in two modes: ideal transmission rate and variable tran
 
 \begin{figure}[ht!]
 \centering 
-\begin{subfigure}{0.7\textwidth}
+\begin{subfigure}{0.8\textwidth}
   \includegraphics[width=0.8\textwidth]{Chap7/figures/ideal/all_total}
 	\caption{Ideal Transmission Rates.}
 	\label{fig:res:ideal:dur}
 \end{subfigure}
-\begin{subfigure}{0.7\textwidth}
+\begin{subfigure}{0.8\textwidth}
   \includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_total}
 	\caption{Variable Transmission Rate.}
 	\label{fig:real:dur}
@@ -201,18 +201,18 @@ HKALL & 42511 & 9671        & 22.7           & 32840 & 18.9     \\
 
 During our visits to Danau Girang, we performed experiments for many different transmission methods: Wi-Fi, Zigbee and RF. The results were always different to what we experienced in the UK and the variation in connectivity in just a few minutes, or metres, was extreme in some cases. Days where the humidity was one percent higher than the previous day could result in a 50\% range drop and rain for a few minutes could drop all connections for an hour afterwards. Modelling this in our simulations was necessary to accurately plan for what we could expect in Malaysia. Our planned network topology (Section \ref{arch:scen}) in Danau Girang has routing and central nodes so close to each other that the Wi-Fi connection remained fairly stable and connectivity should remain at 100\%. When simulating sensing nodes, we randomly set their transmission rate between 20 and 250kbps at the start of each run. As each scenario is being run 100 times, this method is more efficient while still allowing for variation in the transmission rates. 
 
-The number of interesting observations received in each scenario remained similar to the ideal mode (see Tables \ref{sim:tab:ideal} and \ref{sim:tab:variable}), as expected, but the fluctuation in transmission time (Figure \ref{fig:real:dur}) is much larger, with some images taking 800 seconds, or 13 minutes. In our motivating scenario, this is not much of an issue. However, if the image was of a hunter or the scenario was building intrusion detection system, then thirteen minutes is a long delay that could cause considerable damage. Of course, using all Wi-Fi connections is a more feasible option, but situations where long range is required prevents this and these simulations do not currently take into account broken links in the network, where changes to the node's environment (such as a fallen tree) that could block its signal or an increase in humidity, could cause it to drop out of range for minutes or even hours. 
+The number of interesting observations received in each scenario remained similar to the ideal mode (see Tables \ref{sim:tab:ideal} and \ref{sim:tab:variable}), as expected, but the fluctuation in transmission time (Figure \ref{fig:real:dur}) is much larger, with some images taking 800 seconds, or 13 minutes. In our motivating scenario, this is not much of an issue. However, if the image was of a hunter or the scenario was building intrusion detection system, then thirteen minutes is a long delay that could cause considerable damage. Of course, using all Wi-Fi connections is a more feasible option, but situations where long range is required prevents this. Our simulations do not currently take into account broken links in the network, where changes to the node's environment (such as a fallen tree) could cause it to drop out of range for a few minutes, or even hours, but this can be addressed by implementing the discovery phase (described in Section \ref{sim:disc}) of the routing protocol to run at a set interval throughout the duration of the simulation.
 
 The duration of an observation with both a variable and ideal transmission rate does not fluctuate largely and Figure \ref{fig:res:ideal:int} shows that the processing power of MK-HK vs. HK-ALL is identical. However, Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that the primary benefit of pushing HK processing capabilities out to the edge of the network allows for better prioritisation of observations. Sensing nodes with HK are able to determine whether an observation is interesting or empty with much greater accuracy than MK and these capabilities, right at the edge of the network, allows for an interesting observation to be processed as soon as it is captured and sent without further processing directly to a central node. The only delays being the processing time itself and the sending queue of intermediate nodes. Figures \ref{fig:real:int:dur} and \ref{fig:real:empty:dur} show that, when a network is not saturated, interesting and empty observations take a similar amount of time to pass through the network; with the exception of the HK-ALL scenario. WSNs with much worse transmission rates could experience a much larger time difference between interesting observations, especially when using long range FM frequencies that can transfer only a few bytes a second.
 \begin{figure}[ht!]
 \centering
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.8\textwidth}
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_int}
 	\caption{Interesting Observations.}
 	\label{fig:real:int:dur}
 	\end{subfigure}	
 
-	\begin{subfigure}{0.7\textwidth}
+	\begin{subfigure}{0.8\textwidth}
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/real/all_empty}
 	\caption{Empty Observations.}
 	\label{fig:real:empty:dur}
@@ -266,7 +266,7 @@ We simulated this across all five scenarios and the results are detailed in this
 
 	\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_total}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_total}
 	\caption{Mean Duration of All Observations Across All Scenarios}
 	\label{fig:sat:total:dur}
 	\end{figure}
@@ -275,13 +275,13 @@ Figure \ref{fig:sat:total:dur} shows that the mean transmission time of all obse
 
 	\begin{figure}[ht!]
 	\centering
-		\begin{subfigure}{0.7\textwidth}
+		\begin{subfigure}{0.8\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_empty}
 		\caption{Empty.}
 		\label{fig:sat:empty:dur}
 		\end{subfigure}
 
-		\begin{subfigure}{0.7\textwidth}
+		\begin{subfigure}{0.8\textwidth}
 		\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int}
 		\caption{Interesting.}
 		\label{fig:sat:int:dur}
@@ -293,14 +293,14 @@ The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) show
 
 	\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_percent}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_percent}
 	\caption{Percentage of Interesting Observations across All Scenarios}
 	\label{fig:sat:int:percent}
 	\end{figure}
 
 	\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Chap7/figures/saturated/all_int_empt}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/saturated/all_int_empt}
 	\caption{Percentage of Interesting Compared to Empty Observations across All Scenarios}
 	\label{fig:sat:int:empty}
 	\end{figure}
