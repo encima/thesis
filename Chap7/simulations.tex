@@ -7,7 +7,7 @@ This chapter is structured as follows. Section \ref{sim:sim} describes the imple
 
 \section{Simulation Environment}\label{sim:sim}
 
-Using RePast Simphony \cite{Collier2003}, a agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run to simulate the camera's capture of an image and transmitting it to an endpoint.
+Using RePast Simphony \cite{Collier2003}, an agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run to simulate the camera's capture of an image and transmitting it to an endpoint.
 %train may take three hundred for it to arrive at its destination. When the simulation reaches three hundred ticks, a scheduled event could run that would open the train doors, make an announcement and so on.
 
 RePast was chosen because we did not require the low level network configuration provided by other tools, such as NS2 \cite{mccanne1997network}, but we did need to modify and record the behaviour between nodes as they capture and process sensed data. RePast's event scheduling allows for nodes to be modelled as agents and the dynamic configuration allowed us to modify the simulations during run time. The aim of these simulations was to visualise how different knowledge-processing capabilities can affect the prioritisation and transmission time of observations, as well as the accuracy of their classifications. RePast allowed us to utilise existing Java code we were using in our K-HAS middleware and develop a base simulation that could be configured easily with XML files.
@@ -63,7 +63,7 @@ LORIS                 & Buckeye                & Sensing Node + NK         \\
 \label{sim:tab:terms}
 \end{table}
 
-Using a Java library we developed for DwC archives during the implementation of LORIS (Section \ref{loris:arch}), we were able to implement DwC archives as the data standard in our simulations, this allowed us to model the prioritisation of sensed data, as well as the classification of observations, in the same way that an actual WSN would.
+Using a Java library we developed for DwC archives during the implementation of LORIS (Section \ref{loris:arch}), we were able to implement DwC archives as the data standard in our simulations, this allowed us to model the prioritisation of sensed data, as well as the classification of observations, in the same way that a K-HAS deployment would.
 
 The structure of the simulation is as follows: The \textit{network builder} instantiates all the nodes, places them randomly on the grid and schedules events once the simulation has started. The nodes then use the properties of their transmission medium to find nodes in range and create a connection; depicted by a line between the node. The simulation uses metrics, such as the size of the image, extracted from the images taken at Danau Girang and the chance of an image being captured by a camera is based on the average capture rate of a camera. The fire rate has been calculated by the average number of pictures captured in a day taken by each camera. Figure \ref{fig:sim} shows an example topology of the MK-HK scenario, sensing nodes are marked in yellow, routing nodes in green and the central node is red. Black edges are used to link the nodes. Each node is placed randmonly on the space and links are established between neighbouring nodes with the fewest hops to a central node. Network parameters are set in a configuration file, before the simulation runs, such as: the number of each node type and the size of the space.
 
@@ -101,7 +101,7 @@ Upon each capture, images are created and given a random size, between the maxim
 When an archive is sent to the routing node, we used the average time for our image processing tool and Drools engine to run and attempt a classification, which is 43 seconds (ticks), explained in detail in Section \ref{tech:sf:triton}. To keep the classifications as general as possible, so that the simulation applies to any WSN for scientific observations, archives are not classified down to the species level, they are marked as \textit{interesting} or \textit{empty} and then forwarded to the central node.
 
 \subsection{Routing}
-The routing protocol used needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. In our approach, we use a modification the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{arch:routing}. A cost is assigned to each node, based on how far they are from the central node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a base station. This protocol is used in all scenarios.
+The routing protocol used needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. In our approach, we use a modification of the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{arch:routing}. A cost is assigned to each node, based on how far they are from the central node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a central node. This protocol is used in all scenarios.
 
 In our K-HAS architecture, sensing nodes cannot connect directly to a central node because processing would not take place. Because of this, we used the same routing method across all scenarios. Our implementation of MCFA works with a discovery phase and a transmission phase. The discovery phase is a scheduled event, taking place at the start of deployment but it can be run throughout deployment to react to nodes being added or removed. 
 
@@ -128,7 +128,7 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 \subsection{Capture}
 	Using the existing data collected from Danau Girang, we calculated how often a camera triggers in a six month deployment, as well as how often the observation contained interesting content. 
 	
-	To calculate the count of interesting images, we processed every directory of images to extract the largest object in the foreground, using our Triton program. Once processed, we iterated through every directory, counted the total number of images and the total number of extracted images. This gave us a 20.7\% chance of an image being interesting, across every camera.
+	To calculate the count of interesting images, we processed every directory of images to extract the largest object in the foreground, using our Triton program. Once processed, we iterated through every directory, counted the total number of images and the total number of extracted images; an extracted image is a black and white image containing the largest object that has been found in the observation and are only created when the processing believes that the observation is interesting. This gave us a 20.7\% chance of an image being interesting, across every camera.
 	
 	The chance of a camera being triggered each second was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561 of a camera trigger in any given second.
 	%Edit this to explain why it runs every 1000 ticks
@@ -230,7 +230,7 @@ NK-ALL & 43743 & 9012        & 20.6           & 34730 & 79.4     \\
 NK-MK  & 44258 & 9195        & 20.8           & 35063 & 79.2     \\
 MK-ALL & 44152 & 9130        & 20.7           & 35021 & 79.3     \\
 MK-HK  & 44273 & 10183       & 23.0           & 34059 & 77.0     \\
-HKALL & 43011 & 9935        & 23.1           & 33076 & 18.9     \\
+HK-ALL & 43011 & 9935        & 23.1           & 33076 & 18.9     \\
 \hline
 \end{tabular}
 \caption{Mean Number of Observations for All Scenarios under Variable Transmission Rate}
@@ -251,11 +251,11 @@ Imagine a scenario where flash floods in the rainforest prevent access to the no
 \hline
       & Total  & Interesting & \% Interesting & Empty  & \% Empty \\
 \hline
-NKALL & 254352 & 127149      & 50           & 127149 & 50     \\
-NKMK  & 264580 & 144058      & 54.4         & 120522 & 45.6     \\
-MKALL & 183727 & 126530      & 68.9           & 57196  & 31.1     \\
-KHAS  & 159446 & 115054      & 72.2           & 44392  & 27.8     \\
-HKALL & 192010 & 155656      & 81             & 36353  & 18.9     \\
+NK-ALL & 254352 & 127149      & 50           & 127149 & 50     \\
+NK-MK  & 264580 & 144058      & 54.4         & 120522 & 45.6     \\
+MK-ALL & 183727 & 126530      & 68.9           & 57196  & 31.1     \\
+MK-HK  & 159446 & 115054      & 72.2           & 44392  & 27.8     \\
+HK-ALL & 192010 & 155656      & 81             & 36353  & 18.9     \\
 \hline
 \end{tabular}
 \caption{Mean Number of Observations for All Scenarios when Saturated}
@@ -305,7 +305,7 @@ The mean transmission time of empty images (Figure \ref{fig:sat:empty:dur}) show
 	\label{fig:sat:int:empty}
 	\end{figure}
 
-Saturating each scenario shows how different levels of knowledge processing across the the nodes can prioritise the delivery of interesting observations while filtering out observations that have been classified as empty. We can see that the HK-ALL scenario delivers the highest percentage of interesting observations (80\%), with a slightly higher average transmission time. Having HK on all nodes causes a large reduction in the lifetime of the network to 3 weeks. L-KHK (or KHAS) is a good alternative to this as it provides a network lifetime of 3 months for the majority of the nodes but still around 70\% of all images (same as MK-ALL) are interesting, but the majority of these are \textit{true positives}. In a network with limited access to a power source, MK-HK is the best implementation but, for networks with access to a continuous power source, HK-ALL can be used to increase the number of interesting observations delivered to the central node in a shorter time period.
+Saturating each scenario shows how different levels of knowledge processing across the nodes can prioritise the delivery of interesting observations while filtering out observations that have been classified as empty. We can see that the HK-ALL scenario delivers the highest percentage of interesting observations (80\%), with a slightly higher average transmission time. Having HK on all nodes causes a large reduction in the lifetime of the network to 3 weeks. MK-HK (or K-HAS) is a good alternative to this as it provides a network lifetime of 3 months for the majority of the nodes but still around 70\% of all images (same as MK-ALL) are interesting, but the majority of these are \textit{true positives}. In a network with limited access to a power source, MK-HK is the best implementation but, for networks with access to a continuous power source, HK-ALL can be used to increase the number of interesting observations delivered to the central node in a shorter time period.
 
 % \subsection{Scenarios}
 
@@ -447,7 +447,7 @@ Using a model of real world transmission rates, we have seen that the variation 
 
 While the simulation is not feature complete, it is accurate enough to show how MK-HK utilises the knowledge-processing capabilities at each tier to process, and prioritise, sensed data based on knowledge gained from the environment, previously sensed data and from humans using the network. Our results also show that the difference between MK-HK and HK-ALL is  not significant enough to warrant the loss in network lifetime. However, not every scenario would be suited to this. NK-MK shows a slightly faster transmission time and a much longer network lifetime, as most nodes would not have any processing power. While the processing of sensed data would not be enough to rely on, it could act as pre-processing that could be processed further once power is not an issue. This would be well suited for networks where nodes have limited power and are not easily accessible, such as bird nest monitoring networks. 
 
-MK-HK allows sensed data to be processed, and delivered, in near real-time with approximately 87\% of all interesting data being correctly classified. This number could increase the longer that the network is deployed, which is something we would like to investigate in the future.
+MK-HK allows sensed data to be processed, and delivered, in near real-time with approximately 82\% of all interesting data being correctly classified. This number could increase the longer that the network is deployed, which is something we would like to investigate in the future.
 
 Finally, we simulated the situation where there is more sensed data than the bandwidth available. The greater knowledge-processing capabilities of HK-ALL scenarios ensured that empty images were delayed and interesting observations were sent with a greater priority. While there were interesting observations misclassified as empty that were delayed, they made up less than 10\% of all interesting observations. MK-HK did receive fewer interesting observations, most likely due to its limited ability to prioritise sensed data right from the edge of the network, but the majority of interesting observations were true positives and they were prioritised over empty observations. MK-ALL, with a longer network lifetime of MK-HK and HK-ALL, did not prioritise interesting over empty data effectively but still provided more true positives than false negatives.
 
