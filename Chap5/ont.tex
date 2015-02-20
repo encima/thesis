@@ -230,6 +230,10 @@ While the SHO and SDO extensions of SUMO are classed as both an observation-cent
 We found that many of these ontologies satisfied many subsections of K-HAS completely, meaning that it would be unnecessary to reproduce these concepts. From these findings we have developed an aligning ontology that connects ontologies across multiple domains to support our proposal of K-HAS, creating an ontology that is both sensor-centric and observation-centric.
 
 %SSN DISCUSSION HERE!
+The SSN ontology is a modular ontology created by combining concepts from researching existing, popular ontologies and allows for domain specific concepts to be imported.
+
+Some of the main uses cases for the SSN ontology are provenance and data discovery, which are also key within K-HAS. However, the tiered structure of K-HAS did not map directly to SSN and it proved difficult to represent the flow of knowledge through a network, as humans can also perform similar operations on observations and the observations are enriched as they pass through the network. However, while we did not use the ontology directly, many of our concepts can be mapped directly and it could be possible to modify K-HAS to leverage the modular nature of SSN and extend it.
+ %The majority of the concepts described can be mapped to K-HAS and the observation-centric terms could be further extended to incorporate Darwin Core observations. However, when developing the K-HAS ontology, our focus was on the flow of knowledge through the network and we found that the SSN ontology definded sensing nodes as devices capable of sensing their environment and some processing capabilities, but not as devices that enriched the data they sensed with further knowledge. Many of the terms used in K-HAS map directly to SSN and one of the goals of SSN to show provenance is something we would like to implement in the K-HAS ontology. 
 
 \section{Method}
 % *Outline standard ontology development method
