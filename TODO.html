@@ -1,0 +1,278 @@
+<h1>Corrections</h1>
+<h2>Key</h2>
+<ul>
+<li>RED - Current blocker, eithe a large chunk of work or I am unsure how to progress.</li>
+<li>AMBER - Requires extra work but not a significant time investment</li>
+<li>GREEN - Simple modification/removal</li>
+</ul>
+<h2>List</h2>
+<h3>Simulation experiments</h3>
+<ul>
+<li>
+<p>[RED] Base line of WSN sending out all data to base station without DPs, i.e. a
+simple mutlihop network that sends images directly out via the
+shortest route and the base station does the classification. You may
+want to consider the base station having MK in one scenario and
+HK in another, i.e. two baselines.</p>
+</li>
+<li>
+<p>[RED] Rerun all experiments with the additional scenarios. You should report
+the total number of images that were generated, the number that
+arrived at the base station and the (ideally) number that were
+dropped.</p>
+</li>
+<li>
+<p>Formalise the description of the experimental design clearly stating what
+variables were kept constant and which were measured. The
+simulation chapter needs to include (in addition to the verbal
+explanation) more formal software documentation of the simulation
+system, such as with appropriate UML diagramming methods and
+maybe also pseudo-code. This includes making clear how particular
+random generator parameters were set – i.e. where the values
+came from and how used.</p>
+</li>
+<li>
+<p>[AMBER] Error bars on graphs, although box and whisker plots with the mean
+indicated would be more appropriate</p>
+</li>
+<li>
+<p>[GREEN] Keep figures with the text that describe them</p>
+</li>
+<li>
+<p>[GREEN] Remove claims about energy usage in the network</p>
+</li>
+</ul>
+<h3>Formal design of the K-HAS</h3>
+<ul>
+<li>
+<p>[AMBER] Separate out architecture design from scenarios of its use</p>
+</li>
+<li>
+<p>[GREEN] Make it explicit that the DA will be running on a laptop/desktop computer</p>
+</li>
+<li>
+<p>[GREEN] State what your architecture is capable of doing that OGC-SWE is not, particularly compared to deployments of OGC-SWE that have been used for capturing animal images</p>
+</li>
+</ul>
+<h3>Image classification</h3>
+<ul>
+<li>
+<p>[AMBER] Clarify role of image processing and use of templates. Bring this discussion into Chapter 3.</p>
+</li>
+<li>
+<p>[AMBER] When explaining the image processing functionality make clear the distinction between classifying an image as interesting or uninteresting and classification in the sense of determining a particular species.</p>
+</li>
+<li>
+<p>[RED] Make a clear statement regarding what has actually been implemented and is a part of the completed system as opposed to functionality which you have experimented but not made operational – thus explain that species classification has not been implemented in any particularly effective way in the final system, but you can explain how it would be done.</p>
+</li>
+<li>
+<p>[AMBER] With regard to classification with templates, how would templates be matched if objects are at different angles, distance from the camera, etc?</p>
+</li>
+<li>
+<p>[AMBER] Throughout the thesis make it clear whether functionality relies on image classification to determine a species (that has not been implemented) or identifying potentially interesting images</p>
+</li>
+<li>
+<p>[GREEN] Provide link to Triton source repository</p>
+</li>
+<li>
+<p>[AMBER] Correctly use your definition for accuracy (page 56)</p>
+<ul>
+<li>Update accuracy with the equations actually used? I.e. one for TP and one for TN.</li>
+</ul>
+</li>
+<li>
+<p>[GREEN] Make clear that adding rules to Drools requires specialist knowledge of the drools programming language</p>
+</li>
+<li>
+<p>[GREEN] Indicate the circumstances that could lead to a rule being added to Drools – where has the required information / knowledge come from?</p>
+</li>
+<li>
+<p>[RED] The description of the architecture needs to be accompanied by software documentation diagrams or code (such as UML interaction and activity diagrams and / or pseudo-code) that makes clear the main components of the system (both software and human interventions) and how they interact with each other.</p>
+</li>
+</ul>
+<h2>Ontology</h2>
+<ul>
+<li>
+<p>[AMBER] Correction of claims about ontologies in both chapter 5 and 8</p>
+</li>
+<li>
+<p>[GREEN] SSN ontology is both sensor-centric and observation-centric.</p>
+</li>
+<li>
+<p>[AMBER] Introduce SUMO as a general purpose upper ontology (with appropriate reference(s)). Then go on to state how it has been specialised for sensor network deployments</p>
+</li>
+<li>
+<p>[AMBER] Remove claim that your ontology is modular. You reuse existing terms by importing them, but it is not modular.</p>
+</li>
+<li>
+<p>[RED] Need a critical discussion as to why SSN does not meet your needs</p>
+</li>
+</ul>
+<h3>Definition of local knowledge</h3>
+<ul>
+<li>
+<p>[AMBER] Correct and move to appropriate part of the thesis, probably chapter 3. I would suggest removing the term global knowledge.</p>
+</li>
+<li>
+<p>[AMBER] Fig 3.5: combine the two graphs onto a single plot.</p>
+</li>
+<li>
+<p>[AMBER] Separate out UK wet and dry and provide humidity values for the experiment (if you have them).</p>
+</li>
+<li>
+<p>[GREEN] Include the values for when DKFC loses signal</p>
+</li>
+</ul>
+<h2>General comments:</h2>
+<ul>
+<li>
+<p>[AMBER] When stating that there are multiple tools, provide more than one citation</p>
+</li>
+<li>
+<p>[GREEN] Remove the acronyms ‘LK’ and ‘GK’ and replace with their expanded terms</p>
+</li>
+<li>
+<p>[GREEN] Don’t use the term scientific observation when you specifically mean an ecological observation</p>
+<ul>
+<li>Is this for all uses of the term?</li>
+</ul>
+</li>
+<li>
+<p>[GREEN] Remove et al from references</p>
+</li>
+<li>
+<p>[AMBER] Provide a map of the location of the field centre in its wider context, i.e. the part of the globe, in Chapter 1. Improve resolution of Fig 3.2 and highlight regions on picture.</p>
+</li>
+<li>
+<p>[GREEN] Remove claim at end of §3.3.1 that, based on your experiment, you can conclude that other experiments would give you the same results in the UK and Malaysia</p>
+</li>
+<li>
+<p>[GREEN] Field names in Listing 4.3 for set.csv don’t match those given in Listing 4.4</p>
+</li>
+<li>
+<p>[GREEN] Turn the heading ‘Findings’ in §5.1.2 into the subheading §5.1.3</p>
+</li>
+<li>
+<p>[GREEN] cite all the commercial cameras considered</p>
+</li>
+<li>
+<p>[GREEN] 6.1 provide a picture of the Buckeye cameras used with their case</p>
+</li>
+<li>
+<p>[AMBER] 6.2 State why you are only taking 2 pictures when up until this point you have been working with 3 pictures</p>
+</li>
+<li>
+<p>[GREEN] Listing 6.4 remove the setting of the scientific name as you are not sure which of the two species it is</p>
+</li>
+<li>
+<p>[AMBER] State how many rules were used in the LORIS deployment and an indication of the accuracy of the system</p>
+</li>
+<li>
+<p>[GREEN] Indicate which part of the interview in appendix E is shown in appendix F</p>
+</li>
+<li>
+<p>[AMBER] p126 rewrite paragraph about global knowledge and local knowledge of clouded leopard sleeping patterns</p>
+</li>
+<li>
+<p>[GREEN] Citations for Weka and J48</p>
+</li>
+<li>
+<p>[GREEN] Clarify 400 hour claim on p158 (the new simulation experiments will give you a proper value for this against the baseline when there is no intelligence in the network)</p>
+</li>
+</ul>
+<h2>Typos / minor corrections (90% done):</h2>
+<ul>
+<li>GLACSWEB: citation needed. 'that' -&gt; 'at'</li>
+<li>P29 Last bullet point: Should ‘collection’ be ‘collecting’?</li>
+<li>P35/36 Local knowledge .... was ‘used for many years to extract information
+from indigenous’ people does not sound right – do you mean that local
+knowledge was extracted from indigenous people ?</li>
+<li>p39 this most -&gt; this is most</li>
+<li>p40 for period -&gt; for a period</li>
+<li>P40 end of first paragraph : ‘at higher risk’ ? ‘when at higher risk’</li>
+<li>p40 at higher risk, -&gt; at higher risk locations,</li>
+<li>p40 now ninety -&gt; now ninety cameras</li>
+<li>p41 DG -&gt; DGFC</li>
+<li>p41 on its validity, but it -&gt; on its validity. This removes</li>
+<li>p41 expand LKWS as this is its first use</li>
+<li>p42 to nodes that are more computationally capable, e.g. Mote 2 [74], than
+common sensor nodes, e.g. ...</li>
+<li>p43: specs -&gt; specifications</li>
+<li>p43 line 2: “did research many” did research on many</li>
+<li>p45 yield usable range -&gt; discover usable radio range data</li>
+<li>p46: wireless medium but -&gt; wireless medium for internode communication but</li>
+<li>p48: explain how the dip to zero in the noise graph for UK may be due to
+variation in terrain and intervening obstacles</li>
+<li>p50: in the UK, and thick -&gt; in the UK; the thick</li>
+<li>p51: This could -&gt; The low range could</li>
+<li>p56: delete determine ...empty</li>
+<li>p56: define TotalSets
+correct all the errors in the use of false positives and false negatives on this page
+(so matches with data in the tables on p57). Also phraseology in sentence
+starting “These preliminary results..” is peculiar regarding effective at detecting
+FP and FN – a strange objective to be effective at...</li>
+<li>p59 para 4 : ?? “errors reading” errors in reading”</li>
+<li>p65: clarify the statement about users being able to classify data with a voting
+system. Explain exactly what the user is able to vote on (and make clear
+whether you are talking about species classification or interest
+classification).</li>
+<li>§4.2 Correct sentence: ‘Unlike DC nodes,..., Drools...’</li>
+<li>p68: URL for GBIF</li>
+<li>p68: DwC is that standard set of terms -&gt; ???</li>
+<li>p68: OBOE (expand/explain)</li>
+<li>p69: xml -&gt; XML</li>
+<li>p70: move text to previous page so that it is not skipped over</li>
+<li>p74: there are three observations of the Malay Civet in Figure 4.5</li>
+<li>p77: delete and make into a new sentence</li>
+<li>p77 last para “described” “described”</li>
+<li>p78: initiiated -&gt; initiated</li>
+<li>p78: when introducing the walkthrough make clear that this is hypothetical with
+respect to the proposed design of the design and does not all refer to
+actual implemented functionality</li>
+<li>p80 are added is added</li>
+<li>p81: nodes us a queue -&gt; nodes use a queue</li>
+<li>p84: it unarchived -&gt; it is unarchived</li>
+<li>p84: so this the message -&gt; so this message</li>
+<li>p88: citation for SUMO</li>
+<li>p92: and Figure 5.3 -&gt; break the sentence here.</li>
+<li>P93: is -&gt; in</li>
+<li>p93: [17] need to be moved into the sentence</li>
+<li>p93: First sentence of final paragraph needs rewriting and breaking into
+multiple sentences</li>
+<li>p93: when introducing SUMO you need a reference for the high level / generic
+system (in addition to you current reference which can be regarded as an
+domain-specific extension of SUMO). The current text is misleading in
+implying that SUMO is designed specifically for sensor data.</li>
+<li>p95: observations is a -&gt; observations in a</li>
+<li>p96: SUMO (in heading) -&gt; SHO</li>
+<li>P97 6 lines from end ontology </li>
+<li>p102: protege citation for wrong version</li>
+<li>p107: cite Hermit</li>
+<li>p123: (end of 2 nd paragraph) clarify what is meant by a rule that starts looking
+for nocturnal animals – say how that might be done (? With regard to
+constraints on time)</li>
+<li>p126: clarify whether Dedoose is a manual or automatic annotation system</li>
+<li>p127: end of page – make clear that your explanation of rules that are based
+on large amounts of collected data is hypothetical – perhaps you could
+use a phrase such as “in principle ...local knowledge could be used to
+make accurate classifications....” (or “the intention is that”) – the problem
+here as elsewhere in thesis being that there is not a clear distinction
+between what might be done, perhaps with further implementation and
+deployment, and what actually has been done with your implemented
+system.</li>
+<li>131: a agent -&gt; an agent</li>
+<li>134: an actual WSN would -&gt; a K-HAS deployment would.</li>
+<li>136: modification the -&gt; modification of the</li>
+<li>p136: do not use different terms, i.e. base station and central node, to refer to
+the same thing</li>
+<li>p139: what is an “extracted image”?</li>
+<li>142: Keep Figure 7.2 with the text that describes it</li>
+<li>148: Table 7.4 KHAS -&gt; MK-HK</li>
+<li>151: L-KHK -&gt; MK-HK</li>
+<li>p151 line 2 : the the à the</li>
+<li>152: with same -&gt; with the same</li>
+<li>p153: the figure of 83% correct classification does not seem right. Correct it if
+necessary and refer to the relevant graph or table that presents the value</li>
+<li>p155: which knowledge? ‘this knowledge can be used...'</li>
+<li>p156: DC nodes are available for sensors, not for cameras!</li>
+</ul>
