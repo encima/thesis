@@ -15,23 +15,20 @@ simple mutlihop network that sends images directly out via the
 shortest route and the base station does the classification. You may
 want to consider the base station having MK in one scenario and
 HK in another, i.e. two baselines.
+	* Adding in tracking of all observations shows 100% delivery (unless saturated), this needs checking
+	* Flat routing has not yet been implemented, attempts to do so thus far have produced odd results.
+	* Concern that nodes may be receiving in parallel
 
 * [RED] Rerun all experiments with the additional scenarios. You should report
 the total number of images that were generated, the number that
 arrived at the base station and the (ideally) number that were
 dropped.
+	* Not so much a blocker as a large time commitment, when the above point has been addressed, these can be run 24/7
 
-* Formalise the description of the experimental design clearly stating what
-variables were kept constant and which were measured. The
-simulation chapter needs to include (in addition to the verbal
-explanation) more formal software documentation of the simulation
-system, such as with appropriate UML diagramming methods and
-maybe also pseudo-code. This includes making clear how particular
-random generator parameters were set – i.e. where the values
-came from and how used.
+* [RED] Formalise the description of the experimental design clearly stating what variables were kept constant and which were measured. The simulation chapter needs to include (in addition to the verbal explanation) more formal software documentation of the simulation system, such as with appropriate UML diagramming methods and maybe also pseudo-code. This includes making clear how particular random generator parameters were set – i.e. where the values came from and how used.
+	* Again, primarily due to the number of hours it will take
 
-* [AMBER] Error bars on graphs, although box and whisker plots with the mean
-indicated would be more appropriate
+* [AMBER] Error bars on graphs, although box and whisker plots with the mean indicated would be more appropriate
 
 * [GREEN] Keep figures with the text that describe them
 
@@ -48,10 +45,12 @@ indicated would be more appropriate
 ### Image classification
 
 * [AMBER] Clarify role of image processing and use of templates. Bring this discussion into Chapter 3.
+	* Discuss in chapter 3 and clarify in chapter 4?
 
 * [AMBER] When explaining the image processing functionality make clear the distinction between classifying an image as interesting or uninteresting and classification in the sense of determining a particular species.
 
 * [RED] Make a clear statement regarding what has actually been implemented and is a part of the completed system as opposed to functionality which you have experimented but not made operational – thus explain that species classification has not been implemented in any particularly effective way in the final system, but you can explain how it would be done.
+	*Again, purely based on time
 
 * [AMBER] With regard to classification with templates, how would templates be matched if objects are at different angles, distance from the camera, etc?
 
@@ -68,7 +67,6 @@ indicated would be more appropriate
 
 * [RED] The description of the architecture needs to be accompanied by software documentation diagrams or code (such as UML interaction and activity diagrams and / or pseudo-code) that makes clear the main components of the system (both software and human interventions) and how they interact with each other.
 
-
 ## Ontology
 
 * [AMBER] Correction of claims about ontologies in both chapter 5 and 8
@@ -80,10 +78,14 @@ indicated would be more appropriate
 * [AMBER] Remove claim that your ontology is modular. You reuse existing terms by importing them, but it is not modular.
 
 * [RED] Need a critical discussion as to why SSN does not meet your needs
+	* Different to a tiered network?
+	* Hard to show flow of knowledge?
+	* Humans equal to sensors?
 
 ### Definition of local knowledge
 
 * [AMBER] Correct and move to appropriate part of the thesis, probably chapter 3. I would suggest removing the term global knowledge.
+	* Chapter 3 or 4?
 
 * [AMBER] Fig 3.5: combine the two graphs onto a single plot.
 
@@ -94,6 +96,7 @@ indicated would be more appropriate
 ##General comments:
 
 * [AMBER] When stating that there are multiple tools, provide more than one citation
+	* Need to find these references
 
 * [GREEN] Remove the acronyms ‘LK’ and ‘GK’ and replace with their expanded terms
 
@@ -101,6 +104,7 @@ indicated would be more appropriate
 	* Is this for all uses of the term?
 
 * [GREEN] Remove et al from references
+	* Bibtex includes 'others' as et al, remove these from bib file
 
 * [AMBER] Provide a map of the location of the field centre in its wider context, i.e. the part of the globe, in Chapter 1. Improve resolution of Fig 3.2 and highlight regions on picture.
 
