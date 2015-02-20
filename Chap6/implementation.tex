@@ -44,6 +44,8 @@
 		In June of 2013, a three week visit was made to Danau Gurang, with three Buckeye cameras and the software required to deploy LORIS. The network was first tested within the field centre and one of the Buckeye cameras had been broken during transport, giving us only two cameras. Due to the protected nature of the forest, we were unable to nail any cables to trees to use the high gain antenna and it was not possible to use the cables without first securing them, because animals tampering with cameras was a common occurrence.
 		
 		For the initial week of the deployment, we wanted to test the robustness of the network before focussing on the data. This meant placing the cameras in locations where they would be triggered often and in an area where they would be affected by rainfall and humidity. Figure \ref{cam_locs} shows the locations of the cameras during both of the weeks that it was deployed. Buckeye 1 was deployed for the first week along the main path leading to the field centre from the river, this experienced the most traffic due to the number of researchers present at the time. 
+
+		The cameras were initially configured to send a single image for each trigger, as opposed to the three that is used by the current Reconyx cameras at DGFC, because we wanted to test range and data rate for a single transmission. This was fine for images of humans but we found that triggers caused by animals could miss and have no content, we then changed the number of images to 2 so that network traffic was still minimised, especially as images could only be sent was power was available at the field centre.
 	
 	    \begin{figure}[h]
 	    \centering
@@ -114,12 +116,11 @@ rule "Plantation night"
 	when New_Sensed_Data
 		if location of node is Plantation and time of day is night
 			write to file set.CSV
-				dateIdentified = \today
-				scientificName = sun bear
+				dateIdentified = \today		
 				identifiedBy = node ID
 			Print "Likely a sun bear or Malay civet"
 				\end{lstlisting}
-		
+		%scientificName = sun bear
 		These rules are very simple and only scrape the surface of the local knowledge that can be utilised, as well as how DwC archives can be effectively used to carry the data of these inferences, but it does show that Drools is a powerful rule engine and that these rules can be extended further to make full use of the knowledge base. 
 		
 		DA nodes use the same rule engine as DP nodes but rules are used for the post-processing of Darwin Core archives. For example, when a classified archive is received from a DP node, Drools is run to check if the classification matches an existing project. If it does, then it searches for those that are subscribed to the project and notifies them via their selected medium. Drools can also be used to monitor the nodes deployed in the network and check their status. Rules are run to check for archives from DC nodes and, if a node has not sent an archive in a set number of days, then administrators are informed that it may have run out of battery.

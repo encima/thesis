@@ -13,11 +13,13 @@ Making it computer readable has allowed us to reuse classes in the development o
 
 During the development of the K-HAS ontology, we researched existing ontologies that were commonly used in the domains that K-HAS covered. These included scientific observations and sensor hardware.
 
-Looking into existing ontologies, we found that there had been many surveys on representing sensors in the semantic web: \cite{Compton2009}, \cite{Janowicz2010}, outlines the existing work. These surveys clearly highlighted that these ontologies had been split into two branches; observation-centric and sensor-centric.
+Looking into these existing ontologies, we found that there had been many surveys on representing sensors in the semantic web: \cite{Compton2009}, \cite{Janowicz2010}, outlines the existing work. These surveys clearly highlighted that these ontologies had been split into two branches; observation-centric and sensor-centric.
 
 Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SSN \cite{Compton2012} and SensorML\cite{botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
 
-We found one existing ontology, the Standard Upper Merged Ontology (SUMO), that linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo:sdo} and Section \ref{ont:sumo:sho}. The reason there are so few could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
+% We did find a set of related ontologies that extend the Standard Upper Merged Ontology (SUMO) \cite{niles2001towards}. The three ontologies linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo:sdo}. The reason there are so few could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
+
+% The Semantic Sensor Ontology, covered in 
 
 K-HAS has been developed to be used with any sensors and is not specific to wildlife cameras, therefore we also looked into sensor-based ontologies that concentrate on the hardware and the individual capabilities of each device within the network.
 
@@ -118,11 +120,6 @@ Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living spec
 </dsw:hasIdentification>
 \end{lstlisting}
 
-\subsubsection{SUMO - Sensor Data Ontology}\label{ont:sumo:sdo}
-The Suggested Upper Merged Ontology (SUMO) is an ontology that links sensor hardware and sensor data ontologies to assist with searching and evaluating distributed and heterogenous sensor networks \cite{Eid2007}. SUMO combines the Sensor Data Ontology (SDO) and Sensor Hierarchy Ontology (SHO), explained in Section \ref{ont:sumo:sho}, with the ability to `plug in' extension ontologies. 
-
-The SDO describes the sensing properties of a device beyond the hardware and the context of the sensor can be enriched with information about spatial and/or temporal observations. Similar to GSN (Section \ref{sec:GSN}), SUMO uses the notion of virtual sensors where a group of sensors can be described together to provide abstract measurements. In \cite{Eid2007}, the example of a humidity sensor, temperature sensor and wind speed sensor being collectively described as \textit{weather sensors}.
-
 \subsection{Sensor-Centric Ontologies}
 Sensor-centric ontologies are more focussed on the structure of the sensor, the network and the sensing processes involved. 
 
@@ -202,6 +199,8 @@ These definitions outline the core concepts of SensorML, a \textit{system} that 
 %</Component>
 %  \end{lstlisting}
 
+\subsection{Observation and Sensor-centric Ontologies}
+
 \subsubsection{SSN}
 The Semantic Sensor Network (SSN) Ontology is the most fitting ontology for our requirements, as it covers systems processes and observations. Developed by the W3C after an extensive review of existing ontologies \cite{Compton2012}, the SSN ontology is designed to allow focus on a variety of perspectives, such as the sensor within the network or the data that has been observed.
 
@@ -216,16 +215,21 @@ Figure \ref{ssnont} shows the model for the SSN ontology, displaying the relatio
 
 The observation pattern of SSN is centred around `Stimuli-Sensor-Observation', which can be simply described by an event causing a sensor to trigger and create an encompassing observation to store details about the event, as well as the device that recorded the event. While SSN is focussed on sensors, capturing the measurement capabilities of each sensing device that makes up a system and specifics on its lifespan, the development of the ontology arose from the review of sensor-centric ontologies as well, recording data about observations in a structure very similar to O\&M.
 
-\subsubsection{SUMO - Sensor Hierarchy Ontology}\label{ont:sumo:sho}
-The SHO component of SUMO represents the hardware of a WSN, including the node itself, data transmission units, data processing units and individual sensors. The data model describes a sensor with metadata describing features such as measurement type, transmission range and physical properties.
+\subsubsection{SUMO Extension}\label{ont:sumo:sho}
+The Suggested Upper Merged Ontology (SUMO) is a general purpose ontology \cite{niles2001towards} that provides general-purpose terms and is intended to be extended for domain specific ontologies. In \cite{Eid2007}, SUMO has been extended to link sensor hardware and sensor data ontologies in order to assist with searching and evaluating distributed and heterogenous sensor networks. The work combinesthe Sensor Hierarchy Ontology (SHO), the Sensor Data Ontology (SHO) and the ability to `plug in' extension ontologies.
+
+The SHO describes the hardware of a sensor node, as well as its accuracy, transmission medium and data processing capabilities. The SDO, however, describes the sensing properties of a device beyond the hardware and the context of the sensor can be enriched with information about spatial and/or temporal observations. Similar to GSN (Section \ref{sec:GSN}), SUMO uses the notion of virtual sensors where a group of sensors can be described together to provide abstract measurements. In \cite{Eid2007}, the example of a humidity sensor, temperature sensor and wind speed sensor being collectively described as \textit{weather sensors}.
+The SHO ontology is another extension of SUMO, from \cite{Eid2007}, that represents the hardware of a WSN, including the node itself, data transmission units, data processing units and individual sensors. The data model describes a sensor with metadata describing features such as measurement type, transmission range and physical properties.
 
 
-\subsubsection{Findings}
+\subsection{Findings}
 There are many ontologies that are suited for sensor-based scientific observations and ontologies that allow for the description of sensor hardware are very complete. However, in our research, we were unable to find a complete ontology that allowed for a sensor to be described as well as specifics of the observation. SSN and SUMO were the closest that we found for this, but SSN was still very hardware focused and aimed at a technical audience. SSN primarily describes the hardware of each node and their capabilities, whereas our requirements are for both hardware and sensed data to be represented in a single ontology. 
 
-While SUMO is classed as both an observation-centric and sensor-centric ontology, because it does link ontologies that model both sensor hardware and sensed data and, while SUMO's development did follow a similar approach to the one described in this chapter (combining ontologies) it is more focussed on retrieval of sensed data through queries constructed using both hardware details and properties of the sensed data and does not fulfil all of the requirements we identified when developing K-HAS, such as representing users. However, an important feature of SUMO is Extension Plugin Ontologies (EPO), support for domain specific plugins to integrate with SUMO and integrate with the SHO and SDO and this would also be a useful feature for K-HAS.
+While the SHO and SDO extensions of SUMO are classed as both an observation-centric and sensor-centric ontologies, they are separate ontologies that model both sensor hardware and sensed data and, while the development of these ntologies did follow a similar approach to the one described in this chapter (combining ontologies) it is more focussed on retrieval of sensed data through queries constructed using both hardware details and properties of the sensed data and does not fulfil all of the requirements we identified when developing K-HAS, such as representing users. However, an important feature is the Extension Plugin Ontologies (EPO), support for domain specific plugins to integrate with SUMO and integrate with the SHO and SDO and this would also be a useful feature for K-HAS.
 
-We found that many of these ontologies satisfied many subsections of K-HAS completely, meaning that it would be unnecessary to reproduce these concepts. From these findings we have developed an alignment ontology that connects ontologies across multiple domains to support our proposal of K-HAS, creating an ontology that is both sensor-centric and observation-centric.
+We found that many of these ontologies satisfied many subsections of K-HAS completely, meaning that it would be unnecessary to reproduce these concepts. From these findings we have developed an aligning ontology that connects ontologies across multiple domains to support our proposal of K-HAS, creating an ontology that is both sensor-centric and observation-centric.
+
+%SSN DISCUSSION HERE!
 
 \section{Method}
 % *Outline standard ontology development method
@@ -481,6 +485,6 @@ While the main benefits of this ontology is that it provides a high-level overvi
 
 Our evaluation has shown that the ontology is logically consistent and that existing scientific observations, in other formats, can be mapped across to K-HAS with few changes. The competency questions we identified during the design phase of the ontology can all be satisfied by the resulting ontology and our K-HAS network currently stores data with a schema that follows the design of this ontology.
 
-In the future, work could be done to make the Darwin Core terms more modular and users will then be able to `plug in' their occurrence structure of choice. Currently, this ontology has been developed with the scientific observations of our motivating scenario in mind. The modular design allows it to be adapted to suit observations with different structures. The K-HAS, FOAF and SensorML modules can all be reused in almost any WSN but not all networks will be tasked with recording individuals. In these cases, DwC (and some K-HAS) terms would need to be replaced with terms suited to the task of the network, such as flood monitoring.
+In the future, work could be done to make the Darwin Core terms more modular and users will then be able to `plug in' their occurrence structure of choice. Currently, this ontology has been developed with the scientific observations of our motivating scenario in mind. The K-HAS, FOAF and SensorML modules can all be reused in almost any WSN but not all networks will be tasked with recording individuals. In these cases, DwC (and some K-HAS) terms would need to be replaced with terms suited to the task of the network, such as flood monitoring.
 
 The tiered architecture of K-HAS means that observations are classified at each step, with DC nodes applying their limited knowledge at the time of capture, DP nodes processing the data in-depth and applying knowledge from previously sensed data and humans either confirming or modifying these classifications. Currently, this only updates the observation as it passes through the network but, using this ontology, we would like to implement a provenance model that supports the classification of an observation at each stage of the network and edits made by humans once it has reached a DA node. In \cite{Moreau2008}, provenance is defined as referring to ``the sources of information, such as entities and procesess, involved in producing or delivering an artifact'' and the W3C Open Provenance Model (OPM) \cite{Moreau2008} has been developed to ``support a digital representation of provenance of any ``thing'', whether produced by computer systems or not.'' In future versions of this ontology, and our architecture, we would like to implement this model to support a complete history of edits made to an observation and show a detailed flow of knowledge as it passes through the network.
