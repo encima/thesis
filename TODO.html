@@ -14,26 +14,29 @@ simple mutlihop network that sends images directly out via the
 shortest route and the base station does the classification. You may
 want to consider the base station having MK in one scenario and
 HK in another, i.e. two baselines.</p>
+<ul>
+<li>Adding in tracking of all observations shows 100% delivery (unless saturated), this needs checking</li>
+<li>Flat routing has not yet been implemented, attempts to do so thus far have produced odd results.</li>
+<li>Concern that nodes may be receiving in parallel</li>
+</ul>
 </li>
 <li>
 <p>[RED] Rerun all experiments with the additional scenarios. You should report
 the total number of images that were generated, the number that
 arrived at the base station and the (ideally) number that were
 dropped.</p>
+<ul>
+<li>Not so much a blocker as a large time commitment, when the above point has been addressed, these can be run 24/7</li>
+</ul>
 </li>
 <li>
-<p>Formalise the description of the experimental design clearly stating what
-variables were kept constant and which were measured. The
-simulation chapter needs to include (in addition to the verbal
-explanation) more formal software documentation of the simulation
-system, such as with appropriate UML diagramming methods and
-maybe also pseudo-code. This includes making clear how particular
-random generator parameters were set – i.e. where the values
-came from and how used.</p>
+<p>[RED] Formalise the description of the experimental design clearly stating what variables were kept constant and which were measured. The simulation chapter needs to include (in addition to the verbal explanation) more formal software documentation of the simulation system, such as with appropriate UML diagramming methods and maybe also pseudo-code. This includes making clear how particular random generator parameters were set – i.e. where the values came from and how used.</p>
+<ul>
+<li>Again, primarily due to the number of hours it will take</li>
+</ul>
 </li>
 <li>
-<p>[AMBER] Error bars on graphs, although box and whisker plots with the mean
-indicated would be more appropriate</p>
+<p>[AMBER] Error bars on graphs, although box and whisker plots with the mean indicated would be more appropriate</p>
 </li>
 <li>
 <p>[GREEN] Keep figures with the text that describe them</p>
@@ -58,12 +61,16 @@ indicated would be more appropriate</p>
 <ul>
 <li>
 <p>[AMBER] Clarify role of image processing and use of templates. Bring this discussion into Chapter 3.</p>
+<ul>
+<li>Discuss in chapter 3 and clarify in chapter 4?</li>
+</ul>
 </li>
 <li>
 <p>[AMBER] When explaining the image processing functionality make clear the distinction between classifying an image as interesting or uninteresting and classification in the sense of determining a particular species.</p>
 </li>
 <li>
-<p>[RED] Make a clear statement regarding what has actually been implemented and is a part of the completed system as opposed to functionality which you have experimented but not made operational – thus explain that species classification has not been implemented in any particularly effective way in the final system, but you can explain how it would be done.</p>
+<p>[RED] Make a clear statement regarding what has actually been implemented and is a part of the completed system as opposed to functionality which you have experimented but not made operational – thus explain that species classification has not been implemented in any particularly effective way in the final system, but you can explain how it would be done.
+    *Again, purely based on time</p>
 </li>
 <li>
 <p>[AMBER] With regard to classification with templates, how would templates be matched if objects are at different angles, distance from the camera, etc?</p>
@@ -97,6 +104,9 @@ indicated would be more appropriate</p>
 </li>
 <li>
 <p>[GREEN] SSN ontology is both sensor-centric and observation-centric.</p>
+<ul>
+<li>create a new section to include this and extension of SUMO?</li>
+</ul>
 </li>
 <li>
 <p>[AMBER] Introduce SUMO as a general purpose upper ontology (with appropriate reference(s)). Then go on to state how it has been specialised for sensor network deployments</p>
@@ -106,12 +116,20 @@ indicated would be more appropriate</p>
 </li>
 <li>
 <p>[RED] Need a critical discussion as to why SSN does not meet your needs</p>
+<ul>
+<li>Different to a tiered network?</li>
+<li>Hard to show flow of knowledge?</li>
+<li>Humans equal to sensors?</li>
+</ul>
 </li>
 </ul>
 <h3>Definition of local knowledge</h3>
 <ul>
 <li>
 <p>[AMBER] Correct and move to appropriate part of the thesis, probably chapter 3. I would suggest removing the term global knowledge.</p>
+<ul>
+<li>Chapter 3 or 4?</li>
+</ul>
 </li>
 <li>
 <p>[AMBER] Fig 3.5: combine the two graphs onto a single plot.</p>
@@ -127,6 +145,9 @@ indicated would be more appropriate</p>
 <ul>
 <li>
 <p>[AMBER] When stating that there are multiple tools, provide more than one citation</p>
+<ul>
+<li>Need to find these references</li>
+</ul>
 </li>
 <li>
 <p>[GREEN] Remove the acronyms ‘LK’ and ‘GK’ and replace with their expanded terms</p>
@@ -139,6 +160,9 @@ indicated would be more appropriate</p>
 </li>
 <li>
 <p>[GREEN] Remove et al from references</p>
+<ul>
+<li>Bibtex includes 'others' as et al, remove these from bib file</li>
+</ul>
 </li>
 <li>
 <p>[AMBER] Provide a map of the location of the field centre in its wider context, i.e. the part of the globe, in Chapter 1. Improve resolution of Fig 3.2 and highlight regions on picture.</p>

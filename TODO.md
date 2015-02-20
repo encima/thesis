@@ -72,6 +72,7 @@ dropped.
 * [AMBER] Correction of claims about ontologies in both chapter 5 and 8
 
 * [GREEN] SSN ontology is both sensor-centric and observation-centric.
+	* create a new section to include this and extension of SUMO?
 
 * [AMBER] Introduce SUMO as a general purpose upper ontology (with appropriate reference(s)). Then go on to state how it has been specialised for sensor network deployments
 
