@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.2.3)  20 FEB 2015 09:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.18)  23 FEB 2015 07:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
@@ -32,7 +32,7 @@ Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 \captionmargin=\dimen103
@@ -84,13 +84,13 @@ Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
 atched RF)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2014/03/24 3.9k The Babel package
+Package: babel 2013/12/03 3.9h The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2014/03/24 3.9k Babel common definitions
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count90
 \U@D=\dimen111
 )
@@ -164,7 +164,7 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomitemsep=\skip58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -206,20 +206,20 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@maxwidth=\dimen121
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count109
 \lst@skipnumbers=\count110
 \lst@framebox=\box33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/03/04 1.5c listings configuration
+File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
-Package: listings 2014/03/04 1.5c (Carsten Heinz)
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -248,7 +248,7 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2014/05/13 v2.10 `tabularx' package (DPC)
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
@@ -395,268 +395,229 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@ppsavesec=\count126
 \c@@ppsaveapp=\count127
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen133
-\pgfutil@tempdimb=\dimen134
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
-ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box35
+
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
-Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks31
 \pgfkeys@temptoks=\toks32
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
-ex
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks33
 ))
-\pgf@x=\dimen135
-\pgf@y=\dimen136
-\pgf@xa=\dimen137
-\pgf@ya=\dimen138
-\pgf@xb=\dimen139
-\pgf@yb=\dimen140
-\pgf@xc=\dimen141
-\pgf@yc=\dimen142
+\pgf@x=\dimen133
+\pgf@y=\dimen134
+\pgf@xa=\dimen135
+\pgf@ya=\dimen136
+\pgf@xb=\dimen137
+\pgf@yb=\dimen138
+\pgf@xc=\dimen139
+\pgf@yc=\dimen140
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
 \c@pgf@counta=\count128
 \c@pgf@countb=\count129
 \c@pgf@countc=\count130
 \c@pgf@countd=\count131
-\t@pgf@toka=\toks34
-\t@pgf@tokb=\toks35
-\t@pgf@tokc=\toks36
- (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
-f
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
-tex
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count132
 \pgfsyssoftpath@bigbuffer@items=\count133
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
-tex
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen143
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen141
 \pgfmath@count=\count134
 \pgfmath@box=\box36
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
-ric.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
-e.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
-.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
-thmetics.code.tex)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count135
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
-x
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen144
-\pgf@picmaxx=\dimen145
-\pgf@picminy=\dimen146
-\pgf@picmaxy=\dimen147
-\pgf@pathminx=\dimen148
-\pgf@pathmaxx=\dimen149
-\pgf@pathminy=\dimen150
-\pgf@pathmaxy=\dimen151
-\pgf@xx=\dimen152
-\pgf@xy=\dimen153
-\pgf@yx=\dimen154
-\pgf@yy=\dimen155
-\pgf@zx=\dimen156
-\pgf@zy=\dimen157
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen142
+\pgf@picmaxx=\dimen143
+\pgf@picminy=\dimen144
+\pgf@picmaxy=\dimen145
+\pgf@pathminx=\dimen146
+\pgf@pathmaxx=\dimen147
+\pgf@pathminy=\dimen148
+\pgf@pathmaxy=\dimen149
+\pgf@xx=\dimen150
+\pgf@xy=\dimen151
+\pgf@yx=\dimen152
+\pgf@yy=\dimen153
+\pgf@zx=\dimen154
+\pgf@zy=\dimen155
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
-code.tex
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen158
-\pgf@path@lasty=\dimen159
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen156
+\pgf@path@lasty=\dimen157
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
-.tex
-File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen160
-\pgf@shorten@start@additional=\dimen161
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen158
+\pgf@shorten@start@additional=\dimen159
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
-x
-File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box37
 \pgf@hbox=\box38
 \pgf@layerbox@main=\box39
 \pgf@picture@serial@count=\count136
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
-ode.tex
-File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen162
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen160
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
-s.code.tex
-File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen163
-\pgf@pt@y=\dimen164
-\pgf@pt@temp=\dimen165
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen161
+\pgf@pt@y=\dimen162
+\pgf@pt@temp=\dimen163
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
-ex
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
-.code.tex
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
-x
-File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen166
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen167
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen164
 \pgf@sys@shading@range@num=\count137
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
-tex
-File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box40
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
-x
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
-ode.tex
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
-tex
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box41
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen168
-\pgf@nodesepend=\dimen169
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen170
-\pgffor@skip=\dimen171
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen165
+\pgf@nodesepend=\dimen166
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen167
+\pgffor@skip=\dimen168
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count138
-\pgfplotmarksize=\dimen172
+\pgfplotmarksize=\dimen169
 )
-\tikz@lastx=\dimen173
-\tikz@lasty=\dimen174
-\tikz@lastxsaved=\dimen175
-\tikz@lastysaved=\dimen176
-\tikzleveldistance=\dimen177
-\tikzsiblingdistance=\dimen178
+\tikz@lastx=\dimen170
+\tikz@lasty=\dimen171
+\tikz@lastxsaved=\dimen172
+\tikz@lastysaved=\dimen173
+\tikzleveldistance=\dimen174
+\tikzsiblingdistance=\dimen175
 \tikz@figbox=\box42
-\tikz@figbox@bg=\box43
-\tikz@tempbox=\box44
-\tikz@tempbox@bg=\box45
+\tikz@tempbox=\box43
 \tikztreelevel=\count139
 \tikznumberofchildren=\count140
 \tikznumberofcurrentchild=\count141
 \tikz@fig@count=\count142
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count143
 \pgfmatrixcurrentcolumn=\count144
 \pgf@matrix@numberofcolumns=\count145
 )
 \tikz@expandcount=\count146
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+))) (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
@@ -670,19 +631,19 @@ Package: suffix 2006/07/15 1.5 Variant command support
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks42
+\AC@clearlist=\toks39
 )
 (/usr/share/texlive/texmf-dist/tex/latex/vmargin/vmargin.sty
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
-\PaperWidth=\dimen179
-\PaperHeight=\dimen180
+\PaperWidth=\dimen176
+\PaperHeight=\dimen177
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
-\AP@output=\toks43
-\AP@partial=\box46
-\AP@footins=\box47
+\AP@output=\toks40
+\AP@partial=\box44
+\AP@footins=\box45
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip64
@@ -719,17 +680,17 @@ Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
 Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@@multicnt=\count151
 \d@lta=\count152
-\@delta=\dimen181
-\@@delta=\dimen182
+\@delta=\dimen178
+\@@delta=\dimen179
 \@gridcnt=\count153
 \@joinkind=\count154
-\@dotgap=\dimen183
-\@ddotgap=\dimen184
+\@dotgap=\dimen180
+\@ddotgap=\dimen181
 \@x@diff=\count155
 \@y@diff=\count156
-\x@diff=\dimen185
-\y@diff=\dimen186
-\@dotbox=\box48
+\x@diff=\dimen182
+\y@diff=\dimen183
+\@dotbox=\box46
 \num@segments=\count157
 \num@segmentsi=\count158
 \@datafile=\read2
@@ -737,9 +698,9 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 Extension to Epic and LaTeX. Version 1.1e - Released Dec 21, 1999
 \@gphlinewidth=\count159
 \@eepictcnt=\count160
-\@tempdimc=\dimen187
-\maxovaldiam=\dimen188
-\@filltype=\box49
+\@tempdimc=\dimen184
+\maxovaldiam=\dimen185
+\@filltype=\box47
 )
 \c@algorithm=\count161
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -752,12 +713,12 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks44
-\ex@=\dimen189
+\@emptytoks=\toks41
+\ex@=\dimen186
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen190
+\pmbraise@=\dimen187
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -772,9 +733,9 @@ LaTeX Info: Redefining \overline on input line 306.
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box50
-\strutbox@=\box51
-\big@size=\dimen191
+\Mathstrutbox@=\box48
+\strutbox@=\box49
+\big@size=\dimen188
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count167
@@ -782,21 +743,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip11
 \c@parentequation=\count169
 \dspbrk@lvl=\count170
-\tag@help=\toks45
+\tag@help=\toks42
 \row@=\count171
 \column@=\count172
 \maxfields@=\count173
-\andhelp@=\toks46
-\eqnshift@=\dimen192
-\alignsep@=\dimen193
-\tagshift@=\dimen194
-\tagwidth@=\dimen195
-\totwidth@=\dimen196
-\lineht@=\dimen197
-\@envbody=\toks47
+\andhelp@=\toks43
+\eqnshift@=\dimen189
+\alignsep@=\dimen190
+\tagshift@=\dimen191
+\tagwidth@=\dimen192
+\totwidth@=\dimen193
+\lineht@=\dimen194
+\@envbody=\toks44
 \multlinegap=\skip74
 \multlinetaggap=\skip75
-\mathdisplay@stack=\toks48
+\mathdisplay@stack=\toks45
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -810,12 +771,6 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (./thesis.aux
-! Missing \endcsname inserted.
-<to be read again> 
-                   \&
-l.97 ...M}{O \&\ M}]{Observations \& Measurements}
-                                                  
-? 
 (./Chap1/introduction.aux) (./Chap2/background.aux) (./Chap3/technical.aux
 
 LaTeX Warning: Label `tech:fig:map' multiply defined.
@@ -859,16 +814,16 @@ Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count174
-\scratchdimen=\dimen198
-\scratchbox=\box52
+\scratchdimen=\dimen195
+\scratchbox=\box50
 \nofMPsegments=\count175
 \nofMParguments=\count176
-\everyMPshowfont=\toks49
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count177
-\MPscratchDim=\dimen199
+\MPscratchDim=\dimen196
 \MPnumerator=\count178
 \makeMPintoPDFobject=\count179
-\everyMPtoPDFconversion=\toks50
+\everyMPtoPDFconversion=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -897,7 +852,7 @@ Package gensymb Info: Using \Omega for \ohm on input line 350.
 
 Package gensymb Warning: Not defining \micro.
 
-\AtBeginShipoutBox=\box53
+\AtBeginShipoutBox=\box51
 Package hyperref Info: Link coloring OFF on input line 350.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -987,7 +942,7 @@ less on input line 461.
 ] [6] (./thesis.toc
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 15.
+less on input line 14.
 
 [7
 
@@ -999,17 +954,10 @@ less on input line 15.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
 
-
-Package natbib Warning: Citation `gwilliams2012k' on page xiv undefined on inpu
-t line 8.
-
-
-Package natbib Warning: Citation `gwilliams2012poster' on page xiv undefined on
- input line 10.
-
-
-Package natbib Warning: Citation `gwilliams2012local' on page xiv undefined on 
-input line 12.
+Overfull \hbox (14.20522pt too wide) in paragraph at lines 8--9
+\T1/ptm/m/n/12 ter-na-tional Journal of Di-gital In-form-a-tion and Wire-less C
+om-mu-nic-a-tions (IJDIWC),
+ []
 
 )
 
@@ -1020,37 +968,12 @@ less on input line 470.
 
 ] (./thesis.lof
 
-Package natbib Warning: Citation `F2006' on page xv undefined on input line 12.
-
-
-
-Package natbib Warning: Citation `Terfloth2006' on page xv undefined on input l
-ine 13.
-
-
-Package natbib Warning: Citation `wieczorek2012' on page xv undefined on input 
-line 25.
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 30.
 
 [15
 
-]
-
-Package natbib Warning: Citation `Madin2007' on page xvi undefined on input lin
-e 34.
-
-
-Package natbib Warning: Citation `Probst' on page xvi undefined on input line 3
-5.
-
-
-Package natbib Warning: Citation `Baskauf' on page xvi undefined on input line 
-36.
-
-)
+])
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
 
@@ -1089,33 +1012,6 @@ less on input line 20.
  (./Chap1/introduction.tex
 Chapter 1.
 
-Package natbib Warning: Citation `Maurer' on page 1 undefined on input line 2.
-
-
-Package natbib Warning: Citation `Nachman2008' on page 1 undefined on input lin
-e 2.
-
-
-Package natbib Warning: Citation `Sarajevo2014' on page 1 undefined on input li
-ne 2.
-
-
-Package natbib Warning: Citation `Kays2009' on page 1 undefined on input line 2
-.
-
-
-Package natbib Warning: Citation `Martinez2004' on page 1 undefined on input li
-ne 2.
-
-
-Package natbib Warning: Citation `Szewczyk2004b' on page 1 undefined on input l
-ine 2.
-
-
-Package natbib Warning: Citation `Raghunathan2002' on page 1 undefined on input
- line 4.
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 7.
 
@@ -1126,239 +1022,21 @@ less on input line 7.
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
-
-
-Package natbib Warning: Citation `Akyildiz2002' on page 2 undefined on input li
-ne 9.
-
-
-Package natbib Warning: Citation `Sadagopan' on page 2 undefined on input line 
-9.
-
-[2]
-
-Package natbib Warning: Citation `Joshi2001' on page 3 undefined on input line 
-13.
-
-
-Package natbib Warning: Citation `dgfc' on page 3 undefined on input line 18.
-
-
-Package natbib Warning: Citation `Goossens2012' on page 3 undefined on input li
-ne 20.
-
-[3] [4] [5]) [6] [7]
+ [2] [3] [4]) [5] [6]
 \openout2 = `Chap2/background.aux'.
 
  (./Chap2/background.tex
 Chapter 2.
 
-Package natbib Warning: Citation `Szewczyk2004a' on page 8 undefined on input l
-ine 10.
-
-
-Package natbib Warning: Citation `Pizzocaro' on page 8 undefined on input line 
-10.
-
-
-Package natbib Warning: Citation `Otto2006' on page 8 undefined on input line 1
-0.
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 11.
 
-[8
+[7
 
 
 
-]
-
-Package natbib Warning: Citation `Akyildiz2002' on page 9 undefined on input li
-ne 12.
-
-
-Package natbib Warning: Citation `Mainwaring2002' on page 9 undefined on input 
-line 15.
-
-
-Package natbib Warning: Citation `Intanagonwiwat2000' on page 9 undefined on in
-put line 19.
-
-
-Package natbib Warning: Citation `Kahn' on page 9 undefined on input line 19.
-
-
-Package natbib Warning: Citation `Akyildiz2002a' on page 9 undefined on input l
-ine 19.
-
-
-Package natbib Warning: Citation `Corke2010a' on page 9 undefined on input line
- 19.
-
-
-Package natbib Warning: Citation `gartner2013' on page 9 undefined on input lin
-e 19.
-
-[9]
-
-Package natbib Warning: Citation `Akyildiz2002' on page 10 undefined on input l
-ine 22.
-
-
-Package natbib Warning: Citation `Hempstead2005' on page 10 undefined on input 
-line 22.
-
-
-Package natbib Warning: Citation `Schurgers' on page 10 undefined on input line
- 22.
-
-
-Package natbib Warning: Citation `Segal2010a' on page 10 undefined on input lin
-e 22.
-
-
-Package natbib Warning: Citation `Vaidya2004' on page 10 undefined on input lin
-e 24.
-
-
-Package natbib Warning: Citation `Estrin2001' on page 10 undefined on input lin
-e 24.
-
-[10]
-
-Package natbib Warning: Citation `Lee2007' on page 11 undefined on input line 2
-9.
-
-
-Package natbib Warning: Citation `Swan2012' on page 11 undefined on input line 
-30.
-
-
-Package natbib Warning: Citation `gomez2012overview' on page 11 undefined on in
-put line 30.
-
-
-Package natbib Warning: Citation `Zennaro' on page 11 undefined on input line 3
-1.
-
-
-Package natbib Warning: Citation `Markham2010' on page 11 undefined on input li
-ne 31.
-
-
-Package natbib Warning: Citation `Figueiredo2009' on page 11 undefined on input
- line 31.
-
-
-Package natbib Warning: Citation `Bayat2012' on page 11 undefined on input line
- 32.
-
-
-Package natbib Warning: Citation `Martinez2004' on page 11 undefined on input l
-ine 36.
-
-
-Package natbib Warning: Citation `Martonosi2003' on page 11 undefined on input 
-line 36.
-
-[11]
-
-Package natbib Warning: Citation `Martonosi2003' on page 12 undefined on input 
-line 39.
-
-
-Package natbib Warning: Citation `Akkaya2005' on page 12 undefined on input lin
-e 42.
-
-
-Package natbib Warning: Citation `Akkaya2005' on page 12 undefined on input lin
-e 42.
-
-[12]
-
-Package natbib Warning: Citation `Ye2001' on page 13 undefined on input line 49
-.
-
-[13]
-
-Package natbib Warning: Citation `Heinzelman1999' on page 14 undefined on input
- line 62.
-
-[14]
-
-Package natbib Warning: Citation `Woodrow2002' on page 15 undefined on input li
-ne 74.
-
-[15]
-
-Package natbib Warning: Citation `Yao2002' on page 16 undefined on input line 7
-9.
-
-[16]
-
-Package natbib Warning: Citation `Manjeshwar2001' on page 17 undefined on input
- line 89.
-
-
-Package natbib Warning: Citation `Manjeshwar2001' on page 17 undefined on input
- line 91.
-
-[17]
-
-Package natbib Warning: Citation `Chen2002' on page 18 undefined on input line 
-101.
-
-[18]
-
-Package natbib Warning: Citation `Yu2001' on page 19 undefined on input line 10
-8.
-
-[19]
-
-Package natbib Warning: Citation `Hadim2006' on page 20 undefined on input line
- 121.
-
-
-Package natbib Warning: Citation `Yu2004' on page 20 undefined on input line 12
-1.
-
-[20]
-
-Package natbib Warning: Citation `Wang2008c' on page 21 undefined on input line
- 123.
-
-
-Package natbib Warning: Citation `Hadim2006' on page 21 undefined on input line
- 127.
-
-
-Package natbib Warning: Citation `Rahman' on page 21 undefined on input line 12
-7.
-
-
-Package natbib Warning: Citation `Yu2004' on page 21 undefined on input line 12
-7.
-
-
-Package natbib Warning: Citation `Heinzelman2004' on page 21 undefined on input
- line 129.
-
-[21]
-
-Package natbib Warning: Citation `Tengg2007' on page 22 undefined on input line
- 133.
-
-
-Package natbib Warning: Citation `F2006' on page 22 undefined on input line 135
-.
-
-[22]
-
-Package natbib Warning: Citation `F2006' on page 23 undefined on input line 143
-.
-
-<Chap2/figures/gsn_arch.png, id=1025, 371.3875pt x 453.695pt>
+] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+<Chap2/figures/gsn_arch.png, id=1145, 371.3875pt x 453.695pt>
 File: Chap2/figures/gsn_arch.png Graphic file (type png)
 
 <use Chap2/figures/gsn_arch.png>
@@ -1366,206 +1044,49 @@ Package pdftex.def Info: Chap2/figures/gsn_arch.png used on input line 153.
 (pdftex.def)             Requested size: 330.56538pt x 403.83574pt.
 
 
-Package natbib Warning: Citation `F2006' on page 23 undefined on input line 154
-.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23] [24 <./Chap2/figures/gsn_arch.png>]
-
-Package natbib Warning: Citation `Aberer2007' on page 25 undefined on input lin
-e 164.
-
-
-Package natbib Warning: Citation `Terfloth2006' on page 25 undefined on input l
-ine 185.
-
-[25] <Chap2/figures/facts_architecture.jpg, id=1054, 451.6875pt x 181.67876pt>
+[22] [23 <./Chap2/figures/gsn_arch.png>] [24]
+<Chap2/figures/facts_architecture.jpg, id=1177, 451.6875pt x 181.67876pt>
 File: Chap2/figures/facts_architecture.jpg Graphic file (type jpg)
 
 <use Chap2/figures/facts_architecture.jpg>
 Package pdftex.def Info: Chap2/figures/facts_architecture.jpg used on input lin
 e 189.
 (pdftex.def)             Requested size: 330.56538pt x 132.96812pt.
-
-
-Package natbib Warning: Citation `Terfloth2006' on page 26 undefined on input l
-ine 190.
-
-[26 <./Chap2/figures/facts_architecture.jpg>]
-
-Package natbib Warning: Citation `Wright2009b' on page 27 undefined on input li
-ne 234.
-
-[27]
-
-Package natbib Warning: Citation `botts' on page 28 undefined on input line 250
-.
-
-[28]
-
-Package natbib Warning: Citation `Valente2011' on page 29 undefined on input li
-ne 260.
-
-
-Package natbib Warning: Citation `broring2011new' on page 29 undefined on input
- line 260.
-
-
-Package natbib Warning: Citation `giusto2010internet' on page 29 undefined on i
-nput line 263.
-
-
-Package natbib Warning: Citation `nest' on page 29 undefined on input line 263.
-
-
-
-Package natbib Warning: Citation `fitbit' on page 29 undefined on input line 26
-3.
-
-
-Package natbib Warning: Citation `ifttt' on page 29 undefined on input line 263
-.
-
-[29]
-
-Package natbib Warning: Citation `xively' on page 30 undefined on input line 26
-5.
-
-
-Package natbib Warning: Citation `dweet' on page 30 undefined on input line 265
-.
-
-
-Package natbib Warning: Citation `opensense' on page 30 undefined on input line
- 265.
-
-
+ [25 <./Chap2/figures/facts_architecture.jpg>] [26] [27] [28]
 Overfull \hbox (0.37065pt too wide) in paragraph at lines 268--268
 []\T1/ptm/b/n/17.28 Biodiversity and En-vir-on-mental Mon-it-or-ing Sensor
  []
 
-[30]
-
-Package natbib Warning: Citation `Mainwaring2002' on page 31 undefined on input
- line 271.
-
-
-Package natbib Warning: Citation `Szewczyk2004c' on page 31 undefined on input 
-line 273.
-
-
-Package natbib Warning: Citation `Demirbas' on page 31 undefined on input line 
-275.
-
-[31]
-
-Package natbib Warning: Citation `Kays2009' on page 32 undefined on input line 
-279.
-
-
-Package natbib Warning: Citation `Ahumada2011a' on page 32 undefined on input l
-ine 279.
-
-
-Package natbib Warning: Citation `Garcia-Sanchez2010b' on page 32 undefined on 
-input line 279.
-
-
-Package natbib Warning: Citation `ZSL' on page 32 undefined on input line 281.
-
-
-Package natbib Warning: Citation `Guo2006' on page 32 undefined on input line 2
-83.
-
-[32]
-
-Package natbib Warning: Citation `Werner-Allen2006' on page 33 undefined on inp
-ut line 285.
-
-
-Package natbib Warning: Citation `Werner-Allen2006' on page 33 undefined on inp
-ut line 289.
-
-
-Package natbib Warning: Citation `Figueiredo2009' on page 33 undefined on input
- line 291.
-
-
-Package natbib Warning: Citation `Wark2008' on page 33 undefined on input line 
-291.
-
-
-Package natbib Warning: Citation `Rahman2008' on page 33 undefined on input lin
-e 291.
-
-
-Package natbib Warning: Citation `Figueiredo2009' on page 33 undefined on input
- line 291.
-
-
-Package natbib Warning: Citation `Wark2008' on page 33 undefined on input line 
-291.
-
-[33]
-
-Package natbib Warning: Citation `LadislausM.Semali' on page 34 undefined on in
-put line 299.
-
-
-Package natbib Warning: Citation `Stiglitz1990' on page 34 undefined on input l
-ine 301.
-
-
-Package natbib Warning: Citation `DEWALT' on page 34 undefined on input line 30
-1.
-
-
-Package natbib Warning: Citation `Joshi2001' on page 34 undefined on input line
- 303.
-
-[34] [35]
-
-Package natbib Warning: Citation `Figueiredo2009' on page 36 undefined on input
- line 342.
-
-) [36]
+[29] [30] [31] [32] [33] [34]) [35]
 \openout2 = `Chap3/technical.aux'.
 
  (./Chap3/technical.tex
 Chapter 3.
 
-Package natbib Warning: Citation `Walsh2009' on page 37 undefined on input line
- 7.
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 8.
 
-[37
+[36
 
 
 
-] <Chap3/figures/field_centre.JPG, id=1153, 1638.12pt x 1228.59pt>
+] <Chap3/figures/field_centre.JPG, id=1333, 1638.12pt x 1228.59pt>
 File: Chap3/figures/field_centre.JPG Graphic file (type jpg)
 
 <use Chap3/figures/field_centre.JPG>
 Package pdftex.def Info: Chap3/figures/field_centre.JPG used on input line 11.
 (pdftex.def)             Requested size: 413.20515pt x 309.90251pt.
- [38 <./Chap3/figures/field_centre.JPG>]
-<Chap3/figures/dg_map.png, id=1159, 1111.15125pt x 413.545pt>
+ [37 <./Chap3/figures/field_centre.JPG>]
+<Chap3/figures/dg_map.png, id=1341, 1111.15125pt x 413.545pt>
 File: Chap3/figures/dg_map.png Graphic file (type png)
 
 <use Chap3/figures/dg_map.png>
 Package pdftex.def Info: Chap3/figures/dg_map.png used on input line 20.
 (pdftex.def)             Requested size: 413.20515pt x 153.7854pt.
 
-
-Package natbib Warning: Citation `Reconyx' on page 39 undefined on input line 2
-5.
-
-<Chap3/figures/hc500.jpg, id=1162, 313.17pt x 301.125pt>
+<Chap3/figures/hc500.jpg, id=1345, 313.17pt x 301.125pt>
 File: Chap3/figures/hc500.jpg Graphic file (type jpg)
 
 <use Chap3/figures/hc500.jpg>
@@ -1575,114 +1096,76 @@ Package pdftex.def Info: Chap3/figures/hc500.jpg used on input line 29.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39 <./Chap3/figures/dg_map.png>] [40 <./Chap3/figures/hc500.jpg>] [41]
-
-Package natbib Warning: Citation `instruments2012pandaboard' on page 42 undefin
-ed on input line 49.
-
-
-Package natbib Warning: Citation `Nachman2008' on page 42 undefined on input li
-ne 49.
-
-[42] <Chap3/figures/pandaboard.jpg, id=1186, 602.25pt x 443.6575pt>
+[38 <./Chap3/figures/dg_map.png>] [39 <./Chap3/figures/hc500.jpg>] [40]
+[41] <Chap3/figures/pandaboard.jpg, id=1373, 602.25pt x 443.6575pt>
 File: Chap3/figures/pandaboard.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pandaboard.jpg>
 Package pdftex.def Info: Chap3/figures/pandaboard.jpg used on input line 65.
 (pdftex.def)             Requested size: 206.60257pt x 152.19548pt.
 
-<Chap3/figures/igep.jpg, id=1187, 3468.96pt x 2312.64pt>
+<Chap3/figures/igep.jpg, id=1374, 3468.96pt x 2312.64pt>
 File: Chap3/figures/igep.jpg Graphic file (type jpg)
 
 <use Chap3/figures/igep.jpg>
 Package pdftex.def Info: Chap3/figures/igep.jpg used on input line 70.
 (pdftex.def)             Requested size: 206.60257pt x 137.72906pt.
 
-<Chap3/figures/waspmote.png, id=1188, 301.125pt x 280.04625pt>
+<Chap3/figures/waspmote.png, id=1375, 301.125pt x 280.04625pt>
 File: Chap3/figures/waspmote.png Graphic file (type png)
 
 <use Chap3/figures/waspmote.png>
 Package pdftex.def Info: Chap3/figures/waspmote.png used on input line 75.
 (pdftex.def)             Requested size: 206.60257pt x 192.14673pt.
-
-
-Package natbib Warning: Citation `instruments2012pandaboard' on page 43 undefin
-ed on input line 85.
-
-
-Package natbib Warning: Citation `Resch' on page 43 undefined on input line 93.
-
-
-[43]
-
-Package natbib Warning: Citation `waspmote' on page 44 undefined on input line 
-96.
-
-[44 <./Chap3/figures/pandaboard.jpg> <./Chap3/figures/igep.jpg> <./Chap3/figure
-s/waspmote.png (PNG copy)>] [45]
-
-Package natbib Warning: Citation `Dhawan2007' on page 46 undefined on input lin
-e 114.
-
-[46] [47] <Chap3/figures/bp_snr.png, id=1216, 729.4452pt x 445.665pt>
+ [42] [43 <./Chap3/figures/pandaboard.jpg> <./Chap3/figures/igep.jpg> <./Chap3/
+figures/waspmote.png (PNG copy)>] [44] [45]
+[46] <Chap3/figures/bp_snr.png, id=1410, 729.4452pt x 445.665pt>
 File: Chap3/figures/bp_snr.png Graphic file (type png)
 
 <use Chap3/figures/bp_snr.png>
 Package pdftex.def Info: Chap3/figures/bp_snr.png used on input line 128.
 (pdftex.def)             Requested size: 371.88211pt x 227.20453pt.
 
-<Chap3/figures/dg_snr.png, id=1217, 728.4816pt x 445.1832pt>
+<Chap3/figures/dg_snr.png, id=1411, 728.4816pt x 445.1832pt>
 File: Chap3/figures/dg_snr.png Graphic file (type png)
 
 <use Chap3/figures/dg_snr.png>
 Package pdftex.def Info: Chap3/figures/dg_snr.png used on input line 134.
 (pdftex.def)             Requested size: 371.88211pt x 227.26459pt.
- [48 <./Chap3/figures/bp_snr.png> <./Chap3/figures/dg_snr.png>] [49]
-
-Package natbib Warning: Citation `waspmote' on page 50 undefined on input line 
-155.
-
-[50] <Chap3/figures/pelican.jpg, id=1238, 1284.8pt x 963.6pt>
+ [47 <./Chap3/figures/bp_snr.png> <./Chap3/figures/dg_snr.png>] [48] [49]
+<Chap3/figures/pelican.jpg, id=1433, 1284.8pt x 963.6pt>
 File: Chap3/figures/pelican.jpg Graphic file (type jpg)
 
 <use Chap3/figures/pelican.jpg>
 Package pdftex.def Info: Chap3/figures/pelican.jpg used on input line 175.
 (pdftex.def)             Requested size: 413.20515pt x 309.90215pt.
- [51] [52 <./Chap3/figures/pelican.jpg>]
+ [50] [51 <./Chap3/figures/pelican.jpg>]
 
-Package natbib Warning: Citation `triton' on page 53 undefined on input line 18
+Package natbib Warning: Citation `triton' on page 52 undefined on input line 18
 8.
 
-
-Package natbib Warning: Citation `Zivkovic2004' on page 53 undefined on input l
-ine 188.
-
-
-Package natbib Warning: Citation `Zivkovic2004' on page 53 undefined on input l
-ine 194.
-
-[53] <Chap3/figures/IMG_0568.JPG, id=1253, 1927.2pt x 1084.05pt>
+[52] <Chap3/figures/IMG_0568.JPG, id=1451, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0568.JPG Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0568.JPG>
 Package pdftex.def Info: Chap3/figures/IMG_0568.JPG used on input line 202.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/IMG_0569.JPG, id=1254, 1927.2pt x 1084.05pt>
+<Chap3/figures/IMG_0569.JPG, id=1452, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0569.JPG Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0569.JPG>
 Package pdftex.def Info: Chap3/figures/IMG_0569.JPG used on input line 207.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/IMG_0570.JPG, id=1255, 1927.2pt x 1084.05pt>
+<Chap3/figures/IMG_0570.JPG, id=1453, 1927.2pt x 1084.05pt>
 File: Chap3/figures/IMG_0570.JPG Graphic file (type jpg)
 
 <use Chap3/figures/IMG_0570.JPG>
 Package pdftex.def Info: Chap3/figures/IMG_0570.JPG used on input line 212.
 (pdftex.def)             Requested size: 206.60257pt x 116.20227pt.
 
-<Chap3/figures/PROC_IMG_0568.JPG, id=1256, 488.82625pt x 296.10625pt>
+<Chap3/figures/PROC_IMG_0568.JPG, id=1454, 488.82625pt x 296.10625pt>
 File: Chap3/figures/PROC_IMG_0568.JPG Graphic file (type jpg)
 
 <use Chap3/figures/PROC_IMG_0568.JPG>
@@ -1693,14 +1176,14 @@ Package pdftex.def Info: Chap3/figures/PROC_IMG_0568.JPG used on input line 221
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54 <./Chap3/figures/IMG_0568.JPG> <./Chap3/figures/IMG_0569.JPG> <./Chap3/figu
-res/IMG_0570.JPG>] [55 <./Chap3/figures/PROC_IMG_0568.JPG>] [56] [57] [58])
-[59]
+[53 <./Chap3/figures/IMG_0568.JPG> <./Chap3/figures/IMG_0569.JPG> <./Chap3/figu
+res/IMG_0570.JPG>] [54 <./Chap3/figures/PROC_IMG_0568.JPG>] [55] [56] [57])
+[58]
 \openout2 = `Chap4/architecture.aux'.
 
  (./Chap4/architecture.tex
 Chapter 4.
-<Chap4/figures/khasarch.png, id=1295, 423.5825pt x 428.60126pt>
+<Chap4/figures/khasarch.png, id=1493, 423.5825pt x 428.60126pt>
 File: Chap4/figures/khasarch.png Graphic file (type png)
 
 <use Chap4/figures/khasarch.png>
@@ -1712,124 +1195,94 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 17.
+less on input line 18.
 
-[60
+[59
 
 
 
-] [61 <./Chap4/figures/khasarch.png>]
-
-Package natbib Warning: Citation `levis2005' on page 62 undefined on input line
- 27.
-
-[62] [63]
-
-Package natbib Warning: Citation `proctor2005drools' on page 64 undefined on in
-put line 50.
-
-[64] [65] [66] [67]
-
-Package natbib Warning: Citation `wieczorek2012' on page 68 undefined on input 
-line 90.
-
-[68]
-
-Package natbib Warning: Citation `wieczorek2012' on page 69 undefined on input 
-line 92.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
+] [60 <./Chap4/figures/khasarch.png>] [61] [62] [63] [64] [65] [66] [67]
+[68] [69] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-) [69]
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+) [70]
 (./Chap5/figures/dwc_arch/meta.xml
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
 )
-<Chap5/figures/dwca.png, id=1359, 661.47125pt x 419.5675pt>
+<Chap5/figures/dwca.png, id=1596, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
-Package pdftex.def Info: Chap5/figures/dwca.png used on input line 138.
+Package pdftex.def Info: Chap5/figures/dwca.png used on input line 149.
 (pdftex.def)             Requested size: 413.20515pt x 262.0882pt.
+ [71 <./Chap5/figures/dwca.png>]
+(./Chap5/figures/dwc_arch/set.csv) [72] [73]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-
-Package natbib Warning: Citation `wieczorek2012' on page 70 undefined on input 
-line 139.
-
-[70] [71 <./Chap5/figures/dwca.png>] (./Chap5/figures/dwc_arch/set.csv)
-[72] [73]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- <Chap4/figures/loris.png, id=1433, 1230.5975pt x 758.835pt>
+<Chap4/figures/loris.png, id=1646, 1230.5975pt x 758.835pt>
 File: Chap4/figures/loris.png Graphic file (type png)
 
 <use Chap4/figures/loris.png>
-Package pdftex.def Info: Chap4/figures/loris.png used on input line 209.
+Package pdftex.def Info: Chap4/figures/loris.png used on input line 220.
 (pdftex.def)             Requested size: 413.20515pt x 254.79314pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Chap4/figures/loris_data.png, id=1435, 1620.0525pt x 870.25125pt>
+ [74]
+<Chap4/figures/loris_data.png, id=1652, 1620.0525pt x 870.25125pt>
 File: Chap4/figures/loris_data.png Graphic file (type png)
 
 <use Chap4/figures/loris_data.png>
-Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 217.
+Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 228.
 (pdftex.def)             Requested size: 413.20515pt x 221.95761pt.
- [74]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package natbib Warning: Citation `proctor2005drools' on page 75 undefined on in
-put line 226.
-
 [75 <./Chap4/figures/loris.png>] [76 <./Chap4/figures/loris_data.png>]
-<Chap4/figures/rules.png, id=1452, 1046.91125pt x 682.55pt>
+<Chap4/figures/rules.png, id=1666, 1046.91125pt x 682.55pt>
 File: Chap4/figures/rules.png Graphic file (type png)
 
 <use Chap4/figures/rules.png>
-Package pdftex.def Info: Chap4/figures/rules.png used on input line 234.
+Package pdftex.def Info: Chap4/figures/rules.png used on input line 245.
 (pdftex.def)             Requested size: 413.20515pt x 269.3908pt.
  [77 <./Chap4/figures/rules.png>] [78] [79]
-<Chap4/figures/topology.png, id=1469, 1009.7725pt x 409.53pt>
+<Chap4/figures/topology.png, id=1683, 1009.7725pt x 409.53pt>
 File: Chap4/figures/topology.png Graphic file (type png)
 
 <use Chap4/figures/topology.png>
-Package pdftex.def Info: Chap4/figures/topology.png used on input line 267.
+Package pdftex.def Info: Chap4/figures/topology.png used on input line 280.
 (pdftex.def)             Requested size: 413.20515pt x 167.58344pt.
- [80 <./Chap4/figures/topology.png>]
-<Chap4/figures/leopard2.JPG, id=1476, 1927.2pt x 1084.05pt>
+ [80]
+<Chap4/figures/leopard2.JPG, id=1689, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
-Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 277.
+Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 290.
 (pdftex.def)             Requested size: 413.20515pt x 232.4211pt.
 
-<Chap4/figures/leopard_proc.png, id=1477, 906.38625pt x 465.74pt>
+<Chap4/figures/leopard_proc.png, id=1690, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
-Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 284.
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 297.
 
 (pdftex.def)             Requested size: 413.20515pt x 212.3242pt.
- [81 <./Chap4/figures/leopard2.JPG>]
-[82 <./Chap4/figures/leopard_proc.png>] [83] [84] [85] [86]) [87]
+ [81 <./Chap4/figures/topology.png> <./Chap4/figures/leopard2.JPG>] [82 <./Chap
+4/figures/leopard_proc.png>] [83] [84]
+[85] [86]) [87]
 \openout2 = `Chap5/ont.aux'.
 
-
-(./Chap5/ont.tex
+ (./Chap5/ont.tex
 Chapter 5.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
@@ -1839,76 +1292,21 @@ less on input line 9.
 
 
 
-]
-
-Package natbib Warning: Citation `Compton2009' on page 89 undefined on input li
-ne 16.
-
-
-Package natbib Warning: Citation `Janowicz2010' on page 89 undefined on input l
-ine 16.
-
-
-Package natbib Warning: Citation `Madin2007b' on page 89 undefined on input lin
-e 18.
-
-
-Package natbib Warning: Citation `botts' on page 89 undefined on input line 18.
-
-
-
-Package natbib Warning: Citation `Compton2012' on page 89 undefined on input li
-ne 18.
-
-
-Package natbib Warning: Citation `botts' on page 89 undefined on input line 18.
-
-
-
-Package natbib Warning: Citation `Madin2007b' on page 89 undefined on input lin
-e 31.
-
-
-Package natbib Warning: Citation `McGuinness2004' on page 89 undefined on input
- line 31.
-
-[89]
-
-Package natbib Warning: Citation `Madin2007' on page 90 undefined on input line
- 33.
-
-<Chap5/figures/OBOEcore.JPG, id=1525, 368.87813pt x 137.01187pt>
+] [89] <Chap5/figures/OBOEcore.JPG, id=1752, 368.87813pt x 137.01187pt>
 File: Chap5/figures/OBOEcore.JPG Graphic file (type jpg)
 
 <use Chap5/figures/OBOEcore.JPG>
 Package pdftex.def Info: Chap5/figures/OBOEcore.JPG used on input line 37.
 (pdftex.def)             Requested size: 413.20515pt x 153.47523pt.
-
-
-Package natbib Warning: Citation `Madin2007' on page 90 undefined on input line
- 38.
-
-[90 <./Chap5/figures/OBOEcore.JPG>]
-
-Package natbib Warning: Citation `botts' on page 91 undefined on input line 47.
-
-
-[91] <Chap5/figures/o&m_ontology.png, id=1561, 643.40375pt x 285.065pt>
+ [90 <./Chap5/figures/OBOEcore.JPG>] [91]
+<Chap5/figures/o&m_ontology.png, id=1791, 643.40375pt x 285.065pt>
 File: Chap5/figures/o&m_ontology.png Graphic file (type png)
 
 <use Chap5/figures/o&m_ontology.png>
 Package pdftex.def Info: Chap5/figures/o&m_ontology.png used on input line 82.
 (pdftex.def)             Requested size: 413.20515pt x 183.08038pt.
 
-
-Package natbib Warning: Citation `Probst' on page 92 undefined on input line 83
-.
-
-
-Package natbib Warning: Citation `Baskauf' on page 92 undefined on input line 9
-1.
-
-<Chap5/figures/darwinsw.png, id=1564, 1639.12375pt x 700.6175pt>
+<Chap5/figures/darwinsw.png, id=1796, 1639.12375pt x 700.6175pt>
 File: Chap5/figures/darwinsw.png Graphic file (type png)
 
 <use Chap5/figures/darwinsw.png>
@@ -1916,34 +1314,13 @@ Package pdftex.def Info: Chap5/figures/darwinsw.png used on input line 95.
 (pdftex.def)             Requested size: 413.20515pt x 176.61855pt.
 
 
-Package natbib Warning: Citation `Baskauf' on page 92 undefined on input line 9
-6.
-
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [92 <./Chap5/figures/o&m_ontology.png>]
-
-Package natbib Warning: Citation `Baskauf2011' on page 93 undefined on input li
-ne 102.
-
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 110.
-[93 <./Chap5/figures/darwinsw.png>]
-
-Package natbib Warning: Citation `botts' on page 94 undefined on input line 127
-.
-
-[94]
-
-Package natbib Warning: Citation `Robin2006' on page 95 undefined on input line
- 142.
-
-
-Package natbib Warning: Citation `Compton2012' on page 95 undefined on input li
-ne 205.
-
-<Chap5/figures/ssnont.jpg, id=1607, 681.747pt x 404.712pt>
+ [93 <./Chap5/figures/darwinsw.png>]
+[94] <Chap5/figures/ssnont.jpg, id=1846, 681.747pt x 404.712pt>
 File: Chap5/figures/ssnont.jpg Graphic file (type jpg)
 
 <use Chap5/figures/ssnont.jpg>
@@ -1958,269 +1335,176 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Package natbib Warning: Citation `niles2001towards' on page 96 undefined on inp
 ut line 219.
 
-
-Package natbib Warning: Citation `Eid2007' on page 96 undefined on input line 2
-19.
-
-
-Package natbib Warning: Citation `Eid2007' on page 96 undefined on input line 2
-21.
-
-
-Package natbib Warning: Citation `Eid2007' on page 96 undefined on input line 2
-22.
-
-[96 <./Chap5/figures/ssnont.jpg>] [97]
-
-Package natbib Warning: Citation `Uschold1995' on page 98 undefined on input li
-ne 241.
-
-
-Package natbib Warning: Citation `Gruninger1995' on page 98 undefined on input 
-line 246.
-
-[98]
-
-Package natbib Warning: Citation `Fernandez-Lopez1999' on page 99 undefined on 
-input line 260.
-
-
-Package natbib Warning: Citation `McGuinness2004' on page 99 undefined on input
- line 265.
-
-[99]
-
-Package natbib Warning: Citation `Jimenez-Ruiz2008' on page 100 undefined on in
-put line 273.
-
-
-Package natbib Warning: Citation `Fernandez-Lopez1997' on page 100 undefined on
- input line 277.
-
-
-Package natbib Warning: Citation `Uschold' on page 100 undefined on input line 
-279.
-
-[100]
-
-Package natbib Warning: Citation `Gruninger1995' on page 101 undefined on input
- line 288.
-
-
-Package natbib Warning: Citation `Choi2010' on page 101 undefined on input line
- 290.
-
-[101]
-Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[96 <./Chap5/figures/ssnont.jpg>] [97] [98] [99] [100] [101] [102]
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
 []|\T1/ptm/b/n/12 Subclass
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 337--338
+Underfull \hbox (badness 2913) in paragraph at lines 341--342
 []|\T1/ptm/m/n/12 Project(s) that can con-tain
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 []|\T1/ptm/m/n/12 Node with lim-ited
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 \T1/ptm/m/n/12 knowledge-processing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 \T1/ptm/m/n/12 cap-ab-il-it-ies charged with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 []|\T1/ptm/m/n/12 Node with knowledge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 \T1/ptm/m/n/12 processing cap-ab-il-it-ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 []|\T1/ptm/m/n/12 Node with knowledge-
  []
 
 
-Underfull \hbox (badness 3965) in paragraph at lines 341--342
+Underfull \hbox (badness 3965) in paragraph at lines 345--346
 \T1/ptm/m/n/12 processing cap-ab-il-it-ies that
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 \T1/ptm/m/n/12 stores all know-ledge and
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 341--342
+Underfull \hbox (badness 2237) in paragraph at lines 345--346
 \T1/ptm/m/n/12 sensed data for the whole
  []
 
-[102] <Chap5/figures/khas_base.JPG, id=1657, 2281.52374pt x 949.5475pt>
+<Chap5/figures/khas_base.JPG, id=1916, 2281.52374pt x 949.5475pt>
 File: Chap5/figures/khas_base.JPG Graphic file (type jpg)
 
 <use Chap5/figures/khas_base.JPG>
-Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 355.
+Package pdftex.def Info: Chap5/figures/khas_base.JPG used on input line 359.
 (pdftex.def)             Requested size: 413.20515pt x 171.96886pt.
- [103]
-
-Package natbib Warning: Citation `Noy2000a' on page 104 undefined on input line
- 363.
-
-[104 <./Chap5/figures/khas_base.JPG>]
-
-Package natbib Warning: Citation `dwc_oboe' on page 105 undefined on input line
- 372.
-
-
-Package natbib Warning: Citation `Document2010' on page 105 undefined on input 
-line 374.
-
-[105]
-<Chap5/figures/khas_ontology_copy.jpg, id=1677, 3649.635pt x 982.67125pt>
+ [103 <./Chap5/figures/khas_base.JPG>]
+[104] [105]
+<Chap5/figures/khas_ontology_copy.jpg, id=1942, 3649.635pt x 982.67125pt>
 File: Chap5/figures/khas_ontology_copy.jpg Graphic file (type jpg)
 
 <use Chap5/figures/khas_ontology_copy.jpg>
 Package pdftex.def Info: Chap5/figures/khas_ontology_copy.jpg used on input lin
-e 386.
+e 390.
 (pdftex.def)             Requested size: 3649.62614pt x 982.66885pt.
  [106]
 Overfull \vbox (26.93544pt too high) has occurred while \output is active []
 
 
-[107 <./Chap5/figures/khas_ontology_copy.jpg>]
-
-Package natbib Warning: Citation `Brank2005' on page 108 undefined on input lin
-e 393.
-
-
-Package natbib Warning: Citation `Poveda-Villalon2012' on page 108 undefined on
- input line 406.
-
-[108]
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+[107 <./Chap5/figures/khas_ontology_copy.jpg>] [108]
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
 []|\T1/ptm/m/n/12 Occurrence oc-cur-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--420
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
 []|\T1/ptm/m/n/12 Occurrence, Token,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--420
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
 \T1/ptm/m/n/12 In-di-vidual, Loc-a-tion,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 []|\T1/ptm/m/n/12 Occurrence ha-sEvid-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 []|\T1/ptm/m/n/12 Token is-Bas-isForID
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--423
+Underfull \hbox (badness 10000) in paragraph at lines 427--427
 []|\T1/ptm/m/n/12 Occurrence; Event;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 []|\T1/ptm/m/n/12 Occurrence atEvent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--426
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
 []|\T1/ptm/m/n/12 Find all \T1/ptm/b/n/12 Data-Collection
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--426
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
 []|\T1/ptm/m/n/12 DCNode; In-di-vidual;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
-[]|\T1/ptm/m/n/12 Occurrence oc-cur-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
-[]|\T1/ptm/m/n/12 Occurrence oc-cur-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
-[]|\T1/ptm/m/n/12 Occurrence ha-sEv-ent
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 431--432
-[]|\T1/ptm/m/n/12 Project storedBy
+[]|\T1/ptm/m/n/12 Occurrence oc-cur-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 432--433
-[]|\T1/ptm/m/n/12 Individual oc-curredIn
+[]|\T1/ptm/m/n/12 Occurrence oc-cur-
  []
 
 
-Underfull \hbox (badness 5431) in paragraph at lines 434--435
-[]|\T1/ptm/m/n/12 Administrator has-Pro-
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+[]|\T1/ptm/m/n/12 Occurrence ha-sEv-ent
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 436--436
-[]|\T1/ptm/m/n/12 Find all the \T1/ptm/b/n/12 Evid-ence \T1/ptm/m/n/12 that
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+[]|\T1/ptm/m/n/12 Project storedBy
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]|\T1/ptm/m/n/12 Individual oc-curredIn
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 438--439
+[]|\T1/ptm/m/n/12 Administrator has-Pro-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 440--440
+[]|\T1/ptm/m/n/12 Find all the \T1/ptm/b/n/12 Evid-ence \T1/ptm/m/n/12 that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 []|\T1/ptm/m/n/12 Occurrence ha-sEvid-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 []|\T1/ptm/m/n/12 Occurrence; Token;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 []|\T1/ptm/m/n/12 Occurrence ha-sEvid-
  []
 
-[109] [110]
-
-Package natbib Warning: Citation `Brewster2004' on page 111 undefined on input 
-line 450.
-
-[111]
-
-Package natbib Warning: Citation `dwc_oboe' on page 112 undefined on input line
- 478.
-
-[112]
-
-Package natbib Warning: Citation `Moreau2008' on page 113 undefined on input li
-ne 490.
-
-
-Package natbib Warning: Citation `Moreau2008' on page 113 undefined on input li
-ne 490.
-
-) [113] [114]
+[109] [110] [111] [112]) [113] [114]
 \openout2 = `Chap6/implementation.aux'.
 
  (./Chap6/implementation.tex
@@ -2233,30 +1517,22 @@ less on input line 9.
 
 
 
-] [116]
-
-Package natbib Warning: Citation `Sarajevo2014' on page 117 undefined on input 
-line 24.
-
-
-Package natbib Warning: Citation `Buckeye' on page 117 undefined on input line 
-24.
-
-[117] [118] <Chap6/figures/loris.png, id=1755, 1230.5975pt x 758.835pt>
+] [116] [117] [118]
+<Chap6/figures/loris.png, id=2034, 1230.5975pt x 758.835pt>
 File: Chap6/figures/loris.png Graphic file (type png)
 
 <use Chap6/figures/loris.png>
 Package pdftex.def Info: Chap6/figures/loris.png used on input line 38.
 (pdftex.def)             Requested size: 413.20515pt x 254.79314pt.
  [119 <./Chap6/figures/loris.png>]
-<Chap6/figures/buckeye.png, id=1762, 980.66376pt x 425.59pt>
+<Chap6/figures/buckeye.png, id=2041, 980.66376pt x 425.59pt>
 File: Chap6/figures/buckeye.png Graphic file (type png)
 
 <use Chap6/figures/buckeye.png>
 Package pdftex.def Info: Chap6/figures/buckeye.png used on input line 52.
 (pdftex.def)             Requested size: 413.20515pt x 179.31804pt.
  [120 <./Chap6/figures/buckeye.png>] [121]
-<Chap6/figures/buckeye_img.jpg, id=1774, 963.6pt x 722.7pt>
+<Chap6/figures/buckeye_img.jpg, id=2053, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img.jpg>
@@ -2266,7 +1542,7 @@ Package pdftex.def Info: Chap6/figures/buckeye_img.jpg used on input line 77.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Chap6/figures/buckeye_img_2.jpg, id=1777, 963.6pt x 722.7pt>
+<Chap6/figures/buckeye_img_2.jpg, id=2056, 963.6pt x 722.7pt>
 File: Chap6/figures/buckeye_img_2.jpg Graphic file (type jpg)
 
 <use Chap6/figures/buckeye_img_2.jpg>
@@ -2278,61 +1554,52 @@ Package pdftex.def Info: Chap6/figures/buckeye_img_2.jpg used on input line 86.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [123 <./Chap6/figures/buckeye_img.jpg>] [124 <./Chap6/figures/buckeye_img_2.jpg
->] [125] [126]
+>] [125] [126] [127] [128]
 
-Package natbib Warning: Citation `dedoose2012web' on page 127 undefined on inpu
-t line 143.
+Package natbib Warning: Citation `hall2009weka' on page 129 undefined on input 
+line 174.
 
-[127] [128] [129]) [130] [131]
+
+Package natbib Warning: Citation `quinlan1993' on page 129 undefined on input l
+ine 174.
+
+[129]) [130]
 \openout2 = `Chap7/simulations.aux'.
 
  (./Chap7/simulations.tex
 Chapter 7.
 
-Package natbib Warning: Citation `Collier2003' on page 132 undefined on input l
-ine 10.
-
-
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 12.
 
-[132
+[131
 
 
 
-]
-
-Package natbib Warning: Citation `mccanne1997network' on page 133 undefined on 
-input line 13.
-
-[133] [134] [135] [136]
-<Chap7/figures/khas_sim.png, id=1880, 512.91624pt x 504.88625pt>
+] [132] [133] [134] [135]
+<Chap7/figures/khas_sim.png, id=2161, 512.91624pt x 504.88625pt>
 File: Chap7/figures/khas_sim.png Graphic file (type png)
 
 <use Chap7/figures/khas_sim.png>
 Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 73.
 (pdftex.def)             Requested size: 330.56538pt x 325.39104pt.
- [137 <./Chap7/figures/khas_sim.png>] [138]
-
-Package natbib Warning: Citation `Gupta2003' on page 139 undefined on input lin
-e 109.
-
-[139]
+ [136 <./Chap7/figures/khas_sim.png>] [137]
+[138]
 Overfull \hbox (2.05154pt too wide) in paragraph at lines 115--116
 []\T1/ptm/m/n/12 This phase can be re-peated through-out the course of the de-p
 loy-ment, simply by schedul-
  []
 
-[140] [141] [142]
-<Chap7/figures/ideal/all_int_percent.png, id=1915, 481.8pt x 481.8pt>
+[139] [140] [141]
+<Chap7/figures/ideal/all_int_percent.png, id=2198, 481.8pt x 481.8pt>
 File: Chap7/figures/ideal/all_int_percent.png Graphic file (type png)
 
 <use Chap7/figures/ideal/all_int_percent.png>
 Package pdftex.def Info: Chap7/figures/ideal/all_int_percent.png used on input 
 line 155.
 (pdftex.def)             Requested size: 330.56538pt x 330.57503pt.
- [143 <./Chap7/figures/ideal/all_int_percent.png>]
-<Chap7/figures/ideal/all_total.png, id=1921, 481.8pt x 481.8pt>
+ [142 <./Chap7/figures/ideal/all_int_percent.png>]
+<Chap7/figures/ideal/all_total.png, id=2204, 481.8pt x 481.8pt>
 File: Chap7/figures/ideal/all_total.png Graphic file (type png)
 
 <use Chap7/figures/ideal/all_total.png>
@@ -2340,19 +1607,19 @@ Package pdftex.def Info: Chap7/figures/ideal/all_total.png used on input line 1
 65.
 (pdftex.def)             Requested size: 264.45331pt x 264.46149pt.
 
-<Chap7/figures/real/all_total.png, id=1922, 481.8pt x 481.8pt>
+<Chap7/figures/real/all_total.png, id=2205, 481.8pt x 481.8pt>
 File: Chap7/figures/real/all_total.png Graphic file (type png)
 
 <use Chap7/figures/real/all_total.png>
 Package pdftex.def Info: Chap7/figures/real/all_total.png used on input line 17
 0.
 (pdftex.def)             Requested size: 264.45331pt x 264.46149pt.
- [144]
+ [143]
 
-LaTeX Warning: Text page 145 contains only floats.
+LaTeX Warning: Text page 144 contains only floats.
 
-[145 <./Chap7/figures/ideal/all_total.png> <./Chap7/figures/real/all_total.png>
-] [146] <Chap7/figures/real/all_int.png, id=1953, 481.8pt x 481.8pt>
+[144 <./Chap7/figures/ideal/all_total.png> <./Chap7/figures/real/all_total.png>
+] [145] <Chap7/figures/real/all_int.png, id=2235, 481.8pt x 481.8pt>
 File: Chap7/figures/real/all_int.png Graphic file (type png)
 
 <use Chap7/figures/real/all_int.png>
@@ -2360,19 +1627,19 @@ Package pdftex.def Info: Chap7/figures/real/all_int.png used on input line 210.
 
 (pdftex.def)             Requested size: 264.45331pt x 264.46149pt.
 
-<Chap7/figures/real/all_empty.png, id=1954, 481.8pt x 481.8pt>
+<Chap7/figures/real/all_empty.png, id=2236, 481.8pt x 481.8pt>
 File: Chap7/figures/real/all_empty.png Graphic file (type png)
 
 <use Chap7/figures/real/all_empty.png>
 Package pdftex.def Info: Chap7/figures/real/all_empty.png used on input line 21
 6.
 (pdftex.def)             Requested size: 264.45331pt x 264.46149pt.
- [147] [148]
+ [146] [147]
 
-LaTeX Warning: Text page 149 contains only floats.
+LaTeX Warning: Text page 148 contains only floats.
 
-[149 <./Chap7/figures/real/all_int.png> <./Chap7/figures/real/all_empty.png>]
-<Chap7/figures/saturated/all_total.png, id=1971, 481.8pt x 481.8pt>
+[148 <./Chap7/figures/real/all_int.png> <./Chap7/figures/real/all_empty.png>]
+<Chap7/figures/saturated/all_total.png, id=2253, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_total.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_total.png>
@@ -2380,7 +1647,7 @@ Package pdftex.def Info: Chap7/figures/saturated/all_total.png used on input li
 ne 269.
 (pdftex.def)             Requested size: 330.56538pt x 330.57503pt.
 
-<Chap7/figures/saturated/all_empty.png, id=1973, 481.8pt x 481.8pt>
+<Chap7/figures/saturated/all_empty.png, id=2255, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_empty.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_empty.png>
@@ -2388,15 +1655,15 @@ Package pdftex.def Info: Chap7/figures/saturated/all_empty.png used on input li
 ne 279.
 (pdftex.def)             Requested size: 264.45331pt x 264.46149pt.
 
-<Chap7/figures/saturated/all_int.png, id=1974, 481.8pt x 481.8pt>
+<Chap7/figures/saturated/all_int.png, id=2256, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_int.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_int.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_int.png used on input line
  285.
 (pdftex.def)             Requested size: 264.45331pt x 264.46149pt.
- [150]
-<Chap7/figures/saturated/all_int_percent.png, id=1982, 481.8pt x 481.8pt>
+ [149]
+<Chap7/figures/saturated/all_int_percent.png, id=2264, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_int_percent.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_int_percent.png>
@@ -2404,20 +1671,20 @@ Package pdftex.def Info: Chap7/figures/saturated/all_int_percent.png used on in
 put line 296.
 (pdftex.def)             Requested size: 330.56538pt x 330.57503pt.
 
-<Chap7/figures/saturated/all_int_empt.png, id=1983, 481.8pt x 481.8pt>
+<Chap7/figures/saturated/all_int_empt.png, id=2265, 481.8pt x 481.8pt>
 File: Chap7/figures/saturated/all_int_empt.png Graphic file (type png)
 
 <use Chap7/figures/saturated/all_int_empt.png>
 Package pdftex.def Info: Chap7/figures/saturated/all_int_empt.png used on input
  line 303.
 (pdftex.def)             Requested size: 330.56538pt x 330.57503pt.
- [151 <./Chap7/figures/saturated/all_total.png>]
+ [150 <./Chap7/figures/saturated/all_total.png>]
 
-LaTeX Warning: Text page 152 contains only floats.
+LaTeX Warning: Text page 151 contains only floats.
 
-[152 <./Chap7/figures/saturated/all_empty.png> <./Chap7/figures/saturated/all_i
-nt.png>] [153 <./Chap7/figures/saturated/all_int_percent.png>] [154 <./Chap7/fi
-gures/saturated/all_int_empt.png>] [155]) [156]
+[151 <./Chap7/figures/saturated/all_empty.png> <./Chap7/figures/saturated/all_i
+nt.png>] [152 <./Chap7/figures/saturated/all_int_percent.png>] [153 <./Chap7/fi
+gures/saturated/all_int_empt.png>] [154]) [155]
 \openout2 = `Chap8/conclusion.aux'.
 
  (./Chap8/conclusion.tex
@@ -2426,27 +1693,86 @@ Chapter 8.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 6.
 
-[157
+[156
 
 
 
-] [158] [159] [160]
+] [157] [158] [159]
 Overfull \hbox (8.41023pt too wide) in paragraph at lines 30--31
 []\T1/ptm/m/n/12 With more time, we could cre-ate cus-tom DC nodes us-ing web-c
 ams and micro-computers,
  []
 
-[161] [162]) [163]
-No file thesis.bbl.
+[160] [161]) [162] (./thesis.bbl
+Underfull \hbox (badness 1325) in paragraph at lines 9--12
+[]\T1/ptm/m/n/12 Danau Gir-ang Field Centre.  URL []$\T1/pcr/m/n/10 http : / / 
+www . cardiff . ac . uk / biosi /
+ []
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 63.
+
+[163
+
+
+] [164]
+Underfull \hbox (badness 1874) in paragraph at lines 118--121
+[]\T1/ptm/m/n/12 Dan Brickley and Libby Miller.  FOAF vocab-u-lary spe-cific-a-
+tion 0.98.
+ []
+
+[165] [166]
+Underfull \hbox (badness 2547) in paragraph at lines 231--235
+[]\T1/ptm/m/n/12 Mariano Fernández-López, Asun-ción Gómez-Pérez, and Nat-alia J
+ur-isto.
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 248--254
+[]\T1/ptm/m/n/12 Antonio-Javier Garcia-Sanchez, Fe-lipe Garcia-Sanchez, Fernand
+o Losilla,
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 248--254
+\T1/ptm/m/n/12 Pawel Ku-lakowski, Joan Garcia-Haro, Ale-jandro Rodríguez, José-
+Vicente
+ []
+
+[167] [168]
+Underfull \hbox (badness 3128) in paragraph at lines 370--375
+[]\T1/ptm/m/n/12 Ernesto Jiménez-Ruiz, Bern-ardo Cuenca Grau, Ul-rike Sat-tler,
+ Thomas
+ []
+
+[169] [170] [171] [172] [173]
+Underfull \hbox (badness 3803) in paragraph at lines 612--616
+[]\T1/ptm/m/n/12 SOnet.  Dar-win Core and OBOE Rep-res-ent-a-tion Ex-amples.  U
+RL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--616
+[]$\T1/pcr/m/n/10 https : / / sonet . ecoinformatics . org / observational-[]da
+ta-[]use-[]cases /
+ []
+
+[174] [175] [176]
+Underfull \hbox (badness 1852) in paragraph at lines 797--800
+[]\T1/ptm/m/n/12 ZSL.  In-stant Wild: Live Wild-life Pho-to-graphs.  URL []$\T1
+/pcr/m/n/10 http : / / www .
+ []
+
+) [177]
 \openout2 = `App/appendix.aux'.
 
-(./App/appendix.tex
+ (./App/appendix.tex
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 1.
 
-[164
-
+[178
 
 
 
@@ -2457,34 +1783,34 @@ Appendix A.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 58.
 
-[165
+[179
 
 ]) (./Chap4/listings/dwc_arch/meta.xml) (./Chap4/listings/dwc_arch/set.csv) (./
-Chap4/listings/dwc_arch/images.csv) [166]
+Chap4/listings/dwc_arch/images.csv) [180]
 Appendix B.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 53.
 
-[167
+[181
 
-] [168]
+] [182]
 Appendix C.
 (./App/listings/align.owl
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 57.
 
-[169
+[183
 
-] [170]) [171]
+] [184]) [185]
 Appendix D.
 (./Chap4/listings/rules.drl)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 97.
 
-[172
+[186
 
 ]
 Appendix E.
@@ -2493,11 +1819,11 @@ Appendix E.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 50.
 
-[173
+[187
 
-] [174] [175] [176] [177]) [178]
+] [188] [189] [190] [191]) [192]
 Appendix F.
-<App/figures/roshan_extract.png, id=2795, 753.81625pt x 766.865pt>
+<App/figures/roshan_extract.png, id=3163, 753.81625pt x 766.865pt>
 File: App/figures/roshan_extract.png Graphic file (type png)
 
 <use App/figures/roshan_extract.png>
@@ -2513,7 +1839,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--493
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 493.
 
-[179
+[193
 
  <./App/figures/roshan_extract.png>]
 
@@ -2521,20 +1847,14 @@ Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
-(./thesis.aux
-! Missing \endcsname inserted.
-<to be read again> 
-                   \&
-l.97 ...M}{O \&\ M}]{Observations \& Measurements}
-                                                  
-? 
-(./Chap1/introduction.aux) (./Chap2/background.aux) (./Chap3/technical.aux)
-(./Chap4/architecture.aux) (./Chap5/ont.aux) (./Chap6/implementation.aux)
-(./Chap7/simulations.aux) (./Chap8/conclusion.aux) (./App/appendix.aux))
+(./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
+(./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
+(./Chap6/implementation.aux) (./Chap7/simulations.aux) (./Chap8/conclusion.aux)
+(./App/appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BAC349F3E1480EDDCE83FDC64E7DE901;8116.
+(rerunfilecheck)             Checksum: 3C1FB25FC516194C2EBF7E3483E8843B;8167.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2542,13 +1862,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 24270 strings out of 493104
- 417328 string characters out of 6136933
- 905062 words of memory out of 5000000
- 25778 multiletter control sequences out of 15000+600000
- 52844 words of font info for 78 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 55i,12n,54p,1739b,1891s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23108 strings out of 493304
+ 380000 string characters out of 6139871
+ 876922 words of memory out of 5000000
+ 24492 multiletter control sequences out of 15000+600000
+ 55692 words of font info for 80 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 56i,12n,55p,1739b,1891s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
@@ -2561,10 +1881,10 @@ e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (203 pages, 11718545 bytes).
+Output written on thesis.pdf (217 pages, 11777754 bytes).
 PDF statistics:
- 3128 PDF objects out of 3580 (max. 8388607)
- 2813 compressed objects within 29 object streams
- 1336 named destinations out of 1440 (max. 500000)
- 1214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3525 PDF objects out of 3580 (max. 8388607)
+ 3193 compressed objects within 32 object streams
+ 1466 named destinations out of 1728 (max. 500000)
+ 1222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
