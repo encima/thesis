@@ -93,7 +93,7 @@ dropped.
 * [AMBER] Correct and move to appropriate part of the thesis, probably chapter 3. I would suggest removing the term global knowledge.
 	* Chapter 3 or 4?
 
-* [AMBER] Fig 3.5: combine the two graphs onto a single plot.
+* [AMBER][DONE] Fig 3.5: combine the two graphs onto a single plot.
 
 * [AMBER] Separate out UK wet and dry and provide humidity values for the experiment (if you have them).
 
@@ -142,9 +142,9 @@ dropped.
 * [GREEN] Clarify 400 hour claim on p158 (the new simulation experiments will give you a proper value for this against the baseline when there is no intelligence in the network)
 
 ## Typos / minor corrections (90% done):
-* GLACSWEB: citation needed. 'that' -> 'at'
+* [DONE] GLACSWEB: citation needed. 'that' -> 'at'
 * [DONE] P29 Last bullet point: Should ‘collection’ be ‘collecting’?
-* P35/36 Local knowledge .... was ‘used for many years to extract information
+* [DONE] P35/36 Local knowledge .... was ‘used for many years to extract information
 from indigenous’ people does not sound right – do you mean that local
 knowledge was extracted from indigenous people ?
 * [DONE] p39 this most -> this is most

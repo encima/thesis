@@ -115,31 +115,32 @@ Research, outlined in Section \ref{bg:trans}, showed that the rainforest could r
 
 We tested Wi-Fi range using two IGEP boards. We selected IGEP boards because they could be powered by 4 D Cell batteries and run a lightweight Linux operating system that allowed us to access information at the network layer, while still running higher level applications. The IGEP nodes we used did not have any additional hardware and the nodes were tested without the use of an external antenna. A Java application was written to periodically scan for available networks and store those results in a text file. One IGEP board was set as the base station and attached to a tree, at the same height it would be if it was attached to a camera, and another was walked to specified points around the base station at defined locations. These locations were chosen to include as many distances as possible and as many different forms of obstacle between the searching node and the base station, such as: line of sight (LOS), medium vegetation or thick trees.
 			
-This experiment was run in a wooded area in the UK and in the rainforest at DGFC. The specified maximum range of 802.11g is 120m. When considering attenuation and obstacles we were expecting the signal to be reduced by up to 50\% in the UK. However, we found that we received a maximum range of 30m, with LOS. Figure \ref{cardiffsnr} shows the results we experienced, while testing in the UK, some of the drops in signal can be attributed to dense foliage and readings that were not LOS, but a maximum range of 31m, with an SNR of 29.5 dBm, is less than we expected, as the UK does not experience high humidity often.
+This experiment was run in a wooded area in the UK and in the rainforest at DGFC. The specified maximum range of 802.11g is 120m. When considering attenuation and obstacles we were expecting the signal to be reduced by up to 50\% in the UK. However, we found that we received a maximum range of 30m, with LOS. Figure \ref{fig:test} shows the results we experienced, while testing in the UK, some of the drops in signal can be attributed to dense foliage and readings that were not LOS, but a maximum range of 31m, with an SNR of 29.5 dBm, is less than we expected, as the UK does not experience high humidity often.
 			
 	The graph shows a drop at 22m: this was due to unusually dense foliage that restricted the LOS between the base station and the receiving node. With five runs of this test we observed the same results. The primary aim of this experiment was to show the viability of Wi-Fi and to ensure our application functioned as intended, which it did. Further experiments could have been run to remove the anomaly but the results of the experiments in Danau Girang were the focus.
 		 
-	Despite the poor range from the tests in the UK, it was consistent with other studies reporting signal degradation of up to 78\% in areas with dense foliage. We visited Danau Girang in 2011 to gather the requirements of the network and ensure the hardware is able to survive the humidity. Range experiments were run in the rainforest to see if a more humid environment impacts range any further, Figure \ref{malaysiasnr} shows this.
+	Despite the poor range from the tests in the UK, it was consistent with other studies reporting signal degradation of up to 78\% in areas with dense foliage. We visited Danau Girang in 2011 to gather the requirements of the network and ensure the hardware is able to survive the humidity. Range experiments were run in the rainforest to see if a more humid environment impacts range any further, Figure \ref{fig:test} shows this.
 
 \begin{figure}[ht!]
 \centering
-\begin{subfigure}{0.9\textwidth}
-  \centering
-  \includegraphics[width=\textwidth]{Chap3/figures/bp_snr.png}
-  \caption{UK Woodland}
-	\label{cardiffsnr}
-\end{subfigure}
-\begin{subfigure}{0.9\textwidth}
-  \centering
-  \includegraphics[width=\textwidth]{Chap3/figures/dg_snr.png}
-  \caption{Malaysian Rainforest}
- \label{malaysiasnr}
-\end{subfigure}
+\includegraphics[width=0.7\textwidth]{Chap3/figures/combined_snr.png}
+% \begin{subfigure}{0.9\textwidth}
+%   \centering
+%   \includegraphics[width=\textwidth]{Chap3/figures/bp_snr.png}
+%   \caption{UK Woodland}
+% 	\label{cardiffsnr}
+% \end{subfigure}
+% \begin{subfigure}{0.9\textwidth}
+%   \centering
+%   \includegraphics[width=\textwidth]{Chap3/figures/dg_snr.png}
+%   \caption{Malaysian Rainforest}
+%  \label{malaysiasnr}
+% \end{subfigure}
 \caption{Signal-to-Noise Ratio for Wi-Fi}
 \label{fig:test}
 \end{figure}
 						
-			Comparing Figures \ref{cardiffsnr} and \ref{malaysiasnr} shows that the maximum distance to receive a signal is approximately the same in Malaysia as it is in the UK.  There are more signal drops but this seems to be due to denser foliage blocking the line of sight. However, it does suggest that the humid environment of the rainforest does not have a significant impact on the received signal. It is clear that the denser rainforest does impact the signal-to-noise ratio in a much shorter distance from the base station but a link is still made, allowing for a successful transmission of data.
+			Figure \ref{fig:test} shows that the maximum distance to receive a signal is approximately the same in Malaysia as it is in the UK.  There are more signal drops but this seems to be due to denser foliage blocking the line of sight. However, it does suggest that the humid environment of the rainforest does not have a significant impact on the received signal. It is clear that the denser rainforest does impact the signal-to-noise ratio in a much shorter distance from the base station but a link is still made, allowing for a successful transmission of data.
 			
 Poor Wi-Fi performance led us to research alternative methods to increase the range without impacting the environment the network is to be deployed in. We considered using intermediate nodes, not attached to cameras, to account for the lack of range but, because some cameras can be up to 1km apart, we would need more than 30 nodes to create a connection between two locations.
 			
