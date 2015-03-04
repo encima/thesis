@@ -96,13 +96,14 @@ dropped.
 * [AMBER][DONE] Fig 3.5: combine the two graphs onto a single plot.
 
 * [AMBER] Separate out UK wet and dry and provide humidity values for the experiment (if you have them).
+	-I do not think we do
 
-* [GREEN] Include the values for when DKFC loses signal
+* [GREEN] Include the values for when DGFC loses signal
 
 ##General comments:
 
 * [AMBER] When stating that there are multiple tools, provide more than one citation
-	* Need to find these references
+	* Need to find these references in the thesis
 
 * [GREEN][DONE] Remove the acronyms ‘LK’ and ‘GK’ and replace with their expanded terms
 
@@ -112,7 +113,7 @@ dropped.
 * [GREEN][DONE] Remove et al from references
 	* Bibtex includes 'others' as et al, remove these from bib file
 
-* [AMBER] Provide a map of the location of the field centre in its wider context, i.e. the part of the globe, in Chapter 1. Improve resolution of Fig 3.2 and highlight regions on picture.
+* [AMBER][DONE] Provide a map of the location of the field centre in its wider context, i.e. the part of the globe, in Chapter 1. Improve resolution of Fig 3.2 and highlight regions on picture.
 
 * [GREEN][DONE] Remove claim at end of §3.3.1 that, based on your experiment, you can conclude that other experiments would give you the same results in the UK and Malaysia
 
@@ -120,9 +121,10 @@ dropped.
 
 * [GREEN][DONE] Turn the heading ‘Findings’ in §5.1.2 into the subheading §5.1.3
 
-* [GREEN] cite all the commercial cameras considered
+* [GREEN][DONE] cite all the commercial cameras considered
+	- Few commercial cameras existed and Buckeye was the main choice
 
-* [GREEN] 6.1 provide a picture of the Buckeye cameras used with their case
+* [GREEN][DONE] 6.1 provide a picture of the Buckeye cameras used with their case
 
 * [AMBER][DONE] 6.2 State why you are only taking 2 pictures when up until this point you have been working with 3 pictures
 	- Pg 120
@@ -131,7 +133,8 @@ dropped.
 
 * [AMBER] State how many rules were used in the LORIS deployment and an indication of the accuracy of the system
 
-* [GREEN] Indicate which part of the interview in appendix E is shown in appendix F
+* [GREEN][DONE] Indicate which part of the interview in appendix E is shown in appendix F
+	- Explained the extracts in more detail but the two included are from different researchers, I can change the extract to match the ful?
 
 * [AMBER][DONE] p126 rewrite paragraph about global knowledge and local knowledge of clouded leopard sleeping patterns
 	- Needs checking
