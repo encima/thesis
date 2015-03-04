@@ -74,7 +74,7 @@ dropped.
 
 ## Ontology
 
-* [AMBER] Correction of claims about ontologies in both chapter 5 and 8
+* [AMBER][DONE] Correction of claims about ontologies in both chapter 5 and 8
 
 * [GREEN][DONE] SSN ontology is both sensor-centric and observation-centric.
 	* create a new section to include this and extension of SUMO?
