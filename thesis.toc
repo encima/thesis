@@ -53,16 +53,16 @@
 \contentsline {section}{\numberline {3.1}Danau Girang Field Centre}{37}{section.3.1}
 \contentsline {section}{\numberline {3.2}Hardware}{41}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Pandaboard}{42}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}IGEP v2}{42}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}IGEP v2}{44}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Waspmote}{44}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Discussion}{44}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Transmission Media}{45}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Wi-Fi}{45}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Wi-Fi}{46}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}DigiMesh}{48}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Adapting and Optimising for Harsh Environments}{50}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Software}{52}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Triton}{52}{subsection.3.4.1}
-\contentsline {subsubsection}{Future Work}{57}{section*.32}
+\contentsline {section}{\numberline {3.4}Software}{51}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Triton}{51}{subsection.3.4.1}
+\contentsline {subsubsection}{Future Work}{56}{section*.32}
 \contentsline {section}{\numberline {3.5}Conclusion}{57}{section.3.5}
 \contentsline {chapter}{\numberline {4}Wireless Sensor Network Architecture Design}{59}{chapter.4}
 \contentsline {section}{\numberline {4.1}The Local Knowledge Problem}{60}{section.4.1}
@@ -123,42 +123,42 @@
 \contentsline {chapter}{\numberline {6}Deployment in the Field}{115}{chapter.6}
 \contentsline {section}{\numberline {6.1} Deployment Architecture}{116}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Data Collection}{117}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{118}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Deployment}{119}{section.6.2}
+\contentsline {subsection}{\numberline {6.1.2}Data Processing and Aggregation}{119}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Deployment}{120}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Direct Connection}{121}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{121}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.2}1-Hop Network}{122}{subsection.6.2.2}
 \contentsline {section}{\numberline {6.3}Results}{122}{section.6.3}
-\contentsline {section}{\numberline {6.4}Rules}{123}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Data Processing and Data Aggregation}{124}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Existing Data}{126}{subsection.6.4.2}
-\contentsline {subsubsection}{Semi Structured Interviews}{126}{section*.72}
-\contentsline {subsubsection}{Existing Data}{128}{section*.73}
-\contentsline {section}{\numberline {6.5}Conclusion}{129}{section.6.5}
-\contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{131}{chapter.7}
-\contentsline {section}{\numberline {7.1}Simulation Environment}{132}{section.7.1}
-\contentsline {section}{\numberline {7.2}Experiment Design}{133}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{137}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Routing}{137}{subsection.7.2.2}
-\contentsline {subsubsection}{Discovery}{138}{section*.76}
-\contentsline {subsubsection}{Transmission}{139}{section*.77}
-\contentsline {subsection}{\numberline {7.2.3}Capture}{140}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Processing}{140}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}Results}{141}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Duration}{145}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Network Saturation}{147}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4}Conclusion}{153}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{156}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{157}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{158}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{158}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{159}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{159}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}Future Work}{160}{section.8.2}
-\contentsline {chapter}{Bibliography}{163}{section.8.2}
-\contentsline {chapter}{Appendices}{178}{section*.88}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{179}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{181}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{183}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{186}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{187}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{193}{Appendix.1.F}
+\contentsline {section}{\numberline {6.4}Rules}{124}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Data Processing and Data Aggregation}{125}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Existing Data}{127}{subsection.6.4.2}
+\contentsline {subsubsection}{Semi Structured Interviews}{127}{section*.73}
+\contentsline {subsubsection}{Existing Data}{129}{section*.74}
+\contentsline {section}{\numberline {6.5}Conclusion}{130}{section.6.5}
+\contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{132}{chapter.7}
+\contentsline {section}{\numberline {7.1}Simulation Environment}{133}{section.7.1}
+\contentsline {section}{\numberline {7.2}Experiment Design}{134}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{138}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Routing}{138}{subsection.7.2.2}
+\contentsline {subsubsection}{Discovery}{139}{section*.77}
+\contentsline {subsubsection}{Transmission}{140}{section*.78}
+\contentsline {subsection}{\numberline {7.2.3}Capture}{141}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Processing}{141}{subsection.7.2.4}
+\contentsline {section}{\numberline {7.3}Results}{142}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Duration}{146}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Network Saturation}{148}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Conclusion}{154}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{157}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{158}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{159}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{159}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{160}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{160}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Future Work}{161}{section.8.2}
+\contentsline {chapter}{Bibliography}{164}{section.8.2}
+\contentsline {chapter}{Appendices}{179}{section*.89}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{180}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{182}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{184}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{187}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{188}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{194}{Appendix.1.F}
