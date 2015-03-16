@@ -99,4 +99,43 @@
 
 \chapter{Qualitative Analysis Extract}\label{appendix:interview:extract}
 \includegraphics[width=\textwidth]{App/figures/roshan_extract}
+
+\chapter{Repast Parameters File Example}\label{appendix:sims:params}
+\begin{lstlisting}[language=XML, caption={Example params.xml file for a Repast simulation}]
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+  <parameter name="randomSeed" displayName="Default Random Seed" type="int" defaultValue="__NULL__" />
+  
+  <parameter name="sensingNodeCount" displayName="Number of sensing Nodes" type="int" defaultValue="20" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter"  />
+
+  <parameter name="routingNodeCount" displayName="Number of routing Nodes" type="int" defaultValue="4" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+  
+  <parameter name="centralNodeCount" displayName="Number of central Nodes" type="int" defaultValue="1" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+  
+  <parameter name="sensingKnowledge" displayName="Knowledge for sensing nodes" type="java.lang.String" defaultValue="MK" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"/>
+
+  <parameter name="routingKnowledge" displayName="Knowledge for routing nodes" type="java.lang.String" defaultValue="MK" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"/>
+  
+  <parameter name="centralKnowledge" displayName="Knowledge for central nodes" type="java.lang.String" defaultValue="NK" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"/>
+  
+  <parameter name="captureChance" displayName="chance of image capture" type="double" defaultValue="0.000857703189" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"/>
+  
+  <parameter name="interestingChance" displayName="chance of interesting capture" type="double" defaultValue="0.207" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"/>
+  
+  <parameter name="transRate" displayName="Transmission rate (variable or ideal)" type="java.lang.String" defaultValue="variable" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" />
+  
+  <parameter name="bandwidth" displayName="Chance of image capture (normal or saturated)" type="java.lang.String" defaultValue="normal" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" />
+  
+  <parameter name="hkProcessingTime" displayName="time to process archive" type="int" defaultValue="43" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter"/>
+  
+  <parameter name="mkProcessingTime" displayName="time to process archive" type="int" defaultValue="5" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter"/>
+  
+  <parameter name="tickStop" displayName="Stop at Tick (-1 for No)" type="int" defaultValue="15552000" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter"/>
+    
+  <parameter name="height" displayName="Height" type="int" defaultValue="1200" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+  
+  <parameter name="width" displayName="Height" type="int" defaultValue="1200" isReadOnly="false" converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+</parameters>
+\end{lstlisting}
+
 \end{appendices}
