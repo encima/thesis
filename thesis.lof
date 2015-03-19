@@ -44,14 +44,15 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{123}{figure.caption.71}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{124}{figure.caption.72}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces MK-HK Simulation Example in RePast Simulator\relax }}{137}{figure.caption.76}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Percentage of Interesting Observations for All Scenarios.\relax }}{143}{figure.caption.79}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean Duration of All Observations\relax }}{145}{figure.caption.80}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Mean Duration under Variable Transmission Rate\relax }}{149}{figure.caption.82}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Mean Duration of All Observations Across All Scenarios\relax }}{151}{figure.caption.85}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Mean Duration of Observations across All Scenarios\relax }}{152}{figure.caption.86}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Percentage of Interesting Observations across All Scenarios\relax }}{153}{figure.caption.87}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Percentage of Interesting Compared to Empty Observations across All Scenarios\relax }}{154}{figure.caption.88}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces MK-HK Simulation Example in RePast Simulator\relax }}{138}{figure.caption.76}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate\relax }}{144}{figure.caption.79}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Average Delivery Time for Interesting Observations with No Saturation and Ideal Transmission Rate\relax }}{145}{figure.caption.80}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Average Delivery Time for Interesting Observations with No Saturation and Ideal Transmission Rate\relax }}{145}{figure.caption.81}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Interesting vs Empty Delivered Observations with No Saturation and Ideal Transmission Rate\relax }}{146}{figure.caption.82}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate\relax }}{147}{figure.caption.83}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Average Delivery Time for Interesting Observations with Saturation and Ideal Transmission Rate\relax }}{147}{figure.caption.84}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Average Delivery Time for Interesting Observations with Saturation and Ideal Transmission Rate\relax }}{148}{figure.caption.85}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Interesting vs Empty Delivered Observations with Saturation and Ideal Transmission Rate\relax }}{148}{figure.caption.86}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

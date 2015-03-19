@@ -137,28 +137,31 @@
 \contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{132}{chapter.7}
 \contentsline {section}{\numberline {7.1}Simulation Environment}{133}{section.7.1}
 \contentsline {section}{\numberline {7.2}Experiment Design}{134}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{138}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Routing}{138}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.1}Darwin Core}{137}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Routing}{139}{subsection.7.2.2}
 \contentsline {subsubsection}{Discovery}{139}{section*.77}
 \contentsline {subsubsection}{Transmission}{140}{section*.78}
 \contentsline {subsection}{\numberline {7.2.3}Capture}{141}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Processing}{141}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}Results}{142}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Duration}{146}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Network Saturation}{148}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4}Conclusion}{154}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{157}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{158}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{159}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{159}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{160}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{160}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}Future Work}{161}{section.8.2}
-\contentsline {chapter}{Bibliography}{164}{section.8.2}
-\contentsline {chapter}{Appendices}{179}{section*.89}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{180}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{182}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{184}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{187}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{188}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{194}{Appendix.1.F}
+\contentsline {subsection}{\numberline {7.2.4}Processing}{142}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}Simulation Configuration}{143}{subsection.7.2.5}
+\contentsline {section}{\numberline {7.3}Results}{143}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Normal Network Saturation with Ideal Transmission Rate}{144}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Normal Network Saturation with Variable Transmission Rate}{146}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Saturated Network Saturation with Ideal Transmission Rate}{146}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Saturated Network Saturation with Variable Transmission Rate}{149}{subsection.7.3.4}
+\contentsline {section}{\numberline {7.4}Conclusion}{149}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{150}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{151}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{152}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{152}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{153}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{153}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Future Work}{154}{section.8.2}
+\contentsline {chapter}{Appendices}{157}{section*.87}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{158}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{160}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{162}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{165}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{166}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{172}{Appendix.1.F}
+\contentsline {chapter}{\numberline {G}Repast Parameters File Example}{173}{Appendix.1.G}

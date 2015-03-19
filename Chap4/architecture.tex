@@ -100,15 +100,15 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	\subsection{Data Standard}\label{arch:tech:dwc}
 		To pass sensed data through the network, we first had to choose a standard format that would allow us to encode the sensed data, as well as enrich it with inferences made through processing. Darwin Core (DwC) is a body of standards with predefined terms that allows for the sharing of biodiversity occurrence information through the means of XML and CSV data files \cite{wieczorek2012}.
 
-The Global Biodiversity Information Facility (GBIF) indexes more than 500 million Darwin Core records published by organisations all over the web, allowing datasets that were previously siloed from the public to be accessed by both human and machine. The primary purpose of Darwin Core is to create a common language for sharing biodiversity data that is complementary to and reuses metadata standards from other domains wherever possible \cite{wieczorek2012}.
+The Global Biodiversity Information Facility (GBIF)\cite{gbif} indexes more than 500 million Darwin Core records published by organisations all over the web, allowing datasets that were previously siloed from the public to be accessed by both human and machine. The primary purpose of Darwin Core is to create a common language for sharing biodiversity data that is complementary to and reuses metadata standards from other domains wherever possible \cite{wieczorek2012}.
 
-DwC Archives follow a star file structure, where a record can contain many occurrences, which is the recording of a species in nature or in a dataset. In an occurrence, there is an \textit{event}, a recording of a species in space and time, enriched with other terms such as \textit{identification} and \textit{location}. DwC is that standard set of terms that can be used, while a Darwin Core Archive (DwC-A) provides the structure for data recorded using these terms. The core files in a DwC-A are:
+DwC Archives follow a star file structure, where a record can contain many occurrences, which is the recording of a species in nature or in a dataset. In an occurrence, there is an \textit{event}, a recording of a species in space and time, enriched with other terms such as \textit{identification} and \textit{location}. DwC is the standard set of terms that can be used, while a Darwin Core Archive (DwC-A) provides the structure for data recorded using these terms. The core files in a DwC-A are:
 \begin{enumerate}
 	\item EML.xml
 	\item Meta.xml
 	\item Data files
 \end{enumerate}
-While DwC does not have the extensions available to OBOE, it is extremely concise for recording observations within the biological diversity domain and aims to be a standard reference for sharing these observations.
+While DwC does not have the extensions available to OBOE, an extensible base ontology designed for ecological observations that is explained in detail in section \ref{OBOE}, it is extremely concise for recording observations within the biological diversity domain and aims to be a standard reference for sharing these observations.
 
 % The standard structure of a Darwin Core Archive (DwC-A) is a star record; an archive of files with a core metadata file that describes the content of all other files within the archive.
 
@@ -270,6 +270,8 @@ Darwin Core is suited to K-HAS because its use in ecological observations matche
 	\section{Walkthrough}\label{arch:walk}
 		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.
 		
+		Not all of the features described in this section have been implemented within K-HAS and some features have only been tested on a small set of observations. For example, the image classification down to species level is a concept that we have not implemented but template matching is a commonly used practice within image processing \cite{fast1995}.
+
 		\subsection{Scenario}\label{arch:scen}
 			This walkthrough will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare clouded leopard and sun bear are currently active at Danau Girang. The clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed. All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.
 
@@ -337,8 +339,12 @@ Darwin Core is suited to K-HAS because its use in ecological observations matche
 					
 	\section{Conclusion}\label{arch:conc}
 		In this chapter we have explained the architecture we have developed to allow knowledge to be encoded and utilised within a wireless sensor network. Using tiers of nodes, with varying levels of knowledge-processing capabilities, we can process observations within the network and deliver data that has, where possible, already been classified. Working as more of a subscribe-push method, users do not have to check a DA node for new data, instead it is sent to them if it has been found to be part of a project they are subscribed to. If not, then the data is accessible to all users of the network through a web interface.
+
+		%COMPARE WITH OGC SWE HERE!
+		%http://essay.utwente.nl/59473/1/scriptie_R_de_Lange.pdf
+		Using GSN as the application middleware allows sensors to be added, modified and maintained by those without technical knowledge and ensure future interoperability. However, it is not a standardised approach and using an architecture that implements the standard OGC SWE\cite{botts} would allow for interoperability through the use of standards not just for sensor networks but the Web as well. 
 		
-		One of the key features of K-HAS is that it is not a static deployment. The knowledge that the network holds at the time of deployment will rarely be the same as the knowledge held after a few months. Humans enrich the existing knowledge base and the nodes are able to make inferences about the data they are sensing, improving their classifications the longer they are deployed.
+		One of the key features of K-HAS is that it is not a static deployment. The knowledge that the network holds at the time of deployment will rarely be the same as the knowledge held after a few months. Humans enrich the existing knowledge base and the nodes are able to make inferences about the data they are sensing, improving their classifications the longer they are deployed. When developing this architecture, GSN was the most robust architecture of those that we researched and tested, the support for many databases, administrative interface, native support for many widely used sensors meant that it was a better choice than a middleware that adopted the OGC SWE standards, especially as we were not interacting with SWE systems in our motivating scenario. However, while GSN is stable and mature, its large codebase does mean that there are dated features, such as using SOAP instead of REST and an unintuitive web interface that does not utilise web sockets. A middleware with similar automotation on receipt of sensor data could be used instead of GSN that did follow the standards set out by the OGC. We believe that this should require few changes to the core K-HAS architecture as it currently stands.
 		
 		In Chapter 6, we explain how we implemented a variation of K-HAS in our motivating scenario and Chapter 7 shows our evaluation of the K-HAS architecture, but Chapter 5 will first outline the development of an ontology to support the architecture described here.
 		

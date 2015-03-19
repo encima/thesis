@@ -157,7 +157,7 @@ In our prototype implementation, we are using Waspmote sensor boards \cite{waspm
 		
 When testing the range of the Waspmotes, we followed a similar method to that which is outlined in Section \ref{tech:wifi}. One board is in a fixed location and running a C++ application to poll for nodes in the network. Once a node is found it sends a message to the node every 10 seconds. The second board is set to scan the network and receive packets as soon as a base node is found; this node is then moved to different locations.
 			
-The receiving node prints out variables related to the received packet, such as: Received Signal Strength Indicator (RSSI), source MAC address and packet ID. However, not all packets are received so the RSSI can display 0 if there are errors reading or if packet collision occurs. We found this to affect the results and have just used the two nodes to identify the maximum distance they can be apart, while maintaining a stable connection.
+The receiving node prints out variables related to the received packet, such as: Received Signal Strength Indicator (RSSI), source MAC address and packet ID. However, not all packets are received so the RSSI can display 0 if there are errors in reading or if packet collision occurs. We found this to affect the results and have just used the two nodes to identify the maximum distance they can be apart, while maintaining a stable connection.
 					
 Initial experiments were run in a moderately vegetated area in the UK which yielded 497m of range. Limitations with buildings preventing us from testing any further but the signal strength still proved to be strong.
 			

@@ -77,7 +77,7 @@ The structure of the simulation is as follows: The \textit{network builder} inst
 	\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/khas_sim}
-	\caption{MK-HK Simulation Example in RePast Simulator}
+	\caption{MK-HK-NK Simulation Example in RePast Simulator}
 	\label{fig:sim}
 	\end{figure}
 
@@ -153,7 +153,7 @@ In this section, we analyse the results of each scenario and their variations to
 
 \subsection{Normal Network Saturation with Ideal Transmission Rate}
 
-With normal saturation, almost all data was delivered in the duration, with HK-HK-NK and MK-HK-NK delivering around 99\percentage and NK-NK-MK and NK-NK-HK delivering less, most likely due to the build up observations at the central node, with only a single node processing.
+With normal saturation, almost all data was delivered in the duration, with HK-HK-NK and MK-HK-NK delivering around 99\% and NK-NK-MK and NK-NK-HK delivering less, most likely due to the build up observations at the central node, with only a single node processing.
 
 	\begin{figure}[h]
 	\centering
@@ -162,7 +162,7 @@ With normal saturation, almost all data was delivered in the duration, with HK-H
 	\label{fig:sim:res:norm:ideal:delundel}
 	\end{figure}
 
-	Figure \ref{fig:sim:res:norm:ideal:tpfp} shows that the delivery time for interesting observations can decrease with higher knowledge processing capabilities towards the edge of the network, but even pushing minimal knowledge processing capabilities to the edge reduces the transmission time significantly. However, the faster delivery time of \textit{true positives} with MK-MK-NK is most likely due to the lower chance of an image being classified correctly, so there are fewer observations to average. Comparing this with \ref{fig:sim:res:norm:ideal:tnfn}, we can see that there is a noticeable difference between interesting and empty observations but it is not large, mainly due to the fact that the network almost always had available bandwidth, so prioritisation was not key, this is evidenced by Figure \ref{fig:sim:res:norm:ideal:intempt} which shows that the split of interesting and empty images delivered matches the 20.7\percentage chance of an interesting image being captured.
+	Figure \ref{fig:sim:res:norm:ideal:tpfp} shows that the delivery time for interesting observations can decrease with higher knowledge processing capabilities towards the edge of the network, but even pushing minimal knowledge processing capabilities to the edge reduces the transmission time significantly. However, the faster delivery time of \textit{true positives} with MK-MK-NK is most likely due to the lower chance of an image being classified correctly, so there are fewer observations to average. Comparing this with \ref{fig:sim:res:norm:ideal:tnfn}, we can see that there is a noticeable difference between interesting and empty observations but it is not large, mainly due to the fact that the network almost always had available bandwidth, so prioritisation was not key, this is evidenced by Figure \ref{fig:sim:res:norm:ideal:intempt} which shows that the split of interesting and empty images delivered matches the 20.7\% chance of an interesting image being captured.
 
 	\begin{figure}[h]
 	\centering
@@ -180,7 +180,7 @@ With normal saturation, almost all data was delivered in the duration, with HK-H
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/intdelvsempydel_percent.png}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/intdelvemptdel_percent.png}
 	\caption{Interesting vs Empty Delivered Observations with No Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:intempt}
 	\end{figure}
@@ -220,7 +220,7 @@ When the chance of an image being captured is increased tenfold then the network
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/intdelvsempydel_percent.png}
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/intdelvemptdel_percent.png}
 	\caption{Interesting vs Empty Delivered Observations with Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:saturated:ideal:intempt}
 	\end{figure}

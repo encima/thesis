@@ -10,7 +10,7 @@
 
 ### Simulation experiments
 
-* [RED] Base line of WSN sending out all data to base station without DPs, i.e. a
+* [RED][DONE] Base line of WSN sending out all data to base station without DPs, i.e. a
 simple mutlihop network that sends images directly out via the
 shortest route and the base station does the classification. You may
 want to consider the base station having MK in one scenario and
@@ -32,9 +32,9 @@ dropped.
 
 * [AMBER] Error bars on graphs, although box and whisker plots with the mean indicated would be more appropriate
 
-* [GREEN] Keep figures with the text that describe them
+* [GREEN][DONE] Keep figures with the text that describe them
 
-* [GREEN] Remove claims about energy usage in the network
+* [GREEN][DONE] Remove claims about energy usage in the network
 
 ### Formal design of the K-HAS
 
@@ -42,26 +42,27 @@ dropped.
 
 * [GREEN][DONE] Make it explicit that the DA will be running on a laptop/desktop computer
 
-* [GREEN] State what your architecture is capable of doing that OGC-SWE is not, particularly compared to deployments of OGC-SWE that have been used for capturing animal images
+* [GREEN][DONE] State what your architecture is capable of doing that OGC-SWE is not, particularly compared to deployments of OGC-SWE that have been used for capturing animal images
+	* End of chapter 4
 
 ### Image classification
 
 * [AMBER][DONE] Clarify role of image processing and use of templates. Bring this discussion into Chapter 3.
 	* Discuss in chapter 3 and clarify in chapter 4?
 
-* [AMBER] When explaining the image processing functionality make clear the distinction between classifying an image as interesting or uninteresting and classification in the sense of determining a particular species.
+* [AMBER][DONE?] When explaining the image processing functionality make clear the distinction between classifying an image as interesting or uninteresting and classification in the sense of determining a particular species.
 
-* [RED] Make a clear statement regarding what has actually been implemented and is a part of the completed system as opposed to functionality which you have experimented but not made operational – thus explain that species classification has not been implemented in any particularly effective way in the final system, but you can explain how it would be done.
+* [RED][DONE?] Make a clear statement regarding what has actually been implemented and is a part of the completed system as opposed to functionality which you have experimented but not made operational – thus explain that species classification has not been implemented in any particularly effective way in the final system, but you can explain how it would be done.
 	*Again, purely based on time
 
 * [AMBER][DONE] With regard to classification with templates, how would templates be matched if objects are at different angles, distance from the camera, etc?
 
-* [AMBER] Throughout the thesis make it clear whether functionality relies on image classification to determine a species (that has not been implemented) or identifying potentially interesting images
+* [AMBER][DONE?] Throughout the thesis make it clear whether functionality relies on image classification to determine a species (that has not been implemented) or identifying potentially interesting images
 
 * [GREEN][DONE] Provide link to Triton source repository
 	- Pg 53
 
-* [AMBER] Correctly use your definition for accuracy (page 56)
+* [AMBER][DONE?] Correctly use your definition for accuracy (page 56)
 	* Update accuracy with the equations actually used? I.e. one for TP and one for TN.
 
 * [GREEN][DONE] Make clear that adding rules to Drools requires specialist knowledge of the drools programming language
@@ -83,7 +84,7 @@ dropped.
 
 * [AMBER][DONE] Remove claim that your ontology is modular. You reuse existing terms by importing them, but it is not modular.
 
-* [RED] Need a critical discussion as to why SSN does not meet your needs
+* [RED][DONE?] Need a critical discussion as to why SSN does not meet your needs
 	* Different to a tiered network?
 	* Hard to show flow of knowledge?
 	* Humans equal to sensors?
@@ -95,10 +96,11 @@ dropped.
 
 * [AMBER][DONE] Fig 3.5: combine the two graphs onto a single plot.
 
-* [AMBER] Separate out UK wet and dry and provide humidity values for the experiment (if you have them).
+* [AMBER][CANNOT DO] Separate out UK wet and dry and provide humidity values for the experiment (if you have them).
 	-I do not think we do
 
-* [GREEN] Include the values for when DGFC loses signal
+* [GREEN][CANNOT DO] Include the values for when DGFC loses signal
+	* Do not think I have these values
 
 ##General comments:
 
@@ -107,8 +109,9 @@ dropped.
 
 * [GREEN][DONE] Remove the acronyms ‘LK’ and ‘GK’ and replace with their expanded terms
 
-* [GREEN] Don’t use the term scientific observation when you specifically mean an ecological observation
+* [GREEN][DONE?] Don’t use the term scientific observation when you specifically mean an ecological observation
 	* Is this for all uses of the term?
+	* I am not sure if this is a find and replace issue or some uses do not fit. Darwin Core, for example, is biological and ecological observations, so scientific fits best
 
 * [GREEN][DONE] Remove et al from references
 	* Bibtex includes 'others' as et al, remove these from bib file
@@ -164,29 +167,29 @@ common sensor nodes, e.g. ...
 * [DONE] p43 line 2: “did research many” did research on many
 * [DONE] p45 yield usable range -> discover usable radio range data
 * [DONE] p46: wireless medium but -> wireless medium for internode communication but
-* p48: explain how the dip to zero in the noise graph for UK may be due to variation in terrain and intervening obstacles
+* [DONE?] p48: explain how the dip to zero in the noise graph for UK may be due to variation in terrain and intervening obstacles
 * [DONE] p50: in the UK, and thick -> in the UK; the thick
 * [DONE] p51: This could -> The low range could
 * [DONE] p56: delete determine ...empty
 * [PARTIAL] p56: define TotalSets
 correct all the errors in the use of false positives and false negatives on this page
 (so matches with data in the tables on p57). Also phraseology in sentence starting “These preliminary results..” is peculiar regarding effective at detecting FP and FN – a strange objective to be effective at...
-* p59 para 4 : ?? “errors reading” errors in reading”
+* [DONE] p59 para 4 : ?? “errors reading” errors in reading”
 * p65: clarify the statement about users being able to classify data with a voting
 system. Explain exactly what the user is able to vote on (and make clear
 whether you are talking about species classification or interest
 classification).
 * §4.2 Correct sentence: ‘Unlike DC nodes,..., Drools...’
-* p68: URL for GBIF
-* p68: DwC is that standard set of terms -> ???
-* p68: OBOE (expand/explain)
+* [DONE] p68: URL for GBIF
+* [DONE] p68: DwC is that standard set of terms -> ???
+* [DONE] p68: OBOE (expand/explain)
 * [DONE] p69: xml -> XML
 * p70: move text to previous page so that it is not skipped over
 * [DONE] p74: there are three observations of the Malay Civet in Figure 4.5
 * p77: delete and make into a new sentence
 * [DONE] p77 last para “described” “described”
 * [DONE] p78: initiiated -> initiated
-* p78: when introducing the walkthrough make clear that this is hypothetical with respect to the proposed design of the design and does not all refer to actual implemented functionality
+* [DONE] p78: when introducing the walkthrough make clear that this is hypothetical with respect to the proposed design of the design and does not all refer to actual implemented functionality
 * [DONE] p80 are added is added
 * [DONE] p81: nodes us a queue -> nodes use a queue
 * [DONE] p84: it unarchived -> it is unarchived
@@ -195,7 +198,7 @@ classification).
 * p92: and Figure 5.3 -> break the sentence here.
 * [DONE] P93: is -> in
 * [DONE] p93: [17] need to be moved into the sentence
-* p93: First sentence of final paragraph needs rewriting and breaking into
+* [DONE] p93: First sentence of final paragraph needs rewriting and breaking into
 multiple sentences
 * [DONE] p93: when introducing SUMO you need a reference for the high level / generic
 system (in addition to you current reference which can be regarded as an
@@ -204,13 +207,13 @@ implying that SUMO is designed specifically for sensor data.
 * [DONE] p95: observations is a -> observations in a
 * [DONE] p96: SUMO (in heading) -> SHO
 * P97 6 lines from end ontology 
-* p102: protege citation for wrong version
-* p107: cite Hermit
-* p123: (end of 2 nd paragraph) clarify what is meant by a rule that starts looking
+* [DONE] p102: protege citation for wrong version
+* [DONE] p107: cite Hermit
+* [DONE[ p123: (end of 2 nd paragraph) clarify what is meant by a rule that starts looking
 for nocturnal animals – say how that might be done (? With regard to
 constraints on time)
 * [DONE] p126: clarify whether Dedoose is a manual or automatic annotation system
-* p127: end of page – make clear that your explanation of rules that are based
+* [DONE] p127: end of page – make clear that your explanation of rules that are based
 on large amounts of collected data is hypothetical – perhaps you could
 use a phrase such as “in principle ...local knowledge could be used to
 make accurate classifications....” (or “the intention is that”) – the problem
@@ -229,7 +232,7 @@ the same thing
 * [DONE] 151: L-KHK -> MK-HK
 * [DONE] p151 line 2 : the the -> the
 * 152: with same -> with the same
-* p153: the figure of 83% correct classification does not seem right. Correct it if
+* [DONE] p153: the figure of 83% correct classification does not seem right. Correct it if
 necessary and refer to the relevant graph or table that presents the value
 * p155: which knowledge? ‘this knowledge can be used...'
 * p156: DC nodes are available for sensors, not for cameras!
