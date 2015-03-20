@@ -91,7 +91,7 @@ dropped.
 
 ### Definition of local knowledge
 
-* [AMBER] Correct and move to appropriate part of the thesis, probably chapter 3. I would suggest removing the term global knowledge.
+* [AMBER][DONE] Correct and move to appropriate part of the thesis, probably chapter 3. I would suggest removing the term global knowledge.
 	* Chapter 3 or 4?
 
 * [AMBER][DONE] Fig 3.5: combine the two graphs onto a single plot.

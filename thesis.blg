@@ -1,35 +1,33 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2014/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Chap1/introduction.aux
 A level-1 auxiliary file: Chap2/background.aux
-Case mismatch error between cite keys martinez2004 and Martinez2004
----line 123 of file Chap2/background.aux
- : \citation{martinez2004
- :                       }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: Chap3/technical.aux
 A level-1 auxiliary file: Chap4/architecture.aux
 A level-1 auxiliary file: Chap5/ont.aux
 A level-1 auxiliary file: Chap6/implementation.aux
-A level-1 auxiliary file: Chap7/simulations.aux
+A level-1 auxiliary file: Chap7/sims.aux
 A level-1 auxiliary file: Chap8/conclusion.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: App/appendix.aux
 Database file #1: refs/refs.bib
-I was expecting a `,' or a `}'---line 308 of file refs/refs.bib
+I was expecting an "="---line 38 of file refs/refs.bib
+ :   pages             
+ :                     s       = {325--349},
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 318 of file refs/refs.bib
  :   
  :   Publisher                = {American Asociation for Artificial Intelligence}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 328 of file refs/refs.bib
+I was expecting a `,' or a `}'---line 338 of file refs/refs.bib
  :   
  :   Publisher                = {Molecular Diversity Preservation International}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 A bad cross reference---entry "Janowicz2010"
 refers to entry "DBLP:conf/semweb/2010ssn", which doesn't exist
-Warning--I didn't find a database entry for "quinlan1993"
 Warning--I didn't find a database entry for "DBLP:conf/semweb/2010ssn"
 Warning--to sort, need author or key in dgfc
 Warning--to sort, need author or key in nest
@@ -44,16 +42,19 @@ Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end
 while executing---line 1347 of file plainnat.bst
 Warning--to sort, need author or key in Reconyx
 Warning--to sort, need author or key in instruments2012pandaboard
+Warning--to sort, need author or key in gbif
 Warning--empty year in Reconyx
 Warning--empty year in dgfc
 Warning--empty year in dweet
 Warning--empty year in fitbit
+Warning--empty year in gbif
 Warning--empty year in ifttt
 Warning--empty year in instruments2012pandaboard
 Warning--empty year in nest
 Warning--empty year in opensense
 Warning--empty year in xively
 Warning--empty institution in Aberer2007
+Warning--there's a number but no volume in Akkaya2005
 Warning--empty institution in Document2010
 Warning--empty year in buckeye
 Warning--can't use both volume and number fields in Hempstead2005
@@ -61,6 +62,7 @@ Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end
 while executing---line 1429 of file plainnat.bst
 Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
 while executing---line 1429 of file plainnat.bst
+Warning--can't use both volume and number fields in fast1995
 Warning--empty year in waspmote
 Warning--can't use both volume and number fields in Martonosi2003
 Warning--empty year in proctor2005drools
@@ -68,45 +70,45 @@ Warning--empty year in rec900c
 Warning--empty year in dwc_oboe
 Warning--empty institution in Yu2001
 Warning--empty year in ZSL
-You've used 121 entries,
+You've used 124 entries,
             2773 wiz_defined-function locations,
-            1305 strings with 29274 characters,
-and the built_in function-call counts, 63828 in all, are:
-= -- 5764
-> -- 3864
-< -- 95
-+ -- 1319
-- -- 1191
-* -- 5137
-:= -- 9326
-add.period$ -- 402
-call.type$ -- 121
-change.case$ -- 760
-chr.to.int$ -- 114
-cite$ -- 280
-duplicate$ -- 2908
-empty$ -- 5146
-format.name$ -- 1343
-if$ -- 13774
+            1320 strings with 29515 characters,
+and the built_in function-call counts, 64780 in all, are:
+= -- 5848
+> -- 3884
+< -- 99
++ -- 1328
+- -- 1197
+* -- 5192
+:= -- 9451
+add.period$ -- 411
+call.type$ -- 124
+change.case$ -- 770
+chr.to.int$ -- 117
+cite$ -- 291
+duplicate$ -- 2972
+empty$ -- 5254
+format.name$ -- 1351
+if$ -- 13991
 int.to.chr$ -- 8
 int.to.str$ -- 1
-missing$ -- 101
-newline$ -- 609
-num.names$ -- 448
-pop$ -- 1736
+missing$ -- 104
+newline$ -- 624
+num.names$ -- 456
+pop$ -- 1771
 preamble$ -- 1
-purify$ -- 638
+purify$ -- 646
 quote$ -- 0
-skip$ -- 2345
+skip$ -- 2394
 stack$ -- 0
-substring$ -- 2335
-swap$ -- 563
-text.length$ -- 53
+substring$ -- 2341
+swap$ -- 576
+text.length$ -- 55
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1316
-warning$ -- 29
-while$ -- 532
+type$ -- 1344
+warning$ -- 33
+while$ -- 539
 width$ -- 0
-write$ -- 1569
+write$ -- 1607
 (There were 8 error messages)
