@@ -134,7 +134,7 @@ dropped.
 
 * [GREEN][DONE] Listing 6.4 remove the setting of the scientific name as you are not sure which of the two species it is
 
-* [AMBER] State how many rules were used in the LORIS deployment and an indication of the accuracy of the system
+* [AMBER][DONE] State how many rules were used in the LORIS deployment and an indication of the accuracy of the system
 
 * [GREEN][DONE] Indicate which part of the interview in appendix E is shown in appendix F
 	- Explained the extracts in more detail but the two included are from different researchers, I can change the extract to match the ful?
