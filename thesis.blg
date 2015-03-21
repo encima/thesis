@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2014/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Chap1/introduction.aux
 A level-1 auxiliary file: Chap2/background.aux
 A level-1 auxiliary file: Chap3/technical.aux
@@ -36,12 +34,12 @@ Warning--to sort, need author or key in ifttt
 Warning--to sort, need author or key in xively
 Warning--to sort, need author or key in dweet
 Warning--to sort, need author or key in opensense
-Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
-while executing---line 1347 of file plainnat.bst
-Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
-while executing---line 1347 of file plainnat.bst
 Warning--to sort, need author or key in Reconyx
 Warning--to sort, need author or key in instruments2012pandaboard
+Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
+while executing---line 1347 of file plainnat.bst
+Name 1 in "Joshi, L, and van Noordwijk, M and F Sinclair" has a comma at the end for entry Joshi2001
+while executing---line 1347 of file plainnat.bst
 Warning--to sort, need author or key in gbif
 Warning--empty year in Reconyx
 Warning--empty year in dgfc
@@ -70,45 +68,4 @@ Warning--empty year in rec900c
 Warning--empty year in dwc_oboe
 Warning--empty institution in Yu2001
 Warning--empty year in ZSL
-You've used 124 entries,
-            2773 wiz_defined-function locations,
-            1320 strings with 29515 characters,
-and the built_in function-call counts, 64780 in all, are:
-= -- 5848
-> -- 3884
-< -- 99
-+ -- 1328
-- -- 1197
-* -- 5192
-:= -- 9451
-add.period$ -- 411
-call.type$ -- 124
-change.case$ -- 770
-chr.to.int$ -- 117
-cite$ -- 291
-duplicate$ -- 2972
-empty$ -- 5254
-format.name$ -- 1351
-if$ -- 13991
-int.to.chr$ -- 8
-int.to.str$ -- 1
-missing$ -- 104
-newline$ -- 624
-num.names$ -- 456
-pop$ -- 1771
-preamble$ -- 1
-purify$ -- 646
-quote$ -- 0
-skip$ -- 2394
-stack$ -- 0
-substring$ -- 2341
-swap$ -- 576
-text.length$ -- 55
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 1344
-warning$ -- 33
-while$ -- 539
-width$ -- 0
-write$ -- 1607
 (There were 8 error messages)

@@ -22,37 +22,38 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Resulting Processed Image from Original Set of 3\relax }}{53}{figure.caption.29}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of the K-HAS Architecture\relax }}{59}{figure.caption.33}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces A Darwin Core Star Archive \cite {wieczorek2012}\relax }}{71}{figure.caption.38}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Knowledge Hierarchy for K-HAS\relax }}{74}{figure.caption.39}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Web Interface for Observations\relax }}{75}{figure.caption.40}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Web Interface for Classified Sensed Data\relax }}{76}{figure.caption.41}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Web Interface for Drools Operations\relax }}{77}{figure.caption.42}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Section of Proposed Topology for K-HAS in Danau Girang\relax }}{81}{figure.caption.43}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Clouded leopard Image Capture\relax }}{82}{figure.caption.44}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Processed Image of clouded leopard\relax }}{82}{figure.caption.45}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sequence Diagram for K-HAS upon Capture of an Observation\relax }}{70}{figure.caption.38}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces A Darwin Core Star Archive \cite {wieczorek2012}\relax }}{73}{figure.caption.39}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Knowledge Hierarchy for K-HAS\relax }}{76}{figure.caption.40}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Web Interface for Observations\relax }}{76}{figure.caption.41}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Web Interface for Classified Sensed Data\relax }}{77}{figure.caption.42}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Web Interface for Drools Operations\relax }}{79}{figure.caption.43}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Section of Proposed Topology for K-HAS in Danau Girang\relax }}{82}{figure.caption.44}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Clouded leopard Image Capture\relax }}{83}{figure.caption.45}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Processed Image of clouded leopard\relax }}{83}{figure.caption.46}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation \cite {Madin2007}\relax }}{91}{figure.caption.50}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology \cite {Probst}\relax }}{93}{figure.caption.52}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW Entity-Relationship Model \cite {Baskauf}\relax }}{94}{figure.caption.54}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{97}{figure.caption.57}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces K-HAS Base Ontology\relax }}{104}{figure.caption.64}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces K-HAS Ontology\relax }}{108}{figure.caption.65}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The Core of an OBOE Observation \cite {Madin2007}\relax }}{92}{figure.caption.51}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The OGC O\&M Ontology \cite {Probst}\relax }}{94}{figure.caption.53}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Darwin-SW Entity-Relationship Model \cite {Baskauf}\relax }}{95}{figure.caption.55}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces SSN Ontology\relax }}{98}{figure.caption.58}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces K-HAS Base Ontology\relax }}{105}{figure.caption.65}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces K-HAS Ontology\relax }}{109}{figure.caption.66}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Buckeye X7R and Battery Pack\relax }}{119}{figure.caption.68}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces LORIS Web Interface\relax }}{121}{figure.caption.69}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Camera Locations Around Danau Girang\relax }}{122}{figure.caption.70}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{124}{figure.caption.71}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{125}{figure.caption.72}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Buckeye X7R and Battery Pack\relax }}{120}{figure.caption.69}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces LORIS Web Interface\relax }}{122}{figure.caption.70}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Camera Locations Around Danau Girang\relax }}{123}{figure.caption.71}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces First Image of Lizard by Buckeye 3\relax }}{125}{figure.caption.72}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Second Image of Lizard by Buckeye 3\relax }}{126}{figure.caption.73}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces MK-HK-NK Simulation Example in RePast Simulator\relax }}{139}{figure.caption.76}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate\relax }}{146}{figure.caption.79}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Average Delivery Time for Interesting Observations with No Saturation and Ideal Transmission Rate\relax }}{147}{figure.caption.80}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Average Delivery Time for Interesting Observations with No Saturation and Ideal Transmission Rate\relax }}{147}{figure.caption.81}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Interesting vs Empty Delivered Observations with No Saturation and Ideal Transmission Rate\relax }}{148}{figure.caption.82}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate\relax }}{148}{figure.caption.83}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Average Delivery Time for Interesting Observations with Saturation and Ideal Transmission Rate\relax }}{149}{figure.caption.84}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Average Delivery Time for Interesting Observations with Saturation and Ideal Transmission Rate\relax }}{149}{figure.caption.85}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Interesting vs Empty Delivered Observations with Saturation and Ideal Transmission Rate\relax }}{150}{figure.caption.86}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces MK-HK-NK Simulation Example in RePast Simulator\relax }}{141}{figure.caption.77}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate\relax }}{148}{figure.caption.80}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Average Delivery Time for Interesting Observations with No Saturation and Ideal Transmission Rate\relax }}{149}{figure.caption.81}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Average Delivery Time for Interesting Observations with No Saturation and Ideal Transmission Rate\relax }}{149}{figure.caption.82}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Interesting vs Empty Delivered Observations with No Saturation and Ideal Transmission Rate\relax }}{150}{figure.caption.83}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate\relax }}{150}{figure.caption.84}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Average Delivery Time for Interesting Observations with Saturation and Ideal Transmission Rate\relax }}{151}{figure.caption.85}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Average Delivery Time for Interesting Observations with Saturation and Ideal Transmission Rate\relax }}{151}{figure.caption.86}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Interesting vs Empty Delivered Observations with Saturation and Ideal Transmission Rate\relax }}{152}{figure.caption.87}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
