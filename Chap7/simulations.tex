@@ -124,10 +124,15 @@ The parameters used in these simulations were either gained through experiments 
 	From our experiments at Danau Girang, see Section \ref{tech:wireless}, we tested the range of Wi-Fi and Zigbee in a humid rainforest, using those values we set trhe transmission range as the maximum that we achieved during our experiments.
 
 	\subsubsection{Observation Size}
-	Using the obvservations we extracted from Danau Girang, we listed the size of all 120,000 files and extracted the minimum and maximum size from the set, when an observation is generated in RePast, it consists of three images and each image is a randomly generated size between the maximum and minimum bounds outlined in the table.
+	Using the observations we extracted from Danau Girang, we listed the size of all 120,000 files and extracted the minimum and maximum size from the set, when an observation is generated in RePast, it consists of three images and each image is a randomly generated size between the maximum and minimum bounds outlined in the table.
 
 	\subsubsection{Processing Times}
 	While the processing times are fixed, central nodes can perform higher knowledge processing slightly faster and they are able to process up to 4 observations at once, whereas routing and sensing nodes can only process one at a time.
+	
+	\subsubsection{Run Count and Duration}
+	Each scenario is configured to run for a period of three months, this is solely due to time constraints due the run time of each simulation. Tests showed that three months was a long enough period to model a saturated network and the capture chance is kept at the six month chance because the network would be deployed for six month periods and these runs serve to show a snippet of their deployment, rather than cover the whole period.
+	
+	Twenty five runs were completed of each scenario, as well as for the possible combinations of transmission rate and bandwidth. For example, a network simulating NK-NK-NK would have 25 runs for \textit{ideal} transmission rate and \textit{normal} saturation, 25 for \textit{ideal} transmission rate and \textit{saturated} bandwidth and so on.
 
 \subsection{Routing Protocol}
 The routing protocol used needs to be dynamic in order to adapt to nodes being added and removed during deployment, while minimising traffic in a resource constrained network. In our approach, we use a modification of the Minimum Cost Forwarding Algorithm (MCFA), described in Section \ref{arch:routing}. A cost is assigned to each node, based on how far they are from the central node, with neighbouring nodes choosing to connect to the node with the lowest cost. However, in normal implementations of MCFA, all nodes are of the same type and simply need to connect to a central node. This protocol is used in all scenarios.
@@ -158,6 +163,7 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 When a node has no knowledge, it simply sends the observation that was first added to its queue. With MK, it finds the first \textit{interesting} observation and sends that, if one is not in the queue then an observation marked as \textit{unknown}.  HK performs much the same as MK except it instead looks for \textit{empty} observation if an \textit{interesting} cannot be found. If a node has any form of knowledge processing power, it will not send an observation unless it has first been processed. Nodes can only send an observation one at a time and must also wait for the receiving node to be free.
 
 An observation is marked as delivered once it has been received by the central node, if there is only processing at the central node, then delivery is delayed until the central node has processed it.
+
 
 \section{Results}\label{sim:res}
 \subsection{In-Network Processing}
