@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.17)  24 MAR 2015 23:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.17)  25 MAR 2015 07:41
 entering extended mode
 **thesis.tex
 (C:\Users\Chris\Documents\thesis\thesis.tex
@@ -1669,105 +1669,48 @@ File: Chap7/figures/khas_sim.png Graphic file (type png)
 Package pdftex.def Info: Chap7/figures/khas_sim.png used on input line 50.
 (pdftex.def)             Requested size: 330.56538pt x 325.39104pt.
  [139 <C:/Users/Chris/Documents/thesis/Chap7/figures/khas_sim.png>] [140]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(89.72311pt, 418.70181pt, 89.72313pt)
-* v-part:(T,H,B)=(101.50906pt, 744.39136pt, 0.0pt)
-* \paperwidth=598.14806pt
-* \paperheight=845.90042pt
-* \textwidth=418.70181pt
-* \textheight=744.39136pt
-* \oddsidemargin=17.45313pt
-* \evensidemargin=17.45313pt
-* \topmargin=-8.02312pt
-* \headheight=14.5pt
-* \headsep=22.76219pt
-* \topskip=12.0pt
-* \footskip=31.29802pt
-* \marginparwidth=38.0pt
-* \marginparsep=7.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=-72.26999pt
-* \voffset=-72.26999pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Overfull \hbox (24.0945pt too wide) in paragraph at lines 104--104
-[]|\T1/ptm/m/n/12 0.000857703189| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]|\T1/ptm/m/n/12 Ideal or
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 104--104
+Underfull \hbox (badness 4608) in paragraph at lines 103--103
 []|\T1/ptm/m/n/12 Sensing Node Trans-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]|\T1/ptm/m/n/12 20-250
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 104--104
+Underfull \hbox (badness 4608) in paragraph at lines 103--103
 []|\T1/ptm/m/n/12 Sensing Node Trans-
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 104--104
+Underfull \hbox (badness 7433) in paragraph at lines 103--103
 \T1/ptm/m/n/12 mis-sion Range (Zig-
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 104--104
+Underfull \hbox (badness 3930) in paragraph at lines 103--103
 []|\T1/ptm/m/n/12 Routing Node Trans-
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 104--104
+Underfull \hbox (badness 3930) in paragraph at lines 103--103
 []|\T1/ptm/m/n/12 Routing Node Trans-
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 104--104
-[]|\T1/ptm/m/n/12 Normal or
- []
-
-
-Underfull \hbox (badness 1521) in paragraph at lines 104--104
+Underfull \hbox (badness 1521) in paragraph at lines 103--103
 []|\T1/ptm/m/n/12 Time to pro-cess an ob-ser-va-tion with high know-ledge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]|\T1/ptm/m/n/12 1362-2598
- []
-
-
-Overfull \hbox (212.75323pt too wide) in alignment at lines 104--104
+Overfull \hbox (246.70265pt too wide) in alignment at lines 103--103
 [][][][][] 
  []
+
+
+LaTeX Warning: Float too large for page by 57.99847pt on input line 105.
 
 [141] [142
 
 
-
-
 ] [143] [144]
-Overfull \hbox (2.05154pt too wide) in paragraph at lines 145--146
+Overfull \hbox (2.05154pt too wide) in paragraph at lines 144--145
 []\T1/ptm/m/n/12 This phase can be re-peated through-out the course of the de-p
 loy-ment, simply by schedul-
  []
@@ -1973,7 +1916,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 500.
 Here is how much of TeX's memory you used:
  23381 strings out of 493921
  387279 string characters out of 3147282
- 880460 words of memory out of 3000000
+ 880453 words of memory out of 3000000
  24555 multiletter control sequences out of 15000+200000
  55692 words of font info for 80 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1990,7 +1933,7 @@ m Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/Program Files/MiKTeX
 urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (211 pages, 11803983 bytes).
+Output written on thesis.pdf (211 pages, 11803962 bytes).
 PDF statistics:
  3485 PDF objects out of 3580 (max. 8388607)
  1503 named destinations out of 1728 (max. 500000)

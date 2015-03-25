@@ -3,9 +3,9 @@ In this chapter, we present the results of simulation experiments developed to e
 
 The simulations were developed to determine whether K-HAS is the best mix of processing and collection nodes that maximises network lifetime while minimising the transmission time of interesting data. This was done by using a network structure, that matched our motivating scenario, and changing the knowledge-processing capabilities on each node at every tier; ranging from no knowledge on every node to the maximum knowledge-processing capabilities across the network. We aim to show that the more knowledge-processing capabilities that are pushed out towards the edge of the network, the more effective the network becomes at prioritising data that it believes to be interesting and delaying what it believes to be empty.
 
-This chapter is structured as follows. Section \ref{sim:sim} describes the implementation of the network. Section \ref{sim:imp} outlines the results and Section \ref{sim:res} compares these with LORIS and the current solution in our motivating scenario. Section \ref{sim:conc} concludes our findings and highlights areas that require further experimentation.
+This chapter is structured as follows. Section \ref{sim:env} describes the tool used to develop the network. Section \ref{sim:scen} outlines the scenarios used in our experiments and Section \ref{sim:setup} describes the parameters used to configure each run and what was observed. Finally, Section \ref{sim:res} explains the results from multiple runs and Section \ref{sim:conc} concludes our findings and highlights areas that require further experimentation.
 
-\section{Simulation Environment}
+\section{Simulation Environment}\label{sim:env}
 Using RePast Simphony \cite{Collier2003}, an agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run to simulate the camera's capture of an image and transmitting it to an endpoint.
 %train may take three hundred for it to arrive at its destination. When the simulation reaches three hundred ticks, a scheduled event could run that would open the train doors, make an announcement and so on.
 
@@ -43,12 +43,12 @@ The scenarios we have tested show various combinations of knowledge within the n
 		\item NK-NK-HK: Sensing and routing nodes have no knowledge processing capabilities with high processing capabilities on the central node.
 	\end{itemize}
 
-The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had a between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim} and explained later in this section. 
+The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had a between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with yellow nodes representing sensing nodes, green nodes representing routing nodes and the red node representing the central node.
 
 	\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/khas_sim}
-	\caption{MK-HK Simulation Example in RePast Simulator}
+	\caption{Simulation Example in RePast Simulator}
 	\label{fig:sim}
 	\end{figure}
 
@@ -73,16 +73,16 @@ Before implementing, we designed the agents required based on the nodes describe
 
 Using a Java library we developed for DwC archives during the implementation of LORIS (Section \ref{loris:arch}), we were able to implement DwC archives as the data standard in our simulations, this allowed us to model the prioritisation of sensed data, as well as the classification of observations, in the same way that a K-HAS deployment would.
 
-\section{Network Setup}
+\section{Network Setup}\label{sim:setup}
 
 \subsection{Parameters}
 The parameters used in these simulations were either gained through experiments performed at Danau Girang, gleaned from the data or extracted from technical specifications. Repast allows these parameters to be set in a configuration file and can be manipulated once loaded into the simulation. An example of this file can be seen in Appendix \ref{appendix:sims:params}. The table below outlines the parameters we have used and some that require further explanation are covered in this section.
 	\begin{landscape}
 	\begin{table} 
-	\begin{tabularx}{\textwidth}{|p{4cm}|p{10cm}|p{2cm}|p{2cm}|p{2cm}|}
-	\hline
+	\begin{tabularx}{\textwidth}{|p{4cm}|p{10cm}|p{3cm}|p{2cm}|p{2cm}|}
+
 	\textbf{Parameter}                      & \textbf{Description}                                                                                                        & \textbf{Value(s)}   & \textbf{Constant?} & \textbf{Observed?} \\
-	\hline
+
 	Sensing Node Count                      & The number of sensing nodes in the network                                                                                  & 20                  & Yes                & No                 \\
 	Routing Node Count                      & The number of routing nodes in the network                                                                                  & 4                   & Yes                & No                 \\
 	Central Node Count                      & The number of central nodes in the network                                                                                  & 1                   & Yes                & No                 \\
@@ -159,12 +159,12 @@ When a node has no knowledge, it simply sends the observation that was first add
 
 An observation is marked as delivered once it has been received by the central node, if there is only processing at the central node, then delivery is delayed until the central node has processed it.
 
-\section{Results}
+\section{Results}\label{sim:res}
 \subsection{In-Network Processing}
 
 \subsection{Central Processing}
 
-\section{Conclusion}
+\section{Conclusion}\label{sim:conc}
 
 % \section{Conclusion} \label{sim:conc}
 	
