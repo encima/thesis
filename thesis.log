@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.2.3)  20 MAR 2015 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.2.3)  26 MAR 2015 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -79,6 +79,25 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip49
 \dth@everypar=\toks22
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
 (/usr/share/texlive/texmf-dist/tex/latex/type1cm/type1cm.sty
 Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
 atched RF)
@@ -91,7 +110,7 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/03/24 3.9k Babel common definitions
-\babel@savecnt=\count90
+\babel@savecnt=\count91
 \U@D=\dimen111
 )
 \l@canadian = a dialect from \language\l@american 
@@ -114,16 +133,16 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTright=\skip51
 \LTpre=\skip52
 \LTpost=\skip53
-\LTchunksize=\count91
+\LTchunksize=\count92
 \LTcapwidth=\dimen112
 \LT@head=\box26
 \LT@firsthead=\box27
 \LT@foot=\box28
 \LT@lastfoot=\box29
-\LT@cols=\count92
-\LT@rows=\count93
-\c@LT@tables=\count94
-\c@LT@chunks=\count95
+\LT@cols=\count93
+\LT@rows=\count94
+\c@LT@tables=\count95
+\c@LT@chunks=\count96
 \LT@p@ftn=\toks23
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
@@ -132,10 +151,10 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count96
-\c@ALC@line=\count97
-\c@ALC@rem=\count98
-\c@ALC@depth=\count99
+\c@ALC@unique=\count97
+\c@ALC@line=\count98
+\c@ALC@rem=\count99
+\c@ALC@depth=\count100
 \ALC@tlm=\skip54
 \algorithmicindent=\skip55
 )
@@ -144,7 +163,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count100
+\c@float@type=\count101
 \float@exts=\toks24
 \float@box=\box30
 \@float@everytoks=\toks25
@@ -155,7 +174,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip56
 \bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count101
+\c@NAT@ctr=\count102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
@@ -176,18 +195,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
-
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count102
-))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
@@ -226,6 +234,7 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -697,11 +706,11 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 123.
+less on input line 124.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 124.
+less on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
@@ -815,21 +824,21 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (./Chap7/sims.aux) (./Chap8/conclusion.aux) (./App/appendix.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 350.
-LaTeX Font Info:    ... okay on input line 350.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 350.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 351.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -876,20 +885,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count180
-LaTeX Info: Redefining \celsius on input line 350.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 350
+LaTeX Info: Redefining \celsius on input line 351.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 351
 .
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 350.
-Package gensymb Info: Using \Omega for \ohm on input line 350.
+LaTeX Info: Redefining \ohm on input line 351.
+Package gensymb Info: Using \Omega for \ohm on input line 351.
 
 Package gensymb Warning: Not defining \micro.
 
 \AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 350.
+Package hyperref Info: Link coloring OFF on input line 351.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -898,9 +907,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count181
 )
-LaTeX Info: Redefining \ref on input line 350.
-LaTeX Info: Redefining \pageref on input line 350.
-LaTeX Info: Redefining \nameref on input line 350.
+LaTeX Info: Redefining \ref on input line 351.
+LaTeX Info: Redefining \pageref on input line 351.
+LaTeX Info: Redefining \nameref on input line 351.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write6
@@ -908,13 +917,13 @@ LaTeX Info: Redefining \nameref on input line 350.
 
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 360.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 361.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 360.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 361.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 362.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 363.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 365.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 366.
  [1
 Non-PDF special ignored!
 
@@ -923,47 +932,47 @@ Non-PDF special ignored!
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 414.
+less on input line 415.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.414 \cleardoublepage
+l.415 \cleardoublepage
                        [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 418.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 419.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 418.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 427.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 419.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 428.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 428.
+less on input line 429.
 
 [2
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/sl' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/sl' tried instead on input line 442.
+(Font)              Font shape `T1/ptm/b/sl' tried instead on input line 443.
 
-Overfull \hbox (2.4834pt too wide) in paragraph at lines 448--449
+Overfull \hbox (2.4834pt too wide) in paragraph at lines 449--450
 \T1/ptm/m/n/12 Wireless sensor net-works (WSNs) have ad-vanced rap-idly in re-c
 ent years and the volume
  []
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 451.
+less on input line 452.
 
 [3
 
@@ -971,7 +980,7 @@ less on input line 451.
 ] [4]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 461.
+less on input line 462.
 
 [5
 
@@ -998,7 +1007,7 @@ om-mu-nic-a-tions (IJDIWC),
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 470.
+less on input line 471.
 
 [14
 
@@ -1032,7 +1041,7 @@ Sat-ur-a-tion and Ideal
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 474.
+less on input line 475.
 
 [18
 
@@ -1253,14 +1262,13 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 1.
 )
-<Chap5/figures/dwca.png, id=1623, 661.47125pt x 419.5675pt>
+<Chap5/figures/dwca.png, id=1622, 661.47125pt x 419.5675pt>
 File: Chap5/figures/dwca.png Graphic file (type png)
 
 <use Chap5/figures/dwca.png>
-Package pdftex.def Info: Chap5/figures/dwca.png used on input line 164.
+Package pdftex.def Info: Chap5/figures/dwca.png used on input line 166.
 (pdftex.def)             Requested size: 413.20515pt x 262.0882pt.
- [71 <./Chap5/figures/dwca.png>]
-(./Chap5/figures/dwc_arch/set.csv) [72] [73]
+ (./Chap5/figures/dwc_arch/set.csv) [71] [72 <./Chap5/figures/dwca.png>] [73]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1271,51 +1279,54 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Chap4/figures/loris.png, id=1673, 1230.5975pt x 758.835pt>
 File: Chap4/figures/loris.png Graphic file (type png)
 
 <use Chap4/figures/loris.png>
-Package pdftex.def Info: Chap4/figures/loris.png used on input line 235.
+Package pdftex.def Info: Chap4/figures/loris.png used on input line 237.
 (pdftex.def)             Requested size: 413.20515pt x 254.79314pt.
- [74]
-<Chap4/figures/loris_data.png, id=1679, 1620.0525pt x 870.25125pt>
-File: Chap4/figures/loris_data.png Graphic file (type png)
-
-<use Chap4/figures/loris_data.png>
-Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 243.
-(pdftex.def)             Requested size: 413.20515pt x 221.95761pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[75 <./Chap4/figures/loris.png>] [76 <./Chap4/figures/loris_data.png>]
+<Chap4/figures/loris_data.png, id=1675, 1620.0525pt x 870.25125pt>
+File: Chap4/figures/loris_data.png Graphic file (type png)
+
+<use Chap4/figures/loris_data.png>
+Package pdftex.def Info: Chap4/figures/loris_data.png used on input line 245.
+(pdftex.def)             Requested size: 413.20515pt x 221.95761pt.
+ [74] [75 <./Chap4/figures/loris.png>]
+[76 <./Chap4/figures/loris_data.png>]
 <Chap4/figures/rules.png, id=1693, 1046.91125pt x 682.55pt>
 File: Chap4/figures/rules.png Graphic file (type png)
 
 <use Chap4/figures/rules.png>
-Package pdftex.def Info: Chap4/figures/rules.png used on input line 258.
+Package pdftex.def Info: Chap4/figures/rules.png used on input line 260.
 (pdftex.def)             Requested size: 413.20515pt x 269.3908pt.
  [77 <./Chap4/figures/rules.png>] [78] [79]
-<Chap4/figures/topology.png, id=1712, 1009.7725pt x 409.53pt>
+[80] <Chap4/figures/topology.png, id=1717, 1009.7725pt x 409.53pt>
 File: Chap4/figures/topology.png Graphic file (type png)
 
 <use Chap4/figures/topology.png>
-Package pdftex.def Info: Chap4/figures/topology.png used on input line 295.
+Package pdftex.def Info: Chap4/figures/topology.png used on input line 297.
 (pdftex.def)             Requested size: 413.20515pt x 167.58344pt.
- [80]
+
 <Chap4/figures/leopard2.JPG, id=1719, 1927.2pt x 1084.05pt>
 File: Chap4/figures/leopard2.JPG Graphic file (type jpg)
 
 <use Chap4/figures/leopard2.JPG>
-Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 305.
+Package pdftex.def Info: Chap4/figures/leopard2.JPG used on input line 307.
 (pdftex.def)             Requested size: 413.20515pt x 232.4211pt.
 
 <Chap4/figures/leopard_proc.png, id=1720, 906.38625pt x 465.74pt>
 File: Chap4/figures/leopard_proc.png Graphic file (type png)
 
 <use Chap4/figures/leopard_proc.png>
-Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 312.
+Package pdftex.def Info: Chap4/figures/leopard_proc.png used on input line 314.
 
 (pdftex.def)             Requested size: 413.20515pt x 212.3242pt.
  [81 <./Chap4/figures/topology.png>]
@@ -1922,27 +1933,27 @@ less on input line 138.
 [191
 
 ]) [192]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 498.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 498.
  (./thesis.aux (./Chap1/introduction.aux) (./Chap2/background.aux)
 (./Chap3/technical.aux) (./Chap4/architecture.aux) (./Chap5/ont.aux)
 (./Chap6/implementation.aux) (./Chap7/sims.aux) (./Chap8/conclusion.aux)
 (./App/appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 498.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 498.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: DA1CBE0D2A5CF3E2CAC0FCCB3F59DCAC;8630.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 498.
  ) 
 Here is how much of TeX's memory you used:
- 24682 strings out of 493104
- 425598 string characters out of 6136933
- 913094 words of memory out of 5000000
- 26014 multiletter control sequences out of 15000+600000
+ 24691 strings out of 493104
+ 425901 string characters out of 6136933
+ 913532 words of memory out of 5000000
+ 26019 multiletter control sequences out of 15000+600000
  55692 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,54p,1882b,1891s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1958,7 +1969,7 @@ e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (216 pages, 11539464 bytes).
+Output written on thesis.pdf (216 pages, 11539602 bytes).
 PDF statistics:
  3592 PDF objects out of 4296 (max. 8388607)
  3267 compressed objects within 33 object streams
