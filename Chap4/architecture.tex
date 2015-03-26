@@ -92,7 +92,9 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	
 	However, privileged users are able to confirm a classification and prevent any further votes. Once a classification has been confirmed, it is then sent back to the DP node it originated from. If the classification made by a user is different to the one inferred by the node, then it updates its knowledge base and acknowledges receipt.
 
-	This system is vital in the early stages of deployment as this is used to build up a knowledge base. The more user classifications there are, the more accurate the network will be in the future. After a few months of classifications, K-HAS is then able to use the knowledge base to make more informed classifications, requiring fewer classifications/confirmations from users. The exception to this is sensed data that cannot be matched to the knowledge base.
+	This section of K-HAS is yet to be implemented but we believe that this system will be vital in the early stages of deployment as it will be used to build up a knowledge base. The more user classifications there are, the more accurate the network will be in the future. After a few months of classifications, K-HAS would then be able to use the knowledge base to make more informed classifications, requiring fewer classifications/confirmations from users. The exception to this is sensed data that cannot be matched to the knowledge base. 
+	
+	Data aggregation nodes should not be hampered by limited battery life that deployed nodes would experience as we expect them to be placed in a base station with power availability and access to the Internet. Therefore, DA nodes would typically be desktop computers with a constant power supply.
 	
 	\subsubsection{Knowledge Base}
 	DA nodes do not typically experience the resource constraints that DC and DP nodes must compensate for. Because of this, they hold a global knowledge that contains a history of all observations made by all nodes, as well as the location and deployment times of all nodes in the network. When nodes are deployed, this is updated, by users, to show the location of the node and when it was placed. 
