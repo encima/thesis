@@ -14,15 +14,19 @@ I was expecting an "="---line 38 of file refs/refs.bib
  :   pages             
  :                     s       = {325--349},
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 318 of file refs/refs.bib
+I was expecting a `,' or a `}'---line 325 of file refs/refs.bib
  :   
  :   Publisher                = {American Asociation for Artificial Intelligence}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 338 of file refs/refs.bib
+I was expecting a `,' or a `}'---line 345 of file refs/refs.bib
  :   
  :   Publisher                = {Molecular Diversity Preservation International}
 (Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 721 of file refs/refs.bib
+ :     title = 
+ :             ,
 I'm skipping whatever remains of this entry
 A bad cross reference---entry "Janowicz2010"
 refers to entry "DBLP:conf/semweb/2010ssn", which doesn't exist
@@ -53,6 +57,9 @@ Warning--empty year in opensense
 Warning--empty year in xively
 Warning--empty institution in Aberer2007
 Warning--there's a number but no volume in Akkaya2005
+Warning--empty title in opencv_library
+Warning--empty year in opencv_library
+Warning--empty year in opencv_library
 Warning--empty institution in Document2010
 Warning--empty year in buckeye
 Warning--can't use both volume and number fields in Hempstead2005
@@ -63,9 +70,10 @@ while executing---line 1429 of file plainnat.bst
 Warning--can't use both volume and number fields in fast1995
 Warning--empty year in waspmote
 Warning--can't use both volume and number fields in Martonosi2003
+Warning--empty year in cvblob
 Warning--empty year in proctor2005drools
 Warning--empty year in rec900c
 Warning--empty year in dwc_oboe
 Warning--empty institution in Yu2001
 Warning--empty year in ZSL
-(There were 8 error messages)
+(There were 9 error messages)

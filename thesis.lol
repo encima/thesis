@@ -4,10 +4,10 @@
 \contentsline {lstlisting}{\numberline {4.2}Darwin Core Ecological Metadata File Fragment}{72}{lstlisting.4.2}
 \contentsline {lstlisting}{\numberline {4.3}Darwin Core Descriptor File}{72}{lstlisting.4.3}
 \contentsline {lstlisting}{\numberline {4.4}Darwin Core Occurrence Data}{73}{lstlisting.4.4}
-\contentsline {lstlisting}{\numberline {5.1}An Observation of a Vehicle encoded in O\&M}{94}{lstlisting.5.1}
-\contentsline {lstlisting}{\numberline {5.2}Darwin-SW Representation of an Identification}{96}{lstlisting.5.2}
-\contentsline {lstlisting}{\numberline {6.1}Pseudocode of a Drools Rules File}{129}{lstlisting.6.1}
-\contentsline {lstlisting}{\numberline {6.2}Example Rule created from Existing Data}{133}{lstlisting.6.2}
+\contentsline {lstlisting}{\numberline {5.1}An Observation of a Vehicle encoded in O\&M}{93}{lstlisting.5.1}
+\contentsline {lstlisting}{\numberline {5.2}Darwin-SW Representation of an Identification}{95}{lstlisting.5.2}
+\contentsline {lstlisting}{\numberline {6.1}Pseudocode of a Drools Rules File}{128}{lstlisting.6.1}
+\contentsline {lstlisting}{\numberline {6.2}Example Rule created from Existing Data}{132}{lstlisting.6.2}
 \contentsline {lstlisting}{\numberline {A.1}EML File}{181}{lstlisting.1.A.1}
 \contentsline {lstlisting}{\numberline {A.2}Metadata File}{182}{lstlisting.1.A.2}
 \contentsline {lstlisting}{\numberline {A.3}Example Set File (set.csv)}{182}{lstlisting.1.A.3}
