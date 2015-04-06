@@ -105,7 +105,7 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	
 	As well as this, the functionality of DA nodes can be extended to provide administrative operations on the network, such as the recording of node locations, time of deployment and viewing all active nodes. This allows the DA node to monitor active nodes and alert users if a node has not sent any data in a while. The longer a K-HAS network runs, the more knowledge a DA node gains, both from users that classify observations and from changes in the sensed data. This knowledge is then relayed back to DP nodes, updating their knowledge bases as to what classifications were correct and which need updating for future observations.
 
-	\subsubsection{Feedback Loop}
+	\subsubsection{Feedback Loop}\ref{fbloop}
 	The feedback loop is a protocol within K-HAS, that uses human input, and other sources, to update DP nodes. When a DP node classifies sensed data, it stores some of that to assist with future classifications. What is stored depends on the type of sensed data. For example, images would mean that the DP node would store the resulting processed image, its classification and information about the time it was taken, the camera that took it and the location. When that is sent to the DA node, a human would then look at the image and mark the classification as correct, or modify it if it was not. Once that classification has been finalised, the DA node sends either a confirmation or a modification to the DP node that sent it, updating its knowledge base. This protocol seeks to reduce the number of incorrect classifications the longer the network is deployed and allows the nodes to be dynamic and `learn' throughout the lifetime of the network. It also allows nodes to adapt quickly to new data, if a DP node is unable to classify an image of an animal it does not yet have template images for, the knowledge of a human expert can provide those templates and the feedback loop will deliver that knowledge.
 	
 	In the current design of K-HAS, the feedback loop has only been tested in a development environment and has not been fully implemented, we believe that the actual implementation of the feedback loop will allow the network to adapt dynamically to changes during its deployment.
@@ -167,7 +167,7 @@ The record shown in figure \ref{dwca} represents a DwC-A that conforms to the st
 The descriptor file is an XML document that contains the column headers in the attached files and the mappings of those headers to DwC terms, an example file is shown in Listing \ref{dwc:meta}. This file shows that this is an archive containing the sighting of an individual, and that the sighting has been split into two files. The largest benefit of Darwin Core is its modularity. Extension files can be added to enrich the data for each occurrence. In this example the extension file is named as \textit{images.csv} and contains image-based evidence to support the observation.
 
 \noindent\begin{minipage}{\textwidth}
-\lstinputlisting[language=XML, caption=Darwin Core Descriptor File, label=dwc:meta]{Chap5/figures/dwc_arch/meta.xml}
+\lstinputlisting[language=XML, caption=Darwin Core Descriptor File, label=dwc:meta]{Chap4/listings/dwc_arch/meta.xml}
 \end{minipage}
 
     \begin{figure}
@@ -180,7 +180,7 @@ The descriptor file is an XML document that contains the column headers in the a
 Listing \ref{dwc:set} shows the comma-separated central file (Basis of Resource) containing the core details of the observation, i.e. the animal observed, and the column headings map to the descriptor file. Other linked files are typically linked by the unique ID of the observation, containing information that extends the observation and provides further context.
 
 \noindent\begin{minipage}{\textwidth}
-\lstinputlisting[caption=Darwin Core Occurrence Data, label=dwc:set]{Chap5/figures/dwc_arch/set.csv}
+\lstinputlisting[caption=Darwin Core Occurrence Data, label=dwc:set]{Chap4/listings/dwc_arch/set.csv}
 \end{minipage}
 
 
@@ -294,7 +294,7 @@ Darwin Core is suited to K-HAS because its use in ecological observations matche
 	\section{Walk-through}\label{arch:walk}
 		In this section we will explain the steps involved in the capture, and processing, of an observation when using the K-HAS architecture. Each tier is responsible for performing different actions upon the observation to ensure it is received by the DA node with an inference as to what it may contain.
 		
-		Not all of the features described in this section have been implemented within K-HAS and some features have only been tested on a small set of observations. For example, the image classification down to species level is a concept that we have not implemented but template matching is a commonly used practice within image processing \cite{fast1995}.
+		Not all of the features described in this section have been implemented within K-HAS and some features have only been tested on a small set of observations. The image classification down to species level is a concept that we have not implemented but our proposed future work on template matching is a commonly used practice within image processing \cite{fast1995}. The feedback loop, described in Section \ref{fbloop}, has also not been implemented.
 
 		\subsection{Scenario}\label{arch:scen}
 			This walk-through will use our motivating scenario and the type of sensed data will be images of animals in the Malaysian rainforest. In this example, we have a collection of wildlife cameras, with nodes attached to them, deployed in the forest. Projects for the rare clouded leopard and sun bear are currently active at Danau Girang. The clouded leopard is a nocturnal carnivore that uses existing paths and hill trails to travel through the rainforest and the sun bear is the smallest bear in the world and sightings are rare. It is also nocturnal and claw marks can be seen on trees that they have climbed. All of this information has been encoded onto the DP nodes and DC nodes know that images taken at night will be of a higher priority, as well as to prioritise further images at night from DC nodes that are deployed on ridges or existing trails.

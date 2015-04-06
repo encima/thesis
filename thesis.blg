@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Chap1/introduction.aux
 A level-1 auxiliary file: Chap2/background.aux
 A level-1 auxiliary file: Chap3/technical.aux
@@ -76,4 +78,45 @@ Warning--empty year in rec900c
 Warning--empty year in dwc_oboe
 Warning--empty institution in Yu2001
 Warning--empty year in ZSL
+You've used 128 entries,
+            2773 wiz_defined-function locations,
+            1344 strings with 30051 characters,
+and the built_in function-call counts, 66504 in all, are:
+= -- 6010
+> -- 3954
+< -- 103
++ -- 1353
+- -- 1218
+* -- 5318
+:= -- 9706
+add.period$ -- 427
+call.type$ -- 128
+change.case$ -- 789
+chr.to.int$ -- 121
+cite$ -- 303
+duplicate$ -- 3059
+empty$ -- 5410
+format.name$ -- 1376
+if$ -- 14364
+int.to.chr$ -- 8
+int.to.str$ -- 1
+missing$ -- 107
+newline$ -- 647
+num.names$ -- 472
+pop$ -- 1820
+preamble$ -- 1
+purify$ -- 662
+quote$ -- 0
+skip$ -- 2456
+stack$ -- 0
+substring$ -- 2402
+swap$ -- 591
+text.length$ -- 56
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1388
+warning$ -- 37
+while$ -- 555
+width$ -- 0
+write$ -- 1662
 (There were 9 error messages)
