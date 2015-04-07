@@ -150,27 +150,26 @@
 \contentsline {subsubsection}{Transmission}{147}{section*.86}
 \contentsline {subsection}{\numberline {7.3.3}Observation Transmission}{148}{subsection.7.3.3}
 \contentsline {section}{\numberline {7.4}Results}{149}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}In-Network Processing}{149}{subsection.7.4.1}
-\contentsline {subsubsection}{Normal Bandwidth and Ideal Transmission Rate}{149}{section*.87}
-\contentsline {subsubsection}{Normal Bandwidth and Variable Transmission Rate}{151}{section*.93}
-\contentsline {subsubsection}{Saturated Bandwidth and Ideal Transmission Rate}{154}{section*.99}
-\contentsline {subsubsection}{Saturated Bandwidth and Variable Transmission Rate}{156}{section*.105}
-\contentsline {subsection}{\numberline {7.4.2}Central Processing}{158}{subsection.7.4.2}
-\contentsline {section}{\numberline {7.5}Conclusion}{158}{section.7.5}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{159}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{160}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{161}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{161}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{161}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{162}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}Future Work}{163}{section.8.2}
-\contentsline {chapter}{Bibliography}{166}{section.8.2}
-\contentsline {chapter}{Appendices}{181}{section*.111}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{182}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{184}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{186}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{189}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{190}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{193}{Appendix.1.F}
-\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{194}{Appendix.1.G}
-\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{196}{Appendix.1.H}
+\contentsline {subsubsection}{Average Transmission Time}{149}{section*.87}
+\contentsline {subsubsection}{Delivered vs. Undelivered}{151}{section*.92}
+\contentsline {subsubsection}{Interesting vs. Empty}{153}{section*.97}
+\contentsline {subsubsection}{True Positive vs. False Positive}{155}{section*.102}
+\contentsline {subsubsection}{True Negative vs. False Negative}{157}{section*.107}
+\contentsline {section}{\numberline {7.5}Conclusion}{159}{section.7.5}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{160}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{161}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{162}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{162}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{162}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{163}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Future Work}{164}{section.8.2}
+\contentsline {chapter}{Bibliography}{167}{section.8.2}
+\contentsline {chapter}{Appendices}{183}{section*.112}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{184}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{186}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{188}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{191}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{192}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{195}{Appendix.1.F}
+\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{196}{Appendix.1.G}
+\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{198}{Appendix.1.H}

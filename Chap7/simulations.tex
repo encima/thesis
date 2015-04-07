@@ -166,9 +166,13 @@ An observation is marked as delivered once it has been received by the central n
 
 
 \section{Results}\label{sim:res}
-\subsection{In-Network Processing}
+% \subsection{In-Network Processing}
+In this section, we show plots for each scenario and the variations on bandwith transmission rate. The resulting CSV files from each run were processed with the R programming language \cite{rlang} and summary statistics were output to find the mean transmission time for all observations, interesting and empty, as well as those that were delivered to the end point during the runtime of the simulation.
 
-\subsubsection{Normal Bandwidth and Ideal Transmission Rate}
+The general trend that is clear from all the figures below is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central processing, but it does speed up the delivery of interesting observations, especially when the network is saturated. 
+
+\subsubsection{Average Transmission Time}
+
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delivered_mean.png}
@@ -178,39 +182,32 @@ An observation is marked as delivered once it has been received by the central n
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:delundel}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:emptint}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
-	\caption{TP vs FP Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:tpfp}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tnvsfn_percent.png}
-	\caption{FN vs FP Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:tnfn}
-	\end{figure}
-
-
-\subsubsection{Normal Bandwidth and Variable Transmission Rate}
-	\begin{figure}[H]
-	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/delivered_mean.png}
 	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delmean}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delivered_mean.png}
+	\caption{Delivered Observations Mean Transmission Time for Saturated Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:sat:ideal:delmean}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
+	\caption{Delivered Observations Mean Transmission Time for Saturated Saturation and Variable Transmission Rate}
+	\label{fig:sim:res:sat:variable:delmean}
+	\end{figure}
+
+\subsubsection{Delivered vs. Undelivered}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent.png}
+	\caption{Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:norm:ideal:delundel}
 	\end{figure}
 
 	\begin{figure}[H]
@@ -222,9 +219,54 @@ An observation is marked as delivered once it has been received by the central n
 
 	\begin{figure}[H]
 	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent.png}
+	\caption{Delivered vs Undelivered Observations for Saturated Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:sat:ideal:delundel}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
+	\caption{Delivered vs Undelivered Observations for Saturated Saturation and Variable Transmission Rate}
+	\label{fig:sim:res:sat:variable:delundel}
+	\end{figure}
+
+\subsubsection{Interesting vs. Empty}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
+	\caption{Interesting vs Empty Observations for Normal Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:norm:ideal:emptint}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/emptvsint_percent.png}
 	\caption{Interesting vs Empty Observations for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:emptint}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent.png}
+	\caption{Interesting vs Empty Observations for Saturated Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:sat:ideal:emptint}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
+	\caption{Interesting vs Empty Observations for Saturated Saturation and Variable Transmission Rate}
+	\label{fig:sim:res:sat:variable:emptint}
+	\end{figure}
+\subsubsection{True Positive vs. False Positive}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
+	\caption{TP vs FP Observations for Normal Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:norm:ideal:tpfp}
 	\end{figure}
 
 	\begin{figure}[H]
@@ -236,67 +278,9 @@ An observation is marked as delivered once it has been received by the central n
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/tnvsfn_percent.png}
-	\caption{TN vs FN Observations for Normal Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:norm:variable:tnfn}
-	\end{figure}
-
-\subsubsection{Saturated Bandwidth and Ideal Transmission Rate}
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delivered_mean.png}
-	\caption{Delivered Observations Mean Transmission Time for saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:delmean}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:delundel}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:emptint}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tpvsfp_percent.png}
-	\caption{TP vs FP Observations for saturated Saturation and Ideal Transmission Rate}
+	\caption{TP vs FP Observations for Saturated Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:tpfp}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tnvsfn_percent.png}
-	\caption{TN vs FN Observations for saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:tnfn}
-	\end{figure}
-	
-\subsubsection{Saturated Bandwidth and Variable Transmission Rate}
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
-	\caption{Delivered Observations Mean Transmission Time for saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:delmean}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:delundel}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:emptint}
 	\end{figure}
 
 	\begin{figure}[H]
@@ -305,6 +289,28 @@ An observation is marked as delivered once it has been received by the central n
 	\caption{TP vs FP Observations for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:tpfp}
 	\end{figure}
+\subsubsection{True Negative vs. False Negative}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tnvsfn_percent.png}
+	\caption{TN vs FN Observations for Normal Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:norm:ideal:tnfn}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/tnvsfn_percent.png}
+	\caption{TN vs FN Observations for Normal Saturation and Variable Transmission Rate}
+	\label{fig:sim:res:norm:variable:tnfn}
+	\end{figure}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tnvsfn_percent.png}
+	\caption{TN vs FN Observations for Saturated Saturation and Ideal Transmission Rate}
+	\label{fig:sim:res:sat:ideal:tnfn}
+	\end{figure}
 
 	\begin{figure}[H]
 	\centering
@@ -312,7 +318,6 @@ An observation is marked as delivered once it has been received by the central n
 	\caption{TN vs FN Observations for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:tnfn}
 	\end{figure}
-\subsection{Central Processing}
 
 \section{Conclusion}\label{sim:conc}
 
@@ -330,9 +335,152 @@ An observation is marked as delivered once it has been received by the central n
 
 % We can conclude that, for a power efficient WSN, the results from these simulations suggest that MK-HK can deliver many of the same benefits that HK-ALL provides while not pushing HK to the edge of the network, reducing the network lifetime. If power was of no concern, HK-ALL is able to deliver more interesting observations and prioritise more accurately from the edge of the network, as well as filtering important data more effectively when the network is saturated.
 
+% \subsection{Central Processing}
+
+% \subsubsection{Normal Bandwidth and Ideal Transmission Rate}
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delivered_mean_central.png}
+% 	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:norm:ideal:delmean}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent_central.png}
+% 	\caption{Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:norm:ideal:delundel}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent_central.png}
+% 	\caption{Interesting vs Empty Observations for Normal Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:norm:ideal:emptint}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent_central.png}
+% 	\caption{TP vs FP Observations for Normal Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:norm:ideal:tpfp}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tnvsfn_percent_central.png}
+% 	\caption{FN vs FP Observations for Normal Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:norm:ideal:tnfn}
+% 	\end{figure}
 
 
+% \subsubsection{Normal Bandwidth and Variable Transmission Rate}
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/delivered_mean_central.png}
+% 	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:norm:variable:delmean}
+% 	\end{figure}
 
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/delvsundel_percent_central.png}
+% 	\caption{Delivered vs Undelivered Observations for Normal Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:norm:variable:delundel}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/emptvsint_percent_central.png}
+% 	\caption{Interesting vs Empty Observations for Normal Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:norm:variable:emptint}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/tpvsfp_percent_central.png}
+% 	\caption{TP vs FP Observations for Normal Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:norm:variable:tpfp}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/tnvsfn_percent_central.png}
+% 	\caption{TN vs FN Observations for Normal Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:norm:variable:tnfn}
+% 	\end{figure}
+
+% \subsubsection{Saturated Bandwidth and Ideal Transmission Rate}
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delivered_mean_central.png}
+% 	\caption{Delivered Observations Mean Transmission Time for saturated Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:sat:ideal:delmean}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent_central.png}
+% 	\caption{Delivered vs Undelivered Observations for saturated Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:sat:ideal:delundel}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent_central.png}
+% 	\caption{Interesting vs Empty Observations for saturated Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:sat:ideal:emptint}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tpvsfp_percent_central.png}
+% 	\caption{TP vs FP Observations for saturated Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:sat:ideal:tpfp}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tnvsfn_percent_central.png}
+% 	\caption{TN vs FN Observations for saturated Saturation and Ideal Transmission Rate}
+% 	\label{fig:sim:res:sat:ideal:tnfn}
+% 	\end{figure}
+	
+% \subsubsection{Saturated Bandwidth and Variable Transmission Rate}
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delivered_mean_central.png}
+% 	\caption{Delivered Observations Mean Transmission Time for saturated Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:sat:variable:delmean}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent_central.png}
+% 	\caption{Delivered vs Undelivered Observations for saturated Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:sat:variable:delundel}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent_central.png}
+% 	\caption{Interesting vs Empty Observations for saturated Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:sat:variable:emptint}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/tpvsfp_percent_central.png}
+% 	\caption{TP vs FP Observations for Saturated Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:sat:variable:tpfp}
+% 	\end{figure}
+
+% 	\begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/tnvsfn_percent_central.png}
+% 	\caption{TN vs FN Observations for Saturated Saturation and Variable Transmission Rate}
+% 	\label{fig:sim:res:sat:variable:tnfn}
+% 	\end{figure}
 
 
 
