@@ -1,0 +1,112 @@
+Interviewer: Chris Gwilliams
+Interviewee: Roshan
+
+Interviewer: Can you state your name please?
+Interviewee: My name is Roshan Guharajan
+Interviewer: The species you are looking at is?
+Interviewee: Sun bear.
+Interviewer: What is your project title?
+Interviewee: Sun bear (Helarctos malayanus) ecology within a fragmented landscape: a case study from the lower kinabatangan wildlife riparian (land between river) ecosystem.
+Interviewer: What kind of collection or analysis do you do? Trapping, physical samples etc.
+Interviewee: So, initially camera traps, now we are going into trapping. Once that is done: tracking, scat collection and feeding sign surveys.
+Interviewer: Scat is faeces?
+Interviewee: Yes, sorry, faeces.
+Interviewer: What made you move on from cameras to physcial trapping?
+Interviewee: The cameras were more of a preliminary investigation into what areas they were frequenting.
+Interviewer: How did you choose the sites for the cameras?
+Interviewee: They were already placed by DG.
+Interviewer: So, you used the existing network.
+Interviewee: Yes, the existing camera locations.
+Interviewer: So, you used the existing locations, looked for pictures of Sun Bears and placed your physical traps where those pictures were taken?
+Interviewee: Yes. Close to. We also used cameras facing the traps to monitor what animals are coming to the trap.
+Interviewer: So, the specific sites you look into have been chosen by the cameras?
+Interviewee: Yes.
+Interviewer: Have you looked into any sites that weren't selected by the cameras?
+Interviewee: Yes we have, in lot 6, we have two sites where (after finding a lot of secondary signs), we placed two traps.
+Interviewer: Are secondary signs things like marking on a tree?
+Interviewee: Predominantly claw marks. 
+Interviewer: So, a primary sign would be the bear itself?
+Interviewee: Yes, seeing it.
+Interviewer: What times do you work on your project? Whether that is trapping or looking for signs.
+Interviewee: Particularly in the morning, or just before lunch. If we check traps, we check them twice a day. So, once in the morning and once in the late afternoon.
+Interviewer: Why do you have to check twice a day?
+Interviewee: At this point, we have trap monitors that are basically VHF frequency and emit when the door closes, but there are no elevation points high enough around here to pick up the signals from all of our sites. So, we have to physically be at the trap to see if it is closed or not.
+Interviewer: Is that if you only check once a day then the bear has less chance of surviving?
+Interviewee: Actually, once a day is more desirable because it means less human disturbance. But, because of the logistics here, we have to check twice; unless we can find a high enough point.
+Interviewer: So, would you say your project is time critical then? If you catch a bear, you need to get to it as soon as?
+Interviewee: Yes, that would be ideal. 
+Interviewer: Is there anyway you could put some antennae higher in the trees?
+Interviewee: There could be, yes. We tried going up the tower, but we could not get any signal. Especially in Batangan, as we have one trap there.
+Interviewer: Is it that the forest is too thick?
+Interviewee: It may be that, or the canopy, and just the distance as well.
+Interviewer: How far away are they?
+Interviewee: Batangan, by river, is at least 11km.
+Interviewer: Is there a reason you choose the morning?
+Interviewee: The bears seem to be nocturnal, so best to check in the morning.
+Interviewer: Are there any conditions you have learnt, or from other research, that are optimum? Like: weather conditions, the temperature or the moon phase. Are there any times that you know, on, say, a particularly bright night, so more likely to find a Sun Bear. Or if it is particularly humid.
+Interviewee: To be honest, I am not sure. I know periods of low food availability, but that is more of a seasonal thing.
+Interviewer: So they would be more enticed to go into your trap?
+Interviewee: Yep, more readily available food. 
+Interviewer: Do you do anything different is the weather is suitable/not suitable?
+Interviewee: We try and go earlier if it is raining, especially at the end of the year when it is the monsoon. 
+Interviewer: Does the height of the river seem to affect them at all?
+Interviewee: I don't know but from last year to this year, we have not had as many pictuees on camera traps as usual. There are a few locations, like bi weekly, or monthly, they would pass by the camera. During the rain, they have, kind of, slowed down. I don't know if that is affecting them; maybe they move slower or the flooding made them go further inland.
+Interviewer: So, flooding may affect them?
+Interviewee: Yep, definitely.
+Interviewer: Are they fairly permanent in their sites then? Like, if you captured a bear with a camera trap, would you say they stay in that area? Or, do they kind of move around?
+Interviewee: I don't know, I know they have pretty large home ranges.  
+Interviewer: How large, do you know?
+Interviewee: A study using radio telemetry found a mimimum of 15 square kiometeres. We think that is a minimum, so probably double that, 30 to 40.
+Interviewer: So, if I said to you, list off the specifics that you know about your species, i.e. certain times it does not come out, locations it may avoid, certain animals it may avoid, or maybe certain temperatures it does not come out at. 
+Interviewee: The bears here seem to be more nocturnal, it might be because, if they do encroach into plantations, night time is the time to do it. This is just speculation, but day time is very hard with human disturbance.
+Interviewer: They do go into plantation then?
+Interviewee: There have been reports from plantation workers seeing bears on plantation land.
+Interviewer: So, because there are fewer humans?
+Interviewee: Fewer humans, and it is a lot cooler during the night.
+Interviewer: Are there any areas that, if you saw a Sun Bear, it would be out of place? Or is that this is all forest, so this is all suitable for them?
+Interviewee: The latter, I think.
+Interviewer: There is not really anywhere they would not go?
+Interviewee: Yep. 
+Interviewer: Do they have any predators?  
+Interviewee: There was a study in Indonesia that found that large pythons do prey on small bears. But, I think the biggest danger comes from other bears, like big males killing younger ones and fighting.
+Interviewer: I guess pythons and things are less common.
+Interviewee: Yes, extremely rare.
+Interviewer: How long is the duration of your project?
+Interviewee: I started last september (2012) and I am projected to finish in May 2015. 
+Interviewer: Essentially a 3 year project?
+Interviewee: Yes. 
+Interviewer: That is all within DG?
+Interviewee: Not exactly, there are about 18 months outside of DG.
+Interviewer: Using research from DG?
+Interviewee: Yes, using all research from DG. 
+Interviewer: OK, have/will/do others user your research? Currently, or in the future? Any active collaborations?
+Interviewee: I think we definitely will collaborate with the Sabah Wildlife Department in printing some action plans, recommendations. As far as collaborations, there may be collaborations with some local universities. For genetics.
+Interviewer: You would share your samples with them?
+Interviewee: Yes. Scat samples and blood samples.
+Interviewer: Would you expect anything in return?
+Interviewee: Probably just use of their labs.
+Interviewer: OK, so we have discussed how time critical your project is. Is there a reason that you want to get the bear out as quick as possible?
+Interviewee: The animal use protocol is keep the animal in the trap for as little time as possible.
+Interviewer: So, just less disturbance for the animal? What do you do one you have the animal?
+Interviewee: Yes. Once we have the animal, we proceed to immobilise it.
+Interviewer: Is that darting?
+Interviewee: It is with a jab stick, just like a pole with a syringe on the end. It should go down within 5-10 minutes, possibly longer. After that, the most important thing is the collaring. Then some physical measurements, samples, blood, tissue, parasites, fecal and then we let the bear recover and release it when it is fully able to walk.
+Interviewer: Your collars are GPS collars, are they?
+Interviewee: GPS through the Iridium network.
+Interviewer: Is that the service that you log on to access the data?
+Interviewee: Yes.
+Interviewer: Are they the same network used by the crocodile project?
+Interviewee: Yes, the same.
+Interviewer: Final question, what pther knowledge (if any) have you used in your project. For example, in this project, you have used the existing cameras and the pictures from there, have you used anything else to help? Or someone else's research outside of the field centre to help with your understanding of the bears or even your site choosings?
+Interviewee: Another student here, Grace, has been doing secondary sign surveys, and I have been talking to her about moving traps around based on where she has found fresh Sun Bear sign.
+Interviewer: So, the two sites that you found, where you selected the secondary signs, were they found by Grace?
+Interviewee: She was not doing her project at the time. While we were hanging baits on trees, in random places, we came across this area where we saw fresh signs. 
+Interviewer: Have you moved any of your traps to her locations?
+Interviewee: Not at the moment, we are still deciding. 
+Interviewer: Do you think you may do in the future?
+Interviewee: We may do. 
+Interviewer: And has she used any of your research, do you know?
+Interviewee: At the moment, no she has not.
+Interviewer: Does she also use the pictures from within DG?
+Interviewee: Not for research. 
+Interviewer: Ok, thanks, that is everything.
