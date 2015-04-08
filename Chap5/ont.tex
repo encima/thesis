@@ -230,13 +230,17 @@ While the SHO and SDO extensions of SUMO are classed as both an observation-cent
  %does not fulfil all of the requirements we identified when developing K-HAS, such as representing users. 
 However, an important feature is the Extension Plugin Ontologies (EPO), support for domain specific plugins to integrate with SUMO and integrate with the SHO and SDO and this would also be a useful feature for K-HAS.
 
-We found that SSN, SensorML and Darwin Core satisfied many subsections of K-HAS completely. We have used these existing ontologies to develop an aligning ontology that connects ontologies across multiple domains to support our proposal of K-HAS, extending the concepts in existing ontologies with K-HAS specific concepts.
+\section{Method}
+We found that SSN, SensorML and Darwin Core satisfied many the hardware and much of the sensed data subsections of K-HAS completely. We have used these existing ontologies to develop an aligning ontology that connects ontologies across multiple domains to support our proposal of K-HAS, extending the concepts in existing ontologies with K-HAS specific concepts.
 
 %SSN DISCUSSION HERE!
-The SSN ontology is a modular ontology created by combining concepts from existing, commonly used ontologies and allows for domain specific concepts to be imported. Some of the main uses cases for the SSN ontology are provenance and data discovery, which are also key within K-HAS. However, the tiered structure of K-HAS did not map directly to SSN and it proved difficult to represent the flow of knowledge through a network, as humans can also perform similar operations on observations and the observations are enriched as they pass through the network. However, while we did not use the ontology directly, many of the concepts can be mapped directly and it would be possible to use import modules from SSN and extend them with K-HAS specific concepts.
+The SSN ontology is a modular ontology created by combining concepts from existing, commonly used ontologies and allows for domain specific concepts to be imported. Some of the main uses cases for the SSN ontology are provenance and data discovery, which are also key within K-HAS. However, the tiered structure of K-HAS did not map directly to SSN and it proved difficult to represent the flow of knowledge through a network, as humans can also perform similar operations on observations and the observations are enriched as they pass through the network. However, while we did not use the ontology directly, many of the concepts can be mapped directly (shown later in Table \ref{tab:dwc_eval}) and it would be possible to use import modules from SSN and extend them with the concepts specific to K-HAS, SSN does not describe domain concepts (such as time or location) as this is expected to be handled by imports from more specific ontologies. K-HAS allows humans to act as sensors, which would require slight modifications to SSN, as well as extending with the ability to provide classifications for sensed data.
+
+%Mappings table here!
+
+
  %The majority of the concepts described can be mapped to K-HAS and the observation-centric terms could be further extended to incorporate Darwin Core observations. However, when developing the K-HAS ontology, our focus was on the flow of knowledge through the network and we found that the SSN ontology definded sensing nodes as devices capable of sensing their environment and some processing capabilities, but not as devices that enriched the data they sensed with further knowledge. Many of the terms used in K-HAS map directly to SSN and one of the goals of SSN to show provenance is something we would like to implement in the K-HAS ontology. 
 
-\section{Method}
 % *Outline standard ontology development method
 % *Explain our variation
 % Reference the various methods outlined
@@ -456,24 +460,24 @@ In the data driven approach suggested by \cite{Brewster2004}, a corpus of docume
 
 As explained in Section \ref{arch:tech:dwc}, an archive of Darwin Core files consists of a minimum of 3 files: a metadata file that contains information about the creator of the archive and the project it relates to (eml.xml), a metadata file that describes all of the files that contain the occurrence and the fields within them (meta.xml) and a csv file that contains the data relating to the occurrence itself. Within the archive, the core files that need to be mapped to K-HAS are the meta.xml and eml.xml files as this allows us to store what and who.
 
-We used files from a DwC archive made available online to extract the terms associated with an occurrence and we mapped these terms to K-HAS concepts, the results can be seen in Table \ref{tab:dwc_eval}.
+We used files from a DwC archive made available online to extract the terms associated with an occurrence and we mapped these terms to K-HAS concepts, the results can be seen in Table \ref{tab:dwc_eval}. This table also shows how K-HAS terms could also be mapped to the SSN ontology.
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Darwin Core Term} & \textbf{K-HAS Concept}\\ 
+\textbf{Darwin Core Term} & \textbf{K-HAS Concept} & \textbf{SSN Term} \\
 \hline
-occurrenceID & Occurrence \\
-basisOfRecord & Basis of Record \\
-recordedBy & Person/Node \\
-associatedMedia & Token \\
-eventDate & Event Date \\
-eventTime & Event Time \\
-locationId & Location \\
-scientificName & Individual \\
-identifiedBy & Person \\
-dateIdentified & Identification \\
+occurrenceID & Occurrence  & Observation\\
+basisOfRecord & Basis of Record & - \\
+recordedBy & Person/Node & Observed By \\
+associatedMedia & Token & Observation Value \\
+eventDate & Event Date & - \\
+eventTime & Event Time & - \\
+locationId & Location & Region \\
+scientificName & Individual & Feature of Interest \\
+identifiedBy & Person & -\\
+dateIdentified & Identification & - \\
 \hline 
 \end{tabular}
 \caption{Evaluation of K-HAS against Darwin Core Occurrence Terms} 

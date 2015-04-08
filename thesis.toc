@@ -109,9 +109,9 @@
 \contentsline {subsubsection}{Integrate Existing Ontologies}{103}{section*.62}
 \contentsline {subsection}{\numberline {5.2.3}Evaluation}{104}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Documentation}{104}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Results}{104}{section.5.3}
+\contentsline {section}{\numberline {5.3}Results}{105}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Identify Purpose}{105}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Build the Ontology - Capture}{105}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Build the Ontology - Capture}{106}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Build the Ontology - Code}{108}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}Build the Ontology - Integrate Existing Ontologies}{108}{subsection.5.3.4}
 \contentsline {subsection}{\numberline {5.3.5}Extend the Ontology}{109}{subsection.5.3.5}
@@ -164,12 +164,12 @@
 \contentsline {subsection}{\numberline {8.1.4}Simulations}{163}{subsection.8.1.4}
 \contentsline {section}{\numberline {8.2}Future Work}{164}{section.8.2}
 \contentsline {chapter}{Bibliography}{167}{section.8.2}
-\contentsline {chapter}{Appendices}{183}{section*.112}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{184}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{186}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{188}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{191}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{192}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{195}{Appendix.1.F}
-\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{196}{Appendix.1.G}
-\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{198}{Appendix.1.H}
+\contentsline {chapter}{Appendices}{182}{section*.112}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{183}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{185}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{187}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{190}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{191}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{194}{Appendix.1.F}
+\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{195}{Appendix.1.G}
+\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{197}{Appendix.1.H}
