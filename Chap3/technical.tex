@@ -147,8 +147,6 @@ Poor Wi-Fi performance led us to research alternative methods to increase the ra
 We also researched wireless technologies that are more common in sensor networks. This does mean that the data rate is not as high as Wi-Fi and error correction in packet streams is not always as robust, but it is more suited to sensor networks, using less power and providing longer range.
 			
 Finally, we considered using the researchers or animals at Danau Girang, as `data mules', creating temporary links between nodes while they are in the forest. However, the trip to Danau Girang yielded the information that researchers generally do not cover those distances in the forest and data delivery would be sporadic.
-			
-Although the range of Wi-Fi is poor, for our requirements, in both Malaysia and the UK, it did show that the results we experience in the UK are very similar to the results in Malaysia.
 
 \subsection{DigiMesh}\label{tech:range:digimesh}
 		Due to the poor range results of Wi-Fi, we created a second prototype of the network, using DigiMesh. DigiMesh is a proprietary wireless protocol, based on the 802.15.4 standard and designed for devices with limited power. Using the same frequency as Wi-Fi, DigiMesh has been reported to provide 7km of range, with a data rate of 250kbps.
@@ -239,9 +237,9 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 		The processed images are then compared with our manual findings. The accuracy of our application is calculated by the following equations:
 		
 		%\begin{equation}Accuracy = (T_{p} + T_{n})/Total Sets\end{equation}
-		\begin{equation}\label{ac:tp}  Accuracy{tp} = (Ex_{tp} / Ac_{tp}) * 100 \end{equation}
+		\begin{equation}\label{ac:tp}  Accuracy_{tp} = (Ex_{tp} / Ac_{tp}) * 100 \end{equation}
 
-		\begin{equation}\label{ac:tn} Accuracy{tn} = (Ex_{tn} / Ac_{tn}) * 100 \end{equation}	
+		\begin{equation}\label{ac:tn} Accuracy_{tn} = (Ex_{tn} / Ac_{tn}) * 100 \end{equation}	
 		
 			Where Ex$_{tp}$  is the number of true positive sets extracted, Ac$_{tn}$  is the actual number of true positive sets, Ex$_{tn}$ is the number of true negatives extracted and Ac$_{tn}$ is the actual number of true negative sets.
 		
@@ -294,7 +292,7 @@ In more open areas of the rainforest, we achieved 199m on average, more dense re
 %	
 %	\subsection{ODACH}
 	\subsubsection{Future Work}
-		Triton is currently capable of processing a set of images and extracting the largest object of interest, if one is detected. The primary benefit of this is that it requires no training initially and works, with fairly good accuracy, from the time of deployment. However, functionality can be extended by storing the extracted images and associating it with the actual content, i.e. animal name, future extracted images can then be matched to the templates, within a threshold, to assist with classifications within the network. Currently, the templates are extracted, stored and associated with their contents once classified by a human, but Triton does not use these. If Triton detected an interesting image, it could then search a folder of templates and use OpenCV to compare the images and provide a cursory classification based on the closest match. 
+		Triton is currently capable of processing a set of images and extracting the largest object of interest, if one is detected. The primary benefit of this is that it requires no training initially and works, with fairly good accuracy, from the time of deployment. However, functionality can be extended by storing the extracted images and associating it with the actual content, i.e. animal name, future extracted images can then be matched to the templates, within a threshold, to assist with classifications within the network. Currently, the templates are extracted, stored and associated with their contents once classified by a human, but Triton does not use these. If Triton detected an interesting image, it could then search a folder of templates and use OpenCV to compare the images and provide a cursory species classification based on the closest match. 
 		
 		Extracted images are stored in black and white and are only a few kilobytes in size, this will be useful as we expect that a large number of templates would be required in order to accurately identify an object of interest. For example, in our motivating scenario, an animal could be any distance from the camera, its legs could be in different positions or its angle it faces towards the camera could be different, giving many possible images. This process could be optimised by only matching regions between extracted images, such as the head or body, but this would require further experimentation.
 

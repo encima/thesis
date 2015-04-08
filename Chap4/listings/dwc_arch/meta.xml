@@ -5,7 +5,7 @@
 			<location>set.csv</location>
 		</files>
 		<id index="0"/>
-		<field index="0" term="http://rs.tdwg.org/dwc/terms/occurrenceID"/>
+		<field index="0" term="http://rs.tdwg.org/dwc/terms/eventID"/>
 		<field index="1" term="http://rs.tdwg.org/dwc/terms/basisOfRecord"/>
 		<field index="2" term="http://rs.tdwg.org/dwc/terms/recordedBy"/>
 		<field index="3" term="http://rs.tdwg.org/dwc/terms/eventDate"/>
