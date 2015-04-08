@@ -1,7 +1,7 @@
 #!/bin/bash
 pdflatex thesis.tex
-bibtex thesis.tex
-bibtex thesis.tex
+bibtex thesis
+bibtex thesis
 pdflatex thesis.tex
 pdflatex thesis.tex
 now=`date +"%m_%d_%Y"`
