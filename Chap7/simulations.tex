@@ -232,6 +232,10 @@ The general trend that is clear from all the figures below is that pushing knowl
 	\end{figure}
 
 \subsubsection{Interesting vs. Empty}
+	The pattern of interesting vs empty observations is clearest when looking at a saturated network. Figures \ref{fig:sim:res:sat:ideal:emptint} and \ref{fig:sim:res:sat:variable:emptint} show that, of the total observations delivered, HK-HK-HK has the most interesting observations. When the transmission rate is ideal, HK-HK-HK is still ahead but MK-HK-NK is slightly less than the central processing scenarios, in terms of interesting observations. Comparing this with the mean transmission time (Figure \ref{fig:sim:res:sat:ideal:delmean}), MK-HK-NK has a lower transmission time for interesting observations, while still delivering a similar amount.
+
+	Under normal saturation (Figures \ref{fig:sim:res:norm:ideal:emptint}\ref{fig:sim:res:norm:variable:emptint}), the split is fairly uniform. 
+
 
 	\begin{figure}[H]
 	\centering
@@ -261,7 +265,7 @@ The general trend that is clear from all the figures below is that pushing knowl
 	\label{fig:sim:res:sat:variable:emptint}
 	\end{figure}
 \subsubsection{True Positive vs. False Positive}
-
+	Figures \ref{fig:sim:res:norm:ideal:tpfp} and \ref{fig:sim:res:norm:variable:tpfp} show that 
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
@@ -320,6 +324,12 @@ The general trend that is clear from all the figures below is that pushing knowl
 	\end{figure}
 
 \section{Conclusion}\label{sim:conc}
+
+These simulations first show that saturating the network simply by increasing the chance of capture ten fold can have a huge impact on the transmission time of observations and really tests how each scenario prioritises data within the network. While processing each observation can take time depending on whether the node possesses minimal or high knowledge processing capabilities, it does not seem to be the bottleneck here. With nodes only having a single radio, sending in parallel is not possible and waiting for a neighbouring node to be available can delay an observation massively.
+
+Pushing knowledge further out into the network does reduce the time taken for an interesting observation to reach the data aggregation node. When the network is saturated, it is clear to see how the prioritisation can impact what data is delivered and that higher knowledge processing capabilities allows for interesting data to be delivered faster and with a higher priority. The downside to MK-HK-NK is that this processing needs to occur twice: once at the data collection node and again on the data processing node and it seems that this adds a delay to observations. However, in many situations, it may not be possible to put high knowledge processing nodes throughout the network as they are more expensive, more powerful nodes that would likely draw more power.
+
+If the requirement of a sensor network was to deploy a network that had no time restriction on when data was delivered but context was required then central processing is the more logical choice. However, if interesting data needed to be prioritised then using nodes with knowledge at the edge of the network allows for that prioritisation and, while the time to process is an overhead, it does prioritise well enough that the data aggregation becomes a stream of data based on importance, as well as time captured.
 
 % \section{Conclusion} \label{sim:conc}
 	
