@@ -151,25 +151,25 @@
 \contentsline {subsection}{\numberline {7.3.3}Observation Transmission}{149}{subsection.7.3.3}
 \contentsline {section}{\numberline {7.4}Results}{150}{section.7.4}
 \contentsline {subsubsection}{Average Transmission Time}{150}{section*.88}
-\contentsline {subsubsection}{Delivered vs. Undelivered}{152}{section*.93}
-\contentsline {subsubsection}{Interesting vs. Empty}{154}{section*.98}
-\contentsline {subsubsection}{True Positive vs. False Positive}{157}{section*.103}
-\contentsline {subsubsection}{True Negative vs. False Negative}{159}{section*.108}
-\contentsline {section}{\numberline {7.5}Conclusion}{160}{section.7.5}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{162}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{163}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{164}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{164}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{164}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{165}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}Future Work}{166}{section.8.2}
-\contentsline {chapter}{Bibliography}{169}{section.8.2}
-\contentsline {chapter}{Appendices}{185}{section*.113}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{186}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{188}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{190}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{193}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{194}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{197}{Appendix.1.F}
-\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{198}{Appendix.1.G}
-\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{200}{Appendix.1.H}
+\contentsline {subsubsection}{Delivered vs. Undelivered}{153}{section*.93}
+\contentsline {subsubsection}{Interesting vs. Empty}{155}{section*.98}
+\contentsline {subsubsection}{True Positive vs. False Positive}{158}{section*.103}
+\contentsline {subsubsection}{True Negative vs. False Negative}{160}{section*.108}
+\contentsline {section}{\numberline {7.5}Conclusion}{162}{section.7.5}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{163}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{164}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{165}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{165}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{165}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{166}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Future Work}{167}{section.8.2}
+\contentsline {chapter}{Bibliography}{170}{section.8.2}
+\contentsline {chapter}{Appendices}{186}{section*.113}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{187}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{189}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{191}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{194}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{195}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{198}{Appendix.1.F}
+\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{199}{Appendix.1.G}
+\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{201}{Appendix.1.H}

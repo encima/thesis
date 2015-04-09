@@ -39,11 +39,11 @@ The scenarios we have tested show various combinations of knowledge within the n
 		\item NK-MK-NK: Sensing nodes possess no knowledge processing and routing nodes have minimal knowledge.
 		\item MK-HK-NK (K-HAS): Sensing nodes have minimal knowledge and routing nodes possess high knowledge. This scenario matches the K-HAS architecture we proposed in Chapter \ref{chap:arch}
 		\item HK-HK-NK: Sensing and routing nodes have high processing capabilities.
-		\item NK-NK-HK: Sensing and routing nodes have no knowledge processing capabilities with minimal processing capabilities on the central node.
+		\item NK-NK-MK: Sensing and routing nodes have no knowledge processing capabilities with minimal processing capabilities on the central node.
 		\item NK-NK-HK: Sensing and routing nodes have no knowledge processing capabilities with high processing capabilities on the central node.
 	\end{itemize}
 
-The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had a between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with yellow nodes representing sensing nodes, green nodes representing routing nodes and the red node representing the central node.
+The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with yellow nodes representing sensing nodes, green nodes representing routing nodes and the red node representing the central node.
 
 	\begin{figure}[h]
 	\centering
@@ -175,28 +175,28 @@ The general trend that is clear from all the figures below is that pushing knowl
 	When the network is saturated, it becomes clear that scenarios without any knowledge processing capabilities are unable to prioritise what is sent and all observations experience a uniform time, shown in Figure \ref{fig:sim:res:sat:variable:delmean}, but scenarios, such as HK-HK-HK, MK-HK-NK or MK-MK-NK are able to prioritise.
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delivered_mean.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/delivered_mean.png}
 	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:delmean}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/delivered_mean.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/delivered_mean.png}
 	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delmean}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delivered_mean.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/delivered_mean.png}
 	\caption{Delivered Observations Mean Transmission Time for Saturated Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:delmean}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
 	\caption{Delivered Observations Mean Transmission Time for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:delmean}
 	\end{figure}
@@ -205,28 +205,28 @@ The general trend that is clear from all the figures below is that pushing knowl
 	Figure \ref{fig:sim:res:norm:ideal:delundel} shows that, when the network is not saturated and the transmission rate remains at the maximum, almost all observations are received by the DA node, regardless of the scenario. 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent.png}
 	\caption{Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:delundel}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/delvsundel_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/delvsundel_percent.png}
 	\caption{Delivered vs Undelivered Observations for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delundel}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent.png}
 	\caption{Delivered vs Undelivered Observations for Saturated Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:delundel}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
 	\caption{Delivered vs Undelivered Observations for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:delundel}
 	\end{figure}
@@ -239,28 +239,28 @@ The general trend that is clear from all the figures below is that pushing knowl
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
 	\caption{Interesting vs Empty Observations for Normal Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:emptint}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/emptvsint_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/emptvsint_percent.png}
 	\caption{Interesting vs Empty Observations for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:emptint}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent.png}
 	\caption{Interesting vs Empty Observations for Saturated Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:emptint}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
 	\caption{Interesting vs Empty Observations for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:emptint}
 	\end{figure}
@@ -268,28 +268,28 @@ The general trend that is clear from all the figures below is that pushing knowl
 	
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
 	\caption{TP vs FP Observations for Normal Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:tpfp}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/tpvsfp_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/tpvsfp_percent.png}
 	\caption{TP vs FP Observations for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:tpfp}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tpvsfp_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/tpvsfp_percent.png}
 	\caption{TP vs FP Observations for Saturated Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:tpfp}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/tpvsfp_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/tpvsfp_percent.png}
 	\caption{TP vs FP Observations for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:tpfp}
 	\end{figure}
@@ -297,28 +297,28 @@ The general trend that is clear from all the figures below is that pushing knowl
 	
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tnvsfn_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/tnvsfn_percent.png}
 	\caption{TN vs FN Observations for Normal Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:tnfn}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_variable/tnvsfn_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/tnvsfn_percent.png}
 	\caption{TN vs FN Observations for Normal Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:tnfn}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_ideal/tnvsfn_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/tnvsfn_percent.png}
 	\caption{TN vs FN Observations for Saturated Saturation and Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:tnfn}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/saturated_variable/tnvsfn_percent.png}
+	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/tnvsfn_percent.png}
 	\caption{TN vs FN Observations for Saturated Saturation and Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:tnfn}
 	\end{figure}
