@@ -18,7 +18,7 @@ While the aim of these simulations was to show the effectiveness of K-HAS over t
 
 Throughout this chapter, we will be referring to nodes tasked with different purposes as the three definitions listed here:
 	\begin{itemize}
-		\item Sensing Node: A node that has been tasked with the captuing, and routing, of sensed data.
+		\item Sensing Node: A node that has been tasked with the capturing, and routing, of sensed data.
 		\item Routing Node: A gateway node that is tasked with collecting, processing and forwarding sensed data.
 		\item Central Node: A node with similar functionality to a typical base station, tasked with storing all sensed data and providing an interface to users.
 	\end{itemize}
@@ -144,7 +144,7 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 	
 	The maximum connections a routing node can have is determined by the total number of sensing nodes in the network divided by the total number of routing nodes, which is held in the knowledge base of the central node. Once a routing node has the maximum number of connections allowed, it starts to offload to a neighbouring routing node that is also in range of the sensing node requesting a connection. If there are no neighbouring nodes then the routing node exceeds the maximum number of connections allowed, to save sensing nodes being left with nowhere to send their data.
 	
-	If the sensing node that receives the broadcast does not have an existing route to a central node, or the cost of the current route is higher than the received route, it adds an edge to the routing node, increments the count and forwards it to all nodes in range. This process continues until the broadcast reaches the edge of the network. Nodes do not have global knowledge of the route to the central node, only of their neighbour with the lowest cost.
+	If the sensing node that receives the broadcast does not have an existing route to a central node, or the cost of the current route is higher than the received route, it adds an edge to the routing node, increments the count and forwards it to all nodes in range. This process continues until the broadcast reaches the edge of the network. Nodes do not have global knowledge of the route to the central node, only of their neighbour with the lowest cost. This can be seen in Figure \ref{fig:dc:discovery} in Section \ref{arch:routing}.
 	
 	This phase can be repeated throughout the course of the deployment, simply by scheduling it as an event to occur every \textit{n} ticks. However, the simulation currently only uses the discovery phase at the beginning of the deployment.
 	
@@ -160,19 +160,19 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each node are iterated over and written to a CSV file, with details such as the path it took, total transmission time and time of capture.
 
 \subsection{Observation Transmission}
-When a node has no knowledge, it simply sends the observation that was first added to its queue. With MK, it finds the first \textit{interesting} observation and sends that, if one is not in the queue then an observation marked as \textit{unknown}.  HK performs much the same as MK except it instead looks for \textit{empty} observation if an \textit{interesting} cannot be found. If a node has any form of knowledge processing power, it will not send an observation unless it has first been processed. Nodes can only send an observation one at a time and must also wait for the receiving node to be free.
+When a node has no knowledge, it simply sends the observation that was first added to its queue. With MK, it finds the first \textit{interesting} observation and sends that, if one is not in the queue then an observation marked as \textit{unknown}. HK performs much the same as MK except it instead looks for \textit{empty} observation if an \textit{interesting} cannot be found. If a node has any form of knowledge processing power, it will not send an observation unless it has first been processed. Nodes can only send an observation one at a time and must also wait for the receiving node to be free.
 
 An observation is marked as delivered once it has been received by the central node, if there is only processing at the central node, then delivery is delayed until the central node has processed it.
 
 
 \section{Results}\label{sim:res}
 % \subsection{In-Network Processing}
-In this section, we show plots for each scenario and the variations on bandwith transmission rate. The resulting CSV files from each run were processed with the R programming language \cite{rlang} and summary statistics were output to find the mean transmission time for all observations, interesting and empty, as well as those that were delivered to the end point during the runtime of the simulation.
+In this section, we show plots for each scenario and the variations on bandwidth and transmission rate. The resulting CSV files from each run were processed with the R programming language \cite{rlang} and summary statistics were output to find the mean transmission time for all observations, interesting and empty, as well as those that were delivered to the end point during the runtime of the simulation.
 
 The general trend that is clear from all the figures below is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central processing, but it does speed up the delivery of interesting observations, especially when the network is saturated. 
 
 \subsubsection{Average Transmission Time}
-
+	When the network is saturated, it becomes clear that scenarios without any knowledge processing capabilities are unable to prioritise what is sent and all observations experience a uniform time, shown in Figure \ref{fig:sim:res:sat:variable:delmean}, but scenarios, such as HK-HK-HK, MK-HK-NK or MK-MK-NK are able to prioritise.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/delivered_mean.png}
@@ -265,7 +265,7 @@ The general trend that is clear from all the figures below is that pushing knowl
 	\label{fig:sim:res:sat:variable:emptint}
 	\end{figure}
 \subsubsection{True Positive vs. False Positive}
-	Figures \ref{fig:sim:res:norm:ideal:tpfp} and \ref{fig:sim:res:norm:variable:tpfp} show that 
+	
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
@@ -327,7 +327,7 @@ The general trend that is clear from all the figures below is that pushing knowl
 
 These simulations first show that saturating the network simply by increasing the chance of capture ten fold can have a huge impact on the transmission time of observations and really tests how each scenario prioritises data within the network. While processing each observation can take time depending on whether the node possesses minimal or high knowledge processing capabilities, it does not seem to be the bottleneck here. With nodes only having a single radio, sending in parallel is not possible and waiting for a neighbouring node to be available can delay an observation massively.
 
-Pushing knowledge further out into the network does reduce the time taken for an interesting observation to reach the data aggregation node. When the network is saturated, it is clear to see how the prioritisation can impact what data is delivered and that higher knowledge processing capabilities allows for interesting data to be delivered faster and with a higher priority. The downside to MK-HK-NK is that this processing needs to occur twice: once at the data collection node and again on the data processing node and it seems that this adds a delay to observations. However, in many situations, it may not be possible to put high knowledge processing nodes throughout the network as they are more expensive, more powerful nodes that would likely draw more power.
+Pushing knowledge further out into the network does reduce the time taken for an interesting observation to reach the central node. When the network is saturated, it is clear to see how the prioritisation can impact what data is delivered and that higher knowledge processing capabilities allows for interesting data to be delivered faster and with a higher priority. The downside to MK-HK-NK is that this processing needs to occur twice: once at the data collection node and again on the data processing node and it seems that this adds a delay to observations. However, in many situations, it may not be possible to put high knowledge processing nodes throughout the network as they are more expensive, more powerful nodes that would likely draw more power.
 
 If the requirement of a sensor network was to deploy a network that had no time restriction on when data was delivered but context was required then central processing is the more logical choice. However, if interesting data needed to be prioritised then using nodes with knowledge at the edge of the network allows for that prioritisation and, while the time to process is an overhead, it does prioritise well enough that the data aggregation becomes a stream of data based on importance, as well as time captured.
 
