@@ -6,11 +6,18 @@ Upon deployment, these nodes use their wireless capabilities to form communicati
 Each WSN is different and each will have different constraints, a WSN that monitors traffic along a busy road may experience memory limitations, whereas a  WSN that is deployed in the middle of a desert may experience power issues. Typically, however, all WSNs do the same thing: sense one or more characteristics of their environment and forward that data on to a specified endpoint; sometimes called the base station.
 
 \section{Motivation}\label{int:mot}
-Throughout this thesis, we focus on a scenario motivated by our collaboration with Cardiff University School of Biosciences, who run a research centre in the Malaysian rainforest, in Sabah, known as Danau Girang Field Centre (DGFC) \nomenclature{DG}{Danau Girang Field Centre} \cite{dgfc}. Located on the banks of the Kinabatangan river, DGFC has been running for more than six years and holds Masters, PhD and Undergraduate students from around the world, studying the ecology and biodiversity of the unique region.
+Throughout this thesis, we focus on a scenario motivated by our collaboration with Cardiff University School of Biosciences, who run a research centre in the Malaysian rainforest, in Sabah, known as Danau Girang Field Centre (DGFC) \nomenclature{DG}{Danau Girang Field Centre} \cite{dgfc}. Located on the banks of the Kinabatangan river, DGFC is shown in Figure \ref{int:fig:map} and has been running for more than six years and holds Masters, PhD and Undergraduate students from around the world, studying the ecology and biodiversity of the unique region.
 
 The rainforest surrounding the Kinabatangan river is unique because the area was heavily logged until the late 1970s and the river now serves as a corridor, between large palm oil plantations, connecting two separate rainforest lots. The area is now secondary rainforest (rainforest that has grown since being destroyed) and is experiencing a large variety of wildlife using the area as a habitat, or as a path. Some of this wildlife is unique to this area of the world and DGFC has had sightings of animals that have not been seen in many years \cite{Goossens2012}.
 
 There is a variety of research projects currently underway in the field centre, looking into fish population, crocodile attacks, hornbill habitats or the movement patterns of small mammals. One project that has been running almost since DGFC opened, is the \textit{corridor monitoring programme}, a programme that consists of dozens of wildlife cameras deployed in various areas around DGFC and a set of images are taken whenever an animal triggers a break in their infrared (IR) \nomenclature{IR}{Infrared} sensor.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Chap3/figures/dgfc_map}
+\caption{Map of Danau Girang in relation to Sabah Malaysia}
+\label{int:fig:map}
+\end{figure}
 
 The Kinabatangan is a protected wildlife reserve, with thick and humid forest, making it very difficult to walk through and even more difficult for hardware to survive the conditions. Cameras are placed along the river and up to 1km into the forest, capturing images when triggered and saving them onto SD cards. These SD cards are collected and stored at the field centre, where the images are manually collated and processed. The cameras are designed to have a battery life of three months but, due to the humidity, a battery life of three weeks is more realistic. In 2010, twenty cameras were deployed and half of them were inspected every two weeks, on a rotating basis. In that time, each camera can record more than a thousand pictures and the dynamic nature of the rainforest, such as the sun through leaves, falling trees and reflections in the water can cause the camera to trigger when an animal has not walked past. The events are known as \textit{false triggers}, and they can make up to 70\% of the images on an SD card and each of these must be manually processed. 
 

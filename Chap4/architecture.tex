@@ -6,11 +6,11 @@
 	The rest of this chapter is structured as follows. Section \ref{arch:khas} outlines the main aims of K-HAS and what it is capable of that typical sensor networks are not. Section \ref{arch:tech} details the software and data standard choices we made for our implementation of K-HAS. Section \ref{arch:walk} provides a sample walk-through of K-HAS, relating to our motivating scenario and Section \ref{arch:conc} concludes the chapter.
 
 	\begin{figure}[h]
-			\centering
-			\includegraphics[width=0.65\textwidth]{Chap4/figures/khasarch} 
-			\caption{Overview of the K-HAS Architecture}
-			\label{arch:khas:arch}
-			\end{figure}
+	\centering
+	\includegraphics[width=0.65\textwidth]{Chap4/figures/khasarch} 
+	\caption{Overview of the K-HAS Architecture}
+	\label{arch:khas:arch}
+	\end{figure}
 
 
 \section{The Local Knowledge Problem}
@@ -115,7 +115,7 @@ Once a trigger has been processed, the data is packaged and then sent on to the 
 	\subsection{Sequence Diagram}
 	In figure \ref{arch:seq}, we have outlined the interactions that take place between nodes when an observation has been captured. Some parts of the architecture have not been fully implemented and those are highlighted throughout this chapter. This diagram provides a visual representation of how the tiers of K-HAS interact as well as how K-HAS prioritises sensed data and how K-HAS could utilise knowledge of professionals to improve the accuracy of its classifications.
 
-	\begin{figure}
+	\begin{figure}[H]
     \centering
       \includegraphics[width=\textwidth]{Chap4/figures/sd.png}
     \caption{Sequence Diagram for K-HAS upon Capture of an Observation}
@@ -366,7 +366,7 @@ Darwin Core is suited to K-HAS because its use in ecological observations matche
 			
 			The middleware on the node supports a web interface to allow users to perform administrative functions on the network, such as deploy a new node, on top of this there is a custom made website that shows all observations for every DC node. This allows users to log on and classify the images. In this case, the lecturer receives the email notification, reviews the attached images and clicks on the link to access the website to inform the DP node that the classification was correct. Due to the administrator position the lecturer has on the system, he is able to stop any users voting on the image and to simply confirm the classification.
 			
-			When a user classifies the observation, they see that a clouded leopard has been spotted in the same area on the same day for the past 5 weeks and they create a rule (in Drools syntax) to automatically classify images from this camera that have a similar time (within an hour) and have an object extracted from them by the image processing. The user can then upload the rules through the same web interface and it will instantly become active on the system. In the current implementation, rules can only be added by humans and the Drools API we have implemented then updates the rule base. The web interface allows users to study patterns in existing sensed data and perform queries on the database, from this they can identify rules and upload them. In the future, a module for K-HAS could be written that would suggest rules based on detected patterns, or even insert them itself.
+			When a user classifies the observation, they see that a clouded leopard has been spotted in the same area on the same day for the past 5 weeks and they create a rule (in Drools syntax) to automatically classify images from this camera that have a similar time (within an hour) and have an object extracted from them by the image processing. The user can then upload the rules through the same web interface and it will instantly become active on the system. In the current implementation, rules can only be added by humans and the Drools API we have implemented then updates the rule base. The web interface allows users to study patterns in existing sensed data and perform queries on the database, from this they can identify rules and upload them.
 
 			If there was no classification, then users would be able to vote on the contents and use the classification with the highest vote, or the classification made by an administrator. Once a classification has been made, it is stored in the database and written to the archive. This triggers the DA node to send that classification on to the DP node that sent the original archive. In this case, the DA node informed the DP node that it has been confirmed as a clouded leopard and the DP node then stores the extracted image in the directory of clouded leopard templates, to assist with future classifications. This updated template causes the rule base of the DP node to be updated so similar data processed in the future would be correctly identified. The longer the network is deployed, the more knowledge DP nodes could gain and the more accurate their classifications can be. For example, a change in season could cause a new, previously unknown animal to migrate to the rainforest. With human assistance, the animal can be identified and determined whether it is of interest. This knowledge can then be stored and sent on to DP nodes to prioritise and classify correctly the next time that it is captured. The feedback loop protocol is currently only a design and has been minimally implemented as a proof of concept, we believe it can improve the accuracy of classification in a WSN whilst ndoes are still deployed but it would require testing in the future.
 					

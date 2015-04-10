@@ -199,7 +199,7 @@ These definitions outline the core concepts of SensorML, a \textit{system} that 
 %</Component>
 %  \end{lstlisting}
 
-\subsection{Combinatorial Ontologies}
+\subsection{Combined Sensor and Observation Ontologies}
 In this section, we review ontologies that represent the hardware of the sensors within a network, as well as the observations they record. This allows them to model the sensing capabilities of each sensor, the measurements they capture and the data they record.
 
 \subsubsection{SSN}
@@ -224,7 +224,8 @@ The SHO ontology is another extension of SUMO, from \cite{Eid2007}, that represe
 
 
 \subsection{Findings}
-There are many ontologies that are suited for sensor-based scientific observations and ontologies that allow for the description of sensor hardware cover the hardware capabilities of sensors as a whole and sensor systems comprised of multiple sensors in great detail. SSN and SUMO were the closest that we found for this, but SSN was still very hardware focused and went into greater detail of the hardware capabilities of each measuring devices than we needed. SSN primarily describes the hardware of each node and their capabilities, whereas our requirements are for both hardware and sensed data to be represented in a single ontology. 
+There are many ontologies that are suited for sensor-based scientific observations and ontologies that allow for the description of sensor hardware cover the hardware capabilities of sensors as a whole and sensor systems comprised of multiple sensors in great detail. SSN and SUMO were the closest that we found for this, but SSN was still very hardware focused and went into greater detail of the hardware capabilities of each measuring devices than we needed. 
+%SSN's focus on the hardware of each node and their capabilities is different to our requirements for both hardware and sensed data to be represented in a single ontology. 
 
 While the SHO and SDO extensions of SUMO are classed as both an observation-centric and sensor-centric ontologies, they are separate ontologies that model both sensor hardware and sensed data and, while the development of these ontologies did follow a similar approach to the one described in this chapter (combining ontologies), the core concepts of SHO and SDO are more focussed on retrieval of sensed data through queries constructed using both hardware details and properties of the sensed data.
  %does not fulfil all of the requirements we identified when developing K-HAS, such as representing users. 
