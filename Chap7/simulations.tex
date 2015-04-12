@@ -169,7 +169,9 @@ An observation is marked as delivered once it has been received by the central n
 % \subsection{In-Network Processing}
 In this section, we show plots for each scenario and the variations on bandwidth and transmission rate. The resulting CSV files from each run were processed with the R programming language \cite{rlang} and summary statistics were output to find the mean transmission time for all observations, interesting and empty, as well as those that were delivered to the end point during the runtime of the simulation.
 
-The general trend that is clear from all the figures below is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central processing, but it does speed up the delivery of interesting observations, especially when the network is saturated. 
+The general trend that is clear from all the figures below is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central processing, but it does speed up the delivery of interesting observations, especially when the network is saturated.
+
+%\csvautotabular{Chap7/figures/del_test.csv} 
 
 \subsubsection{Average Transmission Time}
 	When the network is saturated, it becomes clear that scenarios without any knowledge processing capabilities are unable to prioritise what is sent and all observations experience a uniform time, shown in Figure \ref{fig:sim:res:sat:variable:delmean}, but scenarios, such as HK-HK-HK, MK-HK-NK or MK-MK-NK are able to prioritise.
