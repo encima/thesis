@@ -80,9 +80,9 @@ The parameters used in these simulations were either gained through experiments 
 	\begin{landscape}
 	\begin{table} 
 	\begin{tabularx}{\textwidth}{|p{4cm}|p{10cm}|p{3cm}|p{2cm}|p{2cm}|}
-
+\toprule
 	\textbf{Parameter}                      & \textbf{Description}                                                                                                        & \textbf{Value(s)}   & \textbf{Constant?} & \textbf{Observed?} \\
-
+\midrule
 	Sensing Node Count                      & The number of sensing nodes in the network                                                                                  & 20                  & Yes                & No                 \\
 	Routing Node Count                      & The number of routing nodes in the network                                                                                  & 4                   & Yes                & No                 \\
 	Central Node Count                      & The number of central nodes in the network                                                                                  & 1                   & Yes                & No                 \\
@@ -99,7 +99,8 @@ The parameters used in these simulations were either gained through experiments 
 	HK Processing Time                      & Time to process an observation with high knowledge processing capabilities (Central Node or Routing/Sensing Node)           & 30 or 43            & Yes                & No                 \\
 	MK Processing Time                      & Time to process an observation with minimal knowledge processing capabilities                                               & 5                   & Yes                & No                 \\
 	Observation Size                        & Size of the generated observation, the combination of 3 randomly generated image sizes                                      & 1362-2598 KB        & No                 & No                 \\
-	Transmission Time                       & The time an image takes to pass through the network, from point of capture to being received by the central node            & -                   & No                 & Yes               
+	Transmission Time                       & The time an image takes to pass through the network, from point of capture to being received by the central node            & -                   & No                 & Yes      \\
+	\bottomrule         
 	\end{tabularx}
 	\caption{Parameters Used to Configure Repast Simulations}
 	\end{table}
@@ -169,169 +170,193 @@ An observation is marked as delivered once it has been received by the central n
 % \subsection{In-Network Processing}
 In this section, we show plots for each scenario and the variations on bandwidth and transmission rate. The resulting CSV files from each run were processed with the R programming language \cite{rlang} and summary statistics were output to find the mean transmission time for all observations, interesting and empty, as well as those that were delivered to the end point during the runtime of the simulation.
 
-The general trend that is clear from all the figures below is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central processing, but it does speed up the delivery of interesting observations, especially when the network is saturated.
+ Table \ref{tab:delnum} shows the number of observations delivered for each scenario and their variations. We can see that almost all observations are delivered when the network is not saturated and the transmission rate is ideal, despite Zigbee's low transmission rate. As knowledge is pushed out into the network, the processing time becomes a factor on top of the transmission time and we can see that this reduces the number of received observations. MK-HK-NK is the lowest here and we believe that is because it is the only scenario that processes an observation twice (with MK and then HK), but we discuss this in greater detail as we analyse the results further. As we discussed previously, processing on the DA node means that an observation is only marked as delivered when it has been processed. However, the short processing times (when compared to long transmission times) and the fact that a DA node can process up to four observations in parallel means that this is not really a bottleneck.
+ 
+\begin{landscape}
+\begin{table}[htbp]
+    \begin{tabular}{rrrrrrr}
 
-%\csvautotabular{Chap7/figures/del_test.csv} 
+    \toprule
+    Mode  & Bandwidth & Transmission Rate & All   & Delivered & Undelivered & \% Delivered \\
+    \midrule
+    NK-NK-NK & normal & ideal & 44524.6 & 44501 & 24    & 100 \\
+    NK-NK-NK & normal & variable & 44437.6 & 30088 & 14350 & 68 \\
+    NK-NK-NK & saturated & ideal & 444955.2 & 89933 & 355022 & 20 \\
+    NK-NK-NK & saturated & variable & 444858.9 & 48830 & 396029 & 11 \\
+\rowcolor{Gray}    
+    NK-NK-MK & normal & ideal & 44408 & 44255 & 153   & 100 \\
+\rowcolor{Gray}
+    NK-NK-MK & normal & variable & 44538.8 & 35131 & 9407  & 79 \\
+\rowcolor{Gray}
+    NK-NK-MK & saturated & ideal & 444714 & 129224 & 315490 & 29 \\
+\rowcolor{Gray}
+    NK-NK-MK & saturated & variable & 444569.6 & 66454 & 378115 & 15 \\
+    NK-NK-HK & normal & ideal & 44480.73 & 44478 & 3     & 100 \\
+    NK-NK-HK & normal & variable & 44512.4 & 32804 & 11708 & 74 \\
+    NK-NK-HK & saturated & ideal & 444898.5 & 134552 & 310347 & 30 \\
+    NK-NK-HK & saturated & variable & 444759.8 & 57105 & 387655 & 13 \\
+\rowcolor{Gray}
+    NK-MK-NK & normal & ideal & 44500.93 & 40614 & 3887  & 91 \\
+\rowcolor{Gray}
+    NK-MK-NK & normal & variable & 44429.87 & 27981 & 16448 & 63 \\
+\rowcolor{Gray}
+    NK-MK-NK & saturated & ideal & 444858.2 & 106656 & 338202 & 24 \\
+\rowcolor{Gray}
+    NK-MK-NK & saturated & variable & 444649.5 & 50643 & 394006 & 11 \\
+    MK-MK-NK & normal & ideal & 44483.8 & 44206 & 278   & 99 \\
+    MK-MK-NK & normal & variable & 44533.13 & 26307 & 18226 & 59 \\
+    MK-MK-NK & saturated & ideal & 444593.7 & 92904 & 351690 & 21 \\
+    MK-MK-NK & saturated & variable & 444988.9 & 51225 & 393764 & 12 \\
+\rowcolor{Gray}
+    MK-HK-NK & normal & ideal & 44513.73 & 40927 & 3586  & 92 \\
+\rowcolor{Gray}
+    MK-HK-NK & normal & variable & 44455.47 & 23638 & 20817 & 53 \\
+\rowcolor{Gray}
+    MK-HK-NK & saturated & ideal & 443211.3 & 79864 & 363347 & 18 \\
+\rowcolor{Gray}
+    MK-HK-NK & saturated & variable & 444397.5 & 46454 & 397943 & 10 \\
+    HK-HK-NK & normal & ideal & 44423.73 & 43378 & 1045  & 98 \\
+    HK-HK-NK & normal & variable & 44437.33 & 29295 & 15142 & 66 \\
+    HK-HK-NK & saturated & ideal & 445257 & 97790 & 347467 & 22 \\
+    HK-HK-NK & saturated & variable & 444816.9 & 46061 & 398756 & 10 \\
+    \bottomrule
 
-\subsubsection{Average Transmission Time}
-	When the network is saturated, it becomes clear that scenarios without any knowledge processing capabilities are unable to prioritise what is sent and all observations experience a uniform time, shown in Figure \ref{fig:sim:res:sat:variable:delmean}, but scenarios, such as HK-HK-HK, MK-HK-NK or MK-MK-NK are able to prioritise.
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/delivered_mean.png}
-	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:delmean}
-	\end{figure}
+    \end{tabular}%
+    \caption{All Observations Captured and Delivered}
+\end{table}%
+\label{tab:delnum}%
+\end{landscape}
 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/delivered_mean.png}
-	\caption{Delivered Observations Mean Transmission Time for Normal Saturation and Variable Transmission Rate}
+%%%NormIdeal
+\subsection{Normal Network}
+
+When the network is not saturated and Zigbee is able to transmit observations at its maximum transmission rate, we can see that the transmission rate increases the further we push knowledge out into the network (Figure \ref{fig:sim:res:norm:ideal:delmean}). However, higher knowledge at the edge of the network significantly reduces the transmission time for an interesting observation. MK-HK-NK is higher than even MK-MK-MK because of its increased processing time, although MK-HK-NK is able to more accurately determine TPs.
+
+Figure \ref{fig:sim:res:norm:ideal:delundel} shows that all scenarios delivered the majority of the observations captured. MK-HK-NK delivered around 95\% but this is likely due to the processing time discussed previously. The reduced number for NK-MK-NK is odd, we believe it is because the DP nodes become a bottleneck for processing as they can only process a single observation at a time. Because the network was not saturated, the delivered observations are consistent with the configuration parameters outlined in Table \ref{sim:tab:params}.
+
+With a variable transmission rate, nodes could transmit anywhere from 20kbps to the maximum 250kbps that Zigbee provides, Figure \ref{fig:sim:res:norm:variable:delundel} shows how this affects the number of delivered observations. Central processing allows for the greatest number of observations to be delivered and we expected that NK-NK-NK would deliver almost everything. We are unsure as to why this is.
+
+\begin{figure}
+
+\begin{subfigure}{\textwidth}
+\centering
+  \includegraphics[height=.5\textheight]{Chap7/figures/plots/normal_ideal/delivered_mean.png}
+  \caption{Ideal Transmission Rate}
+\label{fig:sim:res:norm:ideal:delmean}
+\end{subfigure}%
+\vfill
+\begin{subfigure}{\textwidth}
+\centering
+  \includegraphics[height=.5\textheight]{Chap7/figures/plots/normal_variable/delivered_mean.png}
+  \caption{variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delmean}
-	\end{figure}
+\end{subfigure}
+\caption{Mean Transmission Times for Delivered Observations for a Normal Network}
+\end{figure}
 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/delivered_mean.png}
-	\caption{Delivered Observations Mean Transmission Time for Saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:delmean}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
-	\caption{Delivered Observations Mean Transmission Time for Saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:delmean}
-	\end{figure}
-
-\subsubsection{Delivered vs. Undelivered}
-	Figure \ref{fig:sim:res:norm:ideal:delundel} shows that, when the network is not saturated and the transmission rate remains at the maximum, almost all observations are received by the DA node, regardless of the scenario. 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:delundel}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for Normal Saturation and Variable Transmission Rate}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=\linewidth]{Chap7/figures/plots/normal_ideal/delvsundel_percent.png}
+  \caption{Ideal Transmission Rate}
+\label{fig:sim:res:norm:ideal:delundel}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+	\includegraphics[width=\linewidth]{Chap7/figures/plots/normal_variable/delvsundel_percent.png}
+  \caption{variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delundel}
-	\end{figure}
+\end{subfigure}
+\caption{Delivered vs Undelivered Observations for a Normal Network}
+\end{figure}
 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for Saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:delundel}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
-	\caption{Delivered vs Undelivered Observations for Saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:delundel}
-	\end{figure}
-
-\subsubsection{Interesting vs. Empty}
-	The pattern of interesting vs empty observations is clearest when looking at a saturated network. Figures \ref{fig:sim:res:sat:ideal:emptint} and \ref{fig:sim:res:sat:variable:emptint} show that, of the total observations delivered, HK-HK-HK has the most interesting observations. When the transmission rate is ideal, HK-HK-HK is still ahead but MK-HK-NK is slightly less than the central processing scenarios, in terms of interesting observations. Comparing this with the mean transmission time (Figure \ref{fig:sim:res:sat:ideal:delmean}), MK-HK-NK has a lower transmission time for interesting observations, while still delivering a similar amount.
-
-	Under normal saturation (Figures \ref{fig:sim:res:norm:ideal:emptint}\ref{fig:sim:res:norm:variable:emptint}), the split is fairly uniform. 
-
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for Normal Saturation and Ideal Transmission Rate}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/emptvsint_percent.png}
+  \caption{Ideal Transmission Rate}
 	\label{fig:sim:res:norm:ideal:emptint}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for Normal Saturation and Variable Transmission Rate}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
+  \caption{variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:emptint}
-	\end{figure}
+\end{subfigure}
+\caption{Interesting vs Empty Delivered Observations for a Normal Network}
+\end{figure}
 
+\subsection{Saturated Network}
+The transmission time for both ideal and variable transmission rates is greatly increased when the network is saturated and we expected these scenarios to show how pushing knowledge further into the network provides more interesting observations faster, prioritising when the network is aware that it cannot deliver every observation it has captured.
+
+	The pattern in Figure \ref{fig:sim:res:sat:ideal:delmean} is similar to those of Figures \ref{fig:sim:res:norm:ideal:delmean}and \ref{fig:sim:res:norm:variable:delmean}. Scenarios of central processing (and no knowledge) are consistently high, as is NK-MK-NK because nodes cannot prioritise data from the edge. HK-HK-NK is much faster when delivering interesting observations, which would also reduce the mean transmission time for all observations but we did not expect to see a reduction in the time taken for empty observations when compared with other scenarios. This is most likely because the processing time of HK-HK-NK means that fewer observations are delivered in each run (Figure \ref{fig:sim:res:sat:ideal:delundel}) but could also be because of empty observations misclassified as interesting being prioritised through the network as it is the only scenario that can mark an observation as empty from the edge. However, the higher accuracy of HK-HK-NK should mean that fewer misclassifications are made. 
+	
+\begin{figure}[H]
+\centering
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[height=.5\textheight]{Chap7/figures/plots/saturated_ideal/delivered_mean.png}
+  \caption{Ideal Transmission Rate}
+	\label{fig:sim:res:sat:ideal:delmean}
+\end{subfigure}%
+\vfill
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[height=.5\textheight]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
+  \caption{variable Transmission Rate}
+	\label{fig:sim:res:sat:variable:delmean}
+\end{subfigure}
+\caption{Mean Transmission Times for Delivered Observations for a Saturated Network}
+\end{figure}
+	
 	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for Saturated Saturation and Ideal Transmission Rate}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=\linewidth]{Chap7/figures/plots/saturated_ideal/delvsundel_percent.png}
+  \caption{Ideal Transmission Rate}
+\label{fig:sim:res:sat:ideal:delundel}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+	\includegraphics[width=\linewidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
+  \caption{variable Transmission Rate}
+	\label{fig:sim:res:sat:variable:delundel}
+\end{subfigure}
+\caption{Delivered vs Undelivered Observations for a Normal Network}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=\linewidth]{Chap7/figures/plots/saturated_ideal/emptvsint_percent.png}
+  \caption{Ideal Transmission Rate}
 	\label{fig:sim:res:sat:ideal:emptint}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
-	\caption{Interesting vs Empty Observations for Saturated Saturation and Variable Transmission Rate}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+\includegraphics[width=\linewidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
+  \caption{variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:emptint}
-	\end{figure}
-\subsubsection{True Positive vs. False Positive}
-	
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/tpvsfp_percent.png}
-	\caption{TP vs FP Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:tpfp}
-	\end{figure}
+\end{subfigure}
+\caption{Interesting vs Empty Delivered Observations for a Normal Network}
+\end{figure}
 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/tpvsfp_percent.png}
-	\caption{TP vs FP Observations for Normal Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:norm:variable:tpfp}
-	\end{figure}
 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/tpvsfp_percent.png}
-	\caption{TP vs FP Observations for Saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:tpfp}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/tpvsfp_percent.png}
-	\caption{TP vs FP Observations for Saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:tpfp}
-	\end{figure}
-\subsubsection{True Negative vs. False Negative}
-	
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/tnvsfn_percent.png}
-	\caption{TN vs FN Observations for Normal Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:norm:ideal:tnfn}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/normal_variable/tnvsfn_percent.png}
-	\caption{TN vs FN Observations for Normal Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:norm:variable:tnfn}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_ideal/tnvsfn_percent.png}
-	\caption{TN vs FN Observations for Saturated Saturation and Ideal Transmission Rate}
-	\label{fig:sim:res:sat:ideal:tnfn}
-	\end{figure}
-
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Chap7/figures/plots/saturated_variable/tnvsfn_percent.png}
-	\caption{TN vs FN Observations for Saturated Saturation and Variable Transmission Rate}
-	\label{fig:sim:res:sat:variable:tnfn}
-	\end{figure}
 
 \section{Conclusion}\label{sim:conc}
+The general trend that is clear from all the figures is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central/no processing, but it does speed up the delivery of interesting observations, especially when the network is saturated.
 
 These simulations first show that saturating the network simply by increasing the chance of capture ten fold can have a huge impact on the transmission time of observations and really tests how each scenario prioritises data within the network. While processing each observation can take time depending on whether the node possesses minimal or high knowledge processing capabilities, it does not seem to be the bottleneck here. With nodes only having a single radio, sending in parallel is not possible and waiting for a neighbouring node to be available can delay an observation massively.
 
 Pushing knowledge further out into the network does reduce the time taken for an interesting observation to reach the central node. When the network is saturated, it is clear to see how the prioritisation can impact what data is delivered and that higher knowledge processing capabilities allows for interesting data to be delivered faster and with a higher priority. The downside to MK-HK-NK is that this processing needs to occur twice: once at the data collection node and again on the data processing node and it seems that this adds a delay to observations. However, in many situations, it may not be possible to put high knowledge processing nodes throughout the network as they are more expensive, more powerful nodes that would likely draw more power.
 
 If the requirement of a sensor network was to deploy a network that had no time restriction on when data was delivered but context was required then central processing is the more logical choice. However, if interesting data needed to be prioritised then using nodes with knowledge at the edge of the network allows for that prioritisation and, while the time to process is an overhead, it does prioritise well enough that the data aggregation becomes a stream of data based on importance, as well as time captured.
+
+
 
 % \section{Conclusion} \label{sim:conc}
 	
