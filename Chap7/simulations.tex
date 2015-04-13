@@ -34,13 +34,13 @@ At the routing and sensing tier, the degree of knowledge processing capabilities
 The scenarios we have tested show various combinations of knowledge within the network, as well as the combination of knowledge processing at the centre, as a baseline. We can list all the scenarios in as triples, with the knowledge levels described above depicting the knowledge level for each node. The list below shows this:
 
 	\begin{itemize}
-		\item NK-NK-NK: Sensing and routing nodes possess no knowledge processing capabilities.
-		\item MK-MK-NK: Sensing and routing nodes possess minimal knowledge processing capabilities.
-		\item NK-MK-NK: Sensing nodes possess no knowledge processing and routing nodes have minimal knowledge.
-		\item MK-HK-NK (K-HAS): Sensing nodes have minimal knowledge and routing nodes possess high knowledge. This scenario matches the K-HAS architecture we proposed in Chapter \ref{chap:arch}
-		\item HK-HK-NK: Sensing and routing nodes have high processing capabilities.
 		\item NK-NK-MK: Sensing and routing nodes have no knowledge processing capabilities with minimal processing capabilities on the central node.
 		\item NK-NK-HK: Sensing and routing nodes have no knowledge processing capabilities with high processing capabilities on the central node.
+		%\item NK-NK-NK: Sensing and routing nodes possess no knowledge processing capabilities.
+		\item NK-MK-NK: Sensing nodes possess no knowledge processing and routing nodes have minimal knowledge.
+		\item MK-NK-NK: Sensing and routing nodes possess minimal knowledge processing capabilities.
+		\item MK-HK-NK (K-HAS): Sensing nodes have minimal knowledge and routing nodes possess high knowledge. This scenario matches the K-HAS architecture we proposed in Chapter \ref{chap:arch}
+		\item HK-NK-NK: Sensing nodes have high processing capabilities.	
 	\end{itemize}
 
 The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with yellow nodes representing sensing nodes, green nodes representing routing nodes and the red node representing the central node.
@@ -160,11 +160,73 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 	
 	Once the simulation is completed, either manually or through a defined number of ticks, the archives in each node are iterated over and written to a CSV file, with details such as the path it took, total transmission time and time of capture.
 
+
 \subsection{Observation Transmission}
 When a node has no knowledge, it simply sends the observation that was first added to its queue. With MK, it finds the first \textit{interesting} observation and sends that, if one is not in the queue then an observation marked as \textit{unknown}. HK performs much the same as MK except it instead looks for \textit{empty} observation if an \textit{interesting} cannot be found. If a node has any form of knowledge processing power, it will not send an observation unless it has first been processed. Nodes can only send an observation one at a time and must also wait for the receiving node to be free.
 
 An observation is marked as delivered once it has been received by the central node, if there is only processing at the central node, then delivery is delayed until the central node has processed it.
 
+\subsection{Processing}
+Repast has built in functionality that allows for methods to be scheduled to start at a certain tick and repeat at set intervals. The way a scheduled method works is that it is run at the time specified and further scheduled methods can be prevented from running until it has completed. Much of the node's functionality is handled in this way. A processing method is set to run every 10 ticks (seconds) to replicate the functionality of checking a file system for new observations. The earliest (unprocessed)observation is found and a processing method is scheduled, depending on the knowledge level of the node. The function for DA nodes is the same, except they are able to process 4 observations simultaneously. This is shown in listing \ref{alg:sim:proc} and listing \ref{alg:sim:know} shows how classifications are made. 
+
+Observations are passed to the processing methods and those methods run for the specified durations. High knowledge processing nodes are able to determine an empty observation with 97\% accuracy and detect an object of interest with 82\% accuracy. A random number is generated and compared with these values, to determine how the observation is classified. Once the observation has been classified, the node marks itself as not processing to allow a new observation to be classified. 
+
+\begin{lstlisting}[breaklines=true, caption={Processing Function for DA and DP Nodes}, label={alg:sim:proc}, language=java]
+kL = getKnowledgeLevel()
+if(kL == NoKnowledge OR isProcessing) {
+	return
+}else{
+	obs = getEarliestObservation()
+	if(obs.identification IS NULL OR (obs.identification NOT NULL AND obs.identifiedBy.getKnowledgeLevel() < kL)) {
+		if (kL == MinimalKnowledge) {
+			schedule method for minimal processing to run as soon as possible for 5 ticks
+			setProcessing(true)
+		}else if(kL == HighKnowledge) {
+			schedule method for high processing to run as soon as possible for 43 ticks
+			setProcessing(true)
+		}
+	}
+}
+\end{lstlisting}
+\vfill
+\begin{lstlisting}[breaklines=true, caption={Processing Functions for Nodes}, label={alg:sim:know}, language=java]
+void highKnowledge(obs) {
+	rand = generateRandomNumber()
+	interestingAccuracy = 0.82
+	emptyAccuracy = 0.97
+	if(obs.actualContent = "INTERESTING") {
+		if R < interestingAccuracy
+			obs.id = "INTERESTING"
+		else
+			obs.id = "UNKNOWN"
+	}else{
+		if R < emptyAccuracy
+			obs.id = "EMPTY"
+		else
+			obs.id = "UNKNOWN"
+	}
+	if(this == centralNode)
+		obs.processingTime += 30
+	else
+		obs.processingTime += 43
+	setProcessing(false)
+}
+void lowKnowledge(obs) {
+	rand = generateRandomNumber()
+	interestingAccuracy = 0.1
+	if(obs.actualContent = "INTERESTING") {
+		if R < interestingAccuracy
+			obs.id = "INTERESTING"
+		else
+			obs.id = "UNKNOWN"
+	}else{
+		obs.id = "UNKNOWN"
+	}
+	obs.processingTime += 5
+	setProcessing(false)
+}
+
+\end{lstlisting}
 
 \section{Results}\label{sim:res}
 % \subsection{In-Network Processing}
@@ -179,10 +241,10 @@ In this section, we show plots for each scenario and the variations on bandwidth
     \toprule
     Mode  & Bandwidth & Transmission Rate & All   & Delivered & Undelivered & \% Delivered \\
     \midrule
-    NK-NK-NK & normal & ideal & 44524.6 & 44501 & 24    & 100 \\
-    NK-NK-NK & normal & variable & 44437.6 & 30088 & 14350 & 68 \\
-    NK-NK-NK & saturated & ideal & 444955.2 & 89933 & 355022 & 20 \\
-    NK-NK-NK & saturated & variable & 444858.9 & 48830 & 396029 & 11 \\
+    % NK-NK-NK & normal & ideal & 44524.6 & 44501 & 24    & 100 \\
+    % NK-NK-NK & normal & variable & 44437.6 & 30088 & 14350 & 68 \\
+    % NK-NK-NK & saturated & ideal & 444955.2 & 89933 & 355022 & 20 \\
+    % NK-NK-NK & saturated & variable & 444858.9 & 48830 & 396029 & 11 \\
 \rowcolor{Gray}    
     NK-NK-MK & normal & ideal & 44408 & 44255 & 153   & 100 \\
 \rowcolor{Gray}
@@ -202,11 +264,11 @@ In this section, we show plots for each scenario and the variations on bandwidth
 \rowcolor{Gray}
     NK-MK-NK & saturated & ideal & 444858.2 & 106656 & 338202 & 24 \\
 \rowcolor{Gray}
-    NK-MK-NK & saturated & variable & 444649.5 & 50643 & 394006 & 11 \\
-    MK-MK-NK & normal & ideal & 44483.8 & 44206 & 278   & 99 \\
-    MK-MK-NK & normal & variable & 44533.13 & 26307 & 18226 & 59 \\
-    MK-MK-NK & saturated & ideal & 444593.7 & 92904 & 351690 & 21 \\
-    MK-MK-NK & saturated & variable & 444988.9 & 51225 & 393764 & 12 \\
+    NK-NK-NK & saturated & variable & 444649.5 & 50643 & 394006 & 11 \\
+    MK-NK-NK & normal & ideal & 44483.8 & 44206 & 278   & 99 \\
+    MK-NK-NK & normal & variable & 44533.13 & 26307 & 18226 & 59 \\
+    MK-NK-NK & saturated & ideal & 444593.7 & 92904 & 351690 & 21 \\
+    MK-NK-NK & saturated & variable & 444988.9 & 51225 & 393764 & 12 \\
 \rowcolor{Gray}
     MK-HK-NK & normal & ideal & 44513.73 & 40927 & 3586  & 92 \\
 \rowcolor{Gray}
@@ -214,11 +276,11 @@ In this section, we show plots for each scenario and the variations on bandwidth
 \rowcolor{Gray}
     MK-HK-NK & saturated & ideal & 443211.3 & 79864 & 363347 & 18 \\
 \rowcolor{Gray}
-    MK-HK-NK & saturated & variable & 444397.5 & 46454 & 397943 & 10 \\
-    HK-HK-NK & normal & ideal & 44423.73 & 43378 & 1045  & 98 \\
-    HK-HK-NK & normal & variable & 44437.33 & 29295 & 15142 & 66 \\
-    HK-HK-NK & saturated & ideal & 445257 & 97790 & 347467 & 22 \\
-    HK-HK-NK & saturated & variable & 444816.9 & 46061 & 398756 & 10 \\
+    MK-NK-NK & saturated & variable & 444397.5 & 46454 & 397943 & 10 \\
+    HK-NK-NK & normal & ideal & 44423.73 & 43378 & 1045  & 98 \\
+    HK-NK-NK & normal & variable & 44437.33 & 29295 & 15142 & 66 \\
+    HK-NK-NK & saturated & ideal & 445257 & 97790 & 347467 & 22 \\
+    HK-NK-NK & saturated & variable & 444816.9 & 46061 & 398756 & 10 \\
     \bottomrule
 
     \end{tabular}%
@@ -291,7 +353,7 @@ With a variable transmission rate, nodes could transmit anywhere from 20kbps to 
 \subsection{Saturated Network}
 The transmission time for both ideal and variable transmission rates is greatly increased when the network is saturated and we expected these scenarios to show how pushing knowledge further into the network provides more interesting observations faster, prioritising when the network is aware that it cannot deliver every observation it has captured.
 
-	The pattern in Figure \ref{fig:sim:res:sat:ideal:delmean} is similar to those of Figures \ref{fig:sim:res:norm:ideal:delmean}and \ref{fig:sim:res:norm:variable:delmean}. Scenarios of central processing (and no knowledge) are consistently high, as is NK-MK-NK because nodes cannot prioritise data from the edge. HK-HK-NK is much faster when delivering interesting observations, which would also reduce the mean transmission time for all observations but we did not expect to see a reduction in the time taken for empty observations when compared with other scenarios. This is most likely because the processing time of HK-HK-NK means that fewer observations are delivered in each run (Figure \ref{fig:sim:res:sat:ideal:delundel}) but could also be because of empty observations misclassified as interesting being prioritised through the network as it is the only scenario that can mark an observation as empty from the edge. However, the higher accuracy of HK-HK-NK should mean that fewer misclassifications are made. 
+	The pattern in Figure \ref{fig:sim:res:sat:ideal:delmean} is similar to those of Figures \ref{fig:sim:res:norm:ideal:delmean}and \ref{fig:sim:res:norm:variable:delmean}. Scenarios of central processing (and no knowledge) are consistently high, as is NK-MK-NK because nodes cannot prioritise data from the edge. HK-NK-NK is much faster when delivering interesting observations, which would also reduce the mean transmission time for all observations but we did not expect to see a reduction in the time taken for empty observations when compared with other scenarios. This is most likely because the processing time of HK-NK-NK means that fewer observations are delivered in each run (Figure \ref{fig:sim:res:sat:ideal:delundel}) but could also be because of empty observations misclassified as interesting being prioritised through the network as it is the only scenario that can mark an observation as empty from the edge. However, the higher accuracy of HK-HK-NK should mean that fewer misclassifications are made. 
 	
 \begin{figure}[H]
 \centering

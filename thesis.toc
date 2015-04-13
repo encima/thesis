@@ -149,24 +149,25 @@
 \contentsline {subsubsection}{Discovery}{147}{section*.87}
 \contentsline {subsubsection}{Transmission}{148}{section*.88}
 \contentsline {subsection}{\numberline {7.3.3}Observation Transmission}{149}{subsection.7.3.3}
-\contentsline {section}{\numberline {7.4}Results}{150}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Normal Network}{152}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Saturated Network}{154}{subsection.7.4.2}
-\contentsline {section}{\numberline {7.5}Conclusion}{158}{section.7.5}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{159}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of Contributions}{160}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}K-HAS}{161}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Ontology}{161}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}LORIS}{161}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Simulations}{162}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}Future Work}{162}{section.8.2}
-\contentsline {chapter}{Bibliography}{166}{section.8.2}
-\contentsline {chapter}{Appendices}{182}{section*.96}
-\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{183}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{185}{Appendix.1.B}
-\contentsline {chapter}{\numberline {C}K-HAS Ontology}{187}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{190}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{191}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{194}{Appendix.1.F}
-\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{195}{Appendix.1.G}
-\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{197}{Appendix.1.H}
+\contentsline {subsection}{\numberline {7.3.4}Processing}{150}{subsection.7.3.4}
+\contentsline {section}{\numberline {7.4}Results}{151}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Normal Network}{154}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Saturated Network}{156}{subsection.7.4.2}
+\contentsline {section}{\numberline {7.5}Conclusion}{160}{section.7.5}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{161}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of Contributions}{162}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}K-HAS}{163}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ontology}{163}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}LORIS}{163}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Simulations}{164}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Future Work}{164}{section.8.2}
+\contentsline {chapter}{Bibliography}{168}{section.8.2}
+\contentsline {chapter}{Appendices}{184}{section*.96}
+\contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{185}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{187}{Appendix.1.B}
+\contentsline {chapter}{\numberline {C}K-HAS Ontology}{189}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Example Drools Rules Used in LORIS}{192}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Interview Transcript: Gill Bolongon}{193}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Qualitative Analysis Extract}{196}{Appendix.1.F}
+\contentsline {chapter}{\numberline {G}Class Diagram for Repast Simulation}{197}{Appendix.1.G}
+\contentsline {chapter}{\numberline {H}Repast Parameters File Example}{199}{Appendix.1.H}
