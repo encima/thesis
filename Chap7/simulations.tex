@@ -292,7 +292,7 @@ In this section, we show plots for each scenario and the variations on bandwidth
 %%%NormIdeal
 \subsection{Normal Network}
 
-When the network is not saturated and Zigbee is able to transmit observations at its maximum transmission rate, we can see that the transmission rate increases the further we push knowledge out into the network (Figure \ref{fig:sim:res:norm:ideal:delmean}). However, higher knowledge at the edge of the network significantly reduces the transmission time for an interesting observation. MK-HK-NK is higher than even MK-MK-MK because of its increased processing time, although MK-HK-NK is able to more accurately determine TPs.
+When the network is not saturated and Zigbee is able to transmit observations at its maximum transmission rate, we can see that the transmission rate increases the further we push knowledge out into the network (Figure \ref{fig:sim:res:norm:ideal:delmean}). NK-NK-HK is not visible in the figure because it has such a low mean transmission time, this appears to be an anomaly that is not apparent in other scenarios and may be corrected with more runs. Higher knowledge at the edge of the network significantly reduces the transmission time for an interesting observation. MK-HK-NK is higher than even MK-MK-MK because of its increased processing time, although MK-HK-NK is able to more accurately determine TPs.
 
 Figure \ref{fig:sim:res:norm:ideal:delundel} shows that all scenarios delivered the majority of the observations captured. MK-HK-NK delivered around 95\% but this is likely due to the processing time discussed previously. The reduced number for NK-MK-NK is odd, we believe it is because the DP nodes become a bottleneck for processing as they can only process a single observation at a time. Because the network was not saturated, the delivered observations are consistent with the configuration parameters outlined in Table \ref{sim:tab:params}.
 
@@ -310,7 +310,7 @@ With a variable transmission rate, nodes could transmit anywhere from 20kbps to 
 \begin{subfigure}{\textwidth}
 \centering
   \includegraphics[height=.5\textheight]{Chap7/figures/plots/normal_variable/delivered_mean.png}
-  \caption{variable Transmission Rate}
+  \caption{Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delmean}
 \end{subfigure}
 \caption{Mean Transmission Times for Delivered Observations for a Normal Network}
@@ -327,7 +327,7 @@ With a variable transmission rate, nodes could transmit anywhere from 20kbps to 
 \begin{subfigure}{.5\textwidth}
   \centering
 	\includegraphics[width=\linewidth]{Chap7/figures/plots/normal_variable/delvsundel_percent.png}
-  \caption{variable Transmission Rate}
+  \caption{Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:delundel}
 \end{subfigure}
 \caption{Delivered vs Undelivered Observations for a Normal Network}
@@ -344,7 +344,7 @@ With a variable transmission rate, nodes could transmit anywhere from 20kbps to 
 \begin{subfigure}{.5\textwidth}
   \centering
 \includegraphics[width=\textwidth]{Chap7/figures/plots/normal_ideal/emptvsint_percent.png}
-  \caption{variable Transmission Rate}
+  \caption{Variable Transmission Rate}
 	\label{fig:sim:res:norm:variable:emptint}
 \end{subfigure}
 \caption{Interesting vs Empty Delivered Observations for a Normal Network}
@@ -367,7 +367,7 @@ The transmission time for both ideal and variable transmission rates is greatly 
 \begin{subfigure}{\textwidth}
   \centering
   \includegraphics[height=.5\textheight]{Chap7/figures/plots/saturated_variable/delivered_mean.png}
-  \caption{variable Transmission Rate}
+  \caption{Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:delmean}
 \end{subfigure}
 \caption{Mean Transmission Times for Delivered Observations for a Saturated Network}
@@ -384,7 +384,7 @@ The transmission time for both ideal and variable transmission rates is greatly 
 \begin{subfigure}{.5\textwidth}
   \centering
 	\includegraphics[width=\linewidth]{Chap7/figures/plots/saturated_variable/delvsundel_percent.png}
-  \caption{variable Transmission Rate}
+  \caption{Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:delundel}
 \end{subfigure}
 \caption{Delivered vs Undelivered Observations for a Normal Network}
@@ -401,7 +401,7 @@ The transmission time for both ideal and variable transmission rates is greatly 
 \begin{subfigure}{.5\textwidth}
   \centering
 \includegraphics[width=\linewidth]{Chap7/figures/plots/saturated_variable/emptvsint_percent.png}
-  \caption{variable Transmission Rate}
+  \caption{Variable Transmission Rate}
 	\label{fig:sim:res:sat:variable:emptint}
 \end{subfigure}
 \caption{Interesting vs Empty Delivered Observations for a Normal Network}
@@ -416,7 +416,7 @@ These simulations first show that saturating the network simply by increasing th
 
 Pushing knowledge further out into the network does reduce the time taken for an interesting observation to reach the central node. When the network is saturated, it is clear to see how the prioritisation can impact what data is delivered and that higher knowledge processing capabilities allows for interesting data to be delivered faster and with a higher priority. The downside to MK-HK-NK is that this processing needs to occur twice: once at the data collection node and again on the data processing node and it seems that this adds a delay to observations. However, in many situations, it may not be possible to put high knowledge processing nodes throughout the network as they are more expensive, more powerful nodes that would likely draw more power.
 
-If the requirement of a sensor network was to deploy a network that had no time restriction on when data was delivered but context was required then central processing is the more logical choice. However, if interesting data needed to be prioritised then using nodes with knowledge at the edge of the network allows for that prioritisation and, while the time to process is an overhead, it does prioritise well enough that the data aggregation becomes a stream of data based on importance, as well as time captured.
+The figures for both scenarios show that each scenario has benefits that depend on the purpose of the deployed sensor network. If a network was deployed for quick delivery of all sensed data to the DA node then central processing is the best scenario to choose. However, saturation will slow delivery and there is no prioritisation of data. If you wanted quick delivery of the most interesting data first then this depends on the accuracy you require. Using MK-NK-NK will give you quick delivery of interesting data, but the accuracy will be low and much of the data received could be incorrectly classified. Deploying MK-HK-NK does slow the delivery of data, due to the processing on both levels, but the network is able to use higher knowledge processing capabilities to improve the accuracy of classifications, as well as determine whether an observation is empty or not through the DP nodes. HK-NK-NK is clearly the best option here as it allows for high accuracy and prioritisation from the edge of the network, however the nodes capable of having higher knowledge processing capabilities would typically be more capable nodes with a higher power requirement.
 
 
 
