@@ -14,13 +14,13 @@ RePast was chosen because we did not require the low level network configuration
 Simulations are shown in a GUI that allows the network to be visualised and configured, with results exported to other applications, such as MATLAB and R.
 
 \section{Simulation Scenarios}\label{sim:scen}
-While the aim of these simulations was to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the optimal solution. We believe that the ideal solution would be to attach nodes with high knowledge-processing capabilities to all cameras in the network, however we experienced shorter battery life with more powerful nodes and that could mean that replacements would be made as often as the current manual solution, detailed in Section \ref{tech:motiv}.
+While the aim of these simulations was to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the best tradeoff between factors. We believe that the solution to reduce transmission time of interesting images and reduce the number of undelivered observations would be to attach nodes with high knowledge-processing capabilities to all cameras in the network, however we experienced shorter battery life with more powerful nodes and that could mean that replacements would be made as often as the current manual solution, detailed in Section \ref{tech:motiv}.
 
-Throughout this chapter, we will be referring to nodes tasked with different purposes as the three definitions listed here:
+Throughout this chapter, we will be referring to nodes tasked with different purposes as the three definitions listed here. K-HAS is a tiered network architecture, with a hierarchy similarly to described in Section \ref{sec:bg:hier}, below we have described the nodes at each tier :
 	\begin{itemize}
-		\item Sensing Node: A node that has been tasked with the capturing, and routing, of sensed data.
-		\item Routing Node: A gateway node that is tasked with collecting, processing and forwarding sensed data.
-		\item Central Node: A node with similar functionality to a typical base station, tasked with storing all sensed data and providing an interface to users.
+		\item Sensing Node (SN): A node that has been tasked with capturing sensed data and forwarding from other sensing nodes to a processing node.
+		\item Routing Node (RN): A node that acts as the cluster head for sensing nodes; it is tasked with receiving sensed data from sensing nodes, processing it and forwarding to the central node.
+		\item Central Node (CN): A node with similar functionality to a typical base station, tasked with storing all sensed data and providing an interface to users.
 	\end{itemize}
 
 At the routing and sensing tier, the degree of knowledge processing capabilities can range from the levels outlined below:
@@ -31,7 +31,7 @@ At the routing and sensing tier, the degree of knowledge processing capabilities
 		\item High Knowledge (HK): The node possesses high knowledge processing capabilities and is able to process data, metadata and use a dynamic rule base (Section \ref{khas:dp}).
 	\end{itemize}
 
-The scenarios we have tested show various combinations of knowledge within the network, as well as the combination of knowledge processing at the centre, as a baseline. We can list all the scenarios in as triples, with the knowledge levels described above depicting the knowledge level for each node. The list below shows this:
+The scenarios we have tested show various combinations of knowledge within the network, as well as the combination of knowledge processing at the centre, as a baseline. We can list all the scenarios in a triple that highlights the knowledge level at each tier. The leftmost descriptor is the knowledge level for sensing nodes, the middle describes routing nodes and the rightmost is the knowledge level for the central node. The list below describes each scenario and are ordered to highlight the progression of pushing knowledge from the central point of the network out to the edge:
 
 	\begin{itemize}
 		\item NK-NK-MK: Sensing and routing nodes have no knowledge processing capabilities with minimal processing capabilities on the central node.
@@ -43,11 +43,11 @@ The scenarios we have tested show various combinations of knowledge within the n
 		\item HK-NK-NK: Sensing nodes have high processing capabilities.	
 	\end{itemize}
 
-The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with yellow nodes representing sensing nodes, green nodes representing routing nodes and the red node representing the central node.
+The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four routing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with green nodes representing sensing nodes, yellow nodes representing routing nodes and the red node representing the central node. Blue arrows depict slower Zigbee links between sensing and routing nodes and the yellow arrows represent faster Wi-Fi links between routing and central nodes.
 
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Chap7/figures/khas_sim}
+	\includegraphics[width=\textwidth]{Chap7/figures/KHASARCH}
 	\caption{Simulation Example in RePast Simulator}
 	\label{fig:sim}
 	\end{figure}
@@ -83,23 +83,23 @@ The parameters used in these simulations were either gained through experiments 
 \toprule
 	\textbf{Parameter}                      & \textbf{Description}                                                                                                        & \textbf{Value(s)}   & \textbf{Constant?} & \textbf{Observed?} \\
 \midrule
-	Sensing Node Count                      & The number of sensing nodes in the network                                                                                  & 20                  & Yes                & No                 \\
-	Routing Node Count                      & The number of routing nodes in the network                                                                                  & 4                   & Yes                & No                 \\
-	Central Node Count                      & The number of central nodes in the network                                                                                  & 1                   & Yes                & No                 \\
+	SN Count                      & The number of sensing nodes in the network                                                                                  & 20                  & Yes                & No                 \\
+	RN Count                      & The number of routing nodes in the network                                                                                  & 4                   & Yes                & No                 \\
+	CN Count                      & The number of central nodes in the network                                                                                  & 1                   & Yes                & No                 \\
 	Height                                  & The height of the available space                                                                                           & 1200                & Yes                & No                 \\
 	Width                                   & The width of the available space                                                                                            & 1200                & Yes                & No                 \\
 	Capture Chance                          & The chance of an observation being captured each second in normal circumstances                                             & 0.000857703189      & Yes                & No                 \\
 	Interesting Chance                      & The chance of an observation containing an item of interest                                                                 & 0.207               & Yes                & No                 \\
-	Transmission Rate                       & The transmission rate of sensing nodes in the network                                                                       & Ideal or Variable   & Yes                & No                 \\
-	Sensing Node Transmission Rate (Zigbee) & When \textit{Transmission Rate} is set to \textit{ideal}, this is set as the maximum. \textit{Variable} sets this randomly between 20 and the maximum & 20-250 kbps         & No                 & No                 \\
-	Sensing Node Transmission Range (Zigbee)& The transmission range of Zigbee                                                                                            & 30                  & Yes                & No                 \\
-	Routing Node Transmission Rate (Wi-Fi)  & Always set as the maximum due to the proximity to the central node                                                          & 54000 kbps          & Yes                & No                 \\
-	Routing Node Transmission Range (Wi-Fi) & The transmission range of Wi-Fi                                                                                             & 200                 & Yes                & No                 \\
+	Transmission Rate                       & The transmission rate of sensing nodes in the network                                                                      & Ideal or Variable   & Yes                & No                 \\
+	SN Transmission Rate/kbps (Zigbee) & When \textit{Transmission Rate} is set to \textit{ideal}, this is set as the maximum. \textit{Variable} sets this randomly between 20 and the maximum & 20-250          & No                 & No                 \\
+	SN Transmission Range/metres (Zigbee)& The transmission range of Zigbee                                                                                  & 30                  & Yes                & No                 \\
+	RN Transmission Rate/kbps (Wi-Fi)  & Always set as the maximum due to the proximity to the central node (kbps)                                                         & 54000           & Yes                & No                 \\
+	RN Transmission Range/metres (Wi-Fi) & The transmission range of Wi-Fi (metres)                                                                                            & 200                 & Yes                & No                 \\
 	Bandwidth                               & Determines the available bandwidth in the network, if `saturated' then the chance of capture is increased ten fold          & Normal or Saturated & Yes                & No                 \\
-	HK Processing Time                      & Time to process an observation with high knowledge processing capabilities (Central Node or Routing/Sensing Node)           & 30 or 43            & Yes                & No                 \\
-	MK Processing Time                      & Time to process an observation with minimal knowledge processing capabilities                                               & 5                   & Yes                & No                 \\
-	Observation Size                        & Size of the generated observation, the combination of 3 randomly generated image sizes                                      & 1362-2598 KB        & No                 & No                 \\
-	Transmission Time                       & The time an image takes to pass through the network, from point of capture to being received by the central node            & -                   & No                 & Yes      \\
+	HK Processing Time/secs                     & Time to process an observation with high knowledge processing capabilities (Central Node or Routing/Sensing Node)           & 30 or 43            & Yes                & No                 \\
+	MK Processing Time/secs                      & Time to process an observation with minimal knowledge processing capabilities                                               & 5                   & Yes                & No                 \\
+	Observation Size/KB                       & Size of the generated observation, the combination of 3 randomly generated image sizes                                      & 1362-2598        & No                 & No                 \\
+	Transmission Time/secs                       & The time an image takes to pass through the network, from point of capture to being received by the central node            & -                   & No                 & Yes      \\
 	\bottomrule         
 	\end{tabularx}
 	\caption{Parameters Used to Configure Repast Simulations}
@@ -122,7 +122,7 @@ The parameters used in these simulations were either gained through experiments 
 	The chance of a camera being triggered each second was calculated by the total number of observations (13,399) divided by the number of seconds in six months (15,552,000). This gives a chance of 0.000861561 of a camera trigger in any given second.
 
 	\subsubsection{Transmission Range}
-	From our experiments at Danau Girang, see Section \ref{tech:wireless}, we tested the range of Wi-Fi and Zigbee in a humid rainforest, using those values we set trhe transmission range as the maximum that we achieved during our experiments.
+	From our experiments at Danau Girang, see Section \ref{tech:wireless}, we tested the range of Wi-Fi and Zigbee in a humid rainforest, using those values we set the transmission range as the maximum that we achieved during our experiments.
 
 	\subsubsection{Observation Size}
 	Using the observations we extracted from Danau Girang, we listed the size of all 120,000 files and extracted the minimum and maximum size from the set, when an observation is generated in RePast, it consists of three images and each image is a randomly generated size between the maximum and minimum bounds outlined in the table.
@@ -148,6 +148,8 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 	If the sensing node that receives the broadcast does not have an existing route to a central node, or the cost of the current route is higher than the received route, it adds an edge to the routing node, increments the count and forwards it to all nodes in range. This process continues until the broadcast reaches the edge of the network. Nodes do not have global knowledge of the route to the central node, only of their neighbour with the lowest cost. This can be seen in Figure \ref{fig:dc:discovery} in Section \ref{arch:routing}.
 	
 	This phase can be repeated throughout the course of the deployment, simply by scheduling it as an event to occur every \textit{n} ticks. However, the simulation currently only uses the discovery phase at the beginning of the deployment.
+
+	A sensing node will always be at least 2 hops as all observations must go through a routing node. However, as seen in Figure \ref{fig:sim}, there could be more hops depending on the node's position within the network. All hops between sensing and routing nodes use the slower Zigbee transmission medium, to allow for a longer range, while the final link between the routing and central node uses a faster Wi-Fi connection.
 	
 \subsubsection{Transmission}
 	Once the discovery phase has been completed, providing nodes are within range of the central node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
@@ -164,7 +166,7 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 \subsection{Observation Transmission}
 When a node has no knowledge, it simply sends the observation that was first added to its queue. With MK, it finds the first \textit{interesting} observation and sends that, if one is not in the queue then an observation marked as \textit{unknown}. HK performs much the same as MK except it instead looks for \textit{empty} observation if an \textit{interesting} cannot be found. If a node has any form of knowledge processing power, it will not send an observation unless it has first been processed. Nodes can only send an observation one at a time and must also wait for the receiving node to be free.
 
-An observation is marked as delivered once it has been received by the central node, if there is only processing at the central node, then delivery is delayed until the central node has processed it.
+An observation is marked as delivered once it has been received by the central node, if there is only processing at the central node, then it is only marked as delivered once the central node has processed it.
 
 \subsection{Processing}
 Repast has built in functionality that allows for methods to be scheduled to start at a certain tick and repeat at set intervals. The way a scheduled method works is that it is run at the time specified and further scheduled methods can be prevented from running until it has completed. Much of the node's functionality is handled in this way. A processing method is set to run every 10 ticks (seconds) to replicate the functionality of checking a file system for new observations. The earliest (unprocessed)observation is found and a processing method is scheduled, depending on the knowledge level of the node. The function for DA nodes is the same, except they are able to process 4 observations simultaneously. This is shown in listing \ref{alg:sim:proc} and listing \ref{alg:sim:know} shows how classifications are made. 
@@ -232,7 +234,7 @@ void lowKnowledge(obs) {
 % \subsection{In-Network Processing}
 In this section, we show plots for each scenario and the variations on bandwidth and transmission rate. The resulting CSV files from each run were processed with the R programming language \cite{rlang} and summary statistics were output to find the mean transmission time for all observations, interesting and empty, as well as those that were delivered to the end point during the runtime of the simulation.
 
- Table \ref{tab:delnum} shows the number of observations delivered for each scenario and their variations. We can see that almost all observations are delivered when the network is not saturated and the transmission rate is ideal, despite Zigbee's low transmission rate. As knowledge is pushed out into the network, the processing time becomes a factor on top of the transmission time and we can see that this reduces the number of received observations. MK-HK-NK is the lowest here and we believe that is because it is the only scenario that processes an observation twice (with MK and then HK), but we discuss this in greater detail as we analyse the results further. As we discussed previously, processing on the DA node means that an observation is only marked as delivered when it has been processed. However, the short processing times (when compared to long transmission times) and the fact that a DA node can process up to four observations in parallel means that this is not really a bottleneck.
+ Table \ref{tab:delnum} shows the mean number of observations delivered for all runs of each scenario and their variations. We can see that almost all observations are delivered when the network is not saturated and the transmission rate is ideal, despite Zigbee's low transmission rate. An observation is marked as undelivered if it has not yet reached the central node or, in the case of central processing scenarios, until it has been received and processed by the central node. As knowledge is pushed out into the network, the processing time becomes more of a factor (as routing nodes cannot process multiple observations at once) on top of the transmission time and we can see that this reduces the number of received observations. MK-HK-NK is the lowest here and we believe that is because it is the only scenario that processes an observation twice (with MK and then HK), but we discuss this in greater detail as we analyse the results further. As we discussed previously, processing on the central node means that an observation is only marked as delivered when it has been processed. However, the short processing times (when compared to long transmission times) and the fact that a DA node can process up to four observations in parallel means that this is not really a bottleneck.
  
 \begin{landscape}
 \begin{table}[htbp]
@@ -292,11 +294,13 @@ In this section, we show plots for each scenario and the variations on bandwidth
 %%%NormIdeal
 \subsection{Normal Network}
 
-When the network is not saturated and Zigbee is able to transmit observations at its maximum transmission rate, we can see that the transmission rate increases the further we push knowledge out into the network (Figure \ref{fig:sim:res:norm:ideal:delmean}). NK-NK-HK is not visible in the figure because it has such a low mean transmission time, this appears to be an anomaly that is not apparent in other scenarios and may be corrected with more runs. Higher knowledge at the edge of the network significantly reduces the transmission time for an interesting observation. MK-HK-NK is higher than even MK-MK-MK because of its increased processing time, although MK-HK-NK is able to more accurately determine TPs.
+When the network is not saturated and Zigbee is able to transmit observations at its maximum transmission rate, we can see that the transmission rate increases the further we push knowledge out into the network (Figure \ref{fig:sim:res:norm:ideal:delmean}). NK-NK-HK is not visible in the figure because it has such a low mean transmission time (243 seconds), this appears to be an anomaly that is not apparent in other scenarios. Higher knowledge at the edge of the network significantly reduces the transmission time for an interesting observation. MK-HK-NK is higher than even MK-MK-MK because of its increased processing time, although MK-HK-NK is able to more accurately determine truly interesting observations.
+
+In Figure 
 
 Figure \ref{fig:sim:res:norm:ideal:delundel} shows that all scenarios delivered the majority of the observations captured. MK-HK-NK delivered around 95\% but this is likely due to the processing time discussed previously. The reduced number for NK-MK-NK is odd, we believe it is because the DP nodes become a bottleneck for processing as they can only process a single observation at a time. Because the network was not saturated, the delivered observations are consistent with the configuration parameters outlined in Table \ref{sim:tab:params}.
 
-With a variable transmission rate, nodes could transmit anywhere from 20kbps to the maximum 250kbps that Zigbee provides, Figure \ref{fig:sim:res:norm:variable:delundel} shows how this affects the number of delivered observations. Central processing allows for the greatest number of observations to be delivered and we expected that NK-NK-NK would deliver almost everything. We are unsure as to why this is.
+With a variable transmission rate, nodes could transmit anywhere from 20kbps to the maximum 250kbps that Zigbee provides, Figure \ref{fig:sim:res:norm:variable:delundel} shows how this affects the number of delivered observations. 
 
 \begin{figure}
 
@@ -353,7 +357,7 @@ With a variable transmission rate, nodes could transmit anywhere from 20kbps to 
 \subsection{Saturated Network}
 The transmission time for both ideal and variable transmission rates is greatly increased when the network is saturated and we expected these scenarios to show how pushing knowledge further into the network provides more interesting observations faster, prioritising when the network is aware that it cannot deliver every observation it has captured.
 
-	The pattern in Figure \ref{fig:sim:res:sat:ideal:delmean} is similar to those of Figures \ref{fig:sim:res:norm:ideal:delmean}and \ref{fig:sim:res:norm:variable:delmean}. Scenarios of central processing (and no knowledge) are consistently high, as is NK-MK-NK because nodes cannot prioritise data from the edge. HK-NK-NK is much faster when delivering interesting observations, which would also reduce the mean transmission time for all observations but we did not expect to see a reduction in the time taken for empty observations when compared with other scenarios. This is most likely because the processing time of HK-NK-NK means that fewer observations are delivered in each run (Figure \ref{fig:sim:res:sat:ideal:delundel}) but could also be because of empty observations misclassified as interesting being prioritised through the network as it is the only scenario that can mark an observation as empty from the edge. However, the higher accuracy of HK-HK-NK should mean that fewer misclassifications are made. 
+	The pattern in Figure \ref{fig:sim:res:sat:ideal:delmean} is similar to those of Figures \ref{fig:sim:res:norm:ideal:delmean}and \ref{fig:sim:res:norm:variable:delmean}. Scenarios of central processing gave consistently high transmission times for all observations, as is NK-MK-NK because nodes cannot prioritise data from the edge. HK-NK-NK is much faster when delivering interesting observations, which would also reduce the mean transmission time for all observations but we did not expect to see a reduction in the time taken for empty observations when compared with other scenarios. This is most likely because the processing time of HK-NK-NK means that fewer observations are delivered in each run (Figure \ref{fig:sim:res:sat:ideal:delundel}) but could also be because of empty observations misclassified as interesting being prioritised through the network as it is the only scenario that can mark an observation as empty from the edge. However, the higher accuracy of HK-HK-NK should mean that fewer misclassifications are made. 
 	
 \begin{figure}[H]
 \centering
@@ -410,7 +414,7 @@ The transmission time for both ideal and variable transmission rates is greatly 
 
 
 \section{Conclusion}\label{sim:conc}
-The general trend that is clear from all the figures is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central/no processing, but it does speed up the delivery of interesting observations, especially when the network is saturated.
+The general trend that is clear from all the figures is that pushing knowledge further out into the network increases the transmission time of all observations, when compared to central, but it does reduce the mean transmission time of the delivery of interesting observations, especially when the network is saturated.
 
 These simulations first show that saturating the network simply by increasing the chance of capture ten fold can have a huge impact on the transmission time of observations and really tests how each scenario prioritises data within the network. While processing each observation can take time depending on whether the node possesses minimal or high knowledge processing capabilities, it does not seem to be the bottleneck here. With nodes only having a single radio, sending in parallel is not possible and waiting for a neighbouring node to be available can delay an observation massively.
 
