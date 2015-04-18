@@ -103,18 +103,18 @@
 \contentsline {subsection}{\numberline {5.1.4}Findings}{101}{subsection.5.1.4}
 \contentsline {section}{\numberline {5.2}Method}{102}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Identify Purpose}{103}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Build the Ontology}{103}{subsection.5.2.2}
-\contentsline {subsubsection}{Capture}{103}{section*.62}
+\contentsline {subsection}{\numberline {5.2.2}Build the Ontology}{104}{subsection.5.2.2}
+\contentsline {subsubsection}{Capture}{104}{section*.62}
 \contentsline {subsubsection}{Code}{104}{section*.63}
-\contentsline {subsubsection}{Integrate Existing Ontologies}{104}{section*.64}
+\contentsline {subsubsection}{Integrate Existing Ontologies}{105}{section*.64}
 \contentsline {subsection}{\numberline {5.2.3}Evaluation}{105}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Documentation}{105}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Results}{105}{section.5.3}
+\contentsline {subsection}{\numberline {5.2.4}Documentation}{106}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Results}{106}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Identify Purpose}{106}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Build the Ontology - Capture}{106}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Build the Ontology - Capture}{107}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Build the Ontology - Code}{109}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}Build the Ontology - Integrate Existing Ontologies}{109}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Extend the Ontology}{110}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.5}Extend the Ontology}{111}{subsection.5.3.5}
 \contentsline {section}{\numberline {5.4}Evaluation}{113}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Using the Ontology in an Application}{113}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Competency Questions}{114}{subsection.5.4.2}
