@@ -15,7 +15,7 @@ During the development of the K-HAS ontology, we researched existing ontologies 
 
 Looking into these existing ontologies, we found that there had been many surveys on representing sensors in the semantic web: \cite{Compton2009}, \cite{Janowicz2010}, outlines the existing work. These surveys clearly highlighted that these ontologies had been split into two branches; observation-centric and sensor-centric.
 
-Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SSN \cite{Compton2012} and SensorML\cite{botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
+Observation-centric ontologies, such as OBOE \cite{Madin2007b} and O\&M \cite{botts},  focus on the data that is sensed, and its content; whereas sensor-centric ontologies, such as SensorML\cite{botts}, detail the components that make up a sensor and the operations they perform to turn sensed data into an output.
 
 % We did find a set of related ontologies that extend the Standard Upper Merged Ontology (SUMO) \cite{niles2001towards}. The three ontologies linked these concepts together to show the flow of data within the network and the role that each sensor plays in delivering this data, discussed later in Section \ref{ont:sumo:sdo}. The reason there are so few could be because other WSNs do not integrate structure, hardware and sensed data in the same way as K-HAS or due to the fact that most WSNs do not process their sensed data until they reach a base station, so they would not need to model their data structure within the network. Because of this, we developed an aligning ontology that reuses existing ontologies, where possible, and introduces new classes that allows these ontologies to interlink. The result is an ontology that covers the flow of sensed data from the point of capture to the point it is received, processed, reviewed and stored at the end point of the network. Not only does the ontology cover how the data changes as it flows through the network but also the roles and capabilities of each tier.
 
@@ -50,7 +50,9 @@ A key feature of O\&M is that \textit{observation} and \textit{measurement} are 
 An observation is an action that causes a result, yielding a value and a measurement is a set of operations that provide some result(s).
 
 O\&M provides a conceptual model, as well as XML encoding for observations and measurements. The listing \ref{omxml} shows an observation of a vehicle in a given time and place. Similar to the encoding of a measurement with the standard and protocol used in OBOE, O\&M provides support for the recording of the procedure used to gain the measurement for the observation. 
-\vspace{\baselineskip}
+
+
+\begin{minipage}{\linewidth}
 \begin{lstlisting}[caption=An Observation of a Vehicle encoded in O\&M, label=omxml, breaklines=true, language=XML]
  <?xml version="1.0" encoding="windows-1250"?>
  <om:GeometryObservation gml:id="geom1610" 
@@ -74,6 +76,8 @@ O\&M provides a conceptual model, as well as XML encoding for observations and m
    </om:result>
  </om:GeometryObservation>
  \end{lstlisting}
+ \end{minipage}
+
  
  The listing shows that an observation centres around a \textit{feature of interest} that can be a physical object and the measurement is the detection of the vehicle at the recorded location. Figure \ref{oandm} shows a basic diagram of the ontology. While the event of a feature is linked, it is clear that the main focus is on the observation and the measurement associated with it.
 
@@ -490,7 +494,7 @@ Each term within a Darwin Core observation maps to K-HAS with only a few changes
 
 \section{Conclusion}
 
-In this chapter we have presented an ontology for the K-HAS architecture and described our methodology for development, as well as showing that existing ontologies are not complete enough to cover our requirements for K-HAS. The K-HAS ontology we present is an alignment of ontologies that are spread across multiple domains and provides a complete solution for a sensor network that deals with scientific observations and we believe this is the first extension ontology that combines sensor-centric and observation-centric ontologies. We have also extended this alignment to include concepts that model the unique features of K-HAS, but this ontology should be suitable for any sensor network that deals with observations.
+In this chapter we have presented an ontology for the K-HAS architecture and described our methodology for development, as well as showing that existing ontologies are not complete enough to cover our requirements for K-HAS. The K-HAS ontology we present is an alignment of ontologies that are spread across multiple domains and provides a complete solution for a sensor network that deals with scientific observations. We have also extended this alignment to include concepts that model the unique features of K-HAS, but this ontology should be suitable for any sensor network that deals with observations.
 
 While the main benefits of this ontology is that it provides a high-level overview of our network architecture and allows those that want to implement K-HAS to re-use all, or some, parts of the ontology, it is also used in the network itself to allow sensed data to be mapped to data stores, define how classifications should be made and determine if certain users have permissions to edit an observation. Using the ontology, we can ensure that all nodes use the same data standard and use a pre-defined user model that can be easily implemented in variations of K-HAS. On top of this, the competency questions, outlined in Table \ref{eval:comp_qs} also form the basis of queries that can be carried out on sensed data, nodes, users and projects within K-HAS, linking them all through a common model.
 
