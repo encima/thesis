@@ -99,13 +99,13 @@
 \contentsline {subsubsection}{SensorML}{98}{section*.58}
 \contentsline {subsection}{\numberline {5.1.3}Combined Sensor and Observation Ontologies}{99}{subsection.5.1.3}
 \contentsline {subsubsection}{SSN}{99}{section*.59}
-\contentsline {subsubsection}{SUMO Extension}{100}{section*.61}
+\contentsline {subsubsection}{SUMO Extension}{101}{section*.61}
 \contentsline {subsection}{\numberline {5.1.4}Findings}{101}{subsection.5.1.4}
 \contentsline {section}{\numberline {5.2}Method}{102}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Identify Purpose}{103}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Build the Ontology}{104}{subsection.5.2.2}
 \contentsline {subsubsection}{Capture}{104}{section*.62}
-\contentsline {subsubsection}{Code}{104}{section*.63}
+\contentsline {subsubsection}{Code}{105}{section*.63}
 \contentsline {subsubsection}{Integrate Existing Ontologies}{105}{section*.64}
 \contentsline {subsection}{\numberline {5.2.3}Evaluation}{105}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Documentation}{106}{subsection.5.2.4}

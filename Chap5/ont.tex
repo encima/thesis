@@ -104,7 +104,8 @@ In order to represent DwC occurrences, covered in Section \ref{arch:tech:dwc}, i
 While Darwin-SW does not represent all of the classes within the DwC namespace, it contains the core classes required to record an occurrence, to a more-detailed level than OBOE. The downside of this is that the specificity of the terms limits DwC to ecological observations, making it far less generic than OBOE and other alternatives. There are positive aspects that, for those that need to record ecological observations, DwC allows for a greater level of detail and  can be mapped to OBOE with ease.
 
 Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living specimen which, in this case, is a tree \cite{Baskauf2011}. Darwin-SW, and Darwin Core, terms are used to describe the identification of the tree, such as the by whom it was identified, the date and the taxon. The full source can be seen in Appendix \ref{appendix:dsw} and includes links to existing related occurrences, other images of the individual and relationships to other resources.
-\vspace{\baselineskip}
+
+\begin{minipage}{\linewidth}
 \begin{lstlisting}[caption={Darwin-SW Representation of an Identification}, label={ont:darwinsw}, language=XML]
 <dsw:hasIdentification>
   <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/vanderbilt/12-126#2002-04-10baskauf">
@@ -123,6 +124,7 @@ Listing \ref{ont:darwinsw} shows a fragment of a DwC occurrence of a living spec
   </rdf:Description>
 </dsw:hasIdentification>
 \end{lstlisting}
+\end{minipage}
 
 \subsection{Sensor-Centric Ontologies}
 Sensor-centric ontologies are more focussed on the structure of the sensor, the network and the sensing processes involved. 

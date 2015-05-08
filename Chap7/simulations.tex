@@ -1,7 +1,7 @@
 \chapter{Simulation Experiments and Evaluation of the Architecture}
-In this chapter, we present the results of simulation experiments developed to evaluate and explore choices offered by our K-HAS architecture. Using nodes with knowledge-processing capabilities to deliver interesting data quicker than a standard WSN, we have developed a simulation for our proposed architecture, K-HAS, as well as variations on the knowledge processing capabilities of the nodes at each tier.
+In this chapter, we present the results of simulation experiments developed to evaluate and explore choices offered by our K-HAS architecture. Using nodes with knowledge processing capabilities to deliver interesting data quicker than a standard WSN, we have developed a simulation for our proposed architecture, K-HAS, as well as variations on the knowledge processing capabilities of the nodes at each tier.
 
-The simulations were developed to determine whether K-HAS is the best mix of processing and collection nodes that splits between minimal knowledge processing to prioritise from the edge and high knowledge processing towards the centre to provide more accurate prioritisation, thus minimising the transmission time of interesting data. This was done by using a network structure, that matched our motivating scenario, and changing the knowledge-processing capabilities on each node at every tier; ranging from no knowledge on every node to the maximum knowledge-processing capabilities across the network. We aim to show that the more knowledge-processing capabilities that are pushed out towards the edge of the network, the more effective the network becomes at prioritising data that it believes to be interesting and delaying what it believes to be empty.
+The simulations were developed to determine whether K-HAS is the best mix of data processing and data collection nodes that splits between minimal knowledge processing to prioritise from the edge and high knowledge processing towards the centre to provide more accurate prioritisation, thus minimising the transmission time of interesting data. This was done by using a network structure, that matched our motivating scenario, and changing the knowledge processing capabilities on each node at every tier; ranging from no knowledge on every node to the maximum knowledge processing capabilities across the network. We aim to show that the more knowledge processing capabilities that are pushed out towards the edge of the network, the more effective the network becomes at prioritising data that it believes to be interesting and delaying what it believes to be empty.
 
 This chapter is structured as follows. Section \ref{sim:env} describes the tool used to develop the network. Section \ref{sim:scen} outlines the scenarios used in our experiments and Section \ref{sim:setup} describes the parameters used to configure each run and what was observed. Finally, Section \ref{sim:res} explains the results from multiple runs and Section \ref{sim:conc} concludes our findings and highlights areas that require further experimentation.
 
@@ -9,12 +9,12 @@ This chapter is structured as follows. Section \ref{sim:env} describes the tool 
 Using RePast Simphony \cite{Collier2003}, an agent-based network simulation tool developed in Java, we created a network to emulate K-HAS. RePast is an agent-based modelling system that allows for agents to be created and placed on a grid. Ticks denote a period of time and simulations can run for a fixed number of ticks, or until stopped. Ticks can also be used to schedule events, such as searching for neighbours, by calling methods that last for a set number of ticks, or begin at a particular tick. For example, a camera sensor node may be tasked with taking a picture every three hundred seconds. When the simulation reaches three hundred ticks (or six hundred, nine hundred, twelve hundred and so on), a scheduled event is run to simulate the camera's capture of an image and transmitting it to an endpoint.
 %train may take three hundred for it to arrive at its destination. When the simulation reaches three hundred ticks, a scheduled event could run that would open the train doors, make an announcement and so on.
 
-RePast was chosen because we did not require the low level network configuration provided by other tools, such as NS2 \cite{mccanne1997network} or the MultiAgent Simulation Environment (MASON) \cite{mason}, but we did need to modify and record the behaviour between nodes as they capture and process sensed data. RePast's event scheduling allows for nodes to be modelled as agents and the dynamic configuration allowed us to modify the simulations during run time. The aim of these simulations was to visualise how different knowledge-processing capabilities can affect the prioritisation and transmission time of observations, as well as the accuracy of their classifications. RePast allowed us to utilise existing Java code we were using in our K-HAS middleware and develop a base simulation that could be configured easily with XML files.
+RePast was chosen because we did not require the low level network configuration provided by other tools, such as NS2 \cite{mccanne1997network} or the MultiAgent Simulation Environment (MASON) \cite{mason}, but we did need to modify and record the behaviour between nodes as they capture and process sensed data. RePast's event scheduling allows for nodes to be modelled as agents and the dynamic configuration allowed us to modify the simulations during run time. The aim of these simulations was to visualise how different knowledge processing capabilities can affect the prioritisation and transmission time of observations, as well as the accuracy of their classifications. RePast allowed us to utilise existing Java code we were using in our K-HAS middleware and develop a base simulation that could be configured easily with XML files.
 
 Simulations are shown in a GUI that allows the network to be visualised and configured, with results exported to other applications, such as MATLAB and R.
 
 \section{Simulation Scenarios}\label{sim:scen}
-While the aim of these simulations was to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the best tradeoff between factors. We believe that the solution to reduce transmission time of interesting images and reduce the number of undelivered observations would be to attach nodes with high knowledge-processing capabilities to all cameras in the network, however we experienced shorter battery life with more powerful nodes and that could mean that replacements would be made as often as the current manual solution, detailed in Section \ref{tech:motiv}.
+While the aim of these simulations was to show the effectiveness of K-HAS over the current solution, we also wanted to determine if it was the best tradeoff between factors. We believe that the solution to reduce transmission time of interesting images and reduce the number of undelivered observations would be to attach nodes with high knowledge processing capabilities to all cameras in the network, however we experienced shorter battery life with more powerful nodes and that could mean that replacements would be made as often as the current manual solution, detailed in Section \ref{tech:motiv}.
 
 Throughout this chapter, we will be referring to nodes tasked with different purposes as the three definitions listed here. K-HAS is a tiered network architecture, with a hierarchy similar to that which is described in Section \ref{sec:bg:hier}, below we have described the nodes at each tier :
 	\begin{itemize}
@@ -23,7 +23,7 @@ Throughout this chapter, we will be referring to nodes tasked with different pur
 		\item Central Node (CN): A node with similar functionality to a typical base station, tasked with storing all sensed data and providing an interface to users.
 	\end{itemize}
 
-At the routing and sensing tier, the degree of knowledge processing capabilities can range from the levels outlined below:
+At the processing and sensing tier, the degree of knowledge processing capabilities can range from the levels outlined below:
 
 	\begin{itemize}
 		\item No Knowledge (NK): The node possesses no knowledge processing capabilities.
@@ -43,7 +43,7 @@ The scenarios we have tested show various combinations of knowledge within the n
 		\item HK-NK-NK: Sensing nodes have high processing capabilities.	
 	\end{itemize}
 
-The higher knowledge-processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four processing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with green nodes representing sensing nodes, yellow nodes representing processing nodes and the red node representing the central node. Blue arrows depict slower Zigbee links between sensing and processing nodes and the yellow arrows represent faster Wi-Fi links between routing and central nodes.
+The higher knowledge processing capabilities of HK nodes allow them to classify observations with a greater accuracy, but their battery life is much shorter than MK nodes due to their increased power needs (Section \ref{tech:hw}). In contrast, MK nodes can run for a longer period without requiring battery replacement. MK nodes, however, are unable to classify observations to the same level as HK nodes. While HK nodes can classify an observation as interesting or empty, MK nodes can only assume an observation is interesting using the image's metadata as they lack the capabilities to reliably determine whether an observation is empty or not. The scenarios we have implemented cover combinations of HK, MK and NK, in a twenty five node network. We use twenty five nodes because DGFC had between twenty and twenty two active cameras during our first and second visits and we knew that the first implementation of the network would require a single endpoint. From this, we chose to use four processing nodes so that each could handle an equal number of sensing nodes, if they were all within range, and a single central node. Our experiments in Danau Girang were restricted to a smaller number of nodes, due to cost, but we expected to deploy a sensing node onto all of the active cameras. The hierarchical nature of the network is shown in Figure \ref{fig:sim}, with green nodes representing sensing nodes, yellow nodes representing processing nodes and the red node representing the central node. Blue arrows depict slower Zigbee links between sensing and processing nodes and the yellow arrows represent faster Wi-Fi links between processing and central nodes.
 
 	\begin{figure}[h]
 	\centering
@@ -61,7 +61,7 @@ Before implementing, we designed the agents required based on the nodes describe
 	\textbf{Network Type} & \textbf{Original Term} & \textbf{Maps To}          \\
 	\hline
 	K-HAS                 & DC Node                & Sensing Node + MK         \\
-	                      & DP Node                & processing node + HK         \\
+	                      & DP Node                & Processing node + HK         \\
 	                      & DA Node                & Central Node + HK         \\
 	LORIS                 & Buckeye                & Sensing Node + NK         \\
 	                      & DA and DP              & Routing/Central Node + HK \\
@@ -96,7 +96,7 @@ The parameters used in these simulations were either gained through experiments 
 	PN Transmission Rate/kbps (Wi-Fi)  & Always set as the maximum due to the proximity to the central node (kbps)                                                         & 54000           & Yes                & No                 \\
 	PN Transmission Range/metres (Wi-Fi) & The transmission range of Wi-Fi (metres)                                                                                            & 200                 & Yes                & No                 \\
 	Bandwidth                               & Determines the available bandwidth in the network, if `saturated' then the chance of capture is increased ten fold          & Normal or Saturated & Yes                & No                 \\
-	HK Processing Time/secs                     & Time to process an observation with high knowledge processing capabilities (Central Node or Routing/Sensing Node)           & 30 (central) or 43 (routing)            & Yes                & No                 \\
+	HK Processing Time/secs                     & Time to process an observation with high knowledge processing capabilities (Central Node or Processing/Sensing Node)           & 30 (CN) or 43 (PN/SN)            & Yes                & No                 \\
 	MK Processing Time/secs                      & Time to process an observation with minimal knowledge processing capabilities                                               & 5                   & Yes                & No                 \\
 	Observation Size/KB                       & Size of the generated observation, the combination of 3 randomly generated image sizes                                      & 1362-2598        & No                 & No                 \\
 	Transmission Time/secs                       & The time an image takes to pass through the network, from point of capture to being received by the central node            & -                   & No                 & Yes      \\
@@ -128,7 +128,7 @@ The parameters used in these simulations were either gained through experiments 
 	Using the observations we extracted from Danau Girang, we listed the size of all 120,000 files and extracted the minimum and maximum size from the set, when an observation is generated in RePast, it consists of three images and each image is a randomly generated size between the maximum and minimum bounds outlined in the table.
 
 	\subsubsection{Processing Times}
-	While the processing times are fixed, central nodes can perform higher knowledge processing slightly faster and they are able to process up to 4 observations at once, whereas routing and sensing nodes can only process one at a time.
+	While the processing times are fixed, central nodes can perform higher knowledge processing slightly faster and they are able to process up to 4 observations at once, whereas processing and sensing nodes can only process one at a time.
 	
 	\subsubsection{Run Count and Duration}
 	Each scenario is configured to run for a period of three months, this is solely due to time constraints due the run time of each simulation. Tests showed that three months was a long enough period to model a saturated network and the capture chance is kept at the six month chance because the network would be deployed for six month periods and these runs serve to show a snippet of their deployment, rather than cover the whole period.
@@ -149,7 +149,7 @@ In our K-HAS architecture, sensing nodes cannot connect directly to a central no
 	
 	This phase can be repeated throughout the course of the deployment, simply by scheduling it as an event to occur every \textit{n} ticks. However, the simulation currently only uses the discovery phase at the beginning of the deployment.
 
-	A sensing node will always be at least 2 hops as all observations must go through a processing node. However, as seen in Figure \ref{fig:sim}, there could be more hops depending on the node's position within the network. All hops between sensing and processing nodes use the slower Zigbee transmission medium, to allow for a longer range, while the final link between the routing and central node uses a faster Wi-Fi connection.
+	A sensing node will always be at least 2 hops as all observations must go through a processing node. However, as seen in Figure \ref{fig:sim}, there could be more hops depending on the node's position within the network. All hops between sensing and processing nodes use the slower Zigbee transmission medium, to allow for a longer range, while the final link between the processing and central node uses a faster Wi-Fi connection.
 	
 \subsubsection{Transmission}
 	Once the discovery phase has been completed, providing nodes are within range of the central node, the transmission phase begins where only DwC archives are then sent across the network. Observations are captured based on the mode of the simulation and sent to the lowest cost neighbour.
@@ -260,7 +260,7 @@ In this section, we show plots for each scenario and the variations on bandwidth
 \rowcolor{Gray}
     NK-NK-MK & saturated & ideal & 444714 & 129224 & 315490 & 29 \\
 \rowcolor{Gray}
-    NK-NK-MK & saturated & variable & 444570 & 66454 & 378115 & 15 \\
+    NK-NK-MK & saturated & variable & 444569 & 66454 & 378115 & 15 \\
     NK-NK-HK & normal & ideal & 44481 & 44478 & 3     & 100 \\
     NK-NK-HK & normal & variable & 44512 & 32804 & 11708 & 74 \\
     NK-NK-HK & saturated & ideal & 444899 & 134552 & 310347 & 30 \\
@@ -268,24 +268,24 @@ In this section, we show plots for each scenario and the variations on bandwidth
 \rowcolor{Gray}
     NK-MK-NK & normal & ideal & 44501 & 40614 & 3887  & 91 \\
 \rowcolor{Gray}
-    NK-MK-NK & normal & variable & 44430 & 27981 & 16448 & 63 \\
+    NK-MK-NK & normal & variable & 44429 & 27981 & 16448 & 63 \\
 \rowcolor{Gray}
     NK-MK-NK & saturated & ideal & 444858 & 106656 & 338202 & 24 \\
 \rowcolor{Gray}
-    NK-NK-NK & saturated & variable & 444650 & 50643 & 394006 & 11 \\
+    NK-NK-NK & saturated & variable & 444649 & 50643 & 394006 & 11 \\
     MK-NK-NK & normal & ideal & 44484 & 44206 & 278   & 99 \\
     MK-NK-NK & normal & variable & 44533 & 26307 & 18226 & 59 \\
     MK-NK-NK & saturated & ideal & 444594 & 92904 & 351690 & 21 \\
     MK-NK-NK & saturated & variable & 444989 & 51225 & 393764 & 12 \\
 \rowcolor{Gray}
-    MK-HK-NK & normal & ideal & 44514 & 40927 & 3586  & 92 \\
+    MK-HK-NK & normal & ideal & 44513 & 40927 & 3586  & 92 \\
 \rowcolor{Gray}
     MK-HK-NK & normal & variable & 44455 & 23638 & 20817 & 53 \\
 \rowcolor{Gray}
     MK-HK-NK & saturated & ideal & 443211 & 79864 & 363347 & 18 \\
 \rowcolor{Gray}
-    MK-NK-NK & saturated & variable & 444398 & 46454 & 397943 & 10 \\
-    HK-NK-NK & normal & ideal & 44424 & 43378 & 1045  & 98 \\
+    MK-NK-NK & saturated & variable & 444397 & 46454 & 397943 & 10 \\
+    HK-NK-NK & normal & ideal & 44423 & 43378 & 1045  & 98 \\
     HK-NK-NK & normal & variable & 44437 & 29295 & 15142 & 66 \\
     HK-NK-NK & saturated & ideal & 445257 & 97790 & 347467 & 22 \\
     HK-NK-NK & saturated & variable & 444817 & 46061 & 398756 & 10 \\
@@ -428,7 +428,7 @@ These simulations first show that saturating the network simply by increasing th
 
 Pushing knowledge further out into the network does reduce the time taken for an interesting observation to reach the central node. When the network is saturated, it is clear to see how the prioritisation can impact what data is delivered and that higher knowledge processing capabilities allows for interesting data to be delivered faster and with a higher priority. The downside to MK-HK-NK is that this processing needs to occur twice: once at the data collection node and again on the data processing node and it seems that this adds a delay to observations. However, in many situations, it may not be possible to put high knowledge processing nodes throughout the network as they are more expensive.
 
-The figures for both scenarios show that each scenario has benefits that depend on the purpose of the deployed sensor network. If a network was deployed for quick delivery of all sensed data to the DA node then central processing is the best scenario to choose. However, saturation will slow delivery and there is no prioritisation of data. If you wanted quick delivery of the most interesting data first then this depends on the accuracy you require. Using MK-NK-NK will give you quick delivery of interesting data, but the accuracy will be low and much of the data received could be incorrectly classified. Deploying MK-HK-NK does slow the delivery of data, due to the processing on both levels, but the network is able to use higher knowledge processing capabilities to improve the accuracy of classifications, as well as determine whether an observation is empty or not through the DP nodes. HK-NK-NK is clearly the best option here as it allows for high accuracy and prioritisation from the edge of the network.
+The figures for both scenarios show that each scenario has benefits that depend on the purpose of the deployed sensor network. If a network was deployed for quick delivery of all sensed data to the DA node then central processing is the best scenario to choose. However, saturation will slow delivery and there is no prioritisation of data. If you wanted quick delivery of the most interesting data first then this depends on the accuracy you require. Using MK-NK-NK will give you quick delivery of interesting data, but the accuracy will be low and much of the data received could be incorrectly classified. Deploying MK-HK-NK does slow the delivery of data, due to the processing on both levels, but the network is able to use higher knowledge processing capabilities to improve the accuracy of classifications, as well as determine whether an observation is empty or not through the DP nodes. HK-NK-NK is the best option here as it allows for high accuracy and prioritisation from the edge of the network.
 
 
 
