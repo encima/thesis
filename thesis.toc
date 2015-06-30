@@ -1,12 +1,12 @@
 \select@language {british}
-\contentsline {chapter}{Abstract}{iii}{Doc-Start}
-\contentsline {chapter}{Acknowledgements}{v}{Doc-Start}
-\contentsline {chapter}{Contents}{vii}{Doc-Start}
-\contentsline {chapter}{List of Publications}{xiv}{Doc-Start}
-\contentsline {chapter}{List of Figures}{xv}{Doc-Start}
-\contentsline {chapter}{List of Tables}{xviii}{Doc-Start}
-\contentsline {chapter}{Listings\markboth {\MakeUppercase {Listings}}{\MakeUppercase {Listings}}}{xix}{Doc-Start}
-\contentsline {chapter}{List of Acronyms}{xx}{Doc-Start}
+\contentsline {chapter}{Abstract}{v}{figure.caption.1}
+\contentsline {chapter}{Acknowledgements}{vii}{figure.caption.1}
+\contentsline {chapter}{Contents}{ix}{figure.caption.1}
+\contentsline {chapter}{List of Publications}{xvi}{figure.caption.1}
+\contentsline {chapter}{List of Figures}{xvii}{figure.caption.1}
+\contentsline {chapter}{List of Tables}{xx}{figure.caption.1}
+\contentsline {chapter}{Listings\markboth {\MakeUppercase {Listings}}{\MakeUppercase {Listings}}}{xxi}{figure.caption.1}
+\contentsline {chapter}{List of Acronyms}{xxii}{figure.caption.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Research Contributions}{4}{section.1.2}
@@ -20,33 +20,33 @@
 \contentsline {subsection}{\numberline {2.1.5}Environment}{11}{subsection.2.1.5}
 \contentsline {section}{\numberline {2.2}Routing Protocols}{12}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Flat}{12}{subsection.2.2.1}
-\contentsline {subsubsection}{MCFA}{13}{section*.2}
+\contentsline {subsubsection}{MCFA}{13}{section*.3}
 \contentsline {subsection}{\numberline {2.2.2}Data-centric}{13}{subsection.2.2.2}
-\contentsline {subsubsection}{SPIN}{14}{section*.3}
-\contentsline {subsubsection}{SPIN-IT}{14}{section*.4}
-\contentsline {subsubsection}{COUGAR}{15}{section*.5}
+\contentsline {subsubsection}{SPIN}{14}{section*.4}
+\contentsline {subsubsection}{SPIN-IT}{14}{section*.5}
+\contentsline {subsubsection}{COUGAR}{15}{section*.6}
 \contentsline {subsection}{\numberline {2.2.3}Hierarchical}{16}{subsection.2.2.3}
-\contentsline {subsubsection}{TEEN}{16}{section*.6}
+\contentsline {subsubsection}{TEEN}{16}{section*.7}
 \contentsline {subsection}{\numberline {2.2.4}Location-based}{17}{subsection.2.2.4}
-\contentsline {subsubsection}{Span}{17}{section*.7}
-\contentsline {subsubsection}{GEAR}{18}{section*.8}
+\contentsline {subsubsection}{Span}{17}{section*.8}
+\contentsline {subsubsection}{GEAR}{18}{section*.9}
 \contentsline {subsection}{\numberline {2.2.5}Conclusion}{19}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}Sensor Middleware}{19}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Issues}{20}{subsection.2.3.1}
-\contentsline {subsubsection}{Energy Constraints}{20}{section*.9}
-\contentsline {subsubsection}{Heterogeneity}{21}{section*.10}
-\contentsline {subsubsection}{Real-world Integration}{21}{section*.11}
-\contentsline {subsubsection}{Quality of Service}{21}{section*.12}
+\contentsline {subsubsection}{Energy Constraints}{20}{section*.10}
+\contentsline {subsubsection}{Heterogeneity}{21}{section*.11}
+\contentsline {subsubsection}{Real-world Integration}{21}{section*.12}
+\contentsline {subsubsection}{Quality of Service}{21}{section*.13}
 \contentsline {subsection}{\numberline {2.3.2}Existing Middleware}{22}{subsection.2.3.2}
-\contentsline {subsubsection}{GSN}{22}{section*.13}
-\contentsline {subsubsection}{FACTS}{25}{section*.15}
-\contentsline {subsubsection}{ITA Sensor Fabric}{26}{section*.17}
-\contentsline {subsubsection}{Sensor Web Enablement}{28}{section*.18}
-\contentsline {subsubsection}{Internet of Things}{29}{section*.19}
+\contentsline {subsubsection}{GSN}{22}{section*.14}
+\contentsline {subsubsection}{FACTS}{25}{section*.16}
+\contentsline {subsubsection}{ITA Sensor Fabric}{26}{section*.18}
+\contentsline {subsubsection}{Sensor Web Enablement}{28}{section*.19}
+\contentsline {subsubsection}{Internet of Things}{29}{section*.20}
 \contentsline {section}{\numberline {2.4}Biodiversity and Environmental Monitoring Sensor Networks}{30}{section.2.4}
-\contentsline {subsubsection}{GLACSWEB}{32}{section*.20}
-\contentsline {subsubsection}{Reventador}{32}{section*.21}
-\contentsline {subsubsection}{Rainforest}{32}{section*.22}
+\contentsline {subsubsection}{GLACSWEB}{32}{section*.21}
+\contentsline {subsubsection}{Reventador}{32}{section*.22}
+\contentsline {subsubsection}{Rainforest}{32}{section*.23}
 \contentsline {section}{\numberline {2.5}Conclusion}{33}{section.2.5}
 \contentsline {chapter}{\numberline {3}Exploratory Experiments in a Rainforest Environment}{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}Danau Girang Field Centre}{36}{section.3.1}
@@ -61,22 +61,22 @@
 \contentsline {subsection}{\numberline {3.3.3}Adapting and Optimising for Harsh Environments}{48}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}Software}{50}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Triton}{50}{subsection.3.4.1}
-\contentsline {subsubsection}{Future Work}{55}{section*.32}
+\contentsline {subsubsection}{Future Work}{55}{section*.33}
 \contentsline {section}{\numberline {3.5}Conclusion}{56}{section.3.5}
 \contentsline {chapter}{\numberline {4}Wireless Sensor Network Architecture Design}{57}{chapter.4}
 \contentsline {section}{\numberline {4.1}The Local Knowledge Problem}{58}{section.4.1}
 \contentsline {section}{\numberline {4.2}K-HAS}{60}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Data Collection}{61}{subsection.4.2.1}
-\contentsline {subsubsection}{Knowledge Base}{61}{section*.34}
+\contentsline {subsubsection}{Knowledge Base}{61}{section*.35}
 \contentsline {subsection}{\numberline {4.2.2}Data Processing}{63}{subsection.4.2.2}
-\contentsline {subsubsection}{Knowledge Base}{64}{section*.35}
+\contentsline {subsubsection}{Knowledge Base}{64}{section*.36}
 \contentsline {subsection}{\numberline {4.2.3}Data Aggregation}{65}{subsection.4.2.3}
-\contentsline {subsubsection}{Knowledge Base}{66}{section*.36}
-\contentsline {subsubsection}{Feedback Loop}{67}{section*.37}
+\contentsline {subsubsection}{Knowledge Base}{66}{section*.37}
+\contentsline {subsubsection}{Feedback Loop}{67}{section*.38}
 \contentsline {subsection}{\numberline {4.2.4}Sequence Diagram}{68}{subsection.4.2.4}
 \contentsline {section}{\numberline {4.3}Technological Components}{70}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Data Standard}{70}{subsection.4.3.1}
-\contentsline {subsubsection}{EXIF}{73}{section*.40}
+\contentsline {subsubsection}{EXIF}{73}{section*.41}
 \contentsline {subsection}{\numberline {4.3.2}Middleware}{75}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Knowledge Capture}{76}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}Knowledge Base}{78}{subsection.4.3.4}
@@ -85,28 +85,28 @@
 \contentsline {subsection}{\numberline {4.4.1}Scenario}{83}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Data Collection}{84}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Data Processing}{86}{subsection.4.4.3}
-\contentsline {subsubsection}{Image Processing}{86}{section*.50}
-\contentsline {subsubsection}{Classification}{88}{section*.51}
+\contentsline {subsubsection}{Image Processing}{86}{section*.51}
+\contentsline {subsubsection}{Classification}{88}{section*.52}
 \contentsline {subsection}{\numberline {4.4.4}Data Aggregation}{88}{subsection.4.4.4}
 \contentsline {section}{\numberline {4.5}Conclusion}{90}{section.4.5}
 \contentsline {chapter}{\numberline {5}An Ontology for Knowledge-Based Wireless Sensor Networks}{92}{chapter.5}
 \contentsline {section}{\numberline {5.1}Background}{92}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Observation-Centric Ontologies}{94}{subsection.5.1.1}
-\contentsline {subsubsection}{OBOE}{94}{section*.52}
-\contentsline {subsubsection}{O\&M}{95}{section*.54}
-\contentsline {subsubsection}{Darwin Core SW}{96}{section*.56}
+\contentsline {subsubsection}{OBOE}{94}{section*.53}
+\contentsline {subsubsection}{O\&M}{95}{section*.55}
+\contentsline {subsubsection}{Darwin Core SW}{96}{section*.57}
 \contentsline {subsection}{\numberline {5.1.2}Sensor-Centric Ontologies}{98}{subsection.5.1.2}
-\contentsline {subsubsection}{SensorML}{98}{section*.58}
+\contentsline {subsubsection}{SensorML}{98}{section*.59}
 \contentsline {subsection}{\numberline {5.1.3}Combined Sensor and Observation Ontologies}{99}{subsection.5.1.3}
-\contentsline {subsubsection}{SSN}{99}{section*.59}
-\contentsline {subsubsection}{SUMO Extension}{101}{section*.61}
+\contentsline {subsubsection}{SSN}{99}{section*.60}
+\contentsline {subsubsection}{SUMO Extension}{101}{section*.62}
 \contentsline {subsection}{\numberline {5.1.4}Findings}{101}{subsection.5.1.4}
 \contentsline {section}{\numberline {5.2}Method}{102}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Identify Purpose}{103}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Build the Ontology}{104}{subsection.5.2.2}
-\contentsline {subsubsection}{Capture}{104}{section*.62}
-\contentsline {subsubsection}{Code}{105}{section*.63}
-\contentsline {subsubsection}{Integrate Existing Ontologies}{105}{section*.64}
+\contentsline {subsubsection}{Capture}{104}{section*.63}
+\contentsline {subsubsection}{Code}{105}{section*.64}
+\contentsline {subsubsection}{Integrate Existing Ontologies}{105}{section*.65}
 \contentsline {subsection}{\numberline {5.2.3}Evaluation}{105}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Documentation}{106}{subsection.5.2.4}
 \contentsline {section}{\numberline {5.3}Results}{106}{section.5.3}
@@ -131,23 +131,23 @@
 \contentsline {section}{\numberline {6.4}Rules}{130}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Data Processing and Data Aggregation}{130}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Existing Data}{132}{subsection.6.4.2}
-\contentsline {subsubsection}{Semi Structured Interviews}{132}{section*.76}
-\contentsline {subsubsection}{Existing Data}{134}{section*.77}
+\contentsline {subsubsection}{Semi Structured Interviews}{132}{section*.77}
+\contentsline {subsubsection}{Existing Data}{134}{section*.78}
 \contentsline {section}{\numberline {6.5}Conclusion}{136}{section.6.5}
 \contentsline {chapter}{\numberline {7}Simulation Experiments and Evaluation of the Architecture}{138}{chapter.7}
 \contentsline {section}{\numberline {7.1}Simulation Environment}{139}{section.7.1}
 \contentsline {section}{\numberline {7.2}Simulation Scenarios}{140}{section.7.2}
 \contentsline {section}{\numberline {7.3}Network Setup}{144}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Parameters}{144}{subsection.7.3.1}
-\contentsline {subsubsection}{Transmission Rate}{146}{section*.81}
-\contentsline {subsubsection}{Bandwidth, Capture Chance and Interesting Chance}{146}{section*.82}
-\contentsline {subsubsection}{Transmission Range}{147}{section*.83}
-\contentsline {subsubsection}{Observation Size}{147}{section*.84}
-\contentsline {subsubsection}{Processing Times}{147}{section*.85}
-\contentsline {subsubsection}{Run Count and Duration}{147}{section*.86}
+\contentsline {subsubsection}{Transmission Rate}{146}{section*.82}
+\contentsline {subsubsection}{Bandwidth, Capture Chance and Interesting Chance}{146}{section*.83}
+\contentsline {subsubsection}{Transmission Range}{147}{section*.84}
+\contentsline {subsubsection}{Observation Size}{147}{section*.85}
+\contentsline {subsubsection}{Processing Times}{147}{section*.86}
+\contentsline {subsubsection}{Run Count and Duration}{147}{section*.87}
 \contentsline {subsection}{\numberline {7.3.2}Routing Protocol}{148}{subsection.7.3.2}
-\contentsline {subsubsection}{Discovery}{148}{section*.87}
-\contentsline {subsubsection}{Transmission}{150}{section*.88}
+\contentsline {subsubsection}{Discovery}{148}{section*.88}
+\contentsline {subsubsection}{Transmission}{150}{section*.89}
 \contentsline {subsection}{\numberline {7.3.3}Observation Transmission}{150}{subsection.7.3.3}
 \contentsline {subsection}{\numberline {7.3.4}Processing}{151}{subsection.7.3.4}
 \contentsline {section}{\numberline {7.4}Results}{153}{section.7.4}
@@ -162,7 +162,7 @@
 \contentsline {subsection}{\numberline {8.1.4}Simulations}{168}{subsection.8.1.4}
 \contentsline {section}{\numberline {8.2}Future Work}{168}{section.8.2}
 \contentsline {chapter}{Bibliography}{172}{section.8.2}
-\contentsline {chapter}{Appendices}{188}{section*.96}
+\contentsline {chapter}{Appendices}{188}{section*.97}
 \contentsline {chapter}{\numberline {A}Example Darwin Core Archive}{189}{Appendix.1.A}
 \contentsline {chapter}{\numberline {B}Darwin-SW Occurrence Example}{191}{Appendix.1.B}
 \contentsline {chapter}{\numberline {C}K-HAS Ontology}{193}{Appendix.1.C}
